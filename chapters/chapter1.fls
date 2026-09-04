@@ -1,0 +1,10 @@
+PWD c:\Users\sloug\OneDrive\Documents\redaction\chapters
+INPUT C:\Users\sloug\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\sloug\OneDrive\Documents\redaction\chapters\chapter1.tex
+OUTPUT chapter1.log
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+OUTPUT chapter1.pdf
+INPUT C:\Users\sloug\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm

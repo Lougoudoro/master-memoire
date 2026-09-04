@@ -4,11 +4,11 @@
 
 Au Burkina Faso, les plantes médicinales occupent une place importante dans les pratiques de santé. Elles font l'objet de nombreux travaux scientifiques. Ces travaux portent sur leur identification, leurs usages, leurs propriétés pharmacologiques et leur toxicité.
 
-Cependant, les connaissances disponibles sont dispersées dans la littérature scientifique. Elles se trouvent dans des articles, des thèses, des mémoires et des rapports de recherche\cite{ref1}. Elles sont aussi présentes dans des inventaires ethnobotaniques et des plateformes numériques. Ces documents utilisent souvent des terminologies différentes. Une même plante peut être désignée par plusieurs noms scientifiques, synonymes ou noms vernaculaires.
+Cependant, les connaissances disponibles sont dispersées dans la littérature scientifique. Elles se trouvent dans des articles, des thèses, des mémoires et des rapports de recherche\cite{ouedraogo_revue_2024}. Elles sont aussi présentes dans des inventaires ethnobotaniques et des plateformes numériques. Ces documents utilisent souvent des terminologies différentes. Une même plante peut être désignée par plusieurs synonymes ou noms vernaculaires.
 
 Cette dispersion rend l'accès aux connaissances plus difficile. Elle limite la comparaison des résultats entre les études. Elle rend difficile la recherche d'informations sur une plante, une pathologie ou une recette donnée. Enfin, elle rend difficile le suivi de la source scientifique qui soutient une information.
 
-Les ontologies peuvent structurer ces connaissances. Elles permettent de représenter les concepts d'un domaine et les relations entre ces concepts. Elles facilitent aussi l'interopérabilité et l'interrogation des connaissances\cite{ref2}.
+Les ontologies peuvent structurer ces connaissances. Elles permettent de représenter les concepts d'un domaine et les relations entre ces concepts. Elles facilitent aussi l'interopérabilité et l'interrogation des connaissances\cite{zerbo_plantes_2011}.
 
 Notre travail s'inscrit dans cette perspective. Il ne consiste pas à construire une ontologie entièrement nouvelle. Nous partirons d'une ontologie existante consacrée aux plantes médicinales. Nous chercherons à l'adapter au contexte du Burkina Faso et à l'enrichir avec des connaissances issues de la littérature scientifique. L'intelligence artificielle sera utilisée pour faciliter l'accès aux connaissances. Elle pourra notamment aider à interpréter les requêtes formulées en langage naturel et à retrouver les informations pertinentes dans la base de connaissances. Une application web sera développée pour permettre aux utilisateurs de consulter ces informations de manière simple et intelligente. Les réponses devront rester liées aux sources scientifiques utilisées.
 
@@ -100,7 +100,7 @@ Nous extrairons les connaissances pertinentes du corpus scientifique. L'extracti
 
 \subsection*{Phase 5 : Construction et interrogation de la base de connaissances}
 
-L'ontologie adaptée et enrichie servira de structure à la base de connaissances. Les données extraites seront transformées en instances correspondant aux concepts définis. La base sera implémentée sous forme de base de connaissances orientée graphe. Ce choix permet une modélisation naturelle des relations complexes entre les plantes, les usages, les propriétés et les sources. Chaque connaissance importante sera associée à une source scientifique. La base devra permettre de retrouver l'origine d'une information. L'interrogation se fera via le langage Cypher, qui permet des requêtes puissantes sur les graphes. Nous définirons des scénarios de recherche sur une plante, un usage médicinal, une partie utilisée ou une source scientifique.
+L'ontologie adaptée et enrichie servira de structure à la base de connaissances. Les données extraites seront transformées en instances correspondant aux concepts définis. La base sera implémentée sous forme de base de connaissances orientée graphe. Ce choix permet une modélisation naturelle des relations complexes entre les plantes, les usages, les propriétés et les sources. Chaque connaissance importante sera associée à une source scientifique. La base devra permettre de retrouver l'origine d'une information. L'interrogation se fera via le langage Cypher ou SPARQL, qui permetent des requêtes puissantes sur les graphes. Nous définirons des scénarios de recherche sur une plante, un usage médicinal, une partie utilisée ou une source scientifique.
 
 \subsection*{Phase 6 : Exploitation par l'intelligence artificielle et développement de l'application web}
 
@@ -122,7 +122,7 @@ Les connaissances étudiées proviendront principalement de la littérature scie
 
 Le travail portera sur la sélection d'une ontologie existante, son adaptation et son enrichissement. Le choix de l'ontologie sera effectué après une étude comparative.
 
-Sur le plan technique, le travail comprendra une base de connaissances orientée graphe, un système RAG pour l'accès intelligent et une application web. L'extraction des connaissances sera assistée par des prompts d'IA, avec validation humaine systématique. L'intelligence artificielle sera intégrée pour faciliter l'accès aux connaissances structurées, mais ne sera pas considérée comme une source scientifique autonome. Les documents scientifiques resteront les sources de référence.
+Sur le plan technique, le travail comprendra une base de connaissances orientée graphe, un système RAG pour l'accès intelligent et une application web. L'extraction des connaissances sera assistée par des prompts d'IA. L'intelligence artificielle sera intégrée pour faciliter l'accès aux connaissances structurées, mais ne sera pas considérée comme une source scientifique autonome. Les documents scientifiques resteront les sources de référence.
 
 Le système sera conçu comme un outil de consultation, de vulgarisation et de diffusion scientifique. Il ne remplacera pas l'avis d'un professionnel de santé et ne servira pas à établir un diagnostic ou une prescription.
 

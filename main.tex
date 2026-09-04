@@ -1,22 +1,49 @@
 \documentclass[a4paper,12pt]{book}
-\usepackage{blindtext}
-\usepackage[a4paper, inner=1.7cm, outer=1.7cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[french]{babel}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+% Police Times New Roman compatible pdfLaTeX
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx} % Pour des tableaux ajustables proprement
+\usepackage{booktabs} % Pour des lignes de tableau professionnelles (\toprule, \midrule, \bottomrule)
+\usepackage{enumitem} % Gestion avancée des listes
+\usepackage{titlesec} % Personnalisation des titres de chapitres et sections
+\usepackage{setspace} % Espacement de ligne (1.5)
+
+%BIBLIOGRAPHIE
+\usepackage[backend=biber]{biblatex}
+\addbibresource{sanou-master.bib}
+
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks % Masque tous les encadrés et retient la couleur normale du texte
+}
 \graphicspath{{images/}}
 \renewcommand{\thechapter}{\Roman{chapter}}
 
+
 \begin{document}
-\title{
-    {cxcvcvkdfn}\\
-    \Large{\textbf{Institut Burkinabè des Arts et Metiers (IBAM)}}\\
-	{\includegraphics[width=0.3\textwidth]{logo.png}}
-    }
-\author{Sanou Lougoudoro}
-\date{December 21, 2018}
-\maketitle
+
+\input{parts/gard.tex}
 \tableofcontents
+
+\chapter{Liste des sigles et abréviations}
+\input{parts/sigle-abreviation.tex}
 
 \chapter{Introduction générale}
 \input{chapters/introduction.tex}
 
+% ==========================================
+% CHAPITRE 2
+% ==========================================
+\chapter{Cadre théorique et revue de littérature}
+\label{chap:cadre_theorique}
+\input{chapters/chapter1.tex}
+
+
+\printbibliography
 \end{document}

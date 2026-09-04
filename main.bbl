@@ -1,0 +1,132 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{ouedraogo_revue_2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=68a8b464cf3e1d573fe846d59da076d4}{%
+           family={Ouedraogo},
+           familyi={O\bibinitperiod},
+           given={W\bibnamedelima Jedida},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=57a2bde0c325552d007d8fb474a0376b}{%
+           family={Yerbanga},
+           familyi={Y\bibinitperiod},
+           given={R\bibnamedelima Serge},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2df93489f0437b98a1fa284269448837}{%
+           family={Meda},
+           familyi={M\bibinitperiod},
+           given={Roland},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ad65b41d47e95e982277bc2da7149125}{%
+           family={Ouedraogo},
+           familyi={O\bibinitperiod},
+           given={Jean\bibnamedelima Bosco},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=6e7b0292f02982769683f7f714c42c00}{%
+           family={Ouedraogo},
+           familyi={O\bibinitperiod},
+           given={Georges\bibnamedelima A},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {fr}%
+      }
+      \strng{namehash}{e640319c1bd5cbceece2e2a9658cd3e0}
+      \strng{fullhash}{b11537495a2031dcba95e9bc593d102e}
+      \strng{fullhashraw}{b11537495a2031dcba95e9bc593d102e}
+      \strng{bibnamehash}{e640319c1bd5cbceece2e2a9658cd3e0}
+      \strng{authorbibnamehash}{e640319c1bd5cbceece2e2a9658cd3e0}
+      \strng{authornamehash}{e640319c1bd5cbceece2e2a9658cd3e0}
+      \strng{authorfullhash}{b11537495a2031dcba95e9bc593d102e}
+      \strng{authorfullhashraw}{b11537495a2031dcba95e9bc593d102e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Introduction. In Burkina Faso, the production and use of essential oils are not yet well developed. In 2002, there were approximately 90 aromatic species, with only 30 studied. A thorough study and exploitation of essential oils from medicinal plants could enhance traditional medicine. The objective of this review was therefore to identify and list medicinal plants with aromatic potential in Burkina Faso. Methodology. A literature review and search engines based on scientific databases were used as methodology. Results. In this study, 84 medicinal plants with aromatic potential were listed. These plants came from 44 families, with the Césalpiniaceae family being the most represented. Leaves were the most commonly used parts for essential oil extraction. Active compounds such as caryophyllenes, pinenes, phytols, linalols, hexadecanoic acid, cineole, and phellandrene were the most dominant. The associated biological properties were antiinflammatory, antibacterial, antioxidant, and antimicrobial. Conclusion. This review indicates the potential of certain medicinal plants in Burkina Faso for the exploitation of their essential oils. Thus, the 85 aromatic plants listed in this study could be used to initiate an investigation into natural, organic, or petrochemical cosmetic products.}
+      \field{title}{Revue des {Plantes} {Médicinales} à {Potentiel} {Aromatique} du {Burkina} {Faso}}
+      \field{volume}{2}
+      \field{year}{2024}
+    \endentry
+    \entry{zerbo_plantes_2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=cba2068af785fb647cb11f20504c8753}{%
+           family={Zerbo},
+           familyi={Z\bibinitperiod},
+           given={Patrice},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b7affb758f4147630a27540907394abc}{%
+           family={Millogo\bibnamedelima Rasolodimby},
+           familyi={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Jeanne},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5448b3805d001c902c3f0148ffe05d5e}{%
+           family={Nacoulma\bibnamedelima Ouedraogo},
+           familyi={N\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Odile},
+           giveni={O\bibinitperiod}}}%
+        {{hash=ecfddb41bf6d92a41fa67ac0d1dcee52}{%
+           family={Van\bibnamedelima Damme},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f6f18daa71544cfc8d32d2af8433c6f}
+      \strng{fullhash}{697083bfd790ede256a0510b1decb3d3}
+      \strng{fullhashraw}{697083bfd790ede256a0510b1decb3d3}
+      \strng{bibnamehash}{5f6f18daa71544cfc8d32d2af8433c6f}
+      \strng{authorbibnamehash}{5f6f18daa71544cfc8d32d2af8433c6f}
+      \strng{authornamehash}{5f6f18daa71544cfc8d32d2af8433c6f}
+      \strng{authorfullhash}{697083bfd790ede256a0510b1decb3d3}
+      \strng{authorfullhashraw}{697083bfd790ede256a0510b1decb3d3}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Élément culturel important, les plantes ont été utilisées pendant des siècles par les populations pour se soigner. Cependant, peu d'ethnies connaissent leur pharmacopée de par le manque d'études ethnobotaniques. La présente étude, réalisée en pays San, entité territoriale traditionnelle (Nord-Ouest du Burkina Faso), répond à ce souci de documenter les plantes médicinales. À travers une série d'enquêtes ethnobotaniques, 75 tradithérapeutes Sanan ont été interviewés. Les informations recherchées ont porté sur la plante, son nom local, ses parties utilisées, les pratiques médicales et les vertus thérapeutiques afférentes. Les résultats ont montré que 94 espèces végétales sont utilisées pour combattre différentes pathologies. Les feuilles (31 \%), les racines (25 \%) et les écorces du tronc (23 \%) sont les principales parties utilisées pour préparer les recettes. Seules ou en association, ces parties interviennent dans l'élaboration des recettes par des procédés utilisant principalement la décoction (58 \%), la trituration (17 \%) et la macération aqueuse (11 \%). Soixante-cinq pour cent (65 \%) des produits obtenus sont administrés par voie orale via la boisson et les applications externes représentent 35 \%. Treize catégories d'utilisation ont été recensées. Cependant, les tradipraticiens de santé sont en désaccord sur les thérapies proposées pour traiter ces catégories. La diversité des thérapies recensées en pays San, est une richesse culturelle. Ces données de la pharmacopée san sont une base pour une étude approfondie des aptitudes sylvicoles des plantes victimes de déracinement et la création de pépinières communautaires, afin de disposer de réservoirs de plantes médicinales proches des villages. (Résumé d'auteur)}
+      \field{issn}{1777-5760, 0006-579X}
+      \field{journaltitle}{BOIS \& FORETS DES TROPIQUES}
+      \field{month}{3}
+      \field{shorttitle}{Plantes médicinales et pratiques médicales au {Burkina} {Faso}}
+      \field{title}{Plantes médicinales et pratiques médicales au {Burkina} {Faso} : cas des {Sanan}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{307}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{41\bibrangedash 53}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.19182/bft2011.307.a20481
+      \endverb
+      \verb{urlraw}
+      \verb https://revues.cirad.fr/index.php/BFT/article/view/20481
+      \endverb
+      \verb{url}
+      \verb https://revues.cirad.fr/index.php/BFT/article/view/20481
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

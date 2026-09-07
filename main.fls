@@ -378,6 +378,15 @@ INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxexa
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\newtx\ntx-ec-tlf-pc.enc
+INPUT .\chapters\chapter2.tex
+INPUT .\chapters\chapter2.tex
+INPUT chapters\chapter2.tex
+INPUT .\chapters\chapter3.tex
+INPUT .\chapters\chapter3.tex
+INPUT chapters\chapter3.tex
+INPUT .\chapters\chapter4.tex
+INPUT .\chapters\chapter4.tex
+INPUT chapters\chapter4.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

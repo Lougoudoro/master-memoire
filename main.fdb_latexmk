@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1788542141.91411 "main.bcf" "main.bbl" "main" 1788815792.33488 0
-  "main.bcf" 1788815791 108700 287d053a535700831c8770aa5fbce6e6 "pdflatex"
+["biber main"] 1789133663.66338 "main.bcf" "main.bbl" "main" 1789134138.97831 0
+  "main.bcf" 1789134138 108700 287d053a535700831c8770aa5fbce6e6 "pdflatex"
   "sanou-master.bib" 1788453602 101868 7062918b6634a8c4da28c79edbe79347 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1788815785.30352 "c:/Users/sloug/OneDrive/Documents/redaction/main.tex" "main.pdf" "main" 1788815792.33609 0
+["pdflatex"] 1789134135.39313 "c:/Users/sloug/OneDrive/Documents/redaction/main.tex" "main.pdf" "main" 1789134138.97951 0
   "C:/Users/sloug/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1788535548 164992 4caeccefd9466f5315f73632abd65dc0 ""
   "C:/Users/sloug/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1788390441 13333486 98c4c5f126b5d8e7e73959a7897f7b37 ""
   "C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc" 1736607166 3136 bbe665bd0bb471a2da1e8fd326cff9fa ""
@@ -147,16 +147,16 @@
   "chapters/chapter2.tex" 1788396041 0 d41d8cd98f00b204e9800998ecf8427e ""
   "chapters/chapter3.tex" 1788396073 0 d41d8cd98f00b204e9800998ecf8427e ""
   "chapters/chapter4.tex" 1788396087 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "chapters/introduction.tex" 1788538354 19799 f21a83f9176f4600d8ed8f4fbe74fd4c ""
+  "chapters/introduction.tex" 1789134133 22079 d3fa9115ea0c063f247408bf15563c4f ""
   "images/logo.png" 1788393339 6062 60856ef9f11dca2694d221cf7126a00e ""
   "images/ujkz.jpeg" 1788441685 31976 00693874f6c97e891c8ea156fb24dee2 ""
-  "main.aux" 1788815791 14868 41ac9708357f09549129048cefd8d7cf "pdflatex"
-  "main.bbl" 1788562325 8377 255a82bf945d577776dc656c281ede12 "biber main"
-  "main.out" 1788815791 9071 92aeab3aa0249539b448a4b9ced08f28 "pdflatex"
-  "main.run.xml" 1788815791 2306 3c937ba5b8b739c1c4839678446e17dd "pdflatex"
+  "main.aux" 1789134138 14868 cfcd7522901c46195d94059532df171f "pdflatex"
+  "main.bbl" 1789133667 8377 255a82bf945d577776dc656c281ede12 "biber main"
+  "main.out" 1789134138 9071 fcfbddd4c76e708cc0d97dda6f770307 "pdflatex"
+  "main.run.xml" 1789134138 2306 3c937ba5b8b739c1c4839678446e17dd "pdflatex"
   "main.tex" 1788815780 2175 caced12413eea77bcb87168f0b27e1b0 ""
-  "main.toc" 1788815791 8833 64828ef8a2943870f60c1e5fd84dfc52 "pdflatex"
-  "parts/gard.tex" 1788450917 2900 8b62fb38bcd56d3cd1d1beb8cedf8acb ""
+  "main.toc" 1789134138 8833 3b3defddffee56d48f3c1a0dbc64ebbe "pdflatex"
+  "parts/gard.tex" 1789131246 2881 f0976dc29a83f1a521cbb986c6531e97 ""
   "parts/sigle-abreviation.tex" 1788449666 2366 976523117efb20c30eaa991a3c746299 ""
   (generated)
   "main.aux"

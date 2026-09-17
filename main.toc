@@ -9,92 +9,92 @@
 \contentsline {section}{\numberline {II.4}Hypothèses de recherche}{9}{section.2.4}%
 \contentsline {section}{\numberline {II.5}Démarche méthodologique adoptée}{9}{section.2.5}%
 \contentsline {section}{\numberline {II.6}Délimitation du champ d'étude}{11}{section.2.6}%
-\contentsline {section}{\numberline {II.7}Résultats attendus}{11}{section.2.7}%
+\contentsline {section}{\numberline {II.7}Résultats attendus}{12}{section.2.7}%
 \contentsline {section}{\numberline {II.8}Contribution attendue}{12}{section.2.8}%
 \contentsline {section}{\numberline {II.9}Structuration du mémoire}{12}{section.2.9}%
-\contentsline {chapter}{\numberline {III}Cadre théorique et revue de littérature}{13}{chapter.3}%
-\contentsline {section}{\numberline {III.1}Plantes médicinales et connaissances scientifiques au Burkina Faso}{13}{section.3.1}%
-\contentsline {subsection}{\numberline {III.1.1}Concepts fondamentaux}{13}{subsection.3.1.1}%
-\contentsline {paragraph}{Définition des plantes médicinales}{13}{paragraph*.3}%
-\contentsline {paragraph}{Médecine traditionnelle et pharmacopée}{13}{paragraph*.4}%
-\contentsline {paragraph}{Ethnobotanique et ethnomédecine}{13}{paragraph*.5}%
-\contentsline {paragraph}{Contexte burkinabè}{14}{paragraph*.6}%
-\contentsline {subsection}{\numberline {III.1.2}Plantes médicinales documentées dans la littérature scientifique}{14}{subsection.3.1.2}%
-\contentsline {paragraph}{Inventaires et recensements}{14}{paragraph*.7}%
-\contentsline {paragraph}{Aspects botaniques et écologiques}{14}{paragraph*.8}%
-\contentsline {paragraph}{Usages thérapeutiques}{14}{paragraph*.9}%
-\contentsline {paragraph}{Propriétés pharmacologiques}{15}{paragraph*.10}%
-\contentsline {paragraph}{Composition chimique}{15}{paragraph*.11}%
-\contentsline {subsection}{\numberline {III.1.3}Types de connaissances et niveaux de preuve}{15}{subsection.3.1.3}%
-\contentsline {paragraph}{Typologie des connaissances}{15}{paragraph*.12}%
-\contentsline {paragraph}{Connaissances ethnobotaniques}{15}{paragraph*.13}%
-\contentsline {paragraph}{Connaissances phytochimiques}{15}{paragraph*.14}%
-\contentsline {paragraph}{Connaissances pharmacologiques}{16}{paragraph*.15}%
-\contentsline {paragraph}{Connaissances cliniques}{16}{paragraph*.16}%
-\contentsline {paragraph}{Hiérarchie des niveaux de preuve}{16}{paragraph*.17}%
-\contentsline {paragraph}{Implications pour notre recherche}{16}{paragraph*.18}%
-\contentsline {section}{\numberline {III.2}Ingénierie des connaissances et ontologies}{16}{section.3.2}%
-\contentsline {subsection}{\numberline {III.2.1}Représentation des connaissances}{16}{subsection.3.2.1}%
-\contentsline {paragraph}{Définition et enjeux}{16}{paragraph*.19}%
-\contentsline {paragraph}{Principaux modèles de représentation}{17}{paragraph*.20}%
-\contentsline {subsection}{\numberline {III.2.2}Ontologies et réutilisation d'ontologies existantes}{17}{subsection.3.2.2}%
-\contentsline {paragraph}{Définition formelle}{17}{paragraph*.21}%
-\contentsline {paragraph}{Composants d'une ontologie}{17}{paragraph*.22}%
-\contentsline {paragraph}{Langages d'ontologies}{18}{paragraph*.23}%
-\contentsline {paragraph}{Réutilisation d'ontologies}{18}{paragraph*.24}%
-\contentsline {subsection}{\numberline {III.2.3}Adaptation, alignement et enrichissement ontologique}{18}{subsection.3.2.3}%
-\contentsline {paragraph}{Adaptation d'une ontologie}{18}{paragraph*.25}%
-\contentsline {paragraph}{Alignement d'ontologies}{19}{paragraph*.26}%
-\contentsline {paragraph}{Enrichissement ontologique}{19}{paragraph*.27}%
-\contentsline {paragraph}{Démarche pour notre recherche}{19}{paragraph*.28}%
-\contentsline {subsection}{\numberline {III.2.4}Bases de connaissances et interrogation sémantique}{19}{subsection.3.2.4}%
-\contentsline {paragraph}{Définition et structure}{19}{paragraph*.29}%
-\contentsline {paragraph}{Bases de connaissances orientées graphe}{20}{paragraph*.30}%
-\contentsline {paragraph}{Interrogation avec Cypher}{20}{paragraph*.31}%
-\contentsline {paragraph}{Avantages des bases de connaissances graphe}{20}{paragraph*.32}%
-\contentsline {paragraph}{Application à notre recherche}{21}{paragraph*.33}%
-\contentsline {section}{\numberline {III.3}Intelligence artificielle pour l'accès aux connaissances}{21}{section.3.3}%
-\contentsline {subsection}{\numberline {III.3.1}Traitement des requêtes en langage naturel}{21}{subsection.3.3.1}%
-\contentsline {paragraph}{Introduction au TALN}{21}{paragraph*.34}%
-\contentsline {paragraph}{Techniques fondamentales}{21}{paragraph*.35}%
-\contentsline {paragraph}{Approches modernes : les transformers}{21}{paragraph*.36}%
-\contentsline {paragraph}{Application à notre recherche}{22}{paragraph*.37}%
-\contentsline {subsection}{\numberline {III.3.2}Extraction et structuration assistées par IA}{22}{subsection.3.3.2}%
-\contentsline {paragraph}{Extraction d'information}{22}{paragraph*.38}%
-\contentsline {paragraph}{Approche par prompts d'IA}{22}{paragraph*.39}%
-\contentsline {paragraph}{Structuration des données}{23}{paragraph*.40}%
-\contentsline {paragraph}{Application à notre recherche}{23}{paragraph*.41}%
-\contentsline {subsection}{\numberline {III.3.3}Recherche sémantique et génération de réponses}{23}{subsection.3.3.3}%
-\contentsline {paragraph}{Recherche sémantique}{23}{paragraph*.42}%
-\contentsline {paragraph}{Système RAG (\textit {Retrieval-Augmented Generation})}{23}{paragraph*.43}%
-\contentsline {paragraph}{Application à notre recherche}{24}{paragraph*.44}%
-\contentsline {subsection}{\numberline {III.3.4}Traçabilité et fiabilité des réponses}{24}{subsection.3.3.4}%
-\contentsline {paragraph}{Importance de la traçabilité}{24}{paragraph*.45}%
-\contentsline {paragraph}{Mécanismes de traçabilité}{24}{paragraph*.46}%
-\contentsline {paragraph}{Fiabilité des réponses}{24}{paragraph*.47}%
-\contentsline {paragraph}{Distinction des niveaux de preuve}{24}{paragraph*.48}%
-\contentsline {paragraph}{Gestion des incertitudes}{25}{paragraph*.49}%
-\contentsline {paragraph}{Limites de l'IA}{25}{paragraph*.50}%
-\contentsline {section}{\numberline {III.4}Travaux connexes et positionnement scientifique}{25}{section.3.4}%
-\contentsline {subsection}{\numberline {III.4.1}Ontologies dans le domaine des plantes médicinales}{25}{subsection.3.4.1}%
-\contentsline {paragraph}{Revue des ontologies internationales}{25}{paragraph*.51}%
-\contentsline {paragraph}{Ontologies de la médecine traditionnelle africaine}{25}{paragraph*.52}%
-\contentsline {paragraph}{Ontologie de la médecine traditionnelle africaine de Tekemetieu et al. (2016)}{25}{paragraph*.53}%
-\contentsline {paragraph}{ontoMEDTRAD : ontologie visuelle pour l'Afrique de l'Ouest (Appoh et al., 2018)}{26}{paragraph*.54}%
-\contentsline {paragraph}{Ontologie pour les tradipraticiens (bone-setters) en Afrique de l'Ouest (2024)}{26}{paragraph*.55}%
-\contentsline {paragraph}{Modèle d'intégration des connaissances (Angole, 2021)}{26}{paragraph*.56}%
-\contentsline {paragraph}{Ontologies nationales et ethniques}{27}{paragraph*.57}%
-\contentsline {paragraph}{Particularités ontologiques de la médecine traditionnelle africaine}{27}{paragraph*.58}%
-\contentsline {paragraph}{Synthèse et lacunes identifiées}{27}{paragraph*.59}%
-\contentsline {paragraph}{Synthèse des ontologies existantes}{27}{paragraph*.60}%
-\contentsline {subsection}{\numberline {III.4.2}Systèmes intelligents d'accès aux connaissances}{27}{subsection.3.4.2}%
-\contentsline {paragraph}{Typologie des systèmes}{27}{paragraph*.61}%
-\contentsline {paragraph}{Systèmes RAG pour l'accès aux connaissances}{28}{paragraph*.62}%
-\contentsline {paragraph}{Limites communes des systèmes existants}{28}{paragraph*.63}%
-\contentsline {paragraph}{Positionnement de notre système}{29}{paragraph*.64}%
-\contentsline {subsection}{\numberline {III.4.3}Positionnement de notre recherche}{29}{subsection.3.4.3}%
-\contentsline {paragraph}{Originalité de notre recherche}{29}{paragraph*.65}%
-\contentsline {section}{Conclusion du chapitre}{29}{Item.38}%
-\contentsline {chapter}{\numberline {IV}Matériel et méthodologie}{31}{chapter.4}%
-\contentsline {chapter}{\numberline {V}Conception et développement du système}{33}{chapter.5}%
-\contentsline {chapter}{\numberline {VI}Résultats et discussion}{35}{chapter.6}%
+\contentsline {chapter}{\numberline {III}Cadre théorique et revue de littérature}{15}{chapter.3}%
+\contentsline {section}{\numberline {III.1}Plantes médicinales et connaissances scientifiques au Burkina Faso}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {III.1.1}Concepts fondamentaux}{15}{subsection.3.1.1}%
+\contentsline {paragraph}{Définition des plantes médicinales}{15}{paragraph*.3}%
+\contentsline {paragraph}{Médecine traditionnelle et pharmacopée}{15}{paragraph*.4}%
+\contentsline {paragraph}{Ethnobotanique et ethnomédecine}{15}{paragraph*.5}%
+\contentsline {paragraph}{Contexte burkinabè}{16}{paragraph*.6}%
+\contentsline {subsection}{\numberline {III.1.2}Plantes médicinales documentées dans la littérature scientifique}{16}{subsection.3.1.2}%
+\contentsline {paragraph}{Inventaires et recensements}{16}{paragraph*.7}%
+\contentsline {paragraph}{Aspects botaniques et écologiques}{16}{paragraph*.8}%
+\contentsline {paragraph}{Usages thérapeutiques}{16}{paragraph*.9}%
+\contentsline {paragraph}{Propriétés pharmacologiques}{17}{paragraph*.10}%
+\contentsline {paragraph}{Composition chimique}{17}{paragraph*.11}%
+\contentsline {subsection}{\numberline {III.1.3}Types de connaissances et niveaux de preuve}{17}{subsection.3.1.3}%
+\contentsline {paragraph}{Typologie des connaissances}{17}{paragraph*.12}%
+\contentsline {paragraph}{Connaissances ethnobotaniques}{17}{paragraph*.13}%
+\contentsline {paragraph}{Connaissances phytochimiques}{17}{paragraph*.14}%
+\contentsline {paragraph}{Connaissances pharmacologiques}{18}{paragraph*.15}%
+\contentsline {paragraph}{Connaissances cliniques}{18}{paragraph*.16}%
+\contentsline {paragraph}{Hiérarchie des niveaux de preuve}{18}{paragraph*.17}%
+\contentsline {paragraph}{Implications pour notre recherche}{18}{paragraph*.18}%
+\contentsline {section}{\numberline {III.2}Ingénierie des connaissances et ontologies}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {III.2.1}Représentation des connaissances}{18}{subsection.3.2.1}%
+\contentsline {paragraph}{Définition et enjeux}{18}{paragraph*.19}%
+\contentsline {paragraph}{Principaux modèles de représentation}{19}{paragraph*.20}%
+\contentsline {subsection}{\numberline {III.2.2}Ontologies et réutilisation d'ontologies existantes}{19}{subsection.3.2.2}%
+\contentsline {paragraph}{Définition formelle}{19}{paragraph*.21}%
+\contentsline {paragraph}{Composants d'une ontologie}{19}{paragraph*.22}%
+\contentsline {paragraph}{Langages d'ontologies}{20}{paragraph*.23}%
+\contentsline {paragraph}{Réutilisation d'ontologies}{20}{paragraph*.24}%
+\contentsline {subsection}{\numberline {III.2.3}Adaptation, alignement et enrichissement ontologique}{20}{subsection.3.2.3}%
+\contentsline {paragraph}{Adaptation d'une ontologie}{20}{paragraph*.25}%
+\contentsline {paragraph}{Alignement d'ontologies}{21}{paragraph*.26}%
+\contentsline {paragraph}{Enrichissement ontologique}{21}{paragraph*.27}%
+\contentsline {paragraph}{Démarche pour notre recherche}{21}{paragraph*.28}%
+\contentsline {subsection}{\numberline {III.2.4}Bases de connaissances et interrogation sémantique}{21}{subsection.3.2.4}%
+\contentsline {paragraph}{Définition et structure}{21}{paragraph*.29}%
+\contentsline {paragraph}{Bases de connaissances orientées graphe}{22}{paragraph*.30}%
+\contentsline {paragraph}{Interrogation avec Cypher}{22}{paragraph*.31}%
+\contentsline {paragraph}{Avantages des bases de connaissances graphe}{22}{paragraph*.32}%
+\contentsline {paragraph}{Application à notre recherche}{23}{paragraph*.33}%
+\contentsline {section}{\numberline {III.3}Intelligence artificielle pour l'accès aux connaissances}{23}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Traitement des requêtes en langage naturel}{23}{subsection.3.3.1}%
+\contentsline {paragraph}{Introduction au TALN}{23}{paragraph*.34}%
+\contentsline {paragraph}{Techniques fondamentales}{23}{paragraph*.35}%
+\contentsline {paragraph}{Approches modernes : les transformers}{23}{paragraph*.36}%
+\contentsline {paragraph}{Application à notre recherche}{24}{paragraph*.37}%
+\contentsline {subsection}{\numberline {III.3.2}Extraction et structuration assistées par IA}{24}{subsection.3.3.2}%
+\contentsline {paragraph}{Extraction d'information}{24}{paragraph*.38}%
+\contentsline {paragraph}{Approche par prompts d'IA}{24}{paragraph*.39}%
+\contentsline {paragraph}{Structuration des données}{25}{paragraph*.40}%
+\contentsline {paragraph}{Application à notre recherche}{25}{paragraph*.41}%
+\contentsline {subsection}{\numberline {III.3.3}Recherche sémantique et génération de réponses}{25}{subsection.3.3.3}%
+\contentsline {paragraph}{Recherche sémantique}{25}{paragraph*.42}%
+\contentsline {paragraph}{Système RAG (\textit {Retrieval-Augmented Generation})}{25}{paragraph*.43}%
+\contentsline {paragraph}{Application à notre recherche}{26}{paragraph*.44}%
+\contentsline {subsection}{\numberline {III.3.4}Traçabilité et fiabilité des réponses}{26}{subsection.3.3.4}%
+\contentsline {paragraph}{Importance de la traçabilité}{26}{paragraph*.45}%
+\contentsline {paragraph}{Mécanismes de traçabilité}{26}{paragraph*.46}%
+\contentsline {paragraph}{Fiabilité des réponses}{26}{paragraph*.47}%
+\contentsline {paragraph}{Distinction des niveaux de preuve}{26}{paragraph*.48}%
+\contentsline {paragraph}{Gestion des incertitudes}{27}{paragraph*.49}%
+\contentsline {paragraph}{Limites de l'IA}{27}{paragraph*.50}%
+\contentsline {section}{\numberline {III.4}Travaux connexes et positionnement scientifique}{27}{section.3.4}%
+\contentsline {subsection}{\numberline {III.4.1}Ontologies dans le domaine des plantes médicinales}{27}{subsection.3.4.1}%
+\contentsline {paragraph}{Revue des ontologies internationales}{27}{paragraph*.51}%
+\contentsline {paragraph}{Ontologies de la médecine traditionnelle africaine}{27}{paragraph*.52}%
+\contentsline {paragraph}{Ontologie de la médecine traditionnelle africaine de Tekemetieu et al. (2016)}{27}{paragraph*.53}%
+\contentsline {paragraph}{ontoMEDTRAD : ontologie visuelle pour l'Afrique de l'Ouest (Appoh et al., 2018)}{28}{paragraph*.54}%
+\contentsline {paragraph}{Ontologie pour les tradipraticiens (bone-setters) en Afrique de l'Ouest (2024)}{28}{paragraph*.55}%
+\contentsline {paragraph}{Modèle d'intégration des connaissances (Angole, 2021)}{28}{paragraph*.56}%
+\contentsline {paragraph}{Ontologies nationales et ethniques}{29}{paragraph*.57}%
+\contentsline {paragraph}{Particularités ontologiques de la médecine traditionnelle africaine}{29}{paragraph*.58}%
+\contentsline {paragraph}{Synthèse et lacunes identifiées}{29}{paragraph*.59}%
+\contentsline {paragraph}{Synthèse des ontologies existantes}{29}{paragraph*.60}%
+\contentsline {subsection}{\numberline {III.4.2}Systèmes intelligents d'accès aux connaissances}{29}{subsection.3.4.2}%
+\contentsline {paragraph}{Typologie des systèmes}{29}{paragraph*.61}%
+\contentsline {paragraph}{Systèmes RAG pour l'accès aux connaissances}{30}{paragraph*.62}%
+\contentsline {paragraph}{Limites communes des systèmes existants}{30}{paragraph*.63}%
+\contentsline {paragraph}{Positionnement de notre système}{31}{paragraph*.64}%
+\contentsline {subsection}{\numberline {III.4.3}Positionnement de notre recherche}{31}{subsection.3.4.3}%
+\contentsline {paragraph}{Originalité de notre recherche}{31}{paragraph*.65}%
+\contentsline {section}{Conclusion du chapitre}{31}{Item.37}%
+\contentsline {chapter}{\numberline {IV}Matériel et méthodologie}{33}{chapter.4}%
+\contentsline {chapter}{\numberline {V}Conception et développement du système}{35}{chapter.5}%
+\contentsline {chapter}{\numberline {VI}Résultats et discussion}{37}{chapter.6}%

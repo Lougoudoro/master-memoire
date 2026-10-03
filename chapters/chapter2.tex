@@ -1,0 +1,853 @@
+\chapter{Matériel et méthodologie}
+\label{chap:materiel_methodologie}
+
+\section*{Introduction du chapitre}
+\addcontentsline{toc}{section}{Introduction du chapitre}
+
+Ce chapitre présente le matériel utilisé et la démarche méthodologique adoptée pour notre recherche. Contrairement au chapitre précédent qui a défini les concepts théoriques et analysé l'état de l'art, ce chapitre décrit les choix opérationnels et les étapes concrètes de notre travail. Il constitue le pont entre la réflexion théorique et la mise en œuvre technique.
+
+Le chapitre est structuré en trois parties principales. La première partie présente le matériel mobilisé : le corpus documentaire, les ontologies candidates et l'environnement technique. La deuxième partie détaille la méthodologie en huit phases, de l'identification et de la comparaison des ontologies à l'évaluation et la validation du système. La troisième partie présente une synthèse de la méthodologie et une transition vers le chapitre suivant.
+
+Chaque phase de la méthodologie est décrite avec précision. Nous présentons pour chaque phase l'objectif poursuivi, les actions concrètes menées, les méthodes utilisées, les outils mobilisés et les livrables produits. Cette approche permet de garantir la reproductibilité de notre démarche et de faciliter l'évaluation de notre contribution.
+
+% ============================================================
+% III.1. MATÉRIEL
+% ============================================================
+
+\section{Matériel}
+\label{sec:materiel}
+
+Cette section décrit l'ensemble des ressources utilisées dans notre recherche. Elle présente d'abord le corpus documentaire, ensuite les ontologies candidates, puis l'environnement technique. Un tableau de correspondance entre le matériel et les phases méthodologiques est fourni à la fin de cette section.
+
+Le matériel mobilisé dans cette recherche est de nature variée. Il comprend des ressources documentaires (articles, thèses, rapports, bases de données), des ressources conceptuelles (ontologies existantes) et des ressources techniques (modèles de langage, bases de données, frameworks, bibliothèques). Chaque ressource est décrite avec précision afin de permettre la compréhension de son rôle dans la démarche globale.
+
+% ------------------------------------------------------------
+% III.1.1. Corpus documentaire
+% ------------------------------------------------------------
+
+\subsection{Corpus documentaire}
+\label{subsec:corpus}
+
+La constitution du corpus documentaire a été précédée par l'identification et la sélection de l'ontologie. Cette démarche permet de définir les concepts et les relations qui guideront l'extraction des connaissances. Elle assure une meilleure structuration des données dès la phase de collecte. Le corpus est constitué de documents scientifiques et techniques portant sur les plantes médicinales du Burkina Faso. Il comprend trois catégories de sources : les sources scientifiques publiées, les données de l'Herbier National des Plantes Médicinales du Burkina Faso, les données de l'INERA et les rapports de projets.
+
+\subsubsection{Sources scientifiques publiées}
+
+Nous avons collecté 35 rapports de recherche, articles scientifiques, thèses et mémoires. Ces documents proviennent de revues scientifiques, d'universités et d'institutions de recherche burkinabè. Ils couvrent des études ethnobotaniques, ethnopharmacologiques et phytochimiques menées dans différentes régions du pays. Ces études documentent les noms scientifiques et vernaculaires des plantes, les parties utilisées, les pathologies traitées, les modes de préparation et, parfois, les dosages et les toxicités.
+
+Ces documents constituent la base principale de notre corpus. Ils ont été sélectionnés pour leur rigueur scientifique et leur pertinence pour le contexte burkinabè. Ils couvrent une période allant des travaux fondateurs aux publications récentes. La diversité des sources permet de couvrir un large éventail de plantes, de pathologies et de pratiques thérapeutiques.
+
+Parmi ces documents, nous pouvons citer à titre d'exemples :
+\begin{itemize}
+\item Zerbo et al. (2011) ont étudié les plantes médicinales chez les Sanan du Burkina Faso. Leur travail documente 85 espèces utilisées pour traiter 63 affections.
+\item Ouedraogo et al. (2024) ont réalisé une revue des plantes médicinales à potentiel aromatique du Burkina Faso. Ils recensent 42 espèces et identifient leurs propriétés et usages.
+\item Tibiri et al. (2020) ont mené une enquête à l'échelle nationale sur les plantes utilisées contre les maladies hépatiques. Plus de 2 000 entrées de plantes correspondant à 212 espèces ont été documentées.
+\item Ouédraogo et al. (2020) ont enquêté auprès de 30 commerçants de plantes médicinales dans six grandes villes. Ils ont identifié 104 espèces utilisées pour diverses pathologies.
+\end{itemize}
+
+Ces travaux constituent une base empirique essentielle et spécifiquement burkinabè. Ils offrent des outils méthodologiques précieux et des données de terrain riches.
+
+\subsubsection{Données de l'Herbier National des Plantes Médicinales du Burkina Faso}
+
+Le site burkinaherbiermed.org met à disposition des données sur les plantes médicinales du Burkina Faso. Ces données incluent des informations botaniques, des usages thérapeutiques et des références bibliographiques. Elles sont issues du projet « Herbier avec chimiothèque » piloté par le Ministère de la Santé.
+
+Ce projet vise à créer un herbier national dédié aux plantes médicinales, couplé à une chimiothèque contenant des marqueurs chimiques. Il documente les plantes utilisées pour les dix pathologies prioritaires définies par le ministère. Il géolocalise les plantes et confectionne des spécimens d'herbier. Il alimente une base de données nationale accessible via une application mobile et un site web.
+
+Ce projet se distingue des autres herbiers nationaux par sa focalisation explicite sur les plantes médicinales. Il combine un herbier (spécimens botaniques identifiés et conservés), une chimiothèque (marqueurs chimiques identifiés et dosés) et une base de données (informations ethnobotaniques, usages thérapeutiques, géolocalisation). Il coexiste avec d'autres herbiers reconnus au Burkina Faso, notamment l'Herbier National du Burkina (HNBU) du CNRST/INERA, l'herbier du Centre National de Semences Forestières (CNSF) et l'herbier de l'Université Joseph Ki-Zerbo.
+
+\subsubsection{Données de l'INERA}
+
+L'Institut de l'Environnement et de Recherches Agricoles (INERA) dispose d'une base de données contenant plus de 7 000 espèces végétales. Ces données incluent les coordonnées géographiques des lieux où les plantes peuvent être trouvées. Elles permettent une analyse spatiale de la distribution des espèces. Elles complètent les données ethnobotaniques en fournissant une dimension géographique.
+
+Ces données sont particulièrement précieuses pour notre recherche. Elles permettent de localiser les plantes sur le territoire burkinabè. Elles facilitent l'analyse de la répartition géographique des espèces. Elles enrichissent la base de connaissances avec des informations spatiales. Ces données permettent également de croiser les usages traditionnels avec la distribution géographique des plantes, ce qui peut révéler des patterns régionaux intéressants.
+
+\subsubsection{Rapports de projets}
+
+Des rapports de projets sur les plantes médicinales documentent des centaines d'espèces. Ils proviennent de projets de recherche, d'ONG et d'institutions nationales. Ils fournissent des données complémentaires sur les usages traditionnels et les propriétés des plantes. Ils incluent également des informations sur les projets en cours, comme le projet AI4D et le projet « Herbier avec chimiothèque ».
+
+Le projet AI4D (2020) vise à construire une base de données ouverte et interrogeable sur les plantes médicinales du Burkina Faso. Les champs standardisés incluent le nom scientifique, la famille, les noms en mooré/dioula/fulfulde, la localisation spatiale, le statut de conservation et les usages médicaux. Ce projet est particulièrement pertinent pour notre recherche car il partage des objectifs similaires de structuration et de diffusion des connaissances.
+
+Le tableau \ref{tab:corpus} récapitule les sources du corpus.
+
+\begin{table}[htbp]
+\centering
+\caption{Sources du corpus documentaire}
+\label{tab:corpus}
+\begin{tabular}{|L{3cm}|L{3cm}|L{3cm}|L{5cm}|}
+\hline
+\textbf{Source} & \textbf{Type} & \textbf{Volume estimé} & \textbf{Contenu principal} \\
+\hline
+Articles et thèses & Publications scientifiques & 35 documents & Études ethnobotaniques, pharmacologiques \\
+\hline
+burkinaherbiermed.org & Base de données en ligne & Plusieurs centaines de plantes & Données botaniques, usages, références \\
+\hline
+INERA & Base de données institutionnelle & > 7 000 espèces & Coordonnées géographiques, identification \\
+\hline
+Rapports de projets & Littérature grise & Plusieurs centaines de plantes & Usages traditionnels, propriétés \\
+\hline
+\end{tabular}
+\end{table}
+
+Ce corpus présente une richesse et une diversité importantes. Il couvre différentes régions du Burkina Faso, différentes pathologies et différentes approches méthodologiques. Il constitue une base solide pour l'extraction des connaissances et l'enrichissement de l'ontologie. La sélection de l'ontologie en amont a permis de cibler les informations à extraire et d'organiser le corpus en fonction des concepts et relations définis. Cette approche méthodologique garantit une meilleure cohérence entre les données collectées et le modèle conceptuel utilisé.
+
+% ------------------------------------------------------------
+% III.1.2. Ontologies candidates
+% ------------------------------------------------------------
+
+\subsection{Ontologies candidates}
+\label{subsec:ontologies_candidates}
+
+Pour notre étude comparative, nous avons identifié cinq ontologies candidates. Ces ontologies ont été présentées dans le chapitre II (section II.4.1). Elles couvrent des domaines variés : la botanique, la médecine traditionnelle, la pharmacologie et l'ethnomédecine. Le tableau \ref{tab:ontologies_candidates} présente ces ontologies avec leurs caractéristiques descriptives.
+
+Ces ontologies seront comparées selon une grille de critères définie dans la Phase 1 (section \ref{subsec:phase1}). La comparaison permettra de sélectionner l'ontologie la plus adaptée à notre contexte. Cette sélection est effectuée avant la constitution du corpus documentaire. Elle détermine le modèle conceptuel qui guidera l'extraction des connaissances.
+
+\begin{table}[htbp]
+\centering
+\caption{Ontologies candidates pour la comparaison}
+\label{tab:ontologies_candidates}
+\begin{tabular}{|C{0.5cm}|L{3cm}|L{3cm}|L{3cm}|L{2cm}|L{2.5cm}|}
+\hline
+\textbf{N°} & \textbf{Ontologie} & \textbf{Domaine} & \textbf{Zone géographique} & \textbf{Format} & \textbf{Source d'accès} \\
+\hline
+1 & WATRIMed / HTM & Médecine traditionnelle & Afrique de l'Ouest & OWL & IOS Press \\
+\hline
+2 & ontoMEDTRAD & Médecine traditionnelle & Afrique de l'Ouest & OWL + iconique & Thèse C. Appoh \\
+\hline
+3 & ATHMed & Médecine traditionnelle & Afrique (Ghana) & OWL & Frontiers in AI \\
+\hline
+4 & Deep Ontologies & Médecine traditionnelle & Afrique & OWL (Protégé) & Articles ARIMA \\
+\hline
+5 & FLOPO, PO & Botanique & International & OWL & OBO Foundry \\
+\hline
+\end{tabular}
+\end{table}
+
+Chacune de ces ontologies présente des forces et des faiblesses. Les ontologies botaniques (FLOPO, PO) couvrent bien l'aspect plante mais ignorent les usages médicinaux. Les ontologies pharmaceutiques (DrOn) sont centrées sur les médicaments modernes. L'OTM est prometteuse mais non spécifique à l'Afrique. Les ontologies africaines (WATRIMed/HTM, ontoMEDTRAD, ATHMed) intègrent les dimensions culturelles et les recettes multi-plantes. Leur comparaison détaillée est présentée dans la Phase 1.
+
+% ------------------------------------------------------------
+% III.1.3. Outils et environnement technique
+% ------------------------------------------------------------
+
+\subsection{Outils et environnement technique}
+\label{subsec:environnement}
+
+Cette section décrit les outils techniques utilisés dans notre recherche. Ces outils sont mobilisés dans différentes phases de la méthodologie. Pour chaque outil, nous précisons les phases concernées et les raisons de son choix.
+
+\subsubsection{Modèle de langage : Llama 3}
+
+Nous utilisons \textbf{Llama 3 70B} (Meta, 2024) comme modèle de langage. Llama 3 70B est un modèle open source de grande taille. Il offre des performances élevées en compréhension et en génération de textes. Il supporte le français, ce qui est essentiel pour traiter les documents scientifiques burkinabè. Il est également capable de suivre des instructions complexes, ce qui est indispensable pour l'extraction structurée.
+
+\textbf{Phases d'utilisation :} Phase 5 (Extraction des connaissances) et Phase 7 (Génération de réponses RAG).
+
+Le tableau \ref{tab:llama_acces} présente les modes d'accès à Llama 3.
+
+\begin{table}[htbp]
+\centering
+\caption{Modes d'accès à Llama 3 70B}
+\label{tab:llama_acces}
+\begin{tabular}{|L{4cm}|L{5cm}|L{5cm}|}
+\hline
+\textbf{Usage} & \textbf{Mode d'accès} & \textbf{Environnement} \\
+\hline
+Extraction & Ollama + Google Colab & Notebooks Colab avec GPU \\
+\hline
+Génération RAG & API via ngrok & Serveur local exposé \\
+\hline
+\end{tabular}
+\end{table}
+
+Le choix de Llama 3 70B se justifie par plusieurs raisons. Premièrement, ses performances surpassent celles des modèles plus petits sur les tâches complexes. Deuxièmement, il est open source, ce qui permet une utilisation sans contrainte de licence. Troisièmement, il supporte le français et peut être adapté aux langues locales. Quatrièmement, Ollama permet une exécution locale, tandis que ngrok permet un accès API distant pour l'application web. Cinquièmement, sa taille (70 milliards de paramètres) lui permet de capturer des nuances sémantiques fines, ce qui est crucial pour l'extraction de connaissances spécialisées.
+
+\subsubsection{Plateforme d'exécution : Google Colab}
+
+Les expériences d'extraction sont menées sur \textbf{Google Colab}. Colab est une plateforme de notebooks hébergée par Google. Elle offre un accès gratuit à des GPU (T4, V100, A100) adaptés à l'inférence de Llama 3 70B.
+
+\textbf{Phase d'utilisation :} Phase 5 (Extraction des connaissances).
+
+Google Colab présente plusieurs avantages. Il ne nécessite pas d'infrastructure locale coûteuse. Il offre un accès à des GPU performants. Il permet une exécution interactive et itérative. Il facilite la reproductibilité des expériences. Il s'intègre avec Google Drive pour le stockage des données et des résultats. Il permet également de partager facilement les notebooks avec d'autres chercheurs, ce qui favorise la collaboration et la validation.
+
+\subsubsection{Base de connaissances : Neo4j Desktop}
+
+Nous utilisons \textbf{Neo4j Desktop} comme base de connaissances orientée graphe. Neo4j Desktop est une version locale de Neo4j. Elle permet de créer, gérer et interroger des graphes de connaissances.
+
+\textbf{Phase d'utilisation :} Phase 6 (Construction et interrogation de la base).
+
+Le tableau \ref{tab:neo4j} présente les caractéristiques de Neo4j Desktop.
+
+\begin{table}[htbp]
+\centering
+\caption{Caractéristiques de Neo4j Desktop}
+\label{tab:neo4j}
+\begin{tabular}{|L{5cm}|L{8cm}|}
+\hline
+\textbf{Caractéristique} & \textbf{Valeur} \\
+\hline
+Type & Base de données orientée graphe \\
+\hline
+Langage de requête & Cypher \\
+\hline
+Version & Desktop (locale) \\
+\hline
+Format d'import & CSV, JSON \\
+\hline
+Interface & Neo4j Browser, Bloom \\
+\hline
+\end{tabular}
+\end{table}
+
+Neo4j est particulièrement adapté à notre projet. Il permet une modélisation naturelle des relations complexes entre les plantes, les usages, les propriétés et les sources. Il offre une interrogation puissante avec Cypher. Il garantit la traçabilité des informations via des relations explicites. Il est extensible pour ajouter de nouvelles connaissances sans reconstruire la base. Il permet également de visualiser le graphe de connaissances, ce qui facilite la compréhension des relations entre les entités.
+
+\subsubsection{Orchestration RAG : LangChain}
+
+Nous utilisons \textbf{LangChain} comme framework d'orchestration du système RAG. LangChain permet de chaîner les composants : interprétation de la requête, recherche dans Neo4j, génération de la réponse.
+
+\textbf{Phase d'utilisation :} Phase 7 (Exploitation par l'IA et développement web).
+
+Le tableau \ref{tab:langchain} présente les composants LangChain utilisés.
+
+\begin{table}[htbp]
+\centering
+\caption{Composants LangChain utilisés}
+\label{tab:langchain}
+\begin{tabular}{|L{5cm}|L{8cm}|}
+\hline
+\textbf{Composant} & \textbf{Rôle} \\
+\hline
+GraphCypherQAChain & Génération de requêtes Cypher à partir de questions naturelles \\
+\hline
+Neo4jGraph & Connexion à la base Neo4j \\
+\hline
+ChatOpenAI / Ollama & Intégration du modèle Llama 3 \\
+\hline
+PromptTemplate & Construction des prompts \\
+\hline
+Memory & Gestion de l'historique de conversation \\
+\hline
+\end{tabular}
+\end{table}
+
+LangChain est le framework le plus mature pour les systèmes RAG. Il offre une intégration native avec Neo4j via \texttt{GraphCypherQAChain}. Il permet de gérer l'historique de conversation. Il est extensible et bien documenté. Il s'intègre facilement avec Streamlit. Il permet également de définir des chaînes de traitement complexes tout en gardant le code lisible et maintenable.
+
+\subsubsection{Interface web : Streamlit}
+
+Nous utilisons \textbf{Streamlit} pour développer l'application web. Streamlit est un framework Python qui permet de créer des applications web interactives rapidement.
+
+\textbf{Phase d'utilisation :} Phase 7 (Exploitation par l'IA et développement web).
+
+L'application web proposera plusieurs fonctionnalités. Un chatbot en langage naturel permettra de poser des questions. Une recherche par plante, pathologie ou région sera disponible. Des fiches descriptives présenteront les plantes et leurs usages. Les sources et niveaux de preuve seront affichés. Une visualisation du graphe de connaissances sera intégrée.
+
+Streamlit a été choisi pour plusieurs raisons. Il est simple à utiliser et permet un développement rapide. Il gère l'état de session pour les conversations. Il s'intègre facilement avec LangChain. Il produit une interface professionnelle et ergonomique. Il permet également de déployer l'application facilement sur des serveurs ou des plateformes cloud.
+
+\subsubsection{Bibliothèques Python}
+
+Les bibliothèques Python sont utilisées dans les phases 5, 6 et 7. Le tableau \ref{tab:bibliotheques} liste les bibliothèques Python utilisées.
+
+\begin{table}[htbp]
+\centering
+\caption{Bibliothèques Python utilisées}
+\label{tab:bibliotheques}
+\begin{tabular}{|L{5cm}|L{3cm}|L{5cm}|}
+\hline
+\textbf{Bibliothèque} & \textbf{Version} & \textbf{Rôle} \\
+\hline
+\texttt{neo4j} & 5.x & Driver de connexion à Neo4j \\
+\hline
+\texttt{langchain} & 0.1.x & Orchestration RAG \\
+\hline
+\texttt{langchain-community} & 0.0.x & Intégrations Neo4j, Ollama \\
+\hline
+\texttt{streamlit} & 1.30+ & Interface web \\
+\hline
+\texttt{transformers} & 4.40+ & Chargement de Llama 3 \\
+\hline
+\texttt{ollama} & 0.1.x & Client Ollama \\
+\hline
+\texttt{sentence-transformers} & 2.5+ & Embeddings \\
+\hline
+\texttt{owlready2} & 0.45+ & Manipulation ontologies OWL \\
+\hline
+\texttt{rdflib} & 7.0+ & Format RDF/OWL \\
+\hline
+\texttt{pandas} & 2.0+ & Manipulation de données \\
+\hline
+\texttt{plotly} & 5.18+ & Visualisation \\
+\hline
+\end{tabular}
+\end{table}
+
+Ces bibliothèques couvrent l'ensemble des besoins techniques de notre recherche : connexion à la base de données, orchestration du système RAG, développement de l'interface web, chargement du modèle de langage, manipulation des ontologies, traitement des données et visualisation.
+
+% ------------------------------------------------------------
+% III.1.4. Tableau récapitulatif du matériel
+% ------------------------------------------------------------
+
+\subsection{Tableau récapitulatif du matériel}
+\label{subsec:recap_materiel}
+
+Le tableau \ref{tab:recap_materiel} récapitule l'ensemble du matériel utilisé.
+
+\begin{table}[htbp]
+\centering
+\caption{Récapitulatif du matériel}
+\label{tab:recap_materiel}
+\begin{tabular}{|L{3cm}|L{4cm}|L{6cm}|}
+\hline
+\textbf{Catégorie} & \textbf{Élément} & \textbf{Spécification} \\
+\hline
+\multirow{4}{*}{Corpus} & Documents scientifiques & 35 rapports, articles, thèses \\
+\cline{2-3}
+& Base burkinaherbiermed.org & Plusieurs centaines de plantes \\
+\cline{2-3}
+& Base INERA & > 7 000 espèces géolocalisées \\
+\cline{2-3}
+& Rapports de projets & Centaines de plantes documentées \\
+\hline
+\multirow{5}{*}{Ontologies} & WATRIMed/HTM & OWL, Afrique de l'Ouest \\
+\cline{2-3}
+& ontoMEDTRAD & OWL + iconique, Afrique de l'Ouest \\
+\cline{2-3}
+& ATHMed & OWL, Ghana \\
+\cline{2-3}
+& Deep Ontologies & OWL, Afrique \\
+\cline{2-3}
+& FLOPO, PO & OWL, botanique \\
+\hline
+Modèle de langage & Llama 3 70B & Via Ollama + Colab (extraction), API ngrok (RAG) \\
+\hline
+Plateforme & Google Colab & GPU T4/V100/A100 \\
+\hline
+Base de connaissances & Neo4j Desktop & Orientée graphe, Cypher \\
+\hline
+Orchestration RAG & LangChain & GraphCypherQAChain \\
+\hline
+Interface web & Streamlit & Chatbot, recherche, fiches \\
+\hline
+Bibliothèques & Python & neo4j, langchain, streamlit, transformers, etc. \\
+\hline
+\end{tabular}
+\end{table}
+
+% ------------------------------------------------------------
+% III.1.5. Tableau de correspondance Matériel - Phases
+% ------------------------------------------------------------
+
+\subsection{Tableau de correspondance Matériel - Phases}
+\label{subsec:correspondance_materiel}
+
+Le tableau \ref{tab:correspondance_materiel} établit la correspondance entre le matériel et les phases méthodologiques. Ce tableau permet de comprendre comment chaque ressource est mobilisée dans la démarche.
+
+\begin{table}[htbp]
+\centering
+\caption{Correspondance entre le matériel et les phases}
+\label{tab:correspondance_materiel}
+\begin{tabular}{|L{4cm}|L{3cm}|L{6cm}|}
+\hline
+\textbf{Matériel} & \textbf{Phase} & \textbf{Utilisation} \\
+\hline
+Corpus documentaire & Phase 3 & Constitution du corpus \\
+\hline
+Ontologies candidates & Phase 1 & Comparaison et sélection \\
+\hline
+Llama 3 70B & Phase 5, Phase 7 & Extraction, génération RAG \\
+\hline
+Google Colab & Phase 5 & Exécution de l'extraction \\
+\hline
+Neo4j Desktop & Phase 6 & Base de connaissances \\
+\hline
+LangChain & Phase 7 & Orchestration RAG \\
+\hline
+Streamlit & Phase 7 & Interface web \\
+\hline
+Bibliothèques Python & Phase 5, 6, 7 & Développement \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================
+% III.2. MÉTHODOLOGIE
+% ============================================================
+
+\section{Méthodologie}
+\label{sec:methodologie}
+
+Cette section détaille les huit phases opérationnelles de notre démarche. Chaque phase décrit les actions concrètes, les méthodes utilisées et les livrables attendus. Les phases sont organisées selon une progression logique : identification et comparaison des ontologies, définition des critères de recherche, constitution du corpus, adaptation de l'ontologie, enrichissement, construction de la base de connaissances, exploitation par l'intelligence artificielle et développement de l'application web, et enfin évaluation et validation.
+
+Cette organisation méthodologique reflète notre souci de cohérence et de rigueur. En commençant par l'identification et la sélection de l'ontologie, nous nous assurons de disposer d'un cadre conceptuel solide avant de collecter les données. Cette approche garantit que les données collectées seront pertinentes et structurées selon le modèle choisi. Elle facilite également l'extraction des connaissances en ciblant les informations pertinentes dès la phase de collecte.
+
+% ------------------------------------------------------------
+% III.2.1. Phase 1 : Identification et étude comparative des ontologies
+% ------------------------------------------------------------
+
+\subsection{Phase 1 : Identification et étude comparative des ontologies}
+\label{subsec:phase1}
+
+\textbf{Objectif} : Sélectionner l'ontologie la plus pertinente pour notre contexte.
+
+La comparaison des ontologies suit une démarche en trois temps. Premièrement, nous définissons une grille de critères. Deuxièmement, nous notons chaque ontologie selon cette grille. Troisièmement, nous sélectionnons l'ontologie avec le score le plus élevé. Cette phase est fondamentale car elle détermine le modèle conceptuel qui guidera toute la suite de notre travail.
+
+\subsubsection{Définition de la grille de critères}
+
+Nous avons défini huit critères pour comparer les ontologies. Ces critères ont été choisis en fonction de nos besoins spécifiques : représenter les connaissances sur les plantes médicinales du Burkina Faso, intégrer les savoirs locaux, assurer la traçabilité des sources et permettre l'adaptation au contexte burkinabè. Le tableau \ref{tab:grille_criteres} présente ces critères.
+
+\begin{table}[htbp]
+\centering
+\caption{Grille de critères de comparaison}
+\label{tab:grille_criteres}
+\begin{tabular}{|C{0.5cm}|L{3cm}|L{7cm}|C{2cm}|}
+\hline
+\textbf{N°} & \textbf{Critère} & \textbf{Description} & \textbf{Pondération} \\
+\hline
+1 & Couverture du domaine & Capacité à représenter plantes, usages, propriétés, maladies & Élevée (3) \\
+\hline
+2 & Richesse sémantique & Nombre et qualité des classes, relations, axiomes & Élevée (3) \\
+\hline
+3 & Disponibilité & Ontologie accessible et téléchargeable & Élevée (3) \\
+\hline
+4 & Documentation & Qualité de la documentation et des exemples & Moyenne (2) \\
+\hline
+5 & Interopérabilité & Compatibilité avec OWL, RDF, SPARQL & Moyenne (2) \\
+\hline
+6 & Adaptabilité & Facilité d'adaptation au contexte burkinabè & Élevée (3) \\
+\hline
+7 & Traçabilité & Capacité à associer les connaissances aux sources & Élevée (3) \\
+\hline
+8 & Prise en compte des savoirs locaux & Intégration des noms vernaculaires, recettes multi-plantes & Élevée (3) \\
+\hline
+\end{tabular}
+\end{table}
+
+Chaque critère est pondéré en fonction de son importance pour notre recherche. Les critères de pondération élevée (3) sont ceux qui sont essentiels pour notre contexte. Les critères de pondération moyenne (2) sont importants mais moins critiques. Cette pondération permet de calculer un score global pour chaque ontologie.
+
+\subsubsection{Notation des ontologies}
+
+Chaque ontologie est notée de 1 (très faible) à 5 (très élevé) pour chaque critère. Le tableau \ref{tab:notation_ontologies} présente les résultats.
+
+\begin{table}[htbp]
+\centering
+\caption{Notation des ontologies candidates}
+\label{tab:notation_ontologies}
+\begin{tabular}{|L{3cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{1.5cm}|}
+\hline
+\textbf{Ontologie} & \textbf{C1} & \textbf{C2} & \textbf{C3} & \textbf{C4} & \textbf{C5} & \textbf{C6} & \textbf{C7} & \textbf{C8} & \textbf{Score} \\
+\hline
+WATRIMed/HTM & 5 & 5 & 4 & 4 & 5 & 4 & 3 & 5 & 4.4 \\
+\hline
+ontoMEDTRAD & 5 & 4 & 3 & 3 & 4 & 5 & 2 & 5 & 4.0 \\
+\hline
+ATHMed & 4 & 4 & 3 & 3 & 4 & 3 & 2 & 3 & 3.3 \\
+\hline
+Deep Ontologies & 3 & 4 & 2 & 2 & 3 & 3 & 2 & 4 & 2.9 \\
+\hline
+FLOPO / PO & 2 & 3 & 5 & 4 & 5 & 2 & 1 & 1 & 2.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+L'analyse de ce tableau révèle plusieurs tendances. Les ontologies africaines (WATRIMed/HTM, ontoMEDTRAD, ATHMed) obtiennent les meilleurs scores grâce à leur couverture du domaine et leur prise en compte des savoirs locaux. Les ontologies botaniques (FLOPO, PO) sont bien notées sur la disponibilité et l'interopérabilité mais faibles sur la couverture des usages médicinaux et la prise en compte des savoirs locaux. L'ontologie WATRIMed/HTM se distingue par sa couverture complète (plantes, recettes, maladies, parties utilisées, modes de préparation) et sa capacité à modéliser les recettes multi-plantes.
+
+\subsubsection{Sélection de l'ontologie}
+
+L'ontologie WATRIMed/HTM obtient le score le plus élevé (4.4). Elle couvre l'Afrique de l'Ouest, inclut le Burkina Faso, et modélise les recettes multi-plantes. Elle dispose d'une documentation riche et d'une structure formelle adaptée. Elle est donc retenue pour notre étude.
+
+Cette sélection préalable permet de disposer d'un cadre conceptuel solide pour l'extraction et l'organisation des connaissances. Elle guidera la constitution du corpus documentaire et l'adaptation de l'ontologie au contexte burkinabè.
+
+\textbf{Livrable} : Ontologie WATRIMed/HTM sélectionnée.
+
+% ------------------------------------------------------------
+% III.2.2. Phase 2 : Définition des critères de recherche et de sélection
+% ------------------------------------------------------------
+
+\subsection{Phase 2 : Définition des critères de recherche et de sélection des documents}
+\label{subsec:phase2}
+
+\textbf{Objectif} : Définir les critères qui guideront la recherche et la sélection des documents scientifiques.
+
+La définition des critères suit une démarche en deux temps. Premièrement, nous définissons les critères de recherche. Deuxièmement, nous définissons les critères de sélection des documents. Ces critères permettront de garantir la pertinence, la qualité et la cohérence des sources utilisées.
+
+\subsubsection{Critères de recherche}
+
+Les critères de recherche incluent :
+
+\begin{itemize}
+\item \textbf{Les plantes} : espèces végétales documentées au Burkina Faso, avec identification botanique (nom scientifique, famille, synonymes).
+\item \textbf{Les parties utilisées} : feuilles, racines, écorces, fruits, graines, fleurs, tiges, etc.
+\item \textbf{Les pathologies et usages médicinaux} : paludisme, infections respiratoires, digestives, diabète, hypertension, etc.
+\item \textbf{Les modes de préparation} : décoction, macération, infusion, poudre, extrait alcoolique, etc.
+\item \textbf{Les niveaux de preuve} : savoirs traditionnels, études in vitro, études in vivo, essais cliniques.
+\item \textbf{Les propriétés pharmacologiques} : antimicrobiennes, antipaludiques, anti-inflammatoires, antioxydantes, toxicité, etc.
+\item \textbf{La composition chimique} : alcaloïdes, flavonoïdes, tanins, saponines, huiles essentielles, etc.
+\end{itemize}
+
+Ces critères couvrent l'ensemble des dimensions des connaissances sur les plantes médicinales. Ils permettent de cibler les informations pertinentes pour notre recherche.
+
+\subsubsection{Critères de sélection des documents}
+
+Les critères de sélection des documents incluent :
+
+\begin{itemize}
+\item \textbf{Pertinence} : le document traite des plantes médicinales du Burkina Faso.
+\item \textbf{Identification de la plante} : le nom scientifique est précisé.
+\item \textbf{Disponibilité d'une référence scientifique} : le document est publié dans une revue à comité de lecture, une thèse, un mémoire ou un rapport de recherche.
+\item \textbf{Fiabilité} : les sources sont vérifiables et citées.
+\item \textbf{Actualité} : les documents récents seront privilégiés, sans exclure les travaux fondateurs.
+\end{itemize}
+
+Ces critères garantissent la qualité et la fiabilité des sources utilisées. Ils permettent d'écarter les documents non scientifiques ou non pertinents.
+
+Cette phase permet de disposer d'un corpus fiable et cohérent, qui constituera la base documentaire de notre étude.
+
+\textbf{Livrable} : Grille de critères de recherche et de sélection.
+
+% ------------------------------------------------------------
+% III.2.3. Phase 3 : Constitution du corpus scientifique
+% ------------------------------------------------------------
+
+\subsection{Phase 3 : Constitution du corpus scientifique}
+\label{subsec:phase3}
+
+\textbf{Objectif} : Rassembler un corpus documentaire fiable et pertinent sur les plantes médicinales du Burkina Faso.
+
+La constitution du corpus s'est déroulée en quatre phases. Premièrement, nous avons mené une recherche documentaire sur Google Scholar, PubMed et ResearchGate. Nous avons également consulté les bases burkinaherbiermed.org et INERA. Nous avons collecté des rapports de projets auprès d'institutions nationales.
+
+Deuxièmement, nous avons appliqué les critères d'inclusion. Les documents devaient traiter des plantes médicinales du Burkina Faso. Ils devaient préciser le nom scientifique des plantes. Ils devaient être publiés ou validés par une institution scientifique. Leurs sources devaient être vérifiables et citées.
+
+Troisièmement, nous avons appliqué les critères d'exclusion. Les documents non scientifiques (blogs, sites non référencés) ont été écartés. Les documents sans identification botanique ont été exclus. Les documents trop anciens ont été écartés, sauf les travaux fondateurs.
+
+Quatrièmement, nous avons organisé le corpus. Les documents ont été classés par type (article, thèse, rapport). Ils ont été indexés par plante, pathologie et région. Ils ont été stockés dans un répertoire structuré.
+
+Ce processus rigoureux a permis de constituer un corpus de 35 documents scientifiques, complété par les données de burkinaherbiermed.org et de l'INERA. Ce corpus couvre différentes régions du Burkina Faso, différentes pathologies et différentes approches méthodologiques. Il constitue une base solide pour l'extraction des connaissances.
+
+\textbf{Livrable} : Un corpus de 35 documents scientifiques, complété par les données de burkinaherbiermed.org et de l'INERA.
+
+% ------------------------------------------------------------
+% III.2.4. Phase 4 : Adaptation de l'ontologie sélectionnée
+% ------------------------------------------------------------
+
+\subsection{Phase 4 : Adaptation de l'ontologie sélectionnée}
+\label{subsec:phase4}
+
+\textbf{Objectif} : Adapter l'ontologie sélectionnée au contexte burkinabè.
+
+L'adaptation de l'ontologie suit une démarche en cinq temps. Premièrement, nous analysons les concepts existants. Deuxièmement, nous ajoutons des classes. Troisièmement, nous ajoutons des propriétés. Quatrièmement, nous modifions les relations. Cinquièmement, nous documentons les adaptations.
+
+\subsubsection{Analyse des concepts existants}
+
+Nous étudions la structure de l'ontologie WATRIMed/HTM. Nous identifions les classes existantes : MedicinalPlant, Recipe, Disease/Symptom, PlantPart, PreparationMethod, AdministrationMode, Dosage, ChemicalCompound, ContraIndication, TherapeuticIndication, Source. Nous identifions les relations existantes : usesMedicinalPlant, treatsDisease/Symptom, hasPartPlantPart, hasPreparationMethod, hasAdministrationMode, hasDosage, containsChemicalCompound. Nous évaluons la couverture par rapport au contexte burkinabè.
+
+Cette analyse révèle que l'ontologie WATRIMed/HTM couvre bien les concepts de base mais qu'elle nécessite des adaptations pour le contexte burkinabè. Les lacunes identifiées concernent principalement les noms vernaculaires en langues locales, les maladies spécifiques au Burkina Faso, les niveaux de preuve et la traçabilité des sources.
+
+\subsubsection{Ajout de classes}
+
+Nous ajoutons des classes pour les maladies spécifiques au Burkina Faso. Par exemple : paludisme, onchocercose, méningite. Nous ajoutons des classes pour les noms vernaculaires (mooré, dioula, fulfuldé). Nous ajoutons des classes pour les régions du Burkina Faso. Nous ajoutons des classes pour les niveaux de preuve (traditionnel, in vitro, in vivo, clinique). Nous ajoutons des classes pour les sources scientifiques (article, thèse, rapport).
+
+Ces ajouts permettent de représenter les spécificités du contexte burkinabè. Ils facilitent l'intégration des connaissances locales et la traçabilité des sources.
+
+\subsubsection{Ajout de propriétés}
+
+Nous ajoutons des propriétés pour les noms vernaculaires (nomMooré, nomDioula, nomFulfuldé). Nous ajoutons des propriétés pour la localisation géographique (coordonnéesGPS, région, province). Nous ajoutons des propriétés pour les niveaux de preuve (niveauPreuve, typeEtude). Nous ajoutons des propriétés pour la traçabilité (source, DOI, page, section). Nous ajoutons des propriétés pour les dosages et toxicités.
+
+Ces propriétés enrichissent l'ontologie et permettent de capturer des informations détaillées sur les plantes et leurs usages.
+
+\subsubsection{Modification de relations}
+
+Nous précisons la relation « traite » avec des attributs de niveau de preuve. Nous ajoutons la relation « provientDe » pour lier les connaissances aux sources. Nous ajoutons la relation « estDocumentéeDans » pour lier les plantes aux documents. Nous ajoutons la relation « aPourNomVernaculaire » pour lier les plantes aux noms locaux. Nous ajoutons la relation « estLocaliséeÀ » pour lier les plantes aux coordonnées géographiques.
+
+Ces modifications permettent d'assurer la traçabilité des connaissances et de représenter les relations complexes entre les entités.
+
+\subsubsection{Documentation des adaptations}
+
+Nous tenons un journal des modifications. Nous justifions chaque ajout. Nous documentons les choix effectués. Nous documentons les classes ajoutées, modifiées ou supprimées. Nous documentons les propriétés ajoutées ou modifiées. Nous documentons les relations ajoutées ou modifiées.
+
+Cette documentation est essentielle pour garantir la reproductibilité de notre démarche et faciliter les évolutions futures de l'ontologie.
+
+\textbf{Livrable} : Une ontologie adaptée au contexte burkinabè.
+
+% ------------------------------------------------------------
+% III.2.5. Phase 5 : Enrichissement de l'ontologie
+% ------------------------------------------------------------
+
+\subsection{Phase 5 : Enrichissement de l'ontologie à partir de la littérature scientifique}
+\label{subsec:phase5}
+
+\textbf{Objectif} : Extraire les connaissances du corpus et enrichir l'ontologie.
+
+L'enrichissement de l'ontologie suit une démarche en cinq temps. Premièrement, nous concevons les prompts d'extraction. Deuxièmement, nous exécutons l'extraction assistée par LLM. Troisièmement, nous validons les extractions. Quatrièmement, nous structurons les données. Cinquièmement, nous intégrons les données dans l'ontologie.
+
+\subsubsection{Conception des prompts d'extraction}
+
+Nous concevons des prompts pour extraire les informations du corpus. Chaque prompt cible un type d'information. Le prompt général demande d'extraire le nom scientifique, les noms vernaculaires, la famille botanique, les parties utilisées, les usages thérapeutiques, les modes de préparation, les activités pharmacologiques, le niveau de preuve et la source.
+
+\begin{quote}
+\begin{verbatim}
+Tu es un assistant spécialisé dans l'extraction de connaissances
+sur les plantes médicinales du Burkina Faso.
+
+À partir du texte ci-dessous, extrais les informations suivantes :
+- Nom scientifique de la plante
+- Noms vernaculaires (mooré, dioula, fulfuldé)
+- Famille botanique
+- Parties utilisées
+- Usages thérapeutiques
+- Modes de préparation
+- Activités pharmacologiques
+- Niveau de preuve (traditionnel, in vitro, in vivo, clinique)
+- Source (auteur, année, DOI)
+
+Réponds au format JSON.
+
+Texte :
+[contenu du document]
+\end{verbatim}
+\end{quote}
+
+Ce prompt est conçu pour guider le modèle de langage dans l'extraction structurée des informations. Il précise le format de sortie (JSON) et les champs à extraire. Il peut être adapté en fonction du type de document et des informations recherchées.
+
+\subsubsection{Exécution de l'extraction}
+
+Nous chargeons Llama 3 70B sur Google Colab. Nous exécutons les prompts sur chaque document. Nous sauvegardons les résultats en JSON.
+
+L'exécution de l'extraction se fait de manière itérative. Nous traitons les documents un par un ou par lots. Nous vérifions la qualité des résultats au fur et à mesure. Nous ajustons les prompts si nécessaire.
+
+\subsubsection{Validation humaine}
+
+Nous vérifions les extractions. Un expert corrige les erreurs. Il valide les données. Cette étape est essentielle pour garantir la qualité.
+
+La validation humaine permet de corriger les erreurs d'extraction, de compléter les informations manquantes et de vérifier la cohérence des données. Elle garantit que les connaissances intégrées dans l'ontologie sont fiables et exactes.
+
+\subsubsection{Structuration des données}
+
+Nous convertissons les données en CSV pour l'import Neo4j. Nous organisons les données selon le modèle de l'ontologie.
+
+La structuration des données facilite leur import dans la base de connaissances. Elle permet de vérifier la conformité des données au modèle de l'ontologie.
+
+\subsubsection{Intégration dans l'ontologie}
+
+Nous ajoutons les instances (plantes, maladies, usages). Nous créons les relations entre instances. Nous associons les connaissances aux sources. Nous documentons les enrichissements.
+
+L'intégration des données dans l'ontologie permet de peupler la base de connaissances et de créer les liens entre les entités.
+
+\textbf{Livrable} : Un ensemble de données structurées (JSON, CSV) prêtes à être intégrées.
+
+% ------------------------------------------------------------
+% III.2.6. Phase 6 : Construction et interrogation de la base
+% ------------------------------------------------------------
+
+\subsection{Phase 6 : Construction et interrogation de la base de connaissances}
+\label{subsec:phase6}
+
+\textbf{Objectif} : Construire la base de connaissances orientée graphe.
+
+La construction de la base Neo4j suit une démarche en trois temps. Premièrement, nous modélisons le graphe. Deuxièmement, nous importons les données. Troisièmement, nous testons les requêtes.
+
+\subsubsection{Modélisation du graphe}
+
+Nous définissons les nœuds : Plante, Maladie, Usage, Partie, Préparation, Source, ComposéChimique, Région. Nous définissons les relations : TRAITE, UTILISE, PROVIENT\_DE, A\_POUR\_PARTIE, A\_POUR\_PREPARATION, CONTIENT, EST\_LOCALISEE\_A. Nous définissons les propriétés : nom, niveau de preuve, DOI, coordonnéesGPS.
+
+Cette modélisation permet de représenter les connaissances de manière naturelle et intuitive. Les nœuds représentent les entités du domaine. Les relations représentent les liens entre ces entités. Les propriétés décrivent les caractéristiques des entités et des relations.
+
+\subsubsection{Import des données}
+
+Nous chargeons les fichiers CSV. Nous créons les nœuds et relations avec Cypher. Nous vérifions l'intégrité des données.
+
+L'import des données se fait à l'aide de requêtes Cypher. Nous vérifions que toutes les données sont correctement importées. Nous contrôlons l'intégrité des relations et des propriétés.
+
+\subsubsection{Requêtes de test}
+
+Nous testons des requêtes simples (plantes par maladie). Nous testons des requêtes complexes (recettes multi-plantes). Nous testons des requêtes de traçabilité (source d'une information). Nous testons des requêtes spatiales (plantes par région).
+
+Ces tests permettent de vérifier que la base de connaissances est fonctionnelle et que les requêtes retournent les résultats attendus.
+
+\textbf{Livrable} : Une base Neo4j peuplée et interrogeable.
+
+% ------------------------------------------------------------
+% III.2.7. Phase 7 : Exploitation par l'IA et développement web
+% ------------------------------------------------------------
+
+\subsection{Phase 7 : Exploitation par IA et développement de l'application web}
+\label{subsec:phase7}
+
+\textbf{Objectif} : Développer le système d'accès intelligent et l'interface utilisateur.
+
+La mise en place du système RAG suit une démarche en trois temps. Premièrement, nous définissons l'architecture. Deuxièmement, nous construisons la chaîne de traitement. Troisièmement, nous intégrons les composants.
+
+\subsubsection{Architecture du système}
+
+L'architecture est la suivante : Utilisateur \(\rightarrow\) Streamlit \(\rightarrow\) LangChain \(\rightarrow\) Neo4j \(\rightarrow\) Llama 3 \(\rightarrow\) Réponse.
+
+Cette architecture permet de combiner la recherche d'informations dans la base de connaissances et la génération de réponses par le modèle de langage. Elle garantit la traçabilité des réponses en associant chaque information à sa source.
+
+\subsubsection{Chaîne de traitement}
+
+La chaîne de traitement comprend six étapes. Premièrement, l'interprétation de la requête en langage naturel. Deuxièmement, la génération de la requête Cypher par LangChain. Troisièmement, l'exécution sur Neo4j. Quatrièmement, la récupération des faits. Cinquièmement, la génération de la réponse par Llama 3. Sixièmement, l'affichage des sources.
+
+Cette chaîne de traitement permet de transformer une question en langage naturel en une réponse précise et traçable.
+
+\subsubsection{Intégration des composants}
+
+Nous connectons LangChain à Neo4j. Nous connectons LangChain à Llama 3 via l'API ngrok. Nous configurons les prompts.
+
+L'intégration des composants permet de faire fonctionner le système RAG de manière fluide et efficace.
+
+\subsubsection{Développement de l'application web}
+
+Nous concevons une page d'accueil avec chatbot. Nous concevons une page de recherche par plante. Nous concevons une page de recherche par pathologie. Nous concevons une page de fiches descriptives. Nous créons les composants (chat, recherche, fiches). Nous intégrons le système RAG. Nous gérons l'historique de conversation.
+
+L'application web offre une interface intuitive et ergonomique pour interroger la base de connaissances. Elle permet aux utilisateurs de poser des questions en langage naturel et d'obtenir des réponses précises et traçables.
+
+\subsubsection{Tests et validation}
+
+Nous effectuons des tests fonctionnels. Nous effectuons des tests utilisateurs.
+
+Les tests fonctionnels vérifient que l'application fonctionne correctement. Les tests utilisateurs évaluent la facilité d'utilisation et la pertinence des réponses.
+
+\textbf{Livrable} : Un système RAG fonctionnel et une application web fonctionnelle.
+
+% ------------------------------------------------------------
+% III.2.8. Phase 8 : Évaluation et validation
+% ------------------------------------------------------------
+
+\subsection{Phase 8 : Évaluation et validation}
+\label{subsec:phase8}
+
+\textbf{Objectif} : Évaluer la qualité de l'ontologie, du système RAG et de l'application web.
+
+L'évaluation portera sur trois niveaux. Le premier niveau concerne l'ontologie. Le deuxième niveau concerne le système RAG. Le troisième niveau concerne l'application web.
+
+\subsubsection{Évaluation de l'ontologie}
+
+L'évaluation de l'ontologie portera sur quatre critères. Le tableau \ref{tab:eval_ontologie} présente ces critères.
+
+\begin{table}[htbp]
+\centering
+\caption{Critères d'évaluation de l'ontologie}
+\label{tab:eval_ontologie}
+\begin{tabular}{|L{3cm}|L{6cm}|L{4cm}|}
+\hline
+\textbf{Critère} & \textbf{Description} & \textbf{Méthode} \\
+\hline
+Couverture & Capacité à représenter les connaissances du corpus & Vérification manuelle \\
+\hline
+Cohérence & Absence de contradictions & Requêtes de test \\
+\hline
+Traçabilité & Association des connaissances aux sources & Vérification des relations \\
+\hline
+Extensibilité & Facilité d'ajout de nouvelles connaissances & Test d'ajout \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Évaluation du système RAG}
+
+L'évaluation du système RAG portera sur quatre critères. Le tableau \ref{tab:eval_rag} présente ces critères.
+
+\begin{table}[htbp]
+\centering
+\caption{Critères d'évaluation du système RAG}
+\label{tab:eval_rag}
+\begin{tabular}{|L{3cm}|L{6cm}|L{4cm}|}
+\hline
+\textbf{Critère} & \textbf{Description} & \textbf{Métrique} \\
+\hline
+Pertinence & Les réponses répondent à la question & Précision \\
+\hline
+Fidélité & Les réponses sont fidèles aux sources & Rappel \\
+\hline
+Exactitude & Les réponses sont correctes & F1-score \\
+\hline
+Traçabilité & Les sources sont affichées & Taux de couverture \\
+\hline
+\end{tabular}
+\end{table}
+
+Nous constituerons un jeu de 50 questions de référence. Ces questions porteront sur les plantes, les usages et les propriétés. Les réponses seront comparées aux réponses attendues.
+
+\subsubsection{Évaluation de l'application web}
+
+L'évaluation de l'application web portera sur quatre critères. Le tableau \ref{tab:eval_web} présente ces critères.
+
+\begin{table}[htbp]
+\centering
+\caption{Critères d'évaluation de l'application web}
+\label{tab:eval_web}
+\begin{tabular}{|L{3cm}|L{6cm}|L{4cm}|}
+\hline
+\textbf{Critère} & \textbf{Description} & \textbf{Méthode} \\
+\hline
+Facilité d'utilisation & L'interface est intuitive & Questionnaire \\
+\hline
+Compréhension & Les réponses sont claires & Questionnaire \\
+\hline
+Utilité & L'application répond aux besoins & Questionnaire \\
+\hline
+Performance & Temps de réponse & Mesure \\
+\hline
+\end{tabular}
+\end{table}
+
+Nous solliciterons 10 à 20 participants. Ils incluront des étudiants, des chercheurs et des tradipraticiens.
+
+\textbf{Livrable} : Rapport d'évaluation et de validation.
+
+% ============================================================
+% III.3. SYNTHÈSE ET TRANSITION
+% ============================================================
+
+\section{Synthèse et transition}
+\label{sec:synthese}
+
+Cette section présente une synthèse de la méthodologie et une transition vers le chapitre suivant.
+
+\subsection{Tableau de correspondance Phases - Livrables}
+
+Le tableau \ref{tab:correspondance_phases} récapitule les phases, les objectifs et les livrables.
+
+\begin{table}[htbp]
+\centering
+\caption{Correspondance entre les phases, les objectifs et les livrables}
+\label{tab:correspondance_phases}
+\begin{tabular}{|L{2cm}|L{4cm}|L{6cm}|}
+\hline
+\textbf{Phase} & \textbf{Objectif} & \textbf{Livrable} \\
+\hline
+Phase 1 & Sélectionner l'ontologie la plus pertinente & Ontologie WATRIMed/HTM sélectionnée \\
+\hline
+Phase 2 & Définir les critères de recherche et de sélection & Grille de critères \\
+\hline
+Phase 3 & Rassembler un corpus fiable et pertinent & Corpus de 35 documents \\
+\hline
+Phase 4 & Adapter l'ontologie au contexte burkinabè & Ontologie adaptée \\
+\hline
+Phase 5 & Extraire les connaissances et enrichir l'ontologie & Données structurées (JSON, CSV) \\
+\hline
+Phase 6 & Construire la base de connaissances graphe & Base Neo4j peuplée \\
+\hline
+Phase 7 & Développer le système RAG et l'application web & Système RAG et application web \\
+\hline
+Phase 8 & Évaluer la qualité du système & Rapport d'évaluation \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Transition vers le chapitre IV}
+
+Ce chapitre a présenté le matériel et la méthodologie de notre recherche. Le matériel comprend un corpus de 35 documents scientifiques, les données de burkinaherbiermed.org et de l'INERA, cinq ontologies candidates et un environnement technique basé sur Llama 3 70B, Google Colab, Neo4j Desktop, LangChain et Streamlit.
+
+La méthodologie est structurée en huit phases : identification et étude comparative des ontologies, définition des critères de recherche et de sélection des documents, constitution du corpus scientifique, adaptation de l'ontologie sélectionnée, enrichissement de l'ontologie à partir de la littérature scientifique, construction et interrogation de la base de connaissances, exploitation par l'intelligence artificielle et développement de l'application web, et évaluation et validation.
+
+Le chapitre suivant présentera la conception et le développement du système. Nous y détaillerons l'ontologie adaptée, la base de connaissances construite, le système RAG implémenté et l'application web développée.
+
+% ============================================================
+% CONCLUSION DU CHAPITRE
+% ============================================================
+
+\section*{Conclusion du chapitre}
+\addcontentsline{toc}{section}{Conclusion du chapitre}
+
+Ce chapitre a présenté le matériel et la méthodologie de notre recherche. Le matériel comprend un corpus de 35 documents scientifiques, les données de burkinaherbiermed.org et de l'INERA, cinq ontologies candidates et un environnement technique basé sur Llama 3 70B, Google Colab, Neo4j Desktop, LangChain et Streamlit.
+
+La méthodologie est structurée en huit phases : identification et étude comparative des ontologies, définition des critères de recherche et de sélection des documents, constitution du corpus scientifique, adaptation de l'ontologie sélectionnée, enrichissement de l'ontologie à partir de la littérature scientifique, construction et interrogation de la base de connaissances, exploitation par l'intelligence artificielle et développement de l'application web, et évaluation et validation. Chaque phase est décrite avec ses actions concrètes et ses livrables.
+
+La réorganisation de la méthodologie permet de commencer par l'identification et la sélection de l'ontologie avant la constitution du corpus. Cette approche garantit une meilleure cohérence entre le modèle conceptuel et les données collectées. Elle facilite l'extraction des connaissances en ciblant les informations pertinentes dès la phase de collecte.
+
+Les protocoles d'évaluation sont également présentés. Ils seront appliqués dans le chapitre V pour valider notre approche.
+
+Le chapitre suivant présentera la conception et le développement du système. Nous y détaillerons l'ontologie adaptée, la base de connaissances construite, le système RAG implémenté et l'application web développée.

@@ -1,18 +1,27 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt,openany]{book}
 \usepackage[french]{babel}
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{array}
+\usepackage{multirow}
 \usepackage{longtable}
 % Police Times New Roman compatible pdfLaTeX
 \usepackage{newtxtext,newtxmath}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \usepackage[T1]{fontenc}
 \usepackage{tabularx} % Pour des tableaux ajustables proprement
 \usepackage{booktabs} % Pour des lignes de tableau professionnelles (\toprule, \midrule, \bottomrule)
 \usepackage{enumitem} % Gestion avancée des listes
 \usepackage{titlesec} % Personnalisation des titres de chapitres et sections
 \usepackage{setspace} % Espacement de ligne (1.5)
+\usepackage{tabularx}
+\usepackage{float}
+
+\usepackage[nottoc]{tocbibind} %ajoute automatiquement la liste des figures, la liste des tableaux et la bibliographie à la table des matières.
 
 %BIBLIOGRAPHIE
 \usepackage[backend=biber]{biblatex}
@@ -29,12 +38,44 @@
 \begin{document}
 
 \input{parts/gard.tex}
-\tableofcontents
+\cleardoublepage
+\pagenumbering{roman}
 
-\chapter{Liste des sigles et abréviations}
+% Dédicace
+\chapter*{Dédicace}
+\addcontentsline{toc}{chapter}{Dédicace}
+\input{parts/dedicace.tex}
+
+% Remerciments
+\chapter*{Remerciements}
+\addcontentsline{toc}{chapter}{Remerciements}
+\input{parts/remerciements.tex}
+
+% Resumé
+\chapter*{Resumé}
+\addcontentsline{toc}{chapter}{Resumé}
+\input{parts/resume.tex}
+
+% Abstract
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{parts/abstract.tex}
+
+\listoffigures
+\listoftables
+
+\chapter*{Liste des sigles et abréviations}
+\addcontentsline{toc}{chapter}{Liste des sigles et abréviations}
 \input{parts/sigle-abreviation.tex}
 
-\chapter{Introduction générale}
+\tableofcontents
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+\pagestyle{plain} 
+\chapter*{Introduction générale}
+\addcontentsline{toc}{chapter}{Introduction générale}
 \input{chapters/introduction.tex}
 
 % ==========================================
@@ -65,6 +106,10 @@
 \label{chap:resultats_discussion}
 \input{chapters/chapter4.tex}
 
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+\input{chapters/conclusion.tex}
 
+\addcontentsline{toc}{chapter}{Bibliographie}
 \printbibliography
 \end{document}

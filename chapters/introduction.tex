@@ -1,10 +1,8 @@
 
-\section{Contexte et justification du sujet}
+\section*{Contexte et justification du sujet}
+Au Burkina Faso, les plantes médicinales occupent une place importante dans les pratiques de santé. Elles font l'objet de nombreux travaux scientifiques. Ces travaux portent sur leur identification, leurs usages, leurs propriétés pharmacologiques et leur toxicité\cite{ouedraogo_revue_2024}.
 
-
-Au Burkina Faso, les plantes médicinales occupent une place importante dans les pratiques de santé. Elles font l'objet de nombreux travaux scientifiques. Ces travaux portent sur leur identification, leurs usages, leurs propriétés pharmacologiques et leur toxicité.
-
-Cependant, les connaissances disponibles sont dispersées dans la littérature scientifique. Elles se trouvent dans des articles, des thèses, des mémoires et des rapports de recherche\cite{ouedraogo_revue_2024}. Elles sont aussi présentes dans des inventaires ethnobotaniques et des plateformes numériques. Ces documents utilisent souvent des terminologies différentes. Une même plante peut être désignée par plusieurs synonymes ou noms vernaculaires.
+Cependant, les connaissances disponibles sont reparties dans la littérature scientifique \Cite{zizka_traditional_2015}. Elles se trouvent dans des articles, des thèses, des mémoires et des rapports de recherche. Elles sont aussi présentes dans des inventaires ethnobotaniques et des plateformes numériques. Ces documents utilisent souvent des terminologies différentes. Une même plante peut être désignée par plusieurs synonymes ou noms vernaculaires.
 
 Cette dispersion rend l'accès aux connaissances plus difficile. Elle limite la comparaison des résultats entre les études. Elle rend difficile la recherche d'informations sur une plante, une pathologie ou une recette donnée. Enfin, elle rend difficile le suivi de la source scientifique qui soutient une information.
 
@@ -12,138 +10,100 @@ Les ontologies peuvent structurer ces connaissances. Elles permettent de représ
 
 Notre travail s'inscrit dans cette perspective. Il ne consiste pas à construire une ontologie entièrement nouvelle. Nous partirons d'une ontologie existante consacrée aux plantes médicinales. Nous chercherons à l'adapter au contexte du Burkina Faso et à l'enrichir avec des connaissances issues de la littérature scientifique. L'intelligence artificielle sera utilisée pour faciliter l'accès aux connaissances. Elle pourra notamment aider à interpréter les requêtes formulées en langage naturel et à retrouver les informations pertinentes dans la base de connaissances. Une application web sera développée pour permettre aux utilisateurs de consulter ces informations de manière simple et intelligente. Les réponses devront rester liées aux sources scientifiques utilisées.
 
-Ainsi, notre recherche vise à rapprocher trois éléments : une ontologie existante, les connaissances scientifiques sur les plantes médicinales du Burkina Faso et des mécanismes d'accès intelligent fondés sur l'intelligence artificielle.
+Ainsi, notre recherche vise à rapprocher trois éléments : une ontologie existante, les connaissances scientifiques sur les plantes médicinales du Burkina Faso et des mécanismes d'accès intelligent fondés sur l'intelligence artificielle comme illustré dans la figure \ref{fig:rep_connaissances}.
 
-\section{Problématique de la recherche}
+\begin{figure}[H] % h=here, t=top, b=bottom, p=page séparée
+    \begin{center}
+		\includegraphics[width=0.8\textwidth]{repartition_connaissances.png}
+		\caption{Dispersion des connaissances scientifiques}
+		\label{fig:rep_connaissances}
+	\end{center}
+\end{figure}
 
-Les connaissances scientifiques sur les plantes médicinales du Burkina Faso sont abondantes. Elles restent cependant difficiles à exploiter de manière intégrée. Elles sont réparties dans des documents de nature et de structure différentes. Cette dispersion limite leur consultation et leur comparaison.
 
-Les systèmes fondés sur des ontologies peuvent répondre à ce problème. Toutefois, toutes les ontologies existantes ne répondent pas nécessairement aux besoins du contexte burkinabè. Il est donc nécessaire d'identifier les modèles disponibles et d'étudier leur pertinence avant d'en sélectionner un.
+\section*{Problématique de la recherche}
 
-Un défi concerne l'accès aux connaissances. Une base structurée peut être riche mais peu compréhensible. L'intelligence artificielle peut faciliter cet accès. Elle peut permettre de formuler des requêtes en langage naturel, de rechercher les informations pertinentes et de présenter les résultats de manière plus accessible.
+Les connaissances scientifiques sur les plantes médicinales du Burkina Faso sont abondantes mais dispersées\cite{ouedraogo_revue_2024}. Elles proviennent de sources variées : articles scientifiques, thèses, mémoires, rapports de recherche et bases de données institutionnelles \cite{zizka_traditional_2015}. Cette dispersion rend leur exploitation difficile. Les ontologies peuvent structurer ces connaissances\Cite{shojaee-mend_development_2019}. Elles permettent de représenter les concepts d'un domaine et les relations entre ces concepts. Elles facilitent l'interopérabilité et l'interrogation des connaissances. Toutefois, toutes les ontologies existantes ne répondent pas nécessairement aux besoins du contexte burkinabè. Il est donc nécessaire d'identifier les modèles disponibles et d'étudier leur pertinence avant d'en sélectionner un. Un défi concerne l'accès aux connaissances. Une base structurée peut être riche mais peu compréhensible. L'intelligence artificielle peut faciliter cet accès \cite{neha_retrieval-augmented_2025}. Elle peut permettre de formuler des requêtes en langage naturel, de rechercher les informations pertinentes et de présenter les résultats de manière plus accessible.
 
 Notre étude cherchera donc à relier trois dimensions. La première concerne les connaissances issues de la littérature scientifique. La deuxième concerne leur organisation dans une ontologie adaptée et enrichie. La troisième concerne leur exploitation par l'intelligence artificielle au moyen d'une application web. Nous formulons ainsi la question principale suivante :
-
 \begin{quote}
 % \textit{Comment enrichir une ontologie existante à partir de la littérature sur les plantes médicinales du Burkina Faso, puis l'exploiter avec l'IA et une application web pour faciliter un accès intelligent, traçable et responsable ?}
-\textit{Comment enrichir une ontologie existante à partir de la littérature scientifique sur les plantes médicinales du Burkina Faso, puis utiliser l'intelligence artificielle pour l'interroger et obtenir des reponses pertinentes, traçables, en langage naturel et fideles aux sources scientifiques ?}
+\textit{Comment enrichir une ontologie existante à partir de la littérature scientifique sur les plantes médicinales du Burkina Faso, puis utiliser l'intelligence artificielle pour l'interroger et obtenir des reponses pertinentes, traçables, en langage naturel et fidèles aux sources scientifiques ?}
 \end{quote}
 
 Pour préciser cette question principale, nous retenons les questions spécifiques suivantes :
 
 \begin{itemize}
-	\item Quelles ontologies existantes peuvent représenter les connaissances relatives aux plantes médicinales et à leurs usages ?
-	\item Quels critères permettent de comparer ces ontologies et de sélectionner celle qui est la plus pertinente pour notre étude ?
-	\item Quelles adaptations sont nécessaires pour prendre en compte les connaissances scientifiques relatives aux plantes médicinales du Burkina Faso ?
-	\item Quelles connaissances issues de la littérature scientifique peuvent être intégrées pour enrichir l'ontologie sélectionnée ?
-	\item Comment garantir la traçabilité des connaissances intégrées et leur rattachement aux sources scientifiques ?
-	\item Comment exploiter l'ontologie adaptée et enrichie avec l'intelligence artificielle pour faciliter l'accès aux connaissances ?
-	\item Comment concevoir une application web permettant de consulter les connaissances documentées sur les plantes médicinales du Burkina Faso ?
+	\item Quelles ontologies existantes peuvent représenter les connaissances sur les plantes médicinales, et quels critères permettent de les comparer pour sélectionner la plus pertinente pour le contexte burkinabè ?
+	\item Quelles adaptations et quels enrichissements sont nécessaires pour intégrer les connaissances issues de la littérature scientifique sur les plantes médicinales du Burkina Faso, tout en garantissant la traçabilité vers les sources ?
+	\item Comment exploiter l'ontologie adaptée et enrichie avec l'intelligence artificielle (LLM, RAG) pour faciliter l'accès aux connaissances en langage naturel ?
+	\item Comment concevoir une application web permettant la consultation, la recherche et la compréhension des connaissances documentées sur les plantes médicinales du Burkina Faso ?
 \end{itemize}
 
-\section{Objectif général et objectifs spécifiques}
+\section*{Objectif général et objectifs spécifiques}
 
-La problématique ainsi posée permet de définir l'objectif général et les objectifs spécifiques de notre recherche.
+La problématique ainsi posée permet de définir l'objectif général et les objectifs spécifiques de notre recherche. 
+L'objectif général exprime la finalité de notre travail. Les objectifs spécifiques décomposent cet objectif en actions concrètes et mesurables. Ils guideront notre démarche méthodologique et permettront d'évaluer notre contribution.
 
-\subsection{Objectif général}
+\subsection*{Objectif général}
 
 Notre objectif général est d'adapter et d'enrichir une ontologie existante afin de représenter les connaissances issues de la littérature scientifique sur les plantes médicinales du Burkina Faso, puis d'exploiter ces connaissances par l'intelligence artificielle au moyen d'une application web pour faciliter leur accès et leur diffusion.
 
-\subsection{Objectifs spécifiques}
+\subsection*{Objectifs spécifiques}
 
 \begin{itemize}
-	\item Identifier les ontologies existantes pouvant représenter les connaissances sur les plantes médicinales.
-	\item Définir des critères de comparaison adaptés à notre domaine d'étude.
-	\item Comparer les ontologies identifiées et sélectionner celle qui nous semble la plus pertinente.
-	\item Adapter l'ontologie sélectionnée au contexte des plantes médicinales du Burkina Faso.
-	\item Enrichir l'ontologie à partir de connaissances issues de la littérature scientifique.
-	\item Associer les connaissances aux sources scientifiques afin d'assurer leur traçabilité.
-	\item Construire une base de connaissances à partir de l'ontologie adaptée et enrichie.
-	\item Mettre en place une approche d'intelligence artificielle permettant d'exploiter cette base de connaissances.
-	\item Développer une application web permettant la recherche, la consultation et la compréhension des connaissances documentées.
+	\item Identifier et comparer les ontologies existantes dans le domaine des plantes médicinales afin de sélectionner la plus pertinente pour le contexte burkinabè.
+	\item Adapter et enrichir l'ontologie sélectionnée à partir de la littérature scientifique sur les plantes médicinales du Burkina Faso, en assurant la traçabilité des connaissances vers leurs sources..
+	\item Construire une base de connaissances orientée graphe et mettre en place un système d'accès intelligent (RAG) exploitant l'ontologie enrichie.
+	\item Développer une application web permettant la recherche, la consultation et la compréhension des connaissances documentées sur les plantes médicinales du Burkina Faso.
 \end{itemize}
 
-\section{Hypothèses de recherche}
+\section*{Hypothèses de recherche}
 
-Pour répondre aux questions de recherche et atteindre les objectifs fixés, notre étude repose sur les hypothèses suivantes :
-
+Pour répondre aux questions de recherche et atteindre les objectifs fixés, notre étude repose sur des hypothèses organisées selon une progression logique. La première hypothèse porte sur la démarche ontologique. La deuxième concerne la méthodologie d'extraction. La troisième traite de l'adaptation et de l'enrichissement. La quatrième aborde l'accès intelligent. La cinquième concerne la diffusion des connaissances. Ces hypothèses seront vérifiées tout au long de notre recherche.
 \begin{enumerate}
-	\item \textbf{Hypothèse 1 :}  Une étude comparative des ontologies existantes, couplée à l'utilisation de modèles de langue de grande taille (LLM) pour l'extraction des connaissances à partir de la littérature scientifique, permettra d'identifier un modèle ontologique pertinent et d'enrichir celui-ci pour représenter les connaissances sur les plantes médicinales du Burkina Faso
+	\item \textbf{Hypothèse 1 :}  Une revue méthodique et systématique de la littérature scientifique permet d'identifier et d'enrichir un modèle ontologique capable de représenter les connaissances sur les plantes médicinales du Burkina Faso
 	
-	\item \textbf{Hypothèse 2 :} L'adaptation et l'enrichissement de l'ontologie sélectionnée permettront de mieux représenter les connaissances documentées dans la littérature scientifique des plantes médicinales du Burkina Faso.
+	\item \textbf{Hypothèse 2 :} L'utilisation de modèles de langue de grande taille (LLM) améliore l'extraction automatique des connaissances à partir de la littérature scientifique, comparativement aux méthodes manuelles.
 
-	\item \textbf{Hypothèse 3 :} L'exploitation de l'ontologie adaptée et enrichie par l'intelligence artificielle permettra de faciliter la recherche et la compréhension des connaissances.
+	\item \textbf{Hypothèse 3 :}  L'adaptation et l'enrichissement de l'ontologie sélectionnée permettent de mieux représenter les connaissances documentées dans la littérature scientifique sur les plantes médicinales du Burkina Faso, tout en assurant leur traçabilité.
 
-	\item \textbf{Hypothèse 4 :} Une application web intégrant l'intelligence artificielle permettra de mieux vulgariser et diffuser les connaissances scientifiques documentées sur les plantes médicinales du Burkina Faso.
+	\item \textbf{Hypothèse 4 :} L'exploitation de l'ontologie enrichie par un système RAG facilite la recherche et la compréhension des connaissances en langage naturel.
+	
+	\item \textbf{Hypothèse 5 :} Une application web intégrant le système RAG permet de mieux vulgariser et diffuser les connaissances scientifiques documentées sur les plantes médicinales du Burkina Faso.
 \end{enumerate}
 
-\section{Démarche méthodologique adoptée}
+\section*{Démarche méthodologique adoptée}
 
-Pour répondre à notre problématique, nous adopterons une démarche progressive. Elle combinera la revue de littérature, l'étude comparative des ontologies, l'ingénierie des connaissances, l'intelligence artificielle et le développement logiciel. La validation sera réalisée à plusieurs étapes.
-\subsection*{Phase 1 : Définition des critères de recherche et de sélection des documents pertinents}
-Avant de constituer le corpus, nous définirons les critères qui guideront la recherche et la sélection des documents scientifiques. Ces critères permettront de garantir la pertinence, la qualité et la cohérence des sources utilisées.
+Pour répondre à notre problématique, nous adopterons une démarche progressive et structurée. Cette démarche combine la revue de littérature, l'étude comparative des ontologies, l'ingénierie des connaissances, l'intelligence artificielle et le développement logiciel. Elle est organisée en huit phases complémentaires représentées dans la figure \ref{fig:demarche_methodologique}. Chaque phase produit des livrables qui alimentent la phase suivante. La validation est réalisée à plusieurs étapes pour garantir la qualité des résultats.
 
-Les critères de recherche incluront :
+\begin{figure}[H]
+    \begin{center}
+		\includegraphics[width=0.8\textwidth]{methodologie.png}
+		\caption{Démarche méthodologique adoptée}
+		\label{fig:demarche_methodologique}
+	\end{center}
+\end{figure}
+\subsection*{Phase 1 :  Identification et étude comparative des ontologies}
+La première phase consiste à identifier les ontologies existantes dans le domaine des plantes médicinales. Nous rechercherons ces ontologies dans la littérature scientifique et les bases de données spécialisées. Nous définirons une grille de critères pour les comparer. Ces critères porteront sur la couverture du domaine, la richesse sémantique, la disponibilité, la documentation, l'interopérabilité, l'adaptabilité au contexte burkinabè, la traçabilité et la prise en compte des savoirs locaux. Nous noterons chaque ontologie selon cette grille. Nous sélectionnerons l'ontologie qui obtient le score le plus élevé. Cette phase est fondamentale car elle détermine le modèle conceptuel qui guidera toute la suite de notre travail. Le livrable de cette phase est l'ontologie sélectionnée.
+\subsection*{Phase 2 : Définition des critères de collection des documents}
 
-Les plantes : espèces végétales documentées au Burkina Faso, avec identification botanique (nom scientifique, famille, synonymes).
+La deuxième phase consiste à définir les critères qui guideront la recherche et la sélection des documents scientifiques. Ces critères permettront de garantir la pertinence, la qualité et la cohérence des sources utilisées. Les critères de recherche incluront les plantes, les parties utilisées, les pathologies et usages médicinaux, les modes de préparation, les niveaux de preuve, les propriétés pharmacologiques et la composition chimique. Les critères de sélection incluront la pertinence, l'identification de la plante, la disponibilité d'une référence scientifique, la fiabilité et l'actualité. Cette phase permet de disposer d'un corpus fiable et cohérent. Le livrable de cette phase est la grille de critères de recherche et de sélection.
+\subsection*{Phase 3 : Constitution du corpus scientifique}
 
-Les parties utilisées : feuilles, racines, écorces, fruits, graines, fleurs, tiges, etc.
-
-Les pathologies et usages médicinaux : paludisme, infections respiratoires, digestives, diabète, hypertension, etc.
-
-Les modes de préparation : décoction, macération, infusion, poudre, extrait alcoolique, etc.
-
-Les niveaux de preuve : savoirs traditionnels, études in vitro, études in vivo, essais cliniques.
-
-Les propriétés pharmacologiques : antimicrobiennes, antipaludiques, anti-inflammatoires, antioxydantes, toxicité, etc.
-
-La composition chimique : alcaloïdes, flavonoïdes, tanins, saponines, huiles essentielles, etc.
-
-Les critères de sélection des documents incluront :
-
-Pertinence : le document traite des plantes médicinales du Burkina Faso.
-
-Identification de la plante : le nom scientifique est précisé.
-
-Disponibilité d'une référence scientifique : le document est publié dans une revue à comité de lecture, une thèse, un mémoire ou un rapport de recherche.
-
-Fiabilité : les sources sont vérifiables et citées.
-
-Actualité : les documents récents seront privilégiés, sans exclure les travaux fondateurs.
-
-Cette phase permettra de disposer d'un corpus fiable et cohérent, qui constituera la base documentaire de notre étude.
-\subsection*{Phase 2 : Constitution du corpus scientifique}
-
-Nous constituerons un corpus de documents scientifiques portant sur les plantes médicinales du Burkina Faso. Les sources pourront comprendre des articles scientifiques, des thèses, des mémoires et des rapports de recherche. Nous définirons des critères d'inclusion et d'exclusion. Nous vérifierons notamment la pertinence du document, l'identification de la plante et la disponibilité d'une référence scientifique. Les informations retenues seront conservées avec leur provenance. Cette phase permettra de disposer d'un corpus fiable. Elle constituera la base documentaire de notre étude.
-
-\subsection*{Phase 3 : Identification et étude comparative des ontologies}
-
-Nous rechercherons des ontologies existantes dans le domaine des plantes, de la médecine traditionnelle, de la pharmacologie ou de domaines proches. Nous analyserons leur structure, leur couverture et leurs possibilités de réutilisation. Nous définirons une grille de comparaison. Les critères pourront porter sur la couverture du domaine, les classes, les propriétés, la richesse sémantique, l'interopérabilité, la documentation, la disponibilité et la possibilité d'adaptation. Nous comparerons les ontologies selon cette grille. Le choix final ne sera pas fixé à l'avance. Nous retiendrons l'ontologie qui répondra le mieux aux besoins identifiés.
-
+La troisième phase consiste à constituer un corpus de documents scientifiques portant sur les plantes médicinales du Burkina Faso. Les sources comprendront des articles scientifiques, des thèses, des mémoires et des rapports de recherche. Nous appliquerons les critères d'inclusion et d'exclusion définis dans la phase précédente. Nous vérifierons notamment la pertinence du document, l'identification de la plante et la disponibilité d'une référence scientifique. Les informations retenues seront conservées avec leur provenance. Cette phase permettra de disposer d'un corpus fiable et cohérent. Il constituera la base documentaire de notre étude. Le livrable de cette phase est un corpus de documents scientifiques organisé et indexé.
 \subsection*{Phase 4 : Adaptation de l'ontologie sélectionnée}
-
-Après la sélection, nous analyserons les concepts présents dans l'ontologie retenue. Nous identifierons les concepts qui peuvent être conservés, ceux qui doivent être modifiés et ceux qui doivent être ajoutés. Nous adapterons l'ontologie aux connaissances relatives aux plantes médicinales du Burkina Faso. Nous prendrons en compte les espèces, les noms scientifiques et vernaculaires, les parties utilisées, les modes de préparation, les usages médicinaux, les activités biologiques et les références scientifiques. Nous chercherons à préserver la compatibilité avec la structure initiale de l'ontologie. Les adaptations seront documentées.
-
+La quatrième phase consiste à adapter l'ontologie sélectionnée au contexte des plantes médicinales du Burkina Faso. Nous analyserons les concepts présents dans l'ontologie retenue. Nous identifierons les concepts qui peuvent être conservés, ceux qui doivent être modifiés et ceux qui doivent être ajoutés. Nous ajouterons des classes pour les maladies spécifiques au Burkina Faso, les noms vernaculaires en langues locales, les régions et les niveaux de preuve. Nous ajouterons des propriétés pour les noms vernaculaires, la localisation géographique, les niveaux de preuve et la traçabilité. Nous modifierons les relations pour préciser la sémantique et assurer la traçabilité. Nous chercherons à préserver la compatibilité avec la structure initiale de l'ontologie. Les adaptations seront documentées. Le livrable de cette phase est une ontologie adaptée au contexte burkinabè.
 \subsection*{Phase 5 : Enrichissement de l'ontologie à partir de la littérature scientifique}
-Nous extrairons les connaissances pertinentes à partir de la littérature scientifique constituée en Phase 2 et filtrée selon les critères définis en Phase 1. L'extraction sera assistée par l'intelligence artificielle via des prompts adressés à des modèles de langue de grande taille (LLM). Ces prompts guideront le modèle pour identifier les plantes, leurs usages, les parties utilisées, les modes de préparation et les propriétés pharmacologiques tels que documentés dans les sources scientifiques. Les résultats seront produits dans des formats structurés (JSON, CSV). Nous conserverons les références bibliographiques et, lorsque cela sera possible, la page ou la section à l'origine de chaque information. Nous distinguerons les usages rapportés dans les études ethnobotaniques des résultats issus d'études expérimentales.
-
+La cinquième phase consiste à enrichir l'ontologie à partir des connaissances extraites de la littérature scientifique. Nous extrairons les connaissances pertinentes à partir du corpus constitué en phase 3 et filtré selon les critères définis en phase 2. L'extraction sera assistée par l'intelligence artificielle via des prompts adressés à des modèles de langue de grande taille (LLM). Ces prompts guideront le modèle pour identifier les plantes, leurs usages, les parties utilisées, les modes de préparation et les propriétés pharmacologiques tels que documentés dans les sources scientifiques. Les résultats seront produits dans des formats structurés (JSON, CSV). Nous conserverons les références bibliographiques et, lorsque cela sera possible, la page ou la section à l'origine de chaque information. Nous distinguerons les usages rapportés dans les études ethnobotaniques des résultats issus d'études expérimentales. Une validation humaine systématique sera effectuée pour garantir la qualité des données extraites. Le livrable de cette phase est un ensemble de données structurées prêtes à être intégrées.
 \subsection*{Phase 6 : Construction et interrogation de la base de connaissances}
+La sixième phase consiste à construire la base de connaissances orientée graphe. L'ontologie adaptée et enrichie servira de structure à la base de connaissances. Les données extraites seront transformées en instances correspondant aux concepts définis. La base sera implémentée sous forme de base de connaissances orientée graphe. Ce choix permet une modélisation naturelle des relations complexes entre les plantes, les usages, les propriétés et les sources. Chaque connaissance importante sera associée à une source scientifique. La base devra permettre de retrouver l'origine d'une information. L'interrogation se fera via le langage Cypher ou SPARQL, qui permettent des requêtes puissantes sur les graphes. Nous définirons des scénarios de recherche sur une plante, un usage médicinal, une partie utilisée ou une source scientifique. Le livrable de cette phase est une base Neo4j peuplée et interrogeable.
+\subsection*{Phase 7 : Exploitation par IA et développement de l'application web}
 
-L'ontologie adaptée et enrichie servira de structure à la base de connaissances. Les données extraites seront transformées en instances correspondant aux concepts définis. La base sera implémentée sous forme de base de connaissances orientée graphe. Ce choix permet une modélisation naturelle des relations complexes entre les plantes, les usages, les propriétés et les sources. Chaque connaissance importante sera associée à une source scientifique. La base devra permettre de retrouver l'origine d'une information. L'interrogation se fera via le langage Cypher ou SPARQL, qui permetent des requêtes puissantes sur les graphes. Nous définirons des scénarios de recherche sur une plante, un usage médicinal, une partie utilisée ou une source scientifique.
-
-\subsection*{Phase 7 : Exploitation par l'intelligence artificielle et développement de l'application web}
-
-Cette phase constitue le cœur de l'objectif d'accès intelligent. L'accès sera assuré par un système RAG (\textit{Retrieval-Augmented Generation}). Ce système combine la recherche d'informations dans la base de connaissances graphe et la génération de réponses par un modèle de langage. Le RAG interprète les requêtes en langage naturel. Il interroge la base de connaissances pour retrouver les informations pertinentes. Il génère ensuite des réponses basées sur les faits retrouvés. Cette approche garantit la traçabilité des réponses, car chaque information est associée à sa source scientifique.
-
-Nous développerons une application web qui servira d'interface entre les utilisateurs et le système. L'application proposera une recherche en langage naturel. Elle présentera des fiches sur les plantes, leurs usages documentés, les parties utilisées, les modes de préparation et les références scientifiques. Les réponses resteront liées aux sources disponibles.
-
-Le système sera conçu pour la consultation des connaissances. Il ne constituera pas un outil de diagnostic médical ni un système de prescription.
-
+La septième phase constitue le cœur de l'objectif d'accès intelligent. L'accès sera assuré par un système RAG (Retrieval-Augmented Generation). Ce système combine la recherche d'informations dans la base de connaissances graphe et la génération de réponses par un modèle de langage. Le RAG interprète les requêtes en langage naturel. Il interroge la base de connaissances pour retrouver les informations pertinentes. Il génère ensuite des réponses basées sur les faits retrouvés. Cette approche garantit la traçabilité des réponses, car chaque information est associée à sa source scientifique. Nous développerons une application web qui servira d'interface entre les utilisateurs et le système. L'application proposera une recherche en langage naturel. Elle présentera des fiches sur les plantes, leurs usages documentés, les parties utilisées, les modes de préparation et les références scientifiques. Les réponses resteront liées aux sources disponibles. Le système sera conçu pour la consultation des connaissances. Il ne constituera pas un outil de diagnostic médical ni un système de prescription. Le livrable de cette phase est un système RAG fonctionnel et une application web fonctionnelle.
 \subsection*{Phase 8 : Évaluation et validation}
-
-Nous évaluerons la qualité de l'ontologie adaptée et enrichie. Nous examinerons notamment sa couverture, sa cohérence et sa traçabilité. Nous évaluerons également l'accès intelligent proposé par l'application. Les critères pourront porter sur la pertinence des réponses, la fidélité aux sources, la facilité d'utilisation et la compréhension des informations. Les résultats seront comparés aux objectifs définis. Les limites du système seront identifiées afin de proposer des perspectives d'amélioration.
-
-\section{Délimitation du champ d'étude}
+La huitième phase consiste à évaluer et valider notre approche. L'évaluation portera sur trois niveaux. Le premier niveau concerne l'ontologie. Nous vérifierons sa couverture, sa cohérence, sa traçabilité et son extensibilité. Le deuxième niveau concerne le système RAG. Nous mesurerons sa pertinence, sa fidélité, son exactitude et sa traçabilité. Le troisième niveau concerne l'application web. Nous évaluerons sa facilité d'utilisation, sa compréhension, son utilité et ses performances. Nous solliciterons des participants incluant des étudiants, des chercheurs et des tradipraticiens. Le livrable de cette phase est un rapport d'évaluation et de validation.
+\section*{Délimitation du champ d'étude}
 
 Notre étude porte sur les plantes médicinales documentées au Burkina Faso. Elle s'intéresse aux connaissances relatives à leurs usages médicinaux et à leurs propriétés biologiques lorsqu'elles sont rapportées par des sources scientifiques.
 
@@ -155,7 +115,7 @@ Sur le plan technique, le travail comprendra une base de connaissances orientée
 
 Le système sera conçu comme un outil de consultation, de vulgarisation et de diffusion scientifique. Il ne remplacera pas l'avis d'un professionnel de santé et ne servira pas à établir un diagnostic ou une prescription.
 
-\section{Résultats attendus}
+\section*{Résultats attendus}
 
 Au terme de notre recherche, nous attendons :
 
@@ -169,7 +129,7 @@ Au terme de notre recherche, nous attendons :
 
 L'intelligence artificielle facilitera l'interprétation des requêtes et l'accès aux informations pertinentes. Les résultats proposés resteront fondés sur les données de la base et sur les références scientifiques associées.
 
-\section{Contribution attendue}
+\section*{Contribution attendue}
 
 La contribution principale de notre recherche sera de réutiliser une ontologie existante et de l'adapter au contexte des plantes médicinales du Burkina Faso. L'objectif sera de l'enrichir à partir de connaissances issues de la littérature scientifique.
 
@@ -179,7 +139,7 @@ Sur le plan technique, la recherche aboutira à une ontologie enrichie, une base
 
 Sur le plan pratique, le système pourra aider les chercheurs, les étudiants et les autres utilisateurs autorisés à accéder plus facilement aux informations documentées. Il pourra aussi faciliter la recherche bibliographique et l'exploration des relations entre les plantes et les connaissances scientifiques associées.
 
-\section{Structuration du mémoire}
+\section*{Structuration du mémoire}
 
 Afin de présenter progressivement notre démarche, le mémoire sera organisé en cinq chapitres.
 

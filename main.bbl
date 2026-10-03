@@ -19,6 +19,1030 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{ai4d2020}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=00e5a664e9c6e9fb426baf5fd91f0507}{%
+           family={{AI4D}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \strng{fullhash}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \strng{fullhashraw}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \strng{bibnamehash}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \strng{authorbibnamehash}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \strng{authornamehash}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \strng{authorfullhash}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \strng{authorfullhashraw}{00e5a664e9c6e9fb426baf5fd91f0507}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Création d'une base de données sur les plantes médicinales pour faciliter l'exploitation des connaissances ethnopharmacologiques locales}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ai4d.ai/fr/blog/building-a-medicinal-plant-database
+      \endverb
+      \verb{url}
+      \verb https://www.ai4d.ai/fr/blog/building-a-medicinal-plant-database
+      \endverb
+    \endentry
+    \entry{ares2018medecine}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=24a1adc0ac8474b24e51523669a9f9ba}{%
+           family={{ARES}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{24a1adc0ac8474b24e51523669a9f9ba}
+      \strng{fullhash}{24a1adc0ac8474b24e51523669a9f9ba}
+      \strng{fullhashraw}{24a1adc0ac8474b24e51523669a9f9ba}
+      \strng{bibnamehash}{24a1adc0ac8474b24e51523669a9f9ba}
+      \strng{authorbibnamehash}{24a1adc0ac8474b24e51523669a9f9ba}
+      \strng{authornamehash}{24a1adc0ac8474b24e51523669a9f9ba}
+      \strng{authorfullhash}{24a1adc0ac8474b24e51523669a9f9ba}
+      \strng{authorfullhashraw}{24a1adc0ac8474b24e51523669a9f9ba}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Médecine traditionnelle et système de santé : vers une intégration durable}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://moove.ares-ac.be/actu/medecine-traditionnelle-et-systeme-de-sante-vers-une-integration-durable
+      \endverb
+      \verb{url}
+      \verb https://moove.ares-ac.be/actu/medecine-traditionnelle-et-systeme-de-sante-vers-une-integration-durable
+      \endverb
+    \endentry
+    \entry{ayimdji_towards_2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=9a25b6d72ad3f4f7ecf315bb73faec6f}{%
+           family={Ayimdji},
+           familyi={A\bibinitperiod},
+           given={Armel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=777789ffee3eb7a9014c0dd6bbc94808}{%
+           family={Koussoubé},
+           familyi={K\bibinitperiod},
+           given={Souleymane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a0ad937e87fa365b4fb4443797272982}{%
+           family={Fotso},
+           familyi={F\bibinitperiod},
+           given={Laure\bibnamedelima P.},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d4dcf9471ea68baed87fe87e4c402d6f}{%
+           family={Konfé},
+           familyi={K\bibinitperiod},
+           given={Balira\bibnamedelima O.},
+           giveni={B\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Scientific Research Publishing}%
+      }
+      \strng{namehash}{412507144edcbb8c1952abbf89f89901}
+      \strng{fullhash}{edaf86f15bf66a0d4fa5204638c5b3cf}
+      \strng{fullhashraw}{edaf86f15bf66a0d4fa5204638c5b3cf}
+      \strng{bibnamehash}{412507144edcbb8c1952abbf89f89901}
+      \strng{authorbibnamehash}{412507144edcbb8c1952abbf89f89901}
+      \strng{authornamehash}{412507144edcbb8c1952abbf89f89901}
+      \strng{authorfullhash}{edaf86f15bf66a0d4fa5204638c5b3cf}
+      \strng{authorfullhashraw}{edaf86f15bf66a0d4fa5204638c5b3cf}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The increasing interest on ontologies as the backbone technology for knowledge based systems implies the refinement of ontologies development methods. In this paper we propose a new approach to develop an ontology for African Traditional Medicine. The aim of our approach is to build a deep ontology by deepening concepts descriptions to formally represent all the semantics underlying the concepts used in African traditional medicine. We use a description logics language to formalize our approach.}
+      \field{journaltitle}{Intelligent Information Management}
+      \field{month}{10}
+      \field{note}{Number: 6}
+      \field{number}{6}
+      \field{title}{Towards {A} “{Deep}” {Ontology} for {African} {Traditional} {Medicine}}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{3}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{244\bibrangedash 251}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.4236/iim.2011.36030
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scirp.org/journal/paperinformation?paperid=8241
+      \endverb
+      \verb{url}
+      \verb https://www.scirp.org/journal/paperinformation?paperid=8241
+      \endverb
+    \endentry
+    \entry{baeza2011information}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=14e9e2c7e918f62ba13b9e040fb7f468}{%
+           family={Baeza-Yates},
+           familyi={B\bibinithyphendelim Y\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f25e271e4c06cb466719bf923801707f}{%
+           family={Ribeiro-Neto},
+           familyi={R\bibinithyphendelim N\bibinitperiod},
+           given={Berthier},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Harlow}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{1f00528ee1ee87a4195a7a9296c94914}
+      \strng{fullhash}{1f00528ee1ee87a4195a7a9296c94914}
+      \strng{fullhashraw}{1f00528ee1ee87a4195a7a9296c94914}
+      \strng{bibnamehash}{1f00528ee1ee87a4195a7a9296c94914}
+      \strng{authorbibnamehash}{1f00528ee1ee87a4195a7a9296c94914}
+      \strng{authornamehash}{1f00528ee1ee87a4195a7a9296c94914}
+      \strng{authorfullhash}{1f00528ee1ee87a4195a7a9296c94914}
+      \strng{authorfullhashraw}{1f00528ee1ee87a4195a7a9296c94914}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Modern Information Retrieval: The Concepts and Technology behind Search}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://books.google.com/books/about/Modern_Information_Retrieval.html?id=HbyAAAAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books/about/Modern_Information_Retrieval.html?id=HbyAAAAACAAJ
+      \endverb
+    \endentry
+    \entry{cooper2013plant}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=3fe1c8bad9b46fe853483de096c2f4d9}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Laurel},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \strng{fullhash}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \strng{fullhashraw}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \strng{bibnamehash}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \strng{authorbibnamehash}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \strng{authornamehash}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \strng{authorfullhash}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \strng{authorfullhashraw}{b70f6efd7f21853d52b9cc1e71937a7c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plant and Cell Physiology}
+      \field{number}{2}
+      \field{title}{The Plant Ontology as a Tool for Comparative Plant Anatomy and Genomic Analyses}
+      \field{volume}{54}
+      \field{year}{2013}
+      \field{pages}{e1}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/pcp/pcs163
+      \endverb
+    \endentry
+    \entry{davis_user_1993}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=dcb59a9c9bf67cc1c74d13fb3a9f33a7}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Fred\bibnamedelima D.},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{fullhash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{fullhashraw}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{bibnamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authorbibnamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authornamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authorfullhash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authorfullhashraw}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Lack of user acceptance has long been an impediment to the success of new information systems. The present research addresses why users accept or reject information systems and how user acceptance is affected by system design features. The technology acceptance model (TAM) specifies the causal relationships between system design features, perceived usefulness, perceived ease of use, attitude toward using, and actual usage behavior. Attitude theory from psychology provides the rationale for hypothesized model relationships, and validated measures were used to operationalize model variables. A field study of 112 users regarding two end-user systems was conducted to test the hypothesized model. TAM fully mediated the effects of system characteristics on usage behavior, accounting for 36\% of the variance in usage. Perhaps the most striking finding was that perceived usefulness was 50\% more influential than ease of use in determining usage, underscoring the importance of incorporating the appropriate functional capabilities in new systems. Overall, TAM provides an informative representation of the mechanisms by which design choices influence user acceptance, and should therefore be helpful in applied contexts for forecasting and evaluating user acceptance of information technology. Implications for future research and practice are discussed.}
+      \field{issn}{0020-7373}
+      \field{journaltitle}{International Journal of Man-Machine Studies}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shorttitle}{User acceptance of information technology}
+      \field{title}{User acceptance of information technology: system characteristics, user perceptions and behavioral impacts}
+      \field{urlday}{29}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{38}
+      \field{year}{1993}
+      \field{urldateera}{ce}
+      \field{pages}{475\bibrangedash 487}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1006/imms.1993.1022
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0020737383710229
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0020737383710229
+      \endverb
+    \endentry
+    \entry{devlin2019bert}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{fullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{bibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorbibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorfullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics}
+      \field{title}{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}
+      \field{year}{2019}
+      \field{pages}{4171\bibrangedash 4186}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.18653/v1/N19-1423
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
+    \endentry
+    \entry{dooley2018foodon}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=47dc4efb95897d79ac9c94cd9eb46a29}{%
+           family={Dooley},
+           familyi={D\bibinitperiod},
+           given={Damion\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \strng{fullhash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \strng{fullhashraw}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \strng{bibnamehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \strng{authorbibnamehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \strng{authornamehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \strng{authorfullhash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \strng{authorfullhashraw}{0d39f8e7ca8c1ab2e186c06570ee5caa}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Science of Food}
+      \field{title}{FoodOn: A Harmonized Food Ontology to Increase Global Food Traceability, Quality Control and Data Integration}
+      \field{volume}{2}
+      \field{year}{2018}
+      \field{pages}{23}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41538-018-0032-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41538-018-0032-6
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41538-018-0032-6
+      \endverb
+    \endentry
+    \entry{euzenat2013ontology}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=ec34f3ad620d32fc05f358820f8d49d8}{%
+           family={Euzenat},
+           familyi={E\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3471106306f872b1ef371c84a648075b}{%
+           family={Shvaiko},
+           familyi={S\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{3b02e3d7c191bafab129ba80809400d0}
+      \strng{fullhash}{3b02e3d7c191bafab129ba80809400d0}
+      \strng{fullhashraw}{3b02e3d7c191bafab129ba80809400d0}
+      \strng{bibnamehash}{3b02e3d7c191bafab129ba80809400d0}
+      \strng{authorbibnamehash}{3b02e3d7c191bafab129ba80809400d0}
+      \strng{authornamehash}{3b02e3d7c191bafab129ba80809400d0}
+      \strng{authorfullhash}{3b02e3d7c191bafab129ba80809400d0}
+      \strng{authorfullhashraw}{3b02e3d7c191bafab129ba80809400d0}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Ontology Matching}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1007/978-3-662-43550-9
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-662-43550-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-662-43550-9
+      \endverb
+    \endentry
+    \entry{flahaut1999}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=ae4090f481d8f14000526ccd087a0906}{%
+           family={Flahaut},
+           familyi={F\bibinitperiod},
+           given={Élisabeth},
+           giveni={É\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de Lille II}%
+      }
+      \strng{namehash}{ae4090f481d8f14000526ccd087a0906}
+      \strng{fullhash}{ae4090f481d8f14000526ccd087a0906}
+      \strng{fullhashraw}{ae4090f481d8f14000526ccd087a0906}
+      \strng{bibnamehash}{ae4090f481d8f14000526ccd087a0906}
+      \strng{authorbibnamehash}{ae4090f481d8f14000526ccd087a0906}
+      \strng{authornamehash}{ae4090f481d8f14000526ccd087a0906}
+      \strng{authorfullhash}{ae4090f481d8f14000526ccd087a0906}
+      \strng{authorfullhashraw}{ae4090f481d8f14000526ccd087a0906}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{143 pages}
+      \field{title}{Pharmacopée et médecine traditionnelle dans l'Ouest du Burkina Faso : plantes médicinales et soins du couple mère-enfant}
+      \field{type}{Thèse de doctorat en pharmacie}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://passioneuro.fr/wp-content/Documents/These_E-FLAHAUT_1999.pdf
+      \endverb
+      \verb{url}
+      \verb https://passioneuro.fr/wp-content/Documents/These_E-FLAHAUT_1999.pdf
+      \endverb
+    \endentry
+    \entry{gruber1993translation}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=afb9b0d3d5b76f30ab451acf45400285}{%
+           family={Gruber},
+           familyi={G\bibinitperiod},
+           given={Thomas\bibnamedelima R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{fullhash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{fullhashraw}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{bibnamehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{authorbibnamehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{authornamehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{authorfullhash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{authorfullhashraw}{afb9b0d3d5b76f30ab451acf45400285}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Knowledge Acquisition}
+      \field{number}{2}
+      \field{title}{A Translation Approach to Portable Ontology Specifications}
+      \field{volume}{5}
+      \field{year}{1993}
+      \field{pages}{199\bibrangedash 220}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1006/knac.1993.1008
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1006/knac.1993.1008
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1006/knac.1993.1008
+      \endverb
+    \endentry
+    \entry{guinko1984}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=c0cfb28b96f4087ed5a0724a66a2750d}{%
+           family={Guinko},
+           familyi={G\bibinitperiod},
+           given={Sita},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de Bordeaux III}%
+      }
+      \strng{namehash}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \strng{fullhash}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \strng{fullhashraw}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \strng{bibnamehash}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \strng{authorbibnamehash}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \strng{authornamehash}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \strng{authorfullhash}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \strng{authorfullhashraw}{c0cfb28b96f4087ed5a0724a66a2750d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Deux volumes, 394 pages}
+      \field{title}{La végétation de la Haute-Volta}
+      \field{type}{Thèse de doctorat ès sciences}
+      \field{year}{1984}
+      \verb{urlraw}
+      \verb https://www.scirp.org/reference/referencespapers?referenceid=3387847
+      \endverb
+      \verb{url}
+      \verb https://www.scirp.org/reference/referencespapers?referenceid=3387847
+      \endverb
+    \endentry
+    \entry{hanna2013dron}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=16a019695ab90cc102e8c3b5e82d9afc}{%
+           family={Hanna},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{fullhash}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{fullhashraw}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{bibnamehash}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{authorbibnamehash}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{authornamehash}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{authorfullhash}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{authorfullhashraw}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Biomedical Semantics}
+      \field{title}{Building a Drug Ontology Based on RxNorm and Other Public Domain Drug Databases}
+      \field{volume}{4}
+      \field{year}{2013}
+      \field{pages}{44}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/2041-1480-4-44
+      \endverb
+      \verb{urlraw}
+      \verb https://pubmed.ncbi.nlm.nih.gov/24345026/
+      \endverb
+      \verb{url}
+      \verb https://pubmed.ncbi.nlm.nih.gov/24345026/
+      \endverb
+    \endentry
+    \entry{hoehndorf2016flopo}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=a81b00475159efd1b4eb63d61d8c4748}{%
+           family={Hoehndorf},
+           familyi={H\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \strng{fullhash}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \strng{fullhashraw}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \strng{bibnamehash}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \strng{authorbibnamehash}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \strng{authornamehash}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \strng{authorfullhash}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \strng{authorfullhashraw}{ccdb73bb760fe6c0e96b302d9d7fa5a4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Biomedical Semantics}
+      \field{title}{The Flora Phenotype Ontology (FLOPO): Tool for Integrating Morphological Traits and Phenotypes of Vascular Plants}
+      \field{volume}{7}
+      \field{year}{2016}
+      \field{pages}{65}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/s13326-016-0107-8
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5109718/
+      \endverb
+      \verb{url}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5109718/
+      \endverb
+    \endentry
+    \entry{hussain2018chatbot}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5d57aac25f2c3975a9a2b157c90348a5}{%
+           family={Hussain},
+           familyi={H\bibinitperiod},
+           given={Syed},
+           giveni={S\bibinitperiod}}}%
+        {{hash=617d0b9ee49ceed11e77404f7d1a46f3}{%
+           family={Athula},
+           familyi={A\bibinitperiod},
+           given={Gihan},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{fullhash}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{fullhashraw}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{bibnamehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{authorbibnamehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{authornamehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{authorfullhash}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{authorfullhashraw}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 32nd International Conference on Advanced Information Networking and Applications Workshops}
+      \field{title}{Extending a Conventional Chatbot Knowledge Base to External Knowledge Source and Introducing User Based Sessions for Diabetes Education}
+      \field{year}{2018}
+      \field{pages}{698\bibrangedash 703}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/8418155
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/8418155
+      \endverb
+    \endentry
+    \entry{jurafsky2023slp}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=bd33d7a70284b5ead9c7985cb5c9929c}{%
+           family={Jurafsky},
+           familyi={J\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9ed8bee488b2703da341cded66bf83cb}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{fullhash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{fullhashraw}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{bibnamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorbibnamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authornamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorfullhash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorfullhashraw}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Speech and Language Processing}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.stanford.edu/~jurafsky/slp3/
+      \endverb
+      \verb{url}
+      \verb https://web.stanford.edu/~jurafsky/slp3/
+      \endverb
+    \endentry
+    \entry{kouame_systeme_2018}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=39a15ec8c426bab197e2b87e2e369a17}{%
+           family={Kouame},
+           familyi={K\bibinitperiod},
+           given={Appoh},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université Gaston Berger de Saint-Louis (Sénégal)}%
+      }
+      \list{language}{1}{%
+        {fr}%
+      }
+      \strng{namehash}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{fullhash}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{fullhashraw}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{bibnamehash}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{authorbibnamehash}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{authornamehash}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{authorfullhash}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{authorfullhashraw}{39a15ec8c426bab197e2b87e2e369a17}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{La médecine traditionnelle (MT) africaine est vue comme un système complémentaire de santé à la médecine moderne (MM). Elle a l’avantage d’être plus facile d’accès, moins coûteuse et plus adaptée aux spécificités locales. On note dans la MT, l’absence de partage et de conservation des connaissances médicales : la majorité des praticiens de la MT (PMT) parlent des langues locales non codifiées et beaucoup d’entre eux gardent leur savoir secret. Pour faciliter la préservation de ces connaissances et la communication entre PMT, nous cherchons à concevoir SysMEDTRAD, un système basé sur une ontologie de domaine de la MT et une ontologie d’approche visuelle intégrant un langage iconique. Ce travail de recherche est porteur d’une solution innovante pour les PMT, non seulement leur permettant de manière continue de contribuer à la modernisation et à la valorisation explicite de cette médecine, mais également les dotant d’un outil pour pratiquer leur art de guérisseur. Plus précisément, ce travail a porté sur la construction d’une ontologie de domaine dénommée ontoCONCEPT-Term entièrement terminologique. Il inclut aussi un langage iconique amorcé permettant d’identifier les plantes médicinales. Les recettes et les remèdes traditionnels ont une représentation diagrammatique. Ce langage devra s’étendre tout en suivant le cadre d’une approche d’ontologie visuelle, ontoICONE. Cette ontologie visuelle permettra de transcender les barrières liées à l’illettrisme, à l’oralité et aux multiples langues locales au nombre de 1127 d’Afrique de l’ouest, où a lieu ce projet de partage de connaissances web communautaire. ontoICONE est en partie terminologique et iconique. La partie terminologique est commune avec ontoCONCEPT-Term. ontoICONE et ontoCONCEPTTerm forment ontoMEDTRAD. Pour construire notre ontologie, nous nous sommes inspirés principalement des méthodologies de construction d’ontologies notamment Diligent, NeOn et OntoForInfoScience. Nous avons combiné de multiples sources d’informations et de connaissances, à savoir des rencontres répétées avec les PMT de différentes régions, des travaux publiés en biosciences (MT, Ethnobotanique) couvrant la sous région ouest Africaine, des sites web, des ouvrages livresques, l’observation (jardins botaniques visités), des structures nationales (PNPMT), des ONG (Prometra), des associations et fédérations de PMT (Côte d’Ivoire, Sénégal). Nous avons identifié trois cas d’utilisation principaux : identifier la maladie à partir des symptômes et signes du patient ; prescrire le remède (recettes abstraite et physique : ingrédients et mode de préparation) ; préparer le remède et l’administrer au patient. La richesse de la MT, son caractère tacite et tabou, et la complexité de la représentation visuelle, nous ont conduit à adopter une approche de construction progressive s’appuyant sur les règles sémiologiques notamment la similarité visuelle, l’association sémantique et la convention. Dans les ressources médicinales, les plantes représentent plus de 60 \% des traitements traditionnels de santé. Nous avons donc choisi d’amorcer l’iconisation par le concept de Plante en concevant un langage iconique partant des propriétés morphologiques de la plante en s’appuyant sur des sources botaniques. Nous avons rassemblé un jeu de données comprenant 22 plantes et 31 remèdes antipaludéens, et nous avons vérifié que notre langage iconique permettait bien d’identifier ces 22 plantes, à l’aide d’un outil logiciel d’apprentissage et de classification (Weka). Ce langage a été présenté aux PMT lors de la première étape de validation. La prochaine se focalisera sur la validation définitive et globale de ontoMEDTRAD et surtout l’adoption d’une véritable ontologie visuelle. Elle intègre aussi le déploiement de ontoMEDTRAD (ontoICONE) dans une plateforme Wiki sémantique (via Virtuoso), afin de rendre opérationnel SysMEDTRAD. En perspectives, les T-Box et A-Box d’une ontologie formelle seront complétées par G-Box, une partie graphique comprenant les icônes et leur structure (ontoMEDTRAD). Aligner l’ontologie visuelle à d’autres existantes (MT et MM) et donner une stature de référence régionale voire mondiale à cette ontologie de domaine de la MT africaine ne seront pas en reste.}
+      \field{month}{4}
+      \field{shorttitle}{Système de gestion de la médecine traditionnelle dans une plateforme web social et sémantique}
+      \field{title}{Système de gestion de la médecine traditionnelle dans une plateforme web social et sémantique : une approche basée sur une ontologie visuelle}
+      \field{type}{phdthesis}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://hal.science/tel-01842116
+      \endverb
+      \verb{url}
+      \verb https://hal.science/tel-01842116
+      \endverb
+    \endentry
+    \entry{lewis2020rag}{inproceedings}{}{}
+      \name{author}{12}{}{%
+        {{hash=ecbe786a5668bf643d74bb24fe1c3cfe}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=79978685fd7b37606022b06c0f6419a1}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d205faec67355b6e0ec49f82a492324c}{%
+           family={Piktus},
+           familyi={P\bibinitperiod},
+           given={Aleksandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e1c32989a78998fe3c03c981d0da2dc7}{%
+           family={Petroni},
+           familyi={P\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b24392ebfb2c0a35979fc689c389c649}{%
+           family={Karpukhin},
+           familyi={K\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+        {{hash=78a420900f50a8470ad085fb05231bf6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Naman},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4eadcf26f55e11fe4be834b52d9b7fdf}{%
+           family={Küttler},
+           familyi={K\bibinitperiod},
+           given={Heinrich},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c97f53fdeeb04c28de19e3324cb4bc0a}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d4d56d3d370b3afd4ad2ebf985fbd3f8}{%
+           family={Yih},
+           familyi={Y\bibinitperiod},
+           given={Wen-tau},
+           giveni={W\bibinithyphendelim t\bibinitperiod}}}%
+        {{hash=b3ff4029884ead9928954ea33714192c}{%
+           family={Rocktäschel},
+           familyi={R\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6cd024b217f3f2f8126e253b8c84d24d}{%
+           family={Riedel},
+           familyi={R\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ca01c762f4a52dd8a8548508f8d727c9}{%
+           family={Kiela},
+           familyi={K\bibinitperiod},
+           given={Douwe},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{fullhash}{22489b764620b23a8cc8547a492f0763}
+      \strng{fullhashraw}{22489b764620b23a8cc8547a492f0763}
+      \strng{bibnamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authorbibnamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authornamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authorfullhash}{22489b764620b23a8cc8547a492f0763}
+      \strng{authorfullhashraw}{22489b764620b23a8cc8547a492f0763}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks}
+      \field{volume}{33}
+      \field{year}{2020}
+      \field{pages}{9459\bibrangedash 9474}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2005.11401
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2005.11401
+      \endverb
+    \endentry
+    \entry{mariano_fernandez-lopez_pdf_nodate}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1048bf452e28c51da80bf306c9ca2084}{%
+           family={{Mariano Fernández-López}},
+           familyi={M\bibinitperiod}}}%
+        {{hash=0cf8c5e1526238cabb123af5904c7dfb}{%
+           family={{No affiliation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{f54de3022d808c361d6c484448cec3b7}
+      \strng{fullhash}{f54de3022d808c361d6c484448cec3b7}
+      \strng{fullhashraw}{f54de3022d808c361d6c484448cec3b7}
+      \strng{bibnamehash}{f54de3022d808c361d6c484448cec3b7}
+      \strng{authorbibnamehash}{f54de3022d808c361d6c484448cec3b7}
+      \strng{authornamehash}{f54de3022d808c361d6c484448cec3b7}
+      \strng{authorfullhash}{f54de3022d808c361d6c484448cec3b7}
+      \strng{authorfullhashraw}{f54de3022d808c361d6c484448cec3b7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PDF {|} The use of methodologies in software and knowledge engineering is very extensive due to their important advantages. In the case of the development... {|} Find, read and cite all the research you need on ResearchGate}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{({PDF}) {Overview} and analysis of methodologies for building ontologies}
+      \field{urlday}{29}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1017/S0269888902000462
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/231908719_Overview_and_analysis_of_methodologies_for_building_ontologies
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/231908719_Overview_and_analysis_of_methodologies_for_building_ontologies
+      \endverb
+    \endentry
+    \entry{millogo2001}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=6e7154183e4c093a2ae203cd666471d7}{%
+           family={Millogo-Rasolodimby},
+           familyi={M\bibinithyphendelim R\bibinitperiod},
+           given={Jeanne},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de Ouagadougou}%
+      }
+      \strng{namehash}{6e7154183e4c093a2ae203cd666471d7}
+      \strng{fullhash}{6e7154183e4c093a2ae203cd666471d7}
+      \strng{fullhashraw}{6e7154183e4c093a2ae203cd666471d7}
+      \strng{bibnamehash}{6e7154183e4c093a2ae203cd666471d7}
+      \strng{authorbibnamehash}{6e7154183e4c093a2ae203cd666471d7}
+      \strng{authornamehash}{6e7154183e4c093a2ae203cd666471d7}
+      \strng{authorfullhash}{6e7154183e4c093a2ae203cd666471d7}
+      \strng{authorfullhashraw}{6e7154183e4c093a2ae203cd666471d7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{L'homme, le climat et les ressources alimentaires végétales en période de crises de subsistance au Burkina Faso}
+      \field{type}{Thèse de doctorat ès sciences naturelles}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://journals.openedition.org/vertigo/16758
+      \endverb
+      \verb{url}
+      \verb https://journals.openedition.org/vertigo/16758
+      \endverb
+    \endentry
+    \entry{nacoulma1996}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=3c072fee2d9a718114c8bdad9cbef26e}{%
+           family={Nacoulma-Ouedraogo},
+           familyi={N\bibinithyphendelim O\bibinitperiod},
+           given={Odile\bibnamedelima G.},
+           giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de Ouagadougou}%
+      }
+      \strng{namehash}{3c072fee2d9a718114c8bdad9cbef26e}
+      \strng{fullhash}{3c072fee2d9a718114c8bdad9cbef26e}
+      \strng{fullhashraw}{3c072fee2d9a718114c8bdad9cbef26e}
+      \strng{bibnamehash}{3c072fee2d9a718114c8bdad9cbef26e}
+      \strng{authorbibnamehash}{3c072fee2d9a718114c8bdad9cbef26e}
+      \strng{authornamehash}{3c072fee2d9a718114c8bdad9cbef26e}
+      \strng{authorfullhash}{3c072fee2d9a718114c8bdad9cbef26e}
+      \strng{authorfullhashraw}{3c072fee2d9a718114c8bdad9cbef26e}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Plantes médicinales et pratiques médicales traditionnelles au Burkina Faso : cas du plateau central}
+      \field{type}{Thèse de doctorat d'État}
+      \field{year}{1996}
+      \verb{urlraw}
+      \verb https://publication.lecames.org/index.php/pharm/article/download/13/32
+      \endverb
+      \verb{url}
+      \verb https://publication.lecames.org/index.php/pharm/article/download/13/32
+      \endverb
+    \endentry
+    \entry{nadeau2007ner}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5437ac0ae2b83c5000f4c7cf825f8b23}{%
+           family={Nadeau},
+           familyi={N\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b120133d2c9657f07263a614066ca391}{%
+           family={Sekine},
+           familyi={S\bibinitperiod},
+           given={Satoshi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \strng{fullhash}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \strng{fullhashraw}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \strng{bibnamehash}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \strng{authorbibnamehash}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \strng{authornamehash}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \strng{authorfullhash}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \strng{authorfullhashraw}{5a6cb88cf113ab4800e0e4c41dee416f}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Lingvisticae Investigationes}
+      \field{number}{1}
+      \field{title}{A Survey of Named Entity Recognition and Classification}
+      \field{volume}{30}
+      \field{year}{2007}
+      \field{pages}{3\bibrangedash 26}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1075/li.30.1.02nad
+      \endverb
+    \endentry
+    \entry{neha_retrieval-augmented_2025}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=dc8e3cf066d94ef339c41bd9bfabaf3a}{%
+           family={Neha},
+           familyi={N\bibinitperiod},
+           given={Fnu},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2b1cbc9ab1e91dd68bb645f4c3315978}{%
+           family={Bhati},
+           familyi={B\bibinitperiod},
+           given={Deepshikha},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0570e00581975b6dc1edf2a92463b2c4}{%
+           family={Shukla},
+           familyi={S\bibinitperiod},
+           given={Deepak\bibnamedelima Kumar},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \strng{fullhash}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \strng{fullhashraw}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \strng{bibnamehash}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \strng{authorbibnamehash}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \strng{authornamehash}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \strng{authorfullhash}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \strng{authorfullhashraw}{f3ad255a9fa8ae48e6babc890fdebb5b}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by integrating external knowledge retrieval to improve factual consistency and reduce hallucinations. Despite growing interest, its use in healthcare remains fragmented. This paper presents a Systematic Literature Review (SLR) following PRISMA guidelines, synthesizing 30 peer-reviewed studies on RAG in clinical domains, focusing on three of its most prevalent and promising applications in diagnostic support, electronic health record (EHR) summarization, and medical question answering. We synthesize the existing architectural variants (naïve, advanced, and modular) and examine their deployment across these applications. Persistent challenges are identified, including retrieval noise (irrelevant or low-quality retrieved information), domain shift (performance degradation when models are applied to data distributions different from their training set), generation latency, and limited explainability. Evaluation strategies are compared using both standard metrics and clinical-specific metrics, FactScore, RadGraph-F1, and MED-F1, which are particularly critical for ensuring factual accuracy, medical validity, and clinical relevance. This synthesis offers a domain-focused perspective to guide researchers, healthcare providers, and policymakers in developing reliable, interpretable, and clinically aligned AI systems, laying the groundwork for future innovation in RAG-based healthcare solutions.}
+      \field{issn}{2673-2688}
+      \field{journaltitle}{AI}
+      \field{month}{9}
+      \field{number}{9}
+      \field{shorttitle}{Retrieval-{Augmented} {Generation} ({RAG}) in {Healthcare}}
+      \field{title}{Retrieval-{Augmented} {Generation} ({RAG}) in {Healthcare}: {A} {Comprehensive} {Review}}
+      \field{urlday}{6}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{6}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{226}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/ai6090226
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2673-2688/6/9/226
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2673-2688/6/9/226
+      \endverb
+      \keyw{artificial intelligence (AI),biomedical natural language processing (NLP),domain-specific language models,healthcare AI,large language models (LLMs),medical question answering,Retrieval-Augmented Generation (RAG)}
+    \endentry
+    \entry{ouedraogo2020markets}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=77d60cd069b32a8c625beb52e9abfbef}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1c86e5ef50d3f220ed17ce5601a33b8d}{%
+           family={Endl},
+           familyi={E\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=07772aef00e3f68816f24a36a6f3dd4d}{%
+           family={Sombié},
+           familyi={S\bibinitperiod},
+           given={P.\bibnamedelimi A.\bibnamedelimi E.\bibnamedelimi D.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b0d0a24f383a60892e254453086844de}{%
+           family={Schaefer},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3205586af2dc0d134df60b3e7c1e6bde}{%
+           family={Kiendrebeogo},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa8047b2f5a4e53bb862c0cb5593847f}
+      \strng{fullhash}{5c4f3c00a597facbcb5052d848fb5d1d}
+      \strng{fullhashraw}{5c4f3c00a597facbcb5052d848fb5d1d}
+      \strng{bibnamehash}{fa8047b2f5a4e53bb862c0cb5593847f}
+      \strng{authorbibnamehash}{fa8047b2f5a4e53bb862c0cb5593847f}
+      \strng{authornamehash}{fa8047b2f5a4e53bb862c0cb5593847f}
+      \strng{authorfullhash}{5c4f3c00a597facbcb5052d848fb5d1d}
+      \strng{authorfullhashraw}{5c4f3c00a597facbcb5052d848fb5d1d}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ethnobotany Research and Applications}
+      \field{title}{Ethnobotanical Use and Conservation Assessment of Medicinal Plants Sold in Markets of Burkina Faso}
+      \field{volume}{20}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 25}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.32859/era.20.39.1-25
+      \endverb
+      \verb{urlraw}
+      \verb https://ethnobotanyjournal.org/index.php/era/article/view/2259
+      \endverb
+      \verb{url}
+      \verb https://ethnobotanyjournal.org/index.php/era/article/view/2259
+      \endverb
+    \endentry
     \entry{ouedraogo_revue_2024}{article}{}{}
       \name{author}{5}{}{%
         {{hash=68a8b464cf3e1d573fe846d59da076d4}{%
@@ -66,6 +1090,868 @@
       \field{title}{Revue des {Plantes} {Médicinales} à {Potentiel} {Aromatique} du {Burkina} {Faso}}
       \field{volume}{2}
       \field{year}{2024}
+    \endentry
+    \entry{raffel2020t5}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=81a5a94e2388c149a73a86381db45e07}{%
+           family={Raffel},
+           familyi={R\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=243c03e5ae8031582d6af9fcbc70f629}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bfca12eba160cc79988e61b7fb6ded42}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod}}}%
+        {{hash=a2da348cbbad750c6fe76dda9c35ffcd}{%
+           family={Narang},
+           familyi={N\bibinitperiod},
+           given={Sharan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2ce97dc1ae3d554bd748423ad06453df}{%
+           family={Matena},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=83a9e81d976cada23775106b303c4247}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yanqi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=be6f1b6df7f1ddfafad18806238fa391}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=570360613a16cb233115feb5f8b4e526}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{93aba8e9bb746e2d8ac216494b952014}
+      \strng{fullhash}{21f7721b75bba06d59f9d5ce222a34a5}
+      \strng{fullhashraw}{21f7721b75bba06d59f9d5ce222a34a5}
+      \strng{bibnamehash}{93aba8e9bb746e2d8ac216494b952014}
+      \strng{authorbibnamehash}{93aba8e9bb746e2d8ac216494b952014}
+      \strng{authornamehash}{93aba8e9bb746e2d8ac216494b952014}
+      \strng{authorfullhash}{21f7721b75bba06d59f9d5ce222a34a5}
+      \strng{authorfullhashraw}{21f7721b75bba06d59f9d5ce222a34a5}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{140}
+      \field{title}{Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer}
+      \field{volume}{21}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 67}
+      \range{pages}{67}
+      \verb{urlraw}
+      \verb https://jmlr.csail.mit.edu/beta/papers/v21/20-074.html
+      \endverb
+      \verb{url}
+      \verb https://jmlr.csail.mit.edu/beta/papers/v21/20-074.html
+      \endverb
+    \endentry
+    \entry{sackett_evidence_1996}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=a8004e4273720803f87ca24b14e7e97d}{%
+           family={Sackett},
+           familyi={S\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=13d72ed248e1361b54a258371f10dd67}{%
+           family={Rosenberg},
+           familyi={R\bibinitperiod},
+           given={W.\bibnamedelimi M.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=8c09305c4016e99c678374ecdbfeb6f0}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5857a5420908e4221ee785b9d01df12b}{%
+           family={Haynes},
+           familyi={H\bibinitperiod},
+           given={R.\bibnamedelimi B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=cce41c4219ec2838adc64cc64fe08606}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={W.\bibnamedelimi S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Clinical research ed.}%
+      }
+      \strng{namehash}{a074f3a7655e4ccb3905b0d000e72de1}
+      \strng{fullhash}{ba39f47af572f9d9fa360783e8c7e4d6}
+      \strng{fullhashraw}{ba39f47af572f9d9fa360783e8c7e4d6}
+      \strng{bibnamehash}{a074f3a7655e4ccb3905b0d000e72de1}
+      \strng{authorbibnamehash}{a074f3a7655e4ccb3905b0d000e72de1}
+      \strng{authornamehash}{a074f3a7655e4ccb3905b0d000e72de1}
+      \strng{authorfullhash}{ba39f47af572f9d9fa360783e8c7e4d6}
+      \strng{authorfullhashraw}{ba39f47af572f9d9fa360783e8c7e4d6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0959-8138}
+      \field{journaltitle}{BMJ}
+      \field{month}{1}
+      \field{number}{7023}
+      \field{shorttitle}{Evidence based medicine}
+      \field{title}{Evidence based medicine: what it is and what it isn't}
+      \field{volume}{312}
+      \field{year}{1996}
+      \field{pages}{71\bibrangedash 72}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1136/bmj.312.7023.71
+      \endverb
+      \keyw{Clinical Competence,Clinical Medicine,Decision Making,Decision Support Techniques,Humans,United Kingdom}
+    \endentry
+    \entry{shojaee-mend_development_2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5fc6579177b7f5f309dab35d721fbc20}{%
+           family={Shojaee-Mend},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={Hassan},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b69fa59f657d37193d16ec83e716316e}{%
+           family={Ayatollahi},
+           familyi={A\bibinitperiod},
+           given={Haleh},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3c78aab53c4ab85dd3401ee737439b65}{%
+           family={Abdolahadi},
+           familyi={A\bibinitperiod},
+           given={Azam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \strng{fullhash}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \strng{fullhashraw}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \strng{bibnamehash}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \strng{authorbibnamehash}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \strng{authornamehash}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \strng{authorfullhash}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \strng{authorfullhashraw}{e472b627d7cece7f0e7b3f3bdabf5282}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{BACKGROUND: Development of ontologies in traditional medicine can be a foundation for other applications of informatics in this field. Despite the importance of the development of ontologies in traditional medicine, there are few review studies in this area. This study aims to review different methods for ontology development and evaluation in traditional medicine. METHODS: This review study was performed in 2019. To find related papers, six databases including Scopus, Web of Science, PubMed, Embase, IEEE Xplore, and SpringerLink were searched. Initially, 761 articles were identified. After applying inclusion and exclusion criteria, 22 articles were selected to review different methods for ontology development and evaluation in traditional medicine. RESULTS: Five different methods were used for ontology development in traditional medicine, namely conventional, customized, semiautomatic, upper-level, and large-scale methods. The results showed that ontology evaluation was only considered in 32\% of the studies. The common methods used for ontology evaluation were competency questions, expert-based evaluation, and automatic detection of inconsistency errors. CONCLUSION: Development of ontologies is of high importance for organizing knowledge in traditional medicine, as this branch of medicine is often not documented or is documented in local languages. The results of this study can help ontology developers to be familiar with the common methods of ontology development and evaluation in traditional medicine and use them for future research.}
+      \field{issn}{2511-705X}
+      \field{journaltitle}{Methods of Information in Medicine}
+      \field{month}{12}
+      \field{number}{6}
+      \field{shorttitle}{Development and {Evaluation} of {Ontologies} in {Traditional} {Medicine}}
+      \field{title}{Development and {Evaluation} of {Ontologies} in {Traditional} {Medicine}: {A} {Review} {Study}}
+      \field{volume}{58}
+      \field{year}{2019}
+      \field{pages}{194\bibrangedash 204}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1055/s-0040-1702236
+      \endverb
+      \keyw{Automation,Biological Ontologies,Medicine,Traditional,Peer Review,Research,Publications}
+    \endentry
+    \entry{souley1999}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=55346bd1bc8d98933164db6e6c64f8da}{%
+           family={Souley},
+           familyi={S\bibinitperiod},
+           given={Abdoulaye},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=c4f8c88349aad565e71ce86146fa0599}{%
+           family={Jaffré},
+           familyi={J\bibinitperiod},
+           given={Yannick},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=796c453026200d6d4e595284607909e2}{%
+           family={Olivier\bibnamedelimb de\bibnamedelima Sardan},
+           familyi={O\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Jean-Pierre},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Presses Universitaires de France}%
+      }
+      \strng{namehash}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{fullhash}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{fullhashraw}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{bibnamehash}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{authorbibnamehash}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{authornamehash}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{authorfullhash}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{authorfullhashraw}{55346bd1bc8d98933164db6e6c64f8da}
+      \strng{editorbibnamehash}{a32f9d603979aa217cb7ad3f4f25912e}
+      \strng{editornamehash}{a32f9d603979aa217cb7ad3f4f25912e}
+      \strng{editorfullhash}{a32f9d603979aa217cb7ad3f4f25912e}
+      \strng{editorfullhashraw}{a32f9d603979aa217cb7ad3f4f25912e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{La construction sociale des maladies : les entités nosologiques populaires en Afrique de l'Ouest}
+      \field{title}{Trois entités hausa parentes : zahi, sanyi et shawara}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers17-11/010050662.pdf
+      \endverb
+      \verb{url}
+      \verb https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers17-11/010050662.pdf
+      \endverb
+    \endentry
+    \entry{studer1998knowledge}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e0c7ea82e283188bb50d580b79aae9e3}{%
+           family={Studer},
+           familyi={S\bibinitperiod},
+           given={Rudi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d8f37ab4d5ba02ef7b90fd41ad8e6a81}{%
+           family={Benjamins},
+           familyi={B\bibinitperiod},
+           given={V.\bibnamedelimi Richard},
+           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=ba4603066ec9f23db109035b8d738b0c}{%
+           family={Fensel},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{fullhash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{fullhashraw}{4675b4441d3416cb08130a000e8220a8}
+      \strng{bibnamehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authorbibnamehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authornamehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authorfullhash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authorfullhashraw}{4675b4441d3416cb08130a000e8220a8}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Data \& Knowledge Engineering}
+      \field{number}{1--2}
+      \field{title}{Knowledge Engineering: Principles and Methods}
+      \field{volume}{25}
+      \field{year}{1998}
+      \field{pages}{161\bibrangedash 197}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1016/S0169-023X(97)00056-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0169-023X(97)00056-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0169-023X(97)00056-6
+      \endverb
+    \endentry
+    \entry{studer_knowledge_1998}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e0c7ea82e283188bb50d580b79aae9e3}{%
+           family={Studer},
+           familyi={S\bibinitperiod},
+           given={Rudi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d8f37ab4d5ba02ef7b90fd41ad8e6a81}{%
+           family={Benjamins},
+           familyi={B\bibinitperiod},
+           given={V.\bibnamedelimi Richard},
+           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=ba4603066ec9f23db109035b8d738b0c}{%
+           family={Fensel},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{fullhash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{fullhashraw}{4675b4441d3416cb08130a000e8220a8}
+      \strng{bibnamehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authorbibnamehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authornamehash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authorfullhash}{4675b4441d3416cb08130a000e8220a8}
+      \strng{authorfullhashraw}{4675b4441d3416cb08130a000e8220a8}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper gives an overview of the development of the field of Knowledge Engineering over the last 15 years. We discuss the paradigm shift from a transfer view to a modeling view and describe two approaches which considerably shaped research in Knowledge Engineering: Role-limiting Methods and Generic Tasks. To illustrate various concepts and methods which evolved in recent years we describe three modeling frameworks: CommonKADS, MIKE and PROTÉGÉ-II. This description is supplemented by discussing some important methodological developments in more detail: specification languages for knowledge-based systems, problem-solving methods and ontologies. We conclude by outlining the relationship of Knowledge Engineering to Software Engineering, Information Integration and Knowledge Management.}
+      \field{issn}{0169-023X}
+      \field{journaltitle}{Data \& Knowledge Engineering}
+      \field{month}{3}
+      \field{number}{1}
+      \field{shorttitle}{Knowledge engineering}
+      \field{title}{Knowledge engineering: {Principles} and methods}
+      \field{urlday}{29}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{25}
+      \field{year}{1998}
+      \field{urldateera}{ce}
+      \field{pages}{161\bibrangedash 197}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1016/S0169-023X(97)00056-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0169023X97000566
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0169023X97000566
+      \endverb
+      \keyw{Information integration,Knowledge acquisition,Knowledge Engineering,Ontology,Problem-solving method}
+    \endentry
+    \entry{tekemetieu2016}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=10542eb769bdf12c6b0b866fb5ea0af0}{%
+           family={Tekemetieu},
+           familyi={T\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=28febe063e48fcf5946462ff56338f2d}{%
+           family={Koussoube},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7ee4d4c610f86045da31e6f973176ac8}{%
+           family={Fotso},
+           familyi={F\bibinitperiod},
+           given={L.\bibnamedelimi P.},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9cd531184a5a89025579b927872f402e}
+      \strng{fullhash}{9cd531184a5a89025579b927872f402e}
+      \strng{fullhashraw}{9cd531184a5a89025579b927872f402e}
+      \strng{bibnamehash}{9cd531184a5a89025579b927872f402e}
+      \strng{authorbibnamehash}{9cd531184a5a89025579b927872f402e}
+      \strng{authornamehash}{9cd531184a5a89025579b927872f402e}
+      \strng{authorfullhash}{9cd531184a5a89025579b927872f402e}
+      \strng{authorfullhashraw}{9cd531184a5a89025579b927872f402e}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Kybernetes}
+      \field{number}{1}
+      \field{title}{An Ontology-Based Computer-Aided Diagnosis System in African Traditional Medicine: At the Sorcerer's Stone}
+      \field{volume}{45}
+      \field{year}{2016}
+      \field{pages}{30\bibrangedash 50}
+      \range{pages}{21}
+      \verb{urlraw}
+      \verb https://www.ajol.info/index.php/jcmphc/article/download/252453/238490
+      \endverb
+      \verb{url}
+      \verb https://www.ajol.info/index.php/jcmphc/article/download/252453/238490
+      \endverb
+    \endentry
+    \entry{tibiri2020}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=6f014531f19d27795b840650e7d8dc66}{%
+           family={Tibiri},
+           familyi={T\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6bbf840c3d44a2911b1c58b643f3e37f}{%
+           family={Boria},
+           familyi={B\bibinitperiod},
+           given={Sébastien},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9de7db3e292fa3534b0d73bfa36998a6}{%
+           family={Traoré},
+           familyi={T\bibinitperiod},
+           given={Tata\bibnamedelima Kadiatou},
+           giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e2dd6e5a69211b3c94589afe563cc4f0}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={Noufou},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f62b56600ef11f7c1a8003f7fe7384b6}{%
+           family={Nikièma},
+           familyi={N\bibinitperiod},
+           given={Aude},
+           giveni={A\bibinitperiod}}}%
+        {{hash=de79428a452cc55e97ae66152decc75c}{%
+           family={Ganaba},
+           familyi={G\bibinitperiod},
+           given={Souleymane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=13e600fb3d9d6a9c4287a758a4cf84e0}{%
+           family={Compaoré},
+           familyi={C\bibinitperiod},
+           given={Jean-Marie},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=9862681275a002702816ea0250816460}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={Issiaka},
+           giveni={I\bibinitperiod}}}%
+        {{hash=413b6b77b45c2afd94e1be98fbae84c5}{%
+           family={Guissou},
+           familyi={G\bibinitperiod},
+           given={Innocent\bibnamedelima Pierre},
+           giveni={I\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=eeb07b7d991725397ef6b0ec23ef1e1c}{%
+           family={Carraz},
+           familyi={C\bibinitperiod},
+           given={Maëlle},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b92021a6d4842e3415762051d2577cda}
+      \strng{fullhash}{78ff097a787be5f701b28b5f0055b07a}
+      \strng{fullhashraw}{78ff097a787be5f701b28b5f0055b07a}
+      \strng{bibnamehash}{b92021a6d4842e3415762051d2577cda}
+      \strng{authorbibnamehash}{b92021a6d4842e3415762051d2577cda}
+      \strng{authornamehash}{b92021a6d4842e3415762051d2577cda}
+      \strng{authorfullhash}{78ff097a787be5f701b28b5f0055b07a}
+      \strng{authorfullhashraw}{78ff097a787be5f701b28b5f0055b07a}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Pharmacology}
+      \field{title}{Countrywide Survey of Plants Used for Liver Disease Management by Traditional Healers in Burkina Faso}
+      \field{volume}{11}
+      \field{year}{2020}
+      \field{pages}{563751}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fphar.2020.563751
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC7883685/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC7883685/
+      \endverb
+    \endentry
+    \entry{tosam2024}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=796b3750689784722e866f118033b51e}{%
+           family={Tosam},
+           familyi={T\bibinitperiod},
+           given={Mbih\bibnamedelima Jerome},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{796b3750689784722e866f118033b51e}
+      \strng{fullhash}{796b3750689784722e866f118033b51e}
+      \strng{fullhashraw}{796b3750689784722e866f118033b51e}
+      \strng{bibnamehash}{796b3750689784722e866f118033b51e}
+      \strng{authorbibnamehash}{796b3750689784722e866f118033b51e}
+      \strng{authornamehash}{796b3750689784722e866f118033b51e}
+      \strng{authorfullhash}{796b3750689784722e866f118033b51e}
+      \strng{authorfullhashraw}{796b3750689784722e866f118033b51e}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{African Philosophy of Medicine}
+      \field{title}{Metaphysical Issues in African Philosophy of Medicine}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1007/978-3-031-73963-7_12
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/chapter/10.1007/978-3-031-73963-7_12
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-031-73963-7_12
+      \endverb
+    \endentry
+    \entry{traore2025wounds}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=8cef68b32407f250cc8cc7ebcc62a888}{%
+           family={Traoré},
+           familyi={T\bibinitperiod},
+           given={Safiatou},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9d0cadd8977101c0e6745bcc17538963}{%
+           family={Diawara/Zimé},
+           familyi={D\bibinitperiod},
+           given={Hermine},
+           giveni={H\bibinitperiod}}}%
+        {{hash=183a4e6900790a144badec15453c0ffc}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={Salfo},
+           giveni={S\bibinitperiod}}}%
+        {{hash=58baa0623200f2988b7c66e7b34934f7}{%
+           family={Compaoré},
+           familyi={C\bibinitperiod},
+           given={Souleymane},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{984bde6990214d54de5fa245e2e95d50}
+      \strng{fullhash}{5e95ccf92e73eae8e7e2bcaa6491f0a2}
+      \strng{fullhashraw}{5e95ccf92e73eae8e7e2bcaa6491f0a2}
+      \strng{bibnamehash}{984bde6990214d54de5fa245e2e95d50}
+      \strng{authorbibnamehash}{984bde6990214d54de5fa245e2e95d50}
+      \strng{authornamehash}{984bde6990214d54de5fa245e2e95d50}
+      \strng{authorfullhash}{5e95ccf92e73eae8e7e2bcaa6491f0a2}
+      \strng{authorfullhashraw}{5e95ccf92e73eae8e7e2bcaa6491f0a2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Plant, Animal and Environmental Sciences}
+      \field{title}{Ethnobotanical Survey on Plants Used in the Treatment of Wounds by Traditional Health Practitioners in Burkina Faso}
+      \field{volume}{15}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.progres.ujkz.gov.bf/publications/11832/details
+      \endverb
+      \verb{url}
+      \verb https://www.progres.ujkz.gov.bf/publications/11832/details
+      \endverb
+    \endentry
+    \entry{vaswani2017attention}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Łukasz},
+           giveni={Ł\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{fullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \strng{bibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorbibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorfullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Attention Is All You Need}
+      \field{volume}{30}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+    \endentry
+    \entry{w3cowl2012}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=446a1ae6601a5c59360c7d591c3992da}{%
+           family={{W3C}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhashraw}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhashraw}{446a1ae6601a5c59360c7d591c3992da}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OWL 2 Web Ontology Language Document Overview}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/owl2-overview/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/owl2-overview/
+      \endverb
+    \endentry
+    \entry{w3crdf2014}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=446a1ae6601a5c59360c7d591c3992da}{%
+           family={{W3C}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhashraw}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhashraw}{446a1ae6601a5c59360c7d591c3992da}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RDF 1.1 Concepts and Abstract Syntax}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/rdf11-concepts/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/rdf11-concepts/
+      \endverb
+    \endentry
+    \entry{w3cskos2009}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=446a1ae6601a5c59360c7d591c3992da}{%
+           family={{W3C}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{fullhashraw}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
+      \strng{authorfullhashraw}{446a1ae6601a5c59360c7d591c3992da}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SKOS Simple Knowledge Organization System Reference}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/skos-reference/
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/skos-reference/
+      \endverb
+    \endentry
+    \entry{watrimed2019}{incollection}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=6b68be2f25a7aab884d56051cffe6e74}{%
+           family={Wamba},
+           familyi={W\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{2a586681406f57c38f08fbd93530b1d9}
+      \strng{fullhash}{2a586681406f57c38f08fbd93530b1d9}
+      \strng{fullhashraw}{2a586681406f57c38f08fbd93530b1d9}
+      \strng{bibnamehash}{2a586681406f57c38f08fbd93530b1d9}
+      \strng{authorbibnamehash}{2a586681406f57c38f08fbd93530b1d9}
+      \strng{authornamehash}{2a586681406f57c38f08fbd93530b1d9}
+      \strng{authorfullhash}{2a586681406f57c38f08fbd93530b1d9}
+      \strng{authorfullhashraw}{2a586681406f57c38f08fbd93530b1d9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Healthcare of the Future: Bridging the Information Gap}
+      \field{title}{Enabling West African Herbal-Based Traditional Medicine Digitizing: The WATRIMed}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.3233/SHTI190528
+      \endverb
+      \verb{urlraw}
+      \verb https://ebooks.iospress.nl/pdf/doi/10.3233/SHTI190528
+      \endverb
+      \verb{url}
+      \verb https://ebooks.iospress.nl/pdf/doi/10.3233/SHTI190528
+      \endverb
+    \endentry
+    \entry{who2000traditional}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=531217507bec092b6ec36c0f78f46736}{%
+           family={{World Health Organization}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \strng{bibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorbibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{General Guidelines for Methodologies on Research and Evaluation of Traditional Medicine}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://iris.who.int/handle/10665/66783
+      \endverb
+      \verb{url}
+      \verb https://iris.who.int/handle/10665/66783
+      \endverb
+    \endentry
+    \entry{who2002monographs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=531217507bec092b6ec36c0f78f46736}{%
+           family={{World Health Organization}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \strng{bibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorbibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WHO Monographs on Selected Medicinal Plants}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{2}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://iris.who.int/bitstream/handle/10665/42052/9789241547024_eng.pdf
+      \endverb
+      \verb{url}
+      \verb https://iris.who.int/bitstream/handle/10665/42052/9789241547024_eng.pdf
+      \endverb
+    \endentry
+    \entry{who2013strategy}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=531217507bec092b6ec36c0f78f46736}{%
+           family={{World Health Organization}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \strng{bibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorbibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WHO Traditional Medicine Strategy 2014--2023}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://iris.who.int/bitstream/handle/10665/92455/9789241506090_eng.pdf
+      \endverb
+      \verb{url}
+      \verb https://iris.who.int/bitstream/handle/10665/92455/9789241506090_eng.pdf
+      \endverb
     \endentry
     \entry{zerbo_plantes_2011}{article}{}{}
       \name{author}{4}{}{%
@@ -124,6 +2010,135 @@
       \endverb
       \verb{url}
       \verb https://revues.cirad.fr/index.php/BFT/article/view/20481
+      \endverb
+    \endentry
+    \entry{zizka_traditional_2015}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=79f3d792ebb51bf237abfd4037acdbbc}{%
+           family={Zizka},
+           familyi={Z\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=665660340b10cc9ddb49bdb4719e9f50}{%
+           family={Thiombiano},
+           familyi={T\bibinitperiod},
+           given={Adjima},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e0d66f70eecd43b3ef719c9d78317251}{%
+           family={Dressler},
+           familyi={D\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fe005274aa3cf67a9d5769fda71e1224}{%
+           family={Nacoulma},
+           familyi={N\bibinitperiod},
+           given={Blandine\bibnamedelima Mi},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2df548ada0b89e903c4b825d35f1b32b}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={Amadé},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c59d10c669f374ba011604722778677e}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={Issaka},
+           giveni={I\bibinitperiod}}}%
+        {{hash=96fc889f37650a54b428aaa122cbaa40}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={Oumarou},
+           giveni={O\bibinitperiod}}}%
+        {{hash=8010ea84358f124adf4d64cb6b6e3453}{%
+           family={Zizka},
+           familyi={Z\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=af171b4cd65fa3d7587549ac55adabc9}{%
+           family={Hahn},
+           familyi={H\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=9f562b04845bb7d878e59a6a9b4314b0}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{02773603f9b172173ba921e8ac2d044e}
+      \strng{fullhash}{f84c5d320e4e69954eb27bf3982c8c55}
+      \strng{fullhashraw}{f84c5d320e4e69954eb27bf3982c8c55}
+      \strng{bibnamehash}{02773603f9b172173ba921e8ac2d044e}
+      \strng{authorbibnamehash}{02773603f9b172173ba921e8ac2d044e}
+      \strng{authornamehash}{02773603f9b172173ba921e8ac2d044e}
+      \strng{authorfullhash}{f84c5d320e4e69954eb27bf3982c8c55}
+      \strng{authorfullhashraw}{f84c5d320e4e69954eb27bf3982c8c55}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1746-4269}
+      \field{journaltitle}{Journal of Ethnobiology and Ethnomedicine}
+      \field{month}{12}
+      \field{number}{1}
+      \field{shorttitle}{Traditional plant use in {Burkina} {Faso} ({West} {Africa})}
+      \field{title}{Traditional plant use in {Burkina} {Faso} ({West} {Africa}): a national-scale analysis with focus on traditional medicine}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{11}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{9}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/1746-4269-11-9
+      \endverb
+      \verb{urlraw}
+      \verb https://ethnobiomed.biomedcentral.com/articles/10.1186/1746-4269-11-9
+      \endverb
+      \verb{url}
+      \verb https://ethnobiomed.biomedcentral.com/articles/10.1186/1746-4269-11-9
+      \endverb
+    \endentry
+    \entry{zongo2025}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=45c0edd4942e3b9451ab988f5db5e887}{%
+           family={Zongo},
+           familyi={Z\bibinitperiod},
+           given={Koudbi\bibnamedelima Jacob},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{fullhash}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{fullhashraw}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{bibnamehash}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{authorbibnamehash}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{authornamehash}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{authorfullhash}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{authorfullhashraw}{ba42da7a4ab2396f72c57eefb027b95e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Advanced Translational and Preclinical Biomedicine}
+      \field{number}{1}
+      \field{title}{Ethnopharmacological Study on Medicinal Plants Used for Jaundice and Liver-Related Disorders Management in the Province of Kouritenga in the Central-Eastern of Burkina Faso}
+      \field{volume}{4}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.57220/jatpb.v4i1.213
+      \endverb
+      \verb{urlraw}
+      \verb https://boa.unimib.it/retrieve/444bc5b3-4483-4e23-a45d-f0fe28fbb91a/Zongo%20et%20al-2025-JATPB-VoR.pdf
+      \endverb
+      \verb{url}
+      \verb https://boa.unimib.it/retrieve/444bc5b3-4483-4e23-a45d-f0fe28fbb91a/Zongo%20et%20al-2025-JATPB-VoR.pdf
       \endverb
     \endentry
   \enddatalist

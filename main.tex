@@ -6,6 +6,7 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{longtable}
+\usepackage{csquotes}
 % Police Times New Roman compatible pdfLaTeX
 \usepackage{newtxtext,newtxmath}
 
@@ -18,8 +19,11 @@
 \usepackage{enumitem} % Gestion avancée des listes
 \usepackage{titlesec} % Personnalisation des titres de chapitres et sections
 \usepackage{setspace} % Espacement de ligne (1.5)
-\usepackage{tabularx}
 \usepackage{float}
+\usepackage{microtype} % Ameliore l'interlettrage et la cesure, limite les lignes trop longues
+
+% Laisse a LaTeX un peu de jeu pour eviter les paragraphes qui debordent
+\setlength{\emergencystretch}{3em}
 
 \usepackage[nottoc]{tocbibind} %ajoute automatiquement la liste des figures, la liste des tableaux et la bibliographie à la table des matières.
 
@@ -27,6 +31,7 @@
 \usepackage[backend=biber]{biblatex}
 \addbibresource{sanou-master.bib}
 
+\usepackage{xurl} % Permet de couper les URL longs dans la bibliographie
 \usepackage{hyperref}
 \hypersetup{
     hidelinks % Masque tous les encadrés et retient la couleur normale du texte

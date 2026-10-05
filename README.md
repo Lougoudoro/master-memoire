@@ -1,45 +1,53 @@
-# Memoire de master
+# Mémoire de Master II
 
-Memoire de Master II en informatique, option Ingenierie des Systemes
-d'Information d'Entreprise.
+Mémoire de Master II en informatique, option Ingénierie des Systèmes
+d'Information en Entreprise, Université Joseph Ki-Zerbo.
 
 ## Sujet
 
-Adaptation et enrichissement d'une ontologie existante pour un acces
-intelligent aux connaissances sur les plantes medicinales du Burkina Faso
+Adaptation et enrichissement d'une ontologie existante pour un accès
+intelligent aux connaissances sur les plantes médicinales du Burkina Faso
 par l'intelligence artificielle.
+
+Auteur : Sanou Lougoudoro. Encadrant : Dr. Belko Abdoul Aziz DIALLO.
 
 ## Organisation du projet
 
-- `main.tex` : fichier principal de compilation LaTeX.
+- `main.tex` : fichier principal de compilation LaTeX. Il déclare les titres
+  de chapitres et les `\input` correspondants.
 - `parts/gard.tex` : page de garde.
-- `parts/sigle-abreviation.tex` : liste des sigles et abreviations.
-- `chapters/introduction.tex` : introduction generale.
-- `chapters/chapter1.tex` : cadre theorique et revue de litterature.
-- `chapters/chapter2.tex` : materiel et methodologie (a completer).
-- `chapters/chapter3.tex` : conception et developpement du systeme (a completer).
-- `chapters/chapter4.tex` : resultats et discussion (a completer).
-- `sanou-master.bib` : references bibliographiques.
-- `images/` : logos utilises sur la page de garde.
+- `parts/dedicace.tex` : dédicace.
+- `parts/remerciements.tex` : remerciements.
+- `parts/resume.tex` : résumé.
+- `parts/abstract.tex` : abstract.
+- `parts/sigle-abreviation.tex` : liste des sigles et abréviations.
+- `chapters/introduction.tex` : introduction générale.
+- `chapters/chapter1.tex` : chapitre II, cadre théorique et revue de littérature.
+- `chapters/chapter2.tex` : chapitre III, matériel et méthodologie.
+- `chapters/chapter3.tex` : chapitre IV, conception et développement du système.
+- `chapters/chapter4.tex` : chapitre V, résultats et discussion.
+- `chapters/conclusion.tex` : conclusion générale.
+- `sanou-master.bib` : références bibliographiques.
+- `images/` : logos et figures utilisés.
 
-## Etat d'avancement
+Note : les titres de chapitres et leurs `\label` sont déclarés dans
+`main.tex`. Les fichiers `chapters/*.tex` ne doivent pas contenir de
+`\chapter{...}`, sinon le titre apparaît deux fois et le label est défini
+en double.
 
-Le projet est actuellement structure comme suit :
+## État d'avancement
 
-- introduction generale : redigee ;
-- cadre theorique et revue de litterature : redige ;
-- materiel et methodologie : fichier cree, contenu a rediger ;
-- conception et developpement du systeme : fichier cree, contenu a rediger ;
-- resultats et discussion : fichier cree, contenu a rediger ;
-- conclusion generale : a ajouter lorsque les resultats seront disponibles.
-
-Les chapitres encore en cours sont donc `chapter2.tex`, `chapter3.tex` et
-`chapter4.tex`. Leurs emplacements sont deja declares dans `main.tex` afin de
-preserver la structure finale du memoire.
+- Introduction générale : rédigée ;
+- Cadre théorique et revue de littérature (chapitre II) : rédigé ;
+- Matériel et méthodologie (chapitre III) : rédigé ;
+- Conception et développement du système (chapitre IV) : à rédiger ;
+- Résultats et discussion (chapitre V) : à rédiger ;
+- Conclusion générale : à rédiger ;
+- Dédicace, remerciements, résumé, abstract : à rédiger.
 
 ## Compilation
 
-Depuis le dossier racine du projet, executer :
+Depuis le dossier racine du projet :
 
 ```text
 pdflatex main.tex
@@ -48,17 +56,26 @@ pdflatex main.tex
 pdflatex main.tex
 ```
 
-La compilation necessite une distribution LaTeX comprenant `pdflatex` et
-`biber`, par exemple MiKTeX ou TeX Live. Le fichier genere est `main.pdf`.
+Ou en une seule commande, si `latexmk` est disponible :
+
+```text
+latexmk -pdf main.tex
+```
+
+La compilation nécessite une distribution LaTeX comprenant `pdflatex` et
+`biber`, par exemple MiKTeX ou TeX Live. Le fichier généré est `main.pdf`.
+
+Le document compile actuellement sans avertissement ni erreur.
 
 ## Bibliographie
 
-Les references sont gerees avec `biblatex` et le backend `biber`. Toute
-nouvelle reference doit etre ajoutee dans `sanou-master.bib`, puis citee dans
-un fichier `.tex` avec `\cite{cle-de-la-reference}`.
+Les références sont gérées avec `biblatex` et le backend `biber`. Toute
+nouvelle référence doit être ajoutée dans `sanou-master.bib`, puis citée dans
+un fichier `.tex` avec `\cite{cle-de-la-reference}`. Les clés de référence
+doivent être uniques dans le fichier `.bib`.
 
-## Perimetre du systeme
+## Périmètre du système
 
-Le futur systeme vise la consultation de connaissances scientifiques sur les
-plantes medicinales du Burkina Faso. Il ne constitue ni un outil de diagnostic,
-ni un systeme de prescription medicale.
+Le système vise la consultation des connaissances scientifiques sur les
+plantes médicinales du Burkina Faso. Il ne constitue ni un outil de
+diagnostic, ni un système de prescription médicale.

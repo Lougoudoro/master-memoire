@@ -1,8 +1,8 @@
-\chapter{Matériel et méthodologie}
-\label{chap:materiel_methodologie}
+% Le titre du chapitre et son label sont declares dans main.tex
+% (cf. \chapter{Materiel et methodologie} avant \input{chapters/chapter2.tex}).
 
+\phantomsection
 \section*{Introduction du chapitre}
-\addcontentsline{toc}{section}{Introduction du chapitre}
 
 Ce chapitre présente le matériel utilisé et la démarche méthodologique adoptée pour notre recherche. Contrairement au chapitre précédent qui a défini les concepts théoriques et analysé l'état de l'art, ce chapitre décrit les choix opérationnels et les étapes concrètes de notre travail. Il constitue le pont entre la réflexion théorique et la mise en œuvre technique.
 
@@ -11,7 +11,7 @@ Le chapitre est structuré en trois parties principales. La première partie pr�
 Chaque phase de la méthodologie est décrite avec précision. Nous présentons pour chaque phase l'objectif poursuivi, les actions concrètes menées, les méthodes utilisées, les outils mobilisés et les livrables produits. Cette approche permet de garantir la reproductibilité de notre démarche et de faciliter l'évaluation de notre contribution.
 
 % ============================================================
-% III.1. MATÉRIEL
+% II.1. MATÉRIEL
 % ============================================================
 
 \section{Matériel}
@@ -22,7 +22,7 @@ Cette section décrit l'ensemble des ressources utilisées dans notre recherche.
 Le matériel mobilisé dans cette recherche est de nature variée. Il comprend des ressources documentaires (articles, thèses, rapports, bases de données), des ressources conceptuelles (ontologies existantes) et des ressources techniques (modèles de langage, bases de données, frameworks, bibliothèques). Chaque ressource est décrite avec précision afin de permettre la compréhension de son rôle dans la démarche globale.
 
 % ------------------------------------------------------------
-% III.1.1. Corpus documentaire
+% II.1.1. Corpus documentaire
 % ------------------------------------------------------------
 
 \subsection{Corpus documentaire}
@@ -72,7 +72,7 @@ Le tableau \ref{tab:corpus} récapitule les sources du corpus.
 \centering
 \caption{Sources du corpus documentaire}
 \label{tab:corpus}
-\begin{tabular}{|L{3cm}|L{3cm}|L{3cm}|L{5cm}|}
+\begin{tabular}{|L{4cm}|L{2.8cm}|L{3cm}|L{5cm}|}
 \hline
 \textbf{Source} & \textbf{Type} & \textbf{Volume estimé} & \textbf{Contenu principal} \\
 \hline
@@ -90,13 +90,13 @@ Rapports de projets & Littérature grise & Plusieurs centaines de plantes & Usag
 Ce corpus présente une richesse et une diversité importantes. Il couvre différentes régions du Burkina Faso, différentes pathologies et différentes approches méthodologiques. Il constitue une base solide pour l'extraction des connaissances et l'enrichissement de l'ontologie. La sélection de l'ontologie en amont a permis de cibler les informations à extraire et d'organiser le corpus en fonction des concepts et relations définis. Cette approche méthodologique garantit une meilleure cohérence entre les données collectées et le modèle conceptuel utilisé.
 
 % ------------------------------------------------------------
-% III.1.2. Ontologies candidates
+% II.1.2. Ontologies candidates
 % ------------------------------------------------------------
 
 \subsection{Ontologies candidates}
 \label{subsec:ontologies_candidates}
 
-Pour notre étude comparative, nous avons identifié cinq ontologies candidates. Ces ontologies ont été présentées dans le chapitre II (section II.4.1). Elles couvrent des domaines variés : la botanique, la médecine traditionnelle, la pharmacologie et l'ethnomédecine. Le tableau \ref{tab:ontologies_candidates} présente ces ontologies avec leurs caractéristiques descriptives.
+Pour notre étude comparative, nous avons identifié cinq ontologies candidates. Ces ontologies ont été présentées dans le chapitre \ref{chap:cadre_theorique}, aux sections \ref{subsubsec:ontologies_internationales} et \ref{subsubsec:ontologies_africaines}. Elles couvrent des domaines variés : la botanique, la médecine traditionnelle, la pharmacologie et l'ethnomédecine. Le tableau \ref{tab:ontologies_candidates} présente ces ontologies avec leurs caractéristiques descriptives.
 
 Ces ontologies seront comparées selon une grille de critères définie dans la Phase 1 (section \ref{subsec:phase1}). La comparaison permettra de sélectionner l'ontologie la plus adaptée à notre contexte. Cette sélection est effectuée avant la constitution du corpus documentaire. Elle détermine le modèle conceptuel qui guidera l'extraction des connaissances.
 
@@ -124,7 +124,7 @@ Ces ontologies seront comparées selon une grille de critères définie dans la 
 Chacune de ces ontologies présente des forces et des faiblesses. Les ontologies botaniques (FLOPO, PO) couvrent bien l'aspect plante mais ignorent les usages médicinaux. Les ontologies pharmaceutiques (DrOn) sont centrées sur les médicaments modernes. L'OTM est prometteuse mais non spécifique à l'Afrique. Les ontologies africaines (WATRIMed/HTM, ontoMEDTRAD, ATHMed) intègrent les dimensions culturelles et les recettes multi-plantes. Leur comparaison détaillée est présentée dans la Phase 1.
 
 % ------------------------------------------------------------
-% III.1.3. Outils et environnement technique
+% II.1.3. Outils et environnement technique
 % ------------------------------------------------------------
 
 \subsection{Outils et environnement technique}
@@ -277,7 +277,7 @@ Les bibliothèques Python sont utilisées dans les phases 5, 6 et 7. Le tableau 
 Ces bibliothèques couvrent l'ensemble des besoins techniques de notre recherche : connexion à la base de données, orchestration du système RAG, développement de l'interface web, chargement du modèle de langage, manipulation des ontologies, traitement des données et visualisation.
 
 % ------------------------------------------------------------
-% III.1.4. Tableau récapitulatif du matériel
+% II.1.4. Tableau récapitulatif du matériel
 % ------------------------------------------------------------
 
 \subsection{Tableau récapitulatif du matériel}
@@ -327,7 +327,7 @@ Bibliothèques & Python & neo4j, langchain, streamlit, transformers, etc. \\
 \end{table}
 
 % ------------------------------------------------------------
-% III.1.5. Tableau de correspondance Matériel - Phases
+% II.1.5. Tableau de correspondance Matériel - Phases
 % ------------------------------------------------------------
 
 \subsection{Tableau de correspondance Matériel - Phases}
@@ -363,7 +363,7 @@ Bibliothèques Python & Phase 5, 6, 7 & Développement \\
 \end{table}
 
 % ============================================================
-% III.2. MÉTHODOLOGIE
+% II.2. MÉTHODOLOGIE
 % ============================================================
 
 \section{Méthodologie}
@@ -374,7 +374,7 @@ Cette section détaille les huit phases opérationnelles de notre démarche. Cha
 Cette organisation méthodologique reflète notre souci de cohérence et de rigueur. En commençant par l'identification et la sélection de l'ontologie, nous nous assurons de disposer d'un cadre conceptuel solide avant de collecter les données. Cette approche garantit que les données collectées seront pertinentes et structurées selon le modèle choisi. Elle facilite également l'extraction des connaissances en ciblant les informations pertinentes dès la phase de collecte.
 
 % ------------------------------------------------------------
-% III.2.1. Phase 1 : Identification et étude comparative des ontologies
+% II.2.1. Phase 1 : Identification et étude comparative des ontologies
 % ------------------------------------------------------------
 
 \subsection{Phase 1 : Identification et étude comparative des ontologies}
@@ -392,7 +392,7 @@ Nous avons défini huit critères pour comparer les ontologies. Ces critères on
 \centering
 \caption{Grille de critères de comparaison}
 \label{tab:grille_criteres}
-\begin{tabular}{|C{0.5cm}|L{3cm}|L{7cm}|C{2cm}|}
+\begin{tabular}{|C{0.5cm}|L{3cm}|L{6.6cm}|C{2.5cm}|}
 \hline
 \textbf{N°} & \textbf{Critère} & \textbf{Description} & \textbf{Pondération} \\
 \hline
@@ -425,7 +425,7 @@ Chaque ontologie est notée de 1 (très faible) à 5 (très élevé) pour chaque
 \centering
 \caption{Notation des ontologies candidates}
 \label{tab:notation_ontologies}
-\begin{tabular}{|L{3cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{1.5cm}|}
+\begin{tabular}{|L{3.5cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{1.5cm}|}
 \hline
 \textbf{Ontologie} & \textbf{C1} & \textbf{C2} & \textbf{C3} & \textbf{C4} & \textbf{C5} & \textbf{C6} & \textbf{C7} & \textbf{C8} & \textbf{Score} \\
 \hline
@@ -453,7 +453,7 @@ Cette sélection préalable permet de disposer d'un cadre conceptuel solide pour
 \textbf{Livrable} : Ontologie WATRIMed/HTM sélectionnée.
 
 % ------------------------------------------------------------
-% III.2.2. Phase 2 : Définition des critères de recherche et de sélection
+% II.2.2. Phase 2 : Définition des critères de recherche et de sélection
 % ------------------------------------------------------------
 
 \subsection{Phase 2 : Définition des critères de recherche et de sélection des documents}
@@ -498,7 +498,7 @@ Cette phase permet de disposer d'un corpus fiable et cohérent, qui constituera 
 \textbf{Livrable} : Grille de critères de recherche et de sélection.
 
 % ------------------------------------------------------------
-% III.2.3. Phase 3 : Constitution du corpus scientifique
+% II.2.3. Phase 3 : Constitution du corpus scientifique
 % ------------------------------------------------------------
 
 \subsection{Phase 3 : Constitution du corpus scientifique}
@@ -519,7 +519,7 @@ Ce processus rigoureux a permis de constituer un corpus de 35 documents scientif
 \textbf{Livrable} : Un corpus de 35 documents scientifiques, complété par les données de burkinaherbiermed.org et de l'INERA.
 
 % ------------------------------------------------------------
-% III.2.4. Phase 4 : Adaptation de l'ontologie sélectionnée
+% II.2.4. Phase 4 : Adaptation de l'ontologie sélectionnée
 % ------------------------------------------------------------
 
 \subsection{Phase 4 : Adaptation de l'ontologie sélectionnée}
@@ -562,7 +562,7 @@ Cette documentation est essentielle pour garantir la reproductibilité de notre 
 \textbf{Livrable} : Une ontologie adaptée au contexte burkinabè.
 
 % ------------------------------------------------------------
-% III.2.5. Phase 5 : Enrichissement de l'ontologie
+% II.2.5. Phase 5 : Enrichissement de l'ontologie
 % ------------------------------------------------------------
 
 \subsection{Phase 5 : Enrichissement de l'ontologie à partir de la littérature scientifique}
@@ -628,7 +628,7 @@ L'intégration des données dans l'ontologie permet de peupler la base de connai
 \textbf{Livrable} : Un ensemble de données structurées (JSON, CSV) prêtes à être intégrées.
 
 % ------------------------------------------------------------
-% III.2.6. Phase 6 : Construction et interrogation de la base
+% II.2.6. Phase 6 : Construction et interrogation de la base
 % ------------------------------------------------------------
 
 \subsection{Phase 6 : Construction et interrogation de la base de connaissances}
@@ -659,7 +659,7 @@ Ces tests permettent de vérifier que la base de connaissances est fonctionnelle
 \textbf{Livrable} : Une base Neo4j peuplée et interrogeable.
 
 % ------------------------------------------------------------
-% III.2.7. Phase 7 : Exploitation par l'IA et développement web
+% II.2.7. Phase 7 : Exploitation par l'IA et développement web
 % ------------------------------------------------------------
 
 \subsection{Phase 7 : Exploitation par IA et développement de l'application web}
@@ -702,7 +702,7 @@ Les tests fonctionnels vérifient que l'application fonctionne correctement. Les
 \textbf{Livrable} : Un système RAG fonctionnel et une application web fonctionnelle.
 
 % ------------------------------------------------------------
-% III.2.8. Phase 8 : Évaluation et validation
+% II.2.8. Phase 8 : Évaluation et validation
 % ------------------------------------------------------------
 
 \subsection{Phase 8 : Évaluation et validation}
@@ -788,7 +788,7 @@ Nous solliciterons 10 à 20 participants. Ils incluront des étudiants, des cher
 \textbf{Livrable} : Rapport d'évaluation et de validation.
 
 % ============================================================
-% III.3. SYNTHÈSE ET TRANSITION
+% II.3. SYNTHÈSE ET TRANSITION
 % ============================================================
 
 \section{Synthèse et transition}
@@ -804,7 +804,7 @@ Le tableau \ref{tab:correspondance_phases} récapitule les phases, les objectifs
 \centering
 \caption{Correspondance entre les phases, les objectifs et les livrables}
 \label{tab:correspondance_phases}
-\begin{tabular}{|L{2cm}|L{4cm}|L{6cm}|}
+\begin{tabular}{|L{2.2cm}|L{4.5cm}|L{6.8cm}|}
 \hline
 \textbf{Phase} & \textbf{Objectif} & \textbf{Livrable} \\
 \hline
@@ -827,14 +827,6 @@ Phase 8 & Évaluer la qualité du système & Rapport d'évaluation \\
 \end{tabular}
 \end{table}
 
-\subsection{Transition vers le chapitre IV}
-
-Ce chapitre a présenté le matériel et la méthodologie de notre recherche. Le matériel comprend un corpus de 35 documents scientifiques, les données de burkinaherbiermed.org et de l'INERA, cinq ontologies candidates et un environnement technique basé sur Llama 3 70B, Google Colab, Neo4j Desktop, LangChain et Streamlit.
-
-La méthodologie est structurée en huit phases : identification et étude comparative des ontologies, définition des critères de recherche et de sélection des documents, constitution du corpus scientifique, adaptation de l'ontologie sélectionnée, enrichissement de l'ontologie à partir de la littérature scientifique, construction et interrogation de la base de connaissances, exploitation par l'intelligence artificielle et développement de l'application web, et évaluation et validation.
-
-Le chapitre suivant présentera la conception et le développement du système. Nous y détaillerons l'ontologie adaptée, la base de connaissances construite, le système RAG implémenté et l'application web développée.
-
 % ============================================================
 % CONCLUSION DU CHAPITRE
 % ============================================================
@@ -846,8 +838,8 @@ Ce chapitre a présenté le matériel et la méthodologie de notre recherche. Le
 
 La méthodologie est structurée en huit phases : identification et étude comparative des ontologies, définition des critères de recherche et de sélection des documents, constitution du corpus scientifique, adaptation de l'ontologie sélectionnée, enrichissement de l'ontologie à partir de la littérature scientifique, construction et interrogation de la base de connaissances, exploitation par l'intelligence artificielle et développement de l'application web, et évaluation et validation. Chaque phase est décrite avec ses actions concrètes et ses livrables.
 
-La réorganisation de la méthodologie permet de commencer par l'identification et la sélection de l'ontologie avant la constitution du corpus. Cette approche garantit une meilleure cohérence entre le modèle conceptuel et les données collectées. Elle facilite l'extraction des connaissances en ciblant les informations pertinentes dès la phase de collecte.
+L'ordre retenu pour ces phases est un choix méthodologique assumé. Commencer par l'identification et la sélection de l'ontologie avant la constitution du corpus garantit la cohérence entre le modèle conceptuel et les données collectées. Cette séquence facilite l'extraction des connaissances en ciblant les informations pertinentes dès la phase de collecte.
 
-Les protocoles d'évaluation sont également présentés. Ils seront appliqués dans le chapitre V pour valider notre approche.
+Les protocoles d'évaluation présentés dans la phase 8 seront appliqués dans le chapitre \ref{chap:resultats_discussion} pour valider notre approche.
 
 Le chapitre suivant présentera la conception et le développement du système. Nous y détaillerons l'ontologie adaptée, la base de connaissances construite, le système RAG implémenté et l'application web développée.

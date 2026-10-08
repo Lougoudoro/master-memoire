@@ -25,6 +25,10 @@
 % Laisse a LaTeX un peu de jeu pour eviter les paragraphes qui debordent
 \setlength{\emergencystretch}{3em}
 
+% Avec l'interligne 1.5, la justification verticale des pages genere des
+% pages a fond gris mal reparti. \raggedbottom evite les \vbox underfull.
+\raggedbottom
+
 \usepackage[nottoc]{tocbibind} %ajoute automatiquement la liste des figures, la liste des tableaux et la bibliographie à la table des matières.
 
 %BIBLIOGRAPHIE
@@ -42,8 +46,15 @@
 
 \begin{document}
 
+% La page de garde porte le compteur 1 ; on desactive ses ancres pour
+% eviter le conflit avec la numerotation arabic qui reprendra a 1.
+\hypersetup{pageanchor=false}
+
 \input{parts/gard.tex}
 \cleardoublepage
+% Les ancres de page des preliminaires ne doivent pas entrer en conflit
+% avec celles du corps du memoire, qui reprend la numerotation a 1.
+\hypersetup{pageanchor=false}
 \pagenumbering{roman}
 
 % Dédicace
@@ -78,6 +89,7 @@
 \cleardoublepage
 
 \pagenumbering{arabic}
+\hypersetup{pageanchor=true}
 \pagestyle{plain} 
 \chapter*{Introduction générale}
 \addcontentsline{toc}{chapter}{Introduction générale}

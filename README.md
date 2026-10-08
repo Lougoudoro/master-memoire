@@ -22,10 +22,10 @@ Auteur : Sanou Lougoudoro. Encadrant : Dr. Belko Abdoul Aziz DIALLO.
 - `parts/abstract.tex` : abstract.
 - `parts/sigle-abreviation.tex` : liste des sigles et abréviations.
 - `chapters/introduction.tex` : introduction générale.
-- `chapters/chapter1.tex` : chapitre II, cadre théorique et revue de littérature.
-- `chapters/chapter2.tex` : chapitre III, matériel et méthodologie.
-- `chapters/chapter3.tex` : chapitre IV, conception et développement du système.
-- `chapters/chapter4.tex` : chapitre V, résultats et discussion.
+- `chapters/chapter1.tex` : chapitre I, cadre théorique et revue de littérature.
+- `chapters/chapter2.tex` : chapitre II, matériel et méthodologie.
+- `chapters/chapter3.tex` : chapitre III, conception et développement du système.
+- `chapters/chapter4.tex` : chapitre IV, résultats et discussion.
 - `chapters/conclusion.tex` : conclusion générale.
 - `sanou-master.bib` : références bibliographiques.
 - `images/` : logos et figures utilisés.
@@ -37,11 +37,11 @@ en double.
 
 ## État d'avancement
 
-- Introduction générale : rédigée ;
-- Cadre théorique et revue de littérature (chapitre II) : rédigé ;
-- Matériel et méthodologie (chapitre III) : rédigé ;
-- Conception et développement du système (chapitre IV) : à rédiger ;
-- Résultats et discussion (chapitre V) : à rédiger ;
+- Introduction générale : rédigée, reformulée ;
+- Cadre théorique et revue de littérature (chapitre I) : rédigé, reformulé ;
+- Matériel et méthodologie (chapitre II) : rédigé, en cours de reformulation ;
+- Conception et développement du système (chapitre III) : à rédiger ;
+- Résultats et discussion (chapitre IV) : à rédiger ;
 - Conclusion générale : à rédiger ;
 - Dédicace, remerciements, résumé, abstract : à rédiger.
 

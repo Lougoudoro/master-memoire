@@ -50,6 +50,96 @@
       \verb https://www.ai4d.ai/fr/blog/building-a-medicinal-plant-database
       \endverb
     \endentry
+    \entry{angole_towards_2012}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=588cfa59223876197324c954b1a5c61a}{%
+           family={Angole},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=3fcf7b24f1c11b6dba60ef74aba4fbab}{%
+           family={Jehopio},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3e0d3f2fb1816f02f203c707470c800b}{%
+           family={Maiga},
+           familyi={M\bibinitperiod},
+           given={Gilbert},
+           giveni={G\bibinitperiod}}}%
+        {{hash=abda697e63745e3f2b90cf8b59a2fcce}{%
+           family={Omoda-Onyait},
+           familyi={O\bibinithyphendelim O\bibinitperiod},
+           given={Godfrey},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{367e92fb48dd3ad63c26d1daf0213103}
+      \strng{fullhash}{169ab1a2b51ef39d0c4d28462fb26d68}
+      \strng{fullhashraw}{169ab1a2b51ef39d0c4d28462fb26d68}
+      \strng{bibnamehash}{367e92fb48dd3ad63c26d1daf0213103}
+      \strng{authorbibnamehash}{367e92fb48dd3ad63c26d1daf0213103}
+      \strng{authornamehash}{367e92fb48dd3ad63c26d1daf0213103}
+      \strng{authorfullhash}{169ab1a2b51ef39d0c4d28462fb26d68}
+      \strng{authorfullhashraw}{169ab1a2b51ef39d0c4d28462fb26d68}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Knowledge-Based and Intelligent Information and Engineering Systems}
+      \field{series}{Frontiers in Artificial Intelligence and Applications}
+      \field{title}{Towards an Ontology Model for African Traditional Medicine}
+      \field{volume}{243}
+      \field{year}{2012}
+      \field{pages}{386\bibrangedash 395}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.3233/978-1-61499-105-2-386
+      \endverb
+    \endentry
+    \entry{angole_ontology_2013}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b1e3f691bf99e670a9b5c37f129e3c79}{%
+           family={Angole},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima Okelo},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=3fcf7b24f1c11b6dba60ef74aba4fbab}{%
+           family={Jehopio},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3e0d3f2fb1816f02f203c707470c800b}{%
+           family={Maiga},
+           familyi={M\bibinitperiod},
+           given={Gilbert},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{15376dad79a5e3949e43c54eaa074c8b}
+      \strng{fullhash}{15376dad79a5e3949e43c54eaa074c8b}
+      \strng{fullhashraw}{15376dad79a5e3949e43c54eaa074c8b}
+      \strng{bibnamehash}{15376dad79a5e3949e43c54eaa074c8b}
+      \strng{authorbibnamehash}{15376dad79a5e3949e43c54eaa074c8b}
+      \strng{authornamehash}{15376dad79a5e3949e43c54eaa074c8b}
+      \strng{authorfullhash}{15376dad79a5e3949e43c54eaa074c8b}
+      \strng{authorfullhashraw}{15376dad79a5e3949e43c54eaa074c8b}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Knowledge-Based and Intelligent Engineering Systems}
+      \field{number}{1}
+      \field{title}{Ontology model: Towards bridging the gap between African traditional medicine and conventional medicine}
+      \field{volume}{17}
+      \field{year}{2013}
+      \field{pages}{37\bibrangedash 43}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.3233/KES-130263
+      \endverb
+    \endentry
     \entry{ares2018medecine}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=24a1adc0ac8474b24e51523669a9f9ba}{%
@@ -263,6 +353,53 @@
       \endverb
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/S0020737383710229
+      \endverb
+    \endentry
+    \entry{devine_knowledge_2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=95dda1f09306a836eab2ac42402b2975}{%
+           family={Devine},
+           familyi={D\bibinitperiod},
+           given={Samuel\bibnamedelimb Nii\bibnamedelima Odoi},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=59a9d152aefc7f2fa7d55195e0ec4300}{%
+           family={Kolog},
+           familyi={K\bibinitperiod},
+           given={Emmanuel\bibnamedelima Awuni},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=aa2fb757da4128e09659067df528e279}{%
+           family={Atinga},
+           familyi={A\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \strng{fullhash}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \strng{fullhashraw}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \strng{bibnamehash}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \strng{authorbibnamehash}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \strng{authornamehash}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \strng{authorfullhash}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \strng{authorfullhashraw}{83022d4ee2baf1aeefe68ff07c20fa3e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Artificial Intelligence}
+      \field{note}{PMC8959699}
+      \field{title}{Toward a Knowledge-Based System for African Traditional Herbal Medicine: A Design Science Research Approach}
+      \field{volume}{5}
+      \field{year}{2022}
+      \field{pages}{856705}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/frai.2022.856705
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3389/frai.2022.856705
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3389/frai.2022.856705
       \endverb
     \endentry
     \entry{devlin2019bert}{inproceedings}{}{}
@@ -653,8 +790,8 @@
     \endentry
     \entry{kouame_systeme_2018}{thesis}{}{}
       \name{author}{1}{}{%
-        {{hash=39a15ec8c426bab197e2b87e2e369a17}{%
-           family={Kouame},
+        {{hash=084c828890ae5c80d17a8700b54f9354}{%
+           family={Kouamé},
            familyi={K\bibinitperiod},
            given={Appoh},
            giveni={A\bibinitperiod}}}%
@@ -665,14 +802,14 @@
       \list{language}{1}{%
         {fr}%
       }
-      \strng{namehash}{39a15ec8c426bab197e2b87e2e369a17}
-      \strng{fullhash}{39a15ec8c426bab197e2b87e2e369a17}
-      \strng{fullhashraw}{39a15ec8c426bab197e2b87e2e369a17}
-      \strng{bibnamehash}{39a15ec8c426bab197e2b87e2e369a17}
-      \strng{authorbibnamehash}{39a15ec8c426bab197e2b87e2e369a17}
-      \strng{authornamehash}{39a15ec8c426bab197e2b87e2e369a17}
-      \strng{authorfullhash}{39a15ec8c426bab197e2b87e2e369a17}
-      \strng{authorfullhashraw}{39a15ec8c426bab197e2b87e2e369a17}
+      \strng{namehash}{084c828890ae5c80d17a8700b54f9354}
+      \strng{fullhash}{084c828890ae5c80d17a8700b54f9354}
+      \strng{fullhashraw}{084c828890ae5c80d17a8700b54f9354}
+      \strng{bibnamehash}{084c828890ae5c80d17a8700b54f9354}
+      \strng{authorbibnamehash}{084c828890ae5c80d17a8700b54f9354}
+      \strng{authornamehash}{084c828890ae5c80d17a8700b54f9354}
+      \strng{authorfullhash}{084c828890ae5c80d17a8700b54f9354}
+      \strng{authorfullhashraw}{084c828890ae5c80d17a8700b54f9354}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -692,6 +829,61 @@
       \endverb
       \verb{url}
       \verb https://hal.science/tel-01842116
+      \endverb
+    \endentry
+    \entry{kouame_visual_2020}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=084c828890ae5c80d17a8700b54f9354}{%
+           family={Kouamé},
+           familyi={K\bibinitperiod},
+           given={Appoh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a62066a056c94d550ced34485143b8cd}{%
+           family={Brou},
+           familyi={B\bibinitperiod},
+           given={Konan\bibnamedelima Marcellin},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=5f816d5f0ac39049e696dd2ece950141}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Moussa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7530ea28c8c55be007e3d8b302121304}{%
+           family={Lamy},
+           familyi={L\bibinitperiod},
+           given={Jean-Baptiste},
+           giveni={J\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{0e3c953fb1744422a550518c6d54459b}
+      \strng{fullhash}{9d58b4ab847dfc0ddeb4f50604d8ad2a}
+      \strng{fullhashraw}{9d58b4ab847dfc0ddeb4f50604d8ad2a}
+      \strng{bibnamehash}{0e3c953fb1744422a550518c6d54459b}
+      \strng{authorbibnamehash}{0e3c953fb1744422a550518c6d54459b}
+      \strng{authornamehash}{0e3c953fb1744422a550518c6d54459b}
+      \strng{authorfullhash}{9d58b4ab847dfc0ddeb4f50604d8ad2a}
+      \strng{authorfullhashraw}{9d58b4ab847dfc0ddeb4f50604d8ad2a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Digital Personalized Health and Medicine -- Proceedings of MIE 2020}
+      \field{series}{Studies in Health Technology and Informatics}
+      \field{title}{Visual Representation of African Traditional Medicine Recipes Using Icons and a Formal Ontology, {ontoMEDTRAD}}
+      \field{volume}{270}
+      \field{year}{2020}
+      \field{pages}{791\bibrangedash 795}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.3233/SHTI200269
+      \endverb
+      \verb{urlraw}
+      \verb https://ebooks.iospress.nl/doi/10.3233/SHTI200269
+      \endverb
+      \verb{url}
+      \verb https://ebooks.iospress.nl/doi/10.3233/SHTI200269
       \endverb
     \endentry
     \entry{lewis2020rag}{inproceedings}{}{}
@@ -1275,6 +1467,120 @@
       \endverb
       \keyw{Automation,Biological Ontologies,Medicine,Traditional,Peer Review,Research,Publications}
     \endentry
+    \entry{watrimed_design_2019}{incollection}{}{}
+      \name{author}{5}{}{%
+        {{hash=e7bb86e489c3f96d3182855b54cf87a0}{%
+           family={Somé},
+           familyi={S\bibinitperiod},
+           given={Borlli\bibnamedelimb Michel\bibnamedelima Jonas},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c55d1c8403db778016516ef42e4405f3}{%
+           family={Bordea},
+           familyi={B\bibinitperiod},
+           given={Georgeta},
+           giveni={G\bibinitperiod}}}%
+        {{hash=40f53dae162642670748548be5ddf3e3}{%
+           family={Thiessard},
+           familyi={T\bibinitperiod},
+           given={Frantz},
+           giveni={F\bibinitperiod}}}%
+        {{hash=54cc141e9449742f39da4460e47c05f1}{%
+           family={Schulz},
+           familyi={S\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=52269d1e75baed052e0c1cc43338b8be}{%
+           family={Diallo},
+           familyi={D\bibinitperiod},
+           given={Gayo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{fullhash}{58bfd72e1f998eac14f3d8f15d0fb089}
+      \strng{fullhashraw}{58bfd72e1f998eac14f3d8f15d0fb089}
+      \strng{bibnamehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{authorbibnamehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{authornamehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{authorfullhash}{58bfd72e1f998eac14f3d8f15d0fb089}
+      \strng{authorfullhashraw}{58bfd72e1f998eac14f3d8f15d0fb089}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Healthcare of the Future: Bridging the Information Gap}
+      \field{series}{Studies in Health Technology and Informatics}
+      \field{title}{Design Considerations for a Knowledge Graph: The {WATRIMed} Use Case}
+      \field{volume}{259}
+      \field{year}{2019}
+      \field{pages}{59\bibrangedash 64}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://healthcareofthefuture.ch/wp-content/uploads/2022/03/proceedings_HoF_2019.pdf
+      \endverb
+      \verb{url}
+      \verb https://healthcareofthefuture.ch/wp-content/uploads/2022/03/proceedings_HoF_2019.pdf
+      \endverb
+    \endentry
+    \entry{watrimed2019}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=e7bb86e489c3f96d3182855b54cf87a0}{%
+           family={Somé},
+           familyi={S\bibinitperiod},
+           given={Borlli\bibnamedelimb Michel\bibnamedelima Jonas},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c55d1c8403db778016516ef42e4405f3}{%
+           family={Bordea},
+           familyi={B\bibinitperiod},
+           given={Georgeta},
+           giveni={G\bibinitperiod}}}%
+        {{hash=40f53dae162642670748548be5ddf3e3}{%
+           family={Thiessard},
+           familyi={T\bibinitperiod},
+           given={Frantz},
+           giveni={F\bibinitperiod}}}%
+        {{hash=52269d1e75baed052e0c1cc43338b8be}{%
+           family={Diallo},
+           familyi={D\bibinitperiod},
+           given={Gayo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{fullhash}{b395543ced9a77f1f4baaa7368c7bee1}
+      \strng{fullhashraw}{b395543ced9a77f1f4baaa7368c7bee1}
+      \strng{bibnamehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{authorbibnamehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{authornamehash}{9348d443ecfc87f394ab53b1715ef682}
+      \strng{authorfullhash}{b395543ced9a77f1f4baaa7368c7bee1}
+      \strng{authorfullhashraw}{b395543ced9a77f1f4baaa7368c7bee1}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{MEDINFO 2019: Health and Wellbeing e-Networks for All}
+      \field{series}{Studies in Health Technology and Informatics}
+      \field{title}{Enabling West African Herbal-Based Traditional Medicine Digitizing: The {WATRIMed} Knowledge Graph}
+      \field{volume}{264}
+      \field{year}{2019}
+      \field{pages}{1548\bibrangedash 1549}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.3233/SHTI190528
+      \endverb
+      \verb{urlraw}
+      \verb https://ebooks.iospress.nl/doi/10.3233/SHTI190528
+      \endverb
+      \verb{url}
+      \verb https://ebooks.iospress.nl/doi/10.3233/SHTI190528
+      \endverb
+    \endentry
     \entry{souley1999}{incollection}{}{}
       \name{author}{1}{}{%
         {{hash=55346bd1bc8d98933164db6e6c64f8da}{%
@@ -1798,44 +2104,6 @@
       \endverb
       \verb{url}
       \verb https://www.w3.org/TR/skos-reference/
-      \endverb
-    \endentry
-    \entry{watrimed2019}{incollection}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=6b68be2f25a7aab884d56051cffe6e74}{%
-           family={Wamba},
-           familyi={W\bibinitperiod},
-           given={Alain},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IOS Press}%
-      }
-      \strng{namehash}{2a586681406f57c38f08fbd93530b1d9}
-      \strng{fullhash}{2a586681406f57c38f08fbd93530b1d9}
-      \strng{fullhashraw}{2a586681406f57c38f08fbd93530b1d9}
-      \strng{bibnamehash}{2a586681406f57c38f08fbd93530b1d9}
-      \strng{authorbibnamehash}{2a586681406f57c38f08fbd93530b1d9}
-      \strng{authornamehash}{2a586681406f57c38f08fbd93530b1d9}
-      \strng{authorfullhash}{2a586681406f57c38f08fbd93530b1d9}
-      \strng{authorfullhashraw}{2a586681406f57c38f08fbd93530b1d9}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Healthcare of the Future: Bridging the Information Gap}
-      \field{title}{Enabling West African Herbal-Based Traditional Medicine Digitizing: The WATRIMed}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.3233/SHTI190528
-      \endverb
-      \verb{urlraw}
-      \verb https://ebooks.iospress.nl/pdf/doi/10.3233/SHTI190528
-      \endverb
-      \verb{url}
-      \verb https://ebooks.iospress.nl/pdf/doi/10.3233/SHTI190528
       \endverb
     \endentry
     \entry{who2000traditional}{misc}{}{}

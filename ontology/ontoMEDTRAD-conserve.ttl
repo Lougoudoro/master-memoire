@@ -1,0 +1,147 @@
+# ============================================================================
+# ontoMEDTRAD-conserve — version adaptée et conservée (schéma uniquement)
+# ----------------------------------------------------------------------------
+# Réutilisation partielle d'ontoMEDTRAD (Kouamé, 2018) : structure conceptuelle
+# conservée, instances non réutilisées (vers Neo4j), modules clinique et
+# iconisation écartés.
+#
+# Source : KOUAME Appoh, « Système de gestion de la médecine traditionnelle
+# dans une plateforme web social et sémantique : une approche basée sur une
+# ontologie visuelle », thèse de doctorat, Université Gaston Berger de
+# Saint-Louis (Sénégal), 14 avril 2018 (HAL : tel-01842116).
+#
+# IRI (héritée de l'ontologie d'origine) :
+#   http://www.semanticweb.org/ontologies/2015/11/OntoMedTrad.owl
+#
+# PÉRIMÈTRE (cf. chapitre III de la thèse) :
+#   * Concepts conservés : plantes et parties de plante, maladies (CIM-10),
+#     modes de préparation, références scientifiques, localité/pays.
+#   * Concepts écartés : iconisation (ontoICONE), praticiens (PMT), patient,
+#     examen clinique, anamnèse, indices (signes/symptômes), langues,
+#     glossaire, croyances, loi-cadre.
+#   * Classes ajoutées (contexte burkinabè) : maladies spécifiques, noms
+#     vernaculaires, régions, niveaux de preuve, sources scientifiques,
+#     usages thérapeutiques, préparations, composés chimiques.
+#   * Les individus (789) ne sont pas repris : la base de connaissances
+#     orientée graphe (Neo4j) est peuplée à partir de la littérature.
+#
+# Les domaines/plages non attestés sont marqués « à valider ».
+# ============================================================================
+
+@prefix :        <http://www.semanticweb.org/ontologies/2015/11/OntoMedTrad.owl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# ============================================================================
+# En-tête de l'ontologie
+# ============================================================================
+<http://www.semanticweb.org/ontologies/2015/11/OntoMedTrad.owl>
+    a owl:Ontology ;
+    dcterms:title "ontoMEDTRAD — version adaptée et conservée (schéma uniquement)"@fr ;
+    dcterms:description "Réutilisation partielle d'ontoMEDTRAD (Kouamé, 2018) : structure conceptuelle conservée, instances non réutilisées (vers Neo4j), modules clinique et iconisation écartés."@fr ;
+    dcterms:source "KOUAME Appoh, thèse de doctorat, Université Gaston Berger de Saint-Louis, 14 avril 2018 (HAL : tel-01842116)" ;
+    owl:versionInfo "1.0 — adaptée et conservée, 2026-10-10" .
+
+# ============================================================================
+# CLASSES — conservées : plantes, types et parties de plante
+# ============================================================================
+:Plante a owl:Class ; rdfs:label "Plante"@fr ; rdfs:comment "Conservée (squelette fig. 5.15)."@fr .
+:Arbre a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Arbre"@fr .
+:Arbuste a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Arbuste"@fr .
+:Palme a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Palme"@fr .
+:Herbe a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Herbe"@fr .
+:Liane a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Liane"@fr .
+
+:FamillePlante a owl:Class ; rdfs:label "Famille de plante"@fr .
+:GenrePlante a owl:Class ; rdfs:label "Genre de plante"@fr .
+:OrdrePlante a owl:Class ; rdfs:label "Ordre de plante"@fr .
+
+:PartieDePlante a owl:Class ; rdfs:label "Partie de plante"@fr .
+:Feuille a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Feuille"@fr .
+:Fruit a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Fruit"@fr .
+:Fleur a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Fleur"@fr .
+:Racine a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Racine"@fr .
+:Tronc a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Tronc"@fr .
+:EcorceDeTronc a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Écorce de tronc"@fr .
+:EcorceDeRacine a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Écorce de racine"@fr .
+:Seve a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Sève"@fr .
+:PlanteEntiere a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Plante entière"@fr .
+
+# ============================================================================
+# CLASSES — conservées : maladies, préparation, localisation, références
+# ============================================================================
+:Maladie a owl:Class ; rdfs:label "Maladie"@fr .
+:CategorieMaladieCIM10 a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Catégorie de maladie CIM-10"@fr .
+:TypeMaladieCIM10 a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Type de maladie CIM-10"@fr .
+
+:ModeDePreparation a owl:Class ; rdfs:label "Mode de préparation"@fr .
+:ModeDePreparatRecetPlante a owl:Class ; rdfs:subClassOf :ModeDePreparation ; rdfs:label "Mode de préparation de recette à base de plante"@fr .
+:Sechage a owl:Class ; rdfs:subClassOf :ModeDePreparation ; rdfs:label "Séchage"@fr .
+
+:Localite a owl:Class ; rdfs:label "Localité"@fr .
+:Pays a owl:Class ; rdfs:subClassOf :Localite ; rdfs:label "Pays"@fr .
+:Region a owl:Class ; rdfs:subClassOf :Localite ; rdfs:label "Région"@fr .
+
+:ReferenceScientifique a owl:Class ; rdfs:label "Référence scientifique"@fr .
+
+# ============================================================================
+# CLASSES — ajoutées (contexte burkinabè)
+# ============================================================================
+:MaladieSpecifiqueBF a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Maladie spécifique du Burkina Faso"@fr ; rdfs:comment "Ajoutée : pathologies documentées par la littérature locale."@fr .
+:NomVernaculaire a owl:Class ; rdfs:label "Nom vernaculaire"@fr ; rdfs:comment "Ajoutée : désignations des plantes dans les langues du pays."@fr .
+:RegionBF a owl:Class ; rdfs:subClassOf :Region ; rdfs:label "Région du Burkina Faso"@fr ; rdfs:comment "Ajoutée : découpage territorial du pays."@fr .
+:NiveauDePreuve a owl:Class ; rdfs:label "Niveau de preuve"@fr ; rdfs:comment "Ajoutée : catégories de preuve rapportées par les sources."@fr .
+:SourceScientifique a owl:Class ; rdfs:subClassOf :ReferenceScientifique ; rdfs:label "Source scientifique"@fr ; rdfs:comment "Ajoutée : type du document dont provient l'information."@fr .
+:UsageTherapeutique a owl:Class ; rdfs:label "Usage thérapeutique"@fr ; rdfs:comment "Ajoutée : usage médicinal documenté."@fr .
+:Preparation a owl:Class ; rdfs:label "Préparation"@fr ; rdfs:comment "Ajoutée : préparation d'un usage médicinal."@fr .
+:ComposeChimique a owl:Class ; rdfs:label "Composé chimique"@fr ; rdfs:comment "Ajoutée : composé chimique associé à une plante."@fr .
+
+# ============================================================================
+# PROPRIÉTÉS OBJET — conservées (squelette fig. 5.17)
+# ============================================================================
+:aPourFamillePlante a owl:ObjectProperty ; rdfs:label "a pour famille de plante"@fr ; rdfs:domain :Plante ; rdfs:range :FamillePlante .
+:aPourGenrePlante a owl:ObjectProperty ; rdfs:label "a pour genre de plante"@fr ; rdfs:domain :Plante ; rdfs:range :GenrePlante .
+:aPourHabitatLocalite a owl:ObjectProperty ; rdfs:label "a pour habitat localité"@fr ; rdfs:domain :Plante ; rdfs:range :Localite .
+:aPourCategoriMaladie a owl:ObjectProperty ; rdfs:label "a pour catégorie de maladie"@fr ; rdfs:domain :Maladie ; rdfs:range :CategorieMaladieCIM10 .
+:aEtreLocalitedePays a owl:ObjectProperty ; rdfs:label "être localité de pays"@fr ; rdfs:domain :Localite ; rdfs:range :Pays .
+
+# ============================================================================
+# PROPRIÉTÉS OBJET — ajoutées (relations de rattachement, chapitre III)
+# ============================================================================
+:provientDe a owl:ObjectProperty ; rdfs:label "provient de"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range :SourceScientifique ; rdfs:comment "Ajoutée : rattache une connaissance à la source scientifique qui la rapporte ; domaine à valider."@fr .
+:estDocumenteeDans a owl:ObjectProperty ; rdfs:label "est documentée dans"@fr ; rdfs:domain :Plante ; rdfs:range :SourceScientifique ; rdfs:comment "Ajoutée : relie une plante aux documents qui la décrivent."@fr .
+:aPourNomVernaculaire a owl:ObjectProperty ; rdfs:label "a pour nom vernaculaire"@fr ; rdfs:domain :Plante ; rdfs:range :NomVernaculaire ; rdfs:comment "Ajoutée : rattache une plante à ses désignations locales."@fr .
+:estLocaliseeA a owl:ObjectProperty ; rdfs:label "est localisée à"@fr ; rdfs:domain :Plante ; rdfs:range :Localite ; rdfs:comment "Ajoutée : associe une plante à sa localisation géographique."@fr .
+
+# ============================================================================
+# PROPRIÉTÉS DE DONNÉES — conservées (squelette fig. 5.17)
+# ============================================================================
+:aPourNomScientifique a owl:DatatypeProperty ; rdfs:label "a pour nom scientifique"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aPourNomBotanique a owl:DatatypeProperty ; rdfs:label "a pour nom botanique"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aPourSynonymePlante a owl:DatatypeProperty ; rdfs:label "a pour synonyme (plante)"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aPourNomEnLangueOfficelle a owl:DatatypeProperty ; rdfs:label "a pour nom en langue officielle"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aCoordoneesGPS a owl:DatatypeProperty ; rdfs:label "a pour coordonnées GPS"@fr ; rdfs:domain :Localite ; rdfs:range xsd:string .
+
+# ============================================================================
+# PROPRIÉTÉS DE DONNÉES — ajoutées (chapitre III)
+# ============================================================================
+:nomMoore a owl:DatatypeProperty ; rdfs:label "nom en mooré"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:nomDioula a owl:DatatypeProperty ; rdfs:label "nom en dioula"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:nomFulfulde a owl:DatatypeProperty ; rdfs:label "nom en fulfuldé"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:niveauPreuve a owl:DatatypeProperty ; rdfs:label "niveau de preuve"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+:typeEtude a owl:DatatypeProperty ; rdfs:label "type d'étude"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+:source a owl:DatatypeProperty ; rdfs:label "source"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+:doi a owl:DatatypeProperty ; rdfs:label "DOI"@fr ; rdfs:domain :SourceScientifique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+:page a owl:DatatypeProperty ; rdfs:label "page"@fr ; rdfs:domain :SourceScientifique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+:section a owl:DatatypeProperty ; rdfs:label "section"@fr ; rdfs:domain :SourceScientifique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+:dosage a owl:DatatypeProperty ; rdfs:label "dosage"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+:toxicite a owl:DatatypeProperty ; rdfs:label "toxicité"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée ; domaine à valider."@fr .
+
+# ============================================================================
+# INDIVIDUS — non inclus (les 789 individus d'origine ne sont pas repris ;
+# la base de connaissances orientée graphe est peuplée à partir de la
+# littérature scientifique sur les plantes médicinales du Burkina Faso).
+# ============================================================================

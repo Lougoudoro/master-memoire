@@ -1,0 +1,313 @@
+# ============================================================================
+# ontoMEDTRAD — reconstruction documentée (v0.2)
+# ----------------------------------------------------------------------------
+# Source : KOUAME Appoh, « Système de gestion de la médecine traditionnelle
+# dans une plateforme web social et sémantique : une approche basée sur une
+# ontologie visuelle », thèse de doctorat, Université Gaston Berger de
+# Saint-Louis (Sénégal), 14 avril 2018 (HAL : tel-01842116).
+#
+# IRI d'origine (capture Protégé, fig. 5.15) :
+#   http://www.semanticweb.org/ontologies/2015/11/OntoMedTrad.owl
+# Fichier d'origine (chemin vu dans la capture) :
+#   F:\Thèses 2016 INFO\limics\OntoMedTrad.owl
+#
+# MÉTHODE DE RECONSTRUCTION :
+#   * Classes et propriétés extraites par OCR des captures d'écran Protégé
+#     (figures 5.15, 5.16, 5.17, 5.18, 5.19, 5.20, p. 130-134 du PDF),
+#     du diagramme de classes (fig. 5.13 + annexe 2, p. 216 du PDF),
+#     et des tableaux 5.5, 5.6, 5.7, 6.9, 6.10, 6.11, 6.14, 6.18.
+#   * Chaque entité porte en commentaire sa source (figure/tableau).
+#   * Les domaines/plages non attestés sont marqués « à valider ».
+#
+# LIMITES :
+#   * Les captures montrent des vues défilées : la liste complète (144
+#     concepts, 76 object properties, 16 data properties, 789 individus,
+#     2734 axiomes, ALCHOIQ(D) — tableau 5.22) n'est pas intégralement
+#     visible. Les éléments manquants sont à compléter dans Protégé.
+#   * Les individus (789) ne sont pas reproduits ici.
+# ============================================================================
+
+@prefix :        <http://www.semanticweb.org/ontologies/2015/11/OntoMedTrad.owl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# ============================================================================
+# En-tête de l'ontologie
+# ============================================================================
+<http://www.semanticweb.org/ontologies/2015/11/OntoMedTrad.owl>
+    a owl:Ontology ;
+    dcterms:title "ontoMEDTRAD — reconstruction documentée (v0.2)"@fr ;
+    dcterms:description "Reconstruction de l'ontologie ontoMEDTRAD (Kouamé, 2018) par OCR des captures Protégé de la thèse. Liste des classes et propriétés aussi complète que le permettent les vues visibles ; à compléter et valider dans Protégé."@fr ;
+    dcterms:source "KOUAME Appoh, thèse de doctorat, Université Gaston Berger de Saint-Louis, 14 avril 2018 (HAL : tel-01842116)" ;
+    owl:versionInfo "0.2 — reconstruction OCR, 2026-10-10" .
+
+# ============================================================================
+# CLASSES — personnes et acteurs (fig. 5.15, 5.16, 5.20, annexe 2)
+# ============================================================================
+:Personne a owl:Class ; rdfs:label "Personne"@fr ; rdfs:comment "Source : fig. 5.15, 5.20."@fr .
+:Patient a owl:Class ; rdfs:subClassOf :Personne ; rdfs:label "Patient"@fr ; rdfs:comment "Source : fig. 5.15, annexe 2."@fr .
+:PMT a owl:Class ; rdfs:subClassOf :Personne ; rdfs:label "Praticien de la médecine traditionnelle (PMT)"@fr ; rdfs:comment "Source : fig. 5.15, 5.16 (120 individus), annexe 2."@fr .
+:EntourageHumain a owl:Class ; rdfs:subClassOf :Personne ; rdfs:label "Entourage humain"@fr ; rdfs:comment "Source : fig. 5.15."@fr .
+:PartenaireNonPMT a owl:Class ; rdfs:subClassOf :Personne ; rdfs:label "Partenaire non PMT"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:GroupeAssociatif a owl:Class ; rdfs:label "Groupe associatif (de PMT)"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:EthniePMT a owl:Class ; rdfs:label "Ethnie du PMT"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:NiveauEtudePMT a owl:Class ; rdfs:label "Niveau d'étude du PMT"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:PMTExperiences a owl:Class ; rdfs:label "Expériences du PMT"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:ProfessionPMT a owl:Class ; rdfs:label "Profession du PMT"@fr ; rdfs:comment "Source : fig. 5.16 (11 individus)."@fr .
+:CentreDuPMT a owl:Class ; rdfs:label "Centre du PMT"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:CentreDeSoins a owl:Class ; rdfs:label "Centre de soins de santé"@fr ; rdfs:comment "Source : fig. 5.15 ; concept secondaire (tab. 5.5)."@fr .
+:MaterielUtilise a owl:Class ; rdfs:label "Matériel utilisé"@fr ; rdfs:comment "Source : fig. 5.15, 5.16 (20 individus), 5.20."@fr .
+:MaterielSpecifique a owl:Class ; rdfs:label "Matériel spécifique"@fr ; rdfs:comment "Source : fig. 5.16 (1 individu)."@fr .
+
+# ============================================================================
+# CLASSES — ressources médicinales (RM) et parties (fig. 5.15, 5.16, 5.20)
+# ============================================================================
+:RM a owl:Class ; rdfs:label "Ressource médicinale (RM)"@fr ; rdfs:comment "Source : fig. 5.15 ; concept majeur (tab. 5.5)."@fr .
+:Plante a owl:Class ; rdfs:subClassOf :RM ; rdfs:label "Plante"@fr ; rdfs:comment "Source : fig. 5.16 (87 individus) ; définition thèse § 5.7.3."@fr .
+:Animal a owl:Class ; rdfs:subClassOf :RM ; rdfs:label "Animal"@fr ; rdfs:comment "Source : fig. 5.16 (11 individus pour Mineral ; Animal non visible)."@fr .
+:Mineral a owl:Class ; rdfs:subClassOf :RM ; rdfs:label "Minéral"@fr ; rdfs:comment "Source : fig. 5.16 (11 individus)."@fr .
+:CategoriePlanteMedicinale a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Catégorie de plante médicinale"@fr ; rdfs:comment "Source : fig. 5.15."@fr .
+:GenrePlante a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Genre de plante"@fr ; rdfs:comment "Source : fig. 5.20."@fr .
+:OrdrePlante a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Ordre de plante"@fr ; rdfs:comment "Source : fig. 5.20."@fr .
+:FamillePlante a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Famille de plante"@fr ; rdfs:comment "Inféré de aPourFamillePlante (fig. 5.17) ; à valider."@fr .
+:EmbranchementAnimal a owl:Class ; rdfs:subClassOf :Animal ; rdfs:label "Embranchement animal"@fr ; rdfs:comment "Source : fig. 5.15."@fr .
+:OrdreAnimal a owl:Class ; rdfs:subClassOf :Animal ; rdfs:label "Ordre animal"@fr ; rdfs:comment "Source : fig. 5.20."@fr .
+
+:PartieDeRM a owl:Class ; rdfs:label "Partie de ressource médicinale (PRM)"@fr ; rdfs:comment "Source : fig. 5.15, 5.20 ; concept majeur (tab. 5.5)."@fr .
+:PartieDePlante a owl:Class ; rdfs:subClassOf :PartieDeRM ; rdfs:label "Partie de plante"@fr ; rdfs:comment "Source : fig. 5.16 (15 individus)."@fr .
+:PartieDeAnimal a owl:Class ; rdfs:subClassOf :PartieDeRM ; rdfs:label "Partie d'animal"@fr ; rdfs:comment "Source : fig. 5.16 (23 individus)."@fr .
+:PartieDeMineral a owl:Class ; rdfs:subClassOf :PartieDeRM ; rdfs:label "Partie de minéral"@fr ; rdfs:comment "Source : fig. 5.16 (non visible)."@fr .
+:Parties a owl:Class ; rdfs:subClassOf :PartieDeRM ; rdfs:label "Parties"@fr ; rdfs:comment "Source : annexe 2 ; à valider."@fr .
+
+# --- Neuf parties de plante utilisées (thèse § 5.7.3 et ch. 6) ---
+:Feuille a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Feuille"@fr ; rdfs:comment "Source : thèse § 5.7.3."@fr .
+:Fruit a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Fruit"@fr .
+:Fleur a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Fleur"@fr .
+:Racine a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Racine"@fr .
+:Tronc a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Tronc"@fr ; rdfs:comment "Partie principale de la tige (thèse § 5.7.3)."@fr .
+:EcorceDeTronc a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Écorce de tronc"@fr .
+:EcorceDeRacine a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Écorce de racine"@fr .
+:Seve a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Sève"@fr .
+:PlanteEntiere a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Plante entière"@fr .
+
+# --- Types de plante : arbre, arbuste, palme, herbe, liane (thèse § 5.7.3) ---
+:Arbre a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Arbre"@fr ; rdfs:comment "Plante lignifiée terrestre à tronc portant des branches ramifiées (thèse § 5.7.3)."@fr .
+:Arbuste a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Arbuste"@fr .
+:Palme a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Palme"@fr .
+:Herbe a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Herbe"@fr .
+:Liane a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Liane"@fr .
+
+# ============================================================================
+# CLASSES — santé, maladie, patient (fig. 5.15, 5.16, 5.20, annexe 2)
+# ============================================================================
+:Indice a owl:Class ; rdfs:label "Indice (signe ou symptôme)"@fr ; rdfs:comment "Source : fig. 5.15, 5.20 ; concept majeur (tab. 5.5)."@fr .
+:Signe a owl:Class ; rdfs:subClassOf :Indice ; rdfs:label "Signe"@fr ; rdfs:comment "Source : fig. 5.15, annexe 2."@fr .
+:Symptome a owl:Class ; rdfs:subClassOf :Indice ; rdfs:label "Symptôme"@fr ; rdfs:comment "Source : fig. 5.15, annexe 2."@fr .
+:Maladie a owl:Class ; rdfs:label "Maladie"@fr ; rdfs:comment "Source : fig. 5.15, 5.16 (50 individus), annexe 2 ; définition thèse § 5.7.3."@fr .
+:CategorieMaladieCIM10 a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Catégorie de maladie CIM-10"@fr ; rdfs:comment "Source : fig. 5.15."@fr .
+:TypeMaladieCIM10 a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Type de maladie CIM-10"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:ModeTransmissionMaladie a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Mode de transmission de la maladie"@fr ; rdfs:comment "Source : fig. 5.20, annexe 2."@fr .
+:EtiologieMaladie a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Étiologie de la maladie"@fr ; rdfs:comment "Source : annexe 2."@fr .
+:MaladiesPatient a owl:Class ; rdfs:label "Maladies du patient"@fr ; rdfs:comment "Source : annexe 2 ; classe d'association."@fr .
+:PatientEtat a owl:Class ; rdfs:label "État du patient"@fr ; rdfs:comment "Source : fig. 5.15, 5.20."@fr .
+:AnamnesePatient a owl:Class ; rdfs:label "Anamnèse du patient"@fr ; rdfs:comment "Source : fig. 5.15."@fr .
+:Anamnese a owl:Class ; rdfs:label "Anamnèse"@fr ; rdfs:comment "Source : annexe 2 ; concept secondaire (tab. 5.5)."@fr .
+:AnatomiePartieHumaine a owl:Class ; rdfs:label "Partie anatomique humaine"@fr ; rdfs:comment "Source : fig. 5.15 ; ex. tronc, tête, membres supérieurs et inférieurs (annotation visible fig. 5.15)."@fr .
+:PortHumain a owl:Class ; rdfs:label "Port humain"@fr ; rdfs:comment "Source : fig. 5.16 (6 individus)."@fr .
+:Anatomie a owl:Class ; rdfs:label "Anatomie"@fr ; rdfs:comment "Concept secondaire (tab. 5.5)."@fr .
+
+# ============================================================================
+# CLASSES — recette, remède, préparation, administration (fig. 5.15, 5.16, 5.20)
+# ============================================================================
+:Recette a owl:Class ; rdfs:label "Recette"@fr ; rdfs:comment "Source : fig. 5.15, 5.16 (31 individus) ; définition thèse § 5.7.3."@fr .
+:Ingredient a owl:Class ; rdfs:label "Ingrédient"@fr ; rdfs:comment "Source : fig. 5.15, 5.16 (33 individus), 5.20."@fr .
+:ModeDePreparation a owl:Class ; rdfs:label "Mode de préparation"@fr ; rdfs:comment "Source : fig. 5.20."@fr .
+:ModeDePreparatRecetPlante a owl:Class ; rdfs:subClassOf :ModeDePreparation ; rdfs:label "Mode de préparation de recette à base de plante"@fr ; rdfs:comment "Source : fig. 5.16 (13 individus)."@fr .
+:Sechage a owl:Class ; rdfs:subClassOf :ModeDePreparation ; rdfs:label "Séchage"@fr ; rdfs:comment "Source : fig. 5.16 (3 individus)."@fr .
+:Remede a owl:Class ; rdfs:label "Remède"@fr ; rdfs:comment "Source : fig. 5.15, 5.20."@fr .
+:MTA a owl:Class ; rdfs:subClassOf :Remede ; rdfs:label "Médicament traditionnel amélioré (MTA)"@fr ; rdfs:comment "Source : fig. 5.15 ; à valider."@fr .
+:PresentationGalenique a owl:Class ; rdfs:label "Présentation galénique"@fr ; rdfs:comment "Source : fig. 5.16 (17 individus)."@fr .
+:PresentationMedicamenteuseEtat a owl:Class ; rdfs:label "Présentation médicamenteuse (état)"@fr ; rdfs:comment "Source : fig. 5.16 (3 individus)."@fr .
+:PresentationMedicamenteusePlante a owl:Class ; rdfs:label "Présentation médicamenteuse (plante)"@fr ; rdfs:comment "Source : fig. 5.16 (16 individus)."@fr .
+:ModeDeAdministRemede a owl:Class ; rdfs:label "Mode d'administration du remède"@fr ; rdfs:comment "Source : fig. 5.16 (1 individu)."@fr .
+:ModeDeAdministRemedePlante a owl:Class ; rdfs:label "Mode d'administration du remède à base de plante"@fr ; rdfs:comment "Source : fig. 5.16 (15 individus)."@fr .
+:ModeDeAdministration a owl:Class ; rdfs:label "Mode d'administration"@fr ; rdfs:comment "Source : fig. 5.20."@fr .
+:PeriodeDePriseDuRemede a owl:Class ; rdfs:label "Période de prise du remède"@fr ; rdfs:comment "Source : fig. 5.16 (4 individus), 5.20."@fr .
+:PeriodeDeCueillette a owl:Class ; rdfs:label "Période de cueillette"@fr ; rdfs:comment "Source : fig. 5.20."@fr .
+:ConservationMedicament a owl:Class ; rdfs:label "Conservation du médicament"@fr ; rdfs:comment "Source : fig. 5.15."@fr .
+:Prophylaxie a owl:Class ; rdfs:label "Prophylaxie"@fr ; rdfs:comment "Source : fig. 5.16 (4 individus)."@fr .
+:ToxiciteRM a owl:Class ; rdfs:label "Toxicité de la ressource médicinale"@fr ; rdfs:comment "Source : fig. 5.15 ; concept secondaire (tab. 5.5)."@fr .
+:ProprietesTherapeutiquesPlante a owl:Class ; rdfs:label "Propriétés thérapeutiques de la plante"@fr ; rdfs:comment "Source : fig. 5.16 (52 individus)."@fr .
+:ContreIndication a owl:Class ; rdfs:label "Contre-indication"@fr ; rdfs:comment "Concept secondaire (tab. 5.5) ; cf. contreIndiquer (fig. 5.17)."@fr .
+:ContreAssociation a owl:Class ; rdfs:label "Contre-association"@fr ; rdfs:comment "Concept secondaire (tab. 5.5) ; cf. contreAssocier (fig. 5.17)."@fr .
+:Excipient a owl:Class ; rdfs:label "Excipient"@fr ; rdfs:comment "Concept secondaire (tab. 5.5)."@fr .
+
+# ============================================================================
+# CLASSES — langues, lieux, divers (fig. 5.15, 5.16, 5.20)
+# ============================================================================
+:Langues a owl:Class ; rdfs:label "Langues"@fr ; rdfs:comment "Source : fig. 5.15, 5.20."@fr .
+:LangueLocales a owl:Class ; rdfs:subClassOf :Langues ; rdfs:label "Langues locales"@fr ; rdfs:comment "Source : fig. 5.16 (33 individus)."@fr .
+:LangueOfficielle a owl:Class ; rdfs:subClassOf :Langues ; rdfs:label "Langue officielle"@fr ; rdfs:comment "Source : fig. 5.16 (4 individus)."@fr .
+:Localite a owl:Class ; rdfs:label "Localité"@fr ; rdfs:comment "Source : fig. 5.15, 5.20 ; concept secondaire (tab. 5.5)."@fr .
+:Pays a owl:Class ; rdfs:subClassOf :Localite ; rdfs:label "Pays"@fr ; rdfs:comment "Source : fig. 5.16 (15 individus), 5.20."@fr .
+:Region a owl:Class ; rdfs:subClassOf :Localite ; rdfs:label "Région"@fr ; rdfs:comment "Concept secondaire (tab. 5.5)."@fr .
+:Croyance a owl:Class ; rdfs:label "Croyance"@fr ; rdfs:comment "Source : fig. 5.15 ; concept secondaire (tab. 5.5)."@fr .
+:Glossaire a owl:Class ; rdfs:label "Glossaire"@fr ; rdfs:comment "Source : fig. 5.20 ; concept secondaire (tab. 5.5)."@fr .
+:LoiCadreMT a owl:Class ; rdfs:label "Loi-cadre de la médecine traditionnelle"@fr ; rdfs:comment "Source : fig. 5.15, 5.20 ; concept secondaire (tab. 5.5)."@fr .
+:Iatrogenese a owl:Class ; rdfs:label "Iatrogénèse"@fr ; rdfs:comment "Source : fig. 5.20 ; concept secondaire (tab. 5.5)."@fr .
+:ReferenceScientifique a owl:Class ; rdfs:label "Référence scientifique"@fr ; rdfs:comment "Concept secondaire (tab. 5.5)."@fr .
+:SystematiqueDuVivant a owl:Class ; rdfs:label "Systématique du vivant"@fr ; rdfs:comment "Concept secondaire (tab. 5.5)."@fr .
+:SystematiqueDeMaladie a owl:Class ; rdfs:label "Systématique de maladie (CIM-10)"@fr ; rdfs:comment "Concept secondaire (tab. 5.5)."@fr .
+:ModeUsageSoinsSante a owl:Class ; rdfs:label "Mode d'usage des soins de santé"@fr ; rdfs:comment "Source : fig. 5.20."@fr .
+:ExamenClinique a owl:Class ; rdfs:label "Examen clinique"@fr ; rdfs:comment "Concept majeur (tab. 5.5)."@fr .
+
+# ============================================================================
+# CLASSES — iconisation, racine Forme (fig. 5.18, 5.19 ; tab. 6.9)
+# ============================================================================
+:Forme a owl:Class ; rdfs:label "Forme (racine iconique, ontoICONE)"@fr ; rdfs:comment "Source : fig. 5.15, 5.18 ; racine des classes de critères d'iconisation (thèse § 6.4.1)."@fr .
+:Silhouette a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Silhouette"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:Couleur a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Couleur"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:Pennation a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Pennation"@fr ; rdfs:comment "Source : fig. 5.16 (2 individus), 5.18."@fr .
+:PennationRare a owl:Class ; rdfs:subClassOf :Pennation ; rdfs:label "Pennation rare"@fr ; rdfs:comment "Source : fig. 5.16 (3 individus)."@fr .
+:FormeDeFeuille a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Forme de feuille"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeFeuilleGenerique a owl:Class ; rdfs:subClassOf :FormeDeFeuille ; rdfs:label "Forme de feuille générique"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeFeuilleSpecifiqueConnue a owl:Class ; rdfs:subClassOf :FormeDeFeuille ; rdfs:label "Forme de feuille spécifique connue"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:DispositionDeFeuille a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Disposition de la feuille"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:DispositionDeFeuilleGen a owl:Class ; rdfs:subClassOf :DispositionDeFeuille ; rdfs:label "Disposition de feuille générique"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:DispositionDeFeuilleSpe a owl:Class ; rdfs:subClassOf :DispositionDeFeuille ; rdfs:label "Disposition de feuille spécifique"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeFruit a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Forme de fruit"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeFruitGenerique a owl:Class ; rdfs:subClassOf :FormeDeFruit ; rdfs:label "Forme de fruit générique"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeFruitSpecifiqueConnue a owl:Class ; rdfs:subClassOf :FormeDeFruit ; rdfs:label "Forme de fruit spécifique connue"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeFinDePreparation a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Forme de fin de préparation (galénique)"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeModeDeAdministration a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Forme de mode d'administration"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeModeDePreparation a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Forme de mode de préparation"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeOrganeSouterrainCharnu a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Forme d'organe souterrain charnu"@fr ; rdfs:comment "Source : fig. 5.18."@fr .
+:FormeDeTubercule a owl:Class ; rdfs:subClassOf :Forme ; rdfs:label "Forme de tubercule"@fr ; rdfs:comment "Inféré de aPourFormeDeTubercule (fig. 5.19) ; à valider."@fr .
+
+# ============================================================================
+# PROPRIÉTÉS OBJET — niveau supérieur (fig. 5.17)
+# Domaines/plages : inférés des noms et du contexte ; « à valider » sinon.
+# ============================================================================
+:aDecrireMaladie a owl:ObjectProperty ; rdfs:label "a décrire maladie"@fr ; rdfs:domain :PMT ; rdfs:range :Maladie ; rdfs:comment "Source : fig. 5.17."@fr .
+:aDetenirRecette a owl:ObjectProperty ; rdfs:label "a détenir recette"@fr ; rdfs:domain :PMT ; rdfs:range :Recette ; rdfs:comment "Source : fig. 5.17."@fr .
+:aDetenirRemede a owl:ObjectProperty ; rdfs:label "a détenir remède"@fr ; rdfs:domain :PMT ; rdfs:range :Remede ; rdfs:comment "Source : fig. 5.17."@fr .
+:aEtreLocaliserMaladiePartieAnatomieHumaine a owl:ObjectProperty ; rdfs:label "être localiser maladie partie anatomie humaine"@fr ; rdfs:domain :Maladie ; rdfs:range :AnatomiePartieHumaine ; rdfs:comment "Source : fig. 5.17."@fr .
+:aEtreLocalitedePays a owl:ObjectProperty ; rdfs:label "être localité de pays"@fr ; rdfs:domain :Localite ; rdfs:range :Pays ; rdfs:comment "Source : fig. 5.17."@fr .
+:aExercerPmtLocalite a owl:ObjectProperty ; rdfs:label "exercer PMT localité"@fr ; rdfs:domain :PMT ; rdfs:range :Localite ; rdfs:comment "Source : fig. 5.17."@fr .
+:aExercerPmtPays a owl:ObjectProperty ; rdfs:label "exercer PMT pays"@fr ; rdfs:domain :PMT ; rdfs:range :Pays ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourBaseDeRM a owl:ObjectProperty ; rdfs:label "a pour base de ressource médicinale"@fr ; rdfs:domain :Ingredient ; rdfs:range :RM ; rdfs:comment "Source : fig. 5.17 ; relation ternaire Recette-Plante-Partie (fig. 6.15)."@fr .
+:aPourCategoriMaladie a owl:ObjectProperty ; rdfs:label "a pour catégorie de maladie"@fr ; rdfs:domain :Maladie ; rdfs:range :CategorieMaladieCIM10 ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourEtatPatient a owl:ObjectProperty ; rdfs:label "a pour état patient"@fr ; rdfs:domain :Patient ; rdfs:range :PatientEtat ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourFamillePlante a owl:ObjectProperty ; rdfs:label "a pour famille de plante"@fr ; rdfs:domain :Plante ; rdfs:range :FamillePlante ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourForme a owl:ObjectProperty ; rdfs:label "a pour forme"@fr ; rdfs:domain :Plante ; rdfs:range :Forme ; rdfs:comment "Source : fig. 5.17, 5.19 ; racine des propriétés d'iconisation (thèse § 6.4.1)."@fr .
+:aPourGenrePlante a owl:ObjectProperty ; rdfs:label "a pour genre de plante"@fr ; rdfs:domain :Plante ; rdfs:range :GenrePlante ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourGenrePlantePlante a owl:ObjectProperty ; rdfs:label "a pour genre de plante (plante)"@fr ; rdfs:domain :Plante ; rdfs:range :GenrePlante ; rdfs:comment "Source : fig. 5.17 ; à valider (doublon possible)."@fr .
+:aPourHabitatLocalite a owl:ObjectProperty ; rdfs:label "a pour habitat localité"@fr ; rdfs:domain :Plante ; rdfs:range :Localite ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourIndiceMaladif a owl:ObjectProperty ; rdfs:label "a pour indice maladif"@fr ; rdfs:domain :Maladie ; rdfs:range :Indice ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourIngredient a owl:ObjectProperty ; rdfs:label "a pour ingrédient"@fr ; rdfs:domain :Recette ; rdfs:range :Ingredient ; rdfs:comment "Source : fig. 5.17 ; non fonctionnelle (tab. 6.14)."@fr .
+:aPourModeDeAdministration a owl:ObjectProperty ; rdfs:label "a pour mode d'administration"@fr ; rdfs:domain :Remede ; rdfs:range :ModeDeAdministRemede ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourModeDePreparation a owl:ObjectProperty ; rdfs:label "a pour mode de préparation"@fr ; rdfs:domain :Recette ; rdfs:range :ModeDePreparation ; rdfs:comment "Source : fig. 5.17 ; fonctionnelle (tab. 6.14)."@fr .
+:aPourModeDeTransmission a owl:ObjectProperty ; rdfs:label "a pour mode de transmission"@fr ; rdfs:domain :Maladie ; rdfs:range :ModeTransmissionMaladie ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourPartieDeRM a owl:ObjectProperty ; rdfs:label "a pour partie de ressource médicinale"@fr ; rdfs:domain :Ingredient ; rdfs:range :PartieDeRM ; rdfs:comment "Source : fig. 5.17 ; fonctionnelle (tab. 6.14)."@fr .
+:aPourPresentationMedicamenteuse a owl:ObjectProperty ; rdfs:label "a pour présentation médicamenteuse"@fr ; rdfs:domain :Remede ; rdfs:range :PresentationMedicamenteusePlante ; rdfs:comment "Source : fig. 5.17 ; plage à valider."@fr .
+:aPourProfessionSpecifique a owl:ObjectProperty ; rdfs:label "a pour profession spécifique"@fr ; rdfs:domain :PMT ; rdfs:range :ProfessionPMT ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourProprietesTherapeutiques a owl:ObjectProperty ; rdfs:label "a pour propriétés thérapeutiques"@fr ; rdfs:domain :RM ; rdfs:range :ProprietesTherapeutiquesPlante ; rdfs:comment "Source : fig. 5.17 ; plage à valider."@fr .
+:aPourRecetteDeBase a owl:ObjectProperty ; rdfs:label "a pour recette de base"@fr ; rdfs:domain :Remede ; rdfs:range :Recette ; rdfs:comment "Source : fig. 5.17 ; fonctionnelle (tab. 6.18)."@fr .
+:aSoignerMaladie a owl:ObjectProperty ; rdfs:label "soigner maladie"@fr ; rdfs:domain :PMT ; rdfs:range :Maladie ; rdfs:comment "Source : fig. 5.17."@fr .
+:aSurveillerPreserverFloreFaune a owl:ObjectProperty ; rdfs:label "surveiller préserver flore et faune"@fr ; rdfs:domain :PMT ; rdfs:comment "Source : fig. 5.17 ; domaine/plage à valider."@fr .
+:aUnEtatFinDePreparation a owl:ObjectProperty ; rdfs:label "a un état de fin de préparation"@fr ; rdfs:domain :Remede ; rdfs:range :PresentationGalenique ; rdfs:comment "Source : fig. 5.17 ; plage à valider."@fr .
+:contreAssocier a owl:ObjectProperty ; rdfs:label "contre-associer"@fr ; rdfs:domain :Remede ; rdfs:range :Remede ; rdfs:comment "Source : fig. 5.17 ; concept secondaire Contre-association (tab. 5.5)."@fr .
+:contreIndiquer a owl:ObjectProperty ; rdfs:label "contre-indiquer"@fr ; rdfs:domain :Remede ; rdfs:range :ContreIndication ; rdfs:comment "Source : fig. 5.17 ; plage à valider."@fr .
+:estIndiceDeMaladie a owl:ObjectProperty ; rdfs:label "est indice de maladie"@fr ; rdfs:domain :Indice ; rdfs:range :Maladie ; owl:inverseOf :aPourIndiceMaladif ; rdfs:comment "Source : fig. 5.17."@fr .
+:estLocaliseeRmPays a owl:ObjectProperty ; rdfs:label "est localisée RM pays"@fr ; rdfs:domain :RM ; rdfs:range :Pays ; rdfs:comment "Source : fig. 5.17."@fr .
+:estLocaliserPartieAnatomieHumaine a owl:ObjectProperty ; rdfs:label "est localiser partie anatomie humaine"@fr ; rdfs:domain :AnatomiePartieHumaine ; rdfs:range :Maladie ; owl:inverseOf :aEtreLocaliserMaladiePartieAnatomieHumaine ; rdfs:comment "Source : fig. 5.17."@fr .
+
+# ============================================================================
+# PROPRIÉTÉS OBJET — iconisation, sous-propriétés de aPourForme (fig. 5.19)
+# Caractères fonctionnels : tab. 6.10.
+# ============================================================================
+:aPourCouleurDeFleur a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour couleur de fleur"@fr ; rdfs:domain :Plante ; rdfs:range :Couleur ;
+    rdfs:comment "Source : fig. 5.19 ; non fonctionnelle (tab. 6.10)."@fr .
+:aPourCouleurDeFruit a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour couleur de fruit"@fr ; rdfs:domain :Plante ; rdfs:range :Couleur ;
+    a owl:FunctionalProperty ; rdfs:comment "Source : fig. 5.19 ; fonctionnelle (tab. 6.10)."@fr .
+:aPourDispositionDeFeuille a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour disposition de feuille"@fr ; rdfs:domain :Plante ; rdfs:range :DispositionDeFeuille ;
+    a owl:FunctionalProperty ; rdfs:comment "Source : fig. 5.19 ; fonctionnelle (tab. 6.10)."@fr .
+:aPourFormeDeFeuille a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de feuille"@fr ; rdfs:domain :Plante ; rdfs:range :FormeDeFeuille ;
+    a owl:FunctionalProperty ; rdfs:comment "Source : fig. 5.19 ; fonctionnelle (tab. 6.10)."@fr .
+:aPourFormeDeFinDePreparation a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de fin de préparation"@fr ; rdfs:domain :Remede ; rdfs:range :FormeDeFinDePreparation ;
+    a owl:FunctionalProperty ; rdfs:comment "Source : fig. 5.19 ; fonctionnelle (tab. 6.18)."@fr .
+:aPourFormeDeFruit a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de fruit"@fr ; rdfs:domain :Plante ; rdfs:range :FormeDeFruit ;
+    a owl:FunctionalProperty ; rdfs:comment "Source : fig. 5.19 ; fonctionnelle (tab. 6.10)."@fr .
+:aPourFormeDeModeDeAdministration a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de mode d'administration"@fr ; rdfs:domain :Remede ; rdfs:range :FormeDeModeDeAdministration ;
+    rdfs:comment "Source : fig. 5.19 ; non fonctionnelle (tab. 6.18)."@fr .
+:aPourFormeDeModeDePreparation a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de mode de préparation"@fr ; rdfs:domain :Recette ; rdfs:range :FormeDeModeDePreparation ;
+    a owl:FunctionalProperty ; rdfs:comment "Source : fig. 5.19 ; fonctionnelle (tab. 6.14)."@fr .
+:aPourFormeDeOrganeSouterrainCharnu a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme d'organe souterrain charnu"@fr ; rdfs:domain :Plante ; rdfs:range :FormeDeOrganeSouterrainCharnu ;
+    rdfs:comment "Source : fig. 5.19 ; à valider."@fr .
+:aPourFormeDeTubercule a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de tubercule"@fr ; rdfs:domain :Plante ; rdfs:range :FormeDeTubercule ;
+    rdfs:comment "Source : fig. 5.19 ; à valider."@fr .
+:aPourFormeGalenique a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme galénique"@fr ; rdfs:domain :Remede ; rdfs:range :FormeDeFinDePreparation ;
+    rdfs:comment "Source : fig. 5.19 ; plage à valider."@fr .
+:aPourFormePartieDeAnimal a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de partie d'animal"@fr ; rdfs:domain :Ingredient ; rdfs:range :PartieDeAnimal ;
+    rdfs:comment "Source : fig. 5.19 ; à valider."@fr .
+:aPourFormePartieDeMineral a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de partie de minéral"@fr ; rdfs:domain :Ingredient ; rdfs:range :PartieDeMineral ;
+    rdfs:comment "Source : fig. 5.19 ; à valider."@fr .
+:aPourFormePartieDePlante a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour forme de partie de plante"@fr ; rdfs:domain :Ingredient ; rdfs:range :PartieDePlante ;
+    rdfs:comment "Source : fig. 5.19 ; à valider."@fr .
+:aPourIcone a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour icône"@fr ; rdfs:domain :Plante ;
+    rdfs:comment "Source : fig. 5.19 ; plage à valider."@fr .
+:aPourPennation a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour pennation"@fr ; rdfs:domain :Plante ; rdfs:range :Pennation ;
+    rdfs:comment "Source : fig. 5.19 ; non fonctionnelle (tab. 6.10)."@fr .
+:aPourSilhouette a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a pour silhouette"@fr ; rdfs:domain :Plante ; rdfs:range :Silhouette ;
+    a owl:FunctionalProperty ; rdfs:comment "Source : fig. 5.19 ; fonctionnelle (tab. 6.10)."@fr .
+:aUnePresenceEpine a owl:ObjectProperty ; rdfs:subPropertyOf :aPourForme ;
+    rdfs:label "a une présence d'épines"@fr ; rdfs:domain :Plante ;
+    rdfs:comment "Source : fig. 5.19 ; plage à valider."@fr .
+
+# ============================================================================
+# PROPRIÉTÉS DE DONNÉES (fig. 5.17 ; 16 au total dans l'ontologie d'origine)
+# ============================================================================
+:aCoordoneesGPS a owl:DatatypeProperty ; rdfs:label "a coordonnées GPS"@fr ; rdfs:domain :Localite ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourCodeHtml a owl:DatatypeProperty ; rdfs:label "a pour code HTML (couleur)"@fr ; rdfs:domain :Couleur ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17 et tab. 6.11."@fr .
+:aPourGenreSexe a owl:DatatypeProperty ; rdfs:label "a pour genre (sexe)"@fr ; rdfs:domain :Personne ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourNomFaunique a owl:DatatypeProperty ; rdfs:label "a pour nom faunique"@fr ; rdfs:domain :Animal ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourNomScientifique a owl:DatatypeProperty ; rdfs:label "a pour nom scientifique"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourNomScientifiqueMineral a owl:DatatypeProperty ; rdfs:label "a pour nom scientifique (minéral)"@fr ; rdfs:domain :Mineral ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourNomVernaculaire a owl:DatatypeProperty ; rdfs:label "a pour nom vernaculaire"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourNomVernaculaireAnimal a owl:DatatypeProperty ; rdfs:label "a pour nom vernaculaire (animal)"@fr ; rdfs:domain :Animal ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourSynonymeAnimal a owl:DatatypeProperty ; rdfs:label "a pour synonyme (animal)"@fr ; rdfs:domain :Animal ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourSynonymeMineral a owl:DatatypeProperty ; rdfs:label "a pour synonyme (minéral)"@fr ; rdfs:domain :Mineral ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+:aPourSynonymePlante a owl:DatatypeProperty ; rdfs:label "a pour synonyme (plante)"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Source : fig. 5.17."@fr .
+
+# --- Propriétés de données d'iconisation (tab. 6.11) — noms à rapprocher
+#     de ceux de la fig. 5.17 (ex. aPourNomBotanique ≈ aPourNomScientifique).
+:aPourNomBotanique a owl:DatatypeProperty ; rdfs:label "a pour nom botanique"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Source : tab. 6.11 ; à rapprocher de aPourNomScientifique."@fr .
+:aPourSynonyme a owl:DatatypeProperty ; rdfs:label "a pour synonyme"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Source : tab. 6.11 ; à rapprocher de aPourSynonymePlante."@fr .
+:aPourNomEnLangueOfficelle a owl:DatatypeProperty ; rdfs:label "a pour nom en langue officielle"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Source : tab. 6.11."@fr .
+:aPourNomEnLangueVernaculaire a owl:DatatypeProperty ; rdfs:label "a pour nom en langue vernaculaire"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Source : tab. 6.11 ; à rapprocher de aPourNomVernaculaire."@fr .
+
+# ============================================================================
+# INDIVIDUS — non inclus (789 au total, dont 22 plantes et 31 remèdes
+# antipaludéens ; ex. Azadirachta indica A. Juss). À importer du fichier
+# d'origine ou à saisir dans Protégé.
+# ============================================================================

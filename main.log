@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  6 OCT 2026 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  10 OCT 2026 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -827,65 +827,65 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 Package french3.ldf Info: Setting StandardItemizeEnv=true for
 (french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 47.
+(french3.ldf)             reported on input line 52.
 Package french3.ldf Info: Setting StandardEnumerateEnv=true for
 (french3.ldf)             compatibility with enumitem package,
-(french3.ldf)             reported on input line 47.
+(french3.ldf)             reported on input line 52.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 52.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 47.
+(Font)              scaled to size 12.0pt on input line 52.
  (main.aux
 Package babel Info: 'french' activates 'french' shorthands.
 (babel)             Reported on input line 12.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 47.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 47.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 52.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 52.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/newtx\omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 47.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 52.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 52.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 47.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 52.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 52.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 47.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 52.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 52.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Info: Redefining \degres on input line 47.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Info: Redefining \degres on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -942,15 +942,15 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 \c@mv@tabular=\count483
 \c@mv@boldtabular=\count484
-LaTeX Info: Command `\dddot' is already robust on input line 47.
-LaTeX Info: Command `\ddddot' is already robust on input line 47.
-LaTeX Info: Redefining \microtypecontext on input line 47.
-Package microtype Info: Applying patch `item' on input line 47.
-Package microtype Info: Applying patch `toc' on input line 47.
-Package microtype Info: Applying patch `eqnum' on input line 47.
-Package microtype Info: Applying patch `footnote' on input line 47.
-Package microtype Info: Applying patch `verbatim' on input line 47.
-LaTeX Info: Redefining \microtypesetup on input line 47.
+LaTeX Info: Command `\dddot' is already robust on input line 52.
+LaTeX Info: Command `\ddddot' is already robust on input line 52.
+LaTeX Info: Redefining \microtypecontext on input line 52.
+Package microtype Info: Applying patch `item' on input line 52.
+Package microtype Info: Applying patch `toc' on input line 52.
+Package microtype Info: Applying patch `eqnum' on input line 52.
+Package microtype Info: Applying patch `footnote' on input line 52.
+Package microtype Info: Applying patch `verbatim' on input line 52.
+LaTeX Info: Redefining \microtypesetup on input line 52.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -977,16 +977,16 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 47.
-Package biblatex Info: Reference segment=0 on input line 47.
-Package hyperref Info: Link coloring OFF on input line 47.
+Package biblatex Info: Reference section=0 on input line 52.
+Package biblatex Info: Reference segment=0 on input line 52.
+Package hyperref Info: Link coloring OFF on input line 52.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 51.
+Package hyperref Info: Option `pageanchor' set `false' on input line 56.
  (parts/gard.tex
-<images/logo.png, id=206, 310.15875pt x 211.79124pt>
+<images/logo.png, id=361, 310.15875pt x 211.79124pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 12.
@@ -1063,7 +1063,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 18.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 18.
-<images/ujkz.jpeg, id=207, 417.56pt x 417.56pt>
+<images/ujkz.jpeg, id=362, 417.56pt x 417.56pt>
 File: images/ujkz.jpeg Graphic file (type jpg)
 <use images/ujkz.jpeg>
 Package pdftex.def Info: images/ujkz.jpeg  used on input line 29.
@@ -1129,11 +1129,11 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 {C:/Users/sloug/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./images/logo.png> <./images/ujkz.jpeg>] [2
 
 ]
-Package hyperref Info: Option `pageanchor' set `false' on input line 57.
+Package hyperref Info: Option `pageanchor' set `false' on input line 62.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.88pt on input line 61.
+(Font)              scaled to size 24.88pt on input line 66.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 61.
+(Font)              scaled to size 24.88pt on input line 66.
  (parts/dedicace.tex) [1
 
 ] (parts/remerciements.tex) [2
@@ -1214,16 +1214,14 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 2.
  [8
 
-])
+] [9])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [9] [10
-
-]
-Package hyperref Info: Option `pageanchor' set `true' on input line 92.
+ [10]
+Package hyperref Info: Option `pageanchor' set `true' on input line 97.
  (chapters/introduction.tex
-<images/repartition_connaissances.png, id=339, 701.62125pt x 349.305pt>
+<images/repartition_connaissances.png, id=582, 701.62125pt x 349.305pt>
 File: images/repartition_connaissances.png Graphic file (type png)
 <use images/repartition_connaissances.png>
 Package pdftex.def Info: images/repartition_connaissances.png  used on input line 14.
@@ -1235,11 +1233,12 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  [1
 
+
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 12.0pt on input line 28.
  [2{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc} <./images/repartition_connaissances.png>] [3]
-<images/methodologie.png, id=372, 632.96475pt x 338.4645pt>
+<images/methodologie.png, id=615, 632.96475pt x 338.4645pt>
 File: images/methodologie.png Graphic file (type png)
 <use images/methodologie.png>
 Package pdftex.def Info: images/methodologie.png  used on input line 79.
@@ -1251,69 +1250,99 @@ Chapitre I.
 ] [9] [10]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
 (Font)              scaled to size 12.0pt on input line 109.
- [11] [12]
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 206.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 120.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 120.
+ (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <12> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 120.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `txtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [11] [12] [13]
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 206.
+(Font)              scaled to size 12.0pt on input line 234.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [13] [14] [15] [16] [17] [18] [19] [20] [21] [22]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 590.
+ [14] [15] [16] [17] [18] [19] [20] [21] [22]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 618.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 590.
- [23{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [24] [25] [26] [27] [28]) [29] [30]
+(Font)              scaled to size 12.0pt on input line 618.
+ [23{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [24] [25] [26] [27] [28] [29]) [30]
 Chapitre II.
 (chapters/chapter2.tex [31
 
-] [32]
+] [32] [33]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 107.
- [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]) [47]
+(Font)              scaled to size 12.0pt on input line 121.
+ [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]) [47]
 Chapitre III.
-(chapters/chapter3.tex) [48
+(chapters/chapter3.tex
+<images/ontoMetrad-1.png, id=1108, 434.8245pt x 492.03825pt>
+File: images/ontoMetrad-1.png Graphic file (type png)
+<use images/ontoMetrad-1.png>
+Package pdftex.def Info: images/ontoMetrad-1.png  used on input line 37.
+(pdftex.def)             Requested size: 227.3381pt x 257.25032pt.
+<images/ontoMetrad-2.png, id=1109, 440.24475pt x 525.162pt>
+File: images/ontoMetrad-2.png Graphic file (type png)
+<use images/ontoMetrad-2.png>
+Package pdftex.def Info: images/ontoMetrad-2.png  used on input line 42.
+(pdftex.def)             Requested size: 227.3381pt x 271.18666pt.
+ [48
 
-]
+] [49 <./images/ontoMetrad-1.png> <./images/ontoMetrad-2.png>] [50] [51] [52] [53] [54]
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+\T1/txtt/bx/n/12 MATCH ()-[r]->() RETURN type(r), count(*) ORDER BY count(*) DESC
+ []
+
+[55] [56] [57] [58] [59]
+
+LaTeX Warning: Float too large for page by 512.10204pt on input line 576.
+
+[60] [61] [62]) [63]
 Chapitre IV.
-(chapters/chapter4.tex) [49
+(chapters/chapter4.tex [64
 
-] (chapters/conclusion.tex) [50
+] [65] [66] [67] [68] [69] [70] [71]) [72] (chapters/conclusion.tex [73
 
-]
+]) [74]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 131.
- [51
+(Font)              scaled to size 8.8pt on input line 136.
+ [75
 
-] [52] [53] [54] [55] (main.aux)
+] [76] [77] [78] [79] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4AA15EAA56666F803D4C9B1CD91D6E8F;12874.
+(rerunfilecheck)             Checksum: C6D6B5541809F53CC45A20F99387C8B8;20361.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28100 strings out of 467871
- 484716 string characters out of 5418377
- 1380417 words of memory out of 5000000
- 55955 multiletter control sequences out of 15000+600000
- 738857 words of font info for 318 fonts, out of 8000000 for 9000
+ 28394 strings out of 467871
+ 489741 string characters out of 5418377
+ 1384387 words of memory out of 5000000
+ 56107 multiletter control sequences out of 15000+600000
+ 741069 words of font info for 335 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,11n,79p,4593b,2334s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on main.pdf (67 pages, 648336 bytes).
+<C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on main.pdf (91 pages, 1071554 bytes).
 PDF statistics:
- 1100 PDF objects out of 1200 (max. 8388607)
- 313 named destinations out of 1000 (max. 500000)
- 43949 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1569 PDF objects out of 1728 (max. 8388607)
+ 418 named destinations out of 1000 (max. 500000)
+ 44783 words of extra memory for PDF output out of 51595 (max. 10000000)
 

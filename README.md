@@ -40,7 +40,8 @@ en double.
 - Introduction générale : rédigée, reformulée ;
 - Cadre théorique et revue de littérature (chapitre I) : rédigé, reformulé ;
 - Matériel et méthodologie (chapitre II) : rédigé, en cours de reformulation ;
-- Conception et développement du système (chapitre III) : à rédiger ;
+- Conception et développement du système (chapitre III) : rédigé, en attente
+  des compléments marqués `TODO` (chiffres, figures, extraits de code réels) ;
 - Résultats et discussion (chapitre IV) : à rédiger ;
 - Conclusion générale : à rédiger ;
 - Dédicace, remerciements, résumé, abstract : à rédiger.

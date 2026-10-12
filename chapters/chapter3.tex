@@ -75,16 +75,13 @@ Noms vernaculaires en langues locales & Langues (LangueLocales, LangueOfficielle
 
 Les concepts de recette, d'ingrédient et de remède d'ontoMEDTRAD n'ont pas été repris tels quels : le questionnement de notre système s'appuie sur les nœuds \textit{Usage} et \textit{Préparation}, qui en reprennent l'essentiel sous une forme simplifiée. De même, la classe \textit{Langues} d'ontoMEDTRAD, qui recense les langues locales et officielles, n'a pas été reprise telle quelle : la dimension linguistique est portée dans notre modèle par les noms vernaculaires (\textit{nomMooré}, \textit{nomDioula}, \textit{nomFulfuldé}).
 
-La figure \ref{fig:concepts_ecartes} schématise ce partage entre concepts conservés et écartés.
+La figure \ref{fig:ontologie_conservee} présente le modèle ainsi réduit à ces seuls concepts, importé dans Protégé~5 : c'est à partir de lui que s'opèrent les ajouts de l'adaptation.
 
 \begin{figure}[htbp]
 \centering
-\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Schéma à produire : deux zones. Zone « conservés » : Plante, parties de plante, Maladie, Mode de préparation, Références scientifiques, Localité/Pays, noms vernaculaires. Zone « écartés » (grisée ou barrée) : iconisation (ontoICONE), praticiens (PMT), Patient, examen clinique, anamnèse, indices (signes, symptômes), Langues (classe), glossaire, croyances, loi-cadre. Outil libre (PowerPoint, draw.io), format PNG, 15 cm de large, enregistrer sous \texttt{images/concepts\_ecartes.png}.}\\[2mm]
-Concepts d'ontoMEDTRAD conservés et écartés lors de l'adaptation}
-}
-\caption{Concepts conservés et écartés lors de l'adaptation}
-\label{fig:concepts_ecartes}
+\includegraphics[width=0.7\textwidth]{ontology-conserve.png}
+\caption{L'ontologie conservée : les concepts d'ontoMEDTRAD retenus}
+\label{fig:ontologie_conservee}
 \end{figure}
 
 Le tableau \ref{tab:stats_ontologie} met en regard l'ontologie d'origine et l'ontologie après adaptation.
@@ -97,32 +94,29 @@ Le tableau \ref{tab:stats_ontologie} met en regard l'ontologie d'origine et l'on
 \hline
 \textbf{Indicateur} & \textbf{Ontologie d'origine} & \textbf{Après adaptation} \\
 \hline
-Concepts (classes) & 144 & \TODOchapo{relevé dans Protégé~5 : ouvrir le fichier de l'ontologie enrichie, onglet \textit{Classes}, afficher toutes les sous-classes (clic droit > Show all subclasses) et compter, classes ajoutées comprises} \\
+Concepts (classes) & 144 & 37 \\
 \hline
-Propriétés associatives & 76 & \TODOchapo{relevé dans Protégé~5, onglet \textit{Object properties} : nombre total d'items de la liste, propriétés ajoutées comprises} \\
+Propriétés associatives & 76 & 10 \\
 \hline
-Propriétés de données & 16 & \TODOchapo{relevé dans Protégé~5, onglet \textit{Data properties} : nombre total d'items de la liste, propriétés ajoutées comprises} \\
+Propriétés de données & 16 & 16 \\
 \hline
 Individus & 789 & \textit{sans objet} \\
 \hline
-Axiomes & 2 734 & \TODOchapo{relevé dans Protégé~5, vue Histogram (View > Tabs > Histogram) ou plugin OntoMetrics : nombre d'axiomes du fichier enrichi ; sinon décompte dans le fichier .owl} \\
+Axiomes & 2 734 & 227 \\
 \hline
 \end{tabular}
 \end{table}
+
+Les chiffres de la colonne \og Après adaptation \fg{} sont ceux du fichier \texttt{ontoMEDTRAD-adapte.ttl} chargé dans Protégé~5.
 
 Les instances ne sont pas portées par l'ontologie : l'enrichissement consiste à insérer les faits et les instances extraits du corpus dans la base de connaissances orientée graphe (Neo4j), dont l'ontologie fournit le schéma. Les individus de l'ontologie d'origine n'ayant pas été réutilisés, la ligne \og Individus \fg{} de la colonne \og Après adaptation \fg{} est sans objet.
 
 \begin{figure}[htbp]
 \centering
-\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Capture à produire : Protégé~5 ouvert sur le fichier \textbf{de l'ontologie enrichie} (pas l'original), panneau \textit{Classes} avec l'arbre déplié pour montrer les classes ajoutées (maladies spécifiques, noms vernaculaires, régions, niveaux de preuve, sources), le panneau \textit{Description} restant visible. Capture nette, 1200 px de large minimum, fond clair, enregistrer sous \texttt{images/capture\_protoge.png}.}\\[2mm]
-Vue de l'ontologie adaptée sous Protégé~5 (arbre des classes)}
-}
+\includegraphics[width=0.7\textwidth]{ontology-adaptee.png}
 \caption{L'ontologie adaptée et enrichie sous Protégé~5}
 \label{fig:protoge_ontologie}
 \end{figure}
-% Une fois la capture faite, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \includegraphics[width=0.8\textwidth]{capture_protoge.png}
 
 \subsection{Classes ajoutées}
 \label{subsec:classes_ajoutees}
@@ -150,7 +144,7 @@ Sources scientifiques & Type du document dont provient l'information & Article, 
 \end{tabular}
 \end{table}
 
-\TODOchapo{Pour chacun des cinq ensembles de classes, relever dans Protégé~5 (onglet \textit{Classes}, sélection de la classe puis panneau \textit{Description}) : la superclasse directe exacte, et un exemple de sous-classe. Format à suivre dans ce paragraphe : « Noms vernaculaires : sous-classe de \dots ». Indiquer aussi la classe dont la sous-classe est rattachée si elle est ajoutée elle-même.}
+Les cinq ensembles s'insèrent dans la hiérarchie existante : \textit{MaladieSpecifiqueBF} est une sous-classe de \textit{Maladie} ; \textit{RegionBF} est une sous-classe de \textit{Region}, elle-même sous-classe de \textit{Localite} ; \textit{SourceScientifique} est une sous-classe de \textit{ReferenceScientifique}. \textit{NomVernaculaire} et \textit{NiveauDePreuve} sont en revanche des classes racines, directement rattachées à \textit{owl:Thing}. Les classes ajoutées sont volontairement des feuilles : leurs valeurs ne sont pas des sous-classes mais des instances, portées par la base de connaissances orientée graphe et non par l'ontologie.
 
 \subsection{Propriétés ajoutées}
 \label{subsec:proprietes_ajoutees}
@@ -167,7 +161,7 @@ Les propriétés ajoutées portent sur quatre besoins : les noms locaux, la loca
 \hline
 \textit{nomMooré}, \textit{nomDioula}, \textit{nomFulfuldé} & Noms vernaculaires de la plante dans les langues locales \\
 \hline
-\textit{coordonnéesGPS}, région, province & Localisation géographique de la plante \\
+\textit{estLocaliséeÀ} & Localisation géographique de la plante (vers \textit{Localite}) \\
 \hline
 \textit{niveauPreuve}, \textit{typeEtude} & Niveau de preuve rapporté par la source et type d'étude \\
 \hline
@@ -178,12 +172,12 @@ Dosage, toxicité & Précautions d'emploi documentées par les sources \\
 \end{tabular}
 \end{table}
 
-\TODOchapo{Pour chacune des propriétés listées, relever dans Protégé~5 (onglet \textit{Object properties} ou \textit{Data properties}, panneau \textit{Description}) : domaine exact, portée exacte, et nature de la propriété : à objet (pointe vers une classe) ou à donnée (pointe vers un type literal : chaîne, entier\dots). Source alternative : le fichier .owl ouvert dans un éditeur de texte, lignes déclarant la propriété. Format : « \textit{niveauPreuve} : domaine = Usages, portée = Niveaux de preuve (propriété à donnée) ».}
+Les propriétés de données ajoutées sont toutes des chaînes de caractères (\textit{xsd:string}) : \textit{nomMooré}, \textit{nomDioula} et \textit{nomFulfuldé} ont pour domaine \textit{Plante} ; \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} ont pour domaine \textit{UsageTherapeutique} ; \textit{doi}, \textit{page} et \textit{section} ont pour domaine \textit{SourceScientifique} ; \textit{toxicite} a pour domaine \textit{Plante}. La localisation, elle, est portée par la propriété objet ajoutée \textit{estLocaliséeÀ} (domaine \textit{Plante}, portée \textit{Localite}), complétée par la propriété de données \textit{aCoordoneesGPS} conservée de l'ontologie d'origine (domaine \textit{Localite}).
 
 \subsection{Relations ajoutées}
 \label{subsec:relations_ajoutees}
 
-Quatre relations nouvelles complètent le modèle, dont la structure initiale, fondée sur la relation « est un » et sur la relation partie-tout, ne couvrait pas les besoins de traçabilité. Le tableau \ref{tab:relations_ajoutees} les présente.
+Cinq relations nouvelles complètent le modèle, dont la structure initiale, fondée sur la relation « est un » et sur la relation partie-tout, ne couvrait pas les besoins de traçabilité. Le tableau \ref{tab:relations_ajoutees} les présente.
 
 \begin{table}[htbp]
 \centering
@@ -195,18 +189,20 @@ Quatre relations nouvelles complètent le modèle, dont la structure initiale, f
 \hline
 \textit{provientDe} & Rattache une connaissance à la source scientifique qui la rapporte \\
 \hline
-\textit{estDocumentéeDans} & relie une plante aux documents qui la décrivent \\
+\textit{estDocumentéeDans} & Relie une plante aux documents qui la décrivent \\
 \hline
 \textit{aPourNomVernaculaire} & Rattache une plante à ses désignations locales \\
 \hline
-\textit{estLocaliséeÀ} & Associe une plante à ses coordonnées géographiques \\
+\textit{estLocaliséeÀ} & Associe une plante à sa localisation géographique (\textit{Localite}) \\
+\hline
+\textit{aPourNiveauDePreuve} & Rattache un usage au niveau de preuve déclaré par sa source \\
 \hline
 \end{tabular}
 \end{table}
 
-La relation entre remède et maladie, elle, a été précisée par des attributs de niveau de preuve : une même association plante-maladie peut désormais être rapportée à plusieurs niveaux, chacun restant celui déclaré par la source qui l'énonce.
+La relation entre remède et maladie, elle, a été précisée par le niveau de preuve : une même association plante-maladie peut désormais être rapportée à plusieurs niveaux, chacun restant celui déclaré par la source qui l'énonce. Le niveau de preuve est porté à la fois par la propriété de données \textit{niveauPreuve} et par la relation \textit{aPourNiveauDePreuve}, qui rattache un usage à la classe \textit{NiveauDePreuve}.
 
-\TODOchapo{Pour chacune des quatre relations, relever dans Protégé~5 (onglet \textit{Object properties}, panneau \textit{Description}) : la classe de départ (domaine) et la classe d'arrivée (portée). Format : « \textit{provientDe} : Connaissance \(\rightarrow\) Source ». Si une relation est en réalité une propriété à donnée et non entre classes, le signaler ici.}
+Les cinq relations sont des propriétés objet : \textit{provientDe} relie \textit{UsageTherapeutique} à \textit{SourceScientifique} ; \textit{estDocumentéeDans} relie \textit{Plante} à \textit{SourceScientifique} ; \textit{aPourNomVernaculaire} relie \textit{Plante} à \textit{NomVernaculaire} ; \textit{estLocaliséeÀ} relie \textit{Plante} à \textit{Localite} ; \textit{aPourNiveauDePreuve} relie \textit{UsageTherapeutique} à \textit{NiveauDePreuve}.
 
 % ============================================================
 % III.2. BASE DE CONNAISSANCES ORIENTÉE GRAPHE
@@ -230,21 +226,21 @@ Nous avons organisé la base en huit types de nœuds : \textit{Plante}, \textit{
 \hline
 \textbf{Nœud} & \textbf{Classe de l'ontologie} & \textbf{Propriétés principales} \\
 \hline
-\textit{Plante} & \TODOchapo{nom exact de la classe de l'ontologie enrichie qui porte les plantes, à copier depuis l'onglet \textit{Classes} de Protégé} & Nom scientifique, noms vernaculaires \\
+\textit{Plante} & \textit{Plante} & Nom scientifique, noms vernaculaires \\
 \hline
 \textit{Maladie} & \textit{Maladie} & Nom, pathologie \\
 \hline
-\textit{Usage} & \TODOchapo{nom exact de la classe qui porte les usages thérapeutiques (relevé dans Protégé > \textit{Classes})} & Usage thérapeutique, niveau de preuve \\
+\textit{Usage} & \textit{UsageTherapeutique} & Usage thérapeutique, niveau de preuve \\
 \hline
-\textit{Partie} & \TODOchapo{nom exact de la classe qui porte les parties de plante utilisées : feuille, racine, écorce\dots (relevé dans Protégé > \textit{Classes})} & Partie utilisée (feuille, racine, écorce\dots) \\
+\textit{Partie} & \textit{PartieDePlante} & Partie utilisée (feuille, racine, écorce\dots) \\
 \hline
-\textit{Préparation} & \TODOchapo{nom exact de la classe qui porte les modes de préparation : décoction, macération\dots (relevé dans Protégé > \textit{Classes})} & Mode de préparation (décoction, macération\dots) \\
+\textit{Préparation} & \textit{ModeDePreparation} & Mode de préparation (décoction, macération\dots) \\
 \hline
-\textit{Source} & \textit{Source} (classe ajoutée) & Auteur, année, DOI, page, section \\
+\textit{Source} & \textit{SourceScientifique} (classe ajoutée) & Auteur, année, DOI, page, section \\
 \hline
-\textit{Compos\'eChimique} & \TODOchapo{nom exact de la classe qui porte les composés chimiques (relevé dans Protégé > \textit{Classes})} & Nom du composé \\
+\textit{Compos\'eChimique} & \textit{ComposeChimique} & Nom du composé \\
 \hline
-\textit{R\'egion} & \textit{Région} (classe ajoutée) & Nom de la région, province, coordonnées GPS \\
+\textit{R\'egion} & \textit{RegionBF} (classe ajoutée) & Nom de la région, province, coordonnées GPS \\
 \hline
 \end{tabular}
 \end{table}

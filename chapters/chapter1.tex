@@ -93,7 +93,7 @@ Issues des populations locales et recueillies par enquêtes et entretiens, elles
 Elles portent sur la composition chimique des plantes, identifient les molécules actives, en précisent la concentration et comparent les profils chimiques entre espèces.
 
 \paragraph{Connaissances pharmacologiques}
-Provenant d'études expérimentales, ces connaissances testent les effets biologiques des extraits, à l'aide de modèles \textit{in vitro} (cellules, micro-organismes) ou \textit{in vivo} (animaux de laboratoire) (Heinrich et al., 2004). Les résultats sont quantitatifs : ils mesurent la concentration efficace (CI50), comparent à des témoins positifs et évaluent la toxicité. Une réserve demeure : les études animales ne prédisent pas toujours l'effet chez l'homme.
+Provenant d'études expérimentales, ces connaissances testent les effets biologiques des extraits, à l'aide de modèles \textit{in vitro} (cellules, micro-organismes) ou \textit{in vivo} (animaux de laboratoire) \cite{heinrich2004pharmacognosy}. Les résultats sont quantitatifs : ils mesurent la concentration efficace (CI50), comparent à des témoins positifs et évaluent la toxicité. Une réserve demeure : les études animales ne prédisent pas toujours l'effet chez l'homme.
 
 \paragraph{Connaissances cliniques}
 Elles proviennent d'essais sur l'homme, rares pour les plantes médicinales, coûteuses et complexes, et supposent des autorisations éthiques ainsi que des essais rigoureux. Ces essais offrent le niveau de preuve le plus élevé : ils mesurent l'efficacité réelle, évaluent les effets secondaires et comparent au placebo ou au traitement standard. Ils constituent la référence de la médecine fondée sur les preuves \cite{sackett_evidence_1996}.
@@ -114,15 +114,10 @@ Cette hiérarchie est résumée dans la figure \ref{fig:niveaux_preuve}. Elle co
 
 \begin{figure}[htbp]
 \centering
-\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Schéma à produire : pyramide (ou échelle) de 7 niveaux repris de la liste ci-dessus, du haut vers le bas : méta-analyses et revues systématiques, essais cliniques randomisés, études de cohorte, études cas-témoins, études expérimentales animales, études \textit{in vitro}, savoirs traditionnels et avis d'experts. Une ligne de légende par niveau (« preuve la plus forte » en haut, « preuve anecdotique » en bas), dégradé sombre en haut et clair en bas, texte en français, sans image d'arrière-plan. Ajouter en bas, d'un trait, le rattachement aux quatre niveaux \textit{niveauPreuve} de l'ontologie : traditionnel, \textit{in vitro}, \textit{in vivo}, clinique. Outil libre (PowerPoint, draw.io, Inkscape), format PNG, 15 cm de large, enregistrer sous \texttt{images/niveaux\_preuve.png}.}\\[2mm]
-De la preuve la plus forte (méta-analyses, essais cliniques randomisés) à la plus faible (études \textit{in vitro}, savoirs traditionnels)
-}}
+\includegraphics[width=0.7\textwidth]{niveaux_preuve.png}
 \caption{Hiérarchie des niveaux de preuve}
 \label{fig:niveaux_preuve}
 \end{figure}
-% Une fois le PNG créé, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \includegraphics[width=0.7\textwidth]{niveaux_preuve.png}
 
 % ==========================================
 % SECTION I.2
@@ -159,15 +154,10 @@ Ces modèles formels s'appuient aujourd'hui sur les langages du web sémantique,
 
 \begin{figure}[htbp]
 \centering
-\fbox{\parbox[c][4cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Schéma à produire : pile de 4 boîtes empilées, de bas en haut, reprenant exactement la ligne de légende ci-dessous : (1) document : XML, JSON-LD ; (2) données reliées : RDF ; (3) sémantique : RDFS, OWL ; (4) interrogation : SPARQL. Boîtes de même largeur, liseré dégradé du plus clair en bas au plus foncé en haut, une flèche latérale verticale intitulée « de la donnée au raisonnement ». Étiquettes en français, police identique à celle du document. Outil libre (PowerPoint, draw.io), format PNG, 12 cm de large, enregistrer sous \texttt{images/pile\_semantique.png}.}\\[2mm]
-Couche document : XML, JSON-LD \(\rightarrow\) couche données : RDF \(\rightarrow\) couche sémantique : RDFS, OWL \(\rightarrow\) couche interrogation : SPARQL
-}}
+\includegraphics[width=0.65\textwidth]{pile_semantique.png}
 \caption{Les langages du web sémantique}
 \label{fig:pile_semantique}
 \end{figure}
-% Une fois le PNG créé, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \includegraphics[width=0.65\textwidth]{pile_semantique.png}
 
 \subsection{Ontologies et réutilisation d'ontologies existantes}
 \label{subsec:ontologies_reutilisation}
@@ -182,7 +172,7 @@ Une ontologie se définit comme \og une spécification explicite et formelle d'u
 \end{itemize}
 
 \paragraph{Composants d'une ontologie}
-Les ontologies sont composées de plusieurs éléments \cite{studer_knowledge_1998} :
+Les ontologies sont composées de plusieurs éléments \cite{studer1998knowledge} :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
 \item \textbf{Classes (ou concepts) :} les entités du domaine, telles que Plante, Maladie, Substance active ou Mode de préparation, organisées en hiérarchies (taxonomies) \cite{studer1998knowledge}.
     \item \textbf{Propriétés (ou attributs) :} les caractéristiques des classes, par exemple le nom scientifique, le nom vernaculaire, la partie utilisée ou le dosage, susceptibles de porter des valeurs (chaînes, nombres, dates) \cite{studer1998knowledge}.
@@ -215,7 +205,7 @@ Plusieurs ontologies sont disponibles dans les domaines biomédicaux et pharmace
 \label{subsec:adaptation_enrichissement}
 
 \paragraph{Adaptation d'une ontologie}
-L'adaptation modifie une ontologie pour un nouveau contexte (Klein \& Fensel, 2001). Elle est nécessaire quand l'ontologie source ne couvre pas parfaitement le domaine visé. Elle est également nécessaire quand le contexte d'utilisation diffère.
+L'adaptation modifie une ontologie pour un nouveau contexte \cite{klein2001ontologyversioning}. Elle est nécessaire quand l'ontologie source ne couvre pas parfaitement le domaine visé. Elle est également nécessaire quand le contexte d'utilisation diffère.
 
 L'adaptation peut inclure :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
@@ -245,7 +235,7 @@ Les méthodes d'alignement peuvent être :
 \end{itemize}
 
 \paragraph{Enrichissement ontologique}
-L'enrichissement ajoute de nouvelles connaissances à l'ontologie (Navigli et al., 2003). Il intègre des données issues de sources externes. Il peut être manuel (expert humain) ou assisté par des outils.
+L'enrichissement ajoute de nouvelles connaissances à l'ontologie \cite{navigli2003ontologylearning}. Il intègre des données issues de sources externes. Il peut être manuel (expert humain) ou assisté par des outils.
 
 Les sources d'enrichissement peuvent être :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
@@ -272,7 +262,7 @@ Notre démarche combinera adaptation et enrichissement. Nous partirons d'une ont
 \label{subsec:bases_connaissances}
 
 \paragraph{Définition et structure}
-Une base de connaissances est un système qui stocke des connaissances structurées (Guarino, 1995). Elle contient des instances (individus) et des faits. La base est typée par une ontologie. L'ontologie sert de schéma conceptuel.
+Une base de connaissances est un système qui stocke des connaissances structurées \cite{guarino1995formalontology}. Elle contient des instances (individus) et des faits. La base est typée par une ontologie. L'ontologie sert de schéma conceptuel.
 
 Par exemple, l'ontologie définit la classe \textit{\og Plante \fg} et la propriété \textit{\og aPourUsage \fg}. La base de connaissances contient des instances comme \textit{\og Cassia alata \fg}. Elle contient des faits comme \textit{\og Cassia alata aPourUsage Paludisme \fg}.
 
@@ -371,7 +361,7 @@ Notre système interprêterait ainsi des requêtes variées, à l'aide de modèl
 \label{subsec:extraction_ia}
 
 \paragraph{Extraction d'information}
-L'extraction d'information est une tâche de NLP (Grishman, 2019) qui consiste à identifier des faits dans des textes non structurés, à en reconnaître les entités et les relations, puis à les convertir en données structurées exploitables.
+L'extraction d'information est une tâche de NLP \cite{grishman2019informationextraction} qui consiste à identifier des faits dans des textes non structurés, à en reconnaître les entités et les relations, puis à les convertir en données structurées exploitables.
 
 Elle se déploie en quatre étapes successives :
 \begin{enumerate}[label=\arabic*., leftmargin=1cm]
@@ -463,7 +453,7 @@ Notre système suivra une architecture RAG : il interprétera les requêtes en l
 \label{subsec:tracabilite_fiabilite}
 
 \paragraph{Importance de la traçabilité}
-En contexte médical, la traçabilité conditionne la crédibilité d'un système (Floridi et al., 2018). En associant chaque information à sa source, elle permet d'en vérifier l'origine et renforce d'autant la confiance que lui accordent les utilisateurs.
+En contexte médical, la traçabilité conditionne la crédibilité d'un système \cite{floridi2018ai4people}. En associant chaque information à sa source, elle permet d'en vérifier l'origine et renforce d'autant la confiance que lui accordent les utilisateurs.
 
 Sans traçabilité, l'information reste difficile à vérifier : elle peut être erronée ou obsolète, et l'utilisateur est dans l'impossibilité d'en apprécier la fiabilité.
 
@@ -537,7 +527,7 @@ Plusieurs ontologies couvrent le domaine des plantes médicinales. Chacune a ses
 
     \item \textbf{Food Ontology (FOODON) :} consacrée à la nutrition et aux aliments \cite{dooley2018foodon}, elle intègre certaines plantes comestibles et peut être partiellement réutilisée sur le versant alimentaire, sans toutefois couvrir les usages médicinaux.
 
-    \item \textbf{SNOMED CT :} cette terminologie clinique très large (IHTSDO, 2020) couvre de nombreux domaines médicaux et inclut quelques concepts relatifs aux plantes, sans être pour autant structurée comme une ontologie formelle.
+    \item \textbf{SNOMED CT :} cette terminologie clinique très large \cite{snomedct2020} couvre de nombreux domaines médicaux et inclut quelques concepts relatifs aux plantes, sans être pour autant structurée comme une ontologie formelle.
 \end{itemize}
 
 \subsubsection{Ontologies de la médecine traditionnelle africaine}
@@ -839,15 +829,14 @@ Notre travail se positionne ainsi comme une couche complémentaire aux infrastru
 \paragraph{Typologie des systèmes}
 Plusieurs familles de systèmes donnent accès aux connaissances médicinales, chacune adossée à une approche technique différente :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Systèmes experts :} ils modélisent l'expertise humaine par des règles logiques (Buchanan \& Shortliffe, 1984), comme dans MYCIN. \textit{Limites :} difficiles à adapter aux connaissances traditionnelles, maintenance lourde.
-    \item \textbf{Systèmes à base de cas :} ils réutilisent des cas similaires (Kolodner, 1993). \textit{Limites :} supposent une base de cas très riche et peinent face aux situations inédites.
-    \item \textbf{Portails de connaissances :} ils proposent une recherche par mots-clés (Chaudhry et al., 2006), comme PubMed ou Google Scholar. \textit{Limites :} aucune compréhension sémantique, donc aucun raisonnement possible.
+    \item \textbf{Systèmes experts :} ils modélisent l'expertise humaine par des règles logiques \cite{buchanan1984rulebased}, comme dans MYCIN. \textit{Limites :} difficiles à adapter aux connaissances traditionnelles, maintenance lourde.
+    \item \textbf{Systèmes à base de cas :} ils réutilisent des cas similaires \cite{kolodner1993casebased}. \textit{Limites :} supposent une base de cas très riche et peinent face aux situations inédites.
     \item \textbf{Chatbots médicaux :} ils assurent une interaction en langage naturel \cite{hussain2018chatbot}, comme Ada ou Babylon Health. \textit{Limites :} bases parfois limitées, fiabilité variable.
-    \item \textbf{Plateformes d'ontologies :} elles autorisent des requêtes sémantiques formelles (Studer et al., 1998). \textit{Limites :} interfaces souvent complexes, réservées aux experts.
+    \item \textbf{Plateformes d'ontologies :} elles autorisent des requêtes sémantiques formelles \cite{studer1998knowledge}. \textit{Limites :} interfaces souvent complexes, réservées aux experts.
 \end{itemize}
 
 \paragraph{Systèmes RAG pour l'accès aux connaissances}
-Les systèmes RAG (\textit{Retrieval-Augmented Generation}) constituent une avancée plus récente (Lewis et al., 2020), déjà déclinée dans plusieurs domaines : \textit{HealthRAG} (médical), \textit{BioRAG} (biologique), \textit{LegalRAG} (juridique).
+Les systèmes RAG (\textit{Retrieval-Augmented Generation}) constituent une avancée plus récente \cite{lewis2020rag}, déjà déclinée dans plusieurs domaines : \textit{HealthRAG} (médical), \textit{BioRAG} (biologique), \textit{LegalRAG} (juridique).
 
 \paragraph{Limites communes des systèmes existants}
 Quatre insuffisances reviennent cependant d'une famille à l'autre :

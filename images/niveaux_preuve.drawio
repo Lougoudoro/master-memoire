@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" modified="2026-10-12T11:20:53.166Z" version="21.6.5" etag="f4kNsjg97EKmQzjo6uUX" type="device">
+  <diagram id="niveaux-preuve" name="niveaux_preuve">
+    <mxGraphModel dx="1034" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" value="&lt;b&gt;Méta-analyses et revues systématiques&lt;/b&gt;&lt;br&gt;&lt;i&gt;preuve la plus forte&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e3a5f;gradientColor=#2b5282;strokeColor=#1e3a5f;fontColor=#ffffff;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="305" y="120" width="240" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="&lt;b&gt;Essais cliniques randomisés contrôlés&lt;/b&gt;&lt;br&gt;&lt;i&gt;preuve très forte&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2b5282;gradientColor=#3a6ea5;strokeColor=#2b5282;fontColor=#ffffff;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="265" y="187" width="320" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="&lt;b&gt;Études de cohorte&lt;/b&gt;&lt;br&gt;&lt;i&gt;preuve modérée&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a6ea5;gradientColor=#4d87c2;strokeColor=#3a6ea5;fontColor=#ffffff;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="225" y="254" width="400" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" value="&lt;b&gt;Études cas-témoins&lt;/b&gt;&lt;br&gt;&lt;i&gt;preuve modérée&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4d87c2;gradientColor=#6ba3d6;strokeColor=#4d87c2;fontColor=#ffffff;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="185" y="321" width="480" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="&lt;b&gt;Études expérimentales animales&lt;/b&gt;&lt;br&gt;&lt;i&gt;preuve faible&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6ba3d6;gradientColor=#93c0e4;strokeColor=#6ba3d6;fontColor=#ffffff;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="145" y="388" width="560" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" value="&lt;b&gt;Études &lt;i&gt;in vitro&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;preuve très faible&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#93c0e4;gradientColor=#c3dcf0;strokeColor=#93c0e4;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="105" y="455" width="640" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" value="&lt;b&gt;Savoirs traditionnels et avis d&#39;experts&lt;/b&gt;&lt;br&gt;&lt;i&gt;preuve anecdotique&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c3dcf0;gradientColor=#eaf2fa;strokeColor=#c3dcf0;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="65" y="522" width="720" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="vline" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#1e3a5f;" parent="1" vertex="1">
+          <mxGeometry x="421" y="586" width="8" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#1e3a5f;" parent="1" vertex="1">
+          <mxGeometry x="65" y="620" width="720" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cap" value="Niveaux &lt;i&gt;niveauPreuve&lt;/i&gt; de l&#39;ontologie" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#1e3a5f;fontStyle=2;" parent="1" vertex="1">
+          <mxGeometry x="225" y="636" width="400" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" value="traditionnel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="65" y="666" width="160" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="&lt;i&gt;in vitro&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="235" y="666" width="160" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="&lt;i&gt;in vivo&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="405" y="666" width="160" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="clinique" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="575" y="666" width="160" height="44" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

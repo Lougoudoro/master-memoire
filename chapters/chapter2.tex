@@ -36,15 +36,10 @@ La figure \ref{fig:flux_corpus} résume le cheminement suivi, de l'ontologie sé
 
 \begin{figure}[htbp]
 \centering
-\fbox{\parbox[c][4cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Schéma à produire : flux horizontal en 4 boîtes sur la ligne de légende ci-dessous : ontologie sélectionnée (phase 1) \(\rightarrow\) critères de recherche et de sélection (phase 2) \(\rightarrow\) collecte (35 documents, Herbier National, INERA) \(\rightarrow\) corpus indexé (phase 3). Sous l'étape « collecte », une boîte latérale « documents écartés » (nombre réel et motif : hors critères de la phase 2), reliée par une flèche sortante. Flèches directionnelles étiquetées, numéros de phases visibles, texte en français. Outil libre (PowerPoint, draw.io), format PNG, 15 cm de large, enregistrer sous \texttt{images/flux\_corpus.png}.}\\[2mm]
-Ontologie sélectionnée (phase 1) \(\rightarrow\) critères de recherche et de sélection (phase 2) \(\rightarrow\) collecte : 35 documents, Herbier National, INERA \(\rightarrow\) corpus (phase 3)
-}}
+\includegraphics[width=0.8\textwidth]{flux_corpus.png}
 \caption{Constitution du corpus documentaire}
 \label{fig:flux_corpus}
 \end{figure}
-% Une fois le PNG créé, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \includegraphics[width=0.8\textwidth]{flux_corpus.png}
 
 \subsubsection{Sources scientifiques publiées}
 
@@ -148,19 +143,14 @@ Le dispositif d'expérimentation qui les accueille est résumé dans la figure \
 
 \begin{figure}[htbp]
 \centering
-\fbox{\parbox[c][4cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Schéma à produire : trois zones réelles, reliées par des flèches étiquetées. Zone 1 « Google Colab » : notebooks, extraction (phase 5), modèle Llama 3 via Ollama, GPU. Zone 2 « poste local » : Protégé~5, Neo4j Desktop, Ollama/Llama 3, application Streamlit. Zone 3 « utilisateur » : navigateur web. Flèches : export des fichiers JSON/CSV du Colab vers le poste ; requête \texttt{bolt} du poste vers Neo4j ; tunnel ngrok portant l'API de Llama 3 vers l'application ; requête HTTPS du navigateur vers Streamlit. Zones en encadrés, flèches avec libellé au-dessus, texte en français. Outil libre (PowerPoint, draw.io), format PNG, 15 cm de large, enregistrer sous \texttt{images/dispositif\_technique.png}.}\\[2mm]
-Google Colab + Ollama (extraction, phase 5) \(\mid\) poste local : Neo4j Desktop et Streamlit \(\mid\) tunnel ngrok (API de Llama 3 pour l'application)
-}}
+\includegraphics[width=0.8\textwidth]{dispositif_technique.png}
 \caption{Dispositif technique d'expérimentation}
 \label{fig:dispositif_technique}
 \end{figure}
-% Une fois le PNG créé, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \includegraphics[width=0.8\textwidth]{dispositif_technique.png}
 
 \subsubsection{Modèle de langage : Llama 3}
 
-Notre modèle de langage est \textbf{Llama 3 70B} (Meta, 2024), un modèle ouvert de grande taille dont les performances en compréhension et en génération de texte justifient le choix. Deux propriétés ont été déterminantes : la maîtrise du français, indispensable au traitement de documents scientifiques burkinabè, et la capacité à suivre des instructions complexes, requise pour une extraction structurée.
+Notre modèle de langage est \textbf{Llama 3 70B} \cite{meta2024llama3}, un modèle ouvert de grande taille dont les performances en compréhension et en génération de texte justifient le choix. Deux propriétés ont été déterminantes : la maîtrise du français, indispensable au traitement de documents scientifiques burkinabè, et la capacité à suivre des instructions complexes, requise pour une extraction structurée.
 
 \textbf{Phases d'utilisation :} Phase 5 (Extraction des connaissances) et Phase 7 (Génération de réponses RAG).
 

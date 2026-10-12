@@ -277,6 +277,41 @@
       \verb https://books.google.com/books/about/Modern_Information_Retrieval.html?id=HbyAAAAACAAJ
       \endverb
     \endentry
+    \entry{buchanan1984rulebased}{book}{}{}
+      \name{editor}{2}{}{%
+        {{hash=9c8f929dd0a8b95eaa41769ea38e6516}{%
+           family={Buchanan},
+           familyi={B\bibinitperiod},
+           given={Bruce\bibnamedelima G.},
+           giveni={B\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=9621204a6515d00ea4903bc995c67316}{%
+           family={Shortliffe},
+           familyi={S\bibinitperiod},
+           given={Edward\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Reading, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \strng{fullhash}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \strng{fullhashraw}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \strng{bibnamehash}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \strng{editorbibnamehash}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \strng{editornamehash}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \strng{editorfullhash}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \strng{editorfullhashraw}{b8b8836d8bd9c5b0ae53bf0f569bdf7d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-201-10172-6}
+      \field{title}{Rule-Based Expert Systems: The MYCIN Experiments of the Stanford Heuristic Programming Project}
+      \field{year}{1984}
+    \endentry
     \entry{cooper2013plant}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -565,6 +600,128 @@
       \verb https://passioneuro.fr/wp-content/Documents/These_E-FLAHAUT_1999.pdf
       \endverb
     \endentry
+    \entry{floridi2018ai4people}{article}{}{}
+      \name{author}{13}{}{%
+        {{hash=0d57a43cc17e895c38b6d1656af4ece5}{%
+           family={Floridi},
+           familyi={F\bibinitperiod},
+           given={Luciano},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ed233d1eae8340fb483a000e4ff2cfd1}{%
+           family={Cowls},
+           familyi={C\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ccb051c700450a782d2c9c1b2a4f83e9}{%
+           family={Beltrametti},
+           familyi={B\bibinitperiod},
+           given={Monica},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4a0c0821a0200d3f23713aa8ea5278dc}{%
+           family={Chatila},
+           familyi={C\bibinitperiod},
+           given={Raja},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c675a69c6f1a056128eb2d465844be85}{%
+           family={Chazerand},
+           familyi={C\bibinitperiod},
+           given={Patrice},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2038389dca7d321b07e82aa80cf4e902}{%
+           family={Dignum},
+           familyi={D\bibinitperiod},
+           given={Virginia},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e502acf6d65f818fe3ed3f375e846373}{%
+           family={Luetge},
+           familyi={L\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8e8ead9aa2e86b441584e33b699a43e6}{%
+           family={Madelin},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4abc51148bcdcae1bafd8bb379aea2c3}{%
+           family={Pagallo},
+           familyi={P\bibinitperiod},
+           given={Ugo},
+           giveni={U\bibinitperiod}}}%
+        {{hash=ed2fcdb25982e0ec1a0fa6af1490b33a}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d7dea2afa87ce21c5c5ef431f3c8b7a7}{%
+           family={Schafer},
+           familyi={S\bibinitperiod},
+           given={Burkhard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=aa16eeebb7e933b76992fffc385e6d39}{%
+           family={Valcke},
+           familyi={V\bibinitperiod},
+           given={Peggy},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8b41e812a035a7f15a158d71ba3ed626}{%
+           family={Vayena},
+           familyi={V\bibinitperiod},
+           given={Effy},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{21c54a702a1a6134ed0e362df058e40a}
+      \strng{fullhash}{9c209a45005092b2414ec23cf5333280}
+      \strng{fullhashraw}{9c209a45005092b2414ec23cf5333280}
+      \strng{bibnamehash}{21c54a702a1a6134ed0e362df058e40a}
+      \strng{authorbibnamehash}{21c54a702a1a6134ed0e362df058e40a}
+      \strng{authornamehash}{21c54a702a1a6134ed0e362df058e40a}
+      \strng{authorfullhash}{9c209a45005092b2414ec23cf5333280}
+      \strng{authorfullhashraw}{9c209a45005092b2414ec23cf5333280}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Minds and Machines}
+      \field{number}{4}
+      \field{title}{AI4People---An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations}
+      \field{volume}{28}
+      \field{year}{2018}
+      \field{pages}{689\bibrangedash 707}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/s11023-018-9482-5
+      \endverb
+    \endentry
+    \entry{grishman2019informationextraction}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3d96e426faa039bfa33eb6e4c54e8a77}{%
+           family={Grishman},
+           familyi={G\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \strng{fullhash}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \strng{fullhashraw}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \strng{bibnamehash}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \strng{authorbibnamehash}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \strng{authornamehash}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \strng{authorfullhash}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \strng{authorfullhashraw}{3d96e426faa039bfa33eb6e4c54e8a77}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Natural Language Engineering}
+      \field{number}{6}
+      \field{title}{Twenty-five Years of Information Extraction}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{677\bibrangedash 692}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1017/S1351324919000512
+      \endverb
+    \endentry
     \entry{gruber1993translation}{article}{}{}
       \name{author}{1}{}{%
         {{hash=afb9b0d3d5b76f30ab451acf45400285}{%
@@ -600,6 +757,37 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1006/knac.1993.1008
+      \endverb
+    \endentry
+    \entry{guarino1995formalontology}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=daa1e3ed226808545f524143642ecf54}{%
+           family={Guarino},
+           familyi={G\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{daa1e3ed226808545f524143642ecf54}
+      \strng{fullhash}{daa1e3ed226808545f524143642ecf54}
+      \strng{fullhashraw}{daa1e3ed226808545f524143642ecf54}
+      \strng{bibnamehash}{daa1e3ed226808545f524143642ecf54}
+      \strng{authorbibnamehash}{daa1e3ed226808545f524143642ecf54}
+      \strng{authornamehash}{daa1e3ed226808545f524143642ecf54}
+      \strng{authorfullhash}{daa1e3ed226808545f524143642ecf54}
+      \strng{authorfullhashraw}{daa1e3ed226808545f524143642ecf54}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Human-Computer Studies}
+      \field{number}{5--6}
+      \field{title}{Formal Ontology, Conceptual Analysis and Knowledge Representation}
+      \field{volume}{43}
+      \field{year}{1995}
+      \field{pages}{625\bibrangedash 640}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1006/ijhc.1995.1066
       \endverb
     \endentry
     \entry{guinko1984}{thesis}{}{}
@@ -673,6 +861,51 @@
       \verb{url}
       \verb https://pubmed.ncbi.nlm.nih.gov/24345026/
       \endverb
+    \endentry
+    \entry{heinrich2004pharmacognosy}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=797afa1cb23b6a64f7d7c771f1ce9f89}{%
+           family={Heinrich},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8a142c24b0fe8039ec4863bdb485c7ab}{%
+           family={Barnes},
+           familyi={B\bibinitperiod},
+           given={Joanne},
+           giveni={J\bibinitperiod}}}%
+        {{hash=54b9ffb2d7688fe64e41c7b484bf5850}{%
+           family={Gibbons},
+           familyi={G\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b7303af269a9d03b0b88f3c6391b3527}{%
+           family={Williamson},
+           familyi={W\bibinitperiod},
+           given={Elizabeth\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Edinburgh}%
+      }
+      \list{publisher}{1}{%
+        {Churchill Livingstone}%
+      }
+      \strng{namehash}{ba618045583c8b99ff3edd45d3fcb95f}
+      \strng{fullhash}{e952dadc5c79d4392ccb81040666133e}
+      \strng{fullhashraw}{e952dadc5c79d4392ccb81040666133e}
+      \strng{bibnamehash}{ba618045583c8b99ff3edd45d3fcb95f}
+      \strng{authorbibnamehash}{ba618045583c8b99ff3edd45d3fcb95f}
+      \strng{authornamehash}{ba618045583c8b99ff3edd45d3fcb95f}
+      \strng{authorfullhash}{e952dadc5c79d4392ccb81040666133e}
+      \strng{authorfullhashraw}{e952dadc5c79d4392ccb81040666133e}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-443-07132-4}
+      \field{title}{Fundamentals of Pharmacognosy and Phytotherapy}
+      \field{year}{2004}
     \endentry
     \entry{hoehndorf2016flopo}{article}{}{}
       \true{moreauthor}
@@ -787,6 +1020,70 @@
       \verb{url}
       \verb https://web.stanford.edu/~jurafsky/slp3/
       \endverb
+    \endentry
+    \entry{klein2001ontologyversioning}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=70945cfcbc625ee95a491b2f28267d55}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Michel\bibnamedelimb C.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ba4603066ec9f23db109035b8d738b0c}{%
+           family={Fensel},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Stanford, CA, USA}%
+      }
+      \strng{namehash}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \strng{fullhash}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \strng{fullhashraw}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \strng{bibnamehash}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \strng{authorbibnamehash}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \strng{authornamehash}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \strng{authorfullhash}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \strng{authorfullhashraw}{ec1f190fcae5344cb49a5cd7e0db74ce}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the First International Semantic Web Working Symposium (SWWS)}
+      \field{title}{Ontology Versioning on the Semantic Web}
+      \field{year}{2001}
+      \field{pages}{75\bibrangedash 91}
+      \range{pages}{17}
+    \endentry
+    \entry{kolodner1993casebased}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=618b8d757423ade5ebce305963d3c85b}{%
+           family={Kolodner},
+           familyi={K\bibinitperiod},
+           given={Janet\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Mateo, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann}%
+      }
+      \strng{namehash}{618b8d757423ade5ebce305963d3c85b}
+      \strng{fullhash}{618b8d757423ade5ebce305963d3c85b}
+      \strng{fullhashraw}{618b8d757423ade5ebce305963d3c85b}
+      \strng{bibnamehash}{618b8d757423ade5ebce305963d3c85b}
+      \strng{authorbibnamehash}{618b8d757423ade5ebce305963d3c85b}
+      \strng{authornamehash}{618b8d757423ade5ebce305963d3c85b}
+      \strng{authorfullhash}{618b8d757423ade5ebce305963d3c85b}
+      \strng{authorfullhashraw}{618b8d757423ade5ebce305963d3c85b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1-55860-237-2}
+      \field{title}{Case-Based Reasoning}
+      \field{year}{1993}
     \endentry
     \entry{kouame_systeme_2018}{thesis}{}{}
       \name{author}{1}{}{%
@@ -1015,6 +1312,35 @@
       \verb https://www.researchgate.net/publication/231908719_Overview_and_analysis_of_methodologies_for_building_ontologies
       \endverb
     \endentry
+    \entry{meta2024llama3}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ca43b8b2bdf82aa380c9fed8712d8db8}{%
+           family={{Meta AI}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \strng{fullhash}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \strng{fullhashraw}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \strng{bibnamehash}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \strng{authorbibnamehash}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \strng{authornamehash}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \strng{authorfullhash}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \strng{authorfullhashraw}{ca43b8b2bdf82aa380c9fed8712d8db8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Meta AI Blog}
+      \field{month}{4}
+      \field{title}{Introducing Meta Llama 3: The Most Capable Openly Available LLM to Date}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://ai.meta.com/blog/meta-llama-3/
+      \endverb
+      \verb{url}
+      \verb https://ai.meta.com/blog/meta-llama-3/
+      \endverb
+    \endentry
     \entry{millogo2001}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=6e7154183e4c093a2ae203cd666471d7}{%
@@ -1115,6 +1441,47 @@
       \range{pages}{24}
       \verb{doi}
       \verb 10.1075/li.30.1.02nad
+      \endverb
+    \endentry
+    \entry{navigli2003ontologylearning}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=6fe24dce481a67e247581d4b20435709}{%
+           family={Navigli},
+           familyi={N\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=febeb7cfcc83faab92df9e7561c856ba}{%
+           family={Velardi},
+           familyi={V\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f538e9d958b26480c59fcc1e5a3cfa57}{%
+           family={Gangemi},
+           familyi={G\bibinitperiod},
+           given={Aldo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \strng{fullhash}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \strng{fullhashraw}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \strng{bibnamehash}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \strng{authorbibnamehash}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \strng{authornamehash}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \strng{authorfullhash}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \strng{authorfullhashraw}{d9ab94524ca8ec2649a5c65c8c1a5d0c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Intelligent Systems}
+      \field{number}{1}
+      \field{title}{Ontology Learning and Its Application to Automated Terminology Translation}
+      \field{volume}{18}
+      \field{year}{2003}
+      \field{pages}{22\bibrangedash 31}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/MIS.2003.1179190
       \endverb
     \endentry
     \entry{neha_retrieval-augmented_2025}{article}{}{}
@@ -1467,6 +1834,34 @@
       \endverb
       \keyw{Automation,Biological Ontologies,Medicine,Traditional,Peer Review,Research,Publications}
     \endentry
+    \entry{snomedct2020}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7fce872dcf6648d5f7700cc19ca08974}{%
+           family={{SNOMED International}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fce872dcf6648d5f7700cc19ca08974}
+      \strng{fullhash}{7fce872dcf6648d5f7700cc19ca08974}
+      \strng{fullhashraw}{7fce872dcf6648d5f7700cc19ca08974}
+      \strng{bibnamehash}{7fce872dcf6648d5f7700cc19ca08974}
+      \strng{authorbibnamehash}{7fce872dcf6648d5f7700cc19ca08974}
+      \strng{authornamehash}{7fce872dcf6648d5f7700cc19ca08974}
+      \strng{authorfullhash}{7fce872dcf6648d5f7700cc19ca08974}
+      \strng{authorfullhashraw}{7fce872dcf6648d5f7700cc19ca08974}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{International Health Terminology Standards Development Organisation (IHTSDO)}
+      \field{title}{SNOMED CT: Systematized Nomenclature of Medicine -- Clinical Terms}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.snomed.org/
+      \endverb
+      \verb{url}
+      \verb https://www.snomed.org/
+      \endverb
+    \endentry
     \entry{watrimed_design_2019}{incollection}{}{}
       \name{author}{5}{}{%
         {{hash=e7bb86e489c3f96d3182855b54cf87a0}{%
@@ -1656,7 +2051,6 @@
       \strng{authornamehash}{4675b4441d3416cb08130a000e8220a8}
       \strng{authorfullhash}{4675b4441d3416cb08130a000e8220a8}
       \strng{authorfullhashraw}{4675b4441d3416cb08130a000e8220a8}
-      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -1677,63 +2071,6 @@
       \verb{url}
       \verb https://doi.org/10.1016/S0169-023X(97)00056-6
       \endverb
-    \endentry
-    \entry{studer_knowledge_1998}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=e0c7ea82e283188bb50d580b79aae9e3}{%
-           family={Studer},
-           familyi={S\bibinitperiod},
-           given={Rudi},
-           giveni={R\bibinitperiod}}}%
-        {{hash=d8f37ab4d5ba02ef7b90fd41ad8e6a81}{%
-           family={Benjamins},
-           familyi={B\bibinitperiod},
-           given={V.\bibnamedelimi Richard},
-           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=ba4603066ec9f23db109035b8d738b0c}{%
-           family={Fensel},
-           familyi={F\bibinitperiod},
-           given={Dieter},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{4675b4441d3416cb08130a000e8220a8}
-      \strng{fullhash}{4675b4441d3416cb08130a000e8220a8}
-      \strng{fullhashraw}{4675b4441d3416cb08130a000e8220a8}
-      \strng{bibnamehash}{4675b4441d3416cb08130a000e8220a8}
-      \strng{authorbibnamehash}{4675b4441d3416cb08130a000e8220a8}
-      \strng{authornamehash}{4675b4441d3416cb08130a000e8220a8}
-      \strng{authorfullhash}{4675b4441d3416cb08130a000e8220a8}
-      \strng{authorfullhashraw}{4675b4441d3416cb08130a000e8220a8}
-      \field{extraname}{2}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{This paper gives an overview of the development of the field of Knowledge Engineering over the last 15 years. We discuss the paradigm shift from a transfer view to a modeling view and describe two approaches which considerably shaped research in Knowledge Engineering: Role-limiting Methods and Generic Tasks. To illustrate various concepts and methods which evolved in recent years we describe three modeling frameworks: CommonKADS, MIKE and PROTÉGÉ-II. This description is supplemented by discussing some important methodological developments in more detail: specification languages for knowledge-based systems, problem-solving methods and ontologies. We conclude by outlining the relationship of Knowledge Engineering to Software Engineering, Information Integration and Knowledge Management.}
-      \field{issn}{0169-023X}
-      \field{journaltitle}{Data \& Knowledge Engineering}
-      \field{month}{3}
-      \field{number}{1}
-      \field{shorttitle}{Knowledge engineering}
-      \field{title}{Knowledge engineering: {Principles} and methods}
-      \field{urlday}{29}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{volume}{25}
-      \field{year}{1998}
-      \field{urldateera}{ce}
-      \field{pages}{161\bibrangedash 197}
-      \range{pages}{37}
-      \verb{doi}
-      \verb 10.1016/S0169-023X(97)00056-6
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0169023X97000566
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0169023X97000566
-      \endverb
-      \keyw{Information integration,Knowledge acquisition,Knowledge Engineering,Ontology,Problem-solving method}
     \endentry
     \entry{tekemetieu2016}{article}{}{}
       \name{author}{3}{}{%

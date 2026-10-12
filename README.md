@@ -37,14 +37,24 @@ en double.
 
 ## État d'avancement
 
-- Introduction générale : rédigée, reformulée ;
-- Cadre théorique et revue de littérature (chapitre I) : rédigé, reformulé ;
-- Matériel et méthodologie (chapitre II) : rédigé, en cours de reformulation ;
-- Conception et développement du système (chapitre III) : rédigé, en attente
-  des compléments marqués `TODO` (chiffres, figures, extraits de code réels) ;
-- Résultats et discussion (chapitre IV) : à rédiger ;
-- Conclusion générale : à rédiger ;
-- Dédicace, remerciements, résumé, abstract : à rédiger.
+Dernière mise à jour : 11 octobre 2026.
+
+- Introduction générale : rédigée ;
+- Chapitre I, cadre théorique et revue de littérature : rédigé (2 figures à
+  produire) ;
+- Chapitre II, matériel et méthodologie : rédigé (2 figures à produire) ;
+- Chapitre III, conception et développement du système : rédigé (prose et
+  structure), 35 blocs `\TODOchapo` restants (chiffres Protégé et Neo4j,
+  captures d'écran, extraits de code réels) ;
+- Chapitre IV, résultats et discussion : rédigé (prose et discussion), 48 blocs
+  `\TODOchapo` restants — les résultats chiffrés de l'évaluation (ontologie,
+  système RAG, application web) restent à relever ;
+- Conclusion générale : rédigée, à re-chiffrer une fois le chapitre IV complété ;
+- Dédicace, remerciements, résumé, abstract : fichiers vides, à rédiger.
+
+Restent à produire : les figures manquantes (schémas et captures) et le
+nettoyage de la bibliographie (entrées non citées, doublons). Un état des lieux
+détaillé est disponible dans `rapport-etat-des-lieux.md`.
 
 ## Compilation
 
@@ -66,7 +76,9 @@ latexmk -pdf main.tex
 La compilation nécessite une distribution LaTeX comprenant `pdflatex` et
 `biber`, par exemple MiKTeX ou TeX Live. Le fichier généré est `main.pdf`.
 
-Le document compile actuellement sans avertissement ni erreur.
+Le document compile sans erreur (91 pages). Une alerte `Float too large for
+page` subsiste : le tableau des fonctionnalités du chapitre III
+(`tab:fonctionnalites`) déborde la page et doit être réduit ou scindé.
 
 ## Bibliographie
 

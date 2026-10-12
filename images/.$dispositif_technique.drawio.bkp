@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="OpenWork" version="24.7.5" type="device">
+  <diagram id="dispositif-technique" name="dispositif_technique">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z1" value="Google Colab" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f4fa;strokeColor=#1e3a5f;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#1e3a5f;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="280" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="Notebooks — extraction (phase 5)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="190" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Llama 3 via Ollama" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="270" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="GPU" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="350" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z2" value="Poste local" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f4fa;strokeColor=#1e3a5f;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#1e3a5f;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="420" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Protégé 5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="190" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="Neo4j Desktop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="190" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="Ollama / Llama 3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="290" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="Application Streamlit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="290" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z3" value="Utilisateur" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f4fa;strokeColor=#1e3a5f;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#1e3a5f;align=center;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="900" y="120" width="160" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="Navigateur web" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="920" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="export des fichiers JSON/CSV" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.3;strokeColor=#1e3a5f;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#1e3a5f;" edge="1" parent="1" source="z1" target="z2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="requête bolt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;strokeColor=#1e3a5f;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#1e3a5f;" edge="1" parent="1" source="c7" target="c5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="tunnel ngrok (API de Llama 3)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#1e3a5f;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#1e3a5f;" edge="1" parent="1" source="c6" target="c7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="requête HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeColor=#1e3a5f;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#1e3a5f;" edge="1" parent="1" source="c8" target="c7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

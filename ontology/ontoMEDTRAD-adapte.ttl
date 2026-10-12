@@ -1,0 +1,128 @@
+# ============================================================================
+# ontoMEDTRAD-adapte — ONTOLOGIE ADAPTÉE (étape 3, section III.1.1)
+# ----------------------------------------------------------------------------
+# Résultat de la phase 4 : ontoMEDTRAD (Kouamé, 2018) adaptée au contexte des
+# plantes médicinales du Burkina Faso.
+#   = ONTOLOGIE CONSERVÉE (voir ontoMEDTRAD-conserve.ttl)
+#   + classes, propriétés objet et propriétés de données AJOUTÉES.
+#
+# Classiquement, les ajouts portent sur cinq ensembles de classes (maladies
+# spécifiques, noms vernaculaires, régions, niveaux de preuve, sources
+# scientifiques), sur les propriétés de noms locaux et de localisation, sur le
+# niveau de preuve et sur la traçabilité documentaire.
+#
+# Les instances ne sont PAS portées par l'ontologie : l'enrichissement (phase 5)
+# insère les faits dans la base de connaissances orientée graphe (Neo4j), dont
+# ce modèle fournit le schéma.
+#
+# Source : KOUAME Appoh, thèse de doctorat, Université Gaston Berger de
+# Saint-Louis (Sénégal), 14 avril 2018 (HAL : tel-01842116).
+# ============================================================================
+
+@prefix :        <http://www.semanticweb.org/ontologies/2015/11/OntoMedTrad.owl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# ============================================================================
+# En-tête de l'ontologie
+# ============================================================================
+<http://www.semanticweb.org/ontologies/2015/11/ontoMEDTRAD-adapte.owl>
+    a owl:Ontology ;
+    dcterms:title "ontoMEDTRAD — ontologie adaptée (contexte burkinabè)"@fr ;
+    dcterms:description "ontoMEDTRAD (Kouamé, 2018) adaptée au contexte des plantes médicinales du Burkina Faso : concepts conservés + classes et propriétés ajoutées. Instances non portées par l'ontologie (base Neo4j)."@fr ;
+    dcterms:source "KOUAME Appoh, thèse de doctorat, Université Gaston Berger de Saint-Louis, 14 avril 2018 (HAL : tel-01842116)" ;
+    owl:versionInfo "3.0 — ontologie adaptée, 2026-10-11" .
+
+# ============================================================================
+# ─────────────────────────── PARTIE CONSERVÉE ───────────────────────────────
+# ============================================================================
+
+# --- Classes conservées : plantes, taxonomie et parties ---
+:Plante a owl:Class ; rdfs:label "Plante"@fr ; rdfs:comment "Conservée."@fr .
+:Arbre a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Arbre"@fr .
+:Arbuste a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Arbuste"@fr .
+:Palme a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Palme"@fr .
+:Herbe a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Herbe"@fr .
+:Liane a owl:Class ; rdfs:subClassOf :Plante ; rdfs:label "Liane"@fr .
+:FamillePlante a owl:Class ; rdfs:label "Famille de plante"@fr .
+:GenrePlante a owl:Class ; rdfs:label "Genre de plante"@fr .
+:OrdrePlante a owl:Class ; rdfs:label "Ordre de plante"@fr .
+:PartieDePlante a owl:Class ; rdfs:label "Partie de plante"@fr .
+:Feuille a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Feuille"@fr .
+:Fruit a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Fruit"@fr .
+:Fleur a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Fleur"@fr .
+:Racine a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Racine"@fr .
+:Tronc a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Tronc"@fr .
+:EcorceDeTronc a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Écorce de tronc"@fr .
+:EcorceDeRacine a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Écorce de racine"@fr .
+:Seve a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Sève"@fr .
+:PlanteEntiere a owl:Class ; rdfs:subClassOf :PartieDePlante ; rdfs:label "Plante entière"@fr .
+
+# --- Classes conservées : maladie, préparation, localisation, sources ---
+:Maladie a owl:Class ; rdfs:label "Maladie"@fr ; rdfs:comment "Conservée."@fr .
+:CategorieMaladieCIM10 a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Catégorie de maladie CIM-10"@fr .
+:TypeMaladieCIM10 a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Type de maladie CIM-10"@fr .
+:ModeDePreparation a owl:Class ; rdfs:label "Mode de préparation"@fr .
+:ModeDePreparatRecetPlante a owl:Class ; rdfs:subClassOf :ModeDePreparation ; rdfs:label "Mode de préparation de recette à base de plante"@fr .
+:Sechage a owl:Class ; rdfs:subClassOf :ModeDePreparation ; rdfs:label "Séchage"@fr .
+:Localite a owl:Class ; rdfs:label "Localité"@fr .
+:Pays a owl:Class ; rdfs:subClassOf :Localite ; rdfs:label "Pays"@fr .
+:Region a owl:Class ; rdfs:subClassOf :Localite ; rdfs:label "Région"@fr .
+:ReferenceScientifique a owl:Class ; rdfs:label "Référence scientifique"@fr .
+
+# --- Propriétés objet conservées ---
+:aPourFamillePlante a owl:ObjectProperty ; rdfs:label "a pour famille de plante"@fr ; rdfs:domain :Plante ; rdfs:range :FamillePlante .
+:aPourGenrePlante a owl:ObjectProperty ; rdfs:label "a pour genre de plante"@fr ; rdfs:domain :Plante ; rdfs:range :GenrePlante .
+:aPourHabitatLocalite a owl:ObjectProperty ; rdfs:label "a pour habitat localité"@fr ; rdfs:domain :Plante ; rdfs:range :Localite .
+:aPourCategoriMaladie a owl:ObjectProperty ; rdfs:label "a pour catégorie de maladie"@fr ; rdfs:domain :Maladie ; rdfs:range :CategorieMaladieCIM10 .
+:aEtreLocalitedePays a owl:ObjectProperty ; rdfs:label "être localité de pays"@fr ; rdfs:domain :Localite ; rdfs:range :Pays .
+
+# --- Propriétés de données conservées ---
+:aPourNomScientifique a owl:DatatypeProperty ; rdfs:label "a pour nom scientifique"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aPourNomBotanique a owl:DatatypeProperty ; rdfs:label "a pour nom botanique"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aPourSynonymePlante a owl:DatatypeProperty ; rdfs:label "a pour synonyme (plante)"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aPourNomEnLangueOfficelle a owl:DatatypeProperty ; rdfs:label "a pour nom en langue officielle"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string .
+:aCoordoneesGPS a owl:DatatypeProperty ; rdfs:label "a pour coordonnées GPS"@fr ; rdfs:domain :Localite ; rdfs:range xsd:string .
+
+# ============================================================================
+# ─────────────────────────── PARTIE AJOUTÉE ─────────────────────────────────
+# ============================================================================
+
+# --- Classes ajoutées (contexte burkinabè) ---
+:MaladieSpecifiqueBF a owl:Class ; rdfs:subClassOf :Maladie ; rdfs:label "Maladie spécifique du Burkina Faso"@fr ; rdfs:comment "Ajoutée : pathologies documentées par la littérature locale (paludisme, onchocercose, méningite...)."@fr .
+:NomVernaculaire a owl:Class ; rdfs:label "Nom vernaculaire"@fr ; rdfs:comment "Ajoutée : désignations des plantes dans les langues du pays (mooré, dioula, fulfuldé)."@fr .
+:RegionBF a owl:Class ; rdfs:subClassOf :Region ; rdfs:label "Région du Burkina Faso"@fr ; rdfs:comment "Ajoutée : découpage territorial du pays."@fr .
+:NiveauDePreuve a owl:Class ; rdfs:label "Niveau de preuve"@fr ; rdfs:comment "Ajoutée : catégories de preuve rapportées par les sources (traditionnel, in vitro, in vivo, clinique)."@fr .
+:SourceScientifique a owl:Class ; rdfs:subClassOf :ReferenceScientifique ; rdfs:label "Source scientifique"@fr ; rdfs:comment "Ajoutée : type du document dont provient l'information (article, thèse, rapport)."@fr .
+:UsageTherapeutique a owl:Class ; rdfs:label "Usage thérapeutique"@fr ; rdfs:comment "Ajoutée : usage médicinal documenté (remplace Recette/Ingrédient/Remède d'origine sous une forme simplifiée)."@fr .
+:Preparation a owl:Class ; rdfs:label "Préparation"@fr ; rdfs:comment "Ajoutée : préparation d'un usage médicinal."@fr .
+:ComposeChimique a owl:Class ; rdfs:label "Composé chimique"@fr ; rdfs:comment "Ajoutée : composé chimique associé à une plante."@fr .
+
+# --- Propriétés objet ajoutées (relations de rattachement) ---
+:provientDe a owl:ObjectProperty ; rdfs:label "provient de"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range :SourceScientifique ; rdfs:comment "Ajoutée : rattache une connaissance à la source scientifique qui la rapporte."@fr .
+:estDocumenteeDans a owl:ObjectProperty ; rdfs:label "est documentée dans"@fr ; rdfs:domain :Plante ; rdfs:range :SourceScientifique ; rdfs:comment "Ajoutée : relie une plante aux documents qui la décrivent."@fr .
+:aPourNomVernaculaire a owl:ObjectProperty ; rdfs:label "a pour nom vernaculaire"@fr ; rdfs:domain :Plante ; rdfs:range :NomVernaculaire ; rdfs:comment "Ajoutée : rattache une plante à ses désignations locales."@fr .
+:estLocaliseeA a owl:ObjectProperty ; rdfs:label "est localisée à"@fr ; rdfs:domain :Plante ; rdfs:range :Localite ; rdfs:comment "Ajoutée : associe une plante à sa localisation géographique."@fr .
+:aPourNiveauDePreuve a owl:ObjectProperty ; rdfs:label "a pour niveau de preuve"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range :NiveauDePreuve ; rdfs:comment "Ajoutée : rattache un usage au niveau de preuve déclaré par sa source."@fr .
+
+# --- Propriétés de données ajoutées ---
+:nomMoore a owl:DatatypeProperty ; rdfs:label "nom en mooré"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:nomDioula a owl:DatatypeProperty ; rdfs:label "nom en dioula"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:nomFulfulde a owl:DatatypeProperty ; rdfs:label "nom en fulfuldé"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:niveauPreuve a owl:DatatypeProperty ; rdfs:label "niveau de preuve"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée : valeur rapportée par la source."@fr .
+:typeEtude a owl:DatatypeProperty ; rdfs:label "type d'étude"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:source a owl:DatatypeProperty ; rdfs:label "source"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée : traçabilité documentaire."@fr .
+:doi a owl:DatatypeProperty ; rdfs:label "DOI"@fr ; rdfs:domain :SourceScientifique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:page a owl:DatatypeProperty ; rdfs:label "page"@fr ; rdfs:domain :SourceScientifique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:section a owl:DatatypeProperty ; rdfs:label "section"@fr ; rdfs:domain :SourceScientifique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .
+:dosage a owl:DatatypeProperty ; rdfs:label "dosage"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range xsd:string ; rdfs:comment "Ajoutée : précautions d'emploi documentées par la source."@fr .
+:toxicite a owl:DatatypeProperty ; rdfs:label "toxicité"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée : précautions d'emploi documentées par la source."@fr .
+
+# ============================================================================
+# INDIVIDUS — non inclus (les individus ne sont pas portés par l'ontologie ;
+# la base de connaissances orientée graphe est peuplée à partir de la
+# littérature scientifique sur les plantes médicinales du Burkina Faso).
+# ============================================================================

@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "sha256": "21c07fe573643c27b79b6a0506a2813c13cfc3ada0cdad4a1f9934012d151841",
+  "filename": "main.pdf",
+  "pageCount": 91,
+  "textPages": 91,
+  "textBudgetExhausted": false,
+  "pagesWithoutText": [
+    2
+  ],
+  "renderedPages": [],
+  "renderBudgetExhausted": false
+}

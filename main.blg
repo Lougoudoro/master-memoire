@@ -1,15 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [1] Config.pm:331> INFO - Logfile is 'main.blg'
-[342] biber-MSWIN64:342> INFO - === 
-[430] Biber.pm:421> INFO - Reading 'main.bcf'
-[785] Biber.pm:1002> INFO - Found 60 citekeys in bib section 0
-[836] Biber.pm:4487> INFO - Processing section 0
-[870] Biber.pm:4678> INFO - Looking for bibtex file 'sanou-master.bib' for section 0
-[987] bibtex.pm:1713> INFO - LaTeX decoding ...
-[2017] bibtex.pm:1519> INFO - Found BibTeX data source 'sanou-master.bib'
-[3441] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3441] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3445] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'fr-FR'
-[3445] Biber.pm:4313> INFO - No sort tailoring available for locale 'fr-FR'
-[3700] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[3869] bbl.pm:779> INFO - Output to main.bbl
+[388] biber-MSWIN64:342> INFO - === 
+[487] Biber.pm:421> INFO - Reading 'main.bcf'
+[984] Biber.pm:1002> INFO - Found 60 citekeys in bib section 0
+[1037] Biber.pm:4487> INFO - Processing section 0
+[1059] Biber.pm:4678> INFO - Looking for bibtex file 'sanou-master.bib' for section 0
+[1211] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1934] bibtex.pm:1519> INFO - Found BibTeX data source 'sanou-master.bib'
+[3384] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3384] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3384] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'fr-FR'
+[3385] Biber.pm:4313> INFO - No sort tailoring available for locale 'fr-FR'
+[3630] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[3760] bbl.pm:779> INFO - Output to main.bbl

@@ -10,9 +10,9 @@
 \phantomsection
 \section*{Introduction du chapitre}
 
-Les chapitres précédents ont posé, tour à tour, le cadre théorique de la recherche et la démarche méthodologique suivie pour la mener à bien. Il reste à montrer ce que cette démarche a effectivement produit. Le présent chapitre a pour objet de présenter le système conçu et développé pour mettre à disposition des connaissances sur les plantes médicinales du Burkina Faso, depuis le modèle conceptuel jusqu'à l'interface accessible à l'utilisateur final.
+Les chapitres précédents ont posé, tour à tour, le cadre théorique de la recherche et la démarche méthodologique suivie pour la mener à bien. Il nous reste à montrer ce que notre démarche a effectivement produit. Le présent chapitre a pour objet de présenter le système conçu et développé pour mettre à disposition des connaissances sur les plantes médicinales du Burkina Faso, depuis le modèle conceptuel jusqu'à l'interface accessible à l'utilisateur final.
 
-Quatre sections suivent, dans l'ordre où les composants ont été construits. La première présente l'ontologie adaptée et enrichie, c'est-à-dire le modèle dont découle tout le reste. La seconde décrit la base de connaissances orientée graphe qui matérialise ce modèle et reçoit les connaissances extraites. La troisième expose l'intégration de l'intelligence artificielle, tant pour l'extraction assistée que pour l'accès en langage naturel fondé sur le système RAG. La quatrième enfin relate le développement de l'application web qui ouvre l'ensemble de ces composants à l'utilisateur.
+Quatre sections suivent, dans l'ordre où nous avons construit les composants. La première présente l'ontologie adaptée et enrichie, c'est-à-dire le modèle dont découle tout le reste. La seconde décrit la base de connaissances orientée graphe qui matérialise ce modèle et reçoit les connaissances extraites. La troisième expose l'intégration de l'intelligence artificielle, tant pour l'extraction assistée que pour l'accès en langage naturel fondé sur le système RAG. La quatrième enfin relate le développement de l'application web qui ouvre l'ensemble de ces composants à l'utilisateur.
 
 % ============================================================
 % III.1. ONTOLOGIE ADAPTÉE ET ENRICHIE
@@ -21,7 +21,7 @@ Quatre sections suivent, dans l'ordre où les composants ont été construits. L
 \section{Ontologie adaptée et enrichie}
 \label{sec:ontologie_adaptee}
 
-L'ontologie \textit{ontoMEDTRAD} \cite{kouame_systeme_2018}, sélectionnée en phase 1 (section \ref{subsec:phase1} du chapitre \ref{chap:materiel_methodologie}), constituait un point de départ solide mais incomplet pour le contexte burkinabè : couverture restreinte à vingt-deux plantes et trente et un remèdes antipaludéens, absence de noms vernaculaires locaux, silence sur les niveaux de preuve et sur la traçabilité fine des sources. Les adaptations réalisées en phase 4 ont transformé ce modèle ; l'enrichissement issu de la phase 5, lui, ne modifie pas l'ontologie : il peuple la base de connaissances orientée graphe, dont l'ontologie fournit le schéma. Nous présentons ici le résultat de l'adaptation : sa vue d'ensemble, puis les classes, propriétés et relations qui l'étendent.
+L'ontologie \textit{ontoMEDTRAD} \cite{kouame_systeme_2018}, sélectionnée en phase 1 (section \ref{subsec:phase1} du chapitre \ref{chap:materiel_methodologie}), constituait un point de départ solide mais incomplet pour le contexte burkinabè : couverture restreinte à vingt-deux plantes et trente et un remèdes antipaludéens, absence de noms vernaculaires locaux, silence sur les niveaux de preuve et sur la traçabilité fine des sources. Les adaptations réalisées en phase 4 ont transformé ce modèle. L'enrichissement issu de la phase 5, lui, ne modifie pas l'ontologie : il peuple la base de connaissances orientée graphe, dont l'ontologie fournit le schéma. Nous présentons ici le résultat de l'adaptation : sa vue d'ensemble, puis les classes, propriétés et relations qui l'étendent.
 
 \subsection{Vue d'ensemble du modèle}
 \label{subsec:vue_ensemble_ontologie}
@@ -30,7 +30,7 @@ L'ontologie d'origine compte 144 concepts, 76 propriétés associatives, 16 prop
 
 La figure \ref{fig:ontomedtrad_initiale} présente la structure de l'ontologie initiale telle que reconstituée à partir de la thèse.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \begin{minipage}[t]{0.47\textwidth}
 \centering
@@ -48,9 +48,9 @@ La figure \ref{fig:ontomedtrad_initiale} présente la structure de l'ontologie i
 
 Conformément au principe de réutilisation partielle recommandé en ingénierie ontologique, nous avons retenu d'ontoMEDTRAD les concepts relatifs aux plantes médicinales, à leurs parties, aux modes de préparation, aux maladies et à la localisation géographique, que nous avons complétés par les usages médicinaux et les composés chimiques. Nous avons en revanche écarté les modules hors du périmètre de notre étude : la couche d'iconisation (ontoICONE), dédiée à la représentation visuelle des plantes, ainsi que les concepts liés à la pratique de la médecine traditionnelle (praticiens PMT, patients, examen clinique, anamnèse). L'iconisation constitue en effet un choix de représentation, et non de conceptualisation : son abandon ne remet pas en cause la validité du modèle conceptuel réutilisé, qui porte sur les connaissances elles-mêmes. Le tableau \ref{tab:concepts_retenus_ecartes} détaille ce choix.
 
-Cette réutilisation porte sur la structure conceptuelle, non sur les données. Les 789 individus d'ontoMEDTRAD n'ont pas été repris : ils relèvent du contexte et des sources propres aux travaux d'origine, alors que notre base de connaissances orientée graphe (Neo4j) est peuplée à partir de la littérature scientifique sur les plantes médicinales du Burkina Faso. Seules les classes, les propriétés et les relations du modèle d'origine ont donc été réutilisées ; les instances de notre modèle sont entièrement nouvelles, insérées dans le graphe et rattachées à leurs sources.
+Cette réutilisation porte sur la structure conceptuelle, non sur les données. Nous n'avons pas repris les 789 individus d'ontoMEDTRAD : ils relèvent du contexte et des sources propres aux travaux d'origine, alors que notre base de connaissances orientée graphe (Neo4j) est peuplée à partir de la littérature scientifique sur les plantes médicinales du Burkina Faso. Nous n'avons donc réutilisé que les classes, les propriétés et les relations du modèle d'origine. Les instances de notre modèle sont entièrement nouvelles, insérées dans le graphe et rattachées à leurs sources.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Concepts retenus et écartés lors de l'adaptation}
 \label{tab:concepts_retenus_ecartes}
@@ -73,11 +73,11 @@ Noms vernaculaires en langues locales & Langues (LangueLocales, LangueOfficielle
 \end{tabular}
 \end{table}
 
-Les concepts de recette, d'ingrédient et de remède d'ontoMEDTRAD n'ont pas été repris tels quels : le questionnement de notre système s'appuie sur les nœuds \textit{Usage} et \textit{Préparation}, qui en reprennent l'essentiel sous une forme simplifiée. De même, la classe \textit{Langues} d'ontoMEDTRAD, qui recense les langues locales et officielles, n'a pas été reprise telle quelle : la dimension linguistique est portée dans notre modèle par les noms vernaculaires (\textit{nomMooré}, \textit{nomDioula}, \textit{nomFulfuldé}).
+Nous n'avons pas repris tels quels les concepts de recette, d'ingrédient et de remède d'ontoMEDTRAD : le questionnement de notre système s'appuie sur les nœuds \textit{Usage} et \textit{Préparation}, qui en reprennent l'essentiel sous une forme simplifiée. De même, nous n'avons pas repris telle quelle la classe \textit{Langues} d'ontoMEDTRAD, qui recense les langues locales et officielles : la dimension linguistique est portée dans notre modèle par les noms vernaculaires (\textit{nomMooré}, \textit{nomDioula}, \textit{nomFulfuldé}).
 
 La figure \ref{fig:ontologie_conservee} présente le modèle ainsi réduit à ces seuls concepts, importé dans Protégé~5 : c'est à partir de lui que s'opèrent les ajouts de l'adaptation.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{ontology-conserve.png}
 \caption{L'ontologie conservée : les concepts d'ontoMEDTRAD retenus}
@@ -86,7 +86,7 @@ La figure \ref{fig:ontologie_conservee} présente le modèle ainsi réduit à ce
 
 Le tableau \ref{tab:stats_ontologie} met en regard l'ontologie d'origine et l'ontologie après adaptation.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Statistiques de l'ontologie avant et après adaptation}
 \label{tab:stats_ontologie}
@@ -111,7 +111,7 @@ Les chiffres de la colonne \og Après adaptation \fg{} sont ceux du fichier \tex
 
 Les instances ne sont pas portées par l'ontologie : l'enrichissement consiste à insérer les faits et les instances extraits du corpus dans la base de connaissances orientée graphe (Neo4j), dont l'ontologie fournit le schéma. Les individus de l'ontologie d'origine n'ayant pas été réutilisés, la ligne \og Individus \fg{} de la colonne \og Après adaptation \fg{} est sans objet.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{ontology-adaptee.png}
 \caption{L'ontologie adaptée et enrichie sous Protégé~5}
@@ -123,7 +123,7 @@ Les instances ne sont pas portées par l'ontologie : l'enrichissement consiste �
 
 Nous avons ajouté cinq ensembles de classes pour couvrir ce que le modèle d'origine ignorait du contexte burkinabè. Le tableau \ref{tab:classes_ajoutees} les recense avec la lacune qu'ils viennent combler.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Classes ajoutées à l'ontologie}
 \label{tab:classes_ajoutees}
@@ -144,14 +144,14 @@ Sources scientifiques & Type du document dont provient l'information & Article, 
 \end{tabular}
 \end{table}
 
-Les cinq ensembles s'insèrent dans la hiérarchie existante : \textit{MaladieSpecifiqueBF} est une sous-classe de \textit{Maladie} ; \textit{RegionBF} est une sous-classe de \textit{Region}, elle-même sous-classe de \textit{Localite} ; \textit{SourceScientifique} est une sous-classe de \textit{ReferenceScientifique}. \textit{NomVernaculaire} et \textit{NiveauDePreuve} sont en revanche des classes racines, directement rattachées à \textit{owl:Thing}. Les classes ajoutées sont volontairement des feuilles : leurs valeurs ne sont pas des sous-classes mais des instances, portées par la base de connaissances orientée graphe et non par l'ontologie.
+Les cinq ensembles s'insèrent dans la hiérarchie existante. \textit{MaladieSpecifiqueBF} est une sous-classe de \textit{Maladie}. \textit{RegionBF} est une sous-classe de \textit{Region}, elle-même sous-classe de \textit{Localite}. \textit{SourceScientifique} est une sous-classe de \textit{ReferenceScientifique}. \textit{NomVernaculaire} et \textit{NiveauDePreuve} sont en revanche des classes racines, directement rattachées à \textit{owl:Thing}. Les classes ajoutées sont volontairement des feuilles : leurs valeurs ne sont pas des sous-classes mais des instances, portées par la base de connaissances orientée graphe et non par l'ontologie.
 
 \subsection{Propriétés ajoutées}
 \label{subsec:proprietes_ajoutees}
 
 Les propriétés ajoutées portent sur quatre besoins : les noms locaux, la localisation géographique, le niveau de preuve et la traçabilité documentaire. Le tableau \ref{tab:proprietes_ajoutees} les liste.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Propriétés ajoutées à l'ontologie}
 \label{tab:proprietes_ajoutees}
@@ -172,14 +172,14 @@ Dosage, toxicité & Précautions d'emploi documentées par les sources \\
 \end{tabular}
 \end{table}
 
-Les propriétés de données ajoutées sont toutes des chaînes de caractères (\textit{xsd:string}) : \textit{nomMooré}, \textit{nomDioula} et \textit{nomFulfuldé} ont pour domaine \textit{Plante} ; \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} ont pour domaine \textit{UsageTherapeutique} ; \textit{doi}, \textit{page} et \textit{section} ont pour domaine \textit{SourceScientifique} ; \textit{toxicite} a pour domaine \textit{Plante}. La localisation, elle, est portée par la propriété objet ajoutée \textit{estLocaliséeÀ} (domaine \textit{Plante}, portée \textit{Localite}), complétée par la propriété de données \textit{aCoordoneesGPS} conservée de l'ontologie d'origine (domaine \textit{Localite}).
+Les propriétés de données ajoutées sont toutes des chaînes de caractères (\textit{xsd:string}). \textit{nomMooré}, \textit{nomDioula} et \textit{nomFulfuldé} ont pour domaine \textit{Plante}. \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} ont pour domaine \textit{UsageTherapeutique}. \textit{doi}, \textit{page} et \textit{section} ont pour domaine \textit{SourceScientifique}. \textit{toxicite} a pour domaine \textit{Plante}. La localisation, elle, est portée par la propriété objet ajoutée \textit{estLocaliséeÀ} (domaine \textit{Plante}, portée \textit{Localite}), complétée par la propriété de données \textit{aCoordoneesGPS} conservée de l'ontologie d'origine (domaine \textit{Localite}).
 
 \subsection{Relations ajoutées}
 \label{subsec:relations_ajoutees}
 
 Cinq relations nouvelles complètent le modèle, dont la structure initiale, fondée sur la relation « est un » et sur la relation partie-tout, ne couvrait pas les besoins de traçabilité. Le tableau \ref{tab:relations_ajoutees} les présente.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Relations ajoutées à l'ontologie}
 \label{tab:relations_ajoutees}
@@ -200,9 +200,9 @@ Cinq relations nouvelles complètent le modèle, dont la structure initiale, fon
 \end{tabular}
 \end{table}
 
-La relation entre remède et maladie, elle, a été précisée par le niveau de preuve : une même association plante-maladie peut désormais être rapportée à plusieurs niveaux, chacun restant celui déclaré par la source qui l'énonce. Le niveau de preuve est porté à la fois par la propriété de données \textit{niveauPreuve} et par la relation \textit{aPourNiveauDePreuve}, qui rattache un usage à la classe \textit{NiveauDePreuve}.
+Nous avons précisé la relation entre remède et maladie par le niveau de preuve : une même association plante-maladie peut désormais être rapportée à plusieurs niveaux, chacun restant celui déclaré par la source qui l'énonce. Le niveau de preuve est porté à la fois par la propriété de données \textit{niveauPreuve} et par la relation \textit{aPourNiveauDePreuve}, qui rattache un usage à la classe \textit{NiveauDePreuve}.
 
-Les cinq relations sont des propriétés objet : \textit{provientDe} relie \textit{UsageTherapeutique} à \textit{SourceScientifique} ; \textit{estDocumentéeDans} relie \textit{Plante} à \textit{SourceScientifique} ; \textit{aPourNomVernaculaire} relie \textit{Plante} à \textit{NomVernaculaire} ; \textit{estLocaliséeÀ} relie \textit{Plante} à \textit{Localite} ; \textit{aPourNiveauDePreuve} relie \textit{UsageTherapeutique} à \textit{NiveauDePreuve}.
+Les cinq relations sont des propriétés objet. \textit{provientDe} relie \textit{UsageTherapeutique} à \textit{SourceScientifique}. \textit{estDocumentéeDans} relie \textit{Plante} à \textit{SourceScientifique}. \textit{aPourNomVernaculaire} relie \textit{Plante} à \textit{NomVernaculaire}. \textit{estLocaliséeÀ} relie \textit{Plante} à \textit{Localite}. \textit{aPourNiveauDePreuve} relie \textit{UsageTherapeutique} à \textit{NiveauDePreuve}.
 
 % ============================================================
 % III.2. BASE DE CONNAISSANCES ORIENTÉE GRAPHE
@@ -211,14 +211,14 @@ Les cinq relations sont des propriétés objet : \textit{provientDe} relie \text
 \section{Base de connaissances orientée graphe}
 \label{sec:base_connaissances}
 
-L'ontologie fournit le modèle ; il fallait une base capable de le recevoir et de le peupler avec les connaissances extraites du corpus. Nous avons retenu Neo4j Desktop, pour les raisons motivées au chapitre \ref{chap:materiel_methodologie} (section \ref{subsec:environnement}) : ce choix a été dicté par trois exigences : modéliser naturellement des relations complexes entre plantes, usages, propriétés et sources ; interroger le graphe par requêtes expressives ; et rendre la traçabilité explicite par le seul jeu des relations. Cette section décrit le passage du modèle ontologique au graphe, puis son import et son interrogation.
+L'ontologie fournit le modèle. Il fallait une base capable de le recevoir et de le peupler avec les connaissances extraites du corpus. Nous avons retenu Neo4j Desktop, pour les raisons motivées au chapitre \ref{chap:materiel_methodologie} (section \ref{subsec:environnement}) : ce choix a été dicté par trois exigences : modéliser naturellement des relations complexes entre plantes, usages, propriétés et sources, interroger le graphe par requêtes expressives, et rendre la traçabilité explicite par le seul jeu des relations. Cette section décrit le passage du modèle ontologique au graphe, puis son import et son interrogation.
 
 \subsection{Du modèle ontologique au graphe}
 \label{subsec:mapping_graphe}
 
-Nous avons organisé la base en huit types de nœuds : \textit{Plante}, \textit{Maladie}, \textit{Usage}, \textit{Partie}, \textit{Préparation}, \textit{Source}, \textit{Compos\'eChimique} et \textit{R\'egion}. Chaque nœud correspond à une classe de l'ontologie adaptée ; chaque propriété du graphe reprend une propriété du modèle. Le tableau \ref{tab:Mapping_noeuds} donne cette correspondance.
+Nous avons organisé la base en huit types de nœuds : \textit{Plante}, \textit{Maladie}, \textit{Usage}, \textit{Partie}, \textit{Préparation}, \textit{Source}, \textit{Compos\'eChimique} et \textit{R\'egion}. Chaque nœud correspond à une classe de l'ontologie adaptée. Chaque propriété du graphe reprend une propriété du modèle. Le tableau \ref{tab:Mapping_noeuds} donne cette correspondance.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Correspondance entre les classes de l'ontologie et les nœuds du graphe}
 \label{tab:Mapping_noeuds}
@@ -247,7 +247,7 @@ Nous avons organisé la base en huit types de nœuds : \textit{Plante}, \textit{
 
 Sept types de relations relient ces nœuds : \texttt{TRAITE}, \texttt{UTILISE}, \texttt{PROVIENT\_DE}, \texttt{A\_POUR\_PARTIE}, \texttt{A\_POUR\_PREPARATION}, \texttt{CONTIENT} et \texttt{EST\_LOCALISEE\_A}. Quatre propriétés portent sur les nœuds eux-mêmes : le nom, le niveau de preuve, le DOI et les \textit{coordonn\'eesGPS}.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Relations du graphe de connaissances}
 \label{tab:relations_graphe}
@@ -277,7 +277,7 @@ Sept types de relations relient ces nœuds : \texttt{TRAITE}, \texttt{UTILISE}, 
 \subsection{Import et peuplement}
 \label{subsec:import_peuplement}
 
-L'import suit un chemin en deux temps. Les connaissances extraites par l'intelligence artificielle, d'abord, sont produites en JSON puis converties en CSV selon le modèle de l'ontologie, une table par type de nœud et une table par type de relation. Neo4j, ensuite, charge ces fichiers par des requêtes Cypher qui recréent nœuds et relations ; aucune information absente des sources n'est versée dans le graphe.
+L'import suit un chemin en deux temps. Les connaissances extraites par l'intelligence artificielle, d'abord, sont produites en JSON puis converties en CSV selon le modèle de l'ontologie, une table par type de nœud et une table par type de relation. Neo4j, ensuite, charge ces fichiers par des requêtes Cypher qui recréent nœuds et relations. Aucune information absente des sources n'est versée dans le graphe.
 
 \begin{quote}
 \begin{verbatim}
@@ -291,13 +291,13 @@ SET p.niveauPreuve = row.niveau_preuve;
 
 \TODOchapo{Remplacer ce fragment par le code \textbf{réel} du projet : requêtes Cypher effectivement utilisées pour l'import (fichier .cql ou .cypher du dépôt), 10 à 20 lignes consécutives montrant d'abord la création des nœuds puis celle des relations (\texttt{LOAD CSV}, \texttt{MERGE}, \texttt{CREATE}), commentées en français. Exiger : noms de fichiers CSV réels, noms de colonnes réels, aucun mot de passe ni chemin de machine personnelle (remplacer par \texttt{***}). Garder l'environnement \texttt{verbatim} et l'ordre des commentaires ; supprimer ensuite la ligne TODO. Indiquer en commentaire LaTeX le nom du fichier source (ex. \texttt{import/import.cql}).}
 
-L'import terminé, l'intégrité des données a été contrôlée : présence des nœuds attendus, conservation des relations et des propriétés, absence de nœuds orphelins. Le résultat en est le suivant :
+L'import terminé, nous avons contrôlé l'intégrité des données : présence des nœuds attendus, conservation des relations et des propriétés, absence de nœuds orphelins. Le résultat en est le suivant :
 
 \begin{quote}
 \TODOchapo{Chiffres de peuplement à relever dans Neo4j Browser après l'import, par quatre requêtes : \texttt{MATCH (n) RETURN count(n)} (total des nœuds) ; \texttt{MATCH ()-[r]->() RETURN count(r)} (total des relations) ; \texttt{MATCH (n) RETURN labels(n), count(*) ORDER BY count(*) DESC} (répartition par type de nœud) ; \texttt{MATCH ()-[r]->() RETURN type(r), count(*) ORDER BY count(*) DESC} (répartition par type de relation). Rapporter les quatre résultats ici, sous forme de phrase puis de liste, et reporter les volumes au tableau \texttt{tab:volumes\_requetes} du chapitre IV.}
 \end{quote}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
 \TODOchapo{Capture à produire dans Neo4j Browser : base peuplée, double-clic sur un nœud \textit{Plante} pour l'ouvrir, puis étoffer de deux niveaux de voisinage (bouton *), de sorte que l'on voie les relations \texttt{TRAITE}, \texttt{PROVIENT\_DE}, \texttt{A\_POUR\_PARTIE} avec leurs étiquettes. Légendes de nœuds lisibles, couleurs par type de label, fond sombre par défaut accepté. Capture 1200 px de large minimum, enregistrer sous \texttt{images/capture\_neo4j.png}.}\\[2mm]
@@ -342,7 +342,7 @@ RETURN p.nom AS plante
 
 À titre d'exemple, la question « quelles plantes traitent le paludisme dans la région du Sahel ? » se traduit par une requête qui relie les nœuds \textit{Plante}, \textit{Maladie} et \textit{Région}, puis renvoie une liste de noms scientifiques.
 
-Ces vérifications ont établi que la base est fonctionnelle et que les requêtes renvoient les résultats attendus. C'est la condition préalable à l'intégration de l'intelligence artificielle, qui interrogera ce graphe à la place de l'utilisateur.
+Ces vérifications ont établi que la base est fonctionnelle et que les requêtes renvoient les résultats attendus. C'est la condition préalable à l'intégration de l'intelligence artificielle, qui interrogera notre graphe à la place de l'utilisateur.
 
 % ============================================================
 % III.3. INTÉGRATION DE L'INTELLIGENCE ARTIFICIELLE
@@ -454,7 +454,7 @@ with open("extractions.json", "w", encoding="utf-8") as f:
 
 Le système d'accès combine la recherche d'informations dans le graphe et la génération de réponses par le modèle de langage : c'est le principe du \textit{Retrieval-Augmented Generation} \cite{lewis2020rag}, présenté au chapitre \ref{chap:cadre_theorique}. L'architecture retenue relie les maillons suivants : Utilisateur $\rightarrow$ Streamlit $\rightarrow$ LangChain $\rightarrow$ Neo4j $\rightarrow$ Llama 3 $\rightarrow$ Réponse (figure \ref{fig:architecture_rag}).
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \fbox{\parbox[c][4cm][c]{0.8\textwidth}{\centering
 \TODOchapo{Schéma à produire : les six étapes du listé ci-dessous en six boîtes enchaînées de gauche à droite (ou sur deux lignes de trois) : Utilisateur \(\rightarrow\) Streamlit \(\rightarrow\) LangChain (\texttt{GraphCypherQAChain}) \(\rightarrow\) Neo4j \(\rightarrow\) Llama 3 \(\rightarrow\) Réponse sourcée. Flèches étiquetées : « question », « requête Cypher », « sous-graphe / faits », « réponse + sources ». Ajouter une flèche de retour des sources vers la réponse pour montrer où le sourçage s'injecte (étape 6). Boîtes colorées par composant (interface, orchestration, base, modèle). Outil libre (PowerPoint, draw.io), format PNG, 15 cm de large, enregistrer sous \texttt{images/architecture\_rag.png}.}\\[2mm]
@@ -524,9 +524,9 @@ Le dernier composant est l'application web, qui rend l'ensemble accessible sans 
 \subsection{Architecture de l'application}
 \label{subsec:architecture_app}
 
-Notre application suit la structure classique d'une application Streamlit : un point d'entrée unique, une page par fonctionnalité, et un état de session partagé. À l'ouverture, l'utilisateur se trouve sur une page d'accueil qui associe le chatbot et les accès de recherche ; chaque interaction avec le chatbot appelle la chaîne LangChain, dont la réponse est rendue sur place, sources comprises.
+Notre application suit la structure classique d'une application Streamlit : un point d'entrée unique, une page par fonctionnalité, et un état de session partagé. À l'ouverture, l'utilisateur se trouve sur une page d'accueil qui associe le chatbot et les accès de recherche. Chaque interaction avec le chatbot appelle la chaîne LangChain, dont la réponse est rendue sur place, sources comprises.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
 \TODOchapo{Option privilégiée : deux captures côte à côte de l'application réelle : (a) page d'accueil avec la zone de saisie du chatbot, (b) fiche descriptive d'une plante montrant usages, parties, niveau de preuve et références. Format PNG, 900 px de large chacune, enregistrer sous \texttt{images/ecran\_accueil.png} et \texttt{images/ecran\_fiche.png}. Si l'on préfère un schéma : boîtes Question \(\rightarrow\) traitement RAG \(\rightarrow\) réponse affichée avec sources, fichier \texttt{images/flux\_utilisateur.png}.}\\[2mm]
@@ -548,7 +548,7 @@ Flux utilisateur : de la question posée à la réponse sourcée (écrans de l'a
 
 Le tableau \ref{tab:fonctionnalites} récapitule les fonctions prévues, telles qu'établies en phase 7 (section \ref{subsec:phase7}).
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Fonctionnalités de l'application web}
 \label{tab:fonctionnalites}
@@ -586,7 +586,7 @@ streamlit run app.py
 
 \TODOchapo{Déploiement réel à décrire en une phrase factuelle : machine (poste local, version de l'OS), commande exacte de lancement (\texttt{streamlit run} avec nom de fichier et port), commande ngrok correspondante (\texttt{ngrok http <port>}), durée pendant laquelle l'URL publique était active, et état actuel (toujours en ligne ?). Si une mise en ligne pérenne existe (Streamlit Community Cloud, serveur), donner l'URL et le dépôt. Ne pas coller de jeton d'authentification ngrok.}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
 \TODOchapo{Deux captures de l'application réelle, à choix : (a) la page d'accueil telle qu'elle s'affiche pour l'utilisateur (chatbot + accès de recherche), (b) une fiche où l'on voit explicitement les références sous chaque information (auteur, année, DOI) et les niveaux de preuve. PNG net, 900 px de large minimum, nommées \texttt{images/ecran\_accueil.png} et \texttt{images/ecran\_fiche.png} (si ces deux fichiers ont déjà servi à la figure précédente, les réutiliser et ne changer que les légendes).}\\[2mm]
@@ -610,8 +610,8 @@ Page d'accueil (chatbot) et fiche descriptive d'une plante}
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre a présenté le système issu de la démarche méthodologique du chapitre \ref{chap:materiel_methodologie}. L'ontologie \textit{ontoMEDTRAD}, adaptée au contexte burkinabè et enrichie par les connaissances du corpus, en constitue le modèle. La base Neo4j en est la matérialisation : huit types de nœuds, sept types de relations, un graphe peuplé et interrogeable. L'intelligence artificielle intervient à deux endroits. En amont, l'extraction assistée produit les fiches du corpus ; en aval, le système RAG convertit une question en langage naturel en requête Cypher puis en réponse. L'application web referme l'ensemble sur une interface accessible.
+Ce chapitre a présenté le système issu de la démarche méthodologique du chapitre \ref{chap:materiel_methodologie}. L'ontologie \textit{ontoMEDTRAD}, adaptée au contexte burkinabè et enrichie par les connaissances du corpus, en constitue le modèle. La base Neo4j en est la matérialisation : huit types de nœuds, sept types de relations, un graphe peuplé et interrogeable. L'intelligence artificielle intervient à deux endroits. En amont, l'extraction assistée produit les fiches du corpus. En aval, le système RAG convertit une question en langage naturel en requête Cypher puis en réponse. L'application web referme l'ensemble sur une interface accessible.
 
 Ces quatre composants ont tous été conçus autour d'une même préoccupation : la traçabilité. Chaque connaissance provient d'une source, est rattachée à cette source dans le graphe, et apparaît dans une réponse avec la référence qui la soutient. C'est cette continuité qui distingue le système d'un simple moteur de recherche sur texte, et qui justifie les précautions que nous avons prises à chaque étape (champs laissés vides plutôt que comblés, niveaux de preuve rapportés tels quels, origine de chaque affirmation affichée).
 
-Il reste à évaluer ce que le système donne effectivement : qualité des extractions, pertinence et fidélité des réponses, pertinence des recherches, utilité perçue de l'interface. Le chapitre \ref{chap:resultats_discussion} présente les résultats de cette évaluation et en discute les limites.
+Il nous reste à évaluer ce que le système donne effectivement : qualité des extractions, pertinence et fidélité des réponses, pertinence des recherches, utilité perçue de l'interface. Le chapitre \ref{chap:resultats_discussion} présente les résultats de cette évaluation et en discute les limites.

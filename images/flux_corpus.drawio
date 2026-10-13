@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" modified="2026-10-12T11:24:28.399Z" version="21.6.5" etag="Jr8EehNTyfYlBR0Wsgul" type="device">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" modified="2026-10-12T17:26:50.810Z" etag="HVe8TJ22NyZxoXr43aXP" version="21.6.5" type="device">
   <diagram id="flux-corpus" name="flux_corpus">
     <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="500" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="b2" value="&lt;b&gt;Critères de recherche et de sélection&lt;/b&gt;&lt;br&gt;(phase 2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="300" y="180" width="230" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="b3" value="&lt;b&gt;Collecte&lt;/b&gt;&lt;br&gt;35 documents — Herbier National, INERA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+        <mxCell id="b3" value="&lt;b&gt;Collecte&lt;/b&gt;&lt;br&gt;35 documents — Herbier, INERA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="580" y="180" width="230" height="100" as="geometry" />
         </mxCell>
         <mxCell id="b4" value="&lt;b&gt;Corpus indexé&lt;/b&gt;&lt;br&gt;(phase 3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">

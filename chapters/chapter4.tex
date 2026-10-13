@@ -10,7 +10,7 @@
 \phantomsection
 \section*{Introduction du chapitre}
 
-Les chapitres précédents ont exposé, tour à tour, la démarche que nous avons conduite et le système qui en est sorti. Ils ont laissé une question ouverte, reportée explicitement à la phase 8 : ce système tient-il les promesses faites en son nom ? Le présent chapitre y répond. Il présente les résultats de l'évaluation menée à trois niveaux, puis discute ce que ces résultats valent, et ce qu'ils ne valent pas.
+Les chapitres précédents ont exposé, tour à tour, la démarche que nous avons conduite et le système qui en est sorti. Ils ont laissé une question ouverte, reportée explicitement à la phase 8 : notre système tient-il les promesses faites en son nom ? Le présent chapitre y répond. Il présente les résultats de l'évaluation menée à trois niveaux, puis discute ce que ces résultats valent, et ce qu'ils ne valent pas.
 
 L'évaluation suit le protocole fixé avant les tests (section \ref{subsec:phase8} du chapitre \ref{chap:materiel_methodologie}). Trois objets y sont successivement confrontés à leurs critères : l'ontologie adaptée et enrichie, le système RAG qui l'interroge, et l'application web qui les réunit. Nous avions arrêté en amont les critères, les méthodes de mesure et les métriques : les résultats se lisent par rapport à ces critères-là, et non par rapport à ce que les tests ont fait remarquer au passage.
 
@@ -28,7 +28,7 @@ Nous avons évalué l'ontologie sur les quatre critères retenus en phase 8 : co
 \subsection{Couverture}
 \label{subsec:res_couverture}
 
-Nous avons apprécié la couverture par vérification manuelle, en confrontant l'ontologie au corpus de 35 documents, plante par plante et usage par usage. Chaque nom scientifique, chaque désignation vernaculaire, chaque pathologie, chaque mode de préparation et chaque source citée dans un document devait trouver sa place dans le modèle ; à défaut, nous la notions.
+Nous avons apprécié la couverture par vérification manuelle, en confrontant l'ontologie au corpus de 35 documents, plante par plante et usage par usage. Chaque nom scientifique, chaque désignation vernaculaire, chaque pathologie, chaque mode de préparation et chaque source citée dans un document devait trouver sa place dans le modèle. À défaut, nous la notions.
 
 Les résultats de ce rapprochement sont les suivants : \TODOchapo{relevé dans Protégé~5, onglet \textit{Instances} : nombre d'instances de la classe Plante, nombre d'usages, nombre de sources ; puis taux de couverture = éléments du corpus retrouvés dans le modèle / éléments relevés dans le corpus, en pourcentage. Écrire les trois nombres et le pourcentage, ex. « 87 plantes, 132 usages, 41 sources, couverture 81\,\% »}. Ils se comparent aux chiffres du tableau \ref{tab:stats_ontologie} et à ceux du modèle d'origine, qui ne couvrait que vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}.
 
@@ -57,7 +57,7 @@ Le protocole prévoit un test d'ajout : introduire une connaissance nouvelle dan
 
 Le tableau \ref{tab:res_ontologie} réunit les quatre critères et leurs résultats.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Résultats de l'évaluation de l'ontologie}
 \label{tab:res_ontologie}
@@ -67,11 +67,11 @@ Le tableau \ref{tab:res_ontologie} réunit les quatre critères et leurs résult
 \hline
 Couverture & Vérification manuelle face au corpus de 35 documents & \TODOchapo{reprendre les chiffres du § Couverture : n/N et taux en \%} \\
 \hline
-Cohérence & Raisonneurs HermiT et Pellet, requêtes de test & Aucune incohérence signalée ; \TODOchapo{reprendre le résultat ligne par ligne du § Cohérence} \\
+Cohérence & Raisonneurs HermiT et Pellet, requêtes de test & Aucune incohérence signalée. \TODOchapo{reprendre le résultat ligne par ligne du § Cohérence} \\
 \hline
 Traçabilité & Contrôle sur échantillon des relations vers les sources & \TODOchapo{reprendre le taux du § Traçabilité, sous la forme conformes/contrôlés (\%)} \\
 \hline
-Extensibilité & Test d'ajout, en cours de phases 4 et 5 puis ciblé & Ajouts intégrés sans rupture ; \TODOchapo{reprendre la phrase du § Extensibilité, en une ligne} \\
+Extensibilité & Test d'ajout, en cours de phases 4 et 5 puis ciblé & Ajouts intégrés sans rupture. \TODOchapo{reprendre la phrase du § Extensibilité, en une ligne} \\
 \hline
 \end{tabular}
 \end{table}
@@ -97,7 +97,7 @@ Les métriques suivent les correspondances que nous avions fixées en phase 8 : 
 
 Nos mesures sur les 50 questions donnent les résultats du tableau \ref{tab:res_rag}.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Résultats de l'évaluation du système RAG}
 \label{tab:res_rag}
@@ -116,9 +116,9 @@ Traçabilité & Taux de couverture des réponses sourcées & \TODOchapo{réponse
 \end{tabular}
 \end{table}
 
-Les scores globaux masquent des écarts entre familles de questions ; nous les séparons dans le tableau \ref{tab:res_rag_familles}.
+Les scores globaux masquent des écarts entre familles de questions. Nous les séparons dans le tableau \ref{tab:res_rag_familles}.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Résultats par famille de questions}
 \label{tab:res_rag_familles}
@@ -142,7 +142,7 @@ Questions spatiales (région, localisation) & \TODOchapo{nb de questions} & \TOD
 
 Nous avions promis, en chapitre III, de reporter ici les volumes obtenus par les quatre familles de requêtes prévues en phase 6 (section \ref{subsec:phase6} du chapitre \ref{chap:materiel_methodologie}). Le tableau \ref{tab:volumes_requetes} les rassemble.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Volumes de résultats des quatre familles de requêtes}
 \label{tab:volumes_requetes}
@@ -164,7 +164,7 @@ Requêtes spatiales & Plantes d'une région donnée & \TODOchapo{nombre de ligne
 \subsection{Observations qualitatives}
 \label{subsec:res_observations}
 
-Les chiffres suffisent peu à eux seuls à décrire ce qui se passe pendant les tests ; les remarques suivantes complètent les métriques.
+Les chiffres suffisent peu à eux seuls à décrire ce qui se passe pendant les tests. Les remarques suivantes complètent les métriques.
 
 Les requêtes simples et les requêtes de traçabilité passent dans l'immense majorité des cas : elles se traduisent en Cypher sans difficulté et renvoient un sous-graphe que la génération restitue fidèlement. Nos tests se sont heurtés davantage aux recettes multi-plantes et aux questions formulées indirectement. La conversion en requête Cypher échoue alors plus souvent, ou bien la requête générée est trop large et le modèle peine à trier ce qui revient. \TODOchapo{décompter les échecs des 50 questions par type de défaillance, sur trois lignes : (1) génération de requête Cypher (erreur, requête vide ou mal ciblée) ; (2) sélection des faits (sous-graphe trop large ou trop étroit) ; (3) rédaction (réponse dépassant les faits du graphe). Donner les nombres, totaliser, et recouper avec le tableau \texttt{tab:res\_rag\_familles}.}
 
@@ -191,7 +191,7 @@ Nous avons soumis l'application à \TODOchapo{nombre exact de participants, ex. 
 
 Les résultats par critère figurent au tableau \ref{tab:res_web}.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Résultats de l'évaluation de l'application web}
 \label{tab:res_web}
@@ -210,7 +210,7 @@ Performance & Mesure du temps de réponse & \TODOchapo{temps moyen en secondes, 
 \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
 \TODOchapo{Schéma à produire : histogramme horizontal des scores moyens du questionnaire, 3 barres seulement (facilité d'utilisation, compréhension, utilité), échelle de 1 à 5 en abscisse, valeurs chiffrées à l'extérieur de chaque barre. La performance, mesurée en secondes, n'a pas la même échelle : la laisser de côté ici (elle est au tableau \ref{tab:res_web}). Outil Excel, LibreOffice ou matplotlib ; PNG 150 dpi, titre et axes en français, enregistrer sous \texttt{images/resultats\_questionnaire.png}.}\\[2mm]
@@ -242,9 +242,9 @@ Les résultats des trois sections précédentes décrivent ce que le système fa
 \subsection{Confrontation aux objectifs de la recherche}
 \label{subsec:discussion_objectifs}
 
-La première question de recherche demandait d'identifier les ontologies du domaine et d'en retenir la plus adaptée au contexte burkinabè. Nous avons noté cinq ontologies sur une même grille au chapitre \ref{chap:materiel_methodologie} ; \textit{ontoMEDTRAD} y a obtenu le score le plus élevé, 4.7 contre 3.7 pour \textit{WATRIMed}, le meilleur concurrent. Notre choix est documenté et reproductible. Ses limites sont connues elles aussi : le modèle retenu n'est pas le plus riche de tous, c'est celui qui combine l'accès, l'ancrage régional et la documentation.
+La première question de recherche demandait d'identifier les ontologies du domaine et d'en retenir la plus adaptée au contexte burkinabè. Nous avons noté cinq ontologies sur une même grille au chapitre \ref{chap:materiel_methodologie}. \textit{ontoMEDTRAD} y a obtenu le score le plus élevé, 4.7 contre 3.7 pour \textit{WATRIMed}, le meilleur concurrent. Notre choix est documenté et reproductible. Ses limites sont connues elles aussi : le modèle retenu n'est pas le plus riche de tous, c'est celui qui combine l'accès, l'ancrage régional et la documentation.
 
-La deuxième question portait sur les adaptations nécessaires et sur la garantie de la traçabilité. Les cinq ensembles de classes que nous avons ajoutés, les propriétés de noms vernaculaires et les quatre relations de rattachement que nous avons créées répondent au premier volet. Le contrôle d'échantillon de la section \ref{subsec:res_tracabilite} répond au second, sous réserve du taux \TODOchapo{reprendre ici, en toutes lettres, le taux de conformité de la section IV.1 (ex. « taux de conformité de 98\,\% sur 50 contrôles »)} retenu.
+La deuxième question portait sur les adaptations nécessaires et sur la garantie de la traçabilité. Les cinq ensembles de classes que nous avons ajoutés, les propriétés de noms vernaculaires et les cinq relations de rattachement que nous avons créées répondent au premier volet. Le contrôle d'échantillon de la section \ref{subsec:res_tracabilite} répond au second, sous réserve du taux \TODOchapo{reprendre ici, en toutes lettres, le taux de conformité de la section IV.1 (ex. « taux de conformité de 98\,\% sur 50 contrôles »)} retenu.
 
 La troisième question concernait l'exploitation de l'ontologie par un système RAG au service de l'accès en langage naturel. Le système est fonctionnel : il convertit une question en requête Cypher, interroge le graphe et rédige une réponse sourcée. La qualité de cet accès se mesure aux métriques du tableau \ref{tab:res_rag}, encore \TODOchapo{recopier ici les quatre valeurs du tableau \texttt{tab:res\_rag}, ex. « précision 0,87, rappel 0,79, F1 0,83, couverture 48/50 » : sinon remplacer « encore » par la formulation adaptée}.
 
@@ -269,7 +269,7 @@ Six limites encadrent les résultats qui précèdent. Elles ne sont pas des dét
 \begin{enumerate}[label=\arabic*.]
     \item \textbf{L'évaluation a été conduite par nous-mêmes, les concepteurs du système.} Aucun évaluateur extérieur n'a été mêlé aux tests, et le panel, réduit \TODOchapo{donner le chiffre exact et sa composition, ex. « 12 participants : 6 étudiants, 4 chercheurs, 2 tradipraticiens », plus les conditions de passation (lieu, durée)}, n'a pas la taille qui permettrait des comparaisons statistiques solides. Un utilisateur familier du domaine et de l'outil n'aura pas rencontré les mêmes difficultés qu'un premier venant.
 
-    \item \textbf{Le jeu de 50 questions part du même corpus que l'ontologie.} Nous avons tiré les questions des documents qui ont servi à construire le système ; elles mesurent donc surtout ce qu'il sait déjà faire. Des questions posées par d'autres utilisateurs, sur des documents absents du corpus, donneraient probablement des scores moins élevés.
+    \item \textbf{Le jeu de 50 questions part du même corpus que l'ontologie.} Nous avons tiré les questions des documents qui ont servi à construire le système. Elles mesurent donc surtout ce qu'il sait déjà faire. Des questions posées par d'autres utilisateurs, sur des documents absents du corpus, donneraient probablement des scores moins élevés.
 
     \item \textbf{Les niveaux de preuve sont hérités des sources.} Nous les avons rapportés tels quels, sans réévaluation indépendante, comme nous l'avons dit en phase 5 et au chapitre \ref{chap:conception_developpement}. Un usage classé « traditionnel » par sa source le reste dans notre base, même si l'étude qui le rapporte ne le vérifie pas.
 

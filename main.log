@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  13 OCT 2026 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  19 OCT 2026 10:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/sloug/OneDrive/Documents/redaction/main.tex
-(c:/Users/sloug/OneDrive/Documents/redaction/main.tex
+**c:/Users/sloug/OneDrive/Documents/master/redaction/main.tex
+(c:/Users/sloug/OneDrive/Documents/master/redaction/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
@@ -986,7 +986,7 @@ Package hyperref Info: Link coloring OFF on input line 52.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 56.
  (parts/gard.tex
-<images/logo.png, id=361, 310.15875pt x 211.79124pt>
+<images/logo.png, id=194, 310.15875pt x 211.79124pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 12.
@@ -1063,7 +1063,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 18.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 18.
-<images/ujkz.jpeg, id=362, 417.56pt x 417.56pt>
+<images/ujkz.jpeg, id=195, 417.56pt x 417.56pt>
 File: images/ujkz.jpeg Graphic file (type jpg)
 <use images/ujkz.jpeg>
 Package pdftex.def Info: images/ujkz.jpeg  used on input line 29.
@@ -1214,14 +1214,16 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 2.
  [8
 
-] [9])
+])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [10]
+ [9] [10
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 97.
  (chapters/introduction.tex
-<images/repartition_connaissances.png, id=584, 701.62125pt x 349.305pt>
+<images/repartition_connaissances.png, id=334, 701.62125pt x 349.305pt>
 File: images/repartition_connaissances.png Graphic file (type png)
 <use images/repartition_connaissances.png>
 Package pdftex.def Info: images/repartition_connaissances.png  used on input line 16.
@@ -1233,12 +1235,11 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  [1
 
-
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 12.0pt on input line 30.
  [2{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc} <./images/repartition_connaissances.png>] [3]
-<images/methodologie.png, id=618, 632.96475pt x 338.4645pt>
+<images/methodologie.png, id=368, 632.96475pt x 338.4645pt>
 File: images/methodologie.png Graphic file (type png)
 <use images/methodologie.png>
 Package pdftex.def Info: images/methodologie.png  used on input line 81.
@@ -1250,13 +1251,20 @@ Chapitre I.
 ] [9] [10]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
 (Font)              scaled to size 12.0pt on input line 109.
-<images/niveaux_preuve.png, id=699, 575.14874pt x 459.51675pt>
+
+
+LaTeX Warning: Reference `subsec:proprietes_ajoutees' on page 11 undefined on input line 113.
+
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 11 undefined on input line 113.
+
+<images/niveaux_preuve.png, id=447, 575.14874pt x 459.51675pt>
 File: images/niveaux_preuve.png Graphic file (type png)
 <use images/niveaux_preuve.png>
 Package pdftex.def Info: images/niveaux_preuve.png  used on input line 117.
 (pdftex.def)             Requested size: 338.58632pt x 270.52354pt.
- [11 <./images/niveaux_preuve.png>]
-<images/pile_semantique.png, id=719, 289.08pt x 305.34074pt>
+[11 <./images/niveaux_preuve.png>]
+<images/pile_semantique.png, id=467, 289.08pt x 305.34074pt>
 File: images/pile_semantique.png Graphic file (type png)
 <use images/pile_semantique.png>
 Package pdftex.def Info: images/pile_semantique.png  used on input line 157.
@@ -1282,7 +1290,7 @@ LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
  [24{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [25] [26] [27] [28] [29]) [30]
 Chapitre II.
 (chapters/chapter2.tex
-<images/flux_corpus.png, id=984, 786.5385pt x 283.0575pt>
+<images/flux_corpus.png, id=732, 786.5385pt x 283.0575pt>
 File: images/flux_corpus.png Graphic file (type png)
 <use images/flux_corpus.png>
 Package pdftex.def Info: images/flux_corpus.png  used on input line 39.
@@ -1292,39 +1300,86 @@ Package pdftex.def Info: images/flux_corpus.png  used on input line 39.
 ] [32 <./images/flux_corpus.png>] [33]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 116.
-<images/dispositif_technique.png, id=1016, 607.068pt x 299.31825pt>
+<images/dispositif_technique.png, id=764, 607.068pt x 299.31825pt>
 File: images/dispositif_technique.png Graphic file (type png)
 <use images/dispositif_technique.png>
 Package pdftex.def Info: images/dispositif_technique.png  used on input line 146.
 (pdftex.def)             Requested size: 386.95897pt x 190.79117pt.
- [34] [35 <./images/dispositif_technique.png>] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]) [48]
+ [34] [35 <./images/dispositif_technique.png>] [36] [37] [38] [39] [40] [41]
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 42 undefined on input line 552.
+
+[42]
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 43 undefined on input line 605.
+
+[43] [44]
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 45 undefined on input line 683.
+
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 45 undefined on input line 693.
+
+[45] [46] [47]
+
+LaTeX Warning: Reference `chap:resultats_discussion' on page 48 undefined on input line 840.
+
+) [48]
 Chapitre III.
 (chapters/chapter3.tex
-<images/ontoMetrad-1.png, id=1142, 434.8245pt x 492.03825pt>
+
+LaTeX Warning: Reference `fig:ontomedtrad_initiale' on page 49 undefined on input line 31.
+
+<images/ontoMetrad-1.png, id=884, 434.8245pt x 492.03825pt>
 File: images/ontoMetrad-1.png Graphic file (type png)
 <use images/ontoMetrad-1.png>
 Package pdftex.def Info: images/ontoMetrad-1.png  used on input line 37.
 (pdftex.def)             Requested size: 227.3381pt x 257.25032pt.
-<images/ontoMetrad-2.png, id=1143, 440.24475pt x 525.162pt>
+<images/ontoMetrad-2.png, id=885, 440.24475pt x 525.162pt>
 File: images/ontoMetrad-2.png Graphic file (type png)
 <use images/ontoMetrad-2.png>
 Package pdftex.def Info: images/ontoMetrad-2.png  used on input line 42.
 (pdftex.def)             Requested size: 227.3381pt x 271.18666pt.
- [49
+[49
 
-] [50 <./images/ontoMetrad-1.png> <./images/ontoMetrad-2.png>]
-<images/ontology-conserve.png, id=1158, 464.937pt x 471.56175pt>
+]
+
+LaTeX Warning: Reference `tab:concepts_retenus_ecartes' on page 50 undefined on input line 49.
+
+[50 <./images/ontoMetrad-1.png> <./images/ontoMetrad-2.png>]
+
+LaTeX Warning: Reference `fig:ontologie_conservee' on page 51 undefined on input line 78.
+
+<images/ontology-conserve.png, id=902, 464.937pt x 471.56175pt>
 File: images/ontology-conserve.png Graphic file (type png)
 <use images/ontology-conserve.png>
 Package pdftex.def Info: images/ontology-conserve.png  used on input line 82.
 (pdftex.def)             Requested size: 338.58632pt x 343.43132pt.
- [51]
-<images/ontology-adaptee.png, id=1164, 473.3685pt x 516.12825pt>
+[51]
+
+LaTeX Warning: Reference `tab:stats_ontologie' on page 52 undefined on input line 87.
+
+<images/ontology-adaptee.png, id=908, 473.3685pt x 516.12825pt>
 File: images/ontology-adaptee.png Graphic file (type png)
 <use images/ontology-adaptee.png>
 Package pdftex.def Info: images/ontology-adaptee.png  used on input line 116.
 (pdftex.def)             Requested size: 338.58632pt x 369.1864pt.
- [52 <./images/ontology-conserve.png>] [53 <./images/ontology-adaptee.png>] [54] [55]
+[52 <./images/ontology-conserve.png>]
+
+LaTeX Warning: Reference `tab:classes_ajoutees' on page 53 undefined on input line 124.
+
+[53 <./images/ontology-adaptee.png>]
+
+LaTeX Warning: Reference `tab:proprietes_ajoutees' on page 54 undefined on input line 152.
+
+[54]
+
+LaTeX Warning: Reference `tab:relations_ajoutees' on page 55 undefined on input line 180.
+
+
+LaTeX Warning: Reference `tab:Mapping_noeuds' on page 55 undefined on input line 219.
+
+[55]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 275.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1340,16 +1395,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--298
 \T1/txtt/bx/n/12 MATCH ()-[r]->() RETURN type(r), count(*) ORDER BY count(*) DESC
  []
 
-[57] [58] [59] [60] [61] [62]
+[57] [58] [59]
+
+LaTeX Warning: Reference `fig:architecture_rag' on page 60 undefined on input line 455.
+
+[60] [61]
+
+LaTeX Warning: Reference `chap:resultats_discussion' on page 62 undefined on input line 513.
+
+
+LaTeX Warning: Reference `tab:fonctionnalites' on page 62 undefined on input line 549.
+
+[62]
 Overfull \vbox (512.10204pt too high) has occurred while \output is active []
 
- [63]) [64]
+ [63]
+
+LaTeX Warning: Reference `chap:resultats_discussion' on page 64 undefined on input line 617.
+
+) [64]
 Chapitre IV.
-(chapters/chapter4.tex [65
+(chapters/chapter4.tex
 
-] [66] [67] [68] [69] [70] [71] [72]) [73] (chapters/conclusion.tex [74
+LaTeX Warning: Reference `tab:stats_ontologie' on page 65 undefined on input line 33.
 
-]) [75]
+
+LaTeX Warning: Reference `subsec:extraction_llm' on page 65 undefined on input line 35.
+
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 65 undefined on input line 35.
+
+[65
+
+]
+
+LaTeX Warning: Reference `subsec:tracabilite_reponses' on page 66 undefined on input line 47.
+
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 66 undefined on input line 47.
+
+
+LaTeX Warning: Reference `tab:res_ontologie' on page 66 undefined on input line 58.
+
+[66]
+
+LaTeX Warning: Reference `tab:res_rag' on page 67 undefined on input line 98.
+
+[67]
+
+LaTeX Warning: Reference `tab:res_rag_familles' on page 68 undefined on input line 119.
+
+
+LaTeX Warning: Reference `tab:volumes_requetes' on page 68 undefined on input line 143.
+
+[68] [69]
+
+LaTeX Warning: Reference `tab:res_web' on page 70 undefined on input line 192.
+
+
+LaTeX Warning: Reference `tab:res_web' on page 70 undefined on input line 219.
+
+[70]
+
+LaTeX Warning: Reference `subsec:res_tracabilite' on page 71 undefined on input line 247.
+
+
+LaTeX Warning: Reference `tab:res_rag' on page 71 undefined on input line 249.
+
+
+LaTeX Warning: Reference `tab:fonctionnalites' on page 71 undefined on input line 251.
+
+
+LaTeX Warning: Reference `tab:res_web' on page 71 undefined on input line 251.
+
+[71]
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 72 undefined on input line 274.
+
+[72]
+
+LaTeX Warning: Reference `tab:res_web' on page 73 undefined on input line 305.
+
+) [73] (chapters/conclusion.tex
+
+LaTeX Warning: Reference `chap:conception_developpement' on page 74 undefined on input line 5.
+
+
+LaTeX Warning: Reference `chap:resultats_discussion' on page 74 undefined on input line 5.
+
+
+LaTeX Warning: Reference `tab:res_ontologie' on page 74 undefined on input line 11.
+
+[74
+
+]
+
+LaTeX Warning: Reference `tab:res_rag' on page 75 undefined on input line 13.
+
+
+LaTeX Warning: Reference `tab:res_web' on page 75 undefined on input line 15.
+
+) [75]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 136.
  [76
@@ -1359,24 +1505,37 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C6D6B5541809F53CC45A20F99387C8B8;20361.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 55E0ADEDB48DBCCF3B7B0804044911AF;12316
+(rerunfilecheck)             After:  C6D6B5541809F53CC45A20F99387C8B8;20361.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28469 strings out of 467871
- 492858 string characters out of 5418377
- 1380125 words of memory out of 5000000
- 56184 multiletter control sequences out of 15000+600000
+ 28428 strings out of 467871
+ 492373 string characters out of 5418377
+ 1375309 words of memory out of 5000000
+ 56143 multiletter control sequences out of 15000+600000
  740359 words of font info for 329 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,11n,79p,4593b,2334s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,11n,79p,4600b,2334s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on main.pdf (92 pages, 1470552 bytes).
+Output written on main.pdf (92 pages, 1433685 bytes).
 PDF statistics:
- 1613 PDF objects out of 1728 (max. 8388607)
+ 1383 PDF objects out of 1440 (max. 8388607)
  428 named destinations out of 1000 (max. 500000)
- 44813 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 44477 words of extra memory for PDF output out of 51595 (max. 10000000)
 

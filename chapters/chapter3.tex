@@ -96,7 +96,7 @@ Le tableau \ref{tab:stats_ontologie} met en regard l'ontologie d'origine et l'on
 \hline
 Concepts (classes) & 144 & 69 (40 ajoutées) \\
 \hline
-Propriétés associatives & 76 & 20 (15 ajoutées) \\
+Propriétés objet & 76 & 25 (20 ajoutées) \\
 \hline
 Propriétés de données & 16 & 20 (15 ajoutées) \\
 \hline
@@ -129,26 +129,26 @@ Nous avons adapté le schéma initial en ajoutant plusieurs ensembles de classes
 \label{tab:classes_ajoutees}
 \begin{tabular}{|L{4.2cm}|L{5.4cm}|L{3.4cm}|}
 \hline
-\textbf{Classe ajoutée} & \textbf{Ce qu'elle représente} & \textbf{Exemples} \\
+\textbf{Ensemble de classes ajouté} & \textbf{Ce qu'il représente} & \textbf{Exemples de concepts} \\
 \hline
-Maladies et indications thérapeutiques & Catégories de maladie documentées dans les sources & Valeurs à instancier uniquement à partir du corpus \\
+Maladies et indications thérapeutiques & Catégories et indications du domaine & Concepts définis dans le schéma; données instanciées depuis les sources \\
 \hline
-Noms vernaculaires & Désignations des plantes dans les langues du pays & Mooré, dioula, fulfuldé \\
+Noms vernaculaires & Désignations locales et langue associée & Nom textuel et code de langue, si fournis \\
 \hline
 Localisation & Localités et régions pour structurer les données géographiques & Classes de localité et région ; individus hors de l'ontologie \\
 \hline
-Niveaux de preuve & Catégories de preuve rapportées par les sources & Traditionnel, \textit{in vitro}, \textit{in vivo}, clinique \\
+Niveaux de preuve & Qualification telle que rapportée par la source & Traditionnel, \textit{in vitro}, \textit{in vivo}, clinique \\
 \hline
 Sources et traçabilité & Références et repères permettant de retrouver l'information & DOI, page, section et source \\
 \hline
 Préparations, parties et administration & Organes végétaux, procédés, formes et modes d'administration & Classes génériques, sans recettes instanciées \\
 \hline
-Phytochimie et sécurité & Composés, activités pharmacologiques et effets toxicologiques rapportés & Valeurs à rattacher à leurs sources \\
+Phytochimie et sécurité & Composés, activités pharmacologiques et effets toxicologiques rapportés & Classes de composés et de risques; faits sourcés \\
 \hline
 \end{tabular}
 \end{table}
 
-Les classes ajoutées s'insèrent dans des hiérarchies existantes lorsque cela est pertinent : les parties végétales spécialisent \textit{PartieDePlante}, les formes galéniques et procédés sont rattachés à \textit{Preparation} ou à \textit{ModeDePreparation}, et les catégories de métabolites spécialisent \textit{ComposeChimique}. Les classes \textit{NomVernaculaire}, \textit{NiveauDePreuve}, \textit{UsageTherapeutique} et \textit{ActivitePharmacologique} structurent respectivement les désignations locales, la qualification rapportée par les sources, les usages et les résultats pharmacologiques. Il s'agit de classes de schéma : leurs individus et les faits qui les relient sont destinés à la base de connaissances, et ne sont pas déclarés dans le fichier d'ontologie. Le fichier adapté déclare 69 classes : 29 sont déjà présentes dans l'ontologie conservée et 40 ont été ajoutées dans le cadre de l'adaptation.
+Les classes ajoutées s'insèrent dans des hiérarchies existantes lorsque cela est pertinent : les parties végétales spécialisent \textit{PartieDePlante}, les formes galéniques et procédés sont rattachés à \textit{Preparation} ou à \textit{ModeDePreparation}, et les catégories de métabolites spécialisent \textit{ComposeChimique}. Les classes \textit{NomVernaculaire}, \textit{NiveauDePreuve}, \textit{UsageTherapeutique} et \textit{ActivitePharmacologique} structurent respectivement les désignations locales, la qualification rapportée par les sources, les usages et les résultats pharmacologiques. Il s'agit de classes de schéma : leurs individus et les faits qui les relient sont destinés à la base de connaissances, et ne sont pas déclarés dans le fichier d'ontologie. Le fichier adapté déclare 69 classes : 29 sont présentes dans l'ontologie conservée et 40 sont ajoutées par l'adaptation.
 
 \subsection{Propriétés ajoutées}
 \label{subsec:proprietes_ajoutees}
@@ -195,15 +195,15 @@ Les relations de traçabilité définies dans la version précédente sont compl
 \hline
 \textbf{Relation} & \textbf{Signification} \\
 \hline
-\textit{provientDe} & Rattache une connaissance à la source scientifique qui la rapporte \\
+\textit{estDocumenteePar} & Relation générique rattachant une ressource ou affirmation à sa source scientifique \\
 \hline
-\textit{estDocumenteeDans} & Relie une plante aux documents qui la décrivent \\
+\textit{estDocumenteeDans} & Sous-propriété : relie une plante aux documents qui la décrivent \\
 \hline
 \textit{aPourNomVernaculaire} & Rattache une plante à ses désignations locales \\
 \hline
 \textit{estLocaliseeA} & Associe une plante à sa localisation géographique (\textit{Localite}) \\
 \hline
-\textit{aPourNiveauDePreuve} & Rattache un usage au niveau de preuve déclaré par sa source \\
+\textit{provientDe}, \textit{aPourNiveauDePreuve} & Rattachent un usage à sa source et au niveau déclaré \\
 \hline
 \textit{aPourPartieUtilisee}, \textit{aPourPreparation} & Relient un usage à la partie végétale et à la préparation rapportées \\
 \hline
@@ -216,9 +216,9 @@ Les relations de traçabilité définies dans la version précédente sont compl
 \end{tabular}
 \end{table}
 
-Le niveau de preuve est attaché à l'usage documenté, et non interprété comme une validation indépendante de l'efficacité. Il peut être conservé sous forme textuelle avec \textit{niveauPreuve} et relié à la classe \textit{NiveauDePreuve} au moyen de \textit{aPourNiveauDePreuve}. Les relations vers les parties, préparations, activités et risques structurent les faits rapportés sans les transformer en recommandations thérapeutiques.
+Le niveau de preuve est attaché à l'usage documenté, et non interprété comme une validation indépendante de l'efficacité. Il peut être conservé sous forme textuelle avec \textit{niveauPreuve} et relié à la classe \textit{NiveauDePreuve} au moyen de \textit{aPourNiveauDePreuve}. La provenance est généralisée par \textit{estDocumenteePar}; les relations spécialisées de provenance en sont des sous-propriétés. Les relations vers les parties, préparations, activités et risques structurent les faits rapportés sans les transformer en recommandations thérapeutiques.
 
-Les propriétés objet assurent ces liens entre classes. Notamment, \textit{provientDe} rattache un usage à sa source, \textit{estDocumenteeDans} relie une plante à une référence, \textit{aPourNomVernaculaire} relie une plante à un nom local, et \textit{estLocaliseeA} décrit sa localisation. Les relations \textit{aPourPartieUtilisee}, \textit{aPourPreparation} et \textit{aPourMaladieCible} précisent le contenu d'un usage ; \textit{contientCompose}, \textit{presenteActivite} et \textit{presenteEffetToxicologique} couvrent les informations phytochimiques et toxicologiques rapportées. Les données extraites restent associées à leurs sources et à leur contexte.
+Les propriétés objet assurent ces liens entre classes. La version adaptée introduit \textit{estDocumenteePar}, relation générique de provenance vers \textit{SourceScientifique}. Les relations spécialisées \textit{provientDe} (usage), \textit{estDocumenteeDans} (plante), \textit{estNomVernaculaireDocumentePar}, \textit{estActiviteDocumenteePar}, \textit{estComposeDocumentePar} et \textit{estEffetToxicologiqueDocumentePar} en sont des sous-propriétés. Le TTL adapté déclare actuellement 25 propriétés objet au total : les 5 conservées et 20 présentes uniquement dans la version adaptée. Ainsi, la provenance est interrogeable uniformément tout en conservant la sémantique propre à chaque type de fait. Les relations \textit{aPourPartieUtilisee}, \textit{aPourPreparation} et \textit{aPourMaladieCible} précisent le contenu d'un usage ; \textit{contientCompose}, \textit{presenteActivite} et \textit{presenteEffetToxicologique} couvrent respectivement les composés, activités et effets rapportés. Les sources et passages ne constituent pas des preuves d’efficacité clinique en eux-mêmes.
 
 % ============================================================
 % III.2. BASE DE CONNAISSANCES ORIENTÉE GRAPHE
@@ -232,7 +232,7 @@ L'ontologie fournit le modèle. Il fallait une base capable de le recevoir et de
 \subsection{Du modèle ontologique au graphe}
 \label{subsec:mapping_graphe}
 
-Nous avons organisé la base en huit types de nœuds : \textit{Plante}, \textit{Maladie}, \textit{Usage}, \textit{Partie}, \textit{Préparation}, \textit{Source}, \textit{Compos\'eChimique} et \textit{R\'egion}. Chaque nœud correspond à une classe de l'ontologie adaptée. Chaque propriété du graphe reprend une propriété du modèle. Le tableau \ref{tab:Mapping_noeuds} donne cette correspondance.
+Nous organiserons la base Neo4j conformément au schéma de l'ontologie adaptée : chaque type de nœud représentera une classe et chaque relation du graphe une propriété objet de cette ontologie. Le graphe ne constituera donc pas un modèle parallèle simplifié : il matérialisera le modèle ontologique, avec les classes, propriétés et relations effectivement définies dans \texttt{ontoMEDTRAD-adapte.ttl}. Les données extraites des documents seront chargées comme individus et faits dans Neo4j, tout en conservant leur lien aux sources. Le tableau \ref{tab:Mapping_noeuds} présente les principaux types de nœuds envisagés.
 
 \begin{table}[H]
 \centering
@@ -248,20 +248,20 @@ Nous avons organisé la base en huit types de nœuds : \textit{Plante}, \textit{
 \hline
 \textit{Usage} & \textit{UsageTherapeutique} & Usage thérapeutique, niveau de preuve \\
 \hline
-\textit{Partie} & \textit{PartieDePlante} & Partie utilisée (feuille, racine, écorce\dots) \\
+\textit{Partie} & \textit{PartieDePlante} & Partie utilisée, issue des sous-classes déclarées dans l'ontologie \\
 \hline
-\textit{Préparation} & \textit{ModeDePreparation} & Mode de préparation (décoction, macération\dots) \\
+\textit{Préparation} & \textit{Preparation} et \textit{ModeDePreparation} & Procédé, forme galénique et éléments de préparation \\
 \hline
 \textit{Source} & \textit{SourceScientifique} (classe ajoutée) & Auteur, année, DOI, page, section \\
 \hline
 \textit{Compos\'eChimique} & \textit{ComposeChimique} & Nom du composé \\
 \hline
-\textit{R\'egion} & \textit{RegionBF} (classe ajoutée) & Nom de la région, province, coordonnées GPS \\
+\textit{R\'egion} & \textit{RegionBF} & Localisation et coordonnées, si rapportées \\
 \hline
 \end{tabular}
 \end{table}
 
-Sept types de relations relient ces nœuds : \texttt{TRAITE}, \texttt{UTILISE}, \texttt{PROVIENT\_DE}, \texttt{A\_POUR\_PARTIE}, \texttt{A\_POUR\_PREPARATION}, \texttt{CONTIENT} et \texttt{EST\_LOCALISEE\_A}. Quatre propriétés portent sur les nœuds eux-mêmes : le nom, le niveau de preuve, le DOI et les \textit{coordonn\'eesGPS}.
+Les noms des relations du graphe seront alignés sur les propriétés objet de l'ontologie adaptée, notamment \textit{estRapportePour}, \textit{aPourMaladieCible}, \textit{aPourPartieUtilisee}, \textit{aPourPreparation}, les sous-propriétés de \textit{estDocumenteePar}, \textit{aPourNiveauDePreuve}, \textit{contientCompose}, \textit{presenteActivite}, \textit{presenteEffetToxicologique} et \textit{estLocaliseeA}. Les données descriptives seront portées par les propriétés de données déclarées dans le TTL. La traduction technique vers les noms de relations Neo4j devra conserver exactement la sémantique, le domaine et la portée du modèle ontologique.
 
 \begin{table}[H]
 \centering
@@ -271,29 +271,29 @@ Sept types de relations relient ces nœuds : \texttt{TRAITE}, \texttt{UTILISE}, 
 \hline
 \textbf{Relation} & \textbf{Sens retenu} \\
 \hline
-\texttt{TRAITE} & \TODOchapo{à confirmer sur le script d'import réellement exécuté : sens exact de la relation, sous la forme (nœud source) \(\rightarrow\) (nœud cible), par exemple (Usage) \(\rightarrow\) (Maladie) ou (Plante) \(\rightarrow\) (Maladie). Écrire cette flèche dans cette colonne, puis vérifier que les requêtes du § suivant en découlent.} \\
+\textit{estRapportePour} & \textit{Plante} \(\rightarrow\) \textit{UsageTherapeutique} : rattache une plante à un usage documenté \\
 \hline
-\texttt{UTILISE} & \TODOchapo{à confirmer sur le script d'import réellement exécuté : sens exact, sous la forme (nœud source) \(\rightarrow\) (nœud cible), par exemple (Préparation) \(\rightarrow\) (Plante) ou (Usage) \(\rightarrow\) (Plante). Écrire cette flèche dans cette colonne.} \\
+\textit{aPourMaladieCible} & \textit{UsageTherapeutique} \(\rightarrow\) \textit{Maladie} : maladie ou indication rapportée \\
 \hline
-\texttt{PROVIENT\_DE} & Rattache une connaissance à sa source scientifique \\
+\textit{aPourPartieUtilisee} & \textit{UsageTherapeutique} \(\rightarrow\) \textit{PartieDePlante} : partie explicitement rapportée \\
 \hline
-\texttt{A\_POUR\_PARTIE} & Associe une plante à la partie utilisée \\
+\textit{aPourPreparation} & \textit{UsageTherapeutique} \(\rightarrow\) \textit{Preparation} : préparation ou procédé documenté \\
 \hline
-\texttt{A\_POUR\_PREPARATION} & Associe une plante à son mode de préparation \\
+\textit{provientDe} & \textit{UsageTherapeutique} \(\rightarrow\) \textit{SourceScientifique} : source du fait rapporté \\
 \hline
-\texttt{CONTIENT} & Associe une plante à ses composés chimiques \\
+\textit{aPourNiveauDePreuve} & \textit{UsageTherapeutique} \(\rightarrow\) \textit{NiveauDePreuve} : niveau déclaré par la source \\
 \hline
-\texttt{EST\_LOCALISEE\_A} & Localise une plante dans une région \\
+\textit{contientCompose}, \textit{presenteActivite}, \textit{presenteEffetToxicologique} & Liens vers les composés, activités et effets documentés \\
 \hline
 \end{tabular}
 \end{table}
 
-\TODOchapo{Schéma définitif à figer à partir des scripts d'import \textbf{effectivement} exécutés (fichiers .cql ou .cypher du projet) : pour chacune des 7 relations, la flèche exacte source \(\rightarrow\) cible. Si le sens réel diffère des hypothèses des deux tableaux ci-dessus, corriger ces tableaux en même temps. Format : liste complète à remplacer par cette phrase, ou petite figure en 7 flèches que l'on glissera ici (fichier \texttt{images/schema\_graphe.png}).}
+Le mapping ci-dessus reprend le sens déclaré par les domaines et portées de l'ontologie adaptée. Les noms physiques des labels, relations et propriétés Neo4j seront maintenus en correspondance documentée avec les identifiants OWL, afin de préserver cette équivalence lors du chargement et des requêtes.
 
 \subsection{Import et peuplement}
 \label{subsec:import_peuplement}
 
-L'import suit un chemin en deux temps. Les connaissances extraites par l'intelligence artificielle, d'abord, sont produites en JSON puis converties en CSV selon le modèle de l'ontologie, une table par type de nœud et une table par type de relation. Neo4j, ensuite, charge ces fichiers par des requêtes Cypher qui recréent nœuds et relations. Aucune information absente des sources n'est versée dans le graphe.
+L'import suit un processus reproductible en plusieurs étapes. Les extractions JSON sont d'abord validées et normalisées sans perdre les formulations ni les références de la source. Elles sont ensuite transformées en données tabulaires alignées sur les classes et propriétés de l'ontologie adaptée, avant leur chargement dans Neo4j par des requêtes Cypher paramétrées et idempotentes. Chaque fait conservé est relié à sa source documentaire et, lorsque l'extraction le fournit, à la page, la section ou au tableau d'origine. Les cas ambigus ou contradictoires sont mis en attente de validation plutôt que résolus par déduction. Aucune information absente des documents n'est versée dans le graphe.
 
 \begin{quote}
 \begin{verbatim}

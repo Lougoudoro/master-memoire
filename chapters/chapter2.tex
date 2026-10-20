@@ -561,7 +561,7 @@ Le constat est mitigé. Les concepts de base sont bien couverts et l'ontologie e
 
 \subsubsection{Ajout de classes}
 
-La comparaison des fichiers du schéma adapté et du schéma conservé dénombre 40 classes ajoutées. Elles couvrent notamment les noms vernaculaires, les usages thérapeutiques, les niveaux de preuve, les sources, les préparations, des parties végétales complémentaires, les composés chimiques, les activités pharmacologiques et les effets toxicologiques. Ces classes ont été définies dans le cadre de l'adaptation afin de couvrir les besoins de représentation identifiés pour l'étude ; elles ne préchargent pas de connaissances factuelles ni d'instances.
+La comparaison des fichiers du schéma adapté et du schéma conservé dénombre 40 classes ajoutées. Le TTL adapté déclare également 25 propriétés objet au total, dont 20 absentes du schéma conservé, et 20 propriétés de données, dont 15 ajoutées. Les classes ajoutées couvrent notamment les noms vernaculaires, les usages thérapeutiques, les niveaux de preuve, les sources, les préparations, des parties végétales complémentaires, les composés chimiques, les activités pharmacologiques et les effets toxicologiques. Ces éléments ont été définis dans le cadre de l'adaptation afin de couvrir les besoins de représentation identifiés pour l'étude ; ils ne préchargent pas de connaissances factuelles ni d'instances.
 
 Ces ajouts permettent de structurer des connaissances locales et scientifiques à différents niveaux. Ils ne préchargent pas les valeurs (par exemple les noms, pathologies, régions ou composés) : celles-ci doivent provenir des sources du corpus et être enregistrées dans la base de connaissances, avec leur provenance.
 
@@ -573,7 +573,7 @@ L'enrichissement ainsi obtenu saisit des informations fines (noms vernaculaires,
 
 \subsubsection{Modification de relations}
 
-Nous avons structuré les liens entre plante, usage, maladie, partie utilisée, préparation et source, et ajouté des relations pour représenter la localisation, les noms vernaculaires, les composés, les activités pharmacologiques et les effets toxicologiques rapportés. \textit{aPourNiveauDePreuve} rattache un usage à son niveau de preuve déclaré par la source. Ces relations ne signifient pas que les usages ou activités constituent des recommandations thérapeutiques ni une validation clinique. Les identifiants des propriétés dans le fichier Turtle sont écrits sans accents (par exemple \textit{estLocaliseeA} et \textit{estDocumenteeDans}) ; les labels en français assurent leur présentation lisible.
+Nous avons structuré les liens entre plante, usage, maladie, partie utilisée et préparation, puis généralisé la traçabilité documentaire. La propriété objet \textit{estDocumenteePar} relie les ressources du graphe à une source scientifique; des sous-propriétés spécialisées permettent de préciser si la source documente une plante, un usage, un nom vernaculaire, une activité, un composé ou un effet toxicologique. \textit{aPourNiveauDePreuve} rattache un usage au niveau déclaré par la source. Ces liens ne signifient pas que les usages ou activités constituent des recommandations thérapeutiques ni une validation clinique.
 
 Ces modifications assurent la traçabilité des connaissances et permettent d'exprimer des relations que le modèle d'origine, fondé sur la relation « est un » et sur la relation partie-tout, ne couvrait pas.
 

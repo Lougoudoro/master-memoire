@@ -6,6 +6,7 @@
 #   = ONTOLOGIE CONSERVÉE (voir ontoMEDTRAD-conserve.ttl)
 #   + concepts pertinents du contexte ethnobotanique burkinabè, notamment
 #     ceux du schéma ontopharma-bf.ttl (classes et propriétés uniquement).
+#   + provenance généralisée reliant toute ressource du graphe à sa source.
 #
 # Les ajouts couvrent maladies, noms vernaculaires, usages, préparations,
 # niveaux de preuve, sources, phytochimie et toxicologie.
@@ -33,7 +34,7 @@
     dcterms:title "ontoMEDTRAD — ontologie adaptée (contexte burkinabè)"@fr ;
     dcterms:description "ontoMEDTRAD (Kouamé, 2018) adaptée au contexte des plantes médicinales du Burkina Faso : concepts conservés + classes et propriétés ajoutées. Instances non portées par l'ontologie (base Neo4j)."@fr ;
     dcterms:source "KOUAME Appoh, thèse de doctorat, Université Gaston Berger de Saint-Louis, 14 avril 2018 (HAL : tel-01842116)" ;
-    owl:versionInfo "3.0 — ontologie adaptée, 2026-10-11" .
+    owl:versionInfo "3.1 — provenance généralisée, 2026-10-20" .
 
 # ============================================================================
 # ─────────────────────────── PARTIE CONSERVÉE ───────────────────────────────
@@ -138,9 +139,25 @@
 :ToxiciteHepatique a owl:Class ; rdfs:subClassOf :EffetToxicologique ; rdfs:label "Toxicité hépatique"@fr .
 :ToxiciteNerveuse a owl:Class ; rdfs:subClassOf :EffetToxicologique ; rdfs:label "Toxicité nerveuse"@fr .
 
-# --- Propriétés objet ajoutées (relations de rattachement) ---
-:provientDe a owl:ObjectProperty ; rdfs:label "provient de"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range :SourceScientifique ; rdfs:comment "Ajoutée : rattache une connaissance à la source scientifique qui la rapporte."@fr .
-:estDocumenteeDans a owl:ObjectProperty ; rdfs:label "est documentée dans"@fr ; rdfs:domain :Plante ; rdfs:range :SourceScientifique ; rdfs:comment "Ajoutée : relie une plante aux documents qui la décrivent."@fr .
+# --- Propriétés objet ajoutées (relations de rattachement et provenance) ---
+:estDocumenteePar a owl:ObjectProperty ;
+    rdfs:label "est documentée par"@fr ;
+    rdfs:domain owl:Thing ;
+    rdfs:range :SourceScientifique ;
+    rdfs:comment "Relation générique de provenance : rattache une ressource ou une affirmation du graphe à la source scientifique qui la documente. Les propriétés plus spécifiques peuvent être conservées comme sous-propriétés."@fr .
+
+:provientDe a owl:ObjectProperty ;
+    rdfs:subPropertyOf :estDocumenteePar ;
+    rdfs:label "provient de"@fr ;
+    rdfs:domain :UsageTherapeutique ;
+    rdfs:range :SourceScientifique ;
+    rdfs:comment "Rattache explicitement un usage thérapeutique à sa source scientifique."@fr .
+:estDocumenteeDans a owl:ObjectProperty ;
+    rdfs:subPropertyOf :estDocumenteePar ;
+    rdfs:label "est documentée dans"@fr ;
+    rdfs:domain :Plante ;
+    rdfs:range :SourceScientifique ;
+    rdfs:comment "Relie une plante aux documents scientifiques qui la décrivent; sous-propriété de la relation générique de provenance."@fr .
 :aPourNomVernaculaire a owl:ObjectProperty ; rdfs:label "a pour nom vernaculaire"@fr ; rdfs:domain :Plante ; rdfs:range :NomVernaculaire ; rdfs:comment "Ajoutée : rattache une plante à ses désignations locales."@fr .
 :estLocaliseeA a owl:ObjectProperty ; rdfs:label "est localisée à"@fr ; rdfs:domain :Plante ; rdfs:range :Localite ; rdfs:comment "Ajoutée : associe une plante à sa localisation géographique."@fr .
 :aPourNiveauDePreuve a owl:ObjectProperty ; rdfs:label "a pour niveau de preuve"@fr ; rdfs:domain :UsageTherapeutique ; rdfs:range :NiveauDePreuve ; rdfs:comment "Ajoutée : rattache un usage au niveau de preuve déclaré par sa source."@fr .
@@ -154,6 +171,33 @@
 :presenteEffetToxicologique a owl:ObjectProperty ; rdfs:label "présente un effet toxicologique rapporté"@fr ; rdfs:domain :Plante ; rdfs:range :EffetToxicologique .
 :presenteActivite a owl:ObjectProperty ; rdfs:label "présente une activité rapportée"@fr ; rdfs:domain :Plante ; rdfs:range :ActivitePharmacologique .
 :estEmployeParEthnie a owl:ObjectProperty ; rdfs:label "est employée par la communauté"@fr ; rdfs:domain :Plante ; rdfs:range :EthniePraticienne ; rdfs:comment "À utiliser uniquement lorsque le contexte ethnobotanique est explicitement rapporté."@fr .
+
+# Rattachements de provenance spécialisés. Leur inclusion dans la hiérarchie
+# générique permet aux requêtes Neo4j de récupérer les sources de tous les types
+# de faits sans effacer la sémantique particulière de chaque relation.
+:estNomVernaculaireDocumentePar a owl:ObjectProperty ;
+    rdfs:subPropertyOf :estDocumenteePar ;
+    rdfs:label "nom vernaculaire documenté par"@fr ;
+    rdfs:domain :NomVernaculaire ;
+    rdfs:range :SourceScientifique .
+
+:estActiviteDocumenteePar a owl:ObjectProperty ;
+    rdfs:subPropertyOf :estDocumenteePar ;
+    rdfs:label "activité pharmacologique documentée par"@fr ;
+    rdfs:domain :ActivitePharmacologique ;
+    rdfs:range :SourceScientifique .
+
+:estComposeDocumentePar a owl:ObjectProperty ;
+    rdfs:subPropertyOf :estDocumenteePar ;
+    rdfs:label "composé documenté par"@fr ;
+    rdfs:domain :ComposeChimique ;
+    rdfs:range :SourceScientifique .
+
+:estEffetToxicologiqueDocumentePar a owl:ObjectProperty ;
+    rdfs:subPropertyOf :estDocumenteePar ;
+    rdfs:label "effet toxicologique documenté par"@fr ;
+    rdfs:domain :EffetToxicologique ;
+    rdfs:range :SourceScientifique .
 
 # --- Propriétés de données ajoutées ---
 :nomMoore a owl:DatatypeProperty ; rdfs:label "nom en mooré"@fr ; rdfs:domain :Plante ; rdfs:range xsd:string ; rdfs:comment "Ajoutée."@fr .

@@ -166,9 +166,7 @@ Requêtes spatiales & Plantes d'une région donnée & \TODOchapo{nombre de ligne
 
 Les chiffres suffisent peu à eux seuls à décrire ce qui se passe pendant les tests. Les remarques suivantes complètent les métriques.
 
-Les requêtes simples et les requêtes de traçabilité passent dans l'immense majorité des cas : elles se traduisent en Cypher sans difficulté et renvoient un sous-graphe que la génération restitue fidèlement. Nos tests se sont heurtés davantage aux recettes multi-plantes et aux questions formulées indirectement. La conversion en requête Cypher échoue alors plus souvent, ou bien la requête générée est trop large et le modèle peine à trier ce qui revient. \TODOchapo{décompter les échecs des 50 questions par type de défaillance, sur trois lignes : (1) génération de requête Cypher (erreur, requête vide ou mal ciblée) ; (2) sélection des faits (sous-graphe trop large ou trop étroit) ; (3) rédaction (réponse dépassant les faits du graphe). Donner les nombres, totaliser, et recouper avec le tableau \texttt{tab:res\_rag\_familles}.}
-
-Un échec n'en est pas toujours un. Lorsque la réponse demandée est absente du graphe, le système ne doit rien produire plutôt que d'improviser : la règle que nous avons posée en phase 5, un fait absent du graphe ne figure pas dans la réponse, prime sur la complétude. Une réponse vide sur une question hors corpus est donc le comportement attendu, et nous l'avons comptée comme tel lors du décompte. C'est ce qui distingue le système d'un modèle de langage seul, qui lui comblerait le trou sans prévenir.
+Les requêtes simples et les requêtes de traçabilité passent dans l'immense majorité des cas : elles se traduisent en Cypher sans difficulté et renvoient un sous-graphe que la génération restitue fidèlement. Nos tests se sont heurtés davantage aux recettes multi-plantes et aux questions formulées indirectement. La conversion en requête Cypher échoue alors plus souvent, ou bien la requête générée est trop large et le modèle peine à trier ce qui revient. \TODOchapo{décompter les échecs des 50 questions par type de défaillance, sur trois lignes : (1) génération de requête Cypher (erreur, requête vide ou mal ciblée) ; (2) sélection des faits (sous-graphe trop large ou trop étroit) ; (3) rédaction (réponse dépassant les faits du graphe). Donner les nombres, totaliser, et recouper avec le tableau \texttt{tab:res\_rag\_familles}.} Un échec n'en est pas toujours un. Lorsque la réponse demandée est absente du graphe, le système ne doit rien produire plutôt que d'improviser : la règle que nous avons posée en phase 5, un fait absent du graphe ne figure pas dans la réponse, prime sur la complétude. Une réponse vide sur une question hors corpus est donc le comportement attendu, et nous l'avons comptée comme tel lors du décompte. C'est ce qui distingue le système d'un modèle de langage seul, qui lui comblerait le trou sans prévenir.
 
 \TODOchapo{temps mesuré sur les 50 questions : temps moyen et temps maximal, en secondes avec une décimale, méthode indiquée (chronométrage manuel ou instrumentation de l'appel de la chaîne, ex. \texttt{time.time()} avant/après). Signaler si des questions ont dépassé un seuil raisonnable (ex. 10 s) et combien.}.
 
@@ -285,15 +283,7 @@ S'y ajoute une remarque de méthode : l'hypothèse d'une extraction assistée pa
 \subsection{Pistes de travail}
 \label{subsec:discussion_perspectives}
 
-Quatre prolongements se dégagent des limites qui précèdent.
-
-Faire évaluer le système par d'autres que ses concepteurs : un évaluateur externe pour les extractions, un second panel d'utilisateurs plus nombreux et recruté hors du cercle du projet, dont des tradipraticiens à qui l'application est d'abord destinée.
-
-Élargir le corpus et mesurer l'effet sur la couverture. Les thèses et rapports encore non numérisés constituent le gisement le plus immédiat, et leur intégration donnerait une idée plus juste du lien entre volume documentaire et richesse du modèle.
-
-Fiabiliser l'extraction par une relecture experte échantillonnée, et confronter les réponses du système à des questions formulées par de vrais utilisateurs plutôt que tirées du corpus.
-
-Rendre le service accessible au-delà de la machine de développement, avec un déploiement conteneurisé et une instrumentation discrète des usages, de sorte que la prochaine évaluation puisse s'appuyer sur des données de terrain recueillies en conditions réelles.
+Quatre prolongements se dégagent des limites qui précèdent. Faire évaluer le système par d'autres que ses concepteurs : un évaluateur externe pour les extractions, un second panel d'utilisateurs plus nombreux et recruté hors du cercle du projet, dont des tradipraticiens à qui l'application est d'abord destinée. Élargir le corpus et mesurer l'effet sur la couverture. Les thèses et rapports encore non numérisés constituent le gisement le plus immédiat, et leur intégration donnerait une idée plus juste du lien entre volume documentaire et richesse du modèle. Fiabiliser l'extraction par une relecture experte échantillonnée, et confronter les réponses du système à des questions formulées par de vrais utilisateurs plutôt que tirées du corpus. Rendre le service accessible au-delà de la machine de développement, avec un déploiement conteneurisé et une instrumentation discrète des usages, de sorte que la prochaine évaluation puisse s'appuyer sur des données de terrain recueillies en conditions réelles.
 
 % ============================================================
 % CONCLUSION DU CHAPITRE

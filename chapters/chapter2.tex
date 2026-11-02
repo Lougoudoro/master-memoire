@@ -4,11 +4,9 @@
 \phantomsection
 \section*{Introduction du chapitre}
 
-Après avoir posé le cadre conceptuel et balisé l'état de l'art, il nous reste à dire comment ce cadre a été mis à l'épreuve des faits. Le présent chapitre expose le matériel mobilisé et la démarche méthodologique suivie. Il fait le lien entre la réflexion théorique et la mise en œuvre technique.
+Après avoir posé le cadre conceptuel et exposé l'état de l'art, il nous reste à dire comment ce cadre a été mis à l'épreuve des faits. Dans le présent chapitre, nous exposons le matériel mobilisé et la démarche méthodologique suivie. Il fait le lien entre la réflexion théorique et la mise en œuvre technique.
 
-Trois mouvements structurent son propos. Le premier porte sur le matériel, c'est-à-dire sur le corpus documentaire, les ontologies candidates et l'environnement technique. Le deuxième détaille la méthodologie, décomposée en huit phases allant de l'identification comparée des ontologies jusqu'à l'évaluation du système. Le troisième rassemble la démarche dans une synthèse et ouvre la voie au chapitre suivant.
-
-Chaque phase est exposée selon un format constant : objectif poursuivi, actions concrètes, méthodes, outils mobilisés et livrables produits. Cette uniformité, un peu austère, a une raison d'être : elle rend la démarche reproductible par un tiers et permet d'en apprécier la contribution.
+Trois mouvements structurent son propos. Le premier porte sur le matériel, c'est-à-dire sur le corpus documentaire, les ontologies candidates et l'environnement technique. Le deuxième détaille la méthodologie, décomposée en huit phases allant de l'identification comparée des ontologies jusqu'à l'évaluation du système. Le troisième rassemble la démarche dans une synthèse et ouvre la voie au chapitre suivant. nous exposons chaque phase selon un format constant : objectif poursuivi, actions concrètes, méthodes, outils mobilisés et livrables produits. Cette uniformité, un peu austère, a une raison d'être : elle rend la démarche reproductible par un tiers et permet d'en apprécier la contribution.
 
 % ============================================================
 % II.1. MATÉRIEL
@@ -17,9 +15,7 @@ Chaque phase est exposée selon un format constant : objectif poursuivi, actions
 \section{Matériel}
 \label{sec:materiel}
 
-Rassembler les ressources mobilisées est la première exigence de ce type de recherche : sans inventaire clair, aucune étape ultérieure ne peut être évaluée. Nous présentons donc successivement le corpus documentaire, les ontologies candidates, puis l'environnement technique, avant de proposer deux tableaux récapitulatifs.
-
-Ces ressources sont de trois ordres : documentaires (articles, thèses, rapports, bases de données), conceptuelles (les ontologies existantes dont nous avons évalué l'usage) et techniques (modèles de langage, base de données, frameworks et bibliothèques). Chacune est présentée avec la précision nécessaire pour que son rôle dans la démarche soit sans ambiguïté.
+Rassembler les ressources mobilisées est la première exigence de ce type de recherche : sans inventaire clair, aucune étape ultérieure ne peut être évaluée. Nous présentons donc successivement le corpus documentaire, les ontologies candidates, puis l'environnement technique, avant de proposer deux tableaux récapitulatifs. Ces ressources sont de trois ordres : documentaires (articles, thèses, rapports, bases de données), conceptuelles (les ontologies existantes dont nous avons évalué l'usage) et techniques (modèles de langage, base de données, frameworks et bibliothèques). Chacune est présentée avec la précision nécessaire pour que son rôle dans la démarche soit sans ambiguïté.
 
 % ------------------------------------------------------------
 % II.1.1. Corpus documentaire
@@ -28,9 +24,7 @@ Ces ressources sont de trois ordres : documentaires (articles, thèses, rapports
 \subsection{Corpus documentaire}
 \label{subsec:corpus}
 
-Point de départ inhabituel : nous n'avons pas choisi l'ontologie après le corpus, mais avant. Nous l'avons identifiée et sélectionnée en amont, afin de savoir quelles notions et quelles relations guideront l'extraction. Les documents entrent ainsi dès la collecte dans une structure conceptuelle précise, plutôt que d'être fouillés après coup.
-
-Le corpus réunit des documents scientifiques et techniques consacrés aux plantes médicinales du Burkina Faso, répartis en deux ensembles : les publications scientifiques, d'une part, les données de l'Herbier National des Plantes Médicinales (burkinaherbiermed.org) et celles de l'INERA, d'autre part.
+Point de départ inhabituel : nous n'avons pas choisi l'ontologie après le corpus, mais avant. Nous l'avons identifiée et sélectionnée en amont, afin de savoir quelles notions et quelles relations guideront l'extraction. Les documents entrent ainsi dès la collecte dans une structure conceptuelle précise, plutôt que d'être fouillés après coup. Le corpus réunit des documents scientifiques et techniques consacrés aux plantes médicinales du Burkina Faso, répartis en deux ensembles : les publications scientifiques, d'une part, les données de l'Herbier National des Plantes Médicinales (burkinaherbiermed.org) et celles de l'INERA, d'autre part.
 
 La figure \ref{fig:flux_corpus} résume le cheminement suivi, de l'ontologie sélectionnée en amont au corpus final.
 
@@ -45,9 +39,7 @@ La figure \ref{fig:flux_corpus} résume le cheminement suivi, de l'ontologie sé
 
 Le corpus scientifique repose sur 35 rapports de recherche, articles, thèses et mémoires, issus de revues, d'universités et d'institutions de recherche burkinabè. Les études ethnobotaniques, ethnopharmacologiques et phytochimiques qu'ils rassemblent portent sur les noms scientifiques et vernaculaires, les parties utilisées, les pathologies traitées et les modes de préparation, sans oublier, pour les plus récentes, les dosages et les données de toxicité.
 
-Ces travaux forment le socle du corpus. Nous les avons retenus pour leur rigueur et pour leur pertinence au contexte burkinabè, sur une période allant des fondements du domaine aux publications les plus actuelles. Un tel étagement permet de couvrir un large éventail d'espèces, de pathologies et de pratiques thérapeutiques : c'est de cette diversité, plus que du volume, que dépend la qualité de l'extraction.
-
-Quatre travaux illustrent la variété des données mobilisées :
+Ces travaux forment le socle du corpus. Nous les avons retenus pour leur rigueur et pour leur pertinence au contexte burkinabè, sur une période allant des fondements du domaine aux publications les plus actuelles. Un tel étagement permet de couvrir un large éventail d'espèces, de pathologies et de pratiques thérapeutiques : c'est de cette diversité, plus que du volume, que dépend la qualité de l'extraction. Quatre travaux illustrent la variété des données mobilisées :
 \begin{itemize}
 \item Zerbo et al.~\cite{zerbo_plantes_2011} ont étudié les plantes médicinales chez les Sanan du Burkina Faso. Leur travail documente 85 espèces utilisées pour traiter 63 affections.
 \item Ouédraogo et al.~\cite{ouedraogo_revue_2024} ont dressé une revue des plantes médicinales à potentiel aromatique du pays, recensant 42 espèces et en caractérisant les propriétés et les usages.
@@ -59,17 +51,11 @@ Réunis, ces travaux forment une base empirique solidement burkinabè : ils four
 
 \subsubsection{Données de l'Herbier National des Plantes Médicinales du Burkina Faso}
 
-Le site burkinaherbiermed.org diffuse des données sur les plantes médicinales du pays : informations botaniques, usages thérapeutiques et références bibliographiques. Elles proviennent du projet « Herbier avec chimiothèque », piloté par le Ministère de la Santé.
-
-Ce projet vise à bâtir un herbier national dédié aux plantes médicinales, accouplé à une chimiothèque de marqueurs chimiques. Il documente les plantes utilisées contre les dix pathologies prioritaires définies par le ministère, géolocalise les stations et constitue des spécimens conservés, le tout alimentant une base de données nationale accessible par application mobile et par site web.
-
-Là où les herbiers nationaux s'arrêtent à la conservation de spécimens, celui-ci articule trois registres : un herbier (spécimens identifiés et conservés), une chimiothèque (marqueurs chimiques identifiés et dosés) et une base de données (informations ethnobotaniques, usages thérapeutiques, géolocalisation). Il ne se substitue pas aux autres herbiers burkinabè (HNBU du CNRST/INERA, Centre National de Semences Forestières, Université Joseph Ki-Zerbo). Il s'y articule par la spécificité de son objet : les plantes médicinales.
+Le site burkinaherbiermed.org diffuse des données sur les plantes médicinales du pays : informations botaniques, usages thérapeutiques et références bibliographiques. Elles proviennent du projet « Herbier avec chimiothèque », piloté par le Ministère de la Santé. Ce projet vise à bâtir un herbier national dédié aux plantes médicinales, accouplé à une chimiothèque de marqueurs chimiques. Il documente les plantes utilisées contre les dix pathologies prioritaires définies par le ministère, géolocalise les stations et constitue des spécimens conservés, le tout alimentant une base de données nationale accessible par application mobile et par site web. Là où les herbiers nationaux s'arrêtent à la conservation de spécimens, celui-ci articule trois registres : un herbier (spécimens identifiés et conservés), une chimiothèque (marqueurs chimiques identifiés et dosés) et une base de données (informations ethnobotaniques, usages thérapeutiques, géolocalisation). Il ne se substitue pas aux autres herbiers burkinabè (HNBU du CNRST/INERA, Centre National de Semences Forestières, Université Joseph Ki-Zerbo). Il s'y articule par la spécificité de son objet : les plantes médicinales.
 
 \subsubsection{Données de l'INERA}
 
-L'Institut de l'Environnement et de Recherches Agricoles (INERA) tient une base de données de plus de 7 000 espèces végétales, assorties des coordonnées géographiques des stations où elles peuvent être observées. Ces données ouvrent la voie à une analyse spatiale de la distribution des espèces et complètent les données ethnobotaniques par une dimension géographique.
-
-Leur apport se révèle décisif pour notre recherche : elles localisent les plantes sur le territoire burkinabè, autorisent l'étude de leur répartition et enrichissent la base de connaissances en informations spatiales. Le croisement des usages traditionnels avec la distribution géographique des espèces laisse par ailleurs entrevoir des régularités régionales dignes d'être vérifiées.
+L'Institut de l'Environnement et de Recherches Agricoles (INERA) tient une base de données de plus de 7 000 espèces végétales, assorties des coordonnées géographiques des stations où elles peuvent être observées. Ces données ouvrent la voie à une analyse spatiale de la distribution des espèces et complètent les données ethnobotaniques par une dimension géographique. Leur apport se révèle décisif pour notre recherche : elles localisent les plantes sur le territoire burkinabè, autorisent l'étude de leur répartition et enrichissent la base de connaissances en informations spatiales. Le croisement des usages traditionnels avec la distribution géographique des espèces laisse par ailleurs entrevoir des régularités régionales dignes d'être vérifiées.
 
 Le tableau \ref{tab:corpus} récapitule les sources du corpus.
 
@@ -614,11 +600,7 @@ L'extraction procède de manière itérative : les documents sont traités un pa
 
 \subsubsection{Contrôle de la qualité des extractions}
 
-Deux précisions s'imposent sur la manière dont la qualité des extractions est assurée.
-
-Le niveau de preuve associé à chaque connaissance est un attribut \emph{rapporté} depuis la source : il reprend la caractérisation qu'en fait le document d'origine, lorsque celle-ci y est explicite (savoir traditionnel, étude \textit{in vitro}, étude \textit{in vivo}, essai clinique). Aucune évaluation indépendante de notre part n'y est ajoutée. Nous ne jugeons pas la solidité d'un fait. Nous conservons la valeur que lui attribue sa source et nous la relions à cette source. À défaut d'indication, l'attribut reste vide plutôt que d'être comblé par déduction. C'est au lecteur qu'il revient d'en apprécier la portée.
-
-Par ailleurs, les extractions n'ont pas été validées par un expert externe : une relecture individuelle de chaque enregistrement n'a pas été intégrée au protocole et relève de perspectives de travail ultérieurs. La qualité n'est donc pas certifiée en amont. Elle sera mesurée en aval par le protocole d'évaluation de la phase 8, où les réponses produites seront confrontées aux réponses attendues sur un jeu de 50 questions de référence.
+Deux précisions s'imposent sur la manière dont la qualité des extractions est assurée. Le niveau de preuve associé à chaque connaissance est un attribut \emph{rapporté} depuis la source : il reprend la caractérisation qu'en fait le document d'origine, lorsque celle-ci y est explicite (savoir traditionnel, étude \textit{in vitro}, étude \textit{in vivo}, essai clinique). Aucune évaluation indépendante de notre part n'y est ajoutée. Nous ne jugeons pas la solidité d'un fait. Nous conservons la valeur que lui attribue sa source et nous la relions à cette source. À défaut d'indication, l'attribut reste vide plutôt que d'être comblé par déduction. C'est au lecteur qu'il revient d'en apprécier la portée. Par ailleurs, les extractions n'ont pas été validées par un expert externe : une relecture individuelle de chaque enregistrement n'a pas été intégrée au protocole et relève de perspectives de travail ultérieurs. La qualité n'est donc pas certifiée en amont. Elle sera mesurée en aval par le protocole d'évaluation de la phase 8, où les réponses produites seront confrontées aux réponses attendues sur un jeu de 50 questions de référence.
 
 \subsubsection{Structuration des données}
 
@@ -678,9 +660,7 @@ La mise en place du système RAG suit trois temps : définir l'architecture, con
 
 \subsubsection{Architecture du système}
 
-L'architecture est la suivante : Utilisateur \(\rightarrow\) Streamlit \(\rightarrow\) LangChain \(\rightarrow\) Neo4j \(\rightarrow\) Llama 3 \(\rightarrow\) Réponse.
-
-Cette architecture associe la recherche d'information dans la base de connaissances à la génération de réponses par le modèle de langage. Elle préserve la traçabilité, chaque information restant rattachée à sa source. La chaîne de traitement qui relie ces maillons, de l'interprétation de la requête en langage naturel à l'affichage des sources, fait l'objet d'un détail au chapitre \ref{chap:conception_developpement}.
+L'architecture est la suivante : Utilisateur \(\rightarrow\) Streamlit \(\rightarrow\) LangChain \(\rightarrow\) Neo4j \(\rightarrow\) Llama 3 \(\rightarrow\) Réponse. Cette architecture associe la recherche d'information dans la base de connaissances à la génération de réponses par le modèle de langage. Elle préserve la traçabilité, chaque information restant rattachée à sa source. La chaîne de traitement qui relie ces maillons, de l'interprétation de la requête en langage naturel à l'affichage des sources, fait l'objet d'un détail au chapitre \ref{chap:conception_developpement}.
 
 \subsubsection{Intégration des composants}
 
@@ -688,13 +668,11 @@ Nous avons connecté LangChain à Neo4j puis au modèle de langage, et configur�
 
 \subsubsection{Développement de l'application web}
 
-Nous avons conçu l'application autour de quatre fonctions : une page d'accueil avec chatbot, une recherche par plante, une recherche par pathologie et des fiches descriptives. Nous y avons intégré le système RAG et géré l'historique de conversation.
-
-L'interface obtenue permet d'interroger la base de connaissances en langage naturel et de recevoir des réponses traçables. Sa conception détaillée et ses composants sont présentés au chapitre \ref{chap:conception_developpement}.
+Nous avons conçu l'application autour de quatre fonctions : une page d'accueil avec chatbot, une recherche par plante, une recherche par pathologie et des fiches descriptives. Nous y avons intégré le système RAG et géré l'historique de conversation. L'interface obtenue permet d'interroger la base de connaissances en langage naturel et de recevoir des réponses traçables. Sa conception détaillée et ses composants sont présentés au chapitre \ref{chap:conception_developpement}.
 
 \subsubsection{Tests et validation}
 
-Deux campagnes de tests sont prévues : des tests fonctionnels et des tests utilisateurs. Les premiers vérifient que l'application fonctionne correctement. Les seconds évaluent la facilité d'utilisation et la pertinence des réponses.
+Deux campagnes de tests sont prévues : des tests fonctionnels, qui vérifient que l'application fonctionne correctement, et des tests utilisateurs, qui évaluent la facilité d'utilisation et la pertinence des réponses.
 
 \textbf{Livrable} : Un système RAG fonctionnel et une application web fonctionnelle.
 

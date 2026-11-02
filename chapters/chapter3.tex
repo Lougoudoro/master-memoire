@@ -107,8 +107,6 @@ Axiomes & 2 734 & À recalculer dans Protégé \\
 \end{tabular}
 \end{table}
 
-Les décomptes de classes et de propriétés de la colonne \og Après adaptation \fg{} sont calculés à partir des déclarations explicites du fichier Turtle courant ; le nombre entre parenthèses indique le différentiel avec \texttt{ontoMEDTRAD-conserve.ttl}, utilisé comme version de comparaison du schéma retenu. Le nombre d'axiomes reste à relever dans Protégé, car il dépend du comptage des axiomes OWL par l'outil et ne se déduit pas de façon fiable du simple nombre de lignes ou de déclarations Turtle.
-
 Les instances ne sont pas portées par l'ontologie : l'enrichissement du corpus consiste à insérer les faits et les individus extraits dans la base de connaissances orientée graphe (Neo4j), dont l'ontologie fournit le schéma. Les individus de l'ontologie d'origine n'ayant pas été réutilisés, la ligne \og Individus \fg{} de la colonne \og Après adaptation \fg{} est sans objet.
 
 \begin{figure}[H]
@@ -153,7 +151,7 @@ Les classes ajoutées s'insèrent dans des hiérarchies existantes lorsque cela 
 \subsection{Propriétés ajoutées}
 \label{subsec:proprietes_ajoutees}
 
-Les propriétés ajoutées décrivent les noms locaux, la localisation, les usages, les préparations, les niveaux de preuve, les résultats pharmacologiques et la traçabilité documentaire. Le tableau \ref{tab:proprietes_ajoutees} en donne des exemples représentatifs.
+Les propriétés de données ajoutées décrivent des valeurs littérales associées aux plantes, aux usages, aux noms vernaculaires, aux activités pharmacologiques, aux effets toxicologiques et aux sources. La capture Protégé de la figure \ref{fig:proprietes_ajoutees} en présente l'arborescence telle qu'elle apparaît dans l'ontologie. Elle inclut également des propriétés conservées de l'ontologie de départ ; le tableau \ref{tab:proprietes_ajoutees} et la description qui suit distinguent les ajouts pertinents pour l'étude.
 
 \begin{table}[H]
 \centering
@@ -182,10 +180,19 @@ Dosage, toxicité & Précautions d'emploi documentées par les sources \\
 
 Les propriétés de données ajoutées sont des chaînes de caractères (\textit{xsd:string}). Les propriétés \textit{nomMoore}, \textit{nomDioula} et \textit{nomFulfulde} sont prévues pour les noms locaux, tandis que \textit{nomVernaculaireTexte} et \textit{codeLangue} permettent aussi de représenter un nom vernaculaire avec son contexte linguistique. \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} décrivent l'usage ; \textit{doi}, \textit{page} et \textit{section} décrivent la référence. \textit{toxicite} documente les précautions rapportées pour une plante. Les nouvelles propriétés textuelles \textit{descriptionActivite} et \textit{effetToxicologique} décrivent les résultats rapportés. La localisation est portée par \textit{estLocaliseeA} (domaine \textit{Plante}, portée \textit{Localite}), complétée par \textit{aCoordoneesGPS} conservée de l'ontologie d'origine.
 
+La figure \ref{fig:proprietes_ajoutees} est une capture de l'arborescence des propriétés de données dans Protégé. Elle montre les libellés affichés dans l'éditeur ; pour les identifiants et les domaines exacts, nous nous référons aux déclarations du fichier Turtle.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\textwidth]{proprietes_ajoutees.png}
+\caption{Arborescence des propriétés de données dans Protégé}
+\label{fig:proprietes_ajoutees}
+\end{figure}
+
 \subsection{Relations ajoutées}
 \label{subsec:relations_ajoutees}
 
-Les relations de traçabilité définies dans la version précédente sont complétées par des liens entre plante, usage, maladie, partie utilisée, préparation, composé, activité pharmacologique et effet toxicologique. Le tableau \ref{tab:relations_ajoutees} présente les relations les plus importantes pour le périmètre de l'étude ; il ne constitue pas un inventaire exhaustif.
+Les propriétés objet ajoutées complètent les relations conservées de l'ontologie par des liens entre plante, usage, maladie, partie utilisée, préparation, composé, activité pharmacologique et effet toxicologique, ainsi que par une hiérarchie de provenance documentaire. La capture Protégé de la figure \ref{fig:relations_ajoutees} montre l'arborescence des propriétés objet et les sous-propriétés de \textit{estDocumenteePar}. Les libellés visibles comprennent aussi les propriétés conservées ; le tableau \ref{tab:relations_ajoutees} détaille les principales relations ajoutées.
 
 \begin{table}[H]
 \centering
@@ -219,6 +226,15 @@ Les relations de traçabilité définies dans la version précédente sont compl
 Le niveau de preuve est attaché à l'usage documenté, et non interprété comme une validation indépendante de l'efficacité. Il peut être conservé sous forme textuelle avec \textit{niveauPreuve} et relié à la classe \textit{NiveauDePreuve} au moyen de \textit{aPourNiveauDePreuve}. La provenance est généralisée par \textit{estDocumenteePar}; les relations spécialisées de provenance en sont des sous-propriétés. Les relations vers les parties, préparations, activités et risques structurent les faits rapportés sans les transformer en recommandations thérapeutiques.
 
 Les propriétés objet assurent ces liens entre classes. La version adaptée introduit \textit{estDocumenteePar}, relation générique de provenance vers \textit{SourceScientifique}. Les relations spécialisées \textit{provientDe} (usage), \textit{estDocumenteeDans} (plante), \textit{estNomVernaculaireDocumentePar}, \textit{estActiviteDocumenteePar}, \textit{estComposeDocumentePar} et \textit{estEffetToxicologiqueDocumentePar} en sont des sous-propriétés. Le TTL adapté déclare actuellement 25 propriétés objet au total : les 5 conservées et 20 présentes uniquement dans la version adaptée. Ainsi, la provenance est interrogeable uniformément tout en conservant la sémantique propre à chaque type de fait. Les relations \textit{aPourPartieUtilisee}, \textit{aPourPreparation} et \textit{aPourMaladieCible} précisent le contenu d'un usage ; \textit{contientCompose}, \textit{presenteActivite} et \textit{presenteEffetToxicologique} couvrent respectivement les composés, activités et effets rapportés. Les sources et passages ne constituent pas des preuves d’efficacité clinique en eux-mêmes.
+
+La figure \ref{fig:relations_ajoutees} est une capture de l'arborescence des propriétés objet dans Protégé. Le nœud développé rend visible la relation générique \textit{estDocumenteePar} et ses sous-propriétés spécialisées. Cette vue d'arborescence ne montre pas les domaines et portées : ceux-ci sont définis dans le TTL et décrits dans le tableau \ref{tab:relations_ajoutees}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\textwidth]{relations_ajoutees.png}
+\caption{Arborescence des propriétés objet dans Protégé}
+\label{fig:relations_ajoutees}
+\end{figure}
 
 % ============================================================
 % III.2. BASE DE CONNAISSANCES ORIENTÉE GRAPHE

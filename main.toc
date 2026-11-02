@@ -73,15 +73,15 @@
 \contentsline {subsection}{\numberline {I.4.1}Ontologies dans le domaine des plantes médicinales}{21}{subsection.1.4.1}%
 \contentsline {subsubsection}{Ontologies internationales}{21}{subsubsection*.59}%
 \contentsline {subsubsection}{Ontologies de la médecine traditionnelle africaine}{22}{subsubsection*.60}%
-\contentsline {paragraph}{WATRIMed : un graphe de connaissances pour la médecine traditionnelle ouest-africaine}{22}{paragraph*.61}%
+\contentsline {paragraph}{WATRIMed, un graphe de connaissances pour la médecine traditionnelle ouest-africaine}{22}{paragraph*.61}%
 \contentsline {paragraph}{ontoMEDTRAD : ontologie visuelle pour l'Afrique de l'Ouest}{22}{paragraph*.62}%
 \contentsline {paragraph}{ATHMed : un système à base de connaissances pour la médecine traditionnelle africaine}{23}{paragraph*.63}%
-\contentsline {paragraph}{Travaux sur les \@FB@og deep ontologies \@FB@fg \relax {} de la médecine traditionnelle africaine}{24}{paragraph*.64}%
+\contentsline {paragraph}{Travaux sur les \@FB@og deep ontologies \@FB@fg \relax {} de la médecine traditionnelle africaine}{23}{paragraph*.64}%
 \contentsline {paragraph}{Ontologie pour les tradipraticiens (bone-setters) en Afrique de l'Ouest (2024)}{24}{paragraph*.65}%
 \contentsline {paragraph}{Modèle d'intégration des connaissances (Angole et al.)}{24}{paragraph*.66}%
 \contentsline {paragraph}{Ontologies nationales et ethniques}{24}{paragraph*.67}%
-\contentsline {paragraph}{Particularités ontologiques de la médecine traditionnelle africaine}{25}{paragraph*.68}%
-\contentsline {subsubsection}{Inventaires et structuration de données ethnobotaniques au Burkina Faso}{25}{subsubsection*.69}%
+\contentsline {paragraph}{Particularités ontologiques de la médecine traditionnelle africaine}{24}{paragraph*.68}%
+\contentsline {subsubsection}{Inventaires et structuration de données ethnobotaniques au Burkina Faso}{24}{subsubsection*.69}%
 \contentsline {paragraph}{L'Herbier National des Plantes Médicinales du Burkina Faso (projet « Herbier avec chimiothèque »)}{26}{paragraph*.70}%
 \contentsline {subsubsection}{Synthèse comparative des ontologies existantes}{27}{subsubsection*.71}%
 \contentsline {subsubsection}{Apports attendus par rapport aux travaux existants}{29}{subsubsection*.72}%

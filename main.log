@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  2 NOV 2026 10:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  2 NOV 2026 12:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1236,12 +1236,12 @@ Package microtype Info: Character `029' is missing
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 44.
+(Font)              scaled to size 12.0pt on input line 26.
  [2{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc} <./images/repartition_connaissances.png>] [3]
 <images/methodologie.png, id=622, 632.96475pt x 338.4645pt>
 File: images/methodologie.png Graphic file (type png)
 <use images/methodologie.png>
-Package pdftex.def Info: images/methodologie.png  used on input line 101.
+Package pdftex.def Info: images/methodologie.png  used on input line 77.
 (pdftex.def)             Requested size: 386.95897pt x 206.92268pt.
  [4 <./images/methodologie.png>] [5] [6]) [7]
 Chapitre I.
@@ -1282,118 +1282,124 @@ LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
  [24{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [25] [26] [27] [28] [29]) [30]
 Chapitre II.
 (chapters/chapter2.tex
-<images/flux_corpus.png, id=988, 786.5385pt x 283.0575pt>
+<images/flux_corpus.png, id=987, 786.5385pt x 283.0575pt>
 File: images/flux_corpus.png Graphic file (type png)
 <use images/flux_corpus.png>
 Package pdftex.def Info: images/flux_corpus.png  used on input line 33.
 (pdftex.def)             Requested size: 386.95897pt x 139.25655pt.
  [31
 
-] [32 <./images/flux_corpus.png>] [33]
+ <./images/flux_corpus.png>] [32]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 102.
-<images/dispositif_technique.png, id=1020, 607.068pt x 299.31825pt>
+ [33]
+<images/dispositif_technique.png, id=1018, 607.068pt x 299.31825pt>
 File: images/dispositif_technique.png Graphic file (type png)
 <use images/dispositif_technique.png>
 Package pdftex.def Info: images/dispositif_technique.png  used on input line 132.
 (pdftex.def)             Requested size: 386.95897pt x 190.79117pt.
- [34] [35 <./images/dispositif_technique.png>] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]) [48]
+ [34 <./images/dispositif_technique.png>] [35]
+Overfull \hbox (10.6533pt too wide) in paragraph at lines 230--231
+[]\T1/ntxtlf/m/n/12 (-20) Nous avons re-tenu Lang-Chain pour son in-té-gra-tion avec Neo4j, no-tam-ment par \T1/ntxtt/m/n/12 GraphCypherQAChain\T1/ntxtlf/m/n/12 (-20) ,
+ []
+
+[36] [37] [38] [39] [40] [41] [42] [43] [44] [45]) [46]
 Chapitre III.
 (chapters/chapter3.tex
-<images/ontoMetrad-1.png, id=1146, 434.8245pt x 492.03825pt>
+<images/ontoMetrad-1.png, id=1136, 434.8245pt x 492.03825pt>
 File: images/ontoMetrad-1.png Graphic file (type png)
 <use images/ontoMetrad-1.png>
-Package pdftex.def Info: images/ontoMetrad-1.png  used on input line 37.
+Package pdftex.def Info: images/ontoMetrad-1.png  used on input line 35.
 (pdftex.def)             Requested size: 227.3381pt x 257.25032pt.
-<images/ontoMetrad-2.png, id=1147, 440.24475pt x 525.162pt>
+<images/ontoMetrad-2.png, id=1137, 440.24475pt x 525.162pt>
 File: images/ontoMetrad-2.png Graphic file (type png)
 <use images/ontoMetrad-2.png>
-Package pdftex.def Info: images/ontoMetrad-2.png  used on input line 42.
+Package pdftex.def Info: images/ontoMetrad-2.png  used on input line 40.
 (pdftex.def)             Requested size: 227.3381pt x 271.18666pt.
- [49
+ [47
 
-] [50 <./images/ontoMetrad-1.png> <./images/ontoMetrad-2.png>]
-<images/ontology-conserve.png, id=1162, 464.937pt x 471.56175pt>
+] [48 <./images/ontoMetrad-1.png> <./images/ontoMetrad-2.png>]
+<images/ontology-conserve.png, id=1151, 464.937pt x 471.56175pt>
 File: images/ontology-conserve.png Graphic file (type png)
 <use images/ontology-conserve.png>
-Package pdftex.def Info: images/ontology-conserve.png  used on input line 82.
+Package pdftex.def Info: images/ontology-conserve.png  used on input line 80.
 (pdftex.def)             Requested size: 338.58632pt x 343.43132pt.
- [51]
-<images/ontology-adaptee.png, id=1168, 473.3685pt x 516.12825pt>
+ [49]
+<images/ontology-adaptee.png, id=1158, 473.3685pt x 516.12825pt>
 File: images/ontology-adaptee.png Graphic file (type png)
 <use images/ontology-adaptee.png>
-Package pdftex.def Info: images/ontology-adaptee.png  used on input line 114.
+Package pdftex.def Info: images/ontology-adaptee.png  used on input line 112.
 (pdftex.def)             Requested size: 338.58632pt x 369.1864pt.
- [52 <./images/ontology-conserve.png>] [53 <./images/ontology-adaptee.png>] [54]
-<images/proprietes_ajoutees.png, id=1187, 284.262pt x 277.035pt>
+ [50 <./images/ontology-conserve.png>] [51 <./images/ontology-adaptee.png>] [52]
+<images/proprietes_ajoutees.png, id=1176, 284.262pt x 277.035pt>
 File: images/proprietes_ajoutees.png Graphic file (type png)
 <use images/proprietes_ajoutees.png>
-Package pdftex.def Info: images/proprietes_ajoutees.png  used on input line 187.
+Package pdftex.def Info: images/proprietes_ajoutees.png  used on input line 183.
 (pdftex.def)             Requested size: 464.35223pt x 452.56067pt.
- [55]
-Overfull \hbox (13.04669pt too wide) in paragraph at lines 221--221
+ [53]
+Overfull \hbox (13.04669pt too wide) in paragraph at lines 217--217
 []|\T1/ntxtlf/m/it/12 (-20) presenteEffetToxicologique|  
  []
 
-[56 <./images/proprietes_ajoutees.png>]
-<images/relations_ajoutees.png, id=1202, 299.31825pt x 341.47575pt>
+[54 <./images/proprietes_ajoutees.png>]
+<images/relations_ajoutees.png, id=1190, 299.31825pt x 341.47575pt>
 File: images/relations_ajoutees.png Graphic file (type png)
 <use images/relations_ajoutees.png>
-Package pdftex.def Info: images/relations_ajoutees.png  used on input line 234.
+Package pdftex.def Info: images/relations_ajoutees.png  used on input line 226.
 (pdftex.def)             Requested size: 464.35223pt x 529.7613pt.
- [57] [58 <./images/relations_ajoutees.png>] [59]
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 324.
+ [55] [56 <./images/relations_ajoutees.png>] [57]
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 316.
  (C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <12> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 324.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 316.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `txtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 \T1/txtt/bx/n/12 MATCH ()-[r]->() RETURN type(r), count(*) ORDER BY count(*) DESC
  []
 
-[60] [61] [62] [63] [64] [65] [66]
+[58] [59] [60] [61] [62] [63]
 Overfull \vbox (512.10204pt too high) has occurred while \output is active []
 
- [67]) [68]
+ [64]) [65]
 Chapitre IV.
-(chapters/chapter4.tex [69
+(chapters/chapter4.tex [66
 
-] [70] [71] [72] [73] [74] [75] [76]) [77] (chapters/conclusion.tex [78
+] [67] [68] [69] [70] [71]) [72] (chapters/conclusion.tex [73
 
-]) [79]
+]) [74]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 136.
- [80
+ [75
 
-] [81] [82] [83] [84] (main.aux)
+] [76] [77] [78] [79] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C72D5DD89B7C4BCC4F13870FDD0C5D9A;20361.
+(rerunfilecheck)             Checksum: F1C62BFE47E66650AF10C31F8CC4881C;20468.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28495 strings out of 467871
- 493763 string characters out of 5418377
- 1379289 words of memory out of 5000000
- 56204 multiletter control sequences out of 15000+600000
- 740312 words of font info for 329 fonts, out of 8000000 for 9000
+ 28483 strings out of 467871
+ 493584 string characters out of 5418377
+ 1379301 words of memory out of 5000000
+ 56203 multiletter control sequences out of 15000+600000
+ 739975 words of font info for 326 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,11n,79p,4600b,2334s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on main.pdf (96 pages, 1595335 bytes).
+Output written on main.pdf (91 pages, 1562041 bytes).
 PDF statistics:
- 1645 PDF objects out of 1728 (max. 8388607)
- 434 named destinations out of 1000 (max. 500000)
+ 1609 PDF objects out of 1728 (max. 8388607)
+ 429 named destinations out of 1000 (max. 500000)
  44823 words of extra memory for PDF output out of 51595 (max. 10000000)
 

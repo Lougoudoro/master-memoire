@@ -6,7 +6,7 @@
 \phantomsection
 \section*{Introduction du chapitre}
 
-Toute recherche appliquée repose d'abord sur des notions clairement définies. Ce chapitre a pour objet de poser d'abord les notions liées aux plantes médicinales et aux connaissances scientifiques accumulées sur le Burkina Faso, puis les principes de l'ingénierie des connaissances et des ontologies, avant d'examiner ce que l'intelligence artificielle peut apporter à l'accès à ces connaissances. Il passe enfin en revue les travaux déjà consacrés au sujet et situe la présente recherche par rapport à eux. Quatre sections s'articulent ainsi, de la définition du domaine à la confrontation avec la littérature existante.
+Toute recherche appliquée repose d'abord sur des notions clairement définies. Dans ce chapitre, nous présenterons les notions liées aux plantes médicinales et aux connaissances scientifiques accumulées sur le Burkina Faso, puis les principes de l'ingénierie des connaissances et des ontologies. Nous examinerons ensuite l'apport de l'intelligence artificielle à l'accès à ces connaissances, avant de passer en revue les travaux déjà consacrés au sujet et de situer notre recherche par rapport à eux. Le chapitre s'organisera en quatre sections, de la définition du domaine à la comparaison avec la littérature existante.
 
 % ==========================================
 % SECTION I.1
@@ -43,12 +43,12 @@ Or ces savoirs ne se présentent pas de façon homogène. Ils varient selon les 
 \label{subsec:plantes_documentees}
 
 \paragraph{Inventaires et recensements}
-La littérature scientifique burkinabè recense plusieurs centaines d'espèces médicinales. Les travaux de Guinko \cite{guinko1984} ont identifié 304 espèces utilisées en médecine traditionnelle, tandis que Nacoulma \cite{nacoulma1996} en a documenté 280 avec leurs usages, et que Zerbo et al. \cite{zerbo_plantes_2011} ont recensé 85 espèces chez les Sanan.
+La littérature scientifique burkinabè recense plusieurs centaines d'espèces médicinales. Guinko \cite{guinko1984} a identifié 304 espèces utilisées en médecine traditionnelle, Nacoulma \cite{nacoulma1996} en a documenté 280 avec leurs usages et Zerbo et al. \cite{zerbo_plantes_2011} ont recensé 85 espèces chez les Sanan.
 
 Ces plantes se répartissent dans des familles botaniques variées, les plus représentées étant les Fabacées, les Combretacées, les Rubiacées et les Euphorbiacées \cite{nacoulma1996}, une diversité qui reflète la richesse de la flore burkinabè.
 
 \paragraph{Aspects botaniques et écologiques}
-La recherche couvre plusieurs aspects :
+Les travaux sur ces plantes couvrent plusieurs aspects :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Identification botanique :} les plantes sont collectées et décrites, leurs caractéristiques morphologiques sont notées, les spécimens conservés en herbiers de référence et la taxonomie précisée.
     \item \textbf{Distribution géographique :} les zones de présence sont cartographiées, leur répartition étant liée aux conditions climatiques et édaphiques. Certaines espèces sont endémiques à une région \cite{guinko1984}.
@@ -58,10 +58,10 @@ La recherche couvre plusieurs aspects :
 \end{itemize}
 
 \paragraph{Usages thérapeutiques}
-Les affections traitées sont principalement le paludisme en constitue une cible fréquente, aux côtés des infections respiratoires et digestives, tandis que les pathologies chroniques (diabète, hypertension) font l'objet d'études spécifiques \cite{ouedraogo_revue_2024}.
+Le paludisme constitue une cible fréquente des études, aux côtés des infections respiratoires et digestives. Les pathologies chroniques, comme le diabète et l'hypertension, font également l'objet d'études spécifiques \cite{ouedraogo_revue_2024}.
 
 \paragraph{Propriétés pharmacologiques}
-Les études expérimentales évaluent les activités pharmacologiques :
+Les études expérimentales évaluent différentes activités pharmacologiques :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Activité antimicrobienne :} les extraits sont testés sur des bactéries et des champignons, notamment \textit{Staphylococcus aureus}, \textit{Escherichia coli} et \textit{Candida albicans}, et les résultats se révèlent souvent prometteurs \cite{nacoulma1996}.
     \item \textbf{Activité antipaludique :} les extraits sont testés sur des souches de \textit{Plasmodium falciparum}. Des plantes comme \textit{Artemisia annua} ou \textit{Cryptolepis sanguinolenta} sont étudiées, et certaines affichent une forte activité \cite{ouedraogo_revue_2024}.
@@ -71,7 +71,7 @@ Les études expérimentales évaluent les activités pharmacologiques :
 \end{itemize}
 
 \paragraph{Composition chimique}
-Les analyses phytochimiques identifient les métabolites secondaires :
+Les analyses phytochimiques portent sur l'identification des métabolites secondaires :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Alcaloïdes :} composés azotés aux propriétés pharmacologiques variées, dont la quinine et la morphine.
     \item \textbf{Flavonoïdes :} composés phénoliques aux propriétés antioxydantes et anti-inflammatoires, tels que la quercétine et la rutine.
@@ -93,13 +93,13 @@ Issues des populations locales et recueillies par enquêtes et entretiens, elles
 Elles portent sur la composition chimique des plantes, identifient les molécules actives, en précisent la concentration et comparent les profils chimiques entre espèces.
 
 \paragraph{Connaissances pharmacologiques}
-Provenant d'études expérimentales, ces connaissances testent les effets biologiques des extraits, à l'aide de modèles \textit{in vitro} (cellules, micro-organismes) ou \textit{in vivo} (animaux de laboratoire) \cite{heinrich2004pharmacognosy}. Les résultats sont quantitatifs. ils mesurent la concentration efficace (CI50), comparent à des témoins positifs et évaluent la toxicité. Une réserve demeure, les études animales ne prédisent pas toujours l'effet chez l'homme.
+Les études expérimentales évaluent les effets biologiques des extraits à l'aide de modèles \textit{in vitro}, sur des cellules ou des micro-organismes, et \textit{in vivo}, sur des animaux de laboratoire \cite{heinrich2004pharmacognosy}. Les résultats sont quantitatifs et portent notamment sur les concentrations efficaces (CI50), les comparaisons avec des témoins positifs et la toxicité. Les études animales ne permettent toutefois pas toujours de prévoir l'effet chez l'homme.
 
 \paragraph{Connaissances cliniques}
 Elles proviennent d'essais sur l'homme, rares pour les plantes médicinales, coûteuses et complexes, et supposent des autorisations éthiques ainsi que des essais rigoureux. Ces essais offrent le niveau de preuve le plus élevé. Ils mesurent l'efficacité réelle, évaluent les effets secondaires et comparent au traitement standard. Ils constituent la référence de la médecine fondée sur les preuves \cite{sackett_evidence_1996}.
 
 \paragraph{Hiérarchie des niveaux de preuve}
-La médecine fondée sur les preuves (\textit{evidence-based medicine}) établit une hiérarchie :
+La médecine fondée sur les preuves (\textit{evidence-based medicine}) distingue plusieurs niveaux :
 \begin{enumerate}[label=\arabic*., leftmargin=1cm]
     \item \textbf{Méta-analyses et revues systématiques :} preuve la plus forte. Elles synthétisent plusieurs essais cliniques.
     \item \textbf{Essais cliniques randomisés contrôlés :} preuve très forte. Ils comparent un traitement à un placebo ou à un standard.
@@ -110,7 +110,7 @@ La médecine fondée sur les preuves (\textit{evidence-based medicine}) établit
     \item \textbf{Savoirs traditionnels et avis d'experts :} preuve anecdotique. Ils sont utiles pour générer des hypothèses mais non validés.
 \end{enumerate}
 
-Cette hiérarchie est résumée dans la figure \ref{fig:niveaux_preuve}. Elle commande la fiabilité de chaque connaissance. L'ontologie future la traduira en propriété \textit{niveauPreuve} (section \ref{subsec:proprietes_ajoutees} du chapitre \ref{chap:conception_developpement}).
+La figure \ref{fig:niveaux_preuve} résume cette hiérarchie. Dans notre modèle, la propriété \textit{niveauPreuve} conserve la qualification indiquée par la source (section \ref{subsec:proprietes_ajoutees} du chapitre \ref{chap:conception_developpement}).
 
 \begin{figure}[H]
 \centering
@@ -129,7 +129,7 @@ Cette hiérarchie est résumée dans la figure \ref{fig:niveaux_preuve}. Elle co
 \label{subsec:representation_connaissances}
 
 \paragraph{Définition et enjeux}
-La représentation des connaissances est une discipline de l'intelligence artificielle dont l'objet est de formaliser l'information pour la rendre exploitable par la machine \cite{davis_user_1993}. Elle s'appuie sur des langages structurés et interprétables, et permet en retour le raisonnement automatique et l'interrogation. Quatre enjeux la caractérisent. Il s'agit de capter la sémantique des connaissances, les rendre interopérables, permettre leur réutilisation et faciliter leur évolution.
+La représentation des connaissances est une discipline de l'intelligence artificielle qui formalise l'information pour la rendre exploitable par la machine \cite{davis_user_1993}. Elle s'appuie sur des langages structurés et interprétables qui autorisent le raisonnement automatique et l'interrogation. Elle répond à quatre enjeux : capter la sémantique des connaissances, assurer leur interopérabilité, permettre leur réutilisation et faciliter leur évolution.
 
 \paragraph{Principaux modèles de représentation}
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
@@ -148,7 +148,7 @@ La représentation des connaissances est une discipline de l'intelligence artifi
     \textit{Avantages :} elles ont une sémantique formelle, sont interopérables, permettent le raisonnement et sont réutilisables.
 \end{itemize}
 
-C'est vers ce dernier modèle que se porte notre recherche. Les ontologies sont les plus adaptées à la structuration des connaissances scientifiques. Elles autorisent une interrogation fine et facilitent l'intégration de sources multiples.
+Notre recherche s'appuiera sur ce modèle pour structurer les connaissances scientifiques, les interroger et intégrer des sources multiples.
 
 Ces modèles formels s'appuient aujourd'hui sur les langages du web sémantique, empilés du document à la donnée reliée puis au raisonnement (figure \ref{fig:pile_semantique}).
 
@@ -178,7 +178,7 @@ Les ontologies sont composées de plusieurs éléments \cite{studer1998knowledge
     \item \textbf{Propriétés (ou attributs) :} les caractéristiques des classes, par exemple le nom scientifique, le nom vernaculaire, la partie utilisée ou le dosage, susceptibles de porter des valeurs (chaînes, nombres, dates) \cite{studer1998knowledge}.
     \item \textbf{Relations :} les liens entre les classes, par exemple \textit{\og traite \fg} (une plante traite une maladie), \textit{\og contient \fg} (une plante contient une substance), \textit{\og est\_préparée\_par \fg} (une préparation utilise un mode) \cite{studer1998knowledge}.
     \item \textbf{Axiomes :} des contraintes logiques qui assurent la cohérence de l'ontologie, par exemple \og une plante peut avoir plusieurs usages \fg{} ou \og une partie utilisée doit être une partie de la plante \fg \cite{studer1998knowledge}.
-    \item \textbf{Instances (ou individus) :} les exemples concrets : \og Cassia alata \fg{} est une instance de Plante, \og Paludisme \fg{} une instance de Maladie.
+    \item \textbf{Instances (ou individus) :} des exemples concrets, comme \og Cassia alata \fg{}, instance de Plante, ou \og Paludisme \fg{}, instance de Maladie.
 \end{itemize}
 
 \paragraph{Langages d'ontologies}
@@ -193,13 +193,13 @@ Plusieurs langages servent à représenter les ontologies :
 \paragraph{Réutilisation d'ontologies}
 Réutiliser une ontologie existante est une pratique recommandée \cite{mariano_fernandez-lopez_pdf_nodate}, et ce pour quatre raisons :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Économie de temps et de coûts :} nous ne repartons pas de zéro. Nous nous appuyons sur un travail déjà validé. Nous évitons de \og réinventer la roue \fg.
+    \item \textbf{Économie de temps et de coûts :} la réutilisation évite de repartir de zéro et de refaire un travail déjà validé.
     \item \textbf{Fiabilité :} les ontologies existantes ont souvent été testées et corrigées. Elles sont éprouvées. Elles intègrent l'expertise de plusieurs chercheurs.
     \item \textbf{Interopérabilité :} l'utilisation d'ontologies standards facilite l'échange de données. Elle permet l'intégration avec d'autres systèmes. Elle favorise la réutilisation dans d'autres contextes.
-    \item \textbf{Communauté :} les ontologies existantes ont souvent une communauté d'utilisateurs. Nous pouvons bénéficier de leur expertise. Nous pouvons contribuer à leur amélioration.
+    \item \textbf{Communauté :} les ontologies existantes ont souvent une communauté d'utilisateurs. Leur réutilisation permet de bénéficier de cette expertise et de contribuer à l'amélioration des modèles.
 \end{itemize}
 
-Plusieurs ontologies sont disponibles dans les domaines biomédicaux et pharmaceutiques. Certaines portent spécifiquement sur les plantes médicinales. D'autres couvrent la médecine traditionnelle \cite{shojaee-mend_development_2019}. Notre travail partira d'une de ces ontologies.
+Plusieurs ontologies existent dans les domaines biomédicaux et pharmaceutiques. Certaines portent sur les plantes médicinales, d'autres sur la médecine traditionnelle \cite{shojaee-mend_development_2019}. Nous comparerons ces modèles afin de retenir celui qui conviendra à notre recherche.
 
 \subsection{Adaptation, alignement et enrichissement ontologique}
 \label{subsec:adaptation_enrichissement}
@@ -212,14 +212,14 @@ L'adaptation peut inclure :
     \item \textbf{Ajout de classes :} pour couvrir des concepts absents. Par exemple, ajouter des classes pour les maladies spécifiques au Burkina Faso (paludisme, onchocercose, méningite).
     \item \textbf{Ajout de propriétés :} pour décrire des attributs non prévus. Par exemple, ajouter une propriété pour le nom vernaculaire en langue locale (mooré, dioula, fulfuldé).
     \item \textbf{Modification de relations :} pour adapter la sémantique. Par exemple, préciser la relation \textit{\og traite \fg} avec des attributs de niveau de preuve.
-    \item \textbf{Suppression de classes :} si elles ne sont pas pertinentes. Nous pouvons les marquer comme obsolètes.
+    \item \textbf{Suppression de classes :} lorsqu'elles ne sont pas pertinentes, elles peuvent être marquées comme obsolètes.
     \item \textbf{Redéfinition de restrictions :} pour adapter les contraintes logiques.
 \end{itemize}
 
 \paragraph{Alignement d'ontologies}
 L'alignement établit des correspondances entre ontologies \cite{euzenat2013ontology}. Il relie des concepts équivalents ou similaires. Il permet de fusionner des connaissances de sources différentes. Il facilite l'interopérabilité.
 
-Les correspondances peuvent être :
+Les correspondances entre concepts comprennent :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Équivalence :} les concepts sont identiques (\texttt{owl:equivalentClass}).
     \item \textbf{Spécialisation :} un concept est un sous-concept de l'autre (\texttt{rdfs:subClassOf}).
@@ -227,7 +227,7 @@ Les correspondances peuvent être :
     \item \textbf{Correspondance approximative :} les concepts sont similaires mais pas identiques.
 \end{itemize}
 
-Les méthodes d'alignement peuvent être :
+Les méthodes d'alignement comprennent :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Manuelles :} un expert établit les correspondances. C'est précis mais coûteux.
     \item \textbf{Automatiques :} des algorithmes comparent les termes. Ils utilisent des mesures de similarité. Ils sont efficaces mais moins précis.
@@ -237,7 +237,7 @@ Les méthodes d'alignement peuvent être :
 \paragraph{Enrichissement ontologique}
 L'enrichissement ajoute de nouvelles connaissances à l'ontologie \cite{navigli2003ontologylearning}. Il intègre des données issues de sources externes. Il peut être manuel ou assisté par des outils.
 
-Les sources d'enrichissement peuvent être :
+Les sources d'enrichissement comprennent notamment :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item Textes scientifiques : articles, thèses, rapports.
     \item Bases de données : bases de données botaniques, pharmacologiques.
@@ -245,7 +245,7 @@ Les sources d'enrichissement peuvent être :
     \item Connaissances d'experts : savoirs d'experts du domaine.
 \end{itemize}
 
-Les étapes de l'enrichissement sont :
+L'enrichissement comprend les étapes suivantes :
 \begin{enumerate}[label=\arabic*., leftmargin=1cm]
     \item \textbf{Identification des sources :} sélectionner les sources pertinentes.
     \item \textbf{Extraction des connaissances :} extraire les faits des sources.
@@ -256,7 +256,7 @@ Les étapes de l'enrichissement sont :
 \end{enumerate}
 
 \paragraph{Démarche pour notre recherche}
-Notre démarche combinera adaptation et enrichissement. Nous partirons d'une ontologie representative, que nous adapterons au contexte burkinabè en ajoutant des classes pour les plantes locales et des propriétés pour les noms vernaculaires. Les relations seront modifiées si nécessaire. Nous enrichirons ensuite cette ontologie avec les données de la littérature, en documentant l'ensemble des modifications apportées.
+Dans notre démarche, nous adapterons une ontologie existante au contexte burkinabè en ajoutant les classes et les propriétés nécessaires, notamment pour les plantes locales et les noms vernaculaires. Nous modifierons les relations requises, puis organiserons les connaissances issues de la littérature selon le modèle. Nous documenterons les changements apportés au schéma et conserverons les faits extraits dans la base de connaissances.
 
 \subsection{Bases de connaissances et interrogation sémantique}
 \label{subsec:bases_connaissances}
@@ -274,7 +274,7 @@ Ce choix présente quatre bénéfices convergents :
     \item \textbf{Performance :} le parcours du graphe est natif, les relations y sont des éléments à part entière, et non de simples clés étrangères.
     \item \textbf{Flexibilité :} le schéma n'est pas figé à l'avance, de nouveaux types de nœuds et de relations s'y intègrent sans migration lourde.
     \item \textbf{Expressivité :} les relations peuvent être typées, pondérées et parcourues, y compris lorsqu'elles sont profondément imbriquées.
-    \item \textbf{Lecture intuitive :} le modèle reproduit la façon dont nous lions naturellement les concepts, ce qui en facilite la lecture par un non-spécialiste.
+    \item \textbf{Lecture intuitive :} le modèle représente les liens entre concepts, ce qui en facilite la lecture par un non-spécialiste.
 \end{itemize}
 
 Deux langages de requête dominent l'interrogation de ces graphes :
@@ -310,7 +310,7 @@ Pour notre usage, ces avantages se traduisent en cinq exigences :
 \end{itemize}
 
 \paragraph{Application à notre recherche}
-Notre base de connaissances dériverait de l'ontologie reajuster selon un modèle orienté graphe. Elle hébergerait les informations relatives aux plantes, à leurs usages, à leurs propriétés et à leurs sources, rendant ainsi possibles des requêtes sémantiques riches, interrogeables depuis une solution digitale en ligne.
+Nous construirons une base de connaissances orientée graphe à partir de l'ontologie réajustée. Nous y représenterons les plantes, leurs usages, leurs propriétés et leurs sources afin de permettre des requêtes depuis l'application.
 
 % ==========================================
 % SECTION I.3
@@ -322,10 +322,10 @@ Notre base de connaissances dériverait de l'ontologie reajuster selon un modèl
 \label{subsec:taln}
 
 \paragraph{Introduction au TALN}
-Le traitement automatique du langage naturel (TALN) constitue l'une des branches de l'intelligence artificielle les plus directement mobilisables dans notre projet. Il s'agit de rendre les textes humains interprétables par la machine, en les analysant sur les plans syntaxique et sémantique, puis en convertissant les énoncés en formes exploitables par la machine \cite{jurafsky2023slp}. C'est cette propriété qui permet d'établir le dialogue entre l'utilisateur et le système.
+Le traitement automatique du langage naturel (TALN) constitue l'une des branches de l'intelligence artificielle que nous mobiliserons dans notre projet. Il rend les textes interprétables par la machine en les analysant sur les plans syntaxique et sémantique, puis en convertissant les énoncés en formes exploitables \cite{jurafsky2023slp}. Ces techniques permettront d'établir le dialogue entre l'utilisateur et le système.
 
 \paragraph{Techniques fondamentales}
-Les techniques de Traitement Automatique du Langage Naturel (NLP) mobilisables ici sont les suivantes :
+Les principales techniques de traitement automatique du langage naturel sont les suivantes :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Tokenisation :} découpage du texte en unités (mots, ponctuations). \og Quelles plantes traitent le paludisme ? \fg{} devient ainsi \texttt{["Quelles", "plantes", "traitent", "le", "paludisme", "?"]}.
     \item \textbf{Analyse morphologique :} identification des racines des mots. \og traitent \fg{} se ramène à \og traiter \fg, ce qui permet de normaliser les variantes (lemmatisation et \textit{stemming}).
@@ -336,19 +336,19 @@ Les techniques de Traitement Automatique du Langage Naturel (NLP) mobilisables i
 \end{itemize}
 
 \paragraph{Approches modernes : les transformers}
-Les modèles récents reposent sur l'architecture \textit{transformer} \cite{vaswani2017attention}, fondée sur le mécanisme d'attention. Celui-ci permet de prendre en compte un contexte étendu, les modèles étant entraînés sur de très grandes quantités de textes.
+Les modèles récents reposent sur l'architecture \textit{transformer} \cite{vaswani2017attention}, fondée sur le mécanisme d'attention. Celui-ci prend en compte un contexte étendu, et ces modèles sont entraînés sur de grandes quantités de textes.
 
 Trois familles font référence :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{BERT (\textit{Bidirectional Encoder Representations from Transformers}) :} modèle de Devlin et al. \cite{devlin2019bert}, bidirectionnel, qui exploite le contexte situé à la fois à gauche et à droite du mot et excelle dans les tâches de compréhension.
-    \item \textbf{GPT (\textit{Generative Pre-trained Transformer}) :} modèle de Radford et al. \cite{raffel2020t5}, unidirectionnel, particulièrement performant pour la génération de texte et utilisé dans ChatGPT.
+    \item \textbf{GPT (\textit{Generative Pre-trained Transformer}) :} modèle autorégressif entraîné à prédire le prochain mot d'une séquence. Il est utilisé pour la génération de texte.
     \item \textbf{T5 (\textit{Text-to-Text Transfer Transformer}) :} modèle de Raffel et al. \cite{raffel2020t5}, qui ramène toutes les tâches à des transformations texte-texte.
 \end{itemize}
 
-Ces modèles sont pré-entraînés sur des corpus généraux. Ils peuvent ensuite être affinés (\textit{fine-tunés}) sur des données spécifiques, ce qui leur confère des performances supérieures à celles des approches traditionnelles.
+Ces modèles sont pré-entraînés sur des corpus généraux. Ils peuvent ensuite être affinés (\textit{fine-tunés}) sur des données spécifiques afin de les adapter à des tâches particulières.
 
 \paragraph{Application à notre recherche}
-Notre système interprêterait ainsi des requêtes variées, à l'aide de modèles NLP, en en extrayant entités et relations pour les traduire en requêtes formelles adressées à la base de connaissances graphe. L'utilisateur dialoguerait avec le système en langage courant. Quelques requêtes attendues illustrent cette exigence :
+Dans notre étude, nous traiterons les requêtes en langage naturel à l'aide des méthodes de TALN. Nous en extrairons les entités et les relations pour les convertir en requêtes formelles adressées à la base de connaissances graphe. L'utilisateur pourra ainsi interroger le système en langage courant. Les exemples suivants illustrent des requêtes envisagées :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \og Quelles plantes sont utilisées contre le paludisme ? \fg
     \item \og Comment prépare-t-on le remède contre la diarrhée ? \fg
@@ -357,7 +357,7 @@ Notre système interprêterait ainsi des requêtes variées, à l'aide de modèl
     \item \og Quelles plantes du Burkina Faso sont utilisées pour le diabète et ont des études pharmacologiques ? \fg
 \end{itemize}
 
-\subsection{Extraction et structuration assistées par IA}
+\subsection{Extraction et structuration assistées par des modèles de langue}
 \label{subsec:extraction_ia}
 
 \paragraph{Extraction d'information}
@@ -371,44 +371,44 @@ Elle se déploie en quatre étapes successives :
     \item \textbf{Structuration :} organiser les faits en format structuré.
 \end{enumerate}
 
-\paragraph{Approche par prompts d'IA}
-Notre recherche s'appuiera sur une approche par \textit{prompts} d'IA, c'est-à-dire sur l'interrogation de modèles de langage de grande taille (LLM).
+\paragraph{Extraction à partir des textes}
+Nous adresserons aux modèles de langue de grande taille des consignes précisant les informations à relever dans les documents.
 
-Le principe repose sur quatre phases :
+Cette démarche comprendra quatre étapes :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Préparation du prompt :} nous concevons un \textit{prompt} qui demande au modèle d'extraire des informations spécifiques d'un texte. Le \textit{prompt} précise les entités et les relations à extraire.
-    \item \textbf{Soumission au modèle :} nous envoyons le texte et le \textit{prompt} au modèle, qui produit une réponse structurée.
-    \item \textbf{Extraction :} nous extrayons les informations de la réponse, puis nous les convertissons dans le format souhaité.
-    \item \textbf{Validation :} nous vérifions la qualité de l'extraction, et nous corrigeons si nécessaire.
+\item \textbf{Préparation de la consigne :} nous préciserons les informations, les entités et les relations à relever dans le texte.
+\item \textbf{Soumission :} nous fournirons le texte et la consigne au modèle, qui produira une réponse structurée.
+\item \textbf{Extraction :} nous récupérerons les informations produites et les convertirons dans le format souhaité.
+\item \textbf{Vérification :} nous contrôlerons la qualité de l'extraction et la corrigerons si nécessaire.
 \end{itemize}
 
-Cette approche présente des avantages réels :
+Cette approche présente plusieurs avantages :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Flexibilité :} le \textit{prompt} s'adapte à différents types de documents.
-    \item \textbf{Rapidité :} l'extraction reste rapide même sur de grands volumes de textes.
-    \item \textbf{Adaptabilité :} modifier le \textit{prompt} suffit à changer la nature des informations extraites.
-    \item \textbf{Utilisation de modèles pré-entraînés :} nous bénéficions des connaissances générales du modèle.
+\item \textbf{Flexibilité :} les consignes peuvent être adaptées aux différents types de documents.
+\item \textbf{Rapidité :} la méthode convient au traitement de grands volumes de textes.
+\item \textbf{Adaptabilité :} les consignes peuvent être modifiées selon les informations recherchées.
+\item \textbf{Modèles pré-entraînés :} nous nous appuierons sur des modèles entraînés sur de grands corpus.
 \end{itemize}
 
-Elle n'est toutefois pas exempte de limites :
+Cette méthode présente toutefois des limites :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Hallucinations :} le modèle peut générer des informations fausses.
-    \item \textbf{Incohérence :} le modèle peut donner des réponses variables.
-    \item \textbf{Coût :} l'utilisation de modèles commerciaux peut être coûteuse.
+\item \textbf{Informations erronées :} le modèle peut produire des informations fausses ou absentes de la source.
+\item \textbf{Variabilité :} les réponses peuvent différer d'une exécution à l'autre.
+\item \textbf{Coût :} certains modèles peuvent entraîner des frais d'utilisation.
 \end{itemize}
 
-Dans notre recherche, nous utiliserons des \textit{prompts} d'IA pour l'extraction. Les niveaux de preuve associés aux faits extraits seront ceux que rapporte la source, sans réévaluation indépendante, et la qualité des extractions sera appréciée par le protocole d'évaluation prévu pour le système, plutôt que par une relecture individuelle de chaque enregistrement.
+Dans notre étude, nous appliquerons ces consignes aux documents du corpus. Nous reprendrons les niveaux de preuve rapportés par les sources sans les réévaluer indépendamment. Nous examinerons la qualité des extractions selon le protocole d'évaluation du système, sans procéder à une relecture experte de chaque enregistrement.
 
 \paragraph{Structuration des données}
-La structuration convertit les faits extraits en formats standardisés. Pour notre base de connaissances graphe, nous utiliserons :
+La structuration convertit les faits extraits en formats standardisés. Pour notre base de connaissances orientée graphe, nous utiliserons les éléments suivants :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Format d'importation :} les données seront préparées en JSON ou CSV, formats compatibles avec les outils d'importation de Neo4j.
-    \item \textbf{Modèle de données :} les données seront structurées selon l'ontologie, nœuds et relations étant définis en conséquence.
-    \item \textbf{Propriétés :} chaque nœud sera porteur de propriétés et chaque relation de propriétés propres (type, source, niveau de preuve).
+    \item \textbf{Format d'importation :} nous préparerons les données en JSON ou CSV, formats compatibles avec les outils d'importation de Neo4j.
+    \item \textbf{Modèle de données :} nous structurerons les données selon l'ontologie, en définissant les nœuds et les relations correspondants.
+    \item \textbf{Propriétés :} nous associerons aux nœuds et aux relations les propriétés nécessaires, notamment le type, la source et le niveau de preuve.
 \end{itemize}
 
 \paragraph{Application à notre recherche}
-Dans notre recherche, l'IA assistera l'extraction via des \textit{prompts}. Elle repérera les mentions de plantes, usages, parties et propriétés. Elle identifiera les relations entre ces entités. Elle produira des données structurées, chaque fait étant rattaché à sa source de manière à pouvoir être retracé jusqu'à lui.
+Nous utiliserons ces méthodes pour repérer les plantes, les usages, les parties utilisées et les propriétés rapportées, puis identifier les relations entre ces éléments. Nous organiserons les informations extraites dans un format structuré et rattacherons chaque fait à sa source.
 
 \subsection{Recherche sémantique et génération de réponses}
 \label{subsec:recherche_semantique}
@@ -416,59 +416,59 @@ Dans notre recherche, l'IA assistera l'extraction via des \textit{prompts}. Elle
 \paragraph{Recherche sémantique}
 La recherche sémantique dépasse la simple correspondance de mots \cite{baeza2011information} : elle s'appuie sur le sens des termes et sur l'ontologie sous-jacente pour retrouver une information pertinente, quelle que soit la formulation employée par l'utilisateur.
 
-Le processus se déroule en six temps :
+Dans le système prévu, le traitement comprendra six étapes :
 \begin{enumerate}[label=\arabic*., leftmargin=1cm]
     \item \textbf{Analyse de la requête :} le NLP repère les concepts et les relations énoncés par l'utilisateur.
-    \item \textbf{Désambiguïsation :} lorsqu'un terme est ambigu, le contexte permet de trancher. \og Paludisme \fg{}, par exemple, peut être rapproché de \og malaria \fg{} ou de \og fièvre des marais \fg. Le système retient le concept approprié.
-    \item \textbf{Transformation en requête formelle :} l'énoncé naturel est converti en requête Cypher destinée à la base de connaissances graphe, les concepts étant mappés sur les nœuds et les relations.
-    \item \textbf{Exécution :} la requête est exécutée sur la base de connaissances, et les résultats récupérés.
-    \item \textbf{Filtrage et classement :} les résultats sont filtrés puis triés par pertinence, selon des critères de fiabilité (niveau de preuve) ou de proximité sémantique.
-    \item \textbf{Génération de la réponse :} les résultats sont enfin transformés en texte lisible.
+    \item \textbf{Désambiguïsation :} lorsqu'un terme sera ambigu, le contexte aidera à déterminer le concept visé. \og Paludisme \fg{} pourra, par exemple, être rapproché de \og malaria \fg{} ou de \og fièvre des marais \fg.
+    \item \textbf{Transformation en requête formelle :} l'énoncé naturel sera converti en requête Cypher destinée à la base de connaissances graphe, les concepts étant associés aux nœuds et aux relations.
+    \item \textbf{Exécution :} la requête sera exécutée sur la base de connaissances, puis les résultats seront récupérés.
+    \item \textbf{Filtrage et classement :} les résultats seront filtrés puis triés selon leur pertinence, leur niveau de preuve ou leur proximité sémantique.
+    \item \textbf{Génération de la réponse :} les résultats seront transformés en texte lisible.
 \end{enumerate}
 
-\paragraph{Système RAG (\textit{Retrieval-Augmented Generation})}
-Pour l'accès intelligent aux connaissances, notre recherche s'appuiera sur un système RAG (\textit{Retrieval-Augmented Generation}), qui articule recherche d'information et génération de réponses \cite{lewis2020rag}.
+\paragraph{Génération augmentée par récupération}
+Pour faciliter l'accès aux connaissances, nous mettrons en place un système RAG (\textit{Retrieval-Augmented Generation}) associant la recherche d'information à la génération de réponses \cite{lewis2020rag}.
 
-Son fonctionnement s'articule en cinq étapes :
+Son fonctionnement comprendra cinq étapes :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Interprétation de la requête :} le système cerne la demande de l'utilisateur.
-    \item \textbf{Recherche :} il interroge la base de connaissances et en extrait les informations pertinentes (nœuds, relations, propriétés).
-    \item \textbf{Contexte :} les informations retrouvées sont assemblées en un contexte, ensuite soumis au modèle de langage.
-    \item \textbf{Génération :} le modèle produit une réponse fondée sur ce contexte, et non sur ses seules connaissances, ce qui la rend factuelle et traçable.
-    \item \textbf{Affichage des sources :} les sources accompagnent la réponse, permettant à l'utilisateur de vérifier l'origine de l'information.
+    \item \textbf{Interprétation de la requête :} le système cernera la demande de l'utilisateur.
+    \item \textbf{Recherche :} il interrogera la base de connaissances et en extraira les informations pertinentes (nœuds, relations, propriétés).
+    \item \textbf{Contexte :} les informations retrouvées seront assemblées en un contexte, ensuite soumis au modèle de langue.
+    \item \textbf{Génération :} le modèle formulera une réponse à partir du contexte fourni ; nous vérifierons que ses affirmations correspondent aux faits retrouvés.
+    \item \textbf{Affichage des sources :} les sources accompagneront la réponse afin que l'utilisateur puisse vérifier l'origine de l'information.
 \end{itemize}
 
-Les avantages du RAG sont multiples :
+Dans notre étude, le RAG présentera plusieurs caractéristiques utiles :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Fiabilité :} les réponses sont ancrées dans des faits de la base, ce qui réduit les hallucinations.
-    \item \textbf{Traçabilité :} nous pouvons remonter aux sources et vérifier l'information.
-    \item \textbf{Actualisation :} la base étant mise à jour, les réponses le sont automatiquement.
+    \item \textbf{Appui sur les sources :} les réponses sont élaborées à partir des faits retrouvés dans la base.
+    \item \textbf{Traçabilité :} le lien avec les sources permet de vérifier l'information.
+    \item \textbf{Mise à jour :} l'ajout de données dans la base permettra de prendre en compte de nouvelles informations.
     \item \textbf{Adaptabilité :} la base peut être adaptée à des contextes différents.
 \end{itemize}
 
 \paragraph{Application à notre recherche}
-Notre système suivra une architecture RAG : il interprétera les requêtes en langage naturel, interrogera la base de connaissances graphe et générera des réponses construites à partir des faits retrouvés. Chacune d'elles inclura ses sources et son niveau de preuve, de sorte que l'utilisateur puisse remonter à l'origine de l'information.
+Notre système interprétera les requêtes en langage naturel et interrogera la base de connaissances graphe. Il formulera ses réponses à partir des faits retrouvés et indiquera leurs sources ainsi que le niveau de preuve rapporté, afin que l'utilisateur puisse en vérifier l'origine.
 
 \subsection{Traçabilité et fiabilité des réponses}
 \label{subsec:tracabilite_fiabilite}
 
 \paragraph{Importance de la traçabilité}
-En contexte médical, la traçabilité conditionne la crédibilité d'un système \cite{floridi2018ai4people}. En associant chaque information à sa source, elle permet d'en vérifier l'origine et renforce d'autant la confiance que lui accordent les utilisateurs.
+En contexte médical, la traçabilité conditionne la crédibilité d'un système \cite{floridi2018ai4people}. En associant chaque information à sa source, nous pourrons en vérifier l'origine et aider les utilisateurs à en apprécier la fiabilité.
 
-Sans traçabilité, l'information reste difficile à vérifier. elle peut être erronée ou obsolète, et l'utilisateur est dans l'impossibilité d'en apprécier la fiabilité.
+Sans traçabilité, une information peut être difficile à vérifier et l'utilisateur peut peiner à en apprécier la fiabilité.
 
 \paragraph{Mécanismes de traçabilité}
-Trois mécanismes seront mis en œuvre :
+Nous mettrons en œuvre trois mécanismes :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Stockage des références :} chaque fait est stocké avec un identifiant de source, celle-ci étant décrite.
-    \item \textbf{Association information-source :} dans la base, l'information est liée à sa source par une relation. Exemple : \texttt{(information)-[:PROVIENT\_DE]->(source)}.
-    \item \textbf{Affichage des sources :} les réponses affichent leurs sources, sur lesquelles un clic ouvre le détail : page ou section exacte, DOI ou URL.
+    \item \textbf{Stockage des références :} nous stockerons chaque fait avec un identifiant de source, que nous décrirons.
+    \item \textbf{Association information-source :} dans la base, nous relierons chaque information à sa source. Exemple : \texttt{(information)-[:PROVIENT\_DE]->(source)}.
+    \item \textbf{Affichage des sources :} nous accompagnerons les réponses de leurs références et des détails disponibles, comme la page, la section, le DOI ou l'URL.
     \item \textbf{Citations :} les renvois sont numérotés comme dans les articles scientifiques, avec appel à une bibliographie.
     \item \textbf{Lien vers les documents :} lorsque les documents sont disponibles en ligne, un lien est fourni.
 \end{itemize}
 
 \paragraph{Fiabilité des réponses}
-La fiabilité des réponses tient d'abord à la qualité des sources. Nous nous limiterons donc à des sources scientifiques validées :
+La fiabilité des réponses dépendra d'abord de la qualité des sources. Nous privilégierons les sources scientifiques validées :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Articles évalués par les pairs :} publiés dans des revues scientifiques.
     \item \textbf{Thèses et mémoires :} validés par des jurys académiques.
@@ -477,17 +477,17 @@ La fiabilité des réponses tient d'abord à la qualité des sources. Nous nous 
 \end{itemize}
 
 \paragraph{Distinction des niveaux de preuve}
-Nous distinguerons clairement les niveaux de preuve, tels qu'ils sont rapportés par les sources :
+Dans notre système, nous distinguerons les niveaux de preuve tels qu'ils seront rapportés par les sources :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Usage traditionnel :} nous indiquons que c'est un usage rapporté, non démontré scientifiquement.
-    \item \textbf{Activité \textit{in vitro} :} nous mentionnons que l'activité a été testée en laboratoire sur des cellules ou des micro-organismes.
-    \item \textbf{Activité \textit{in vivo} :} nous précisons que l'efficacité a été démontrée sur des animaux.
-    \item \textbf{Essai clinique :} nous mettons en avant le niveau de preuve le plus élevé.
-    \item \textbf{Toxicité :} nous signalons toute information sur la toxicité ou les effets secondaires.
+    \item \textbf{Usage traditionnel :} nous indiquerons qu'il s'agit d'un usage rapporté, non démontré scientifiquement.
+    \item \textbf{Activité \textit{in vitro} :} nous préciserons que l'activité a été testée en laboratoire sur des cellules ou des micro-organismes.
+    \item \textbf{Activité \textit{in vivo} :} nous indiquerons que l'étude a évalué l'activité sur des animaux.
+    \item \textbf{Essai clinique :} nous signalerons le niveau de preuve rapporté par la source.
+    \item \textbf{Toxicité :} nous signalerons les informations rapportées sur la toxicité ou les effets secondaires.
 \end{itemize}
 
 \paragraph{Gestion des incertitudes}
-Nous ne passerons pas sous silence les incertitudes, et notamment :
+Nous signalerons les incertitudes, notamment :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item toute information contestée ou non confirmée sera signalée comme telle.
     \item les données contradictoires seront présentées toutes, sans en cacher aucune.
@@ -495,8 +495,8 @@ Nous ne passerons pas sous silence les incertitudes, et notamment :
     \item l'ancienneté d'une information sera indiquée par sa date.
 \end{itemize}
 
-\paragraph{Limites de l'IA}
-Rappelons enfin ce que l'IA ne fera pas. Elle ne créera pas de nouvelles connaissances thérapeutiques et ne remplacera pas l'expertise humaine. Son rôle se limite à faciliter l'accès aux connaissances existantes. La responsabilité de l'interprétation demeure celle de l'utilisateur. Le système constitue ainsi un outil d'aide à la consultation, et non un outil de diagnostic ou de prescription.
+\paragraph{Limites du système}
+Le système ne créera pas de connaissances thérapeutiques et ne remplacera pas l'expertise humaine. Il facilitera la consultation des connaissances existantes. L'utilisateur devra interpréter les informations en tenant compte de leurs sources et de leurs limites. Le système ne constituera ni un outil de diagnostic ni un outil de prescription.
 
 % ==========================================
 % SECTION I.4
@@ -504,7 +504,7 @@ Rappelons enfin ce que l'IA ne fera pas. Elle ne créera pas de nouvelles connai
 \section{Travaux connexes et positionnement scientifique}
 \label{sec:travaux_connexes}
 
-Pour achever ce cadrage, il nous reste à examiner ce qui a déjà été fait. Cette section passe en revue les travaux consacrés à la modélisation des connaissances en médecine traditionnelle à base de plantes, en distinguant les ontologies développées en Afrique de celles qui nouent un lien direct avec le Burkina Faso, avant de situer notre propre démarche parmi elles.
+Nous examinerons dans cette section les travaux consacrés à la modélisation des connaissances en médecine traditionnelle à base de plantes. Nous distinguerons les ontologies développées en Afrique de celles qui concernent directement le Burkina Faso, puis situerons notre démarche par rapport à ces travaux.
 
 \subsection{Ontologies dans le domaine des plantes médicinales}
 \label{subsec:ontologies_plantes}
@@ -802,24 +802,24 @@ Trois constats se dégagent du tableau. Les ontologies botaniques (FLOPO, PO) co
 
 Pour l'Afrique, plusieurs initiatives se distinguent : celle de Tekemetieu \cite{tekemetieu2016} intègre les dimensions mystiques mais reste limitée au Gabon et au Cameroun. Celle d'Angole et al. \cite{angole_towards_2012, angole_ontology_2013} apporte une intégration avec la médecine moderne tout en demeurant générale. OntoMEDTRAD \cite{kouame_systeme_2018} est la plus aboutie pour l'Afrique de l'Ouest grâce à son approche visuelle. WATRIMed \cite{watrimed2019, watrimed_design_2019} couvre l'Afrique de l'Ouest, avec des exemples burkinabès, mais son ontologie n'est pas téléchargeable.
 
-Aucune de ces ontologies n'est spécifiquement dédiée aux plantes médicinales du Burkina Faso, et aucune n'intègre systématiquement la traçabilité des sources ni les niveaux de preuve. C'est précisément ce double manque que notre recherche entend combler : liaison complète de chaque fait à sa source, et restitution du niveau de preuve que cette source lui attribue.
+Aucune de ces ontologies n'est spécifiquement consacrée aux plantes médicinales du Burkina Faso. La traçabilité systématique des sources et la restitution des niveaux de preuve attribués par ces sources restent également peu abordées. Notre recherche portera sur ces deux aspects.
 
-\subsubsection{Apports de notre travail par rapport aux travaux existants}
+\subsubsection{Apports attendus par rapport aux travaux existants}
 \label{subsubsec:apports_travail}
 
 Notre travail s'inscrit dans un paysage déjà dense, où coexistent des initiatives de recensement, de structuration et de modélisation des connaissances sur les plantes médicinales, en Afrique et plus particulièrement au Burkina Faso. D'un côté, des ontologies et systèmes à base de connaissances à vocation régionale ou continentale (WATRIMed, ontoMEDTRAD, ATHMed, deep ontologies de la médecine traditionnelle africaine). De l'autre, de nombreux inventaires ethnobotaniques, thèses, rapports et projets de bases de données burkinabès (enquêtes sur les plantes médicinales, projet AI4D, projet « Herbier avec chimiothèque », etc.).
 
-Face à cet existant, notre travail apporte une valeur ajoutée sur quatre plans.
+Face à cet existant, notre travail apportera une contribution sur quatre plans.
 
-\textbf{Sur le plan scientifique}, nous produisons une ontologie enrichie et une base de connaissances structurée, issues de la littérature scientifique burkinabè, en mettant en évidence les plantes, les pathologies et les régions les plus étudiées, ainsi que les principales lacunes (dosages, toxicités, zones sous-documentées).
+\textbf{Sur le plan scientifique}, nous produirons une ontologie adaptée et une base de connaissances structurée à partir de la littérature scientifique burkinabè. Nous mettrons en évidence les plantes, les pathologies et les régions les plus étudiées, ainsi que les lacunes documentaires concernant les dosages, les toxicités et les zones peu étudiées.
 
-\textbf{Sur le plan méthodologique}, nous proposons une méthode d'extraction assistée par IA (\textit{prompts} adressés à des LLM) et un modèle conceptuel adapté au contexte burkinabè. Ce modèle intègre les noms vernaculaires (mooré, dioula, fulfuldé), les recettes multi-plantes lorsqu'elles sont documentées et les coordonnées géographiques issues de l'INERA. Chaque information y reste rattachée à sa source, avec le niveau de preuve que celle-ci lui attribue.
+\textbf{Sur le plan méthodologique}, nous proposerons une méthode d'extraction assistée par des modèles de langue et un modèle conceptuel adapté au contexte burkinabè. Ce modèle intégrera les noms vernaculaires en mooré, dioula et fulfuldé, les recettes multi-plantes lorsqu'elles seront documentées et les coordonnées géographiques issues de l'INERA. Nous rattacherons chaque information à sa source et conserverons le niveau de preuve que celle-ci lui attribue.
 
-\textbf{Sur le plan technologique}, nous implémentons une base de connaissances orientée graphe (Neo4j) et développons une application web de consultation (Streamlit) permettant des requêtes en langage naturel via un système RAG (Llama 3 + LangChain). L'application propose un chatbot, une recherche par plante ou par pathologie, ainsi que des fiches descriptives accompagnées de leurs sources et de leurs niveaux de preuve.
+\textbf{Sur le plan technologique}, nous mettrons en place une base de connaissances orientée graphe et développerons une application web de consultation. Un système RAG permettra les requêtes en langage naturel. L'application proposera un chatbot, une recherche par plante ou par pathologie et des fiches descriptives accompagnées de leurs sources et de leurs niveaux de preuve.
 
-\textbf{Sur le plan sociétal}, nous contribuons à la valorisation du patrimoine végétal thérapeutique burkinabè en fournissant une base structurée et traçable, utile à la recherche, à la préservation des connaissances endogènes et à la diffusion scientifique.
+\textbf{Sur le plan sociétal}, notre travail contribuera à la valorisation du patrimoine végétal thérapeutique burkinabè grâce à une base structurée et traçable, utile à la recherche, à la préservation des connaissances endogènes et à la diffusion scientifique.
 
-Notre travail se positionne ainsi comme une couche complémentaire aux infrastructures existantes (ontologies régionales, inventaires, herbier national), en apportant une modélisation sémantique centrée sur les usages thérapeutiques documentés, propre au Burkina Faso et adossée à une traçabilité systématique vers les sources scientifiques.
+Notre travail se positionnera comme un complément aux infrastructures existantes, notamment aux ontologies régionales, aux inventaires et à l'herbier national. Il proposera une modélisation sémantique centrée sur les usages thérapeutiques documentés au Burkina Faso et reliée aux sources scientifiques.
 
 \subsection{Systèmes intelligents d'accès aux connaissances}
 \label{subsec:systemes_intelligents}
@@ -827,17 +827,17 @@ Notre travail se positionne ainsi comme une couche complémentaire aux infrastru
 \paragraph{Typologie des systèmes}
 Plusieurs familles de systèmes donnent accès aux connaissances médicinales, chacune adossée à une approche technique différente :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Systèmes experts :} ils modélisent l'expertise humaine par des règles logiques \cite{buchanan1984rulebased}, comme dans MYCIN. \textit{Limites :} difficiles à adapter aux connaissances traditionnelles, maintenance lourde.
-    \item \textbf{Systèmes à base de cas :} ils réutilisent des cas similaires \cite{kolodner1993casebased}. \textit{Limites :} supposent une base de cas très riche et peinent face aux situations inédites.
-    \item \textbf{Chatbots médicaux :} ils assurent une interaction en langage naturel \cite{hussain2018chatbot}, comme Ada ou Babylon Health. \textit{Limites :} bases parfois limitées, fiabilité variable.
-    \item \textbf{Plateformes d'ontologies :} elles autorisent des requêtes sémantiques formelles \cite{studer1998knowledge}. \textit{Limites :} interfaces souvent complexes, réservées aux experts.
+    \item \textbf{Systèmes experts :} ils modélisent l'expertise humaine par des règles logiques \cite{buchanan1984rulebased}, comme dans MYCIN. Ils peuvent être difficiles à adapter aux connaissances traditionnelles et demander une maintenance importante.
+    \item \textbf{Systèmes à base de cas :} ils réutilisent des cas similaires \cite{kolodner1993casebased}. Ils supposent une base de cas étendue et peuvent être moins adaptés aux situations inédites.
+    \item \textbf{Chatbots médicaux :} ils assurent une interaction en langage naturel \cite{hussain2018chatbot}, comme Ada ou Babylon Health. Leur base de connaissances et leur fiabilité peuvent varier.
+    \item \textbf{Plateformes d'ontologies :} elles autorisent des requêtes sémantiques formelles \cite{studer1998knowledge}. Leurs interfaces peuvent être complexes et s'adresser surtout aux experts.
 \end{itemize}
 
 \paragraph{Systèmes RAG pour l'accès aux connaissances}
 Les systèmes RAG (\textit{Retrieval-Augmented Generation}) constituent une avancée plus récente \cite{lewis2020rag}, déjà déclinée dans plusieurs domaines : \textit{HealthRAG} (médical), \textit{BioRAG} (biologique), \textit{LegalRAG} (juridique).
 
 \paragraph{Limites communes des systèmes existants}
-Quatre insuffisances reviennent cependant d'une famille à l'autre :
+Quatre limites apparaissent dans plusieurs familles de systèmes :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item bases de connaissances incomplètes ou hétérogènes.
     \item absence de traçabilité systématique vers les sources d'origine.
@@ -845,22 +845,22 @@ Quatre insuffisances reviennent cependant d'une famille à l'autre :
     \item absence de pondération par niveaux de preuve scientifique.
 \end{itemize}
 
-\paragraph{Positionnement de notre système}
-Notre système entend répondre à ces quatre insuffisances, en conjuguant adaptation locale (Burkina Faso), enrichissement scientifique, traçabilité systématique, intégration explicite des niveaux de preuve déclarés par les sources et accès naturel assuré par un RAG couplé à une base de données graphe (Neo4j).
+\paragraph{Positionnement attendu de notre système}
+Notre système associera l'adaptation au contexte burkinabè à l'exploitation de sources scientifiques, à la traçabilité et à la restitution des niveaux de preuve déclarés par les sources. Il s'appuiera sur une base orientée graphe et un système RAG pour l'accès en langage naturel.
 
 \subsection{Positionnement de notre recherche}
 \label{subsec:positionnement}
 
-\paragraph{Originalité de notre recherche}
-L'originalité de notre recherche tient à la réunion de sept éléments :
+\paragraph{Positionnement de notre recherche}
+Notre démarche s'articulera autour de sept éléments :
 \begin{enumerate}[label=\arabic*., leftmargin=1cm]
-    \item \textbf{Réutilisation d'ontologie :} Gain de temps et garantie d'interopérabilité.
-    \item \textbf{Adaptation locale :} Prise en compte du contexte burkinabè et des noms vernaculaires locales (\textit{mooré}, \textit{dioula}, \textit{fulfuldé}).
-    \item \textbf{Enrichissement scientifique :} Exploitation des thèses, articles et travaux locaux validés.
-    \item \textbf{Traçabilité des sources :} Chaque fait est lié à sa référence scientifique.
-    \item \textbf{Accès intelligent par RAG :} Requêtes formulées en langage naturel.
-    \item \textbf{Base de connaissances graphe :} Flexibilité de modélisation orientée graphe.
-    \item \textbf{Niveaux de preuve :} Restitution, pour chaque fait, de la catégorie déclarée par sa source : savoir traditionnel, étude \textit{in vitro}, étude \textit{in vivo} ou essai clinique.
+    \item \textbf{Réutilisation d'ontologie :} nous partirons d'un modèle existant pour favoriser la continuité avec les travaux antérieurs.
+    \item \textbf{Adaptation locale :} nous prendrons en compte le contexte burkinabè et les noms vernaculaires en \textit{mooré}, \textit{dioula} et \textit{fulfuldé}.
+    \item \textbf{Enrichissement scientifique :} nous exploiterons des thèses, des articles et des travaux locaux documentés.
+    \item \textbf{Traçabilité des sources :} nous relierons chaque fait à sa référence scientifique.
+    \item \textbf{Accès par RAG :} nous permettrons des requêtes formulées en langage naturel.
+    \item \textbf{Base de connaissances graphe :} nous représenterons les entités et leurs relations dans Neo4j.
+    \item \textbf{Niveaux de preuve :} nous restituerons, pour chaque fait, la catégorie indiquée par la source, qu'il s'agisse d'un savoir traditionnel, d'une étude \textit{in vitro}, d'une étude \textit{in vivo} ou d'un essai clinique.
 \end{enumerate}
 
 % ==========================================
@@ -869,10 +869,10 @@ L'originalité de notre recherche tient à la réunion de sept éléments :
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre a posé les fondements théoriques de notre recherche. Nous y avons défini les concepts clés liés aux plantes médicinales et au patrimoine ethnobotanique, puis exposé les principes de l'ingénierie des connaissances et des ontologies. Nous avons également examiné les apports de l'intelligence artificielle à l'accès aux connaissances, à travers le traitement du langage naturel et les architectures de génération augmentée par récupération (\textit{Retrieval-Augmented Generation}, RAG), avant d'analyser les travaux connexes, en particulier les ontologies développées pour la médecine traditionnelle africaine.
+Dans ce chapitre, nous présenterons les concepts liés aux plantes médicinales et au patrimoine ethnobotanique, puis les principes de l'ingénierie des connaissances et des ontologies. Nous examinerons également l'apport du traitement du langage naturel et des systèmes de génération augmentée par récupération à l'accès aux connaissances, avant d'analyser les travaux consacrés à la médecine traditionnelle africaine.
 
-Cette revue de la littérature met en évidence des lacunes substantielles. Aucune ontologie n'est spécifiquement dédiée aux plantes médicinales du Burkina Faso : \textit{ontoMEDTRAD} couvre principalement la Côte d'Ivoire et le Sénégal, et \textit{WATRIMed}, bien qu'elle s'appuie sur des exemples burkinabès, ne fournit pas d'ontologie téléchargeable. S'y ajoutent deux défis, majoritairement laissés ouverts : la traçabilité des connaissances et l'intégration systématique de sources scientifiques multiples.
+Cette revue de la littérature met en évidence plusieurs lacunes. Aucune ontologie n'est spécifiquement consacrée aux plantes médicinales du Burkina Faso. \textit{ontoMEDTRAD} porte principalement sur la Côte d'Ivoire et le Sénégal, tandis que \textit{WATRIMed}, malgré des exemples burkinabè, ne fournit pas de fichier téléchargeable. La traçabilité des connaissances et l'intégration de sources scientifiques multiples restent également des enjeux.
 
-Notre recherche entend combler ces lacunes en proposant un modèle structuré, tracé et accessible en langage naturel, qui apporte des contributions à la fois scientifiques, techniques et pratiques. Elle s'inscrit ainsi pleinement dans une démarche de valorisation et de préservation des savoirs locaux, tout en contribuant à l'essor et à l'intégration de la médecine traditionnelle en Afrique.
+Notre recherche cherchera à répondre à ces lacunes en adaptant une ontologie au contexte burkinabè et en structurant les connaissances issues de la littérature. Elle s'inscrira dans une démarche de valorisation et de préservation des savoirs locaux, tout en contribuant à l'étude de la médecine traditionnelle en Afrique.
 
-Le chapitre suivant présentera la démarche méthodologique adoptée pour mener à bien notre recherche. Nous y décrirons la constitution du corpus d'études, l'analyse comparative des ontologies existantes, la démarche d'adaptation et d'enrichissement de l'ontologie retenue, ainsi que la conception et le développement de notre système intelligent d'accès aux connaissances.
+Le chapitre suivant présentera le matériel mobilisé et la démarche méthodologique. Nous y décrirons le corpus, la comparaison des ontologies, l'adaptation de l'ontologie retenue et les étapes de conception et de développement du système d'accès aux connaissances.

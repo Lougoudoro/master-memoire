@@ -1,8 +1,10 @@
 \babel@toc {french}{}\relax 
 \contentsline {chapter}{Dédicace}{i}{chapter*.1}%
 \contentsline {chapter}{Remerciements}{ii}{chapter*.2}%
-\contentsline {chapter}{Resumé}{iii}{chapter*.3}%
+\contentsline {chapter}{Résumé}{iii}{chapter*.3}%
 \contentsline {chapter}{Abstract}{iv}{chapter*.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
 \contentsline {chapter}{Table des figures}{v}{chapter*.5}%
 \contentsline {chapter}{Liste des tableaux}{vi}{chapter*.6}%
 \contentsline {chapter}{Liste des sigles et abréviations}{vii}{chapter*.7}%
@@ -101,7 +103,7 @@
 \contentsline {subsubsection}{Données de l'INERA}{32}{subsubsection*.81}%
 \contentsline {subsection}{\numberline {II.1.2}Ontologies candidates}{33}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {II.1.3}Outils et environnement technique}{34}{subsection.2.1.3}%
-\contentsline {subsubsection}{Modèle de langage : Llama 3}{34}{subsubsection*.82}%
+\contentsline {subsubsection}{Modèles de langage}{34}{subsubsection*.82}%
 \contentsline {subsubsection}{Plateforme d'exécution : Google Colab}{35}{subsubsection*.83}%
 \contentsline {subsubsection}{Base de connaissances : Neo4j Desktop}{35}{subsubsection*.84}%
 \contentsline {subsubsection}{Orchestration RAG : LangChain}{35}{subsubsection*.85}%
@@ -131,17 +133,17 @@
 \contentsline {subsubsection}{Structuration des données}{43}{subsubsection*.101}%
 \contentsline {subsubsection}{Préparation de l'intégration dans la base de connaissances}{43}{subsubsection*.102}%
 \contentsline {subsection}{\numberline {II.2.6}Phase 6 : Construction et interrogation de la base de connaissances}{43}{subsection.2.2.6}%
-\contentsline {subsubsection}{Modélisation du graphe}{43}{subsubsection*.103}%
+\contentsline {subsubsection}{Import et ajustement du modèle dans le graphe}{43}{subsubsection*.103}%
 \contentsline {subsubsection}{Import des données}{43}{subsubsection*.104}%
 \contentsline {subsubsection}{Requêtes de test}{43}{subsubsection*.105}%
-\contentsline {subsection}{\numberline {II.2.7}Phase 7 : Exploitation par IA et développement de l'application web}{43}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {II.2.7}Phase 7 : Exploitation par IA et développement de l'application web}{44}{subsection.2.2.7}%
 \contentsline {subsubsection}{Architecture du système}{44}{subsubsection*.106}%
 \contentsline {subsubsection}{Intégration des composants}{44}{subsubsection*.107}%
 \contentsline {subsubsection}{Développement de l'application web}{44}{subsubsection*.108}%
 \contentsline {subsubsection}{Tests et validation}{44}{subsubsection*.109}%
 \contentsline {subsection}{\numberline {II.2.8}Phase 8 : Évaluation et validation}{44}{subsection.2.2.8}%
 \contentsline {subsubsection}{Évaluation de l'ontologie}{44}{subsubsection*.110}%
-\contentsline {subsubsection}{Évaluation du système RAG}{44}{subsubsection*.111}%
+\contentsline {subsubsection}{Évaluation du système RAG}{45}{subsubsection*.111}%
 \contentsline {subsubsection}{Évaluation de l'application web}{45}{subsubsection*.112}%
 \contentsline {section}{\numberline {II.3}Synthèse et transition}{45}{section.2.3}%
 \contentsline {subsection}{\numberline {II.3.1}Tableau de correspondance Phases - Livrables}{45}{subsection.2.3.1}%
@@ -156,12 +158,12 @@
 \contentsline {subsection}{\numberline {III.2.1}Du modèle ontologique au graphe}{57}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {III.2.2}Import et peuplement}{58}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {III.2.3}Interrogation de la base}{59}{subsection.3.2.3}%
-\contentsline {section}{\numberline {III.3}Intégration de l'intelligence artificielle}{59}{section.3.3}%
-\contentsline {subsection}{\numberline {III.3.1}Extraction assistée des connaissances}{59}{subsection.3.3.1}%
-\contentsline {subsubsection}{Environnement d'extraction}{59}{subsubsection*.114}%
+\contentsline {section}{\numberline {III.3}Intégration de l'intelligence artificielle}{60}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Extraction assistée des connaissances}{60}{subsection.3.3.1}%
+\contentsline {subsubsection}{Environnement d'extraction}{60}{subsubsection*.114}%
 \contentsline {subsubsection}{Le prompt d'extraction}{60}{subsubsection*.115}%
-\contentsline {subsubsection}{Format de sortie}{60}{subsubsection*.116}%
-\contentsline {subsubsection}{Boucle d'extraction}{61}{subsubsection*.117}%
+\contentsline {subsubsection}{Format de sortie}{61}{subsubsection*.116}%
+\contentsline {subsubsection}{Déroulement et contrôle}{61}{subsubsection*.117}%
 \contentsline {subsection}{\numberline {III.3.2}Système RAG d'accès aux connaissances}{61}{subsection.3.3.2}%
 \contentsline {subsubsection}{Les six étapes de la chaîne de traitement}{62}{subsubsection*.118}%
 \contentsline {subsubsection}{Câblage des composants}{62}{subsubsection*.119}%
@@ -169,8 +171,8 @@
 \contentsline {section}{\numberline {III.4}Développement de l'application web}{63}{section.3.4}%
 \contentsline {subsection}{\numberline {III.4.1}Architecture de l'application}{63}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {III.4.2}Fonctionnalités}{63}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {III.4.3}Gestion de session et déploiement}{65}{subsection.3.4.3}%
-\contentsline {section}{Conclusion du chapitre}{65}{figure.3.9}%
+\contentsline {subsection}{\numberline {III.4.3}Gestion de session et déploiement}{64}{subsection.3.4.3}%
+\contentsline {section}{Conclusion du chapitre}{64}{figure.3.8}%
 \contentsline {chapter}{\numberline {IV}Résultats et discussion}{66}{chapter.4}%
 \contentsline {section}{\numberline {IV.1}Évaluation de l'ontologie}{66}{section.4.1}%
 \contentsline {subsection}{\numberline {IV.1.1}Couverture}{66}{subsection.4.1.1}%
@@ -178,20 +180,20 @@
 \contentsline {subsection}{\numberline {IV.1.3}Traçabilité}{67}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {IV.1.4}Extensibilité}{67}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {IV.1.5}Synthèse de l'évaluation de l'ontologie}{67}{subsection.4.1.5}%
-\contentsline {section}{\numberline {IV.2}Évaluation du système RAG}{67}{section.4.2}%
+\contentsline {section}{\numberline {IV.2}Évaluation du système RAG}{68}{section.4.2}%
 \contentsline {subsection}{\numberline {IV.2.1}Construction du jeu d'évaluation}{68}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {IV.2.2}Résultats quantitatifs}{68}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {IV.2.3}Volumes d'interrogation de la base}{69}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {IV.2.4}Observations qualitatives}{69}{subsection.4.2.4}%
-\contentsline {section}{\numberline {IV.3}Évaluation de l'application web}{69}{section.4.3}%
-\contentsline {subsection}{\numberline {IV.3.1}Campagne de test}{69}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {IV.2.4}Observations qualitatives}{70}{subsection.4.2.4}%
+\contentsline {section}{\numberline {IV.3}Évaluation de l'application web}{70}{section.4.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Campagne de test}{70}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {IV.3.2}Résultats du questionnaire}{70}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {IV.3.3}Performance}{70}{subsection.4.3.3}%
-\contentsline {section}{\numberline {IV.4}Discussion}{70}{section.4.4}%
+\contentsline {subsection}{\numberline {IV.3.3}Performance}{71}{subsection.4.3.3}%
+\contentsline {section}{\numberline {IV.4}Discussion}{71}{section.4.4}%
 \contentsline {subsection}{\numberline {IV.4.1}Confrontation aux objectifs de la recherche}{71}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {IV.4.2}Confrontation aux systèmes existants}{71}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {IV.4.3}Limites}{71}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {IV.4.4}Pistes de travail}{72}{subsection.4.4.4}%
-\contentsline {section}{Conclusion du chapitre}{72}{subsection.4.4.4}%
-\contentsline {chapter}{Conclusion générale}{73}{chapter*.121}%
-\contentsline {chapter}{Bibliographie}{74}{chapter*.121}%
+\contentsline {subsection}{\numberline {IV.4.2}Confrontation aux systèmes existants}{72}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {IV.4.3}Limites}{72}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {IV.4.4}Pistes de travail}{73}{subsection.4.4.4}%
+\contentsline {section}{Conclusion du chapitre}{73}{subsection.4.4.4}%
+\contentsline {chapter}{Conclusion générale}{74}{chapter*.121}%
+\contentsline {chapter}{Bibliographie}{75}{chapter*.121}%

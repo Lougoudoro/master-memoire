@@ -93,7 +93,7 @@ Nous réunirons les articles, thèses, mémoires et rapports de recherche sur le
 
 \subsection*{Phase 4 : Adaptation de l'ontologie sélectionnée}
 
-Nous adapterons l'ontologie retenue au contexte des plantes médicinales du Burkina Faso. Nous distinguerons les concepts à conserver, à modifier et à ajouter. Nous ajouterons notamment des classes pour les maladies spécifiques au pays, les noms vernaculaires, les régions et les niveaux de preuve, ainsi que des propriétés pour les noms locaux, la localisation et la traçabilité. Nous préciserons les relations tout en préservant autant que possible la compatibilité avec la structure initiale et documenterons les modifications. Le livrable sera une ontologie adaptée au contexte burkinabè.
+Nous adapterons au contexte des plantes médicinales du Burkina Faso le modèle conceptuel de l'ontologie retenue. Nous distinguerons les concepts à conserver, à modifier et à ajouter, notamment pour les maladies, les noms vernaculaires, les régions et les niveaux de preuve, ainsi que les propriétés nécessaires à la localisation et à la traçabilité. Le livrable de cette phase sera le modèle conceptuel adapté. Dans la phase suivante, nous enrichirons l'ontologie avec les données extraites du corpus et leurs sources.
 
 \subsection*{Phase 5 : Enrichissement des connaissances à partir de la littérature scientifique}
 
@@ -101,7 +101,7 @@ Nous adapterons l'ontologie retenue au contexte des plantes médicinales du Burk
 
 \subsection*{Phase 6 : Construction et interrogation de la base de connaissances}
 
-Nous construirons une base de connaissances orientée graphe à partir du schéma de l'ontologie adaptée. Nous y chargerons les données extraites comme des instances correspondant aux concepts définis. Le graphe représentera les liens entre plantes, usages, propriétés et sources. Nous relierons chaque connaissance à son origine et interrogerons la base au moyen de requêtes, notamment en Cypher. Le livrable sera une base Neo4j peuplée et interrogeable.
+Nous construirons la base de connaissances orientée graphe en important dans Neo4j l'ontologie réajustée OntoPlantMedBF. Le graphe représentera les classes, les propriétés et les données de l'ontologie sous forme de nœuds, propriétés et relations interrogeables, notamment au moyen de requêtes Cypher.
 
 \subsection*{Phase 7 : Exploitation par IA et développement de l'application web}
 
@@ -129,7 +129,7 @@ Au terme de la recherche, nous prévoyons les résultats suivants :
 
 \section*{Contribution attendue}
 
-Notre contribution consistera à réutiliser une ontologie sur les plantes médicinales, à l'adapter au contexte burkinabè et à l'enrichir à partir de la littérature scientifique. Nous organiserons les connaissances en conservant le lien entre chaque information et sa source. Sur le plan technique, nous mettrons en place une ontologie adaptée, une base de connaissances et un système d'accès intégré à une application web. Ce dispositif pourra aider les chercheurs, les étudiants et les autres utilisateurs à consulter les informations documentées, à effectuer des recherches bibliographiques et à explorer les relations entre les plantes et les connaissances scientifiques associées.
+Notre contribution consistera à adapter le modèle conceptuel d'une ontologie sur les plantes médicinales, à enrichir cette ontologie en données issues de la littérature scientifique, puis à importer OntoPlantMedBF dans une base de connaissances orientée graphe. Nous conserverons le lien entre chaque information et sa source. Ce dispositif, complété par un système d'accès intégré à une application web, pourra aider les chercheurs, les étudiants et les autres utilisateurs à consulter les informations documentées, à effectuer des recherches bibliographiques et à explorer les relations entre les plantes et les connaissances scientifiques associées.
 
 \section*{Structuration du mémoire}
 
@@ -144,7 +144,7 @@ Le mémoire est organisé en quatre chapitres numérotés en chiffres romains, p
 
 	\item \textbf{Chapitre III :} Conception et développement du système. L'ontologie sélectionnée et les adaptations réalisées y sont présentées, suivies de la base de connaissances, puis de l'intégration de l'intelligence artificielle et du développement de l'application web.
 
-	\item \textbf{Chapitre IV :} Résultats et discussion. Les résultats de l'étude comparative des ontologies y sont exposés, avec l'ontologie adaptée et enrichie ainsi que la base de connaissances. L'accès intelligent et les fonctionnalités de l'application web sont ensuite analysés, et les limites du système discutées.
+\item \textbf{Chapitre IV :} Résultats et discussion. Les résultats de l'étude comparative des ontologies y sont exposés, avec OntoPlantMedBF, ontologie adaptée et peuplée, ainsi que la base de connaissances. L'accès intelligent et les fonctionnalités de l'application web sont ensuite analysés, et les limites du système discutées.
 \end{itemize}
 
 La conclusion générale rappellera les principaux résultats, montrera dans quelle mesure les objectifs et les hypothèses auront été atteints, et présentera les limites du travail ainsi que les perspectives d'amélioration.

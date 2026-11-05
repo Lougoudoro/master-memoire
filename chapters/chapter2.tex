@@ -134,38 +134,38 @@ La figure \ref{fig:dispositif_technique} résume l'environnement d'expérimentat
 \label{fig:dispositif_technique}
 \end{figure}
 
-\subsubsection{Modèle de langage : Llama 3}
+\subsubsection{Modèles de langage}
 
-Nous avons utilisé \textbf{Llama 3 70B} \cite{meta2024llama3}, un modèle ouvert pour traiter les textes et produire des réponses structurées. Sa maîtrise du français était utile pour l'analyse des documents scientifiques burkinabè.
+Nous avons utilisé deux modèles, chacun pour une étape distincte. Pour l'extraction des connaissances (phase 5), nous avons utilisé \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork. Pour la génération des réponses du système RAG (phase 7), nous avons utilisé \textbf{Llama 3 8B} \cite{meta2024llama3}, un modèle ouvert. Gemini (\textit{gemini-3.5-flash-lite}) nous a servi de point de comparaison lors de l'évaluation.
 
-\textbf{Phases d'utilisation :} phase 5 pour l'extraction des connaissances et phase 7 pour la génération des réponses du système RAG.
-
-Le tableau \ref{tab:llama_acces} présente les modes d'accès à Llama 3.
+Le tableau \ref{tab:llama_acces} présente les modes d'accès à ces modèles.
 
 \begin{table}[H]
 \centering
-\caption{Modes d'accès à Llama 3 70B}
+\caption{Modèles de langage et modes d'accès}
 \label{tab:llama_acces}
-\begin{tabular}{|L{4cm}|L{5cm}|L{5cm}|}
+\begin{tabular}{|L{4cm}|L{4cm}|L{6cm}|}
 \hline
-\textbf{Usage} & \textbf{Mode d'accès} & \textbf{Environnement} \\
+\textbf{Usage} & \textbf{Modèle} & \textbf{Mode d'accès} \\
 \hline
-Extraction & Ollama + Google Colab & Notebooks Colab avec GPU \\
+Extraction (phase 5) & gpt-6-luna & OpenWork \\
 \hline
-Génération RAG & API via ngrok & Serveur local exposé \\
+Génération RAG (phase 7) & Llama 3 8B & Ollama sur Google Colab, API exposée par ngrok \\
+\hline
+Comparaison (phase 8) & gemini-3.5-flash-lite & API de Google \\
 \hline
 \end{tabular}
 \end{table}
 
-Nous avons retenu ce modèle pour sa maîtrise du français et sa capacité à suivre les consignes d'extraction. Nous l'avons exécuté avec Ollama pour traiter les documents et avons utilisé ngrok pour exposer une API à l'application web.
+Nous avons retenu Llama 3 pour la génération parce qu'il s'agit d'un modèle ouvert que nous pouvons exécuter sur une instance que nous contrôlons. La version 8B tient dans la mémoire d'un GPU accessible gratuitement sur Colab. Ollama sert le modèle et ngrok expose son API à l'application web, qui reste sur le poste local.
 
 \subsubsection{Plateforme d'exécution : Google Colab}
 
-Nous avons réalisé les expériences d'extraction sur \textbf{Google Colab}, une plateforme de notebooks donnant accès à des GPU adaptés à l'inférence de Llama 3 70B.
+Nous avons exécuté Llama 3 8B sur \textbf{Google Colab}, une plateforme de notebooks donnant accès à des GPU adaptés à l'inférence.
 
-\textbf{Phase d'utilisation :} phase 5 pour l'extraction des connaissances.
+\textbf{Phases d'utilisation :} phases 7 et 8 pour la génération des réponses et l'évaluation du système RAG.
 
-Cette plateforme nous a donné accès aux GPU sans nécessiter l'acquisition d'une infrastructure locale. Son environnement de notebooks a permis l'exécution interactive des expériences et le stockage des fichiers sur Google Drive.
+Cette plateforme nous a donné accès à un GPU sans nécessiter l'acquisition d'une infrastructure locale. La session reste cependant temporaire et l'adresse exposée par ngrok change à chaque lancement, ce qui convient à un prototype mais pas à un service pérenne.
 
 \subsubsection{Base de connaissances : Neo4j Desktop}
 
@@ -200,7 +200,7 @@ Nous avons choisi Neo4j pour représenter les relations entre les plantes, les u
 
 \subsubsection{Orchestration RAG : LangChain}
 
-Nous avons utilisé \textbf{LangChain} pour organiser les étapes du système RAG et relier l'interprétation de la requête à la recherche dans Neo4j et à la génération de la réponse.
+Nous avons utilisé \textbf{LangChain} pour définir les consignes et appeler les modèles de langage de façon uniforme. La recherche dans Neo4j passe par le pilote officiel et par nos propres requêtes.
 
 \textbf{Phase d'utilisation :} phase 7 pour l'accès aux connaissances et le développement web.
 
@@ -214,20 +214,16 @@ Le tableau \ref{tab:langchain} présente les composants LangChain utilisés.
 \hline
 \textbf{Composant} & \textbf{Rôle} \\
 \hline
-GraphCypherQAChain & Génération de requêtes Cypher à partir de questions naturelles \\
+PromptTemplate & Préparation des consignes de génération \\
 \hline
-Neo4jGraph & Connexion à la base Neo4j \\
+ChatOpenAI & Appel de Llama 3 par l'API d'Ollama, compatible avec celle d'OpenAI \\
 \hline
-Ollama & Chargement du modèle Llama 3 \\
-\hline
-PromptTemplate & Préparation des consignes \\
-\hline
-Memory & Gestion de l'historique de conversation \\
+ChatGoogleGenerativeAI & Appel de Gemini pour la comparaison \\
 \hline
 \end{tabular}
 \end{table}
 
-Nous avons retenu LangChain pour son intégration avec Neo4j, notamment par \texttt{GraphCypherQAChain}, sa gestion de l'historique et sa compatibilité avec Streamlit \cite{lewis2020rag}.
+Nous avons retenu LangChain parce qu'il permet de changer de modèle sans modifier le reste du système. Nous n'avons pas confié la sélection des données à une chaîne générant du Cypher : le chapitre \ref{chap:conception_developpement} justifie ce choix \cite{lewis2020rag}.
 
 \subsubsection{Interface web : Streamlit}
 
@@ -251,27 +247,23 @@ Nous avons mobilisé plusieurs bibliothèques Python au cours des phases 5, 6 et
 \hline
 \textbf{Bibliothèque} & \textbf{Version} & \textbf{Rôle} \\
 \hline
-\texttt{neo4j} & 5.x & Driver de connexion à Neo4j \\
+\texttt{neo4j} & 5.28 & Pilote de connexion à Neo4j \\
 \hline
-\texttt{langchain} & 0.1.x & Orchestration RAG \\
+\texttt{langchain}, \texttt{langchain-core} & 0.3 & Consignes et appel des modèles \\
 \hline
-\texttt{langchain-community} & 0.0.x & Intégrations Neo4j, Ollama \\
+\texttt{langchain-openai} & 0.3 & Accès à l'API d'Ollama \\
 \hline
-\texttt{streamlit} & 1.30+ & Interface web \\
+\texttt{langchain-google-genai} & 2.1 & Accès à Gemini \\
 \hline
-\texttt{transformers} & 4.40+ & Chargement de Llama 3 \\
+\texttt{streamlit} & 1.64 & Interface web \\
 \hline
-\texttt{ollama} & 0.1.x & Client Ollama \\
+\texttt{plotly} & 7.1 & Visualisation du graphe \\
 \hline
-\texttt{sentence-transformers} & 2.5+ & Embeddings \\
+\texttt{rdflib} & 7.6 & Lecture du fichier Turtle \\
 \hline
-\texttt{owlready2} & 0.45+ & Manipulation ontologies OWL \\
+\texttt{pytest} & 9.1 & Tests logiciels \\
 \hline
-\texttt{rdflib} & 7.0+ & Format RDF/OWL \\
-\hline
-\texttt{pandas} & 2.0+ & Manipulation de données \\
-\hline
-\texttt{plotly} & 5.18+ & Visualisation \\
+\texttt{pyngrok} & Sur Colab & Ouverture du tunnel ngrok \\
 \hline
 \end{tabular}
 \end{table}
@@ -311,17 +303,17 @@ Le tableau \ref{tab:recap_materiel} rassemble l'ensemble du matériel mobilisé.
 \cline{2-3}
 & FLOPO, PO & OWL, botanique \\
 \hline
-Modèle de langage & Llama 3 70B & Via Ollama + Colab (extraction), API ngrok (RAG) \\
+Modèles de langage & gpt-6-luna ; Llama 3 8B & OpenWork (extraction) ; Ollama sur Colab et ngrok (RAG) \\
 \hline
-Plateforme & Google Colab & GPU T4/V100/A100 \\
+Plateforme & Google Colab & GPU T4 \\
 \hline
 Base de connaissances & Neo4j Desktop & Orientée graphe, Cypher \\
 \hline
-Orchestration RAG & LangChain & GraphCypherQAChain \\
+Orchestration RAG & LangChain & Consignes et appel des modèles \\
 \hline
 Interface web & Streamlit & Chatbot, recherche, fiches \\
 \hline
-Bibliothèques & Python & neo4j, langchain, streamlit, transformers, etc. \\
+Bibliothèques & Python & neo4j, langchain, streamlit, rdflib, etc. \\
 \hline
 \end{tabular}
 \end{table}
@@ -347,9 +339,11 @@ Corpus documentaire & Phase 3 & Constitution du corpus \\
 \hline
 Ontologies candidates & Phase 1 & Comparaison et sélection \\
 \hline
-Llama 3 70B & Phase 5, Phase 7 & Extraction, génération RAG \\
+gpt-6-luna & Phase 5 & Extraction \\
 \hline
-Google Colab & Phase 5 & Exécution de l'extraction \\
+Llama 3 8B & Phase 7, Phase 8 & Génération RAG, évaluation \\
+\hline
+Google Colab & Phase 7, Phase 8 & Exécution de Llama 3 8B \\
 \hline
 Neo4j Desktop & Phase 6 & Base de connaissances \\
 \hline
@@ -517,7 +511,7 @@ Nous avons constitué le corpus en quatre étapes. Nous avons recherché les doc
 \subsection{Phase 4 : Adaptation de l'ontologie sélectionnée}
 \label{subsec:phase4}
 
-\textbf{Objectif} : Adapter l'ontologie sélectionnée au contexte burkinabè.
+\textbf{Objectif} : Adapter le modèle conceptuel de l'ontologie sélectionnée au contexte burkinabè.
 
 Nous avons examiné les concepts existants, ajouté des classes et des propriétés, modifié certaines relations et documenté les changements.
 
@@ -527,7 +521,7 @@ Nous avons étudié la structure de l'ontologie ontoMEDTRAD telle qu'elle est d�
 
 Le fichier OWL de l'ontologie n'étant pas téléchargeable publiquement, nous avons reconstitué sa structure à partir de la thèse. Nous nous sommes appuyés sur les captures d'écran de Protégé (figures 5.15 à 5.20) et les tableaux récapitulatifs des concepts, propriétés et métriques (tableaux 5.5, 5.21 et 5.22). Cette reconstitution a servi de base à l'adaptation présentée au chapitre \ref{chap:conception_developpement}.
 
-Nous avons reconstitué la structure conceptuelle de l'ontologie, ses classes, propriétés et relations, mais pas ses instances. Nous n'avons pas réutilisé les 789 individus d'ontoMEDTRAD, liés au contexte et aux sources des travaux d'origine. Nous avons peuplé Neo4j à partir de la littérature scientifique sur les plantes médicinales du Burkina Faso et relié les nouvelles instances à leurs sources.
+Nous avons reconstitué la structure conceptuelle de l'ontologie, ses classes, propriétés et relations, mais pas ses instances d'origine. Nous n'avons pas réutilisé les 789 individus d'ontoMEDTRAD, liés au contexte et aux sources des travaux d'origine. Cette phase a produit le modèle conceptuel adapté ; le peuplement par les individus extraits de la littérature scientifique est intervenu en phase 5.
 
 Ses concepts principaux décrivent le parcours de soin, du praticien et du patient aux symptômes, aux maladies, aux ressources médicinales, à l'examen clinique, aux recettes, aux ingrédients, aux parties utilisées, aux préparations et aux remèdes. L'ontologie distingue cinq types de plantes et neuf parties utilisées. Elle comprend aussi une classe pour les références scientifiques associées aux ressources, aux recettes et aux remèdes. Les concepts secondaires couvrent les contre-indications, les propriétés thérapeutiques, la toxicité, l'étiologie et la classification des maladies selon la CIM-10. Les relations de base expriment la subsomption et la relation partie-tout. Soixante-seize propriétés associatives complètent le modèle, dont la hiérarchie \textit{aPourForme}, utilisée pour l'iconisation des plantes.
 
@@ -535,7 +529,7 @@ Nous avons ensuite évalué ce modèle au regard du contexte burkinabè. Il couv
 
 \subsubsection{Ajout de classes}
 
-La comparaison des fichiers du schéma adapté et du schéma conservé dénombre 40 classes ajoutées. Le TTL adapté déclare également 25 propriétés objet au total, dont 20 absentes du schéma conservé, et 20 propriétés de données, dont 15 ajoutées. Les classes ajoutées couvrent notamment les noms vernaculaires, les usages thérapeutiques, les niveaux de preuve, les sources, les préparations, des parties végétales complémentaires, les composés chimiques, les activités pharmacologiques et les effets toxicologiques. Ces éléments ont été définis dans le cadre de l'adaptation afin de couvrir les besoins de représentation identifiés pour l'étude ; ils ne préchargent pas de connaissances factuelles ni d'instances.
+La comparaison des fichiers du modèle conceptuel adapté et du schéma conservé dénombre 40 classes ajoutées. Le modèle adapté déclare également 25 propriétés objet au total, dont 20 absentes du schéma conservé, et 20 propriétés de données, dont 15 ajoutées. Les classes ajoutées couvrent notamment les noms vernaculaires, les usages thérapeutiques, les niveaux de preuve, les sources, les préparations, des parties végétales complémentaires, les composés chimiques, les activités pharmacologiques et les effets toxicologiques. Ces ajouts définissent le modèle conceptuel ; les individus et données extraits sont intégrés lors de la phase suivante.
 
 Ces ajouts structurent des connaissances locales et scientifiques à différents niveaux. Ils ne préchargent pas les valeurs, comme les noms, pathologies, régions ou composés ; celles-ci proviennent des sources du corpus et sont enregistrées dans la base avec leur provenance.
 
@@ -557,7 +551,7 @@ Nous avons consigné toutes les modifications dans un journal : chaque ajout est
 
 Cette documentation n'est pas une formalité. Elle rend la démarche reproductible par un tiers et facilite les évolutions ultérieures de l'ontologie.
 
-\textbf{Livrable} : Une ontologie adaptée au contexte burkinabè.
+\textbf{Livrable} : Le modèle conceptuel adapté de l'ontologie, sans les données instanciées.
 
 % ------------------------------------------------------------
 % II.2.5. Phase 5 : Enrichissement de l'ontologie
@@ -568,7 +562,7 @@ Cette documentation n'est pas une formalité. Elle rend la démarche reproductib
 
 \textbf{Objectif} : Extraire les connaissances du corpus pour alimenter la base organisée selon l'ontologie.
 
-Nous n'avons pas ajouté les instances à l'ontologie. Celle-ci fournit le schéma, tandis que nous avons destiné les connaissances extraites à la base orientée graphe Neo4j.
+À partir du modèle conceptuel adapté en phase 4, nous avons enrichi l'ontologie avec des individus et des données extraits des sources scientifiques. Nous avons préparé ces données structurées et sourcées pour leur exploitation dans la base orientée graphe Neo4j.
 
 Nous avons conçu les consignes d'extraction, procédé à l'extraction assistée par modèle de langue, contrôlé les données obtenues, puis structuré et préparé ces données pour leur intégration dans la base.
 
@@ -576,25 +570,25 @@ Nous avons conçu les consignes d'extraction, procédé à l'extraction assisté
 
 Nos consignes d'extraction ciblaient les noms scientifiques et vernaculaires, la famille botanique, les parties utilisées, les usages, les préparations, les activités pharmacologiques, le niveau de preuve et la source. Le chapitre \ref{chap:conception_developpement} présente un exemple de consigne, avec le format JSON et les champs demandés.
 
-Nous avons adapté les consignes au type de document et aux informations que sa catégorie de source pouvait fournir, conformément à la typologie de la section \ref{subsec:corpus}. Nous avons laissé vides les champs absents et n'avons complété aucune valeur par déduction.
+Nous avons employé une même consigne pour les documents traités. Les champs absents reçoivent la valeur \texttt{null} ou une liste vide, et aucune valeur n'est complétée par déduction.
 
 \subsubsection{Exécution de l'extraction}
 
-Nous avons chargé Llama 3 70B sur Google Colab, exécuté les consignes sur les documents et enregistré les résultats en JSON. Nous avons traité les documents un par un ou par lots, vérifié les résultats au fur et à mesure et ajusté les consignes lorsque c'était nécessaire.
+Nous avons soumis les documents à gpt-6-luna dans l'environnement OpenWork, un par un, et enregistré les résultats en JSON. L'extraction a porté sur dix des 35 documents du corpus, principalement des enquêtes ethnobotaniques ; les 25 autres n'ont pas été extraits.
 
 \subsubsection{Contrôle de la qualité des extractions}
 
-Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était explicite, qu'il s'agisse d'un savoir traditionnel, d'une étude \textit{in vitro}, d'une étude \textit{in vivo} ou d'un essai clinique. Nous n'avons pas évalué indépendamment la solidité des faits et avons laissé le champ vide lorsque la source ne précisait pas ce niveau. Un expert externe n'a pas relu les extractions. Leur qualité devait être examinée à la phase 8, en comparant les réponses produites aux réponses attendues pour un jeu de 50 questions.
+Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était explicite, qu'il s'agisse d'un savoir traditionnel, d'une étude \textit{in vitro}, d'une étude \textit{in vivo} ou d'un essai clinique. Nous n'avons pas évalué indépendamment la solidité des faits et avons laissé le champ vide lorsque la source ne précisait pas ce niveau. Un expert externe n'a pas relu les extractions. Nous avons contrôlé leur structure, puis comparé une partie des faits aux documents d'origine à la phase 8.
 
 \subsubsection{Structuration des données}
 
-Nous avons converti les données en CSV et les avons organisées selon le modèle de l'ontologie pour les importer dans Neo4j et en vérifier la conformité.
+Nous avons organisé les données selon le modèle de l'ontologie dans un classeur d'individus, par type de connaissance (sources, plantes, noms vernaculaires, usages, préparations, maladies, activités, composés, toxicologie et localités), puis les avons transformées en individus au format Turtle.
 
 \subsubsection{Préparation de l'intégration dans la base de connaissances}
 
-Nous n'avons pas ajouté les instances et leurs relations à l'ontologie, qui fournit uniquement le schéma. Nous avons inséré dans Neo4j les plantes, maladies et usages extraits, puis les avons reliés à leurs sources et entre eux.
+Le fichier OntoPlantMedBF-peuplee.ttl contient des individus extraits de dix documents scientifiques, en plus du schéma adapté. Ce fichier constitue l'ontologie enrichie importée dans Neo4j à la phase 6. Les données de burkinaherbiermed.org et de l'INERA, consultées lors de la constitution du corpus, n'y ont pas été intégrées.
 
-\textbf{Livrable} : Un ensemble de données structurées (JSON, CSV) prêtes à être intégrées.
+\textbf{Livrable} : OntoPlantMedBF, ontologie enrichie avec les données extraites et leurs sources.
 
 % ------------------------------------------------------------
 % II.2.6. Phase 6 : Construction et interrogation de la base
@@ -603,19 +597,19 @@ Nous n'avons pas ajouté les instances et leurs relations à l'ontologie, qui fo
 \subsection{Phase 6 : Construction et interrogation de la base de connaissances}
 \label{subsec:phase6}
 
-\textbf{Objectif} : Construire la base de connaissances orientée graphe.
+\textbf{Objectif} : Importer et exploiter dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF}.
 
-Nous avons construit la base Neo4j en modélisant le graphe, en important les données et en testant les requêtes.
+Nous avons importé dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF} et ses données, en les représentant sous forme de nœuds, propriétés et relations du graphe. Nous avons vérifié la correspondance avec le modèle ontologique et testé les requêtes de la base.
 
-\subsubsection{Modélisation du graphe}
+\subsubsection{Import et ajustement du modèle dans le graphe}
 
-Nous avons défini les nœuds suivants : \textit{Plante}, \textit{Maladie}, \textit{Usage}, \textit{Partie}, \textit{Préparation}, \textit{Source}, \textit{Compos\'eChimique} et \textit{R\'egion}. Les relations comprennent \texttt{TRAITE}, \texttt{UTILISE}, \texttt{PROVIENT\_DE}, \texttt{A\_POUR\_PARTIE}, \texttt{A\_POUR\_PREPARATION}, \texttt{CONTIENT} et \texttt{EST\_LOCALISEE\_A}. Les propriétés comprennent le nom, le niveau de preuve, le DOI et les \textit{coordonn\'eesGPS}.
+Nous avons importé les classes et propriétés d'OntoPlantMedBF dans Neo4j sous forme de labels, propriétés et relations. Les principaux nœuds représentent les plantes, maladies, usages, parties, préparations, sources, composés chimiques et régions. Les relations du graphe reprennent les liens du modèle, avec des noms adaptés aux conventions Neo4j, et les propriétés conservent notamment les noms, niveaux de preuve, DOI et coordonnées géographiques.
 
-Nous avons représenté les entités du domaine par des nœuds, leurs liens par des relations et leurs caractéristiques par des propriétés.
+Nous avons ainsi importé dans le graphe la structure réajustée d'OntoPlantMedBF et ses données. Les entités sont représentées par des nœuds, leurs liens par des relations et leurs caractéristiques par des propriétés, conformément au modèle ontologique.
 
 \subsubsection{Import des données}
 
-Nous avons chargé les fichiers CSV, créé les nœuds et les relations au moyen de requêtes Cypher, puis vérifié l'intégrité des données.
+Nous avons chargé les données préparées, créé ou rapproché les nœuds et relations au moyen de requêtes Cypher, puis vérifié l'intégrité et la cohérence de l'import avec le modèle ontologique.
 
 Après l'import, nous avons contrôlé que les données, les relations et les propriétés avaient été correctement reprises.
 
@@ -625,7 +619,7 @@ Nous avons testé quatre familles de requêtes : les requêtes simples sur les p
 
 Ces vérifications nous ont permis de contrôler le fonctionnement de la base et les résultats renvoyés par les requêtes.
 
-\textbf{Livrable} : Une base Neo4j peuplée et interrogeable.
+\textbf{Livrable} : Une base Neo4j peuplée et interrogeable, complémentaire d'OntoPlantMedBF.
 
 % ------------------------------------------------------------
 % II.2.7. Phase 7 : Exploitation par l'IA et développement web
@@ -644,7 +638,7 @@ L'architecture relie l'utilisateur à Streamlit, LangChain, Neo4j et Llama 3 jus
 
 \subsubsection{Intégration des composants}
 
-Nous avons connecté LangChain à Neo4j et au modèle de langue, puis configuré les consignes de génération des réponses. Cette intégration a réuni les composants du système RAG.
+Nous avons connecté l'application à Neo4j et au modèle de langue, puis configuré les consignes de génération des réponses. Cette intégration a réuni les composants du système RAG.
 
 \subsubsection{Développement de l'application web}
 
@@ -713,7 +707,7 @@ Traçabilité & Les sources sont affichées & Taux de couverture \\
 \end{tabular}
 \end{table}
 
-Nous avons constitué un jeu de 50 questions de référence portant sur les plantes, les usages et les propriétés, puis comparé les réponses du système aux réponses attendues.
+Nous avons constitué un jeu de 50 questions de référence portant sur les plantes, les usages et leurs sources, puis comparé les réponses du système aux réponses attendues.
 
 \subsubsection{Évaluation de l'application web}
 
@@ -767,11 +761,11 @@ Phase 2 & Définir les critères de recherche et de sélection & Grille de crit�
 \hline
 Phase 3 & Rassembler un corpus fiable et pertinent & Corpus de 35 documents \\
 \hline
-Phase 4 & Adapter l'ontologie au contexte burkinabè & Ontologie adaptée \\
+Phase 4 & Adapter le modèle conceptuel de l'ontologie & Modèle conceptuel adapté \\
 \hline
-Phase 5 & Extraire les connaissances et enrichir l'ontologie & Données structurées (JSON, CSV) \\
+Phase 5 & Extraire les connaissances et enrichir l'ontologie & Ontologie enrichie en données \\
 \hline
-Phase 6 & Construire la base de connaissances graphe & Base Neo4j peuplée \\
+Phase 6 & Importer OntoPlantMedBF dans la base graphe & OntoPlantMedBF intégrée à Neo4j, base interrogeable \\
 \hline
 Phase 7 & Développer le système RAG et l'application web & Système RAG et application web \\
 \hline
@@ -787,7 +781,7 @@ Phase 8 & Évaluer la qualité du système & Rapport d'évaluation \\
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre a exposé le matériel et la méthodologie de notre recherche. Le matériel réunit un corpus de 35 documents scientifiques, les données de burkinaherbiermed.org et de l'INERA, cinq ontologies candidates et un environnement technique bâti sur Llama 3 70B, Google Colab, Neo4j Desktop, LangChain et Streamlit.
+Ce chapitre a exposé le matériel et la méthodologie de notre recherche. Le matériel réunit un corpus de 35 documents scientifiques, les données de burkinaherbiermed.org et de l'INERA, cinq ontologies candidates et un environnement technique bâti sur gpt-6-luna pour l'extraction, Llama 3 8B sur Google Colab pour le RAG, Neo4j Desktop, LangChain et Streamlit.
 
 Nous avons suivi huit phases : comparaison des ontologies, définition des critères de recherche et de sélection, constitution du corpus, adaptation de l'ontologie, extraction des connaissances, construction et interrogation de la base, développement du système d'accès et de l'application, puis évaluation. Nous avons décrit les actions menées et les livrables associés.
 

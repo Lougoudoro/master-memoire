@@ -1,0 +1,8 @@
+Les connaissances scientifiques sur les plantes médicinales du Burkina Faso sont dispersées entre des articles, des thèses et des rapports dont les terminologies varient. Il est donc difficile de retrouver une information et de remonter à sa source. Ce mémoire propose un accès intelligent et traçable à ces connaissances.
+
+Après avoir comparé cinq ontologies, nous avons retenu \textit{ontoMEDTRAD} et adapté son modèle conceptuel au contexte burkinabè pour construire \textit{OntoPlantMedBF}. Nous l'avons peuplée à partir de dix des 35 documents du corpus, au moyen d'une extraction assistée par un modèle de langue. L'ontologie compte 92 classes et 1~546 individus, dont 141 plantes et 277 usages thérapeutiques, tous reliés à une source. Importée dans Neo4j, elle alimente un système de génération augmentée par récupération (RAG) : des requêtes fixes sélectionnent les faits dans le graphe, puis Llama 3 rédige une réponse qui cite ses sources. Une application web développée avec Streamlit donne accès à l'ensemble.
+
+Sur un jeu de 50 questions, le système atteint un F1-score de 0,923 et produit 42 réponses conformes. Il refuse de répondre aux 5 questions hors corpus. Ces mesures portent sur la restitution du contenu du graphe et non sur la justesse scientifique des faits, car les extractions n'ont pas été relues par un expert. Ce prototype est un outil de consultation : il ne pose aucun diagnostic et n'établit aucune prescription.
+
+\vspace{1em}
+\noindent\textbf{Mots-clés :} plantes médicinales, Burkina Faso, ontologie, graphe de connaissances, Neo4j, génération augmentée par récupération, modèle de langue, traçabilité.

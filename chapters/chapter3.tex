@@ -98,7 +98,7 @@ Propriétés objet & 76 & 25 (20 ajoutées) & 29 \\
 \hline
 Propriétés de données & 16 & 20 (15 ajoutées) & 31 \\
 \hline
-Individus & 789 & Sans objet & 1~546 \\
+Individus & 789 & Sans objet & 6~936 \\
 \hline
 Axiomes & 2 734 & Non relevé & \TODOchapo{relever dans Protégé : Active Ontology, Ontology metrics, Axiom} \\
 \hline
@@ -301,7 +301,7 @@ Ce mapping reprend les domaines et portées définis dans OntoPlantMedBF. Nous a
 \subsection{Import et peuplement}
 \label{subsec:import_peuplement}
 
-Nous avons validé les extractions JSON en conservant les formulations et les références des sources, puis les avons intégrées à l'ontologie sous forme d'individus. Nous avons ensuite écrit un programme d'import qui lit le fichier Turtle avec \texttt{rdflib}, contrôle les domaines et les portées, puis charge le graphe dans une transaction unique. Le chargement utilise \texttt{MERGE} sur l'URI de chaque individu : le relancer ne crée pas de doublon. Chaque fait reste relié à sa source et au passage d'origine. Les contradictions relevées dans les documents restent consignées dans les fichiers JSON, sans être tranchées. Nous n'avons ajouté au graphe aucune information absente des documents, à l'exception du rang attribué aux niveaux de preuve.
+Nous avons validé les extractions JSON en conservant les formulations et les références des sources, puis les avons intégrées à l'ontologie sous forme d'individus. Nous avons écarté du peuplement les usages répulsifs (25) et vétérinaires (33), qui ne sont pas des usages thérapeutiques humains, ainsi que 48 usages sans lien établi avec le Burkina Faso, issus de Karou et al. (38) et de Rouamba et al. (10). Nous avons regroupé 22 variantes d'orthographe de noms de plantes, sans fusionner les synonymes taxonomiques, ainsi que les formes équivalentes d'une même indication sous un libellé français ; les formes d'origine restent conservées. Nous avons ensuite écrit un programme d'import qui lit le fichier Turtle avec \texttt{rdflib}, contrôle les domaines et les portées, puis charge le graphe dans une transaction unique. Le chargement utilise \texttt{MERGE} sur l'URI de chaque individu : le relancer ne crée pas de doublon. Chaque fait reste relié à sa source et au passage d'origine. Les contradictions relevées dans les documents restent consignées dans les fichiers JSON, sans être tranchées. Nous n'avons ajouté au graphe aucune information absente des documents, à l'exception du rang attribué aux niveaux de preuve et de ces libellés de regroupement.
 
 % Source : GraphRAG/application/ingestion/ttl_import.py (extrait)
 \begin{quote}
@@ -327,11 +327,11 @@ tx.run(
 
 Après l'import, le programme relit le graphe et compare ses comptes à ceux du fichier ; tout écart est signalé comme une erreur. Les résultats sont les suivants :
 
-Le fichier compte 12~694 triplets. Le graphe contient 1~546 nœuds et 4~677 relations, comme attendu, sans anomalie de domaine ou de portée.
+Le fichier compte 62~981 triplets. Le graphe contient 6~936 nœuds et 25~321 relations, comme attendu, sans anomalie de domaine ou de portée.
 
 \begin{itemize}
-    \item \textbf{Nœuds :} 291 préparations (dont 7 solvants ou excipients), 277 usages thérapeutiques, 198 composés chimiques, 192 noms vernaculaires, 160 maladies, 141 plantes, 109 genres, 61 familles, 46 activités pharmacologiques, 17 parties de plante, 12 localités, 11 modes d'administration, 11 modes de préparation, 10 sources, 6 effets toxicologiques, 2 ethnies et 2 niveaux de preuve.
-    \item \textbf{Principales relations :} \textit{aPourPartieUtilisee} (417), \textit{aPourModeDePreparation} (414), \textit{aPourModeAdministration} (360), \textit{aPourPreparation} (284), \textit{estDocumenteePar} (284), \textit{estRapportePour}, \textit{provientDe} et \textit{aPourMaladieCible} (277 chacune), \textit{aPourNiveauDePreuve} (270), \textit{estDocumenteeDans} (230), \textit{estLocaliseeA} (204).
+    \item \textbf{Nœuds :} 2~822 préparations (dont 6 solvants ou excipients), 1~676 usages thérapeutiques, 722 noms vernaculaires, 554 composés chimiques, 289 plantes, 278 activités pharmacologiques, 238 maladies, 195 genres, 83 familles, 17 parties de plante, 14 localités, 13 effets toxicologiques, 11 modes d'administration, 10 modes de préparation, 10 sources, 2 ethnies et 2 niveaux de preuve.
+    \item \textbf{Principales relations :} \textit{aPourPartieUtilisee} (2~874), \textit{aPourPreparation} et \textit{estDocumenteePar} (2~816 chacune), \textit{aPourModeDePreparation} (2~646), \textit{estRapportePour}, \textit{provientDe}, \textit{aPourMaladieCible} et \textit{aPourNiveauDePreuve} (1~676 chacune), \textit{aPourModeAdministration} (1~471), \textit{estLocaliseeA} (1~246), \textit{estDocumenteeDans} (623).
 \end{itemize}
 
 \begin{figure}[H]
@@ -373,14 +373,14 @@ MATCH (:Plante {nomScientifique: 'Annona senegalensis'})
 RETURN s.sourceId AS source
 
 // 4. Requête spatiale : plantes d'une localité
-MATCH (p:Plante)-[:estLocaliseeA]->(:Localite {nom: 'Pays San'})
+MATCH (p:Plante)-[:estLocaliseeA]->(:Localite {nom: 'Kourittenga'})
 RETURN DISTINCT p.nomScientifique AS plante
 \end{verbatim}
 \end{quote}
 
-Ces requêtes, exécutées sur la base peuplée, renvoient respectivement 16, 43, 6 et 93 lignes (tableau \ref{tab:volumes_requetes} du chapitre \ref{chap:resultats_discussion}).
+Ces requêtes, exécutées sur la base peuplée, renvoient respectivement 136, 118, 7 et 194 lignes (tableau \ref{tab:volumes_requetes} du chapitre \ref{chap:resultats_discussion}).
 
-Pour répondre à la question « quelles plantes sont rapportées contre le paludisme au Pays San ? », une requête relie les nœuds \textit{Plante}, \textit{UsageTherapeutique}, \textit{Maladie} et \textit{Localite}, puis renvoie les noms scientifiques correspondants, ici 8 plantes. Nous avons vérifié le fonctionnement de la base et les résultats des requêtes avant d'intégrer le système d'accès en langage naturel.
+Pour répondre à la question « quelles plantes sont rapportées contre le paludisme au Kourittenga ? », une requête relie les nœuds \textit{Plante}, \textit{UsageTherapeutique}, \textit{Maladie} et \textit{Localite}, puis renvoie les noms scientifiques correspondants, ici 99 plantes. Nous avons vérifié le fonctionnement de la base et les résultats des requêtes avant d'intégrer le système d'accès en langage naturel.
 
 % ============================================================
 % III.3. INTÉGRATION DE L'INTELLIGENCE ARTIFICIELLE
@@ -396,11 +396,11 @@ Nous avons utilisé des modèles de langue à deux étapes. Nous les avons d'abo
 
 \subsubsection{Environnement d'extraction}
 
-Nous avons réalisé l'extraction avec le modèle \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, en soumettant les documents un par un. L'extraction a porté sur dix des 35 documents du corpus, les 19 et 20 octobre 2026. Le document de Ky et al., numérisé sans couche de texte, a dû passer par une reconnaissance optique de caractères, et son extraction reste partielle.
+Nous avons réalisé une première extraction avec le modèle \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, en soumettant les documents un par un. Elle a porté sur dix des 35 documents du corpus, les 19 et 20 octobre 2026. Le document de Ky et al., numérisé sans couche de texte, a dû passer par une reconnaissance optique de caractères, et son extraction restait partielle. Nous avons ensuite réalisé une seconde extraction des mêmes documents avec \textbf{Claude Opus 5.5} d'Anthropic, dans Claude Code, les 5 et 6 novembre 2026. Elle reprend le schéma de sortie et les règles de la première, relit les tableaux en image et couvre l'ensemble des lignes des tableaux, y compris pour Ky et al. Après notre vérification manuelle, c'est cette seconde extraction qui a peuplé l'ontologie.
 
 \subsubsection{Le prompt d'extraction}
 
-Nous avons adressé au modèle une même consigne pour chaque document. Longue d'environ 10~700 caractères, elle précise les règles à respecter, les éléments à extraire et le format de sortie. En voici le début :
+Pour la première extraction, nous avons adressé au modèle une même consigne pour chaque document. Longue d'environ 10~700 caractères, elle précise les règles à respecter, les éléments à extraire et le format de sortie. En voici le début :
 
 \begin{quote}
 \begin{verbatim}
@@ -439,15 +439,15 @@ La sortie est un document JSON comprenant la description du document, les plante
   "synonymes": [],
   "noms_vernaculaires": [],
   "localisations": [{
-    "localite": "Zone d'étude comprenant les communes de
-                 Bissiga, Lalgaye et Tenkodogo",
+    "localite": "Bissiga, Lalgaye et Tenkodogo",
     "province": null,
     "region": "Centre-Est",
     "coordonnees": null,
     "reference_passage": {
-      "page": "1292",
-      "section": "Appendix 1",
-      "citation_courte": "Acacia albida Del."
+      "page": "1289",
+      "section": "Results / Methodology",
+      "citation_courte": "They were conducted in 8 villages
+          from 3 municipalities (Bissiga, Lalgaye and Tenkodogo)"
     }
   }],
   "usages_therapeutiques": [{
@@ -461,12 +461,12 @@ La sortie est un document JSON comprenant la description du document, les plante
 
 \subsubsection{Déroulement et contrôle}
 
-Nous avons traité les documents un par un. Une première version de la consigne, jugée trop longue, a été raccourcie avant l'extraction. Un contrôle automatique en lecture seule a ensuite vérifié les fichiers : les 10 fichiers JSON sont valides et contiennent 230 fiches de plantes, 277 usages, 46 activités, 51 entrées de composés et 6 observations toxicologiques, sans aucun fait dépourvu de référence au passage source. Nous n'avons pas chronométré l'extraction.
+Nous avons traité les documents un par un. Une première version de la consigne, jugée trop longue, a été raccourcie avant l'extraction. Un contrôle automatique en lecture seule a ensuite vérifié les fichiers : les 10 fichiers JSON sont valides et contiennent 230 fiches de plantes, 277 usages, 46 activités, 51 entrées de composés et 6 observations toxicologiques, sans aucun fait dépourvu de référence au passage source. La seconde extraction crée un usage par indication, ce qui rend ses effectifs non comparables un à un : elle compte 623 fiches de plantes, 1~734 usages après retrait des 48 usages sans lien établi avec le Burkina Faso, 278 activités, 554 entrées de composés et 13 observations toxicologiques. Pour les neuf documents dotés d'une couche de texte, chaque citation courte a été retrouvée dans le texte de la page annoncée. Le document de Ky et al. a été comparé à une reconnaissance optique de caractères : sur 1~158 champs, 19 écarts ont été relus en image et un seul a conduit à une correction. Nous n'avons pas chronométré l'extraction.
 
 \subsection{Système RAG d'accès aux connaissances}
 \label{subsec:systeme_rag}
 
-Nous avons mis en place un système de génération augmentée par récupération (RAG, \textit{Retrieval-Augmented Generation}). Il associe la recherche dans le graphe à la génération de réponses par un modèle de langue \cite{lewis2020rag}. Son architecture relie l'utilisateur, Streamlit, Neo4j et Llama 3 (figure \ref{fig:architecture_rag}). Nous avons confié la sélection des données à des requêtes fixes plutôt qu'au modèle : une requête générée par un modèle peut se tromper sans que l'utilisateur le voie, alors que des requêtes fixes garantissent que les faits proviennent bien du graphe. Llama 3 ne fait que rédiger la réponse à partir de ces faits.
+Nous avons mis en place un système de génération augmentée par récupération (RAG, \textit{Retrieval-Augmented Generation}). Il associe la recherche dans le graphe à la génération de réponses par un modèle de langue \cite{lewis2020rag}. Son architecture relie l'utilisateur, Streamlit, Neo4j et Llama 3 (figure \ref{fig:architecture_rag}). Nous avons confié la sélection des données au modèle, selon une approche Text2Cypher : Llama 3 traduit la question en requête Cypher, puis rédige la réponse à partir des lignes obtenues. Des requêtes fixes auraient demandé d'écrire à la main une requête par type de question. Une requête générée peut en revanche se tromper sans que l'utilisateur le voie : le système la valide donc en lecture seule, exige ses sources et affiche la requête exécutée. Le chapitre \ref{chap:resultats_discussion} mesure le coût de ce choix.
 
 \begin{figure}[H]
 \centering
@@ -481,11 +481,11 @@ Nous avons organisé le traitement des requêtes en six étapes :
 
 \begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=1.2cm]
     \item \textbf{Réception de la question.} L'utilisateur formule une question en langage naturel, par exemple « Quelles plantes sont utilisées contre le paludisme ? ». L'application la nettoie et la transmet à la couche RAG.
-    \item \textbf{Détection des entités.} Le système compare la question au vocabulaire réel du graphe : plantes, noms vernaculaires, parties, modes de préparation, composés et localités. Les libellés de maladies reprenant la langue de chaque source, une table d'équivalents relie par exemple « paludisme » à « malaria ».
-    \item \textbf{Interrogation de Neo4j.} Chaque entité détectée déclenche une requête Cypher fixe et paramétrée, en lecture seule. Si aucune entité n'est reconnue, le modèle propose en repli une requête Cypher, que le système valide en lecture seule avant de l'exécuter.
-    \item \textbf{Assemblage du contexte.} Les résultats sont réunis en faits structurés, chacun conservant son niveau de preuve et ses sources.
-    \item \textbf{Génération de la réponse.} Llama 3 reçoit la question, les faits retrouvés et l'historique récent, et rédige une réponse qui ne doit s'appuyer que sur eux. Si aucun fait n'est retrouvé, le système indique que l'information n'est pas disponible, sans demander de réponse au modèle.
-    \item \textbf{Affichage des sources.} L'interface présente la réponse, puis les références scientifiques correspondantes (auteur, année, DOI) et le niveau de preuve de chaque usage.
+    \item \textbf{Préparation de la consigne.} Le système réunit le schéma du graphe, des exemples de requêtes écrits à la main et les libellés réels du graphe proches de la question : maladies, plantes, noms vernaculaires et localités.
+    \item \textbf{Génération et exécution de la requête.} Llama 3 écrit une requête Cypher, que le système valide en lecture seule avant de l'exécuter. Les filtres sur le texte sont réécrits pour ignorer les accents. Si la requête est rejetée ou ne renvoie aucune ligne, le système demande une seule correction au modèle.
+    \item \textbf{Assemblage du contexte.} Les lignes obtenues sont réunies avec la requête qui les a produites. Le système vérifie dans le graphe les identifiants de sources renvoyés et refuse une requête sans source. Seule exception, une requête qui ne renvoie que des nombres ou des booléens est acceptée sans source : sa réponse porte une mention indiquant qu'il s'agit d'un décompte de la base, et non d'un fait scientifique.
+    \item \textbf{Génération de la réponse.} Llama 3 reçoit la question, les lignes retrouvées et l'historique récent, et rédige une réponse qui ne doit s'appuyer que sur eux. Si aucun fait n'est retrouvé, le système indique que l'information n'est pas disponible, sans demander de réponse au modèle.
+    \item \textbf{Affichage des sources.} L'interface présente la réponse, puis les références scientifiques correspondantes (auteur, année, DOI) et la requête Cypher exécutée.
 \end{enumerate}
 
 \subsubsection{Câblage des composants}
@@ -516,7 +516,7 @@ Le notebook Colab installe Ollama, télécharge le modèle, démarre le serveur 
 \subsection{Traçabilité des réponses}
 \label{subsec:tracabilite_reponses}
 
-Nous avons maintenu la traçabilité à chaque étape. L'extraction ne conservait que les informations rapportées par les sources et laissait vides les champs absents. Lors de l'import, chaque connaissance est restée reliée à un nœud \textit{SourceScientifique}. Les requêtes Cypher permettaient de retrouver ces références, affichées avec les réponses. Nous avons repris les niveaux de preuve tels quels, sans évaluation indépendante, et aucun expert externe n'a relu les extractions. Ces limites sont discutées au chapitre \ref{chap:resultats_discussion}.
+Nous avons maintenu la traçabilité à chaque étape. L'extraction ne conservait que les informations rapportées par les sources et laissait vides les champs absents. Lors de l'import, chaque connaissance est restée reliée à un nœud \textit{SourceScientifique}. Les requêtes générées doivent renvoyer ces références, vérifiées dans le graphe puis affichées avec les réponses. Nous avons repris les niveaux de preuve tels quels, sans évaluation indépendante, et aucun expert externe n'a relu les extractions. Ces limites sont discutées au chapitre \ref{chap:resultats_discussion}.
 
 % ============================================================
 % III.4. DÉVELOPPEMENT DE L'APPLICATION WEB
@@ -565,7 +565,7 @@ Deux fonctions restent partielles. Les références s'affichent sous la réponse
 \subsection{Gestion de session et déploiement}
 \label{subsec:session_depl}
 
-Nous avons conservé l'historique des échanges dans l'état de session de Streamlit et l'avons transmis au modèle dans la consigne de génération. L'historique sert à la rédaction, mais pas à la détection des entités : une question de suivi qui ne nomme pas son sujet ne déclenche donc pas de requête fixe. L'application fonctionne sur un poste local sous Windows~11 et accède au modèle par l'API exposée avec ngrok ; seule l'API du modèle est exposée, pas l'application.
+Nous avons conservé l'historique des échanges dans l'état de session de Streamlit et l'avons transmis au modèle dans la consigne de génération. L'historique sert à la rédaction, mais pas à la génération de la requête : une question de suivi qui ne nomme pas son sujet ne retrouve donc pas les bons faits. L'application fonctionne sur un poste local sous Windows~11 et accède au modèle par l'API exposée avec ngrok ; seule l'API du modèle est exposée, pas l'application.
 
 \begin{quote}
 \begin{verbatim}

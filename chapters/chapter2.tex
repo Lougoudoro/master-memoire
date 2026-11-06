@@ -136,7 +136,7 @@ La figure \ref{fig:dispositif_technique} résume l'environnement d'expérimentat
 
 \subsubsection{Modèles de langage}
 
-Nous avons utilisé deux modèles, chacun pour une étape distincte. Pour l'extraction des connaissances (phase 5), nous avons utilisé \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork. Pour la génération des réponses du système RAG (phase 7), nous avons utilisé \textbf{Llama 3 8B} \cite{meta2024llama3}, un modèle ouvert. Gemini (\textit{gemini-3.5-flash-lite}) nous a servi de point de comparaison lors de l'évaluation.
+Nous avons utilisé des modèles distincts selon l'étape. Pour l'extraction des connaissances (phase 5), nous avons d'abord utilisé \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, puis retenu une seconde extraction réalisée avec \textbf{Claude Opus 5.5} d'Anthropic, accessible par Claude Code. Pour la génération des réponses du système RAG (phase 7), nous avons utilisé \textbf{Llama 3 8B} \cite{meta2024llama3}, un modèle ouvert. Gemini (\textit{gemini-3.5-flash-lite}) nous a servi de point de comparaison lors de l'évaluation.
 
 Le tableau \ref{tab:llama_acces} présente les modes d'accès à ces modèles.
 
@@ -148,7 +148,9 @@ Le tableau \ref{tab:llama_acces} présente les modes d'accès à ces modèles.
 \hline
 \textbf{Usage} & \textbf{Modèle} & \textbf{Mode d'accès} \\
 \hline
-Extraction (phase 5) & gpt-6-luna & OpenWork \\
+Première extraction (phase 5) & gpt-6-luna & OpenWork \\
+\hline
+Extraction retenue (phase 5) & Claude Opus 5.5 & Claude Code \\
 \hline
 Génération RAG (phase 7) & Llama 3 8B & Ollama sur Google Colab, API exposée par ngrok \\
 \hline
@@ -200,7 +202,7 @@ Nous avons choisi Neo4j pour représenter les relations entre les plantes, les u
 
 \subsubsection{Orchestration RAG : LangChain}
 
-Nous avons utilisé \textbf{LangChain} pour définir les consignes et appeler les modèles de langage de façon uniforme. La recherche dans Neo4j passe par le pilote officiel et par nos propres requêtes.
+Nous avons utilisé \textbf{LangChain} pour définir les consignes et appeler les modèles de langage de façon uniforme. La recherche dans Neo4j passe par le pilote officiel et par les requêtes Cypher que le modèle génère et que nous validons.
 
 \textbf{Phase d'utilisation :} phase 7 pour l'accès aux connaissances et le développement web.
 
@@ -223,7 +225,7 @@ ChatGoogleGenerativeAI & Appel de Gemini pour la comparaison \\
 \end{tabular}
 \end{table}
 
-Nous avons retenu LangChain parce qu'il permet de changer de modèle sans modifier le reste du système. Nous n'avons pas confié la sélection des données à une chaîne générant du Cypher : le chapitre \ref{chap:conception_developpement} justifie ce choix \cite{lewis2020rag}.
+Nous avons retenu LangChain parce qu'il permet de changer de modèle sans modifier le reste du système. Nous avons écrit notre propre chaîne de génération de Cypher, afin de contrôler chaque requête avant son exécution : le chapitre \ref{chap:conception_developpement} justifie ce choix \cite{lewis2020rag}.
 
 \subsubsection{Interface web : Streamlit}
 
@@ -303,7 +305,7 @@ Le tableau \ref{tab:recap_materiel} rassemble l'ensemble du matériel mobilisé.
 \cline{2-3}
 & FLOPO, PO & OWL, botanique \\
 \hline
-Modèles de langage & gpt-6-luna ; Llama 3 8B & OpenWork (extraction) ; Ollama sur Colab et ngrok (RAG) \\
+Modèles de langage & gpt-6-luna ; Claude Opus 5.5 ; Llama 3 8B & OpenWork et Claude Code (extraction) ; Ollama sur Colab et ngrok (RAG) \\
 \hline
 Plateforme & Google Colab & GPU T4 \\
 \hline
@@ -339,7 +341,9 @@ Corpus documentaire & Phase 3 & Constitution du corpus \\
 \hline
 Ontologies candidates & Phase 1 & Comparaison et sélection \\
 \hline
-gpt-6-luna & Phase 5 & Extraction \\
+gpt-6-luna & Phase 5 & Première extraction \\
+\hline
+Claude Opus 5.5 & Phase 5 & Extraction retenue \\
 \hline
 Llama 3 8B & Phase 7, Phase 8 & Génération RAG, évaluation \\
 \hline
@@ -574,7 +578,7 @@ Nous avons employé une même consigne pour les documents traités. Les champs a
 
 \subsubsection{Exécution de l'extraction}
 
-Nous avons soumis les documents à gpt-6-luna dans l'environnement OpenWork, un par un, et enregistré les résultats en JSON. L'extraction a porté sur dix des 35 documents du corpus, principalement des enquêtes ethnobotaniques ; les 25 autres n'ont pas été extraits.
+Nous avons soumis les documents à gpt-6-luna dans l'environnement OpenWork, un par un, et enregistré les résultats en JSON. L'extraction a porté sur dix des 35 documents du corpus, principalement des enquêtes ethnobotaniques ; les 25 autres n'ont pas été extraits. Cette première extraction restant incomplète sur les grands tableaux, nous avons réalisé une seconde extraction des mêmes documents avec Claude Opus 5.5 dans Claude Code, selon le même schéma JSON, les 5 et 6 novembre 2026. Les tableaux y ont été relus en image, et le document numérisé de Ky et al. a en outre été comparé à une reconnaissance optique de caractères (Tesseract). Nous avons vérifié manuellement cette seconde extraction, puis l'avons retenue pour peupler l'ontologie.
 
 \subsubsection{Contrôle de la qualité des extractions}
 
@@ -582,7 +586,7 @@ Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était ex
 
 \subsubsection{Structuration des données}
 
-Nous avons organisé les données selon le modèle de l'ontologie dans un classeur d'individus, par type de connaissance (sources, plantes, noms vernaculaires, usages, préparations, maladies, activités, composés, toxicologie et localités), puis les avons transformées en individus au format Turtle.
+Nous avons organisé les données selon le modèle de l'ontologie, par type de connaissance (sources, plantes, noms vernaculaires, usages, préparations, maladies, activités, composés, toxicologie et localités), puis un programme les a transformées en individus au format Turtle.
 
 \subsubsection{Préparation de l'intégration dans la base de connaissances}
 
@@ -781,7 +785,7 @@ Phase 8 & Évaluer la qualité du système & Rapport d'évaluation \\
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre a exposé le matériel et la méthodologie de notre recherche. Le matériel réunit un corpus de 35 documents scientifiques, les données de burkinaherbiermed.org et de l'INERA, cinq ontologies candidates et un environnement technique bâti sur gpt-6-luna pour l'extraction, Llama 3 8B sur Google Colab pour le RAG, Neo4j Desktop, LangChain et Streamlit.
+Ce chapitre a exposé le matériel et la méthodologie de notre recherche. Le matériel réunit un corpus de 35 documents scientifiques, les données de burkinaherbiermed.org et de l'INERA, cinq ontologies candidates et un environnement technique bâti sur gpt-6-luna puis Claude Opus 5.5 pour l'extraction, Llama 3 8B sur Google Colab pour le RAG, Neo4j Desktop, LangChain et Streamlit.
 
 Nous avons suivi huit phases : comparaison des ontologies, définition des critères de recherche et de sélection, constitution du corpus, adaptation de l'ontologie, extraction des connaissances, construction et interrogation de la base, développement du système d'accès et de l'application, puis évaluation. Nous avons décrit les actions menées et les livrables associés.
 

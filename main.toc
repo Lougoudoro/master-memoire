@@ -106,94 +106,94 @@
 \contentsline {subsubsection}{Modèles de langage}{34}{subsubsection*.82}%
 \contentsline {subsubsection}{Plateforme d'exécution : Google Colab}{35}{subsubsection*.83}%
 \contentsline {subsubsection}{Base de connaissances : Neo4j Desktop}{35}{subsubsection*.84}%
-\contentsline {subsubsection}{Orchestration RAG : LangChain}{35}{subsubsection*.85}%
+\contentsline {subsubsection}{Orchestration RAG : LangChain}{36}{subsubsection*.85}%
 \contentsline {subsubsection}{Interface web : Streamlit}{36}{subsubsection*.86}%
 \contentsline {subsubsection}{Bibliothèques Python}{36}{subsubsection*.87}%
 \contentsline {subsection}{\numberline {II.1.4}Tableau récapitulatif du matériel}{37}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {II.1.5}Tableau de correspondance Matériel - Phases}{37}{subsection.2.1.5}%
-\contentsline {section}{\numberline {II.2}Méthodologie}{37}{section.2.2}%
+\contentsline {section}{\numberline {II.2}Méthodologie}{38}{section.2.2}%
 \contentsline {subsection}{\numberline {II.2.1}Phase 1 : Identification et étude comparative des ontologies}{38}{subsection.2.2.1}%
 \contentsline {subsubsection}{Définition de la grille de critères}{38}{subsubsection*.88}%
-\contentsline {subsubsection}{Notation des ontologies}{38}{subsubsection*.89}%
-\contentsline {subsubsection}{Sélection de l'ontologie}{39}{subsubsection*.90}%
-\contentsline {subsection}{\numberline {II.2.2}Phase 2 : Définition des critères de recherche et de sélection des documents}{39}{subsection.2.2.2}%
-\contentsline {subsubsection}{Critères de recherche}{39}{subsubsection*.91}%
+\contentsline {subsubsection}{Notation des ontologies}{39}{subsubsection*.89}%
+\contentsline {subsubsection}{Sélection de l'ontologie}{40}{subsubsection*.90}%
+\contentsline {subsection}{\numberline {II.2.2}Phase 2 : Définition des critères de recherche et de sélection des documents}{40}{subsection.2.2.2}%
+\contentsline {subsubsection}{Critères de recherche}{40}{subsubsection*.91}%
 \contentsline {subsubsection}{Critères de sélection des documents}{40}{subsubsection*.92}%
-\contentsline {subsection}{\numberline {II.2.3}Phase 3 : Constitution du corpus scientifique}{40}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {II.2.4}Phase 4 : Adaptation de l'ontologie sélectionnée}{40}{subsection.2.2.4}%
-\contentsline {subsubsection}{Analyse des concepts existants}{40}{subsubsection*.93}%
-\contentsline {subsubsection}{Ajout de classes}{41}{subsubsection*.94}%
-\contentsline {subsubsection}{Ajout de propriétés}{41}{subsubsection*.95}%
-\contentsline {subsubsection}{Modification de relations}{41}{subsubsection*.96}%
+\contentsline {subsection}{\numberline {II.2.3}Phase 3 : Constitution du corpus scientifique}{41}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {II.2.4}Phase 4 : Adaptation de l'ontologie sélectionnée}{41}{subsection.2.2.4}%
+\contentsline {subsubsection}{Analyse des concepts existants}{41}{subsubsection*.93}%
+\contentsline {subsubsection}{Ajout de classes}{42}{subsubsection*.94}%
+\contentsline {subsubsection}{Ajout de propriétés}{42}{subsubsection*.95}%
+\contentsline {subsubsection}{Modification de relations}{42}{subsubsection*.96}%
 \contentsline {subsubsection}{Documentation des adaptations}{42}{subsubsection*.97}%
-\contentsline {subsection}{\numberline {II.2.5}Phase 5 : Enrichissement des connaissances à partir de la littérature scientifique}{42}{subsection.2.2.5}%
-\contentsline {subsubsection}{Conception des prompts d'extraction}{42}{subsubsection*.98}%
-\contentsline {subsubsection}{Exécution de l'extraction}{42}{subsubsection*.99}%
-\contentsline {subsubsection}{Contrôle de la qualité des extractions}{42}{subsubsection*.100}%
+\contentsline {subsection}{\numberline {II.2.5}Phase 5 : Enrichissement des connaissances à partir de la littérature scientifique}{43}{subsection.2.2.5}%
+\contentsline {subsubsection}{Conception des prompts d'extraction}{43}{subsubsection*.98}%
+\contentsline {subsubsection}{Exécution de l'extraction}{43}{subsubsection*.99}%
+\contentsline {subsubsection}{Contrôle de la qualité des extractions}{43}{subsubsection*.100}%
 \contentsline {subsubsection}{Structuration des données}{43}{subsubsection*.101}%
 \contentsline {subsubsection}{Préparation de l'intégration dans la base de connaissances}{43}{subsubsection*.102}%
-\contentsline {subsection}{\numberline {II.2.6}Phase 6 : Construction et interrogation de la base de connaissances}{43}{subsection.2.2.6}%
-\contentsline {subsubsection}{Import et ajustement du modèle dans le graphe}{43}{subsubsection*.103}%
-\contentsline {subsubsection}{Import des données}{43}{subsubsection*.104}%
-\contentsline {subsubsection}{Requêtes de test}{43}{subsubsection*.105}%
+\contentsline {subsection}{\numberline {II.2.6}Phase 6 : Construction et interrogation de la base de connaissances}{44}{subsection.2.2.6}%
+\contentsline {subsubsection}{Import et ajustement du modèle dans le graphe}{44}{subsubsection*.103}%
+\contentsline {subsubsection}{Import des données}{44}{subsubsection*.104}%
+\contentsline {subsubsection}{Requêtes de test}{44}{subsubsection*.105}%
 \contentsline {subsection}{\numberline {II.2.7}Phase 7 : Exploitation par IA et développement de l'application web}{44}{subsection.2.2.7}%
 \contentsline {subsubsection}{Architecture du système}{44}{subsubsection*.106}%
 \contentsline {subsubsection}{Intégration des composants}{44}{subsubsection*.107}%
-\contentsline {subsubsection}{Développement de l'application web}{44}{subsubsection*.108}%
-\contentsline {subsubsection}{Tests et validation}{44}{subsubsection*.109}%
-\contentsline {subsection}{\numberline {II.2.8}Phase 8 : Évaluation et validation}{44}{subsection.2.2.8}%
-\contentsline {subsubsection}{Évaluation de l'ontologie}{44}{subsubsection*.110}%
+\contentsline {subsubsection}{Développement de l'application web}{45}{subsubsection*.108}%
+\contentsline {subsubsection}{Tests et validation}{45}{subsubsection*.109}%
+\contentsline {subsection}{\numberline {II.2.8}Phase 8 : Évaluation et validation}{45}{subsection.2.2.8}%
+\contentsline {subsubsection}{Évaluation de l'ontologie}{45}{subsubsection*.110}%
 \contentsline {subsubsection}{Évaluation du système RAG}{45}{subsubsection*.111}%
-\contentsline {subsubsection}{Évaluation de l'application web}{45}{subsubsection*.112}%
-\contentsline {section}{\numberline {II.3}Synthèse et transition}{45}{section.2.3}%
-\contentsline {subsection}{\numberline {II.3.1}Tableau de correspondance Phases - Livrables}{45}{subsection.2.3.1}%
+\contentsline {subsubsection}{Évaluation de l'application web}{46}{subsubsection*.112}%
+\contentsline {section}{\numberline {II.3}Synthèse et transition}{46}{section.2.3}%
+\contentsline {subsection}{\numberline {II.3.1}Tableau de correspondance Phases - Livrables}{46}{subsection.2.3.1}%
 \contentsline {section}{Conclusion du chapitre}{46}{table.2.14}%
-\contentsline {chapter}{\numberline {III}Conception et développement du système}{47}{chapter.3}%
-\contentsline {section}{\numberline {III.1}Ontologie adaptée et enrichie}{47}{section.3.1}%
-\contentsline {subsection}{\numberline {III.1.1}Vue d'ensemble du modèle}{47}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {III.1.2}Classes ajoutées}{51}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {III.1.3}Propriétés ajoutées}{52}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {III.1.4}Relations ajoutées}{54}{subsection.3.1.4}%
-\contentsline {section}{\numberline {III.2}Base de connaissances orientée graphe}{56}{section.3.2}%
-\contentsline {subsection}{\numberline {III.2.1}Du modèle ontologique au graphe}{57}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {III.2.2}Import et peuplement}{58}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {III.2.3}Interrogation de la base}{59}{subsection.3.2.3}%
-\contentsline {section}{\numberline {III.3}Intégration de l'intelligence artificielle}{60}{section.3.3}%
-\contentsline {subsection}{\numberline {III.3.1}Extraction assistée des connaissances}{60}{subsection.3.3.1}%
-\contentsline {subsubsection}{Environnement d'extraction}{60}{subsubsection*.114}%
-\contentsline {subsubsection}{Le prompt d'extraction}{60}{subsubsection*.115}%
-\contentsline {subsubsection}{Format de sortie}{61}{subsubsection*.116}%
-\contentsline {subsubsection}{Déroulement et contrôle}{61}{subsubsection*.117}%
-\contentsline {subsection}{\numberline {III.3.2}Système RAG d'accès aux connaissances}{61}{subsection.3.3.2}%
-\contentsline {subsubsection}{Les six étapes de la chaîne de traitement}{62}{subsubsection*.118}%
-\contentsline {subsubsection}{Câblage des composants}{62}{subsubsection*.119}%
-\contentsline {subsection}{\numberline {III.3.3}Traçabilité des réponses}{63}{subsection.3.3.3}%
-\contentsline {section}{\numberline {III.4}Développement de l'application web}{63}{section.3.4}%
-\contentsline {subsection}{\numberline {III.4.1}Architecture de l'application}{63}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {III.4.2}Fonctionnalités}{63}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {III.4.3}Gestion de session et déploiement}{64}{subsection.3.4.3}%
-\contentsline {section}{Conclusion du chapitre}{64}{figure.3.8}%
-\contentsline {chapter}{\numberline {IV}Résultats et discussion}{66}{chapter.4}%
-\contentsline {section}{\numberline {IV.1}Évaluation de l'ontologie}{66}{section.4.1}%
-\contentsline {subsection}{\numberline {IV.1.1}Couverture}{66}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {IV.1.2}Cohérence}{66}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {IV.1.3}Traçabilité}{67}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {IV.1.4}Extensibilité}{67}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {IV.1.5}Synthèse de l'évaluation de l'ontologie}{67}{subsection.4.1.5}%
-\contentsline {section}{\numberline {IV.2}Évaluation du système RAG}{68}{section.4.2}%
-\contentsline {subsection}{\numberline {IV.2.1}Construction du jeu d'évaluation}{68}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {IV.2.2}Résultats quantitatifs}{68}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {IV.2.3}Volumes d'interrogation de la base}{69}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {IV.2.4}Observations qualitatives}{70}{subsection.4.2.4}%
-\contentsline {section}{\numberline {IV.3}Évaluation de l'application web}{70}{section.4.3}%
-\contentsline {subsection}{\numberline {IV.3.1}Campagne de test}{70}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {IV.3.2}Résultats du questionnaire}{70}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {IV.3.3}Performance}{71}{subsection.4.3.3}%
-\contentsline {section}{\numberline {IV.4}Discussion}{71}{section.4.4}%
-\contentsline {subsection}{\numberline {IV.4.1}Confrontation aux objectifs de la recherche}{71}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {IV.4.2}Confrontation aux systèmes existants}{72}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {IV.4.3}Limites}{72}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {IV.4.4}Pistes de travail}{73}{subsection.4.4.4}%
-\contentsline {section}{Conclusion du chapitre}{73}{subsection.4.4.4}%
-\contentsline {chapter}{Conclusion générale}{74}{chapter*.121}%
-\contentsline {chapter}{Bibliographie}{75}{chapter*.121}%
+\contentsline {chapter}{\numberline {III}Conception et développement du système}{48}{chapter.3}%
+\contentsline {section}{\numberline {III.1}Ontologie adaptée et enrichie}{48}{section.3.1}%
+\contentsline {subsection}{\numberline {III.1.1}Vue d'ensemble du modèle}{48}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {III.1.2}Classes ajoutées}{52}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {III.1.3}Propriétés ajoutées}{53}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {III.1.4}Relations ajoutées}{55}{subsection.3.1.4}%
+\contentsline {section}{\numberline {III.2}Base de connaissances orientée graphe}{57}{section.3.2}%
+\contentsline {subsection}{\numberline {III.2.1}Du modèle ontologique au graphe}{58}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {III.2.2}Import et peuplement}{59}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {III.2.3}Interrogation de la base}{60}{subsection.3.2.3}%
+\contentsline {section}{\numberline {III.3}Intégration de l'intelligence artificielle}{61}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Extraction assistée des connaissances}{61}{subsection.3.3.1}%
+\contentsline {subsubsection}{Environnement d'extraction}{61}{subsubsection*.114}%
+\contentsline {subsubsection}{Le prompt d'extraction}{61}{subsubsection*.115}%
+\contentsline {subsubsection}{Format de sortie}{62}{subsubsection*.116}%
+\contentsline {subsubsection}{Déroulement et contrôle}{62}{subsubsection*.117}%
+\contentsline {subsection}{\numberline {III.3.2}Système RAG d'accès aux connaissances}{63}{subsection.3.3.2}%
+\contentsline {subsubsection}{Les six étapes de la chaîne de traitement}{63}{subsubsection*.118}%
+\contentsline {subsubsection}{Câblage des composants}{64}{subsubsection*.119}%
+\contentsline {subsection}{\numberline {III.3.3}Traçabilité des réponses}{64}{subsection.3.3.3}%
+\contentsline {section}{\numberline {III.4}Développement de l'application web}{65}{section.3.4}%
+\contentsline {subsection}{\numberline {III.4.1}Architecture de l'application}{65}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {III.4.2}Fonctionnalités}{65}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {III.4.3}Gestion de session et déploiement}{65}{subsection.3.4.3}%
+\contentsline {section}{Conclusion du chapitre}{66}{figure.3.8}%
+\contentsline {chapter}{\numberline {IV}Résultats et discussion}{67}{chapter.4}%
+\contentsline {section}{\numberline {IV.1}Évaluation de l'ontologie}{67}{section.4.1}%
+\contentsline {subsection}{\numberline {IV.1.1}Couverture}{67}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {IV.1.2}Cohérence}{67}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {IV.1.3}Traçabilité}{68}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {IV.1.4}Extensibilité}{68}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {IV.1.5}Synthèse de l'évaluation de l'ontologie}{68}{subsection.4.1.5}%
+\contentsline {section}{\numberline {IV.2}Évaluation du système RAG}{69}{section.4.2}%
+\contentsline {subsection}{\numberline {IV.2.1}Construction du jeu d'évaluation}{69}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {IV.2.2}Résultats quantitatifs}{70}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {IV.2.3}Volumes d'interrogation de la base}{71}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {IV.2.4}Observations qualitatives}{71}{subsection.4.2.4}%
+\contentsline {section}{\numberline {IV.3}Évaluation de l'application web}{72}{section.4.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Campagne de test}{72}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {IV.3.2}Résultats du questionnaire}{72}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {IV.3.3}Performance}{73}{subsection.4.3.3}%
+\contentsline {section}{\numberline {IV.4}Discussion}{73}{section.4.4}%
+\contentsline {subsection}{\numberline {IV.4.1}Confrontation aux objectifs de la recherche}{73}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {IV.4.2}Confrontation aux systèmes existants}{73}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {IV.4.3}Limites}{74}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {IV.4.4}Pistes de travail}{74}{subsection.4.4.4}%
+\contentsline {section}{Conclusion du chapitre}{74}{subsection.4.4.4}%
+\contentsline {chapter}{Conclusion générale}{76}{chapter*.121}%
+\contentsline {chapter}{Bibliographie}{77}{chapter*.121}%

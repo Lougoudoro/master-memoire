@@ -14,9 +14,16 @@ INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\txtbabel.de
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-en.ini
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\fr\babel-fr.ini
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel-french\french.ldf
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\generic\babel-french\french.ldf
@@ -257,6 +264,9 @@ INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-ptm.cf
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\french.lbx
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\french.lbx
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\french.lbx
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
 OUTPUT main.bcf
 INPUT main.bbl
 INPUT .\main.bbl
@@ -365,6 +375,8 @@ INPUT parts\remerciements.tex
 INPUT .\parts\resume.tex
 INPUT .\parts\resume.tex
 INPUT parts\resume.tex
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
 INPUT .\parts\abstract.tex
 INPUT .\parts\abstract.tex
 INPUT parts\abstract.tex
@@ -412,7 +424,6 @@ OUTPUT main.toc
 INPUT .\chapters\introduction.tex
 INPUT .\chapters\introduction.tex
 INPUT chapters\introduction.tex
-INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
 INPUT .\images\repartition_connaissances.png
 INPUT .\images\repartition_connaissances.png
 INPUT .\images\repartition_connaissances.png
@@ -420,7 +431,6 @@ INPUT .\images\repartition_connaissances.png
 INPUT .\images\repartition_connaissances.png
 INPUT .\images\repartition_connaissances.png
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
-INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\newtx\ntx-ec-tlf-pc.enc
 INPUT .\images\methodologie.png
 INPUT .\images\methodologie.png
@@ -559,6 +569,7 @@ INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\newtx\ntx-ot1
 INPUT .\chapters\conclusion.tex
 INPUT .\chapters\conclusion.tex
 INPUT chapters\conclusion.tex
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

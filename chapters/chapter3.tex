@@ -19,12 +19,12 @@ Dans les chapitres précédents, nous avons présenté le cadre théorique et la
 \section{Ontologie adaptée et enrichie}
 \label{sec:ontologie_adaptee}
 
-En phase 1, nous avons sélectionné l'ontologie \textit{ontoMEDTRAD} \cite{kouame_systeme_2018} (section \ref{subsec:phase1} du chapitre \ref{chap:materiel_methodologie}) comme point de départ. Ce modèle constituait une base solide, mais incomplète pour le contexte burkinabè : il ne représentait pas les noms vernaculaires locaux, les niveaux de preuve ni la traçabilité détaillée des sources. En phase 4, nous en avons adapté le modèle conceptuel. En phase 5, nous avons enrichi l'ontologie avec les données et individus extraits de dix documents scientifiques. Enfin, en phase 6, nous avons importé dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF}.
+En phase 2a, nous avons sélectionné l'ontologie \textit{ontoMEDTRAD} \cite{kouame_systeme_2018} (section \ref{subsec:phase2a} du chapitre \ref{chap:materiel_methodologie}) comme point de départ. Ce modèle constituait une base solide, mais incomplète pour le contexte burkinabè : il ne représentait pas les noms vernaculaires locaux, les niveaux de preuve ni la traçabilité détaillée des sources. En phase 3a, nous en avons adapté le modèle conceptuel. En phase 4, nous avons enrichi l'ontologie avec les données et individus extraits de dix documents scientifiques en phase 3b. Enfin, au cours de la même phase, nous avons importé dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF}.
 
 \subsection{Vue d'ensemble du modèle}
 \label{subsec:vue_ensemble_ontologie}
 
-L'ontologie d'origine comptait 144 concepts, 76 propriétés associatives, 16 propriétés de données, 789 individus et 2 734 axiomes. Elle était formalisée en logique de description \textit{ALCHOIQ}, éditée sous Protégé~5 et vérifiée avec les raisonneurs HermiT et Pellet, qui n'y avaient signalé aucune incohérence. Nous en avons retenu une partie du schéma et l'avons étendue pour produire un modèle conceptuel adapté aux besoins de l'étude (phase 4). Ce modèle a ensuite été enrichi par des données et individus issus de dix documents scientifiques (phase 5), avant l'import et l'ajustement de cette représentation dans Neo4j (phase 6).
+L'ontologie d'origine comptait 144 concepts, 76 propriétés associatives, 16 propriétés de données, 789 individus et 2 734 axiomes. Elle était formalisée en logique de description \textit{ALCHOIQ}, éditée sous Protégé~5 et vérifiée avec les raisonneurs HermiT et Pellet, qui n'y avaient signalé aucune incohérence. Nous en avons retenu une partie du schéma et l'avons étendue pour produire un modèle conceptuel adapté aux besoins de l'étude (phase 3a). Ce modèle a ensuite été enrichi par des données et individus extraits de dix documents scientifiques (phases 3b et 4), avant l'import et l'ajustement de cette représentation dans Neo4j (phase 4).
 
 La figure \ref{fig:ontomedtrad_initiale} présente la structure de l'ontologie initiale, reconstituée à partir de la thèse.
 
@@ -46,7 +46,7 @@ La figure \ref{fig:ontomedtrad_initiale} présente la structure de l'ontologie i
 
 Nous avons retenu d'ontoMEDTRAD les concepts relatifs aux plantes médicinales, à leurs parties, aux modes de préparation, aux maladies, à la localisation et aux références scientifiques. Nous les avons complétés par les classes et relations nécessaires au périmètre de notre étude, notamment les usages thérapeutiques, les noms vernaculaires, les niveaux de preuve, la traçabilité documentaire, la phytochimie et la toxicologie. Nous avons écarté les modules hors périmètre, dont la couche d'iconisation ontoICONE et les concepts relatifs aux praticiens, aux patients, à l'examen clinique et à l'anamnèse. L'iconisation étant un choix de représentation visuelle, son retrait ne remet pas en cause la réutilisation du modèle conceptuel. Le tableau \ref{tab:concepts_retenus_ecartes} détaille ces choix.
 
-Nous avons réutilisé la structure conceptuelle, mais pas les 789 individus d'ontoMEDTRAD, associés au contexte et aux sources des travaux d'origine. En phase 4, nous avons défini le modèle conceptuel adapté et ses nouveaux éléments de schéma. En phase 5, nous avons enrichi l'ontologie avec les individus extraits de dix documents scientifiques et leurs liens aux sources. En phase 6, nous avons importé dans Neo4j l'ontologie réajustée OntoPlantMedBF.
+Nous avons réutilisé la structure conceptuelle, mais pas les 789 individus d'ontoMEDTRAD, associés au contexte et aux sources des travaux d'origine. En phase 3a, nous avons défini le modèle conceptuel adapté et ses nouveaux éléments de schéma. En phase 4, nous avons enrichi l'ontologie avec les individus extraits de dix documents scientifiques en phase 3b et leurs liens aux sources, puis nous avons importé dans Neo4j l'ontologie réajustée OntoPlantMedBF.
 
 \begin{table}[H]
 \centering
@@ -82,7 +82,7 @@ La figure \ref{fig:ontologie_conservee} présente le modèle réduit aux concept
 \label{fig:ontologie_conservee}
 \end{figure}
 
-Le tableau \ref{tab:stats_ontologie} compare les métriques structurelles de l'ontologie d'origine à celles du modèle conceptuel adapté en phase 4 et de la version peuplée, dont le schéma a été complété lors de la phase 5 par des modes d'administration et de préparation, des propriétés de posologie et des parties de plante.
+Le tableau \ref{tab:stats_ontologie} compare les métriques structurelles de l'ontologie d'origine à celles du modèle conceptuel adapté en phase 3a et de la version peuplée, dont le schéma a été complété lors de la phase 4 par des modes d'administration et de préparation, des propriétés de posologie et des parties de plante.
 
 \begin{table}[H]
 \centering
@@ -90,7 +90,7 @@ Le tableau \ref{tab:stats_ontologie} compare les métriques structurelles de l'o
 \label{tab:stats_ontologie}
 \begin{tabular}{|L{4.4cm}|C{2.6cm}|C{3.2cm}|C{3cm}|}
 \hline
-\textbf{Indicateur} & \textbf{Ontologie d'origine} & \textbf{Modèle adapté (phase 4)} & \textbf{Version peuplée (v4.0)} \\
+\textbf{Indicateur} & \textbf{Ontologie d'origine} & \textbf{Modèle adapté (phase 3a)} & \textbf{Version peuplée (v4.0)} \\
 \hline
 Concepts (classes) & 144 & 69 (40 ajoutées) & 92 \\
 \hline
@@ -100,7 +100,7 @@ Propriétés de données & 16 & 20 (15 ajoutées) & 31 \\
 \hline
 Individus & 789 & Sans objet & 6~936 \\
 \hline
-Axiomes & 2 734 & Non relevé & \TODOchapo{relever dans Protégé : Active Ontology, Ontology metrics, Axiom} \\
+Axiomes & 2 734 & Non relevé & 62~965 \\
 \hline
 \end{tabular}
 \end{table}
@@ -110,7 +110,7 @@ Nous n'avons pas repris les 789 individus de l'ontologie d'origine dans le modè
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{ontology-adaptee.png}
-\caption{Modèle conceptuel adapté sous Protégé~5 (phase 4)}
+\caption{Modèle conceptuel adapté sous Protégé~5 (phase 3a)}
 \label{fig:protoge_ontologie}
 \end{figure}
 
@@ -144,7 +144,7 @@ Phytochimie et sécurité & Composés, activités pharmacologiques et effets tox
 \end{tabular}
 \end{table}
 
-Nous avons inséré les classes ajoutées dans les hiérarchies existantes lorsque cela était pertinent. Les parties végétales spécialisent \textit{PartieDePlante}, les formes galéniques et les procédés sont rattachés à \textit{Preparation} ou à \textit{ModeDePreparation}, et les catégories de métabolites spécialisent \textit{ComposeChimique}. Les classes \textit{NomVernaculaire}, \textit{NiveauDePreuve}, \textit{UsageTherapeutique} et \textit{ActivitePharmacologique} structurent les désignations locales, la qualification rapportée par les sources, les usages et les résultats pharmacologiques. Le modèle de phase 4 déclare 69 classes, dont 29 conservées et 40 ajoutées ; la version peuplée en déclare 92 et inclut des individus issus des sources.
+Nous avons inséré les classes ajoutées dans les hiérarchies existantes lorsque cela était pertinent. Les parties végétales spécialisent \textit{PartieDePlante}, les formes galéniques et les procédés sont rattachés à \textit{Preparation} ou à \textit{ModeDePreparation}, et les catégories de métabolites spécialisent \textit{ComposeChimique}. Les classes \textit{NomVernaculaire}, \textit{NiveauDePreuve}, \textit{UsageTherapeutique} et \textit{ActivitePharmacologique} structurent les désignations locales, la qualification rapportée par les sources, les usages et les résultats pharmacologiques. Le modèle de phase 3a déclare 69 classes, dont 29 conservées et 40 ajoutées ; la version peuplée en déclare 92 et inclut des individus issus des sources.
 
 \subsection{Propriétés ajoutées}
 \label{subsec:proprietes_ajoutees}
@@ -159,9 +159,9 @@ Nous avons ajouté des propriétés de données pour décrire les noms vernacula
 \hline
 \textbf{Propriété} & \textbf{Rôle} \\
 \hline
-\textit{nomMooré}, \textit{nomDioula}, \textit{nomFulfuldé} & Noms vernaculaires de la plante dans les langues locales \\
+\textit{nomMoore}, \textit{nomDioula}, \textit{nomFulfulde} & Noms vernaculaires de la plante dans les langues locales \\
 \hline
-\textit{estLocaliséeÀ} & Localisation géographique de la plante (vers \textit{Localite}) \\
+\textit{estLocaliseeA} & Localisation géographique de la plante (vers \textit{Localite}) \\
 \hline
 \textit{nomVernaculaireTexte}, \textit{codeLangue} & Représentation structurée du nom local et de sa langue \\
 \hline
@@ -176,7 +176,7 @@ Dosage, toxicité & Précautions d'emploi documentées par les sources \\
 \end{tabular}
 \end{table}
 
-Les propriétés de données ajoutées sont des chaînes de caractères (\textit{xsd:string}). Nous avons créé \textit{nomMoore}, \textit{nomDioula} et \textit{nomFulfulde} pour décrire les noms locaux. Les propriétés \textit{nomVernaculaireTexte} et \textit{codeLangue} associent un nom vernaculaire à sa langue. \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} décrivent l'usage ; \textit{doi}, \textit{page} et \textit{section} identifient la référence. La propriété \textit{toxicite} consigne les précautions rapportées pour une plante. Les propriétés \textit{descriptionActivite} et \textit{effetToxicologique} décrivent les résultats rapportés. La localisation est décrite par \textit{estLocaliseeA}, du domaine \textit{Plante} à la classe \textit{Localite}, en complément de \textit{aCoordoneesGPS}, conservée de l'ontologie d'origine. Ces identifiants figurent dans le fichier Turtle.
+Les propriétés de données ajoutées sont des chaînes de caractères (\textit{xsd:string}). Nous avons créé \textit{nomMoore}, \textit{nomDioula} et \textit{nomFulfulde} pour décrire les noms locaux. Les propriétés \textit{nomVernaculaireTexte} et \textit{codeLangue} associent un nom vernaculaire à sa langue. Dans la version peuplée, la langue est indiquée par \textit{nomMoore}, \textit{nomDioula} ou \textit{nomFulfulde} lorsque la source la précise ; \textit{codeLangue} n'est pas renseigné. \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} décrivent l'usage ; \textit{doi}, \textit{page} et \textit{section} identifient la référence. La propriété \textit{toxicite} consigne les précautions rapportées pour une plante. Les propriétés \textit{descriptionActivite} et \textit{effetToxicologique} décrivent les résultats rapportés. La localisation est décrite par \textit{estLocaliseeA}, du domaine \textit{Plante} à la classe \textit{Localite}, en complément de \textit{aCoordoneesGPS}, conservée de l'ontologie d'origine. Ces identifiants figurent dans le fichier Turtle.
 
 \begin{figure}[H]
 \centering
@@ -219,7 +219,7 @@ Nous avons ajouté des propriétés objet pour relier les plantes à leurs usage
 \end{tabular}
 \end{table}
 
-Nous avons associé le niveau de preuve à l'usage documenté, sans l'interpréter comme une validation indépendante de l'efficacité. La propriété textuelle \textit{niveauPreuve} conserve la valeur rapportée, et la relation \textit{aPourNiveauDePreuve} relie l'usage à la classe \textit{NiveauDePreuve}. La relation générale \textit{estDocumenteePar} rattache les ressources à une source scientifique. Nous l'avons spécialisée par \textit{provientDe} pour les usages, \textit{estDocumenteeDans} pour les plantes et des relations équivalentes pour les noms vernaculaires, les activités, les composés et les effets toxicologiques. Les individus n'emploient que deux niveaux de preuve, qui désignent des usages rapportés : nous les avons placés au rang 7 de l'échelle à sept niveaux, celui des savoirs traditionnels. Le modèle de phase 4 déclare 25 propriétés objet, dont 5 conservées et 20 ajoutées ; la version peuplée en déclare 29. Les relations \textit{aPourPartieUtilisee}, \textit{aPourPreparation} et \textit{aPourMaladieCible} décrivent le contenu d'un usage ; \textit{contientCompose}, \textit{presenteActivite} et \textit{presenteEffetToxicologique} décrivent les résultats rapportés. Ces liens structurent les informations, mais ne constituent pas une preuve d'efficacité clinique. La capture de la figure \ref{fig:relations_ajoutees} montre l'arborescence de provenance. Les domaines et portées sont déclarés dans le TTL et résumés au tableau \ref{tab:relations_ajoutees}.
+Nous avons associé le niveau de preuve à l'usage documenté, sans l'interpréter comme une validation indépendante de l'efficacité. La propriété textuelle \textit{niveauPreuve} conserve la valeur rapportée, et la relation \textit{aPourNiveauDePreuve} relie l'usage à la classe \textit{NiveauDePreuve}. La relation générale \textit{estDocumenteePar} rattache les ressources à une source scientifique. Nous l'avons spécialisée par \textit{provientDe} pour les usages, \textit{estDocumenteeDans} pour les plantes et des relations équivalentes pour les noms vernaculaires, les activités, les composés et les effets toxicologiques. Les individus n'emploient que deux niveaux de preuve, qui désignent des usages rapportés : nous les avons placés au rang 7 de l'échelle à sept niveaux, celui des savoirs traditionnels. Le modèle de phase 3a déclare 25 propriétés objet, dont 5 conservées et 20 ajoutées ; la version peuplée en déclare 29. Les relations \textit{aPourPartieUtilisee}, \textit{aPourPreparation} et \textit{aPourMaladieCible} décrivent le contenu d'un usage ; \textit{contientCompose}, \textit{presenteActivite} et \textit{presenteEffetToxicologique} décrivent les résultats rapportés. Ces liens structurent les informations, mais ne constituent pas une preuve d'efficacité clinique. La capture de la figure \ref{fig:relations_ajoutees} montre l'arborescence de provenance. Les domaines et portées sont déclarés dans le TTL et résumés au tableau \ref{tab:relations_ajoutees}.
 
 \begin{figure}[H]
 \centering
@@ -334,22 +334,19 @@ Le fichier compte 62~981 triplets. Le graphe contient 6~936 nœuds et 25~321 rel
     \item \textbf{Principales relations :} \textit{aPourPartieUtilisee} (2~874), \textit{aPourPreparation} et \textit{estDocumenteePar} (2~816 chacune), \textit{aPourModeDePreparation} (2~646), \textit{estRapportePour}, \textit{provientDe}, \textit{aPourMaladieCible} et \textit{aPourNiveauDePreuve} (1~676 chacune), \textit{aPourModeAdministration} (1~471), \textit{estLocaliseeA} (1~246), \textit{estDocumenteeDans} (623).
 \end{itemize}
 
+La figure \ref{fig:graphe_neo4j} montre un extrait du graphe peuplé : le sous-graphe de \textit{Cochlospermum planchonii}. La plante est reliée à trois usages, documentés par deux sources (Nadembega et al., 2026 ; Zongo et al., 2025). Chaque usage porte sa maladie cible (paludisme, ictère et affections hépatiques), la partie utilisée (le tubercule) et son niveau de preuve. La plante est aussi reliée à son nom vernaculaire en mooré et à ses localités.
+
 \begin{figure}[H]
 \centering
-\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Capture Neo4j Browser d'un nœud Plante et de ses voisins, à enregistrer sous \texttt{images/capture\_neo4j.png}.}\\[2mm]
-Vue du graphe peuplé dans Neo4j Browser (extrait du sous-graphe d'une plante)}
-}
-\caption{Le graphe de connaissances peuplé}
+\includegraphics[width=0.85\textwidth]{capture_neo4j.png}
+\caption{Extrait du graphe peuplé dans Neo4j Browser : le sous-graphe de \textit{Cochlospermum planchonii}}
 \label{fig:graphe_neo4j}
 \end{figure}
-% Une fois la capture faite, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \includegraphics[width=0.8\textwidth]{capture_neo4j.png}
 
 \subsection{Interrogation de la base}
 \label{subsec:interrogation_base}
 
-Nous avons défini quatre familles de requêtes en phase 6 (section \ref{subsec:phase6} du chapitre \ref{chap:materiel_methodologie}) : requêtes simples, requêtes complexes, requêtes de traçabilité et requêtes spatiales. Nous en donnons des exemples ci-dessous.
+Nous avons défini quatre familles de requêtes en phase 4 (section \ref{subsec:phase4} du chapitre \ref{chap:materiel_methodologie}) : requêtes simples, requêtes complexes, requêtes de traçabilité et requêtes spatiales. Nous en donnons des exemples ci-dessous.
 
 \begin{quote}
 \begin{verbatim}
@@ -468,6 +465,8 @@ Nous avons traité les documents un par un. Une première version de la consigne
 
 Nous avons mis en place un système de génération augmentée par récupération (RAG, \textit{Retrieval-Augmented Generation}). Il associe la recherche dans le graphe à la génération de réponses par un modèle de langue \cite{lewis2020rag}. Son architecture relie l'utilisateur, Streamlit, Neo4j et Llama 3 (figure \ref{fig:architecture_rag}). Nous avons confié la sélection des données au modèle, selon une approche Text2Cypher : Llama 3 traduit la question en requête Cypher, puis rédige la réponse à partir des lignes obtenues. Des requêtes fixes auraient demandé d'écrire à la main une requête par type de question. Une requête générée peut en revanche se tromper sans que l'utilisateur le voie : le système la valide donc en lecture seule, exige ses sources et affiche la requête exécutée. Le chapitre \ref{chap:resultats_discussion} mesure le coût de ce choix.
 
+Une partie des questions ne passe pas par cette chaîne. Les questions qui portent sur le contenu de la base, sans critère scientifique, comme « Combien de plantes contient la base ? » ou « Cite 2 plantes documentées », sont reconnues par une liste fermée de mots, puis traitées par des requêtes fixes, sans appel au modèle. Cette voie donne des exemples, une liste d'au plus 20 éléments avec leur total, un décompte, un classement ou un aperçu, pour les plantes, les maladies, les composés, les familles, les localités et les sources. Chacune de ses réponses porte une mention fixe : elle décrit le contenu de la base et ne constitue ni un fait scientifique ni une recommandation d'usage. Dès qu'un mot n'appartient pas à cette liste, par exemple un nom de maladie ou de plante, la question est confiée à Text2Cypher.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{architecture_rag.png}
@@ -535,7 +534,7 @@ Nous avons organisé l'application autour d'un point d'entrée, de huit écrans 
 \subsection{Fonctionnalités}
 \label{subsec:fonctionnalites}
 
-Le tableau \ref{tab:fonctionnalites} récapitule les fonctions définies en phase 7 (section \ref{subsec:phase7}).
+Le tableau \ref{tab:fonctionnalites} récapitule les fonctions définies en phase 5 (section \ref{subsec:phase5}).
 
 \begin{table}[H]
 \centering
@@ -575,22 +574,32 @@ python -m streamlit run application\app.py
 
 L'application s'ouvre sur le port 8501. La session Colab n'est active que pendant son utilisation et son adresse change à chaque lancement. Il n'existe pas de mise en ligne pérenne.
 
+La figure \ref{fig:ecrans_application} montre l'assistant avec Llama~3 8B, sur la question « Comment Acacia nilotica est-elle préparée selon les sources ? ». La réponse associe chaque mode de préparation aux sources qui le rapportent. Sous la réponse, l'utilisateur peut déplier les références complètes, avec leur DOI, puis la requête Cypher exécutée dans la base.
+
 \begin{figure}[H]
 \centering
-\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
-\TODOchapo{Deux captures à enregistrer sous \texttt{images/ecran\_assistant.png} (une réponse avec ses sources) et \texttt{images/ecran\_fiche.png} (fiche d'une plante).}\\[2mm]
-Assistant avec une réponse sourcée et fiche descriptive d'une plante}
-}
-\caption{Écrans principaux de l'application web}
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\includegraphics[width=\textwidth]{ecran_assistant.png}\\[1mm]
+{\small (a) Réponse et sources citées}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\includegraphics[width=\textwidth]{ecran_requete.png}\\[1mm]
+{\small (b) Références complètes et requête exécutée}
+\end{minipage}
+\caption{L'assistant de l'application web : une réponse sourcée produite avec Llama~3 8B}
 \label{fig:ecrans_application}
 \end{figure}
-% Une fois les captures faites, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \begin{minipage}[t]{0.48\textwidth}\centering
-% \includegraphics[width=\textwidth]{ecran_assistant.png}\\ Assistant
-% \end{minipage}\hfill
-% \begin{minipage}[t]{0.48\textwidth}\centering
-% \includegraphics[width=\textwidth]{ecran_fiche.png}\\ Fiche avec sources
-% \end{minipage}
+
+La figure \ref{fig:ecran_fiche} montre la fiche de \textit{Cochlospermum planchonii}, la plante de la figure \ref{fig:graphe_neo4j}. La fiche réunit la famille, les noms vernaculaires et un tableau des usages documentés. Chaque ligne y indique la pathologie, l'indication telle qu'elle est écrite dans la source, la partie utilisée, la préparation, la plante éventuellement associée dans une recette, le niveau de preuve et la source de l'usage. Les références complètes figurent sous la fiche.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ecran_fiche.png}
+\caption{Fiche de \textit{Cochlospermum planchonii} dans l'application web}
+\label{fig:ecran_fiche}
+\end{figure}
 
 % ============================================================
 % CONCLUSION DU CHAPITRE
@@ -599,4 +608,4 @@ Assistant avec une réponse sourcée et fiche descriptive d'une plante}
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre a présenté le système issu de la démarche du chapitre \ref{chap:materiel_methodologie}. Nous avons construit OntoPlantMedBF à partir d'ontoMEDTRAD, l'avons adaptée au contexte burkinabè et peuplée avec des connaissances sourcées ; son schéma organise également la base Neo4j. Nous avons décrit l'extraction assistée par modèle de langue, le système RAG qui interroge le graphe à partir des questions et l'application web qui présente les réponses. Nous avons rattaché les connaissances à leurs sources, laissé vides les champs absents et repris les niveaux de preuve rapportés par les documents. Au chapitre \ref{chap:resultats_discussion}, nous avons évalué les extractions, les réponses et l'interface, puis discuté les résultats et leurs limites.
+Ce chapitre a présenté le système issu de la démarche du chapitre \ref{chap:materiel_methodologie}. Nous avons construit OntoPlantMedBF à partir d'ontoMEDTRAD, l'avons adaptée au contexte burkinabè et peuplée avec des connaissances sourcées ; son schéma organise également la base Neo4j. Nous avons décrit l'extraction assistée par modèle de langue, le système RAG qui interroge le graphe à partir des questions et l'application web qui présente les réponses. Nous avons rattaché les connaissances à leurs sources, laissé vides les champs absents et repris les niveaux de preuve rapportés par les documents. Le chapitre \ref{chap:resultats_discussion} évalue l'ontologie et les réponses du système, mesure les temps de réponse de l'application, puis discute les résultats et leurs limites.

@@ -487,6 +487,55 @@
       \verb https://aclanthology.org/N19-1423/
       \endverb
     \endentry
+    \entry{diomande_ontofracturecare_2024}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=b82fd9b1c7e3e17e8f165d21cc334ab0}{%
+           family={Diomande},
+           familyi={D\bibinitperiod},
+           given={Keffa\bibnamedelima Denis},
+           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=586e854da78bd38ce624fad2412cb6aa}{%
+           family={N'Guessan},
+           familyi={N\bibinitperiod},
+           given={Behou\bibnamedelima Gérard},
+           giveni={B\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=30b295688840794e10048f4e89b71190}{%
+           family={Sangaré},
+           familyi={S\bibinitperiod},
+           given={Seydou},
+           giveni={S\bibinitperiod}}}%
+        {{hash=36e8fa31263fc97956134530cb1b6b5a}{%
+           family={Koné},
+           familyi={K\bibinitperiod},
+           given={Tiémoman},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b8e267198b8b2138cb469647923478b}
+      \strng{fullhash}{0d55e51cd90c20e955541ed9617338fe}
+      \strng{fullhashraw}{0d55e51cd90c20e955541ed9617338fe}
+      \strng{bibnamehash}{5b8e267198b8b2138cb469647923478b}
+      \strng{authorbibnamehash}{5b8e267198b8b2138cb469647923478b}
+      \strng{authornamehash}{5b8e267198b8b2138cb469647923478b}
+      \strng{authorfullhash}{0d55e51cd90c20e955541ed9617338fe}
+      \strng{authorfullhashraw}{0d55e51cd90c20e955541ed9617338fe}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Research}
+      \field{number}{5}
+      \field{title}{Traditional Medicinal Practices of African Bone-Setters: Aspects of an Ontology of the Field}
+      \field{volume}{12}
+      \field{year}{2024}
+      \field{pages}{773\bibrangedash 786}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://www.journalijar.com/article/48743/traditional-medicinal-practices-of-african-bone-setters:-aspects-of-an-ontology-of-the-field/
+      \endverb
+      \verb{url}
+      \verb https://www.journalijar.com/article/48743/traditional-medicinal-practices-of-african-bone-setters:-aspects-of-an-ontology-of-the-field/
+      \endverb
+    \endentry
     \entry{dooley2018foodon}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1650,6 +1699,56 @@
       \field{volume}{2}
       \field{year}{2024}
     \endentry
+    \entry{pascal_nadembega_ethnobotanical_2026}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=58fac9455f54185118d4d388bb540301}{%
+           family={{Pascal Nadembega}},
+           familyi={P\bibinitperiod}}}%
+        {{hash=fe07107302c953ed0e0f4996683b36f9}{%
+           family={{Fabiana Antognoni}},
+           familyi={F\bibinitperiod}}}%
+        {{hash=62d8cb63eeb1d5a27889345f35cc9c6d}{%
+           family={{Luc Zongo}},
+           familyi={L\bibinitperiod}}}%
+        {{hash=5c4a61a9bd578b2bb5ea49d30c978f93}{%
+           family={{Sherif M. Afifi}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=f6cb12dbaf23a09ce46f4da48d1fa437}{%
+           family={{Mariacaterina Lianza}},
+           familyi={M\bibinitperiod}}}%
+        {{hash=de4a1a39eea005e78c700627fe66c60d}{%
+           family={{Alain Cuerrier}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{df12086d6b892310e768b526ec92fd4d}
+      \strng{fullhash}{d6ba4a6e9715e945c1bd338700f62ad6}
+      \strng{fullhashraw}{d6ba4a6e9715e945c1bd338700f62ad6}
+      \strng{bibnamehash}{df12086d6b892310e768b526ec92fd4d}
+      \strng{authorbibnamehash}{df12086d6b892310e768b526ec92fd4d}
+      \strng{authornamehash}{df12086d6b892310e768b526ec92fd4d}
+      \strng{authorfullhash}{d6ba4a6e9715e945c1bd338700f62ad6}
+      \strng{authorfullhashraw}{d6ba4a6e9715e945c1bd338700f62ad6}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ResearchGate}
+      \field{month}{9}
+      \field{title}{An ethnobotanical survey of medicinal plants used for children’s healthcare in {Centre}-{Est} {Burkina} {Faso}}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.32859/era.33.22.1-28
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/400337444_An_ethnobotanical_survey_of_medicinal_plants_used_for_children's_healthcare_in_Centre-Est_Burkina_Faso
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/400337444_An_ethnobotanical_survey_of_medicinal_plants_used_for_children's_healthcare_in_Centre-Est_Burkina_Faso
+      \endverb
+    \endentry
     \entry{raffel2020t5}{article}{}{}
       \name{author}{9}{}{%
         {{hash=81a5a94e2388c149a73a86381db45e07}{%
@@ -2558,6 +2657,65 @@
       \verb https://iris.who.int/bitstream/handle/10665/92455/9789241506090_eng.pdf
       \endverb
     \endentry
+    \entry{zerbo_contribution_2008}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=8ae92989b6c24fceff784c7426debb7d}{%
+           family={Zerbo},
+           familyi={Z\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a0243df156cddd9535dae746d842059b}{%
+           family={Millogo-Rasolodimby},
+           familyi={M\bibinithyphendelim R\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=31c395cb8e2b241fd7d862f2e0c53aaf}{%
+           family={Nacoulma-Ouédraogo},
+           familyi={N\bibinithyphendelim O\bibinitperiod},
+           given={O\bibnamedelima G},
+           giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=65dd2ac890311f33d489240c5521dbdb}{%
+           family={Van\bibnamedelima Damme},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{deb73c8e7f906a945623d85cef48703a}
+      \strng{fullhash}{6c53e615442b12b85077c52d1f17b61c}
+      \strng{fullhashraw}{6c53e615442b12b85077c52d1f17b61c}
+      \strng{bibnamehash}{deb73c8e7f906a945623d85cef48703a}
+      \strng{authorbibnamehash}{deb73c8e7f906a945623d85cef48703a}
+      \strng{authornamehash}{deb73c8e7f906a945623d85cef48703a}
+      \strng{authorfullhash}{6c53e615442b12b85077c52d1f17b61c}
+      \strng{authorfullhashraw}{6c53e615442b12b85077c52d1f17b61c}
+      \field{extraname}{1}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1991-8631}
+      \field{journaltitle}{International Journal of Biological and Chemical Sciences}
+      \field{month}{1}
+      \field{number}{3}
+      \field{title}{Contribution à la connaissance des plantes médicinales utilisées dans les soins infantiles en pays {San}, au {Burkina} {Faso}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{1}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \field{pages}{262\bibrangedash 274}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.4314/ijbcs.v1i3.39704
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ajol.info/index.php/ijbcs/article/view/39704
+      \endverb
+      \verb{url}
+      \verb http://www.ajol.info/index.php/ijbcs/article/view/39704
+      \endverb
+    \endentry
     \entry{zerbo_plantes_2011}{article}{}{}
       \name{author}{4}{}{%
         {{hash=cba2068af785fb647cb11f20504c8753}{%
@@ -2589,6 +2747,7 @@
       \strng{authornamehash}{5f6f18daa71544cfc8d32d2af8433c6f}
       \strng{authorfullhash}{697083bfd790ede256a0510b1decb3d3}
       \strng{authorfullhashraw}{697083bfd790ede256a0510b1decb3d3}
+      \field{extraname}{2}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}

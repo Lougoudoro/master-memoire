@@ -35,7 +35,7 @@ L'ethnomédecine en constitue la branche médicale. Elle se penche sur les prati
 \paragraph{Contexte burkinabè}
 Au Burkina Faso, la médecine traditionnelle couvre environ 80\,\% des besoins de santé primaire \cite{ares2018medecine} et ne constitue pas une alternative marginale. Son accessibilité, son coût modique et son ancrage dans les habitudes culturelles en font le recours de premier choix, et les tradipraticiens en sont des acteurs centraux.
 
-Les travaux de Zerbo et al. \cite{zerbo_plantes_2011} ont appliqué cette lecture à un terrain précis, celui des Sanan, documentant 85 espèces utilisées et 63 affections traitées, avec leurs modes de préparation et d'administration. Ouedraogo et al. \cite{ouedraogo_revue_2024} ont procédé de leur côté à une revue des plantes à potentiel aromatique du pays, recensant 42 espèces et en analysant les propriétés et les usages.
+Les travaux de Zerbo et al. \cite{zerbo_plantes_2011} ont appliqué cette lecture à un terrain précis, celui des Sanan, documentant 94 espèces utilisées en médecine traditionnelle, avec leurs modes de préparation et d'administration. Ouedraogo et al. \cite{ouedraogo_revue_2024} ont procédé de leur côté à une revue des plantes à potentiel aromatique du pays, recensant 42 espèces et en analysant les propriétés et les usages.
 
 Or ces savoirs ne se présentent pas de façon homogène. Ils varient selon les ethnies, diffèrent selon les régions, et s'enrichissent des découvertes nouvelles. Une telle diversité rend leur documentation particulièrement complexe \cite{millogo2001}.
 
@@ -43,7 +43,7 @@ Or ces savoirs ne se présentent pas de façon homogène. Ils varient selon les 
 \label{subsec:plantes_documentees}
 
 \paragraph{Inventaires et recensements}
-La littérature scientifique burkinabè recense plusieurs centaines d'espèces médicinales. Guinko \cite{guinko1984} a identifié 304 espèces utilisées en médecine traditionnelle, Nacoulma \cite{nacoulma1996} en a documenté 280 avec leurs usages et Zerbo et al. \cite{zerbo_plantes_2011} ont recensé 85 espèces chez les Sanan.
+La littérature scientifique burkinabè recense plusieurs centaines d'espèces médicinales. Guinko \cite{guinko1984} a identifié 304 espèces utilisées en médecine traditionnelle, Nacoulma \cite{nacoulma1996} en a documenté 280 avec leurs usages et Zerbo et al. \cite{zerbo_plantes_2011} ont recensé 94 espèces chez les Sanan.
 
 Ces plantes se répartissent dans des familles botaniques variées, les plus représentées étant les Fabacées, les Combretacées, les Rubiacées et les Euphorbiacées \cite{nacoulma1996}, une diversité qui reflète la richesse de la flore burkinabè.
 
@@ -53,7 +53,7 @@ Les travaux sur ces plantes couvrent plusieurs aspects :
     \item \textbf{Identification botanique :} les plantes sont collectées et décrites, leurs caractéristiques morphologiques sont notées, les spécimens conservés en herbiers de référence et la taxonomie précisée.
     \item \textbf{Distribution géographique :} les zones de présence sont cartographiées, leur répartition étant liée aux conditions climatiques et édaphiques. Certaines espèces sont endémiques à une région \cite{guinko1984}.
     \item \textbf{Périodes de récolte :} les moments optimaux de collecte sont déterminés, la teneur en principes actifs variant selon la saison, ce qui pèse directement sur la qualité des remèdes.
-    \item \textbf{Parties utilisées :} les feuilles dominent (45\,\% des cas)\cite{zerbo_plantes_2011}, devant les racines (25\,\%), les écorces (15\,\%), les fruits (10\,\%) et les graines (5\,\%) \cite{zerbo_plantes_2011}. La partie retenue dépend de la plante et de l'usage visé.
+    \item \textbf{Parties utilisées :} chez les Sanan, les feuilles dominent (31\,\% des cas), devant l'écorce du tronc (25\,\%), la racine (23\,\%) et les fruits (10\,\%) \cite{zerbo_plantes_2011}. La partie retenue dépend de la plante et de l'usage visé.
     \item \textbf{Modes de préparation :} les décoctions, par ébullition dans l'eau, restent courantes. Les macérations (trempage à froid), les poudres obtenues par séchage et broyage, et plus rarement les extraits alcooliques sont également employés \cite{nacoulma1996}.
 \end{itemize}
 
@@ -286,9 +286,11 @@ Deux langages de requête dominent l'interrogation de ces graphes :
 \paragraph{Interrogation avec Cypher}
 Une requête Cypher typique se présente ainsi :
 \begin{center}
-\texttt{MATCH (p:Plante \{nomVernaculaire: "Néré"\}) RETURN p.nomScientifique, p.usages}
+\texttt{MATCH (p:Plante)-[:estRapportePour]->(:UsageTherapeutique)}\\
+\texttt{-[:aPourMaladieCible]->(m:Maladie \{nom: "paludisme"\})}\\
+\texttt{RETURN DISTINCT p.nomScientifique}
 \end{center}
-Elle retourne le nom scientifique et les usages de la plante appelée \og Néré \fg.
+Elle retourne le nom scientifique des plantes rapportées contre le paludisme.
 
 Ses principales clauses répondent chacune à un besoin précis :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
@@ -402,7 +404,7 @@ Dans notre étude, nous appliquerons ces consignes aux documents du corpus. Nous
 \paragraph{Structuration des données}
 La structuration convertit les faits extraits en formats standardisés. Pour notre base de connaissances orientée graphe, nous utiliserons les éléments suivants :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item \textbf{Format d'importation :} nous préparerons les données en JSON ou CSV, formats compatibles avec les outils d'importation de Neo4j.
+    \item \textbf{Format d'importation :} nous transformerons les données en individus de l'ontologie, au format Turtle, avant de les importer dans Neo4j.
     \item \textbf{Modèle de données :} nous structurerons les données selon l'ontologie, en définissant les nœuds et les relations correspondants.
     \item \textbf{Propriétés :} nous associerons aux nœuds et aux relations les propriétés nécessaires, notamment le type, la source et le niveau de preuve.
 \end{itemize}
@@ -458,7 +460,7 @@ En contexte médical, la traçabilité conditionne la crédibilité d'un systèm
 Sans traçabilité, une information peut être difficile à vérifier et l'utilisateur peut peiner à en apprécier la fiabilité.
 
 \paragraph{Mécanismes de traçabilité}
-Nous mettrons en œuvre trois mécanismes :
+Nous mettrons en œuvre cinq mécanismes :
 \begin{itemize}[label={$\bullet$}, leftmargin=1cm]
     \item \textbf{Stockage des références :} nous stockerons chaque fait avec un identifiant de source, que nous décrirons.
     \item \textbf{Association information-source :} dans la base, nous relierons chaque information à sa source. Exemple : \texttt{(information)-[:PROVIENT\_DE]->(source)}.
@@ -487,13 +489,7 @@ Dans notre système, nous distinguerons les niveaux de preuve tels qu'ils seront
 \end{itemize}
 
 \paragraph{Gestion des incertitudes}
-Nous signalerons les incertitudes, notamment :
-\begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item toute information contestée ou non confirmée sera signalée comme telle.
-    \item les données contradictoires seront présentées toutes, sans en cacher aucune.
-    \item le caractère limité de certaines études sera mentionné.
-    \item l'ancienneté d'une information sera indiquée par sa date.
-\end{itemize}
+Nous consignerons les contradictions relevées dans les documents sans les trancher. Chaque réponse renverra à sa source, dont l'année permet d'apprécier l'ancienneté de l'information, et le niveau de preuve rapporté rappellera qu'un usage traditionnel n'est pas une efficacité démontrée.
 
 \paragraph{Limites du système}
 Le système ne créera pas de connaissances thérapeutiques et ne remplacera pas l'expertise humaine. Il facilitera la consultation des connaissances existantes. L'utilisateur devra interpréter les informations en tenant compte de leurs sources et de leurs limites. Le système ne constituera ni un outil de diagnostic ni un outil de prescription.
@@ -584,20 +580,13 @@ Parallèlement à ces initiatives, plusieurs travaux conceptuels ont proposé de
 
 Ces modèles s'appuient sur des méthodologies d'ingénierie des connaissances comme METHONTOLOGY. Ils sont généralement implémentés dans des outils tels que Protégé (OWL). Ils mettent en avant la nécessité de modéliser des entités comme : TherapeuticRecipe, TherapeuticProcess, Ritual, Belief, en plus des classes plus classiques (Plant, Disease, Symptom).
 
-\textbf{Exemples concrets d'articles :}
-\begin{itemize}[label={$\bullet$}, leftmargin=1cm]
-    \item Ayimdji et al. \cite{ayimdji_towards_2011} proposent une première version d'une ontologie « profonde » pour la médecine traditionnelle africaine.
-
-    Ce travail souligne la nécessité de prendre en compte les dimensions contextuelles et culturelles, au-delà des relations entre plante, maladie et traitement.
-
-    \item Dans un second article, Ayimdji et al. \cite{ayimdji_towards_2011} décrivent les étapes de construction d'une ontologie profonde selon METHONTOLOGY et discutent la représentation des dimensions rituelles et symboliques.
-\end{itemize}
+Ayimdji et al. \cite{ayimdji_towards_2011} proposent ainsi une première version d'une ontologie « profonde » pour la médecine traditionnelle africaine. Ce travail souligne la nécessité de prendre en compte les dimensions contextuelles et culturelles, au-delà des relations entre plante, maladie et traitement.
 
 Ces travaux offrent une réflexion méthodologique précieuse sur la construction d'ontologies « profondes » capables de rendre compte de la complexité de la médecine traditionnelle africaine. Ils restent cependant majoritairement conceptuels : les déploiements opérationnels à grande échelle se comptent à peine, et les outils de consultation destinés aux acteurs de terrain sont rares.
 
 \paragraph{Ontologie pour les tradipraticiens (bone-setters) en Afrique de l'Ouest (2024)}
 
-Un travail récent (2024) propose une ontologie destinée aux tradipraticiens spécialisés dans le traitement des fractures. Dérivée du domaine des bone-setters en Afrique de l'Ouest, elle est appelée ontoFRACTURECARE.
+Un travail récent (2024) propose une ontologie destinée aux tradipraticiens spécialisés dans le traitement des fractures. Dérivée du domaine des bone-setters en Afrique de l'Ouest, elle est appelée ontoFRACTURECARE \cite{diomande_ontofracturecare_2024}.
 
 Les auteurs constatent que les bone-setters restent le premier recours des populations rurales, leur pratique se révélant là où la médecine conventionnelle montre ses limites. La plupart des praticiens sont toutefois âgés et analphabètes, et l'intérêt des jeunes générations fait défaut.
 
@@ -656,7 +645,7 @@ Conduits dans différentes régions du pays (Hauts-Bassins, Sud-Ouest, Centre-Es
 
     Enquête auprès de 30 commerçants de plantes médicinales dans six grandes villes. Identification de 104 espèces utilisées pour diverses pathologies (troubles gastro-intestinaux, paludisme, etc.). Évaluation du statut de conservation.
 
-    \item \textbf{Nadembega P. et al. (2025)}. « An ethnobotanical survey of medicinal plants used for children's healthcare in Centre-Est Burkina Faso », Ethnobotany Research and Applications, 33, 2025.
+    \item \textbf{Nadembega P. et al. (2026)} \cite{pascal_nadembega_ethnobotanical_2026}. « An ethnobotanical survey of medicinal plants used for children's healthcare in Centre-Est Burkina Faso », Ethnobotany Research and Applications, 33, 2026.
 
     Enquête sur les plantes utilisées pour la santé des enfants dans la région du Centre-Est. Documentation de 185 espèces issues de 52 familles.
 
@@ -676,7 +665,7 @@ Conduits dans différentes régions du pays (Hauts-Bassins, Sud-Ouest, Centre-Es
 
     Thèse ancienne mais souvent citée. Documente les plantes médicinales et les soins traditionnels dans l'ouest du Burkina Faso, en particulier pour la mère et l'enfant.
 
-    \item \textbf{Étude synthétique sur les soins infantiles (2010)}. « Contribution à l'étude des plantes médicinales et des recettes médicamenteuses utilisées dans les soins infantiles au Burkina Faso », publication synthétique (13 pages, 4 tableaux, 42 références).
+    \item \textbf{Zerbo P. et al. (2007)} \cite{zerbo_contribution_2008}. « Contribution à la connaissance des plantes médicinales utilisées dans les soins infantiles en pays San, au Burkina Faso », International Journal of Biological and Chemical Sciences, 1(3), 2007.
 
     Recense 79 espèces médicinales utilisées dans les soins infantiles, avec 167 recettes médicamenteuses documentées.
 \end{itemize}
@@ -750,29 +739,29 @@ Le tableau \ref{tab:synthese_ontologies} présente une synthèse comparative des
 \toprule
 Ontologie & Domaine & Couverture & Particularité & Limite principale \\
 \midrule
-FLOPO & Botanique & Structure des plantes & Très complète & Pas d'usages médicinaux \\
+FLOPO \cite{hoehndorf2016flopo} & Botanique & Structure des plantes & Très complète & Pas d'usages médicinaux \\
 \addlinespace
-PO & Botanique & Anatomie végétale & Standard génomique & Pas d'ethnobotanique \\
+PO \cite{cooper2013plant} & Botanique & Anatomie végétale & Standard génomique & Pas d'ethnobotanique \\
 \addlinespace
-OTM & Médecine trad. & Maladies, traitements & Intègre médecines asiatiques & Pas spécifique Afrique \\
+OTM \cite{shojaee-mend_development_2019} & Médecine trad. & Maladies, traitements & Intègre médecines asiatiques & Pas spécifique Afrique \\
 \addlinespace
-DrOn & Pharmacologie & Médicaments, effets & Standard pharmaceutique & Pas de préparations trad. \\
+DrOn \cite{hanna2013dron} & Pharmacologie & Médicaments, effets & Standard pharmaceutique & Limitée aux médicaments modernes \\
 \addlinespace
-FOODON & Alimentation & Plantes comestibles & Couverture large & Pas d'usages médicinaux \\
+FOODON \cite{dooley2018foodon} & Alimentation & Plantes comestibles & Couverture large & Pas d'usages médicinaux \\
 \addlinespace
-SNOMED CT & Clinique & Terminologie médicale & Large couverture & Structure non ontologique \\
+SNOMED CT \cite{snomedct2020} & Clinique & Terminologie médicale & Large couverture & Structure non ontologique \\
 \addlinespace
-WATRIMed (2019) & Med. trad. Ouest-Afr. & Plantes, recettes, maladies & Graphe relié à DBpedia, IPNI, Wikidata & Ontologie non téléchargeable \\
+WATRIMed \cite{watrimed2019, watrimed_design_2019} & Med. trad. Ouest-Afr. & Plantes, recettes, maladies & Graphe relié à DBpedia, IPNI, Wikidata & Seules les classes supérieures sont publiées \\
 \addlinespace
-ontoMEDTRAD (2018) & Med. trad. Ouest-Afr. & Plantes, recettes & Approche visuelle iconique & Côte d'Ivoire / Sénégal \\
+ontoMEDTRAD \cite{kouame_systeme_2018} & Med. trad. Ouest-Afr. & Plantes, recettes & Approche visuelle iconique & Validation globale non faite ; 22 plantes \\
 \addlinespace
-ATHMed (2022) & Med. trad. Afr. & Plantes, traitements & Hybride ontologie/ML & Cadre proposé, Ghana \\
+ATHMed \cite{devine_knowledge_2022} & Med. trad. Afr. & Plantes, traitements & Hybride ontologie/ML & Cadre proposé, Ghana \\
 \addlinespace
-Deep Ontologies & Med. trad. Afr. & Plantes, rituels, croyances & Intègre dimensions culturelles & Conceptuel, peu opérationnel \\
+Deep Ontologies \cite{ayimdji_towards_2011} & Med. trad. Afr. & Plantes, rituels, croyances & Intègre dimensions culturelles & Conceptuel, peu opérationnel \\
 \addlinespace
-Angole et al. (2013) & Intégration Med. & Maladies, traitements & Alignement BFO & Général Afrique \\
+Angole et al. \cite{angole_ontology_2013} & Intégration Med. & Maladies, traitements & Alignement BFO & Pas spécifique aux plantes médicinales \\
 \addlinespace
-ontoFRACTURECARE (2024) & Med. trad. (fractures) & Bone-setters & Structuration des connaissances & Domaine spécifique \\
+ontoFRACTURECARE \cite{diomande_ontofracturecare_2024} & Med. trad. (fractures) & Bone-setters & Structuration des connaissances & Limité au traitement des fractures \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -781,7 +770,7 @@ ontoFRACTURECARE (2024) & Med. trad. (fractures) & Bone-setters & Structuration 
 
 Trois constats se dégagent du tableau. Les ontologies botaniques (FLOPO, PO) couvrent convenablement la plante mais ignorent les usages médicinaux. Les ontologies pharmaceutiques (DrOn) restent centrées sur les médicaments modernes. L'OTM, prometteuse, n'est pas spécifique à l'Afrique.
 
-Pour l'Afrique, plusieurs initiatives se distinguent : celle de Tekemetieu \cite{tekemetieu2016} intègre les dimensions mystiques mais reste limitée au Gabon et au Cameroun. Celle d'Angole et al. \cite{angole_towards_2012, angole_ontology_2013} apporte une intégration avec la médecine moderne tout en demeurant générale. OntoMEDTRAD \cite{kouame_systeme_2018} est la plus aboutie pour l'Afrique de l'Ouest grâce à son approche visuelle. WATRIMed \cite{watrimed2019, watrimed_design_2019} couvre l'Afrique de l'Ouest, avec des exemples burkinabès, mais son ontologie n'est pas téléchargeable.
+Pour l'Afrique, plusieurs initiatives se distinguent : celle de Tekemetieu \cite{tekemetieu2016} intègre les dimensions mystiques mais reste limitée au Gabon et au Cameroun. Celle d'Angole et al. \cite{angole_towards_2012, angole_ontology_2013} apporte une intégration avec la médecine moderne tout en demeurant générale. OntoMEDTRAD \cite{kouame_systeme_2018} est la plus aboutie pour l'Afrique de l'Ouest grâce à son approche visuelle. WATRIMed \cite{watrimed2019, watrimed_design_2019} couvre l'Afrique de l'Ouest, avec des exemples burkinabès, mais seules ses classes supérieures sont publiées.
 
 Aucune de ces ontologies n'est spécifiquement consacrée aux plantes médicinales du Burkina Faso. La traçabilité systématique des sources et la restitution des niveaux de preuve attribués par ces sources restent également peu abordées. Notre recherche portera sur ces deux aspects.
 
@@ -792,9 +781,9 @@ Notre travail s'inscrit dans un paysage déjà dense, où coexistent des initiat
 
 Face à cet existant, notre travail apportera une contribution sur quatre plans.
 
-\textbf{Sur le plan scientifique}, nous produirons une ontologie adaptée et une base de connaissances structurée à partir de la littérature scientifique burkinabè. Nous mettrons en évidence les plantes, les pathologies et les régions les plus étudiées, ainsi que les lacunes documentaires concernant les dosages, les toxicités et les zones peu étudiées.
+\textbf{Sur le plan scientifique}, nous produirons une ontologie adaptée et une base de connaissances structurée à partir de la littérature scientifique burkinabè.
 
-\textbf{Sur le plan méthodologique}, nous proposerons une méthode d'extraction assistée par des modèles de langue et un modèle conceptuel adapté au contexte burkinabè. Ce modèle intégrera les noms vernaculaires en mooré, dioula et fulfuldé, les recettes multi-plantes lorsqu'elles seront documentées et les coordonnées géographiques issues de l'INERA. Nous rattacherons chaque information à sa source et conserverons le niveau de preuve que celle-ci lui attribue.
+\textbf{Sur le plan méthodologique}, nous proposerons une méthode d'extraction assistée par des modèles de langue et un modèle conceptuel adapté au contexte burkinabè. Ce modèle intégrera les noms vernaculaires en mooré, dioula et fulfuldé, les recettes multi-plantes lorsqu'elles seront documentées et les localités rapportées par les sources. Nous rattacherons chaque information à sa source et conserverons le niveau de preuve que celle-ci lui attribue.
 
 \textbf{Sur le plan technologique}, nous mettrons en place une base de connaissances orientée graphe et développerons une application web de consultation. Un système RAG permettra les requêtes en langage naturel. L'application proposera un chatbot, une recherche par plante ou par pathologie et des fiches descriptives accompagnées de leurs sources et de leurs niveaux de preuve.
 
@@ -850,10 +839,10 @@ Notre démarche s'articulera autour de sept éléments :
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Dans ce chapitre, nous présenterons les concepts liés aux plantes médicinales et au patrimoine ethnobotanique, puis les principes de l'ingénierie des connaissances et des ontologies. Nous examinerons également l'apport du traitement du langage naturel et des systèmes de génération augmentée par récupération à l'accès aux connaissances, avant d'analyser les travaux consacrés à la médecine traditionnelle africaine.
+Dans ce chapitre, nous avons présenté les concepts liés aux plantes médicinales et au patrimoine ethnobotanique, puis les principes de l'ingénierie des connaissances et des ontologies. Nous avons également examiné l'apport du traitement du langage naturel et des systèmes de génération augmentée par récupération à l'accès aux connaissances, avant d'analyser les travaux consacrés à la médecine traditionnelle africaine.
 
-Cette revue de la littérature met en évidence plusieurs lacunes. Aucune ontologie n'est spécifiquement consacrée aux plantes médicinales du Burkina Faso. \textit{ontoMEDTRAD} porte principalement sur la Côte d'Ivoire et le Sénégal, tandis que \textit{WATRIMed}, malgré des exemples burkinabè, ne fournit pas de fichier téléchargeable. La traçabilité des connaissances et l'intégration de sources scientifiques multiples restent également des enjeux.
+Cette revue de la littérature met en évidence plusieurs lacunes. Aucune ontologie n'est spécifiquement consacrée aux plantes médicinales du Burkina Faso. \textit{ontoMEDTRAD} porte principalement sur la Côte d'Ivoire et le Sénégal, tandis que \textit{WATRIMed}, malgré des exemples burkinabè, n'en publie que les classes supérieures. La traçabilité des connaissances et l'intégration de sources scientifiques multiples restent également des enjeux.
 
 Notre recherche cherchera à répondre à ces lacunes en adaptant une ontologie au contexte burkinabè et en structurant les connaissances issues de la littérature. Elle s'inscrira dans une démarche de valorisation et de préservation des savoirs locaux, tout en contribuant à l'étude de la médecine traditionnelle en Afrique.
 
-Le chapitre suivant présentera le matériel mobilisé et la démarche méthodologique. Nous y décrirons le corpus, la comparaison des ontologies, l'adaptation de l'ontologie retenue et les étapes de conception et de développement du système d'accès aux connaissances.
+Le chapitre suivant présentera le matériel mobilisé et la démarche méthodologique. Nous y décrirons le corpus, la comparaison des ontologies, l'adaptation de l'ontologie retenue et les phases de la démarche, jusqu'à l'évaluation du système.

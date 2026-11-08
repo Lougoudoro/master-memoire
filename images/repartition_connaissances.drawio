@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="repartition_connaissances" name="repartition_connaissances">
+    <mxGraphModel dx="800" dy="420" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="700" pageHeight="380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s1" value="Articles scientifiques" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6fd4;fontColor=#1A1A1A;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="Thèses et mémoires" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#2e8b57;fontColor=#1A1A1A;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="40" y="135" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Rapports de recherche" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#c0622b;fontColor=#1A1A1A;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="40" y="230" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="acc" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;strokeWidth=4;strokeColor=#000000;size=0.5;" parent="1" vertex="1">
+          <mxGeometry x="330" y="30" width="30" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="cd" value="Connaissances&lt;br&gt;dispersées" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe0e0;strokeColor=#d33a3a;fontColor=#1A1A1A;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="390" y="114" width="240" height="112" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

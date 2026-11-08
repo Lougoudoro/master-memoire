@@ -10,7 +10,7 @@
 \phantomsection
 \section*{Introduction du chapitre}
 
-Les chapitres précédents ont présenté la démarche suivie et le système développé. Dans ce chapitre, nous exposons les résultats de l'évaluation de l'ontologie, du système RAG et de l'application web. Nous en discutons la portée et les limites au regard des objectifs de la recherche et des systèmes existants.
+Les chapitres précédents ont présenté la démarche suivie et le système développé. Dans ce chapitre, nous exposons les résultats de l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, dont l'évaluation auprès des utilisateurs n'a pas été menée. Nous en discutons la portée et les limites au regard des objectifs de la recherche et des systèmes existants.
 
 % ============================================================
 % IV.1. ÉVALUATION DE L'ONTOLOGIE
@@ -19,7 +19,7 @@ Les chapitres précédents ont présenté la démarche suivie et le système dé
 \section{Évaluation de l'ontologie}
 \label{sec:res_ontologie}
 
-Nous avons évalué l'ontologie selon les quatre critères retenus en phase 8 : couverture, cohérence, traçabilité et extensibilité (tableau \ref{tab:eval_ontologie} du chapitre \ref{chap:materiel_methodologie}). Nous décrivons la méthode employée et les résultats disponibles pour chacun.
+Nous avons évalué l'ontologie selon les quatre critères retenus en phase 6 : couverture, cohérence, traçabilité et extensibilité (tableau \ref{tab:eval_ontologie} du chapitre \ref{chap:materiel_methodologie}). Nous décrivons la méthode employée et les résultats disponibles pour chacun.
 
 \subsection{Couverture}
 \label{subsec:res_couverture}
@@ -33,7 +33,7 @@ La couverture varie selon les connaissances disponibles dans le corpus. Celui-ci
 \subsection{Cohérence}
 \label{subsec:res_coherence}
 
-Nous avons contrôlé la cohérence avec HermiT dans Protégé~5 après les principales modifications de classes, propriétés et relations. Le raisonneur n'a signalé aucune incohérence. Nous avions également prévu des requêtes de test pour vérifier l'emploi des propriétés sur les domaines attendus et, après le peuplement de phase 5 et l'import de phase 6, le rattachement des instances à leurs classes. Sur la version peuplée, HermiT (version 1.4.3 fournie avec Protégé~5.6.9) a traité l'ontologie en 1~550~ms sans signaler d'incohérence ni de classe insatisfiable. Après l'import, nous avons exécuté dans Neo4j les requêtes de contrôle suivantes, sur l'ensemble du graphe : usages sans source, 0 ; usages sans plante, 0 ; usages sans maladie cible, 0 ; plantes sans source, 0 ; composés sans source, 0 ; effets toxicologiques sans source, 0. L'import a aussi vérifié les domaines et les portées des propriétés sur les 25~321 relations, sans anomalie.
+Nous avons contrôlé la cohérence avec HermiT dans Protégé~5 après les principales modifications de classes, propriétés et relations. Le raisonneur n'a signalé aucune incohérence. Nous avions également prévu des requêtes de test pour vérifier l'emploi des propriétés sur les domaines attendus et, après le peuplement et l'import de phase 4, le rattachement des instances à leurs classes. Sur la version peuplée, HermiT (version 1.4.3 fournie avec Protégé~5.6.9) a traité l'ontologie en 1~550~ms sans signaler d'incohérence ni de classe insatisfiable. Après l'import, nous avons exécuté dans Neo4j les requêtes de contrôle suivantes, sur l'ensemble du graphe : usages sans source, 0 ; usages sans plante, 0 ; usages sans maladie cible, 0 ; plantes sans source, 0 ; composés sans source, 0 ; effets toxicologiques sans source, 0. L'import a aussi vérifié les domaines et les portées des propriétés sur les 25~321 relations, sans anomalie.
 
 Ce résultat indique l'absence de contradiction dans le modèle, mais pas la justesse des connaissances qu'il contient. Une proposition erronée mais cohérente pourrait satisfaire ce contrôle.
 
@@ -47,7 +47,7 @@ Nous avons contrôlé sur l'ensemble du graphe le rattachement des faits à un n
 \subsection{Extensibilité}
 \label{subsec:res_extensibilite}
 
-Lors de la phase 4, nous avons adapté le modèle conceptuel en ajoutant des classes et des propriétés relatives aux noms vernaculaires, aux usages, aux préparations, à la traçabilité documentaire, à la phytochimie et à la toxicologie. En phase 5, l'ontologie a été enrichie avec les individus et données extraits des sources. En phase 6, ce modèle enrichi a été importé et ajusté dans Neo4j. Nous n'avons pas réalisé de test d'ajout isolé en dehors des phases 4 à 6. Le passage à la version 4.0 du schéma, qui ajoute notamment les modes d'administration, les modes de préparation et les propriétés de posologie, a été importé sans anomalie de domaine ou de portée. Cela donne une indication sur l'extensibilité du modèle, sans en constituer une preuve.
+Lors de la phase 3a, nous avons adapté le modèle conceptuel en ajoutant des classes et des propriétés relatives aux noms vernaculaires, aux usages, aux préparations, à la traçabilité documentaire, à la phytochimie et à la toxicologie. En phase 4, l'ontologie a été enrichie avec les individus et données extraits des sources en phase 3b, puis ce modèle enrichi a été importé et ajusté dans Neo4j. Nous n'avons pas réalisé de test d'ajout isolé en dehors des phases 3a et 4. Le passage à la version 4.0 du schéma, qui ajoute notamment les modes d'administration, les modes de préparation et les propriétés de posologie, a été importé sans anomalie de domaine ou de portée. Cela donne une indication sur l'extensibilité du modèle, sans en constituer une preuve.
 
 \subsection{Synthèse de l'évaluation de l'ontologie}
 
@@ -67,7 +67,7 @@ Cohérence & Raisonneurs et requêtes de contrôle & Aucune incohérence signal�
 \hline
 Traçabilité & Requêtes sur l'ensemble du graphe & Plantes 289/289 et usages 1~676/1~676 reliés à une source (100~\%) ; niveau de preuve 1~676/1~676 (100~\%) \\
 \hline
-Extensibilité & Ajouts en cours de phases 4 et 5 & Pas de test isolé ; schéma v4.0 importé sans anomalie. \\
+Extensibilité & Ajouts en cours de phases 3a et 4 & Pas de test isolé ; schéma v4.0 importé sans anomalie. \\
 \hline
 \end{tabular}
 \end{table}
@@ -79,7 +79,7 @@ Extensibilité & Ajouts en cours de phases 4 et 5 & Pas de test isolé ; schéma
 \section{Évaluation du système RAG}
 \label{sec:res_rag}
 
-Nous avons évalué le système RAG sur quatre critères : pertinence, fidélité, exactitude et traçabilité. Le protocole de phase 8 prévoyait leur mesure au moyen d'un jeu de 50 questions de référence (tableau \ref{tab:eval_rag} du chapitre \ref{chap:materiel_methodologie}).
+Nous avons évalué le système RAG sur quatre critères : pertinence, fidélité, exactitude et traçabilité. Le protocole de phase 6 prévoyait leur mesure au moyen d'un jeu de 50 questions de référence (tableau \ref{tab:eval_rag} du chapitre \ref{chap:materiel_methodologie}).
 
 \subsection{Construction du jeu d'évaluation}
 \label{subsec:res_jeu_50}
@@ -173,7 +173,7 @@ Une première version du système, sur un graphe antérieur de 141 plantes, sél
 \subsection{Volumes d'interrogation de la base}
 \label{subsec:res_volumes}
 
-Nous avons relevé les volumes obtenus avec les quatre familles de requêtes définies en phase 6 (section \ref{subsec:phase6} du chapitre \ref{chap:materiel_methodologie}). Le tableau \ref{tab:volumes_requetes} les présente.
+Nous avons relevé les volumes obtenus avec les quatre familles de requêtes définies en phase 4 (section \ref{subsec:phase4} du chapitre \ref{chap:materiel_methodologie}). Le tableau \ref{tab:volumes_requetes} les présente.
 
 \begin{table}[H]
 \centering
@@ -200,9 +200,9 @@ Requêtes spatiales & Plantes d'une région donnée & 194 \\
 Les métriques ne décrivent pas à elles seules le déroulement des tests. Nous les complétons par les observations qualitatives recueillies.
 
 
-Les tests ont porté sur des questions simples, de traçabilité, spatiales, sur des recettes multi-plantes et sur des sujets absents du corpus. Sur les 14 réponses non conformes avec Llama 3, dix tiennent à la requête générée et quatre à la rédaction. Les 5 questions spatiales ont toutes échoué (Q41 à Q45) : le modèle écrit une requête mal formée, souvent en prolongeant le chemin au-delà de la localité, ce que le schéma ne permet pas, et le système répond à tort que l'information n'est pas disponible. La question Q19 aboutit au même refus, faute de source dans la requête. Le modèle ajoute une maladie non demandée dans Q03 et Q09, et ne cherche qu'une partie des libellés dans Q06 et Q10. Pour la rédaction, il omet des valeurs pourtant présentes dans le contexte (Q01, Q18) ou déclare à tort qu'il n'y a pas de réponse (Q30, Q31). La correction a été demandée pour 11 questions : les 5 questions hors corpus, de nouveau refusées, et 6 questions pour lesquelles elle n'a pas abouti. Elle n'a donc permis aucune réponse sur ce jeu. Lorsque l'information demandée est absente du graphe, le système doit éviter de produire une réponse non étayée. Les 5 questions hors corpus ont toutes reçu un refus, ce que nous comptons comme le comportement attendu. Mais 6 des 45 questions à réponse attendue ont reçu un refus à tort : avec Text2Cypher, un refus ne prouve pas que l'information est absente du graphe.
+Les tests ont porté sur des questions simples, de traçabilité, spatiales, sur des recettes multi-plantes et sur des sujets absents du corpus. Sur les 14 réponses non conformes avec Llama 3, dix tiennent à la requête générée et quatre à la rédaction. Les 5 questions spatiales ont toutes échoué (Q41 à Q45) : le modèle écrit une requête mal formée, souvent en prolongeant le chemin au-delà de la localité, ce que le schéma ne permet pas, et le système répond à tort que l'information n'est pas disponible. La question Q19 aboutit au même refus, faute de source dans la requête. Le modèle ajoute une maladie non demandée dans Q03 et Q09, et ne cherche qu'une partie des libellés dans Q06 et Q10. Pour la rédaction, il omet des valeurs pourtant présentes dans le contexte (Q01, Q18) ou déclare à tort qu'il n'y a pas de réponse (Q30, Q31). La correction a été demandée pour 11 questions : les 5 questions hors corpus, de nouveau refusées, et 6 questions pour lesquelles elle n'a pas abouti. Elle n'a donc permis aucune réponse sur ce jeu. Lorsque l'information demandée est absente du graphe, le système doit éviter de produire une réponse non étayée. Les 5 questions hors corpus ont toutes reçu un refus, ce que nous comptons comme le comportement attendu. Mais 6 des 45 questions à réponse attendue ont reçu un refus à tort : avec Text2Cypher, un refus ne prouve pas que l'information est absente du graphe. Pour deux autres questions (Q30, Q31), le modèle répond lui-même, à tort, qu'il n'a rien trouvé : au total, 8 des 45 réponses attendues affirment à tort l'absence d'information.
 
-Nous avons également posé 12 questions libres, écrites après avoir vu ces échecs et hors des types du jeu d'évaluation, comme « citer 2 plantes » ou « Quelles plantes sont utilisées à la fois contre le paludisme et contre la toux ? ». Jugées à la lecture, elles constituent un contrôle séparé, qui ne s'ajoute pas au score. Llama 3 a produit 2 réponses correctes, 8 refus à tort et 2 réponses à côté de la question, tandis que les 12 réponses de Gemini étaient utilisables, certaines listes restant incomplètes. Nous avons ensuite accepté sans source les requêtes ne renvoyant que des nombres ou des booléens, ce qui permet à Llama 3 de répondre à « Combien de plantes contient la base ? ». Le score du jeu d'évaluation n'en dépend pas : aucune de ses requêtes finales n'est un décompte, et aucune n'a été rejetée pour ce motif.
+Nous avons également posé 12 questions libres, écrites après avoir vu ces échecs et hors des types du jeu d'évaluation, comme « citer 2 plantes » ou « Quelles plantes sont utilisées à la fois contre le paludisme et contre la toux ? ». Jugées à la lecture, elles constituent un contrôle séparé, qui ne s'ajoute pas au score. Llama 3 a produit 2 réponses correctes, 8 refus à tort et 2 réponses à côté de la question, tandis que les 12 réponses de Gemini étaient utilisables, certaines listes restant incomplètes. Nous avons ensuite accepté sans source les requêtes ne renvoyant que des nombres ou des booléens, ce qui permet à Llama 3 de répondre à « Combien de plantes contient la base ? ». Le score du jeu d'évaluation n'en dépend pas : aucune de ses requêtes finales n'est un décompte, et aucune n'a été rejetée pour ce motif. Après l'évaluation, nous avons aussi ajouté une voie à requêtes fixes pour les questions portant sur le contenu de la base (section \ref{subsec:systeme_rag} du chapitre \ref{chap:conception_developpement}). Un test automatique vérifie qu'aucune des 50 questions n'emprunte cette voie : les scores restent inchangés. En revanche, 3 des 12 questions libres, dont « citer 2 plantes » et « Combien de plantes contient la base ? », y passent désormais ; les résultats ci-dessus décrivent la version antérieure et n'ont pas été recalculés.
 
 Le temps total, mesuré par le script d'évaluation pour chaque question, s'élève en moyenne à 21,8~s (médiane 15,7~s, maximum 97,4~s). Treize questions ont dépassé 20~s et quatre ont dépassé 60~s. Nous n'avions pas fixé de seuil au préalable.
 
@@ -213,17 +213,7 @@ Le temps total, mesuré par le script d'évaluation pour chaque question, s'él�
 \section{Évaluation de l'application web}
 \label{sec:res_web}
 
-Nous avons évalué l'application web sur les quatre critères du protocole : facilité d'utilisation, compréhension des réponses, utilité perçue et performance (tableau \ref{tab:eval_web} du chapitre \ref{chap:materiel_methodologie}). Nous avons mesuré les trois premiers par questionnaire et le dernier par chronométrage.
-
-\subsection{Campagne de test}
-\label{subsec:res_campagne}
-
-Nous avons soumis l'application à \TODOchapo{indiquer le nombre exact de participants} participants, recrutés selon les profils prévus en phase 8 : \TODOchapo{indiquer la répartition réelle ; si le recrutement n'a pas eu lieu, préciser que le panel est prévu et que les résultats restent provisoires}. Chaque participant a suivi trois scénarios : retrouver la fiche d'une plante à partir de son nom vernaculaire, poser une question au chatbot et retrouver la source d'une réponse. Nous avons ensuite administré un questionnaire. \TODOchapo{indiquer l'échelle, les items du questionnaire et les conditions de passation}.
-
-\subsection{Résultats du questionnaire}
-\label{subsec:res_questionnaire}
-
-Les résultats par critère figurent au tableau \ref{tab:res_web}.
+Le protocole prévoyait quatre critères : facilité d'utilisation, compréhension des réponses, utilité perçue et performance (tableau \ref{tab:eval_web} du chapitre \ref{chap:materiel_methodologie}). Les trois premiers devaient être mesurés par un questionnaire, auprès d'étudiants, de chercheurs et de tradipraticiens. Cette campagne de tests n'a pas été menée dans le temps imparti au mémoire. Nous ne disposons donc d'aucun résultat pour ces trois critères et nous ne les estimons pas. Seule la performance a été mesurée. Le tableau \ref{tab:res_web} récapitule cette situation.
 
 \begin{table}[H]
 \centering
@@ -231,33 +221,18 @@ Les résultats par critère figurent au tableau \ref{tab:res_web}.
 \label{tab:res_web}
 \begin{tabular}{|L{3,6cm}|L{4,4cm}|L{5cm}|}
 \hline
-\textbf{Critère} & \textbf{Méthode} & \textbf{Résultat} \\
+\textbf{Critère} & \textbf{Méthode prévue} & \textbf{Résultat} \\
 \hline
-Facilité d'utilisation & Questionnaire & \TODOchapo{score moyen des participants sur l'échelle employée, ex. 4,2/5} \\
+Facilité d'utilisation & Questionnaire & Non mesurée : campagne non menée \\
 \hline
-Compréhension des réponses & Questionnaire & \TODOchapo{score moyen, ex. 4,0/5} \\
+Compréhension des réponses & Questionnaire & Non mesurée : campagne non menée \\
 \hline
-Utilité perçue & Questionnaire & \TODOchapo{score moyen, ex. 3,8/5} \\
+Utilité perçue & Questionnaire & Non mesurée : campagne non menée \\
 \hline
 Performance & Mesure du temps de réponse & 21,8~s en moyenne (médiane 15,7~s ; maximum 97,4~s), sur les 50 questions \\
 \hline
 \end{tabular}
 \end{table}
-
-\begin{figure}[H]
-\centering
-\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering
-\TODOchapo{produire un histogramme des trois scores du questionnaire selon l'échelle réellement employée, puis l'enregistrer sous \texttt{images/resultats\_questionnaire.png}.}\\[2mm]
-Scores moyens des trois critères à questionnaire, échelle de 1 à 5
-}
-}
-\caption{Résultats du questionnaire par critère}
-\label{fig:res_questionnaire}
-\end{figure}
-% Une fois le graphique créé, remplacer tout le cadre \fbox{...} ci-dessus par :
-% \includegraphics[width=0.75\textwidth]{resultats_questionnaire.png}
-
-Les observations recueillies pendant les scénarios complètent les scores. \TODOchapo{rapporter 3 à 5 observations factuelles issues des notes de passation, sans ajouter d'exemples non observés}.
 
 \subsection{Performance}
 \label{subsec:res_performance}
@@ -277,22 +252,18 @@ Nous avons examiné les résultats au regard des questions de recherche et des s
 \subsection{Confrontation aux objectifs de la recherche}
 \label{subsec:discussion_objectifs}
 
-La première question de recherche portait sur le choix d'une ontologie adaptée au contexte burkinabè. Nous avons comparé cinq ontologies à l'aide d'une grille commune au chapitre \ref{chap:materiel_methodologie}. \textit{ontoMEDTRAD} a obtenu le score le plus élevé, 4,7 contre 3,7 pour \textit{WATRIMed}. Nous l'avons retenue comme base conceptuelle, puis avons adapté son modèle conceptuel, enrichi l'ontologie en données et importé ce modèle enrichi dans Neo4j en tenant compte des limites du modèle d'origine.
+La première question de recherche portait sur le choix d'une ontologie adaptée au contexte burkinabè et sur les réajustements qu'elle demandait. Nous avons comparé cinq ontologies à l'aide d'une grille commune au chapitre \ref{chap:materiel_methodologie}. \textit{ontoMEDTRAD} a obtenu le score le plus élevé, 4,7 contre 3,7 pour \textit{WATRIMed}. Nous l'avons retenue comme base conceptuelle, en tenant compte des limites du modèle d'origine. Nous avons étendu le schéma par des classes et des relations relatives aux noms vernaculaires, aux usages, aux parties utilisées, aux préparations, aux niveaux de preuve, aux sources, à la localisation, à la phytochimie et à la toxicologie.
 
-La deuxième question portait sur l'adaptation du modèle et la traçabilité. Nous avons étendu le schéma par des classes et des relations relatives aux noms vernaculaires, aux usages, aux parties utilisées, aux préparations, aux niveaux de preuve, aux sources, à la localisation, à la phytochimie et à la toxicologie. Le rattachement aux sources est complet pour les usages et les plantes (section \ref{subsec:res_tracabilite}), mais son exactitude n'a été contrôlée que partiellement dans les documents d'origine.
+La deuxième question portait sur l'extraction des connaissances et leur traçabilité. Les connaissances de dix documents ont été extraites avec l'aide de l'intelligence artificielle, puis vérifiées manuellement avant le peuplement de l'ontologie et son import dans Neo4j. Le rattachement aux sources est complet pour les usages et les plantes (section \ref{subsec:res_tracabilite}). Le nom de la plante figure dans le document d'origine pour 1~497 usages sur 1~501 contrôlables, mais l'exactitude de chaque information n'a été contrôlée que partiellement. Nous n'avons pas comparé cette méthode à une extraction manuelle.
 
-La troisième question concernait l'accès en langage naturel au moyen d'un système RAG. Le modèle traduit la question en requête Cypher, validée en lecture seule, puis produit une réponse accompagnée de sources. Les métriques du tableau \ref{tab:res_rag} indiquent une restitution partielle du graphe avec Llama 3 (F1-score de 0,728), bien meilleure avec Gemini (0,995), sans renseigner sur l'exactitude scientifique des faits. L'accès en langage naturel fonctionne donc, mais sa fiabilité dépend fortement du modèle qui écrit la requête.
-
-La quatrième question portait sur l'application web. Nous avons développé l'application et défini les fonctions présentées au tableau \ref{tab:fonctionnalites}. Les modalités de test et les résultats du tableau \ref{tab:res_web} restent à préciser.
-
-La réponse à la quatrième question reste provisoire tant que les données de la campagne de test ne sont pas renseignées.
+La troisième question concernait l'accès en langage naturel au moyen d'une solution numérique, qui associe un système RAG à une application web. Le modèle traduit la question en requête Cypher, validée en lecture seule, puis produit une réponse accompagnée de sources. Les métriques du tableau \ref{tab:res_rag} indiquent une restitution partielle du graphe avec Llama 3 (F1-score de 0,728), bien meilleure avec Gemini (0,995), sans renseigner sur l'exactitude scientifique des faits. L'accès en langage naturel fonctionne donc, mais sa fiabilité dépend fortement du modèle qui écrit la requête. Nous avons développé l'application et défini les fonctions présentées au tableau \ref{tab:fonctionnalites}. La campagne de tests auprès des utilisateurs n'ayant pas été menée, nous ne pouvons pas dire dans quelle mesure l'application facilite leur accès aux connaissances : la réponse à la troisième question reste partielle.
 
 \subsection{Confrontation aux systèmes existants}
 \label{subsec:discussion_existant}
 
 Le modèle d'origine \textit{ontoMEDTRAD} couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}. Notre base compte 289 plantes et 1~676 usages issus de dix documents. Ces chiffres ne sont pas directement comparables, car les deux travaux n'ont pas le même périmètre et notre décompte ne distingue pas les remèdes de la même façon.
 
-Par rapport à \textit{WATRIMed}, dont les publications ne donnent pas accès au fichier de l'ontologie, notre travail relie le schéma à une base interrogeable et à une application qui présente les réponses avec leurs sources.
+Par rapport à \textit{WATRIMed}, dont les publications ne décrivent que les classes supérieures, notre travail relie le schéma à une base interrogeable et à une application qui présente les réponses avec leurs sources.
 
 L'apport du travail tient à la chaîne qui relie les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les contrôles chiffrés établissent la présence de ces liens ; leur exactitude n'est vérifiée que sur une partie des documents.
 
@@ -302,11 +273,11 @@ L'apport du travail tient à la chaîne qui relie les sources scientifiques à l
 Six limites encadrent les résultats qui précèdent et déterminent leur portée.
 
 \begin{enumerate}[label=\arabic*.]
-    \item \textbf{L'évaluation a été conduite par nous-mêmes, les concepteurs du système.} Aucun évaluateur extérieur n'a participé aux tests. Le panel \TODOchapo{indiquer le nombre exact de participants, leur répartition et les conditions de passation} ne permet pas d'établir des comparaisons statistiques solides.
+    \item \textbf{L'évaluation a été conduite par nous-mêmes, les concepteurs du système.} Aucun évaluateur extérieur n'a participé aux tests, et la campagne prévue auprès des utilisateurs n'a pas été menée.
 
     \item \textbf{Le jeu de 50 questions provient du corpus utilisé pour construire le système.} Il mesure donc principalement les réponses du système sur les documents qui ont alimenté la base. Des questions formulées par d'autres utilisateurs à partir de documents différents pourraient produire d'autres résultats.
 
-    \item \textbf{Les niveaux de preuve proviennent des sources.} Nous les avons repris tels quels, sans réévaluation indépendante, comme indiqué en phase 5 et au chapitre \ref{chap:conception_developpement}. Un usage classé « traditionnel » par sa source conserve cette qualification dans la base.
+    \item \textbf{Les niveaux de preuve proviennent des sources.} Nous les avons repris tels quels, sans réévaluation indépendante, comme indiqué en phase 3b et au chapitre \ref{chap:conception_developpement}. Un usage classé « traditionnel » par sa source conserve cette qualification dans la base.
 
     \item \textbf{Les extractions n'ont pas été relues par un expert.} L'absence d'ajout d'informations non rapportées par les sources limite certains risques, mais une fiche peut malgré tout déformer le propos. Aucune relecture systématique par un ethnobotaniste ou un pharmacologue n'a eu lieu ; seul le contrôle sur échantillon de la section \ref{subsec:res_tracabilite} a été réalisé.
 
@@ -322,7 +293,7 @@ Nous n'avons pas testé par comparaison contrôlée l'hypothèse selon laquelle 
 \subsection{Pistes de travail}
 \label{subsec:discussion_perspectives}
 
-Les limites observées ouvrent plusieurs pistes de travail. Une évaluation des extractions avec un spécialiste, des tests auprès d'un panel élargi comprenant des tradipraticiens et l'intégration de thèses et de rapports non numérisés permettraient d'étudier le système sur un corpus plus large. Une relecture experte d'un échantillon et des questions formulées par des utilisateurs compléteraient l'évaluation. Un déploiement pérenne et une collecte discrète des données d'usage permettraient également d'étudier le système en conditions réelles.
+Les limites observées ouvrent plusieurs pistes de travail. Une évaluation des extractions avec un spécialiste, des tests auprès d'utilisateurs, dont des tradipraticiens, et l'intégration de thèses et de rapports non numérisés permettraient d'étudier le système sur un corpus plus large. Une relecture experte d'un échantillon et des questions formulées par des utilisateurs compléteraient l'évaluation. Un déploiement pérenne et une collecte discrète des données d'usage permettraient également d'étudier le système en conditions réelles.
 
 % ============================================================
 % CONCLUSION DU CHAPITRE
@@ -331,7 +302,7 @@ Les limites observées ouvrent plusieurs pistes de travail. Une évaluation des 
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre présente l'évaluation de l'ontologie, du système RAG et de l'application web. Le système restitue en partie le contenu du graphe sur les 50 questions, avec un F1-score de 0,728 pour Llama 3 8B et de 0,995 pour Gemini, et un refus pour toutes les questions hors corpus. L'ontologie couvre dix des 35 documents du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
+Ce chapitre présente l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, qui n'a pas été évaluée auprès de ses utilisateurs. Le système restitue en partie le contenu du graphe sur les 50 questions, avec un F1-score de 0,728 pour Llama 3 8B et de 0,995 pour Gemini, et un refus pour toutes les questions hors corpus. L'ontologie couvre dix des 35 documents du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
 
 Nous avons replacé ces résultats au regard des questions de recherche et des systèmes existants. Le travail met en place une chaîne reliant les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les résultats restent toutefois encadrés par les limites méthodologiques présentées dans ce chapitre.
 

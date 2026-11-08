@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="methodologie" name="methodologie">
+    <mxGraphModel dx="1000" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="940" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="voletG" value="" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#B4B2A9;dashed=1;dashPattern=6 4;" parent="1" vertex="1">
+          <mxGeometry x="60" y="170" width="420" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="titreG" value="&lt;b&gt;Volet modèle conceptuel&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="60" y="180" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="voletD" value="" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#B4B2A9;dashed=1;dashPattern=6 4;" parent="1" vertex="1">
+          <mxGeometry x="515" y="170" width="420" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="titreD" value="&lt;b&gt;Volet modèle de données&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="515" y="180" width="420" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Phase 1 · Constitution du corpus&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Ontologies et documents scientifiques&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;fontColor=#444441;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="250" y="60" width="495" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2a" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;2a · Étude comparative&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Sélection : ontoMEDTRAD&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="88" y="216" width="365" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="p3a" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;3a · Adaptation du modèle&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Schéma OntoPlantMedBF&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="88" y="351" width="365" height="82" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2b" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;2b · Sélection des documents&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Critères d'inclusion&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#0F6E56;fontColor=#085041;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="541" y="216" width="365" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="p3b" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;3b · Extraction par LLM&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Fiches JSON sourcées&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#0F6E56;fontColor=#085041;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="541" y="351" width="365" height="82" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p4" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Phase 4 · Peuplement et base graphe&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Ontologie peuplée dans Neo4j&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FAECE7;strokeColor=#993C1D;fontColor=#712B13;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="250" y="512" width="495" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Phase 5 · Dispositif numérique&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;RAG et application web&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FAECE7;strokeColor=#993C1D;fontColor=#712B13;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="250" y="649" width="495" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Phase 6 · Évaluation&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Ontologie, RAG, application&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;fontColor=#444441;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="250" y="786" width="495" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="ajust" value="↻ ajustements" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#5F5E5A;" parent="1" vertex="1">
+          <mxGeometry x="765" y="812" width="140" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;exitX=0.04;exitY=1;entryX=0.5;entryY=0;" parent="1" source="p1" target="voletG" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;exitX=0.955;exitY=1;entryX=0.5;entryY=0;" parent="1" source="p1" target="voletD" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;" parent="1" source="p2a" target="p3a" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;" parent="1" source="p2b" target="p3b" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;dashed=1;dashPattern=6 4;endArrow=open;endSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="p3a" target="p3b" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;exitX=0.5;exitY=1;entryX=0.38;entryY=0;" parent="1" source="voletG" target="p4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="483" />
+              <mxPoint x="438" y="483" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;exitX=0.5;exitY=1;entryX=0.62;entryY=0;" parent="1" source="voletD" target="p4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="483" />
+              <mxPoint x="557" y="483" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;" parent="1" source="p4" target="p5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;" parent="1" source="p5" target="p6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

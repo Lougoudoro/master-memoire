@@ -174,25 +174,25 @@
 \contentsline {subsection}{\numberline {III.4.2}Fonctionnalités}{65}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {III.4.3}Gestion de session et déploiement}{66}{subsection.3.4.3}%
 \contentsline {section}{Conclusion du chapitre}{67}{figure.3.9}%
-\contentsline {chapter}{\numberline {IV}Résultats et discussion}{68}{chapter.4}%
-\contentsline {section}{\numberline {IV.1}Évaluation de l'ontologie}{68}{section.4.1}%
-\contentsline {subsection}{\numberline {IV.1.1}Couverture}{68}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {IV.1.2}Cohérence}{68}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {IV.1.3}Traçabilité}{69}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {IV.1.4}Extensibilité}{69}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {IV.1.5}Synthèse de l'évaluation de l'ontologie}{69}{subsection.4.1.5}%
-\contentsline {section}{\numberline {IV.2}Évaluation du système RAG}{70}{section.4.2}%
-\contentsline {subsection}{\numberline {IV.2.1}Construction du jeu d'évaluation}{70}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {IV.2.2}Résultats quantitatifs}{71}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {IV.2.3}Volumes d'interrogation de la base}{72}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {IV.2.4}Observations qualitatives}{72}{subsection.4.2.4}%
-\contentsline {section}{\numberline {IV.3}Évaluation de l'application web}{73}{section.4.3}%
-\contentsline {subsection}{\numberline {IV.3.1}Performance}{73}{subsection.4.3.1}%
-\contentsline {section}{\numberline {IV.4}Discussion}{74}{section.4.4}%
-\contentsline {subsection}{\numberline {IV.4.1}Confrontation aux objectifs de la recherche}{74}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {IV.4.2}Confrontation aux systèmes existants}{74}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {IV.4.3}Limites}{74}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {IV.4.4}Pistes de travail}{75}{subsection.4.4.4}%
-\contentsline {section}{Conclusion du chapitre}{75}{subsection.4.4.4}%
-\contentsline {chapter}{Conclusion générale}{77}{chapter*.122}%
-\contentsline {chapter}{Bibliographie}{78}{chapter*.122}%
+\contentsline {chapter}{\numberline {IV}Résultats et discussion}{69}{chapter.4}%
+\contentsline {section}{\numberline {IV.1}Évaluation de l'ontologie}{69}{section.4.1}%
+\contentsline {subsection}{\numberline {IV.1.1}Couverture}{69}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {IV.1.2}Cohérence}{69}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {IV.1.3}Traçabilité}{70}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {IV.1.4}Extensibilité}{70}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {IV.1.5}Synthèse de l'évaluation de l'ontologie}{70}{subsection.4.1.5}%
+\contentsline {section}{\numberline {IV.2}Évaluation du système RAG}{71}{section.4.2}%
+\contentsline {subsection}{\numberline {IV.2.1}Construction du jeu d'évaluation}{71}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {IV.2.2}Résultats quantitatifs}{72}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {IV.2.3}Volumes d'interrogation de la base}{73}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {IV.2.4}Observations qualitatives}{73}{subsection.4.2.4}%
+\contentsline {section}{\numberline {IV.3}Évaluation de l'application web}{74}{section.4.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Performance}{74}{subsection.4.3.1}%
+\contentsline {section}{\numberline {IV.4}Discussion}{75}{section.4.4}%
+\contentsline {subsection}{\numberline {IV.4.1}Confrontation aux objectifs de la recherche}{75}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {IV.4.2}Confrontation aux systèmes existants}{75}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {IV.4.3}Limites}{75}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {IV.4.4}Pistes de travail}{76}{subsection.4.4.4}%
+\contentsline {section}{Conclusion du chapitre}{76}{subsection.4.4.4}%
+\contentsline {chapter}{Conclusion générale}{78}{chapter*.122}%
+\contentsline {chapter}{Bibliographie}{79}{chapter*.122}%

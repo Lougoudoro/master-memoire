@@ -130,6 +130,19 @@ Architecture (figure), modèles (ontologie, données), implémentation, outils, 
 
 Le canevas (« Implémentation / Expérimentation / Évaluation ») exige ici : le processus d'implémentation et la **justification des choix**, **l'environnement matériel et logiciel** (le dispositif expérimental : machine, GPU ou Colab, versions des logiciels et des modèles), **les données utilisées** pour l'expérimentation, puis la présentation, l'analyse et **l'interprétation** des résultats. Comme l'implémentation est décrite au chapitre III, le dispositif expérimental peut y figurer, mais il doit exister quelque part sous ce nom.
 
+#### Dispositif expérimental : environnement matériel et logiciel
+
+Exigence explicite du canevas et de l'auteur. Un jury doit pouvoir **reproduire** l'expérience et juger si les temps de réponse sont comparables. Une mention vague (« un GPU », « Neo4j », « Python ») ne suffit pas : chaque élément est nommé **avec sa version ou sa caractéristique précise**. Présente-le dans une sous-section dédiée, intitulée par exemple « Dispositif expérimental », avec un ou deux tableaux.
+
+À couvrir, pour chaque machine réellement utilisée :
+- **Matériel** : type de machine (ordinateur personnel, Colab, serveur), processeur, mémoire vive, **GPU avec son modèle et sa mémoire** (ex. NVIDIA T4, 16 Go), système d'exploitation et version.
+- **Logiciels** : version de Python, de Neo4j, d'Ollama, de Protégé et du raisonneur, de Streamlit, de LangChain et des bibliothèques clés. Le numéro exact est relevé avec `pip show`, `ollama --version` ou le menu « À propos ».
+- **Modèles de langue** : identifiant exact (ex. `llama3:8b`), taille, **quantification**, fenêtre de contexte, température et paramètres de génération, fournisseur et **période d'utilisation** pour les modèles accessibles par API (leurs versions évoluent).
+- **Répartition** : quelle étape tourne sur quelle machine (extraction, peuplement, génération, interface, évaluation).
+- **Conditions de mesure** : réseau ou tunnel utilisé, nombre d'exécutions, ce qui peut influer sur les temps (session Colab partagée, démarrage à froid).
+
+Toute valeur inconnue s'écrit `\TODOchapo{version de … à relever}`. Une version ne s'invente jamais, et une version « probable » ne remplace pas la valeur relevée.
+
 Résultats chiffrés par question de recherche, puis discussion : confrontation aux hypothèses (validée, partiellement, non), comparaison avec les travaux du chapitre I, **limites** de l'étude. Les conclusions ne dépassent pas ce que les mesures montrent.
 
 ## Conclusion générale

@@ -51,5 +51,5 @@ Annexe A1, A2, A3…
 | TdM → figures → tableaux → abréviations | figures → tableaux → sigles → TdM (`main.tex`) | Ordre à aligner sur le canevas |
 | Plateformes/outils existants + forces/faiblesses | §1.4.2 « Systèmes intelligents d'accès aux connaissances » décrit des familles de systèmes | Vérifier qu'il nomme des plateformes concrètes |
 | Méthodologie divisible | Chap. II + Chap. III | Conforme ; déséquilibre mesuré le 2026-11-15 : I = 23 p., II = 17, III = 21, IV = 9, conclusion = 1 p. (voir `scripts/equilibre_chapitres.py`) |
-| Environnement matériel et logiciel | Colab et Ollama mentionnés au chap. III, sans section dédiée | Section « dispositif expérimental » à prévoir |
+| Environnement matériel et logiciel | Chap. II, tableaux « Modèles de langage et modes d'accès », « Bibliothèques Python utilisées » et « Récapitulatif du matériel » (GPU T4 sur Colab) | Partiel : manquent la machine locale (processeur, mémoire, système), les versions de Python, Neo4j, Ollama, Protégé, la quantification et les paramètres de Llama 3 8B, la période d'usage des API |
 | Annexes | Aucune | À envisager : questions d'évaluation, extraits d'ontologie, prompts |

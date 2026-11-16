@@ -111,10 +111,10 @@ Le canevas demande deux volets distincts, puis une synthèse :
 3. **Travaux de recherche** (articles scientifiques) liés à la problématique, avec une **analyse de leurs résultats qui fait ressortir leurs limites** par rapport au travail ;
 4. **Synthèse** de l'état de l'art : discussion, forces, faiblesses.
 
-Ne pas enchaîner des « Dans [7], les auteurs… » sans analyse (défaut de Sawadogo et Zongo). Pour chaque travail : auteurs et année → données et contexte → méthode → résultat chiffré → **limite au regard du contexte de l'étude** (« Cependant… »). Puis :
+Ne pas enchaîner des « Dans [7], les auteurs… » sans analyse (défaut de Sawadogo et Zongo). Un exemple rédigé de cette construction se trouve dans `memoire-style`, section « Paragraphe de revue critique ». Pour chaque travail : auteurs et année → données et contexte → méthode → résultat chiffré → **limite au regard du contexte de l'étude** (« Cependant… »). Puis :
 - un **tableau de synthèse comparative** (travail, année, contexte, données, méthode, résultat) ;
 - une sous-section **limites des travaux existants** ;
-- un **positionnement** explicite : ce que l'étude reprend, ce qu'elle fait autrement, et pourquoi (le passage « Suivant l'approche de [7]… Contrairement à… » de Sawadogo est le bon modèle).
+- un **positionnement** explicite, placé **après** le tableau : ce que l'étude reprend, ce qu'elle fait autrement, et pourquoi. C'est le seul endroit de la revue où l'on annonce une décision ; la présentation de chaque travail reste factuelle (le passage « Suivant l'approche de [7]… Contrairement à… » de Sawadogo est le bon modèle).
 
 ### Matériel et méthodologie (chapitre II)
 

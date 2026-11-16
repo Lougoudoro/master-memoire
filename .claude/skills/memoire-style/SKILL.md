@@ -77,6 +77,39 @@ Un jury repère vite un texte généré : il est lisse, symétrique, plein de fo
 - Pour une définition ou un chiffre repris d'un ouvrage, donne la page si elle est connue : `\cite[p.~12]{clé}` (pratique recommandée par le modèle de l'encadrant).
 - Ne présente pas comme réalisé ce que le dépôt ne prouve pas (voir `rapport-croise-redaction-graphrag.md`).
 
+## Pas de fichiers locaux dans le texte
+
+Le lecteur et le jury n'ont que le PDF. Ils ne voient ni le dépôt, ni les dossiers, ni les scripts. Un nom de fichier local ne leur apprend donc rien et donne au texte l'air d'un rapport technique interne.
+
+- **Ne cite pas les fichiers et chemins locaux** dans le texte visible : `ontoMEDTRAD-faits.xlsx`, `registre-validation-corpus.xlsx`, `ttl_import.py`, `app.py`, `main.tex`, `corpus/`, `GraphRAG/application/…`, noms de CSV ou de notebooks.
+- **Décris plutôt ce que contient ou fait le fichier.** Par exemple, « le registre de validation du corpus » au lieu de `registre-validation-corpus.xlsx`, ou « le programme d'import » au lieu de `ttl_import.py`.
+- **Exception : l'ontologie OntoPlantMedBF**, livrable du mémoire. On peut la nommer, et mentionner son format Turtle. Son nom est préférable à son nom de fichier quand les deux conviennent.
+- Les commentaires LaTeX (`% Source : …`) peuvent garder les chemins, car ils n'apparaissent pas dans le PDF.
+- Dans un extrait de code ou une commande, évite aussi les chemins propres à ta machine. Si un dépôt public existe, cite-le par son adresse dans la bibliographie ou en annexe.
+
+## Paragraphe de revue critique
+
+Une revue de littérature ne résume pas les travaux un par un. Pour chaque travail, elle dit **ce qu'il fait**, puis **ce qu'il ne permet pas dans le contexte de l'étude**, et enfin **ce qu'il apporte malgré tout**. C'est la construction du brouillon de Yaro, qui en est le meilleur apport, mais sans ses défauts d'écriture (phrases de plus de 30 mots, « : » à répétition, sigles anglais entre parenthèses).
+
+Trois temps, en deux paragraphes courts :
+1. **Le travail** : auteurs et citation, objectif, données ou terrain, méthode, chiffres clés.
+2. **La limite pour l'étude** : ce qui manque au regard du Burkina Faso, du corpus ou de la traçabilité. Cette limite doit être vérifiable, et non une opinion.
+3. **L'apport** : ce que le travail couvre des besoins de l'étude, constaté de façon factuelle.
+
+**Pas de décision dans la présentation d'un travail.** À ce stade, le lecteur n'a pas encore vu le tableau comparatif. Annoncer « nous avons retenu… » anticiperait une conclusion que la revue doit d'abord établir. La décision se place donc après le tableau de synthèse, dans la section « Positionnement ». Le choix méthodique de l'ontologie, avec sa grille de critères et sa notation, relève du chapitre II.
+
+Exemple construit avec les faits du chapitre I (`chapters/chapter1.tex`, §ontoMEDTRAD). Il montre la construction et ne doit pas être recopié ailleurs. Il passe le contrôle de style sans alerte :
+
+> Kouamé et ses collègues ont conçu \textit{ontoMEDTRAD} pour la médecine traditionnelle ouest-africaine \cite{kouame_systeme_2018}. L'ontologie associe un module terminologique à un module d'icônes destiné aux tradipraticiens peu alphabétisés. Elle décrit le parcours de soin, du praticien au remède, avec 144 concepts, 789 individus et 2~734 axiomes. Son jeu de données réunit 22 plantes et 31 remèdes antipaludéens, recueillis en Côte d'Ivoire et au Sénégal \cite{kouame_visual_2020}.
+>
+> Ce modèle reste toutefois difficile à employer tel quel au Burkina Faso. Il ne prévoit ni les noms en mooré, en dioula ou en fulfuldé, ni le niveau de preuve d'un usage. Il ne rattache pas non plus chaque fait à la publication qui le rapporte. C'est pourtant ce qu'exige un accès traçable à la littérature scientifique. Sa description du parcours de soin correspond en revanche aux usages, recettes et préparations rapportés dans notre corpus.
+
+À noter dans cet exemple :
+- chaque phrase porte un fait, et aucune n'est générique ;
+- la limite découle des besoins de l'étude, et non d'un jugement de valeur ;
+- la dernière phrase constate un apport sans annoncer de choix, qui viendra au positionnement puis au chapitre II ;
+- les phrases font 12 à 24 mots, sans « : » ni parenthèse.
+
 ## Transitions
 
 - Entre sections : une phrase qui ferme et ouvre (« Après avoir défini les plantes médicinales, il convient d'examiner la manière dont ces savoirs sont structurés. »).
@@ -113,7 +146,7 @@ Après chaque rédaction ou réécriture, lance :
 python .claude/skills/memoire-style/scripts/verifier_style.py <fichier.tex> [autres fichiers…]
 ```
 
-Le script signale, avec leur ligne, les phrases de plus de 25 mots (alerte au-delà de 30), les deux-points dans la prose, les paragraphes avec plus d'une parenthèse, les formules typiques de l'IA, les connecteurs répétés en tête de phrase et les tirets cadratins. Il ne remplace pas la lecture, mais rien ne doit être livré tant qu'il signale une alerte que tu n'as pas justifiée. Pour vérifier un texte qui n'est pas encore dans un fichier, écris-le d'abord dans le dossier temporaire (scratchpad), puis lance le script dessus.
+Le script signale, avec leur ligne, les phrases de plus de 25 mots (alerte au-delà de 30), les deux-points dans la prose, les paragraphes avec plus d'une parenthèse, les formules typiques de l'IA, les connecteurs répétés en tête de phrase, les tirets cadratins et les noms de fichiers locaux visibles dans le PDF (OntoPlantMedBF excepté). Il ne remplace pas la lecture, mais rien ne doit être livré tant qu'il signale une alerte que tu n'as pas justifiée. Pour vérifier un texte qui n'est pas encore dans un fichier, écris-le d'abord dans le dossier temporaire (scratchpad), puis lance le script dessus.
 
 ## Manière de livrer
 

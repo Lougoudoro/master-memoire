@@ -133,6 +133,16 @@ def analyser(chemin: Path):
         if "—" in ligne and not ligne.lstrip().startswith("%"):
             remarques.append((num, "tiret cadratin « — » : reformuler avec une virgule ou un point"))
 
+        # Fichiers locaux visibles dans le PDF (hors commentaires, figures, \input, URL)
+        visible = re.sub(r"(?<!\\)%.*", "", ligne)
+        visible = re.sub(r"\\(includegraphics|input|include|addbibresource|bibliography|graphicspath|label|ref|cite|url|href)\*?(\[[^\]]*\])?\{[^}]*\}", "", visible)
+        visible = re.sub(r"https?://\S+", "", visible)
+        for m in re.finditer(r"[\w./\\-]*\w\.(ttl|owl|xlsx|xls|csv|json|jsonl|py|ipynb|tex|md|txt|ya?ml|cypher|drawio|bib)\b", visible, re.I):
+            nom = m.group(0)
+            if "ontoplantmedbf" in nom.lower():
+                continue  # exception voulue par l'auteur : l'ontologie livrée
+            alertes.append((num, f"fichier local « {nom} » visible par le lecteur : décrire son contenu au lieu de le nommer"))
+
     for debut, para in paragraphes(lignes):
         brut = " ".join(l for _, l in para)
         texte = nettoyer(brut)

@@ -50,6 +50,7 @@ Un jury repère vite un texte généré : il est lisse, symétrique, plein de fo
 
 - **25 mots au maximum par phrase** en règle générale, **30 au grand maximum** et seulement si la phrase reste limpide. La moyenne d'un paragraphe doit rester autour de 15 à 20 mots.
 - Une phrase ne porte qu'une idée. Coupe au niveau des « et », « qui », « dont », « afin de » qui enchaînent une deuxième idée.
+- **Exception : la question de recherche principale** (environnement `quote` de l'introduction). L'auteur préfère la garder entière, même au-delà de 30 mots, car c'est une formulation unique et soigneusement pesée. Ne la découpe pas et ne la reformule pas sans sa demande. Le « : » qui l'annonce est toléré, comme avant une liste. Les citations littérales en `quote` ne se réécrivent pas non plus, pas plus que les titres d'ouvrages ou d'articles cités entre « », même s'ils contiennent un « : » ou dépassent 30 mots. Le script les ignore.
 
 ### 4. Pas de deux-points dans la prose
 

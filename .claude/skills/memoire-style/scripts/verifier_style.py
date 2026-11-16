@@ -57,8 +57,10 @@ CONNECTEURS = [
     "toutefois", "de ce fait", "enfin", "également", "donc", "or",
 ]
 
+# « quote » : question de recherche et citations littérales, que l'on ne réécrit pas
+# (exception voulue par l'auteur, voir memoire-style).
 ENV_IGNORES = ("table", "tabular", "figure", "equation", "align", "verbatim",
-               "lstlisting", "longtable", "tikzpicture", "minted")
+               "lstlisting", "longtable", "tikzpicture", "minted", "quote")
 
 ABREV = ["et al.", "p.~", "p. ", "pp. ", "Dr.", "Pr.", "M.", "Mme.", "etc.", "cf.",
          "vol.", "n°.", "fig.", "Fig.", "éd.", "op. cit.", "i.e.", "e.g.", "c.-à-d."]
@@ -67,6 +69,10 @@ ABREV = ["et al.", "p.~", "p. ", "pp. ", "Dr.", "Pr.", "M.", "Mme.", "etc.", "cf
 def nettoyer(texte: str) -> str:
     """Retire les commandes LaTeX en gardant le texte lisible."""
     t = re.sub(r"(?<!\\)%.*", "", texte)
+    # Chaque puce de liste est une unité à part, même quand elle se termine par « ; ».
+    t = re.sub(r"\\item\b(\[[^\]]*\])?", " ¶ ", t)
+    # Le saut de ligne forcé « \\ » sépare deux énoncés.
+    t = t.replace("\\\\", " ¶ ")
     t = re.sub(r"\$[^$]*\$", " X ", t)
     t = re.sub(r"\\(cite|ref|label|eqref|autoref|pageref|url|href)\*?(\[[^\]]*\])*\{[^}]*\}", "", t)
     t = re.sub(r"\\(textit|textbf|emph|texttt|enquote|textsc|underline|mbox)\{([^}]*)\}", r"\2", t)
@@ -106,7 +112,9 @@ def couper_phrases(texte):
     protege = texte
     for i, a in enumerate(ABREV):
         protege = protege.replace(a, a.replace(".", f"§{i}§"))
-    morceaux = re.split(r"(?<=[.!?])\s+(?=[A-ZÀÂÉÈÊÎÔÙÇ«\"])", protege)
+    morceaux = []
+    for bloc in protege.split("¶"):
+        morceaux.extend(re.split(r"(?<=[.!?])\s+(?=[A-ZÀÂÉÈÊÎÔÙÇ«\"])", bloc))
     res = []
     for m in morceaux:
         for i, a in enumerate(ABREV):
@@ -164,8 +172,11 @@ def analyser(chemin: Path):
                 propre = re.sub(r"^\s*[^:.]{0,70}?\s*:\s?", "", propre, count=1)
             propre = re.sub(r"https?://\S+", "", propre)
             propre = re.sub(r"\d:\d", "", propre)
+            # Titres d'ouvrages et citations entre guillemets : on ne les réécrit pas
+            propre = re.sub(r"«[^»]*»", "", propre)
             if ":" in propre:
-                suivante = lignes[num].strip() if num < len(lignes) else ""
+                # Ligne suivante non vide (une ligne blanche peut séparer l'annonce de la liste)
+                suivante = next((l.strip() for l in lignes[num:] if l.strip()), "")
                 # « : » final qui introduit une liste, un code ou une figure : toléré
                 if propre.rstrip().endswith(":") and suivante.startswith("\\begin{"):
                     continue
@@ -175,7 +186,8 @@ def analyser(chemin: Path):
         phrases = couper_phrases(texte)
         prec_connecteur = None
         for ph in phrases:
-            mots = re.findall(r"[\wÀ-ÿ'’-]+", ph)
+            # Un titre ou une citation entre guillemets compte pour un seul mot
+            mots = re.findall(r"[\wÀ-ÿ'’-]+", re.sub(r"«[^»]*»", " TITRE ", ph))
             n = len(mots)
             num = ligne_de(ph, para)
             extrait = ph[:70] + ("…" if len(ph) > 70 else "")

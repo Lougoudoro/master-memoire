@@ -49,7 +49,7 @@ Annexe A1, A2, A3…
 |---|---|---|
 | Intro = Chapitre 1 numéroté | Introduction générale non numérotée, chapitres I à IV | Écart accepté : l'auteur garde l'introduction non numérotée (décision du 2026-11-15), à ne plus signaler |
 | TdM → figures → tableaux → abréviations | figures → tableaux → sigles → TdM (`main.tex`) | Ordre à aligner sur le canevas |
-| Plateformes/outils existants + forces/faiblesses | §1.4.2 « Systèmes intelligents d'accès aux connaissances » décrit des familles de systèmes | Vérifier qu'il nomme des plateformes concrètes |
+| Plateformes/outils existants + forces/faiblesses | §1.4.2, paragraphe « Plateformes de données sur les plantes médicinales africaines » (Prelude, PROTA4U, African Plant Database, pharmacopée de l'OOAS), ajouté le 2026-11-16 | Conforme ; deux points à confirmer par l'auteur après consultation des plateformes |
 | Méthodologie divisible | Chap. II + Chap. III | Conforme ; déséquilibre mesuré le 2026-11-15 : I = 23 p., II = 17, III = 21, IV = 9, conclusion = 1 p. (voir `scripts/equilibre_chapitres.py`) |
 | Environnement matériel et logiciel | Chap. II, tableaux « Modèles de langage et modes d'accès », « Bibliothèques Python utilisées » et « Récapitulatif du matériel » (GPU T4 sur Colab) | Partiel : manquent la machine locale (processeur, mémoire, système), les versions de Python, Neo4j, Ollama, Protégé, la quantification et les paramètres de Llama 3 8B, la période d'usage des API |
 | Annexes | Aucune | À envisager : questions d'évaluation, extraits d'ontologie, prompts |

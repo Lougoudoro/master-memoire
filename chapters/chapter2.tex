@@ -6,7 +6,7 @@
 
 Après avoir posé le cadre conceptuel et exposé l'état de l'art, nous présentons le matériel mobilisé et la démarche méthodologique suivie. Ce chapitre fait le lien entre la réflexion théorique et la mise en œuvre technique.
 
-Nous présentons le matériel mobilisé, notamment le corpus documentaire, les ontologies candidates et l'environnement technique. Nous décrivons les six phases de la démarche suivie, de la constitution du corpus à l'évaluation du système, en passant par les deux volets menés en parallèle sur le modèle conceptuel et sur le modèle de données, puis en proposons une synthèse.
+Nous présentons le matériel mobilisé, notamment le corpus documentaire, les ontologies candidates et l'environnement technique. Nous décrivons ensuite les six phases de la démarche, de la constitution du corpus à l'évaluation du système. Deux volets y sont menés en parallèle, l'un sur le modèle conceptuel et l'autre sur le modèle de données. Une synthèse clôt le chapitre.
 
 % ============================================================
 % II.1. MATÉRIEL
@@ -26,7 +26,7 @@ Le matériel comprend le corpus documentaire, les ontologies candidates et l'env
 
 Le corpus réunit les ontologies candidates, présentées à la section \ref{subsec:ontologies_candidates}, et les documents scientifiques. Pour ces derniers, nous avons réuni des publications scientifiques.
 
-La figure \ref{fig:flux_corpus} résume le processus de constitution du corpus documentaire, de la recherche des documents (phase 1) à leur sélection (phase 2b).
+La figure \ref{fig:flux_corpus} résume le processus de constitution du corpus documentaire, de la recherche des documents en phase 1 à leur sélection en phase 2b.
 
 \begin{figure}[H]
 \centering
@@ -35,7 +35,7 @@ La figure \ref{fig:flux_corpus} résume le processus de constitution du corpus d
 \label{fig:flux_corpus}
 \end{figure}
 
-Notre corpus scientifique comprend 35 rapports de recherche, articles, thèses et mémoires provenant de revues, d'universités et d'institutions de recherche burkinabè. Ces travaux ethnobotaniques, ethnopharmacologiques et phytochimiques documentent les noms scientifiques et vernaculaires, les parties utilisées, les pathologies traitées, les modes de préparation et, pour les études qui les rapportent, les dosages et les données de toxicité.
+Notre corpus scientifique comprend 35 rapports de recherche, articles, thèses et mémoires provenant de revues, d'universités et d'institutions de recherche burkinabè. Ces travaux ethnobotaniques, ethnopharmacologiques et phytochimiques documentent les noms scientifiques et vernaculaires, les parties utilisées, les pathologies traitées et les modes de préparation. Les études qui les rapportent donnent aussi les dosages et les données de toxicité.
 
 Nous avons retenu ces travaux pour leur qualité et leur pertinence au contexte burkinabè, des publications fondatrices aux plus récentes. Cette diversité d'espèces, de pathologies et de pratiques thérapeutiques soutient l'extraction. Quatre travaux illustrent les types de données mobilisés dans le corpus :
 \begin{itemize}
@@ -47,7 +47,7 @@ Nous avons retenu ces travaux pour leur qualité et leur pertinence au contexte 
 
 Ces travaux fournissent des méthodes réutilisables et des observations de terrain recueillies au Burkina Faso.
 
-Les documents du corpus relèvent de types d'étude différents, et chacun est exploitable pour les informations qu'il rapporte. Trois profils se distinguent. Les enquêtes ethnobotaniques et ethnopharmacologiques, menées auprès de tradipraticiens ou dans les marchés, rapportent les noms vernaculaires, les parties utilisées, les modes de préparation et les pathologies traitées, souvent plante par plante. Les études expérimentales, notamment les essais \textit{in vitro} et les travaux phytochimiques, mesurent des activités pharmacologiques, des concentrations, des niveaux de preuve et parfois les lieux de récolte. Elles renseignent moins sur les noms vernaculaires et les pratiques de préparation. Enfin, les revues de synthèse dressent des inventaires à grande échelle et servent surtout à repérer les sources primaires.
+Les documents du corpus relèvent de types d'étude différents, et chacun est exploitable pour les informations qu'il rapporte. Trois profils se distinguent. Les enquêtes ethnobotaniques et ethnopharmacologiques sont menées auprès de tradipraticiens ou dans les marchés. Elles rapportent, souvent plante par plante, les noms vernaculaires, les parties utilisées, les modes de préparation et les pathologies traitées. Les études expérimentales, notamment les essais \textit{in vitro} et les travaux phytochimiques, mesurent des activités pharmacologiques, des concentrations, des niveaux de preuve et parfois les lieux de récolte. Elles renseignent moins sur les noms vernaculaires et les pratiques de préparation. Enfin, les revues de synthèse dressent des inventaires à grande échelle et servent surtout à repérer les sources primaires.
 
 Nous avons appliqué quatre règles à l'extraction. Chaque source ne renseignait que les champs qu'elle mesurait. Nous avons laissé vides les champs non couverts, sans les compléter par déduction. Nous n'avons pas retenu comme fait établi un usage traditionnel rapporté dans un article expérimental sans référence ethnobotanique. Enfin, nous n'avons pas additionné les nombres d'espèces d'une source à l'autre, car une revue peut reprendre les espèces documentées dans les enquêtes qu'elle cite.
 
@@ -60,7 +60,7 @@ Ce corpus rassemble des études menées dans plusieurs régions du Burkina Faso,
 \subsection{Ontologies candidates}
 \label{subsec:ontologies_candidates}
 
-Nous avons retenu cinq ontologies candidates pour l'étude comparative. Le chapitre \ref{chap:cadre_theorique}, aux sections \ref{subsubsec:ontologies_internationales} et \ref{subsubsec:ontologies_africaines}, les présente. Parmi les ontologies du tableau \ref{tab:synthese_ontologies}, nous avons retenu celles qui portent sur la médecine traditionnelle africaine, ainsi que FLOPO et PO comme référence pour la description botanique des plantes. Nous avons écarté celles dont le domaine s'éloigne des plantes médicinales (DrOn, FOODON, SNOMED CT, ontoFRACTURECARE), le modèle d'Angole et al., centré sur l'intégration avec la médecine moderne, ainsi que l'OTM, qui n'est pas spécifique à l'Afrique. Elles couvrent différents domaines, notamment la botanique, la médecine traditionnelle, la pharmacologie et l'ethnomédecine. Le tableau \ref{tab:ontologies_candidates} en présente les caractéristiques.
+Nous avons retenu cinq ontologies candidates pour l'étude comparative. Le chapitre \ref{chap:cadre_theorique}, aux sections \ref{subsubsec:ontologies_internationales} et \ref{subsubsec:ontologies_africaines}, les présente. Parmi les ontologies du tableau \ref{tab:synthese_ontologies}, nous avons retenu celles qui portent sur la médecine traditionnelle africaine, ainsi que FLOPO et PO comme référence pour la description botanique des plantes. Nous avons écarté DrOn, FOODON, SNOMED CT et ontoFRACTURECARE, dont le domaine s'éloigne des plantes médicinales. Nous avons aussi écarté le modèle d'Angole et al., centré sur l'intégration avec la médecine moderne, et l'OTM, qui n'est pas spécifique à l'Afrique. Elles couvrent différents domaines, notamment la botanique, la médecine traditionnelle, la pharmacologie et l'ethnomédecine. Le tableau \ref{tab:ontologies_candidates} en présente les caractéristiques.
 
 Nous les avons comparées à l'aide de la grille de critères présentée en phase 2a (section \ref{subsec:phase2a}). Nous avons sélectionné l'ontologie la plus adaptée à notre contexte afin de fixer le modèle conceptuel qui a guidé l'extraction.
 
@@ -85,7 +85,7 @@ Nous les avons comparées à l'aide de la grille de critères présentée en pha
 \end{tabular}
 \end{table}
 
-Chacune présente des acquis et des lacunes. Les ontologies botaniques (FLOPO, PO) décrivent bien la plante mais ne traitent pas des usages médicinaux. Les ontologies pharmaceutiques (DrOn) se resserrent sur les médicaments modernes. L'OTM, prometteuse, reste sans ancrage africain. Les initiatives africaines (WATRIMed, ontoMEDTRAD, ATHMed) s'intéressent en revanche à la médecine traditionnelle du terrain, avec ses dimensions culturelles et ses recettes multi-plantes, même si ATHMed en reste, elle, au stade d'un cadre proposé. La phase 2a en livre la comparaison détaillée.
+Chacune présente des acquis et des lacunes. Les ontologies botaniques FLOPO et PO décrivent bien la plante mais ne traitent pas des usages médicinaux. L'ontologie pharmaceutique DrOn se resserre sur les médicaments modernes. L'OTM, prometteuse, reste sans ancrage africain. Les initiatives africaines WATRIMed, ontoMEDTRAD et ATHMed s'intéressent en revanche à la médecine traditionnelle du terrain, avec ses dimensions culturelles et ses recettes multi-plantes. ATHMed en reste toutefois au stade d'un cadre proposé. La phase 2a en livre la comparaison détaillée.
 
 % ------------------------------------------------------------
 % II.1.3. Outils et environnement technique
@@ -107,7 +107,7 @@ La figure \ref{fig:dispositif_technique} résume l'environnement d'expérimentat
 
 \subsubsection{Modèles de langage}
 
-Nous avons utilisé des modèles distincts selon l'étape. Pour l'extraction des connaissances (phase 3b), nous avons d'abord utilisé \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, puis retenu une seconde extraction réalisée avec \textbf{Claude Opus 5.5} d'Anthropic, accessible par Claude Code. Pour la génération des réponses du système RAG (phase 5), nous avons utilisé \textbf{Llama 3 8B} \cite{meta2024llama3}, un modèle ouvert. Gemini (\textit{gemini-3.5-flash-lite}) nous a servi de point de comparaison lors de l'évaluation.
+Nous avons utilisé des modèles distincts selon l'étape. Pour l'extraction des connaissances en phase 3b, nous avons d'abord utilisé \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork. Nous avons ensuite retenu une seconde extraction, réalisée avec \textbf{Claude Opus 5.5} d'Anthropic par Claude Code. Pour la génération des réponses du système RAG en phase 5, nous avons utilisé \textbf{Llama 3 8B} \cite{meta2024llama3}, un modèle ouvert. Gemini (\textit{gemini-3.5-flash-lite}) nous a servi de point de comparaison lors de l'évaluation.
 
 Le tableau \ref{tab:llama_acces} présente les modes d'accès à ces modèles.
 
@@ -160,7 +160,7 @@ Type & Base de données orientée graphe \\
 \hline
 Langage de requête & Cypher \\
 \hline
-Version & Desktop (locale) \\
+Version & 2026.10.1, édition Enterprise, gérée par Neo4j Desktop 2 \\
 \hline
 Import réalisé & Fichier Turtle lu par un programme Python (\texttt{rdflib}) \\
 \hline
@@ -196,7 +196,7 @@ ChatGoogleGenerativeAI & Appel de Gemini pour la comparaison \\
 \end{tabular}
 \end{table}
 
-Nous avons retenu LangChain parce qu'il permet de changer de modèle sans modifier le reste du système. Nous avons écrit notre propre chaîne de génération de Cypher, afin de contrôler chaque requête avant son exécution : le chapitre \ref{chap:conception_developpement} justifie ce choix \cite{lewis2020rag}.
+Nous avons retenu LangChain parce qu'il permet de changer de modèle sans modifier le reste du système. Nous avons écrit notre propre chaîne de génération de Cypher, afin de contrôler chaque requête avant son exécution. Le chapitre \ref{chap:conception_developpement} justifie ce choix \cite{lewis2020rag}.
 
 \subsubsection{Interface web : Streamlit}
 
@@ -220,28 +220,80 @@ Nous avons mobilisé plusieurs bibliothèques Python au cours des phases 4 et 5.
 \hline
 \textbf{Bibliothèque} & \textbf{Version} & \textbf{Rôle} \\
 \hline
-\texttt{neo4j} & 5.28 & Pilote de connexion à Neo4j \\
+\texttt{neo4j} & 5.28.6 & Pilote de connexion à Neo4j \\
 \hline
-\texttt{langchain}, \texttt{langchain-core} & 0.3 & Consignes et appel des modèles \\
+\texttt{langchain}, \texttt{langchain-core} & 0.3.30 ; 0.3.86 & Consignes et appel des modèles \\
 \hline
-\texttt{langchain-openai} & 0.3 & Accès à l'API d'Ollama \\
+\texttt{langchain-openai} & 0.3.35 & Accès à l'API d'Ollama \\
 \hline
-\texttt{langchain-google-genai} & 2.1 & Accès à Gemini \\
+\texttt{langchain-google-genai} & 2.1.12 & Accès à Gemini \\
 \hline
-\texttt{streamlit} & 1.64 & Interface web \\
+\texttt{streamlit} & 1.64.0 & Interface web \\
 \hline
-\texttt{plotly} & 7.1 & Visualisation du graphe \\
+\texttt{plotly} & 7.1.0 & Visualisation du graphe \\
 \hline
-\texttt{rdflib} & 7.6 & Lecture du fichier Turtle \\
+\texttt{rdflib} & 7.6.0 & Lecture du fichier Turtle \\
 \hline
-\texttt{pytest} & 9.1 & Tests logiciels \\
+\texttt{pytest} & 9.1.1 & Tests logiciels \\
 \hline
-\texttt{pyngrok} & Sur Colab & Ouverture du tunnel ngrok \\
+\texttt{pyngrok} & 9.1.4, sur Colab & Ouverture du tunnel ngrok \\
 \hline
 \end{tabular}
 \end{table}
 
-Ces bibliothèques couvrent les besoins de la recherche, notamment la connexion à la base, l'orchestration du système RAG, le développement de l'interface, le chargement du modèle, la manipulation de l'ontologie et le traitement des données.
+Ces bibliothèques couvrent la connexion à la base, l'orchestration du système RAG et le développement de l'interface. Elles servent aussi au chargement du modèle, à la manipulation de l'ontologie et au traitement des données.
+
+\subsubsection{Dispositif expérimental}
+\label{subsubsec:dispositif_experimental}
+
+Deux machines ont servi aux expérimentations. Le poste local héberge la base Neo4j, l'application Streamlit et les scripts d'évaluation. Une session Google Colab exécute Llama 3 8B, que le poste local joint par un tunnel ngrok. Les modèles accessibles par API ont été appelés depuis le poste local. Le tableau \ref{tab:dispositif_experimental} précise chaque composant avec sa version.
+
+\begin{table}[H]
+\centering
+\caption{Environnement matériel et logiciel des expérimentations}
+\label{tab:dispositif_experimental}
+\begin{tabular}{|L{3,4cm}|L{6,2cm}|L{4,4cm}|}
+\hline
+\textbf{Composant} & \textbf{Version ou caractéristique} & \textbf{Rôle} \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Poste local}} \\
+\hline
+Ordinateur & HP ProBook 450 G4 & Base, application, évaluation \\
+\hline
+Processeur & Intel Core i5-7200U, 2,5~GHz, 2 cœurs et 4 fils d'exécution & \\
+\hline
+Mémoire vive & 8~Go & \\
+\hline
+Système & Windows 11 Professionnel, version 10.0.22000 & \\
+\hline
+Python & 3.12.1 & Scripts et application \\
+\hline
+Neo4j & 2026.10.1, édition Enterprise, gérée par Neo4j Desktop 2 ; Cypher 5 & Base de connaissances \\
+\hline
+Protégé & 5.6.9, avec le raisonneur HermiT 1.4.3.456 & Édition et vérification de l'ontologie \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Session Google Colab}} \\
+\hline
+GPU & NVIDIA Tesla T4, 15~360~Mio de mémoire & Inférence de Llama 3 8B \\
+\hline
+Python & 3.13 & Exécution du notebook \\
+\hline
+Ollama & 0.40.16 & Service du modèle \\
+\hline
+Modèle de génération & \texttt{llama3:8b}, 8,0 milliards de paramètres, quantification Q4\_0, fichier de 4,7~Go ; contexte de 8~192 jetons ; température 0 ; réponse bornée à 1~024 jetons & Requête Cypher et rédaction \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Modèles accessibles par API}} \\
+\hline
+Extraction retenue & Claude Opus 5.5, novembre 2026 & Phase 3b \\
+\hline
+Première extraction & gpt-6-luna, octobre 2026 & Phase 3b \\
+\hline
+Comparaison & \texttt{gemini-3.5-flash-lite}, novembre 2026 ; température 0 & Phase 6 \\
+\hline
+\end{tabular}
+\end{table}
+
+Les temps de réponse du chapitre \ref{chap:resultats_discussion} ont été mesurés depuis le poste local. Ils incluent donc le trajet par le tunnel ngrok. Chaque question n'a été posée qu'une fois à chaque modèle. Une session Colab gratuite ne garantit pas ses ressources, si bien que ces temps peuvent varier d'une exécution à l'autre.
 
 % ------------------------------------------------------------
 % II.1.4. Tableau récapitulatif du matériel
@@ -334,7 +386,7 @@ Bibliothèques Python & Phases 4, 5 & Développement \\
 \section{Méthodologie}
 \label{sec:methodologie}
 
-Nous avons organisé la démarche en six phases, représentées par la figure \ref{fig:methodologie_detaillee}. La phase 1 a réuni le corpus, composé des ontologies candidates et des documents scientifiques. Deux volets ont ensuite été menés en parallèle. Le volet modèle conceptuel a comparé les ontologies (phase 2a), puis adapté l'ontologie retenue (phase 3a). Le volet modèle de données a sélectionné les documents selon des critères d'inclusion (phase 2b), puis en a extrait les connaissances au moyen de modèles de langue (phase 3b). Le modèle adapté en phase 3a a fixé le schéma des fiches produites en phase 3b, de sorte que l'extraction ciblait d'emblée les notions et les relations de l'ontologie.
+Nous avons organisé la démarche en six phases, représentées par la figure \ref{fig:methodologie_detaillee}. La phase 1 a réuni le corpus, composé des ontologies candidates et des documents scientifiques. Deux volets ont ensuite été menés en parallèle. Le volet modèle conceptuel a comparé les ontologies en phase 2a, puis adapté l'ontologie retenue en phase 3a. Le volet modèle de données a sélectionné les documents selon des critères d'inclusion en phase 2b. Il en a ensuite extrait les connaissances au moyen de modèles de langue en phase 3b. Le modèle adapté en phase 3a a fixé le schéma des fiches produites en phase 3b, de sorte que l'extraction ciblait d'emblée les notions et les relations de l'ontologie.
 
 \begin{figure}[H]
 \centering
@@ -343,7 +395,7 @@ Nous avons organisé la démarche en six phases, représentées par la figure \r
 \label{fig:methodologie_detaillee}
 \end{figure}
 
-Les deux volets se rejoignent en phase 4, où les fiches extraites peuplent le modèle adapté et où l'ontologie peuplée est importée dans la base graphe. Nous avons ensuite développé le dispositif numérique, composé du système RAG et de l'application web (phase 5), puis évalué l'ensemble (phase 6). L'évaluation a conduit à des ajustements, que nous déclarons avec les résultats au chapitre \ref{chap:resultats_discussion}.
+Les deux volets se rejoignent en phase 4, où les fiches extraites peuplent le modèle adapté et où l'ontologie peuplée est importée dans la base graphe. En phase 5, nous avons développé le dispositif numérique, composé du système RAG et de l'application web. La phase 6 a évalué l'ensemble. L'évaluation a conduit à des ajustements, que nous déclarons avec les résultats au chapitre \ref{chap:resultats_discussion}.
 
 % ------------------------------------------------------------
 % II.2.1. Phase 1 : Constitution du corpus
@@ -393,7 +445,7 @@ Cette phase ouvre le volet modèle conceptuel. Nous avons comparé les ontologie
 
 \subsubsection{Définition de la grille de critères}
 
-Nous avons retenu huit critères adaptés à nos besoins : couverture du domaine, richesse sémantique, disponibilité, documentation, interopérabilité, adaptabilité au contexte burkinabè, traçabilité et prise en compte des savoirs locaux. Le tableau \ref{tab:grille_criteres} présente ces critères.
+Nous avons retenu huit critères adaptés à nos besoins. Ils portent sur la couverture du domaine, la richesse sémantique, la disponibilité, la documentation et l'interopérabilité. Ils évaluent aussi l'adaptabilité au contexte burkinabè, la traçabilité et la prise en compte des savoirs locaux. Le tableau \ref{tab:grille_criteres} présente ces critères.
 
 \begin{table}[H]
 \centering
@@ -422,11 +474,11 @@ Nous avons retenu huit critères adaptés à nos besoins : couverture du domaine
 \end{tabular}
 \end{table}
 
-Nous avons attribué à chaque critère une pondération proportionnelle à son importance. Les critères fortement pondérés (3) étaient déterminants pour représenter le contexte burkinabè, tandis que les critères moyennement pondérés (2) autorisaient davantage de compromis. Nous avons calculé le score global en multipliant chaque note par la pondération correspondante, en additionnant les produits et en divisant cette somme par la somme des pondérations. Le résultat est rapporté sur 5.
+Nous avons attribué à chaque critère une pondération proportionnelle à son importance. Les critères de poids 3 étaient déterminants pour représenter le contexte burkinabè, tandis que ceux de poids 2 autorisaient davantage de compromis. Nous avons calculé le score global en multipliant chaque note par la pondération correspondante, en additionnant les produits et en divisant cette somme par la somme des pondérations. Le résultat est rapporté sur 5.
 
 \subsubsection{Notation des ontologies}
 
-Nous avons noté chaque ontologie de 1 (très faible) à 5 (très élevé) pour chacun des critères. Le tableau \ref{tab:notation_ontologies} présente les résultats.
+Nous avons noté chaque ontologie de 1, très faible, à 5, très élevé, pour chacun des critères. Le tableau \ref{tab:notation_ontologies} présente les résultats.
 
 \begin{table}[H]
 \centering
@@ -451,13 +503,13 @@ FLOPO / PO & 2 & 3 & 5 & 4 & 5 & 2 & 1 & 1 & 2.7 \\
 
 Nous avons analysé les notes afin de comparer la couverture du domaine et la prise en compte des savoirs locaux par les ontologies africaines. Nous avons également examiné la disponibilité et l'interopérabilité des ontologies botaniques, ainsi que les différences entre WATRIMed et ontoMEDTRAD concernant la richesse du modèle et l'accessibilité de la documentation.
 
-Nous avons accordé une attention particulière à la disponibilité (C3) et à la documentation (C4). Nous avons évalué les ressources effectivement accessibles. WATRIMed est décrite par deux articles de congrès, dont l'un compte deux pages, et seules ses classes supérieures et ses relations principales y sont décrites. Aucune des deux ontologies n'est téléchargeable, mais la thèse consacrée à ontoMEDTRAD fournit la liste des classes et des propriétés, les métriques ainsi que l'origine des concepts.
+Nous avons accordé une attention particulière à la disponibilité et à la documentation, les critères C3 et C4. Nous avons évalué les ressources effectivement accessibles. WATRIMed est décrite par deux articles de congrès, dont l'un compte deux pages, et seules ses classes supérieures et ses relations principales y sont décrites. Aucune des deux ontologies n'est téléchargeable, mais la thèse consacrée à ontoMEDTRAD fournit la liste des classes et des propriétés, les métriques ainsi que l'origine des concepts.
 
 \subsubsection{Sélection de l'ontologie}
 
 WATRIMed \cite{watrimed2019, watrimed_design_2019} pourrait se distinguer par la richesse de son modèle documenté, qui compte 472 concepts et 75 propriétés, ainsi que par son alignement sur l'ontologie fondationnelle BioTopLite2. Toutefois, les deux publications n'en décrivent que les classes supérieures et les relations principales, ce qui ne suffit pas à reconstituer le modèle pour le réutiliser.
 
-Nous avons retenu ontoMEDTRAD \cite{kouame_systeme_2018}, qui a obtenu le meilleur score. Cette ontologie couvre l'Afrique de l'Ouest, représente les recettes multi-plantes, leurs ingrédients, les parties utilisées et les modes de préparation, et documente l'origine de ses concepts à partir de quinze ressources terminologiques et ontologiques. Sa thèse est accessible. Nous avons aussi pris en compte ses limites : sa validation globale reste annoncée comme perspective et son jeu de données comprend 22 plantes et 31 remèdes antipaludéens \cite{kouame_visual_2020}.
+Nous avons retenu ontoMEDTRAD \cite{kouame_systeme_2018}, qui a obtenu le meilleur score. Cette ontologie couvre l'Afrique de l'Ouest et représente les recettes multi-plantes, leurs ingrédients, les parties utilisées et les modes de préparation. Elle documente l'origine de ses concepts à partir de quinze ressources terminologiques et ontologiques. Sa thèse est accessible. Nous avons aussi pris en compte ses limites. Sa validation globale reste annoncée comme perspective, et son jeu de données comprend 22 plantes et 31 remèdes antipaludéens \cite{kouame_visual_2020}.
 
 L'ontologie retenue fournit le cadre conceptuel pour extraire et organiser les connaissances. Nous l'avons adaptée au contexte burkinabè en phase 3a.
 
@@ -478,41 +530,41 @@ Cette phase clôt le volet modèle conceptuel. Nous avons examiné les concepts 
 
 Nous avons étudié la structure de l'ontologie ontoMEDTRAD telle qu'elle est décrite dans la thèse \cite{kouame_systeme_2018}. L'ontologie compte 144 concepts, 76 propriétés associatives, 16 propriétés de données, 789 individus et 2 734 axiomes. Elle est formalisée en logique de description ALCHOIQ, éditée sous Protégé~5 et vérifiée par les raisonneurs HermiT et Pellet.
 
-Le fichier OWL de l'ontologie n'étant pas téléchargeable publiquement, nous avons reconstitué sa structure à partir de la thèse. Nous nous sommes appuyés sur les captures d'écran de Protégé (figures 5.15 à 5.20) et les tableaux récapitulatifs des concepts, propriétés et métriques (tableaux 5.5, 5.21 et 5.22). Cette reconstitution a servi de base à l'adaptation présentée au chapitre \ref{chap:conception_developpement}.
+Le fichier OWL de l'ontologie n'étant pas téléchargeable publiquement, nous avons reconstitué sa structure à partir de la thèse. Nous nous sommes appuyés sur les captures d'écran de Protégé des figures 5.15 à 5.20 de cette thèse. Nous avons aussi utilisé ses tableaux récapitulatifs des concepts, des propriétés et des métriques, aux tableaux 5.5, 5.21 et 5.22. Cette reconstitution a servi de base à l'adaptation présentée au chapitre \ref{chap:conception_developpement}.
 
 Nous avons reconstitué la structure conceptuelle de l'ontologie, ses classes, propriétés et relations, mais pas ses instances d'origine. Nous n'avons pas réutilisé les 789 individus d'ontoMEDTRAD, liés au contexte et aux sources des travaux d'origine. Cette phase a produit le modèle conceptuel adapté ; le peuplement par les individus extraits de la littérature scientifique est intervenu en phase 4.
 
-Ses concepts principaux décrivent le parcours de soin, du praticien et du patient aux symptômes, aux maladies, aux ressources médicinales, à l'examen clinique, aux recettes, aux ingrédients, aux parties utilisées, aux préparations et aux remèdes. L'ontologie distingue cinq types de plantes et neuf parties utilisées. Elle comprend aussi une classe pour les références scientifiques associées aux ressources, aux recettes et aux remèdes. Les concepts secondaires couvrent les contre-indications, les propriétés thérapeutiques, la toxicité, l'étiologie et la classification des maladies selon la CIM-10. Les relations de base expriment la subsomption et la relation partie-tout. Soixante-seize propriétés associatives complètent le modèle, dont la hiérarchie \textit{aPourForme}, utilisée pour l'iconisation des plantes.
+Ses concepts principaux décrivent le parcours de soin. Ils vont du praticien et du patient aux symptômes, aux maladies et aux ressources médicinales. Ils couvrent aussi l'examen clinique, les recettes, les ingrédients, les parties utilisées, les préparations et les remèdes. L'ontologie distingue cinq types de plantes et neuf parties utilisées. Elle comprend aussi une classe pour les références scientifiques associées aux ressources, aux recettes et aux remèdes. Les concepts secondaires couvrent les contre-indications, les propriétés thérapeutiques, la toxicité, l'étiologie et la classification des maladies selon la CIM-10. Les relations de base expriment la subsomption et la relation partie-tout. Soixante-seize propriétés associatives complètent le modèle, dont la hiérarchie \textit{aPourForme}, utilisée pour l'iconisation des plantes.
 
-Nous avons ensuite évalué ce modèle au regard du contexte burkinabè. Il couvre les concepts de base et les raisonneurs testés n'y ont signalé aucune incohérence, mais il nécessitait des adaptations pour représenter les noms vernaculaires en langues locales, les maladies spécifiques, les niveaux de preuve, les dosages et la traçabilité détaillée des sources. Sa validation globale reste une perspective, et son jeu de données se limite à 22 plantes et 31 remèdes antipaludéens.
+Nous avons ensuite évalué ce modèle au regard du contexte burkinabè. Il couvre les concepts de base, et les raisonneurs testés n'y ont signalé aucune incohérence. Il nécessitait toutefois des adaptations pour représenter les noms vernaculaires en langues locales, les maladies spécifiques et les niveaux de preuve. Les dosages et la traçabilité détaillée des sources demandaient aussi des ajouts. Sa validation globale reste une perspective, et son jeu de données se limite à 22 plantes et 31 remèdes antipaludéens.
 
 \subsubsection{Ajout de classes}
 
-La comparaison des fichiers du modèle conceptuel adapté et du schéma conservé dénombre 40 classes ajoutées. Le modèle adapté déclare également 25 propriétés objet au total, dont 20 absentes du schéma conservé, et 20 propriétés de données, dont 15 ajoutées. Les classes ajoutées couvrent notamment les noms vernaculaires, les usages thérapeutiques, les niveaux de preuve, les sources, les préparations, des parties végétales complémentaires, les composés chimiques, les activités pharmacologiques et les effets toxicologiques. Ces ajouts définissent le modèle conceptuel ; les individus et données extraits sont intégrés lors de la phase 4.
+La comparaison des fichiers du modèle conceptuel adapté et du schéma conservé dénombre 40 classes ajoutées. Le modèle adapté déclare également 25 propriétés objet au total, dont 20 absentes du schéma conservé, et 20 propriétés de données, dont 15 ajoutées. Les classes ajoutées couvrent notamment les noms vernaculaires, les usages thérapeutiques, les niveaux de preuve, les sources et les préparations. D'autres concernent des parties végétales complémentaires, les composés chimiques, les activités pharmacologiques et les effets toxicologiques. Ces ajouts définissent le modèle conceptuel ; les individus et données extraits sont intégrés lors de la phase 4.
 
 Ces ajouts structurent des connaissances locales et scientifiques à différents niveaux. Ils ne préchargent pas les valeurs, comme les noms, pathologies, régions ou composés ; celles-ci proviennent des sources du corpus et sont enregistrées dans la base avec leur provenance.
 
 \subsubsection{Ajout de propriétés}
 
-Nous avons ajouté des propriétés de données pour les noms locaux, le niveau de preuve, le type d'étude, les références, le dosage et la toxicité, en complément de propriétés textuelles pour les noms vernaculaires et les descriptions d'activités ou d'effets. Des propriétés objet relient également l'usage à sa maladie cible, à la partie végétale utilisée, à la préparation et à la source ; d'autres décrivent les associations avec des composés, activités pharmacologiques, risques et localités. Les noms techniques exacts sont ceux déclarés dans la version courante du fichier Turtle.
+Nous avons ajouté des propriétés de données pour les noms locaux, le niveau de preuve, le type d'étude, les références, le dosage et la toxicité. Des propriétés textuelles les complètent pour les noms vernaculaires et les descriptions d'activités ou d'effets. Des propriétés objet relient également l'usage à sa maladie cible, à la partie végétale utilisée, à la préparation et à la source. D'autres décrivent les associations avec des composés, des activités pharmacologiques, des risques et des localités. Les noms techniques exacts sont ceux déclarés dans la version courante du fichier Turtle.
 
 L'enrichissement ainsi obtenu saisit des informations fines (noms vernaculaires, coordonnées, niveaux de preuve, références précises) que l'ontologie d'origine ne documentait pas pour le Burkina Faso.
 
 \subsubsection{Modification de relations}
 
-Nous avons structuré les liens entre plante, usage, maladie, partie utilisée et préparation, puis généralisé la traçabilité documentaire. La propriété objet \textit{estDocumenteePar} relie les ressources du graphe à une source scientifique; des sous-propriétés spécialisées permettent de préciser si la source documente une plante, un usage, un nom vernaculaire, une activité, un composé ou un effet toxicologique. \textit{aPourNiveauDePreuve} rattache un usage au niveau déclaré par la source. Ces liens ne signifient pas que les usages ou activités constituent des recommandations thérapeutiques ni une validation clinique.
+Nous avons structuré les liens entre plante, usage, maladie, partie utilisée et préparation, puis généralisé la traçabilité documentaire. La propriété objet \textit{estDocumenteePar} relie les ressources du graphe à une source scientifique. Des sous-propriétés spécialisées précisent l'objet documenté par la source. Il peut s'agir d'une plante, d'un usage, d'un nom vernaculaire, d'une activité, d'un composé ou d'un effet toxicologique. \textit{aPourNiveauDePreuve} rattache un usage au niveau déclaré par la source. Ces liens ne signifient pas que les usages ou activités constituent des recommandations thérapeutiques ni une validation clinique.
 
 Ces modifications assurent la traçabilité des connaissances et permettent d'exprimer des relations que le modèle d'origine, fondé sur la relation « est un » et sur la relation partie-tout, ne couvrait pas.
 
 \subsubsection{Documentation des adaptations}
 
-Nous avons consigné toutes les modifications dans un journal : chaque ajout est justifié, chaque choix est explicité, et les classes, propriétés et relations ajoutées, modifiées ou supprimées y sont décrites une à une.
+Nous avons consigné toutes les modifications dans un journal. Chaque ajout y est justifié et chaque choix explicité. Les classes, propriétés et relations ajoutées, modifiées ou supprimées y sont décrites une à une.
 
 Cette documentation n'est pas une formalité. Elle rend la démarche reproductible par un tiers et facilite les évolutions ultérieures de l'ontologie.
 
 \subsubsection{Lien avec le volet modèle de données}
 
-Le modèle adapté a servi de schéma aux fiches d'extraction de la phase 3b. Les champs demandés au modèle de langue correspondent aux classes et aux propriétés du modèle : plante, nom vernaculaire, usage, maladie, partie utilisée, préparation, niveau de preuve, activité, composé, effet toxicologique, localité et source. Ce lien rend les fiches directement transformables en individus de l'ontologie lors de la phase 4.
+Le modèle adapté a servi de schéma aux fiches d'extraction de la phase 3b. Les champs demandés au modèle de langue correspondent aux classes et aux propriétés du modèle. Ils couvrent la plante, le nom vernaculaire, l'usage, la maladie, la partie utilisée et la préparation. S'y ajoutent le niveau de preuve, l'activité, le composé, l'effet toxicologique, la localité et la source. Ce lien rend les fiches directement transformables en individus de l'ontologie lors de la phase 4.
 
 \textbf{Livrable} : Le modèle conceptuel adapté de l'ontologie, schéma d'OntoPlantMedBF, sans les données instanciées.
 
@@ -541,7 +593,7 @@ Nous avons sélectionné les documents selon les critères suivants :
 
 \subsubsection{Application des critères et organisation du corpus}
 
-Nous avons inclus les documents portant sur les plantes médicinales du Burkina Faso, précisant le nom scientifique des plantes et publiés ou validés par une institution scientifique avec des sources vérifiables. Nous avons écarté les documents non scientifiques, ceux sans identification botanique et les documents anciens sans valeur de référence. Nous avons classé les documents par type, plante, pathologie et région et les avons enregistrés dans un répertoire structuré. Le corpus comprend 35 documents scientifiques.
+Nous avons inclus les documents portant sur les plantes médicinales du Burkina Faso et précisant le nom scientifique des plantes. Ils devaient être publiés ou validés par une institution scientifique et s'appuyer sur des sources vérifiables. Nous avons écarté les documents non scientifiques, ceux sans identification botanique et les documents anciens sans valeur de référence. Nous avons classé les documents par type, plante, pathologie et région et les avons enregistrés dans un répertoire structuré. Le corpus comprend 35 documents scientifiques.
 
 Ces critères nous ont permis d'écarter les documents non scientifiques ou non pertinents et de constituer un corpus cohérent pour l'étude.
 
@@ -556,7 +608,7 @@ Ces critères nous ont permis d'écarter les documents non scientifiques ou non 
 
 \textbf{Objectif} : Extraire des documents retenus des fiches structurées et sourcées, selon le schéma du modèle adapté.
 
-Cette phase clôt le volet modèle de données. À partir des documents retenus en phase 2b et du schéma défini en phase 3a, nous avons conçu les consignes d'extraction, procédé à l'extraction assistée par modèle de langue, puis contrôlé les données obtenues.
+Cette phase clôt le volet modèle de données. À partir des documents retenus en phase 2b et du schéma défini en phase 3a, nous avons conçu les consignes d'extraction. Nous avons ensuite procédé à l'extraction assistée par modèle de langue, puis contrôlé automatiquement les données obtenues.
 
 \subsubsection{Conception des prompts d'extraction}
 
@@ -566,11 +618,11 @@ Nous avons employé une même consigne pour les documents traités. Les champs a
 
 \subsubsection{Exécution de l'extraction}
 
-Nous avons soumis les documents à gpt-6-luna dans l'environnement OpenWork, un par un, et enregistré les résultats en JSON. L'extraction a porté sur dix des 35 documents du corpus, principalement des enquêtes ethnobotaniques ; les 25 autres n'ont pas été extraits. Cette première extraction restant incomplète sur les grands tableaux, nous avons réalisé une seconde extraction des mêmes documents avec Claude Opus 5.5 dans Claude Code, selon le même schéma JSON, les 5 et 6 novembre 2026. Les tableaux y ont été relus en image, et le document numérisé de Ky et al. a en outre été comparé à une reconnaissance optique de caractères (Tesseract). Nous avons vérifié manuellement cette seconde extraction, puis l'avons retenue pour peupler l'ontologie.
+Nous avons soumis les documents à gpt-6-luna dans l'environnement OpenWork, un par un, et enregistré les résultats en JSON. L'extraction a porté sur dix des 35 documents du corpus, principalement des enquêtes ethnobotaniques ; les 25 autres n'ont pas été extraits. Cette première extraction restait incomplète sur les grands tableaux. Nous avons donc réalisé une seconde extraction des mêmes documents avec Claude Opus 5.5 dans Claude Code, selon le même schéma JSON, en novembre 2026. Le modèle y a relu les tableaux en image. Le document numérisé de Ky et al. a en outre été comparé à une reconnaissance optique de caractères produite par Tesseract. Nous avons retenu cette seconde extraction pour peupler l'ontologie, sans vérification manuelle à ce stade.
 
 \subsubsection{Contrôle de la qualité des extractions}
 
-Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était explicite, qu'il s'agisse d'un savoir traditionnel, d'une étude \textit{in vitro}, d'une étude \textit{in vivo} ou d'un essai clinique. Nous n'avons pas évalué indépendamment la solidité des faits et avons laissé le champ vide lorsque la source ne précisait pas ce niveau. Dans les dix documents extraits, tous les usages sont des usages traditionnels rapportés : aucun champ n'est resté vide, et le graphe ne compte que deux niveaux, l'usage rapporté par enquête et l'usage traditionnel rapporté (chapitre \ref{chap:conception_developpement}). Un expert externe n'a pas relu les extractions. Nous avons contrôlé leur structure, puis comparé une partie des faits aux documents d'origine à la phase 6.
+Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était explicite. Il pouvait s'agir d'un savoir traditionnel, d'une étude \textit{in vitro}, d'une étude \textit{in vivo} ou d'un essai clinique. Nous n'avons pas évalué indépendamment la solidité des faits et avons laissé le champ vide lorsque la source ne précisait pas ce niveau. Dans les dix documents extraits, tous les usages sont des usages traditionnels rapportés, et aucun champ n'est resté vide. Le graphe ne compte donc que deux niveaux, l'usage rapporté par enquête et l'usage traditionnel rapporté, comme le détaille le chapitre \ref{chap:conception_developpement}. Un expert externe n'a pas relu les extractions. Nous avons contrôlé leur structure, puis comparé une partie des faits aux documents d'origine à la phase 6.
 
 \textbf{Livrable} : dix fiches JSON sourcées, une par document extrait.
 
@@ -583,11 +635,11 @@ Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était ex
 
 \textbf{Objectif} : Peupler le modèle adapté avec les données extraites, puis importer et exploiter dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF}.
 
-Les deux volets se rejoignent dans cette phase : les fiches JSON de la phase 3b deviennent des individus du modèle conceptuel adapté en phase 3a. Nous avons ensuite importé dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF} et ses données, en les représentant sous forme de nœuds, propriétés et relations du graphe. Nous avons vérifié la correspondance avec le modèle ontologique et testé les requêtes de la base.
+Les deux volets se rejoignent dans cette phase. Les fiches JSON de la phase 3b deviennent des individus du modèle conceptuel adapté en phase 3a. Nous avons ensuite importé dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF} et ses données, en les représentant sous forme de nœuds, propriétés et relations du graphe. Nous avons vérifié la correspondance avec le modèle ontologique et testé les requêtes de la base.
 
 \subsubsection{Structuration des données}
 
-Nous avons organisé les données selon le modèle de l'ontologie, par type de connaissance (sources, plantes, noms vernaculaires, usages, préparations, maladies, activités, composés, toxicologie et localités), puis un programme les a transformées en individus au format Turtle. Lors de ce peuplement, nous avons complété le schéma pour représenter des informations rencontrées dans les sources, notamment les modes d'administration et de préparation, la posologie et certaines parties de plante ; le chapitre \ref{chap:conception_developpement} en donne le détail.
+Nous avons organisé les données selon le modèle de l'ontologie, par type de connaissance. Ces types couvrent les sources, les plantes, les noms vernaculaires, les usages, les préparations et les maladies, ainsi que les activités, les composés, la toxicologie et les localités. Un programme les a ensuite transformées en individus au format Turtle. Lors de ce peuplement, nous avons complété le schéma pour représenter des informations rencontrées dans les sources. Il s'agit notamment des modes d'administration et de préparation, de la posologie et de certaines parties de plante ; le chapitre \ref{chap:conception_developpement} en donne le détail.
 
 \subsubsection{Peuplement de l'ontologie}
 
@@ -607,7 +659,7 @@ Après l'import, nous avons contrôlé que les données, les relations et les pr
 
 \subsubsection{Requêtes de test}
 
-Nous avons testé quatre familles de requêtes : les requêtes simples sur les plantes associées à une maladie, les requêtes complexes sur les recettes multi-plantes, les requêtes de traçabilité et les requêtes spatiales par région.
+Nous avons testé quatre familles de requêtes. Les requêtes simples portent sur les plantes associées à une maladie, et les requêtes complexes sur les recettes multi-plantes. S'y ajoutent les requêtes de traçabilité et les requêtes spatiales par région.
 
 Ces vérifications nous ont permis de contrôler le fonctionnement de la base et les résultats renvoyés par les requêtes.
 
@@ -651,7 +703,7 @@ Nous avons mené des tests fonctionnels pour vérifier le fonctionnement de l'ap
 
 \textbf{Objectif} : Évaluer la qualité de l'ontologie, du système RAG et de l'application web.
 
-Nous avons évalué trois composantes : l'ontologie, le système RAG et l'application web.
+Nous avons évalué trois composantes, à savoir l'ontologie, le système RAG et l'application web.
 
 \subsubsection{Évaluation de l'ontologie}
 
@@ -665,7 +717,7 @@ Nous avons évalué l'ontologie selon les quatre critères présentés dans le t
 \hline
 \textbf{Critère} & \textbf{Description} & \textbf{Méthode} \\
 \hline
-Couverture & Capacité à représenter les connaissances du corpus & Vérification manuelle \\
+Couverture & Capacité à représenter les connaissances du corpus & Comparaison aux extractions \\
 \hline
 Cohérence & Absence de contradictions & Requêtes de test \\
 \hline
@@ -728,7 +780,7 @@ Nous avions prévu de soumettre ce questionnaire à des étudiants, des chercheu
 
 \subsubsection{Ajustements}
 
-L'évaluation n'est pas seulement une étape finale : ses résultats peuvent conduire à revenir sur une phase antérieure. Lorsqu'un ajustement a été fait après la lecture des résultats, nous l'avons déclaré et avons présenté les résultats obtenus avant et après cet ajustement. Le chapitre \ref{chap:resultats_discussion} présente ces ajustements avec les résultats.
+L'évaluation n'est pas seulement une étape finale, car ses résultats peuvent conduire à revenir sur une phase antérieure. Lorsqu'un ajustement a été fait après la lecture des résultats, nous l'avons déclaré et avons présenté les résultats obtenus avant et après cet ajustement. Le chapitre \ref{chap:resultats_discussion} présente ces ajustements avec les résultats.
 
 \textbf{Livrable} : Rapport d'évaluation et de validation.
 
@@ -778,11 +830,11 @@ Phase 6 & Évaluer la qualité du système & Rapport d'évaluation \\
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre a exposé le matériel et la méthodologie de notre recherche. Le matériel réunit un corpus de 35 documents scientifiques, cinq ontologies candidates et un environnement technique bâti sur gpt-6-luna puis Claude Opus 5.5 pour l'extraction, Llama 3 8B sur Google Colab pour le RAG, Neo4j Desktop, LangChain et Streamlit.
+Ce chapitre a exposé le matériel et la méthodologie de notre recherche. Le matériel réunit un corpus de 35 documents scientifiques, cinq ontologies candidates et un environnement technique. L'extraction a utilisé gpt-6-luna puis Claude Opus 5.5, et le RAG Llama 3 8B sur Google Colab, avec Neo4j Desktop, LangChain et Streamlit.
 
-Nous avons suivi six phases : constitution du corpus, puis deux volets menés en parallèle, l'un sur le modèle conceptuel (comparaison et adaptation de l'ontologie), l'autre sur le modèle de données (sélection des documents et extraction des connaissances), peuplement de l'ontologie et construction de la base graphe, développement du dispositif numérique, puis évaluation. Nous avons décrit les actions menées et les livrables associés.
+Nous avons suivi six phases. Après la constitution du corpus, deux volets ont été menés en parallèle. Le volet conceptuel a comparé puis adapté l'ontologie, et le volet des données a sélectionné les documents puis extrait leurs connaissances. Sont venus ensuite le peuplement de l'ontologie et la construction de la base graphe, le développement du dispositif numérique, puis l'évaluation. Nous avons décrit les actions menées et les livrables associés.
 
-Le modèle adapté a fourni le schéma des fiches d'extraction, ce qui a assuré la cohérence entre le modèle et les données extraites ; il a ensuite été complété lors du peuplement, à partir des informations rencontrées dans les sources.
+Le modèle adapté a fourni le schéma des fiches d'extraction, ce qui a assuré la cohérence entre le modèle et les données extraites. Il a ensuite été complété lors du peuplement, à partir des informations rencontrées dans les sources.
 
 Nous signalons deux limites. Les niveaux de preuve associés aux connaissances proviennent des sources et n'ont pas fait l'objet d'une évaluation indépendante. De plus, un expert externe n'a pas validé les extractions. Ces limites sont à prendre en compte dans les travaux ultérieurs. Nous avons néanmoins conservé le lien entre chaque information et sa source.
 

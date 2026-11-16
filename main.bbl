@@ -312,6 +312,77 @@
       \field{title}{Rule-Based Expert Systems: The MYCIN Experiments of the Stanford Heuristic Programming Project}
       \field{year}{1984}
     \endentry
+    \entry{burkinaherbiermed}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0ce74b79798b186d6b82288e8be4017d}{%
+           family={{CNRST}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ouagadougou}%
+      }
+      \list{organization}{1}{%
+        {Centre National de la Recherche Scientifique et Technologique}%
+      }
+      \strng{namehash}{0ce74b79798b186d6b82288e8be4017d}
+      \strng{fullhash}{0ce74b79798b186d6b82288e8be4017d}
+      \strng{fullhashraw}{0ce74b79798b186d6b82288e8be4017d}
+      \strng{bibnamehash}{0ce74b79798b186d6b82288e8be4017d}
+      \strng{authorbibnamehash}{0ce74b79798b186d6b82288e8be4017d}
+      \strng{authornamehash}{0ce74b79798b186d6b82288e8be4017d}
+      \strng{authorfullhash}{0ce74b79798b186d6b82288e8be4017d}
+      \strng{authorfullhashraw}{0ce74b79798b186d6b82288e8be4017d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Herbier National des Plantes Médicinales et Chimiothèque au Burkina Faso}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://burkinaherbiermed.org/
+      \endverb
+      \verb{url}
+      \verb https://burkinaherbiermed.org/
+      \endverb
+    \endentry
+    \entry{african_plant_database}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=9ad774bad078b510c8f2338a3cf989b8}{%
+           family={{Conservatoire et Jardin botaniques de la Ville de Genève}},
+           familyi={C\bibinitperiod}}}%
+        {{hash=fa069074084c5681f4c08982168e8151}{%
+           family={{South African National Biodiversity Institute}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \strng{fullhash}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \strng{fullhashraw}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \strng{bibnamehash}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \strng{authorbibnamehash}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \strng{authornamehash}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \strng{authorfullhash}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \strng{authorfullhashraw}{b7ee948a2b2fd0a97e00cba32fcffeeb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{African Plant Database}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{version}{4.0.0}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://africanplantdatabase.ch
+      \endverb
+      \verb{url}
+      \verb https://africanplantdatabase.ch
+      \endverb
+    \endentry
     \entry{cooper2013plant}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -435,56 +506,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.3389/frai.2022.856705
-      \endverb
-    \endentry
-    \entry{devlin2019bert}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{hash=13202969e372bc82318f9629cbdd199b}{%
-           family={Devlin},
-           familyi={D\bibinitperiod},
-           given={Jacob},
-           giveni={J\bibinitperiod}}}%
-        {{hash=a45784fe7163b45f11d166564f5d24b6}{%
-           family={Chang},
-           familyi={C\bibinitperiod},
-           given={Ming-Wei},
-           giveni={M\bibinithyphendelim W\bibinitperiod}}}%
-        {{hash=8dde73b4194f5bc4230c4808f3fc1534}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Kenton},
-           giveni={K\bibinitperiod}}}%
-        {{hash=b92aa283415413bb8d2a1548716d0c7d}{%
-           family={Toutanova},
-           familyi={T\bibinitperiod},
-           given={Kristina},
-           giveni={K\bibinitperiod}}}%
-      }
-      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
-      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
-      \strng{fullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
-      \strng{bibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
-      \strng{authorbibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
-      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
-      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
-      \strng{authorfullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics}
-      \field{title}{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}
-      \field{year}{2019}
-      \field{pages}{4171\bibrangedash 4186}
-      \range{pages}{16}
-      \verb{doi}
-      \verb 10.18653/v1/N19-1423
-      \endverb
-      \verb{urlraw}
-      \verb https://aclanthology.org/N19-1423/
-      \endverb
-      \verb{url}
-      \verb https://aclanthology.org/N19-1423/
       \endverb
     \endentry
     \entry{diomande_ontofracturecare_2024}{article}{}{}
@@ -1031,6 +1052,51 @@
       \verb https://ieeexplore.ieee.org/abstract/document/8418155
       \endverb
     \endentry
+    \entry{iucn1993guidelines}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=8b68168328142541db7be10303b951d0}{%
+           family={{IUCN}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=531217507bec092b6ec36c0f78f46736}{%
+           family={{World Health Organization}},
+           familyi={W\bibinitperiod}}}%
+        {{hash=27f173147f22c55a86474fee83431e91}{%
+           family={{WWF}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Gland}%
+      }
+      \list{publisher}{1}{%
+        {IUCN}%
+      }
+      \strng{namehash}{e7ba8ed467651e91a86b054f3a7cf709}
+      \strng{fullhash}{e7ba8ed467651e91a86b054f3a7cf709}
+      \strng{fullhashraw}{e7ba8ed467651e91a86b054f3a7cf709}
+      \strng{bibnamehash}{e7ba8ed467651e91a86b054f3a7cf709}
+      \strng{authorbibnamehash}{e7ba8ed467651e91a86b054f3a7cf709}
+      \strng{authornamehash}{e7ba8ed467651e91a86b054f3a7cf709}
+      \strng{authorfullhash}{e7ba8ed467651e91a86b054f3a7cf709}
+      \strng{authorfullhashraw}{e7ba8ed467651e91a86b054f3a7cf709}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-2-8317-0136-3}
+      \field{pagetotal}{50}
+      \field{title}{Guidelines on the Conservation of Medicinal Plants}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{1993}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://portals.iucn.org/library/sites/library/files/documents/1993-027.pdf
+      \endverb
+      \verb{url}
+      \verb https://portals.iucn.org/library/sites/library/files/documents/1993-027.pdf
+      \endverb
+    \endentry
     \entry{jurafsky2023slp}{book}{}{}
       \name{author}{2}{}{%
         {{hash=bd33d7a70284b5ead9c7985cb5c9929c}{%
@@ -1456,42 +1522,6 @@
       \verb https://publication.lecames.org/index.php/pharm/article/download/13/32
       \endverb
     \endentry
-    \entry{nadeau2007ner}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=5437ac0ae2b83c5000f4c7cf825f8b23}{%
-           family={Nadeau},
-           familyi={N\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=b120133d2c9657f07263a614066ca391}{%
-           family={Sekine},
-           familyi={S\bibinitperiod},
-           given={Satoshi},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \strng{fullhash}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \strng{fullhashraw}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \strng{bibnamehash}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \strng{authorbibnamehash}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \strng{authornamehash}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \strng{authorfullhash}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \strng{authorfullhashraw}{5a6cb88cf113ab4800e0e4c41dee416f}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Lingvisticae Investigationes}
-      \field{number}{1}
-      \field{title}{A Survey of Named Entity Recognition and Classification}
-      \field{volume}{30}
-      \field{year}{2007}
-      \field{pages}{3\bibrangedash 26}
-      \range{pages}{24}
-      \verb{doi}
-      \verb 10.1075/li.30.1.02nad
-      \endverb
-    \endentry
     \entry{navigli2003ontologylearning}{article}{}{}
       \name{author}{3}{}{%
         {{hash=6fe24dce481a67e247581d4b20435709}{%
@@ -1749,78 +1779,79 @@
       \verb https://www.researchgate.net/publication/400337444_An_ethnobotanical_survey_of_medicinal_plants_used_for_children's_healthcare_in_Centre-Est_Burkina_Faso
       \endverb
     \endentry
-    \entry{raffel2020t5}{article}{}{}
-      \name{author}{9}{}{%
-        {{hash=81a5a94e2388c149a73a86381db45e07}{%
-           family={Raffel},
-           familyi={R\bibinitperiod},
-           given={Colin},
-           giveni={C\bibinitperiod}}}%
-        {{hash=62efade83d70f0323fe248755e6c90c5}{%
-           family={Shazeer},
-           familyi={S\bibinitperiod},
-           given={Noam},
-           giveni={N\bibinitperiod}}}%
-        {{hash=243c03e5ae8031582d6af9fcbc70f629}{%
-           family={Roberts},
-           familyi={R\bibinitperiod},
-           given={Adam},
-           giveni={A\bibinitperiod}}}%
-        {{hash=bfca12eba160cc79988e61b7fb6ded42}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Katherine},
-           giveni={K\bibinitperiod}}}%
-        {{hash=a2da348cbbad750c6fe76dda9c35ffcd}{%
-           family={Narang},
-           familyi={N\bibinitperiod},
-           given={Sharan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=2ce97dc1ae3d554bd748423ad06453df}{%
-           family={Matena},
-           familyi={M\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=83a9e81d976cada23775106b303c4247}{%
-           family={Zhou},
-           familyi={Z\bibinitperiod},
-           given={Yanqi},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=be6f1b6df7f1ddfafad18806238fa391}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod}}}%
-        {{hash=570360613a16cb233115feb5f8b4e526}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Peter\bibnamedelima J.},
-           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+    \entry{prota4u}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d3827327b3b73cc17b19b5b27261c4c}{%
+           family={{PROTA}},
+           familyi={P\bibinitperiod}}}%
       }
-      \strng{namehash}{93aba8e9bb746e2d8ac216494b952014}
-      \strng{fullhash}{21f7721b75bba06d59f9d5ce222a34a5}
-      \strng{fullhashraw}{21f7721b75bba06d59f9d5ce222a34a5}
-      \strng{bibnamehash}{93aba8e9bb746e2d8ac216494b952014}
-      \strng{authorbibnamehash}{93aba8e9bb746e2d8ac216494b952014}
-      \strng{authornamehash}{93aba8e9bb746e2d8ac216494b952014}
-      \strng{authorfullhash}{21f7721b75bba06d59f9d5ce222a34a5}
-      \strng{authorfullhashraw}{21f7721b75bba06d59f9d5ce222a34a5}
+      \list{location}{1}{%
+        {Wageningen}%
+      }
+      \list{organization}{1}{%
+        {PROTA Foundation}%
+      }
+      \strng{namehash}{5d3827327b3b73cc17b19b5b27261c4c}
+      \strng{fullhash}{5d3827327b3b73cc17b19b5b27261c4c}
+      \strng{fullhashraw}{5d3827327b3b73cc17b19b5b27261c4c}
+      \strng{bibnamehash}{5d3827327b3b73cc17b19b5b27261c4c}
+      \strng{authorbibnamehash}{5d3827327b3b73cc17b19b5b27261c4c}
+      \strng{authornamehash}{5d3827327b3b73cc17b19b5b27261c4c}
+      \strng{authorfullhash}{5d3827327b3b73cc17b19b5b27261c4c}
+      \strng{authorfullhashraw}{5d3827327b3b73cc17b19b5b27261c4c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PROTA4U : Plant Resources of Tropical Africa}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://prota.prota4u.org
+      \endverb
+      \verb{url}
+      \verb https://prota.prota4u.org
+      \endverb
+    \endentry
+    \entry{prelude_rmca}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e0867775464284c67bdab8c5c9d03a79}{%
+           family={{Royal Museum for Central Africa}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Tervuren}%
+      }
+      \list{organization}{1}{%
+        {Royal Museum for Central Africa}%
+      }
+      \strng{namehash}{e0867775464284c67bdab8c5c9d03a79}
+      \strng{fullhash}{e0867775464284c67bdab8c5c9d03a79}
+      \strng{fullhashraw}{e0867775464284c67bdab8c5c9d03a79}
+      \strng{bibnamehash}{e0867775464284c67bdab8c5c9d03a79}
+      \strng{authorbibnamehash}{e0867775464284c67bdab8c5c9d03a79}
+      \strng{authornamehash}{e0867775464284c67bdab8c5c9d03a79}
+      \strng{authorfullhash}{e0867775464284c67bdab8c5c9d03a79}
+      \strng{authorfullhashraw}{e0867775464284c67bdab8c5c9d03a79}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Machine Learning Research}
-      \field{number}{140}
-      \field{title}{Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer}
-      \field{volume}{21}
-      \field{year}{2020}
-      \field{pages}{1\bibrangedash 67}
-      \range{pages}{67}
+      \field{title}{Prelude Medicinal Plants Database}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.15468/nbtifv
+      \endverb
       \verb{urlraw}
-      \verb https://jmlr.csail.mit.edu/beta/papers/v21/20-074.html
+      \verb https://www.gbif.org/dataset/82f258ae-f762-11e1-a439-00145eb45e9a
       \endverb
       \verb{url}
-      \verb https://jmlr.csail.mit.edu/beta/papers/v21/20-074.html
+      \verb https://www.gbif.org/dataset/82f258ae-f762-11e1-a439-00145eb45e9a
       \endverb
     \endentry
     \entry{sackett_evidence_1996}{article}{}{}
@@ -2542,37 +2573,33 @@
       \verb https://www.w3.org/2007/03/layerCake.png
       \endverb
     \endentry
-    \entry{w3cskos2009}{misc}{}{}
+    \entry{waho_pharmacopoeia}{book}{}{}
       \name{author}{1}{}{%
-        {{hash=446a1ae6601a5c59360c7d591c3992da}{%
-           family={{W3C}},
+        {{hash=5d66f9e02fd45ff09b20aa84415488ad}{%
+           family={{West African Health Organisation}},
            familyi={W\bibinitperiod}}}%
       }
-      \strng{namehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{fullhash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{fullhashraw}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{bibnamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorbibnamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
-      \strng{authorfullhashraw}{446a1ae6601a5c59360c7d591c3992da}
-      \field{extraname}{4}
+      \list{location}{1}{%
+        {Bobo-Dioulasso}%
+      }
+      \list{publisher}{1}{%
+        {West African Health Organisation}%
+      }
+      \strng{namehash}{5d66f9e02fd45ff09b20aa84415488ad}
+      \strng{fullhash}{5d66f9e02fd45ff09b20aa84415488ad}
+      \strng{fullhashraw}{5d66f9e02fd45ff09b20aa84415488ad}
+      \strng{bibnamehash}{5d66f9e02fd45ff09b20aa84415488ad}
+      \strng{authorbibnamehash}{5d66f9e02fd45ff09b20aa84415488ad}
+      \strng{authornamehash}{5d66f9e02fd45ff09b20aa84415488ad}
+      \strng{authorfullhash}{5d66f9e02fd45ff09b20aa84415488ad}
+      \strng{authorfullhashraw}{5d66f9e02fd45ff09b20aa84415488ad}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{SKOS Simple Knowledge Organization System Reference}
-      \field{urlday}{26}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{year}{2009}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.w3.org/TR/skos-reference/
-      \endverb
-      \verb{url}
-      \verb https://www.w3.org/TR/skos-reference/
-      \endverb
+      \field{note}{Volume 1 ; volume 2 publié en 2020}
+      \field{title}{West African Herbal Pharmacopoeia}
+      \field{year}{2013}
     \endentry
     \entry{who2000traditional}{misc}{}{}
       \name{author}{1}{}{%

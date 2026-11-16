@@ -31,7 +31,7 @@
         <mxCell id="bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#1e3a5f;" parent="1" vertex="1">
           <mxGeometry x="65" y="620" width="720" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="cap" value="Niveaux &lt;i&gt;niveauPreuve&lt;/i&gt; de l&#39;ontologie" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#1e3a5f;fontStyle=2;" parent="1" vertex="1">
+        <mxCell id="cap" value="Catégories prévues par la classe &lt;i&gt;NiveauDePreuve&lt;/i&gt; de l&#39;ontologie" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#1e3a5f;fontStyle=2;" parent="1" vertex="1">
           <mxGeometry x="225" y="636" width="400" height="22" as="geometry" />
         </mxCell>
         <mxCell id="b1" value="traditionnel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">

@@ -1,0 +1,81 @@
+<mxfile host="Electron" agent="draw.io/21.6.5" version="21.6.5" type="device">
+  <diagram id="figure-architecture-rag" name="figure_architecture_rag">
+    <mxGraphModel dx="1300" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1360" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z1" value="" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#B4B2A9;dashed=1;dashPattern=6 4;" parent="1" vertex="1">
+          <mxGeometry x="40" y="60" width="780" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="tz1" value="&lt;b&gt;Poste local&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=19;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="60" y="70" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z2" value="" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#B4B2A9;dashed=1;dashPattern=6 4;" parent="1" vertex="1">
+          <mxGeometry x="960" y="60" width="340" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="tz2" value="&lt;b&gt;Google Colab (GPU)&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=19;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="980" y="70" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_streamlit" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Streamlit&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Reçoit la question, affiche la réponse, ses sources et la requête&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;fontColor=#444441;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="70" y="140" width="210" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="b_rag" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Couche RAG&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Liaison des libellés&lt;br&gt;Choix des exemples&lt;br&gt;Contrôle de la requête et des valeurs&lt;br&gt;Provenance et sources vérifiées&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="370" y="120" width="360" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="b_neo4j" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Neo4j&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Graphe OntoPlantMedBF et index des libellés&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FAECE7;strokeColor=#993C1D;fontColor=#712B13;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="370" y="450" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b_llama" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Llama 3 8B&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Servi par Ollama&lt;br&gt;&lt;br&gt;Repère les termes&lt;br&gt;Classe un message sans terme&lt;br&gt;Écrit la requête Cypher&lt;br&gt;Rédige la réponse&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#0F6E56;fontColor=#085041;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="990" y="120" width="280" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="b_user" value="&lt;b&gt;&lt;font style=&quot;font-size:19px&quot;&gt;Utilisateur&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:16px&quot;&gt;Pose une question en langage naturel&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;fontColor=#444441;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="70" y="640" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="1. question" style="edgeStyle=none;rounded=0;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;horizontal=0;" parent="1" source="b_user" target="b_streamlit" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="9. réponse affichée&lt;br&gt;avec ses sources" style="edgeStyle=none;rounded=0;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;horizontal=0;" parent="1" source="b_streamlit" target="b_user" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_r" value="2. question" style="edgeStyle=none;rounded=0;html=1;exitX=1;exitY=0.267;exitDx=0;exitDy=0;entryX=0;entryY=0.24;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;" parent="1" source="b_streamlit" target="b_rag" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_r_s" value="8. réponse&lt;br&gt;et sources" style="edgeStyle=none;rounded=0;html=1;exitX=0;exitY=0.52;exitDx=0;exitDy=0;entryX=1;entryY=0.733;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;" parent="1" source="b_rag" target="b_streamlit" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="3. question → termes repérés" style="edgeStyle=none;rounded=0;html=1;exitX=1;exitY=0.16;exitDx=0;exitDy=0;entryX=0;entryY=0.16;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;startArrow=open;startSize=8;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;" parent="1" source="b_rag" target="b_llama" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e67" value="5. consigne → requête Cypher" style="edgeStyle=none;rounded=0;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;startArrow=open;startSize=8;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;" parent="1" source="b_rag" target="b_llama" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1011" value="7. lignes → réponse rédigée" style="edgeStyle=none;rounded=0;html=1;exitX=1;exitY=0.84;exitDx=0;exitDy=0;entryX=0;entryY=0.84;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;startArrow=open;startSize=8;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;" parent="1" source="b_rag" target="b_llama" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_ngrok" value="via ngrok" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=2;fontColor=#5F5E5A;" parent="1" vertex="1">
+          <mxGeometry x="830" y="342" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="e45" value="4. termes →&lt;br&gt;libellés réels" style="edgeStyle=none;rounded=0;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;startArrow=open;startSize=8;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;align=right;" parent="1" source="b_rag" target="b_neo4j" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-62" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e89" value="6. requête validée →&lt;br&gt;lignes sourcées" style="edgeStyle=none;rounded=0;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=#888780;strokeWidth=2;startArrow=open;startSize=8;endArrow=open;endSize=8;fontSize=14;fontColor=#5F5E5A;labelBackgroundColor=#ffffff;align=left;" parent="1" source="b_rag" target="b_neo4j" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

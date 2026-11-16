@@ -13,11 +13,11 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {III.1}{\ignorespaces L'ontologie initiale ontoMEDTRAD reconstituée sous Protégé~5 (arbre des classes)}}{49}{figure.3.1}%
 \contentsline {figure}{\numberline {III.2}{\ignorespaces Concepts d'ontoMEDTRAD conservés comme base d'OntoPlantMedBF}}{51}{figure.3.2}%
-\contentsline {figure}{\numberline {III.3}{\ignorespaces Modèle conceptuel adapté sous Protégé~5 (phase 3a)}}{52}{figure.3.3}%
+\contentsline {figure}{\numberline {III.3}{\ignorespaces Hiérarchie des classes d'OntoPlantMedBF sous Protégé~5 (version peuplée)}}{52}{figure.3.3}%
 \contentsline {figure}{\numberline {III.4}{\ignorespaces Arborescence des propriétés de données dans Protégé}}{55}{figure.3.4}%
 \contentsline {figure}{\numberline {III.5}{\ignorespaces Arborescence des propriétés objet dans Protégé}}{57}{figure.3.5}%
 \contentsline {figure}{\numberline {III.6}{\ignorespaces Extrait du graphe peuplé dans Neo4j Browser : le sous-graphe de \textit {Cochlospermum planchonii}}}{60}{figure.3.6}%
 \contentsline {figure}{\numberline {III.7}{\ignorespaces Chaîne de traitement du système RAG}}{64}{figure.3.7}%
 \contentsline {figure}{\numberline {III.8}{\ignorespaces L'assistant de l'application web : une réponse sourcée produite avec Llama~3 8B}}{67}{figure.3.8}%
-\contentsline {figure}{\numberline {III.9}{\ignorespaces Fiche de \textit {Cochlospermum planchonii} dans l'application web}}{67}{figure.3.9}%
+\contentsline {figure}{\numberline {III.9}{\ignorespaces Fiche de \textit {Cochlospermum planchonii} dans l'application web}}{68}{figure.3.9}%
 \addvspace {10\p@ }

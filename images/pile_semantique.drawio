@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="draw.io/21.6.5" version="21.6.5" type="device">
+  <diagram id="pile-semantique" name="pile_semantique">
+    <mxGraphModel dx="900" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="640" pageHeight="660" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ui" value="Interface utilisateur et applications" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D2D2D9;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="10" y="10" width="565" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="trust" value="Confiance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4B4C9;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="320" y="82" width="255" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="proof_v" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2CC3F0;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="420" y="155" width="65" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="proof" value="Preuve" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2CC3F0;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="265" y="155" width="220" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="crypto" value="Cryptographie" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DBDBEE;strokeColor=none;fontColor=#1A1A1A;fontSize=18;horizontal=0;" parent="1" vertex="1">
+          <mxGeometry x="500" y="155" width="75" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="logic" value="Logique unificatrice" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4FBFA0;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="102" y="228" width="300" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="sparql" value="Requête :&lt;br&gt;SPARQL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0D0A3;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="28" y="282" width="120" height="137" as="geometry" />
+        </mxCell>
+        <mxCell id="owl" value="Ontologie :&lt;br&gt;OWL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFDB80;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="165" y="282" width="182" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="rdfs" value="RDFS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0D0A3;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="165" y="365" width="182" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="rif" value="Règles :&lt;br&gt;RIF" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4E983;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="366" y="282" width="118" height="137" as="geometry" />
+        </mxCell>
+        <mxCell id="rdf_h" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0DCA1;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="10" y="437" width="475" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="rdf_v" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0DCA1;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="10" y="489" width="248" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="rdf" value="Échange de données :&lt;br&gt;RDF" style="text;html=1;align=center;verticalAlign=middle;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="10" y="455" width="248" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xml" value="XML" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E7E7E8;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="272" y="502" width="213" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="uri" value="URI / IRI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DBDBEE;strokeColor=none;fontColor=#1A1A1A;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="10" y="565" width="475" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

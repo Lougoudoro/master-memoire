@@ -13,7 +13,7 @@
         <mxCell id="b3" value="&lt;b&gt;Sélection (phase 2b)&lt;/b&gt;&lt;br&gt;Critères d'inclusion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="580" y="180" width="230" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="b4" value="&lt;b&gt;Corpus retenu&lt;/b&gt;&lt;br&gt;35 documents classés et indexés" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
+        <mxCell id="b4" value="&lt;b&gt;Corpus retenu&lt;/b&gt;&lt;br&gt;35 documents scientifiques" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2fa;strokeColor=#1e3a5f;fontColor=#1e3a5f;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="860" y="180" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="ec" value="&lt;b&gt;Documents écartés&lt;/b&gt;&lt;br&gt;hors critères d'inclusion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdecea;strokeColor=#b23b3b;fontColor=#7a1f1f;fontSize=12;" parent="1" vertex="1">

@@ -98,19 +98,33 @@ Propriétés objet & 76 & 25 (20 ajoutées) & 29 \\
 \hline
 Propriétés de données & 16 & 20 (15 ajoutées) & 31 \\
 \hline
-Individus & 789 & Sans objet & 6~936 \\
+Individus & 789 & Sans objet & 6~877 \\
 \hline
-Axiomes & 2 734 & Non relevé & 62~965 \\
+Axiomes & 2 734 & Non relevé & 62~955 \\
 \hline
 \end{tabular}
 \end{table}
 
-Nous n'avons pas repris les 789 individus de l'ontologie d'origine dans le modèle conceptuel adapté. Le fichier \texttt{OntoPlantMedBF-peuplee.ttl} correspond à l'étape suivante : il enrichit ce modèle avec des individus extraits de dix documents scientifiques. Ces données ont ensuite été importées et ajustées dans Neo4j.
+Nous n'avons pas repris les 789 individus de l'ontologie d'origine dans le modèle conceptuel adapté. La version peuplée d'OntoPlantMedBF, au format Turtle, correspond à l'étape suivante : elle enrichit ce modèle avec des individus extraits de dix documents scientifiques. Ces données ont ensuite été importées et ajustées dans Neo4j. La figure \ref{fig:protoge_ontologie} présente la hiérarchie des 92 classes de cette version peuplée.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{ontology-adaptee.png}
-\caption{Modèle conceptuel adapté sous Protégé~5 (phase 3a)}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{ontology-adaptee-01.png}\\[1mm]
+{\small (a) Des activités aux modes d'administration}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{ontology-adaptee-02.png}\\[1mm]
+{\small (b) Des modes de préparation aux parties de plante}
+\end{minipage}\\[3mm]
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{ontology-adaptee-03.png}\\[1mm]
+{\small (c) Des parties de plante aux usages thérapeutiques}
+\end{minipage}
+\caption{Hiérarchie des classes d'OntoPlantMedBF sous Protégé~5 (version peuplée)}
 \label{fig:protoge_ontologie}
 \end{figure}
 
@@ -240,7 +254,7 @@ Nous avons utilisé Neo4j Desktop pour stocker et interroger les connaissances e
 \subsection{Du modèle ontologique au graphe}
 \label{subsec:mapping_graphe}
 
-Nous avons importé dans Neo4j l'ontologie réajustée OntoPlantMedBF. Chaque individu devient un nœud portant sa classe et ses superclasses, et chaque propriété objet devient une relation du même nom, conformément à \texttt{OntoPlantMedBF-peuplee.ttl}. Les propriétés de données deviennent des propriétés du nœud. Nous recopions aussi quelques valeurs, comme le nom scientifique ou l'identifiant de source, sous des noms plus simples pour l'affichage. Les individus et faits extraits sont intégrés avec leurs liens vers les sources. Le tableau \ref{tab:Mapping_noeuds} présente les principaux types de nœuds.
+Nous avons importé dans Neo4j l'ontologie réajustée OntoPlantMedBF. Chaque individu devient un nœud portant sa classe et ses superclasses, et chaque propriété objet devient une relation du même nom, conformément à l'ontologie peuplée. Les propriétés de données deviennent des propriétés du nœud. Nous recopions aussi quelques valeurs, comme le nom scientifique ou l'identifiant de source, sous des noms plus simples pour l'affichage. Les individus et faits extraits sont intégrés avec leurs liens vers les sources. Le tableau \ref{tab:Mapping_noeuds} présente les principaux types de nœuds.
 
 \begin{table}[H]
 \centering
@@ -327,14 +341,14 @@ tx.run(
 
 Après l'import, le programme relit le graphe et compare ses comptes à ceux du fichier ; tout écart est signalé comme une erreur. Les résultats sont les suivants :
 
-Le fichier compte 62~981 triplets. Le graphe contient 6~936 nœuds et 25~321 relations, comme attendu, sans anomalie de domaine ou de portée.
+Le fichier compte 62~961 triplets. Le graphe contient 6~877 nœuds et 25~320 relations, comme attendu, sans anomalie de domaine ou de portée.
 
 \begin{itemize}
-    \item \textbf{Nœuds :} 2~822 préparations (dont 6 solvants ou excipients), 1~676 usages thérapeutiques, 722 noms vernaculaires, 554 composés chimiques, 289 plantes, 278 activités pharmacologiques, 238 maladies, 195 genres, 83 familles, 17 parties de plante, 14 localités, 13 effets toxicologiques, 11 modes d'administration, 10 modes de préparation, 10 sources, 2 ethnies et 2 niveaux de preuve.
+    \item \textbf{Nœuds :} 2~822 préparations (dont 6 solvants ou excipients), 1~676 usages thérapeutiques, 722 noms vernaculaires, 554 composés chimiques, 289 plantes, 278 activités pharmacologiques, 180 maladies, 195 genres, 82 familles, 17 parties de plante, 14 localités, 13 effets toxicologiques, 11 modes d'administration, 10 modes de préparation, 10 sources, 2 ethnies et 2 niveaux de preuve.
     \item \textbf{Principales relations :} \textit{aPourPartieUtilisee} (2~874), \textit{aPourPreparation} et \textit{estDocumenteePar} (2~816 chacune), \textit{aPourModeDePreparation} (2~646), \textit{estRapportePour}, \textit{provientDe}, \textit{aPourMaladieCible} et \textit{aPourNiveauDePreuve} (1~676 chacune), \textit{aPourModeAdministration} (1~471), \textit{estLocaliseeA} (1~246), \textit{estDocumenteeDans} (623).
 \end{itemize}
 
-La figure \ref{fig:graphe_neo4j} montre un extrait du graphe peuplé : le sous-graphe de \textit{Cochlospermum planchonii}. La plante est reliée à trois usages, documentés par deux sources (Nadembega et al., 2026 ; Zongo et al., 2025). Chaque usage porte sa maladie cible (paludisme, ictère et affections hépatiques), la partie utilisée (le tubercule) et son niveau de preuve. La plante est aussi reliée à son nom vernaculaire en mooré et à ses localités.
+La figure \ref{fig:graphe_neo4j} montre un extrait du graphe peuplé : le sous-graphe de \textit{Cochlospermum planchonii}. La plante est reliée à trois usages, documentés par deux sources (Nadembega et al., 2026 ; Zongo et al., 2025). Chaque usage porte sa maladie cible (paludisme, ictère et affections hépatiques), la partie utilisée (le tubercule), sa préparation et son niveau de preuve. La plante est aussi reliée à ses deux noms vernaculaires, à ses trois localités, à son genre et à ses deux familles botaniques. Elle porte enfin les trois composés et les deux activités pharmacologiques rapportés par les sources.
 
 \begin{figure}[H]
 \centering
@@ -465,25 +479,26 @@ Nous avons traité les documents un par un. Une première version de la consigne
 
 Nous avons mis en place un système de génération augmentée par récupération (RAG, \textit{Retrieval-Augmented Generation}). Il associe la recherche dans le graphe à la génération de réponses par un modèle de langue \cite{lewis2020rag}. Son architecture relie l'utilisateur, Streamlit, Neo4j et Llama 3 (figure \ref{fig:architecture_rag}). Nous avons confié la sélection des données au modèle, selon une approche Text2Cypher : Llama 3 traduit la question en requête Cypher, puis rédige la réponse à partir des lignes obtenues. Des requêtes fixes auraient demandé d'écrire à la main une requête par type de question. Une requête générée peut en revanche se tromper sans que l'utilisateur le voie : le système la valide donc en lecture seule, exige ses sources et affiche la requête exécutée. Le chapitre \ref{chap:resultats_discussion} mesure le coût de ce choix.
 
-Une partie des questions ne passe pas par cette chaîne. Les questions qui portent sur le contenu de la base, sans critère scientifique, comme « Combien de plantes contient la base ? » ou « Cite 2 plantes documentées », sont reconnues par une liste fermée de mots, puis traitées par des requêtes fixes, sans appel au modèle. Cette voie donne des exemples, une liste d'au plus 20 éléments avec leur total, un décompte, un classement ou un aperçu, pour les plantes, les maladies, les composés, les familles, les localités et les sources. Chacune de ses réponses porte une mention fixe : elle décrit le contenu de la base et ne constitue ni un fait scientifique ni une recommandation d'usage. Dès qu'un mot n'appartient pas à cette liste, par exemple un nom de maladie ou de plante, la question est confiée à Text2Cypher.
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{architecture_rag.png}
+\includegraphics[width=\textwidth]{figure_architecture_rag.png}
 \caption{Chaîne de traitement du système RAG}
 \label{fig:architecture_rag}
 \end{figure}
 
-\subsubsection{Les six étapes de la chaîne de traitement}
+\subsubsection{Les neuf étapes de la chaîne de traitement}
 
-Nous avons organisé le traitement des requêtes en six étapes :
+Nous avons organisé le traitement des requêtes en neuf étapes, numérotées comme les flèches de la figure \ref{fig:architecture_rag} :
 
 \begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=1.2cm]
-    \item \textbf{Réception de la question.} L'utilisateur formule une question en langage naturel, par exemple « Quelles plantes sont utilisées contre le paludisme ? ». L'application la nettoie et la transmet à la couche RAG.
-    \item \textbf{Préparation de la consigne.} Le système réunit le schéma du graphe, des exemples de requêtes écrits à la main et les libellés réels du graphe proches de la question : maladies, plantes, noms vernaculaires et localités.
-    \item \textbf{Génération et exécution de la requête.} Llama 3 écrit une requête Cypher, que le système valide en lecture seule avant de l'exécuter. Les filtres sur le texte sont réécrits pour ignorer les accents. Si la requête est rejetée ou ne renvoie aucune ligne, le système demande une seule correction au modèle.
-    \item \textbf{Assemblage du contexte.} Les lignes obtenues sont réunies avec la requête qui les a produites. Le système vérifie dans le graphe les identifiants de sources renvoyés et refuse une requête sans source. Seule exception, une requête qui ne renvoie que des nombres ou des booléens est acceptée sans source : sa réponse porte une mention indiquant qu'il s'agit d'un décompte de la base, et non d'un fait scientifique.
-    \item \textbf{Génération de la réponse.} Llama 3 reçoit la question, les lignes retrouvées et l'historique récent, et rédige une réponse qui ne doit s'appuyer que sur eux. Si aucun fait n'est retrouvé, le système indique que l'information n'est pas disponible, sans demander de réponse au modèle.
+    \item \textbf{Réception de la question.} L'utilisateur formule une question en langage naturel, par exemple « Quelles plantes sont utilisées contre le paludisme ? ».
+    \item \textbf{Transmission à la couche RAG.} L'application la nettoie et la transmet à la couche RAG.
+    \item \textbf{Repérage des termes.} Llama 3 relève d'abord les termes de la question qui désignent une maladie, une plante ou un lieu. Une question sans aucun terme relevé est soumise au modèle par une seconde consigne. S'il juge qu'elle ne demande aucune information, comme « Bonjour », le système répond par une présentation fixe, sans requête.
+    \item \textbf{Recherche des libellés et préparation de la consigne.} Un index plein texte de Neo4j retrouve ensuite les libellés exacts de ces termes, accents ignorés et une faute de frappe tolérée par mot. Le système réunit le schéma du graphe, des exemples de requêtes écrits à la main et les libellés réels du graphe proches de la question : maladies, plantes, noms vernaculaires et localités. Les exemples sont choisis pour chaque question dans une banque de 21 requêtes. Le système retient les sept dont la question partage le plus de mots avec celle de l'utilisateur. Un mot rare dans la banque y pèse davantage qu'un mot fréquent.
+    \item \textbf{Génération de la requête.} Llama 3 écrit une requête Cypher, que le système valide en lecture seule avant de l'exécuter. Il rejette aussi une requête qui filtre sur une valeur absente de tous les libellés de la base, comme « epilepsy » quand la base dit « Épilepsie ». Les filtres sur le texte sont réécrits pour ignorer les accents.
+    \item \textbf{Exécution et assemblage du contexte.} Le lien vers les sources ne dépend pas du modèle. Le système ajoute lui-même à la requête la source du fait le plus précis, d'après les relations de l'ontologie. Il retire la jointure que le modèle aurait pu écrire. Les lignes obtenues sont réunies avec la requête qui les a produites. Le système vérifie dans le graphe les identifiants de sources renvoyés et refuse une requête sans source. Seule exception, une requête qui ne renvoie que des nombres ou des booléens est acceptée sans source : sa réponse porte une mention indiquant qu'il s'agit d'un décompte de la base, et non d'un fait scientifique. Si la requête est rejetée ou ne renvoie aucune ligne, le système demande une seule correction au modèle.
+    \item \textbf{Génération de la réponse.} Llama 3 reçoit la question, les lignes retrouvées et l'historique récent, et rédige une réponse qui ne doit s'appuyer que sur eux. Si aucun fait n'est retrouvé, le système indique que l'information n'est pas disponible, sans demander de réponse au modèle. Au-delà de 25 faits, le modèle les reçoit par pages de 25, et un bouton de l'interface donne la suite.
+    \item \textbf{Contrôle et retour de la réponse.} Après la rédaction, le système cherche chaque fait de la page dans le texte. Il ajoute à la fin ceux que le modèle a omis, avec leurs sources. Une réponse qui dit l'information absente sans citer aucun des faits retrouvés est écartée. Le système présente alors lui-même ces faits. La couche RAG transmet ensuite la réponse et ses sources à Streamlit.
     \item \textbf{Affichage des sources.} L'interface présente la réponse, puis les références scientifiques correspondantes (auteur, année, DOI) et la requête Cypher exécutée.
 \end{enumerate}
 
@@ -491,7 +506,7 @@ Nous avons organisé le traitement des requêtes en six étapes :
 
 Nous avons utilisé les composants LangChain présentés au tableau \ref{tab:langchain} du chapitre \ref{chap:materiel_methodologie}. \texttt{PromptTemplate} porte les consignes et \texttt{ChatOpenAI} appelle Llama 3 par l'API d'Ollama, exposée par ngrok, comme indiqué au tableau \ref{tab:llama_acces}. Le pilote \texttt{neo4j} assure l'accès à la base. L'adresse du modèle est lue dans la configuration, et le fichier qui la contient n'est pas versionné. L'extrait suivant montre l'instanciation du modèle.
 
-% Source : GraphRAG/application/models/llm.py (extrait)
+% Source : GraphRAG/application/ia/modeles_langage.py (extrait)
 \begin{quote}
 \begin{verbatim}
 if config.utilise_ollama:
@@ -501,16 +516,17 @@ if config.utilise_ollama:
     # sa clé est ignorée.
     return ChatOpenAI(
         model=modele,  # llama3:8b
-        base_url=f"{config.ollama_url}/v1",
+        base_url=f"{config.url_ollama}/v1",
         api_key="ollama",
         temperature=config.temperature,  # 0
+        extra_body={"max_tokens": config.jetons_max},
         timeout=180,
         max_retries=1,
     )
 \end{verbatim}
 \end{quote}
 
-Le notebook Colab installe Ollama, télécharge le modèle, démarre le serveur avec un contexte de 8~192 jetons, puis ouvre le tunnel ngrok. Nous avons vérifié pendant l'évaluation que le modèle était entièrement chargé sur le GPU.
+La longueur de chaque réponse du modèle est bornée à 1~024 jetons, car un modèle local peut répéter la même liste sans fin. Le notebook Colab installe Ollama, télécharge le modèle, démarre le serveur avec un contexte de 8~192 jetons, puis ouvre le tunnel ngrok. Nous avons vérifié pendant l'évaluation que le modèle était entièrement chargé sur le GPU.
 
 \subsection{Traçabilité des réponses}
 \label{subsec:tracabilite_reponses}
@@ -568,15 +584,9 @@ Nous avons ajouté une alerte de toxicité à l'assistant. Lorsqu'une réponse c
 
 Nous avons conservé l'historique des échanges dans l'état de session de Streamlit et l'avons transmis au modèle dans la consigne de génération. L'historique sert à la rédaction, mais pas à la génération de la requête : une question de suivi qui ne nomme pas son sujet ne retrouve donc pas les bons faits. L'application fonctionne sur un poste local sous Windows~11 et accède au modèle par l'API exposée avec ngrok ; seule l'API du modèle est exposée, pas l'application.
 
-\begin{quote}
-\begin{verbatim}
-python -m streamlit run application\app.py
-\end{verbatim}
-\end{quote}
+Elle se lance avec Streamlit et s'ouvre sur le port 8501. La session Colab n'est active que pendant son utilisation et son adresse change à chaque lancement. Il n'existe pas de mise en ligne pérenne.
 
-L'application s'ouvre sur le port 8501. La session Colab n'est active que pendant son utilisation et son adresse change à chaque lancement. Il n'existe pas de mise en ligne pérenne.
-
-La figure \ref{fig:ecrans_application} montre l'assistant avec Llama~3 8B, sur la question « Comment Acacia nilotica est-elle préparée selon les sources ? ». La réponse associe chaque mode de préparation aux sources qui le rapportent. Sous la réponse, l'utilisateur peut déplier les références complètes, avec leur DOI, puis la requête Cypher exécutée dans la base.
+La figure \ref{fig:ecrans_application} montre l'assistant avec Llama~3 8B, sur la question « Comment Acacia nilotica est-elle préparée selon les sources ? ». La réponse associe chaque mode de préparation aux sources qui le rapportent. Chaque source y est appelée par un numéro, qui renvoie à sa référence complète. La dernière ligne, ajoutée par le système, reprend la trituration, que le contrôle de complétude n'a pas reconnue sous la formulation du modèle. Sous la réponse, l'utilisateur peut déplier les références complètes, avec leur DOI, le tableau des faits retrouvés dans la base, puis la requête Cypher exécutée. Cette requête contient la colonne de sources ajoutée par le système.
 
 \begin{figure}[H]
 \centering

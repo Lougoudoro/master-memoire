@@ -26,14 +26,14 @@ Nous avons évalué l'ontologie selon les quatre critères retenus en phase 6 : 
 
 Nous avons vérifié la couverture en confrontant l'ontologie peuplée aux extractions des dix documents traités. Nous avons examiné si les noms scientifiques et vernaculaires, les pathologies, les modes de préparation et les sources citées étaient représentés dans le modèle.
 
-Le fichier peuplé contient 6~936 individus issus de dix des 35 documents du corpus (28,6~\%), dont 289 plantes, 1~676 usages thérapeutiques, 238 maladies et 10 sources. Les extractions JSON comptent 623 fiches de plantes, à raison d'une fiche par plante et par document, regroupées en 289 plantes distinctes. Les effectifs d'individus correspondent à ceux des extractions pour les activités pharmacologiques (278) et les observations toxicologiques (13). Pour les usages, les 1~734 entrées des extractions donnent 1~676 individus après exclusion des 25 usages répulsifs et des 33 usages vétérinaires. Le modèle d'origine couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}.
+Le fichier peuplé contient 6~877 individus issus de dix des 35 documents du corpus (28,6~\%), dont 289 plantes, 1~676 usages thérapeutiques, 180 maladies et 10 sources. Les extractions JSON comptent 623 fiches de plantes, à raison d'une fiche par plante et par document, regroupées en 289 plantes distinctes. Les effectifs d'individus correspondent à ceux des extractions pour les activités pharmacologiques (278) et les observations toxicologiques (13). Pour les usages, les 1~734 entrées des extractions donnent 1~676 individus après exclusion des 25 usages répulsifs et des 33 usages vétérinaires. Le modèle d'origine couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}.
 
 La couverture varie selon les connaissances disponibles dans le corpus. Celui-ci porte surtout sur certaines pathologies, notamment le paludisme, et sur un nombre restreint de régions. Le dosage et la toxicité sont peu représentés lorsque les documents ne les précisent pas. Nous avons limité l'extraction aux informations documentées (section \ref{subsec:extraction_llm} du chapitre \ref{chap:conception_developpement}).
 
 \subsection{Cohérence}
 \label{subsec:res_coherence}
 
-Nous avons contrôlé la cohérence avec HermiT dans Protégé~5 après les principales modifications de classes, propriétés et relations. Le raisonneur n'a signalé aucune incohérence. Nous avions également prévu des requêtes de test pour vérifier l'emploi des propriétés sur les domaines attendus et, après le peuplement et l'import de phase 4, le rattachement des instances à leurs classes. Sur la version peuplée, HermiT (version 1.4.3 fournie avec Protégé~5.6.9) a traité l'ontologie en 1~550~ms sans signaler d'incohérence ni de classe insatisfiable. Après l'import, nous avons exécuté dans Neo4j les requêtes de contrôle suivantes, sur l'ensemble du graphe : usages sans source, 0 ; usages sans plante, 0 ; usages sans maladie cible, 0 ; plantes sans source, 0 ; composés sans source, 0 ; effets toxicologiques sans source, 0. L'import a aussi vérifié les domaines et les portées des propriétés sur les 25~321 relations, sans anomalie.
+Nous avons contrôlé la cohérence avec HermiT dans Protégé~5 après les principales modifications de classes, propriétés et relations. Le raisonneur n'a signalé aucune incohérence. Nous avions également prévu des requêtes de test pour vérifier l'emploi des propriétés sur les domaines attendus et, après le peuplement et l'import de phase 4, le rattachement des instances à leurs classes. Sur la version peuplée, HermiT (version 1.4.3 fournie avec Protégé~5.6.9) a traité l'ontologie en 3~143~ms sans signaler d'incohérence ni de classe insatisfiable. Après l'import, nous avons exécuté dans Neo4j les requêtes de contrôle suivantes, sur l'ensemble du graphe : usages sans source, 0 ; usages sans plante, 0 ; usages sans maladie cible, 0 ; plantes sans source, 0 ; composés sans source, 0 ; effets toxicologiques sans source, 0. L'import a aussi vérifié les domaines et les portées des propriétés sur les 25~320 relations, sans anomalie.
 
 Ce résultat indique l'absence de contradiction dans le modèle, mais pas la justesse des connaissances qu'il contient. Une proposition erronée mais cohérente pourrait satisfaire ce contrôle.
 
@@ -86,13 +86,13 @@ Nous avons évalué le système RAG sur quatre critères : pertinence, fidélit�
 
 Le jeu d'évaluation comprend 50 questions sur les plantes, les usages et leurs sources. La répartition compte 25 questions simples, 7 sur les recettes multi-plantes, 8 de traçabilité, 5 spatiales et 5 hors corpus, pour lesquelles un refus est attendu. Les réponses attendues sont calculées par des requêtes Cypher distinctes de la chaîne RAG. Le jeu mesure donc la restitution du contenu du graphe, et non l'exactitude des extractions. Nous avons préparé les questions et les scripts de calcul sans évaluateur extérieur et en connaissant le système, ce qui constitue un biais.
 
-Nous avons utilisé la précision pour mesurer la pertinence, le rappel pour la fidélité, le F1-score pour l'exactitude et le taux de couverture des réponses sourcées pour la traçabilité. Pour chaque question, nous repérons automatiquement dans la réponse les valeurs du type attendu (plantes, parties, familles, modes de préparation ou sources). La précision est la part des valeurs citées qui sont attendues, $P = |C \cap A| / |C|$, et le rappel la part des valeurs attendues qui sont citées, $R = |C \cap A| / |A|$, où $C$ désigne les valeurs citées et $A$ les valeurs attendues. Le F1-score vaut $2PR / (P + R)$. Ces mesures sont calculées par question, puis moyennées sur les 45 questions dont la réponse attendue n'est pas vide. Une réponse est conforme si son F1-score atteint 0,8, seuil fixé avant la première exécution. Une question hors corpus est conforme si le système refuse de répondre sans citer de plante. La couverture compte les réponses comportant au moins une source. Une erreur de notre script de score, qui confondait les types d'écorce, a été corrigée après lecture des résultats ; la correction s'applique de la même façon aux deux modèles, sans nouvelle exécution.
+Nous avons utilisé la précision pour mesurer la pertinence, le rappel pour la fidélité, le F1-score pour l'exactitude et le taux de couverture des réponses sourcées pour la traçabilité. Pour chaque question, nous repérons automatiquement dans la réponse les valeurs du type attendu (plantes, parties, familles, modes de préparation ou sources). La précision est la part des valeurs citées qui sont attendues, $P = |C \cap A| / |C|$, et le rappel la part des valeurs attendues qui sont citées, $R = |C \cap A| / |A|$, où $C$ désigne les valeurs citées et $A$ les valeurs attendues. Le F1-score vaut $2PR / (P + R)$. Ces mesures sont calculées par question, puis moyennées sur les 45 questions dont la réponse attendue n'est pas vide. Une réponse est conforme si son F1-score atteint 0,8, seuil fixé avant la première exécution. Une question hors corpus est conforme si le système refuse de répondre sans citer de plante. La couverture compte les réponses comportant au moins une source. Nous donnons aussi des totaux sur ces 45 questions. Ils comptent les faits attendus, ceux que les réponses citent et les valeurs citées qui ne sont pas attendues. Une erreur de notre script de score, qui confondait les types d'écorce, a été corrigée après lecture des résultats ; la correction s'applique de la même façon aux deux modèles, sans nouvelle exécution.
 
 \subsection{Résultats quantitatifs}
 \label{subsec:res_metriques}
 
 
-Les mesures effectuées avec Llama 3 8B sur les 50 questions sont présentées au tableau \ref{tab:res_rag}.
+Avec Llama 3 8B, les réponses aux 45 questions à réponse attendue citent 913 des 915 faits attendus, soit 99,8~\%. Elles ne citent qu'une valeur non attendue, et les 5 questions hors corpus reçoivent toutes un refus. Les 50 réponses sont donc conformes. Le tableau \ref{tab:res_rag} présente les métriques correspondantes.
 
 \begin{table}[H]
 \centering
@@ -102,16 +102,18 @@ Les mesures effectuées avec Llama 3 8B sur les 50 questions sont présentées a
 \hline
 \textbf{Critère} & \textbf{Métrique} & \textbf{Résultat} \\
 \hline
-Pertinence & Précision & 0,785 \\
+Pertinence & Précision & 1,000 \\
 \hline
-Fidélité & Rappel & 0,746 \\
+Fidélité & Rappel & 0,992 \\
 \hline
-Exactitude & F1-score & 0,728 \\
+Exactitude & F1-score & 0,995 \\
 \hline
-Traçabilité & Taux de couverture des réponses sourcées & 39/45 réponses attendues non vides (86,7~\%) ; aucune des 826 citations relevées ne désigne une source inexistante \\
+Traçabilité & Taux de couverture des réponses sourcées & 45/45 réponses attendues non vides (100~\%) ; aucune des 525 citations relevées ne désigne une source inexistante \\
 \hline
 \end{tabular}
 \end{table}
+
+La valeur non attendue est \textit{Terminalia engleri}, citée pour la diarrhée à la question Q04. Les deux faits manquants portent sur les questions Q02 et Q18. Ces trois écarts tiennent à nos réponses attendues, calculées avant le regroupement des libellés de maladies et de familles. Nous ne les avons pas recalculées depuis, afin de garder les exécutions comparables. La base rattache désormais \textit{Terminalia engleri} à une diarrhée sanglante, et \textit{Euphorbia balsamifera}, attendue à la question Q02, à la coqueluche plutôt qu'à la toux. À la question Q18, la réponse attendue compte la famille de \textit{Balanites aegyptiaca} sous deux graphies, « Zigophyllaceae » et « Zygophyllaceae ». La base ne garde que la seconde, que la réponse cite.
 
 Les scores globaux ne rendent pas compte des différences entre familles de questions. Le tableau \ref{tab:res_rag_familles} présente les résultats par famille.
 
@@ -123,23 +125,23 @@ Les scores globaux ne rendent pas compte des différences entre familles de ques
 \hline
 \textbf{Famille de questions} & \textbf{Effectif} & \textbf{Réponses conformes} & \textbf{Échecs} \\
 \hline
-Questions simples (plante, maladie, usage) & 25 & 18 & 7 \\
+Questions simples (plante, maladie, usage) & 25 & 25 & 0 \\
 \hline
-Recettes multi-plantes & 7 & 5 & 2 \\
+Recettes multi-plantes & 7 & 7 & 0 \\
 \hline
 Traçabilité (d'où vient l'information ?) & 8 & 8 & 0 \\
 \hline
-Questions spatiales (région, localisation) & 5 & 0 & 5 \\
+Questions spatiales (région, localisation) & 5 & 5 & 0 \\
 \hline
 Hors corpus (refus attendu) & 5 & 5 & 0 \\
 \hline
-\textbf{Total} & \textbf{50} & \textbf{36} & \textbf{14} \\
+\textbf{Total} & \textbf{50} & \textbf{50} & \textbf{0} \\
 \hline
 \end{tabular}
 \end{table}
 
 
-Nous avons posé les mêmes questions au système avec Gemini (\textit{gemini-3.5-flash-lite}), qui remplace alors Llama 3 pour écrire la requête et rédiger la réponse. Le tableau \ref{tab:comparaison_modeles} compare les deux exécutions. Gemini restitue davantage de valeurs, avec 49 réponses conformes contre 36, et Llama 3 présente un temps médian plus long. Llama 3 reste néanmoins un modèle ouvert, que nous avons pu exécuter sur une instance que nous contrôlions : c'est pour cette raison que nous l'avons conservé comme modèle du système, malgré son score plus bas. Cette comparaison repose sur une seule exécution de chaque modèle et ne permet pas de conclusion générale.
+Nous avons posé les mêmes questions au système avec Gemini (\textit{gemini-3.5-flash-lite}), qui remplace alors Llama 3 pour écrire la requête et rédiger la réponse. Le tableau \ref{tab:comparaison_modeles} compare les deux exécutions. Les deux modèles obtiennent le même F1-score de 0,995 et 50 réponses conformes. Gemini cite toutefois trois valeurs non attendues, contre une pour Llama 3. Deux d'entre elles sont fausses. Pour la question Q45, la rédaction d'une page suivante cite deux plantes que la base ne rapporte pas au Kourittenga. Llama 3 reste plus lent, avec un temps médian de 13,6~s contre 6,1~s. C'est néanmoins un modèle ouvert, que nous avons pu exécuter sur une instance que nous contrôlions, et nous l'avons conservé pour cette raison. Cette comparaison repose sur une seule exécution de chaque modèle et ne permet pas de conclusion générale.
 
 \begin{table}[H]
 \centering
@@ -149,26 +151,30 @@ Nous avons posé les mêmes questions au système avec Gemini (\textit{gemini-3.
 \hline
 \textbf{Mesure} & \textbf{Llama 3 8B} & \textbf{Gemini} \\
 \hline
-Précision & 0,785 & 1,000 \\
+Précision & 1,000 & 0,999 \\
 \hline
-Rappel & 0,746 & 0,992 \\
+Rappel & 0,992 & 0,992 \\
 \hline
-F1-score & 0,728 & 0,995 \\
+F1-score & 0,995 & 0,995 \\
 \hline
-Réponses conformes & 36/50 & 49/50 \\
+Faits attendus retrouvés & 913/915 & 913/915 \\
 \hline
-Temps médian & 15,7~s & 4,3~s \\
+Valeurs citées non attendues & 1 & 3 \\
 \hline
-Temps moyen & 21,8~s & 7,3~s \\
+Réponses conformes & 50/50 & 50/50 \\
 \hline
-Temps maximal & 97,4~s & 42,5~s \\
+Temps médian & 13,6~s & 6,1~s \\
+\hline
+Temps moyen & 18,7~s & 12,4~s \\
+\hline
+Temps maximal & 112,8~s & 74,0~s \\
 \hline
 \end{tabular}
 \end{table}
 
-Ces résultats sont ceux de la version retenue de la consigne, ajustée une seule fois après lecture des échecs : correction des requêtes sans résultat, filtres insensibles aux accents, règles sur le sens des relations et sur les critères, et un exemple supplémentaire. La version précédente, évaluée sur le même graphe et les mêmes questions, donnait un F1-score de 0,780 avec Llama 3 (39 réponses conformes) et de 1,000 avec Gemini (50 réponses conformes). L'ajustement n'a donc pas amélioré le score sur ce jeu. Nous nous sommes arrêtés là pour ne pas adapter davantage la consigne à ces questions. Cette consigne avait elle-même été complétée après lecture d'essais antérieurs, et ses exemples portent sur les mêmes types de questions que le jeu d'évaluation, ce qui favorise le score.
+Ces résultats sont ceux de la version finale du système. Une première version, évaluée sur le même graphe et les mêmes questions, obtenait un F1-score de 0,728 avec Llama 3, pour 36 réponses conformes. Nous avons ensuite modifié la chaîne en lisant ses échecs sur ces 50 questions. Les ajouts sont décrits au chapitre \ref{chap:conception_developpement}. Ils portent sur la liaison des libellés, le contrôle des valeurs, la provenance posée par le système, la complétude et le choix des exemples. Le jeu de 50 questions a donc servi à corriger le système avant de le mesurer, ce qui favorise le score. Aucun exemple de la consigne ne reprend une de ces questions, mais la banque d'exemples a été complétée en les ayant sous les yeux.
 
-Une première version du système, sur un graphe antérieur de 141 plantes, sélectionnait les faits par des requêtes fixes et atteignait un F1-score de 0,923 avec Llama 3 et de 0,966 avec Gemini, contre 0,607 et 0,842 en Text2Cypher sur ce même graphe. Ces chiffres ne sont pas directement comparables aux précédents, car le graphe et la consigne ont changé. Ils indiquent toutefois que le passage à Text2Cypher, retenu pour éviter d'écrire une requête par type de question, pèse sur la fiabilité.
+Une première version du système, sur un graphe antérieur de 141 plantes, sélectionnait les faits par des requêtes fixes et atteignait un F1-score de 0,923 avec Llama 3 et de 0,966 avec Gemini, contre 0,607 et 0,842 en Text2Cypher sur ce même graphe. Ces chiffres ne sont pas directement comparables aux précédents, car le graphe et la consigne ont changé. Ils indiquaient alors que le passage à Text2Cypher, retenu pour éviter d'écrire une requête par type de question, pesait sur la fiabilité. Ce constat a motivé les contrôles décrits au chapitre \ref{chap:conception_developpement}.
 
 \subsection{Volumes d'interrogation de la base}
 \label{subsec:res_volumes}
@@ -200,11 +206,11 @@ Requêtes spatiales & Plantes d'une région donnée & 194 \\
 Les métriques ne décrivent pas à elles seules le déroulement des tests. Nous les complétons par les observations qualitatives recueillies.
 
 
-Les tests ont porté sur des questions simples, de traçabilité, spatiales, sur des recettes multi-plantes et sur des sujets absents du corpus. Sur les 14 réponses non conformes avec Llama 3, dix tiennent à la requête générée et quatre à la rédaction. Les 5 questions spatiales ont toutes échoué (Q41 à Q45) : le modèle écrit une requête mal formée, souvent en prolongeant le chemin au-delà de la localité, ce que le schéma ne permet pas, et le système répond à tort que l'information n'est pas disponible. La question Q19 aboutit au même refus, faute de source dans la requête. Le modèle ajoute une maladie non demandée dans Q03 et Q09, et ne cherche qu'une partie des libellés dans Q06 et Q10. Pour la rédaction, il omet des valeurs pourtant présentes dans le contexte (Q01, Q18) ou déclare à tort qu'il n'y a pas de réponse (Q30, Q31). La correction a été demandée pour 11 questions : les 5 questions hors corpus, de nouveau refusées, et 6 questions pour lesquelles elle n'a pas abouti. Elle n'a donc permis aucune réponse sur ce jeu. Lorsque l'information demandée est absente du graphe, le système doit éviter de produire une réponse non étayée. Les 5 questions hors corpus ont toutes reçu un refus, ce que nous comptons comme le comportement attendu. Mais 6 des 45 questions à réponse attendue ont reçu un refus à tort : avec Text2Cypher, un refus ne prouve pas que l'information est absente du graphe. Pour deux autres questions (Q30, Q31), le modèle répond lui-même, à tort, qu'il n'a rien trouvé : au total, 8 des 45 réponses attendues affirment à tort l'absence d'information.
+Les tests ont porté sur des questions simples, de traçabilité, spatiales, sur des recettes multi-plantes et sur des sujets absents du corpus. Avec Llama 3, aucune des 45 questions à réponse attendue n'a reçu de refus à tort. La correction a été demandée pour 6 questions. Pour la question Q33, la première requête cherchait « annonasenegalensis », valeur absente de la base, et la correction a donné la bonne réponse. Pour les 5 questions hors corpus, elle a de nouveau abouti à un refus. Neuf réponses portent sur plus de 25 faits et ont été rédigées en plusieurs pages, jusqu'à huit pour la question Q45. La lecture des réponses révèle un défaut que le score ne voit pas, car il ne compte que les valeurs du type attendu. Llama 3 recopie parfois la phrase d'exemple de sa consigne de rédaction. Trois réponses en contiennent un fragment, aux questions Q01, Q19 et Q45. Les réponses à Q19 et Q45 affirment ainsi que la décoction est la préparation la plus rapportée. Leurs requêtes ne portaient pourtant pas sur les préparations. Aucune réponse de Gemini ne présente ce défaut.
 
-Nous avons également posé 12 questions libres, écrites après avoir vu ces échecs et hors des types du jeu d'évaluation, comme « citer 2 plantes » ou « Quelles plantes sont utilisées à la fois contre le paludisme et contre la toux ? ». Jugées à la lecture, elles constituent un contrôle séparé, qui ne s'ajoute pas au score. Llama 3 a produit 2 réponses correctes, 8 refus à tort et 2 réponses à côté de la question, tandis que les 12 réponses de Gemini étaient utilisables, certaines listes restant incomplètes. Nous avons ensuite accepté sans source les requêtes ne renvoyant que des nombres ou des booléens, ce qui permet à Llama 3 de répondre à « Combien de plantes contient la base ? ». Le score du jeu d'évaluation n'en dépend pas : aucune de ses requêtes finales n'est un décompte, et aucune n'a été rejetée pour ce motif. Après l'évaluation, nous avons aussi ajouté une voie à requêtes fixes pour les questions portant sur le contenu de la base (section \ref{subsec:systeme_rag} du chapitre \ref{chap:conception_developpement}). Un test automatique vérifie qu'aucune des 50 questions n'emprunte cette voie : les scores restent inchangés. En revanche, 3 des 12 questions libres, dont « citer 2 plantes » et « Combien de plantes contient la base ? », y passent désormais ; les résultats ci-dessus décrivent la version antérieure et n'ont pas été recalculés.
+Nous avons également posé 12 questions libres, hors des types du jeu d'évaluation. Elles comprennent par exemple « citer 2 plantes » ou « Quelles plantes sont utilisées à la fois contre le paludisme et contre la toux ? ». Jugées à la lecture, elles constituent un contrôle séparé, qui ne s'ajoute pas au score. Avec la version finale, le système donne une réponse utilisable aux 12 questions. La salutation « Bonjour, qui es-tu ? » reçoit la présentation du système. Dans une réponse de Llama 3, la phrase d'exemple recopiée cite \textit{Ficus glumosa} parmi les plantes du Kourittenga, où la base ne la rapporte pas. Ces questions ont été écrites après avoir vu les échecs de la première version, et elles ont aussi guidé la banque d'exemples. Leur valeur de contrôle en est réduite.
 
-Le temps total, mesuré par le script d'évaluation pour chaque question, s'élève en moyenne à 21,8~s (médiane 15,7~s, maximum 97,4~s). Treize questions ont dépassé 20~s et quatre ont dépassé 60~s. Nous n'avions pas fixé de seuil au préalable.
+Le temps total, mesuré par le script d'évaluation pour chaque question, s'élève en moyenne à 18,7~s (médiane 13,6~s, maximum 112,8~s). Neuf questions ont dépassé 20~s et deux ont dépassé 60~s. Ces neuf questions sont celles dont la réponse est rédigée en plusieurs pages. Nous n'avions pas fixé de seuil au préalable.
 
 % ============================================================
 % IV.3. ÉVALUATION DE L'APPLICATION WEB
@@ -229,7 +235,7 @@ Compréhension des réponses & Questionnaire & Non mesurée : campagne non mené
 \hline
 Utilité perçue & Questionnaire & Non mesurée : campagne non menée \\
 \hline
-Performance & Mesure du temps de réponse & 21,8~s en moyenne (médiane 15,7~s ; maximum 97,4~s), sur les 50 questions \\
+Performance & Mesure du temps de réponse & 18,7~s en moyenne (médiane 13,6~s ; maximum 112,8~s), sur les 50 questions \\
 \hline
 \end{tabular}
 \end{table}
@@ -238,7 +244,7 @@ Performance & Mesure du temps de réponse & 21,8~s en moyenne (médiane 15,7~s ;
 \label{subsec:res_performance}
 
 
-Nous avons séparé le temps d'interrogation de Neo4j du temps restant, qui regroupe la génération par Llama 3 et le délai du tunnel ngrok. En réexécutant après l'évaluation les requêtes générées, l'interrogation de Neo4j prend en moyenne 0,02~s (maximum 0,15~s). L'essentiel du temps tient donc à la génération et au tunnel, soit environ 21,8~s en moyenne ; notre mesure ne permet pas de séparer ces deux composantes.
+Nous avons séparé le temps d'interrogation de Neo4j du temps restant, qui regroupe la génération par Llama 3 et le délai du tunnel ngrok. En réexécutant après l'évaluation les requêtes finales, l'interrogation de Neo4j prend en moyenne 0,004~s, une fois la base chargée. Seule la première requête d'une session prend environ 4~s. Chaque question demande en outre plusieurs appels au modèle, pour repérer les termes, écrire la requête et rédiger chaque page de la réponse. L'essentiel du temps tient donc à la génération et au tunnel, soit environ 18,7~s en moyenne ; notre mesure ne permet pas de séparer ces deux composantes.
 
 % ============================================================
 % IV.4. DISCUSSION
@@ -256,7 +262,7 @@ La première question de recherche portait sur le choix d'une ontologie adaptée
 
 La deuxième question portait sur l'extraction des connaissances et leur traçabilité. Les connaissances de dix documents ont été extraites avec l'aide de l'intelligence artificielle, puis vérifiées manuellement avant le peuplement de l'ontologie et son import dans Neo4j. Le rattachement aux sources est complet pour les usages et les plantes (section \ref{subsec:res_tracabilite}). Le nom de la plante figure dans le document d'origine pour 1~497 usages sur 1~501 contrôlables, mais l'exactitude de chaque information n'a été contrôlée que partiellement. Nous n'avons pas comparé cette méthode à une extraction manuelle.
 
-La troisième question concernait l'accès en langage naturel au moyen d'une solution numérique, qui associe un système RAG à une application web. Le modèle traduit la question en requête Cypher, validée en lecture seule, puis produit une réponse accompagnée de sources. Les métriques du tableau \ref{tab:res_rag} indiquent une restitution partielle du graphe avec Llama 3 (F1-score de 0,728), bien meilleure avec Gemini (0,995), sans renseigner sur l'exactitude scientifique des faits. L'accès en langage naturel fonctionne donc, mais sa fiabilité dépend fortement du modèle qui écrit la requête. Nous avons développé l'application et défini les fonctions présentées au tableau \ref{tab:fonctionnalites}. La campagne de tests auprès des utilisateurs n'ayant pas été menée, nous ne pouvons pas dire dans quelle mesure l'application facilite leur accès aux connaissances : la réponse à la troisième question reste partielle.
+La troisième question concernait l'accès en langage naturel au moyen d'une solution numérique, qui associe un système RAG à une application web. Le modèle traduit la question en requête Cypher, validée en lecture seule, puis produit une réponse accompagnée de sources. Avec Llama 3 comme avec Gemini, les réponses citent 913 des 915 faits attendus, comme le montre le tableau \ref{tab:comparaison_modeles}. Ces mesures ne renseignent pas sur l'exactitude scientifique des faits. Elles ont en outre été obtenues après des corrections guidées par ce même jeu de questions. L'accès en langage naturel fonctionne donc sur ce jeu, sans que l'on puisse en déduire sa fiabilité sur les questions d'autres utilisateurs. Nous avons développé l'application et défini les fonctions présentées au tableau \ref{tab:fonctionnalites}. La campagne de tests auprès des utilisateurs n'ayant pas été menée, nous ne pouvons pas dire dans quelle mesure l'application facilite leur accès aux connaissances : la réponse à la troisième question reste partielle.
 
 \subsection{Confrontation aux systèmes existants}
 \label{subsec:discussion_existant}
@@ -286,14 +292,14 @@ Six limites encadrent les résultats qui précèdent et déterminent leur porté
     \item \textbf{Le périmètre reste celui d'un outil de consultation.} Le système aide à rechercher et à vérifier des informations documentées. Il ne pose pas de diagnostic et n'établit pas de prescription. Les résultats ne constituent pas une validation clinique.
 \end{enumerate}
 
-Trois réserves s'y ajoutent. Les réponses attendues provenant du graphe, nos métriques ne mesurent pas la justesse des faits. Le jeu de 50 questions reprend les types illustrés par les exemples de la consigne, ce que les questions libres montrent : Llama 3 y réussit nettement moins bien. Enfin, 175 usages sur 1~676 proviennent d'un document numérisé, contrôlé seulement à partir d'une reconnaissance optique de caractères.
+Quatre réserves s'y ajoutent. Les réponses attendues provenant du graphe, nos métriques ne mesurent pas la justesse des faits. Le jeu de 50 questions a servi à corriger le système avant de le mesurer. Les exemples de la consigne couvrent en outre ses types de questions. Le score ne compte que les valeurs du type attendu. Il ne voit donc pas les phrases que le modèle ajoute de lui-même, comme celles recopiées de sa consigne. Enfin, 175 usages sur 1~676 proviennent d'un document numérisé, contrôlé seulement à partir d'une reconnaissance optique de caractères.
 
 Nous n'avons pas testé par comparaison contrôlée l'hypothèse selon laquelle l'extraction assistée par modèle de langue serait meilleure qu'une extraction manuelle. Une telle comparaison nécessiterait un protocole distinct appliqué dans les mêmes conditions aux deux méthodes.
 
 \subsection{Pistes de travail}
 \label{subsec:discussion_perspectives}
 
-Les limites observées ouvrent plusieurs pistes de travail. Une évaluation des extractions avec un spécialiste, des tests auprès d'utilisateurs, dont des tradipraticiens, et l'intégration de thèses et de rapports non numérisés permettraient d'étudier le système sur un corpus plus large. Une relecture experte d'un échantillon et des questions formulées par des utilisateurs compléteraient l'évaluation. Un déploiement pérenne et une collecte discrète des données d'usage permettraient également d'étudier le système en conditions réelles.
+Les limites observées ouvrent plusieurs pistes de travail. Une évaluation des extractions avec un spécialiste, des tests auprès d'utilisateurs, dont des tradipraticiens, et l'intégration de thèses et de rapports non numérisés permettraient d'étudier le système sur un corpus plus large. Une relecture experte d'un échantillon et des questions formulées par des utilisateurs compléteraient l'évaluation. Un déploiement pérenne et une collecte discrète des données d'usage permettraient également d'étudier le système en conditions réelles. Un contrôle inverse de la complétude vérifierait que chaque valeur citée figure parmi les faits retrouvés. Il écarterait les phrases que le modèle ajoute de lui-même.
 
 % ============================================================
 % CONCLUSION DU CHAPITRE
@@ -302,7 +308,7 @@ Les limites observées ouvrent plusieurs pistes de travail. Une évaluation des 
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre présente l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, qui n'a pas été évaluée auprès de ses utilisateurs. Le système restitue en partie le contenu du graphe sur les 50 questions, avec un F1-score de 0,728 pour Llama 3 8B et de 0,995 pour Gemini, et un refus pour toutes les questions hors corpus. L'ontologie couvre dix des 35 documents du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
+Ce chapitre présente l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, qui n'a pas été évaluée auprès de ses utilisateurs. Sur les 50 questions, les réponses citent 913 des 915 faits attendus, avec Llama 3 8B comme avec Gemini. Le système refuse toutes les questions hors corpus. Ce résultat a été obtenu après des corrections guidées par ce même jeu de questions. L'ontologie couvre dix des 35 documents du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
 
 Nous avons replacé ces résultats au regard des questions de recherche et des systèmes existants. Le travail met en place une chaîne reliant les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les résultats restent toutefois encadrés par les limites méthodologiques présentées dans ce chapitre.
 

@@ -47,6 +47,19 @@ Le canevas demande un **équilibre de pages entre chapitres**. Un jury remarque 
 - **conclusion générale** de 2 à 4 pages ;
 - corps du mémoire (introduction à conclusion) d'environ **60 à 90 pages**, ordre de grandeur des modèles (Sawadogo 40, Zongo 75, Yaro environ 45 pour un brouillon).
 
+**Répartition cible de ce mémoire** (choix de l'auteur, 2026-11-16). Le canevas ne fixe aucun nombre de pages, seulement l'équilibre. Cette cible le traduit pour OntoPlantMedBF :
+
+| Partie | Cible | Rôle dans l'équilibre |
+|---|---|---|
+| Introduction générale | 6 à 7 p. | contexte, problématique, QR, objectifs, hypothèses, plan |
+| Ch. I Cadre théorique et revue | 15 à 17 p. | ne pas dépasser, sinon le mémoire paraît descriptif |
+| Ch. II Matériel et méthodologie | 16 à 19 p. | données, outils, dispositif expérimental |
+| Ch. III Conception et développement | 17 à 20 p. | ontologie, pipeline, système |
+| Ch. IV Résultats et discussion | 14 à 17 p. | porte la contribution, ne doit pas rester le plus court |
+| Conclusion générale | 2 à 3 p. | bilan par objectif, limites, perspectives |
+
+Le corps visé fait donc 70 à 83 pages. Ces bornes priment sur les repères généraux ci-dessus pour ce mémoire. Le script les affiche dans une colonne « Cible » et signale chaque partie hors fourchette.
+
 **Mesure.** Après compilation, lance :
 
 ```bash

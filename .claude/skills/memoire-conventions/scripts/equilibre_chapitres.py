@@ -5,7 +5,8 @@ Repères (voir memoire-conventions, « Taille et équilibre des chapitres ») :
   - chapitre numéroté entre 0,5 et 1,5 fois la moyenne des chapitres ;
   - chapitre des résultats pas le plus court ;
   - introduction générale de 5 à 8 pages, conclusion générale de 2 à 4 pages ;
-  - corps (introduction → conclusion) de 60 à 90 pages environ.
+  - corps (introduction → conclusion) de 60 à 90 pages environ ;
+  - répartition cible propre à ce mémoire (colonne « Cible »), prioritaire.
 
 Usage : python equilibre_chapitres.py [main.toc]
 """
@@ -17,6 +18,27 @@ INTRO = (5, 8)
 CONCLUSION = (2, 4)
 CORPS = (60, 90)
 RATIO_MIN, RATIO_MAX = 0.5, 1.5
+
+# Répartition cible d'OntoPlantMedBF (choix de l'auteur, 2026-11-16).
+CIBLES = {
+    "intro": (6, 7),
+    "I": (15, 17),
+    "II": (16, 19),
+    "III": (17, 20),
+    "IV": (14, 17),
+    "conclusion": (2, 3),
+}
+
+
+def cle_cible(titre: str, num: str):
+    if num:
+        return num
+    bas = titre.lower()
+    if bas.startswith("introduction g"):
+        return "intro"
+    if bas.startswith("conclusion g"):
+        return "conclusion"
+    return None
 
 
 def lire_toc(chemin: Path):
@@ -39,6 +61,10 @@ def lire_toc(chemin: Path):
 
 
 def main():
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
     chemin = Path(sys.argv[1] if len(sys.argv) > 1 else "main.toc")
     if not chemin.exists():
         print(f"{chemin} introuvable : compile d'abord le mémoire (latexmk -pdf main.tex).")
@@ -58,21 +84,26 @@ def main():
     chapitres = [p for p in parties if p[1]]
     moyenne = sum(p[3] for p in chapitres) / len(chapitres) if chapitres else 0
 
-    print(f"{'Partie':<52} {'Début':>6} {'Pages':>6}  Rapport")
+    print(f"{'Partie':<52} {'Début':>6} {'Pages':>6} {'Cible':>8}  Rapport")
     for titre, num, page, n in parties:
         nom = f"{num} {titre}".strip()
         rapport = f"{n / moyenne:.2f} × moy." if num and moyenne else ""
-        print(f"{nom[:52]:<52} {page:>6} {n:>6}  {rapport}")
+        cible = CIBLES.get(cle_cible(titre, num))
+        txt_cible = f"{cible[0]}-{cible[1]}" if cible else ""
+        print(f"{nom[:52]:<52} {page:>6} {n:>6} {txt_cible:>8}  {rapport}")
+        if cible and not cible[0] <= n <= cible[1]:
+            sens = "au-dessus" if n > cible[1] else "en dessous"
+            alertes.append(f"{nom} : {n} p., {sens} de la cible {cible[0]}-{cible[1]} p.")
         bas = titre.lower()
         if num:
             if n > RATIO_MAX * moyenne:
                 alertes.append(f"{nom} : {n} p., plus de {RATIO_MAX} fois la moyenne ({moyenne:.1f} p.) → alléger, déplacer en annexe")
             if n < RATIO_MIN * moyenne:
                 alertes.append(f"{nom} : {n} p., moins de la moitié de la moyenne ({moyenne:.1f} p.) → étoffer sans remplissage")
-        elif bas.startswith("introduction g"):
+        elif not cible and bas.startswith("introduction g"):
             if not INTRO[0] <= n <= INTRO[1]:
                 alertes.append(f"Introduction générale : {n} p. (repère {INTRO[0]} à {INTRO[1]})")
-        elif bas.startswith("conclusion g"):
+        elif not cible and bas.startswith("conclusion g"):
             if not CONCLUSION[0] <= n <= CONCLUSION[1]:
                 alertes.append(f"Conclusion générale : {n} p. (repère {CONCLUSION[0]} à {CONCLUSION[1]})")
 

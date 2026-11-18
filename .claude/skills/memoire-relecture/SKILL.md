@@ -25,7 +25,8 @@ Passe dans cet ordre, du plus grave au plus superficiel.
 - Les conclusions dépassent-elles ce que les mesures montrent (ex. justesse scientifique alors que seule la restitution du graphe est mesurée) ?
 
 **B. Cohérence interne**
-- Les mêmes chiffres partout : résumé, abstract, introduction, chapitres II–IV, conclusion, README. Dresse un petit tableau *chiffre → valeur dans chaque fichier* (nombre de documents du corpus, documents exploités, classes, individus, plantes, usages, questions de test, F1, réponses conformes). Écart connu à vérifier : corpus annoncé à 35 documents contre 31 PDF dans `corpus/`.
+- Les mêmes chiffres partout : résumé, abstract, introduction, chapitres II–IV, conclusion, README. Dresse un petit tableau *chiffre → valeur dans chaque fichier* (nombre de documents du corpus, documents exploités, classes, individus, plantes, usages, questions de test, F1, réponses conformes). Valeurs de référence : un corpus de 44 documents, soit 35 documents scientifiques et 9 publications sur 7 ontologies candidates, dont 10 documents scientifiques extraits.
+- Le chiffre de dix documents extraits suit la règle « Chiffres de périmètre » de `memoire-style`. Signale comme **bloquant** un passage qui le masque ou laisse croire que les 35 documents ont peuplé la base. Signale comme **amélioration** une répétition hors des endroits prévus, ou une formulation négative comme « seuls », « les 25 autres » ou un pourcentage de couverture.
 - Chaque question de recherche reçoit une réponse, chaque hypothèse un statut (validée / partiellement / non) au chapitre IV et en conclusion.
 - Les noms restent stables (OntoPlantMedBF, ontoMEDTRAD, Llama 3 8B…).
 

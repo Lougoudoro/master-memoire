@@ -50,96 +50,6 @@
       \verb https://www.ai4d.ai/fr/blog/building-a-medicinal-plant-database
       \endverb
     \endentry
-    \entry{angole_towards_2012}{incollection}{}{}
-      \name{author}{4}{}{%
-        {{hash=588cfa59223876197324c954b1a5c61a}{%
-           family={Angole},
-           familyi={A\bibinitperiod},
-           given={Richard\bibnamedelima O.},
-           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
-        {{hash=3fcf7b24f1c11b6dba60ef74aba4fbab}{%
-           family={Jehopio},
-           familyi={J\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-        {{hash=3e0d3f2fb1816f02f203c707470c800b}{%
-           family={Maiga},
-           familyi={M\bibinitperiod},
-           given={Gilbert},
-           giveni={G\bibinitperiod}}}%
-        {{hash=abda697e63745e3f2b90cf8b59a2fcce}{%
-           family={Omoda-Onyait},
-           familyi={O\bibinithyphendelim O\bibinitperiod},
-           given={Godfrey},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IOS Press}%
-      }
-      \strng{namehash}{367e92fb48dd3ad63c26d1daf0213103}
-      \strng{fullhash}{169ab1a2b51ef39d0c4d28462fb26d68}
-      \strng{fullhashraw}{169ab1a2b51ef39d0c4d28462fb26d68}
-      \strng{bibnamehash}{367e92fb48dd3ad63c26d1daf0213103}
-      \strng{authorbibnamehash}{367e92fb48dd3ad63c26d1daf0213103}
-      \strng{authornamehash}{367e92fb48dd3ad63c26d1daf0213103}
-      \strng{authorfullhash}{169ab1a2b51ef39d0c4d28462fb26d68}
-      \strng{authorfullhashraw}{169ab1a2b51ef39d0c4d28462fb26d68}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Advances in Knowledge-Based and Intelligent Information and Engineering Systems}
-      \field{series}{Frontiers in Artificial Intelligence and Applications}
-      \field{title}{Towards an Ontology Model for African Traditional Medicine}
-      \field{volume}{243}
-      \field{year}{2012}
-      \field{pages}{386\bibrangedash 395}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.3233/978-1-61499-105-2-386
-      \endverb
-    \endentry
-    \entry{angole_ontology_2013}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=b1e3f691bf99e670a9b5c37f129e3c79}{%
-           family={Angole},
-           familyi={A\bibinitperiod},
-           given={Richard\bibnamedelima Okelo},
-           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
-        {{hash=3fcf7b24f1c11b6dba60ef74aba4fbab}{%
-           family={Jehopio},
-           familyi={J\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-        {{hash=3e0d3f2fb1816f02f203c707470c800b}{%
-           family={Maiga},
-           familyi={M\bibinitperiod},
-           given={Gilbert},
-           giveni={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{15376dad79a5e3949e43c54eaa074c8b}
-      \strng{fullhash}{15376dad79a5e3949e43c54eaa074c8b}
-      \strng{fullhashraw}{15376dad79a5e3949e43c54eaa074c8b}
-      \strng{bibnamehash}{15376dad79a5e3949e43c54eaa074c8b}
-      \strng{authorbibnamehash}{15376dad79a5e3949e43c54eaa074c8b}
-      \strng{authornamehash}{15376dad79a5e3949e43c54eaa074c8b}
-      \strng{authorfullhash}{15376dad79a5e3949e43c54eaa074c8b}
-      \strng{authorfullhashraw}{15376dad79a5e3949e43c54eaa074c8b}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International Journal of Knowledge-Based and Intelligent Engineering Systems}
-      \field{number}{1}
-      \field{title}{Ontology model: Towards bridging the gap between African traditional medicine and conventional medicine}
-      \field{volume}{17}
-      \field{year}{2013}
-      \field{pages}{37\bibrangedash 43}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.3233/KES-130263
-      \endverb
-    \endentry
     \entry{ares2018medecine}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=24a1adc0ac8474b24e51523669a9f9ba}{%
@@ -383,39 +293,6 @@
       \verb https://africanplantdatabase.ch
       \endverb
     \endentry
-    \entry{cooper2013plant}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=3fe1c8bad9b46fe853483de096c2f4d9}{%
-           family={Cooper},
-           familyi={C\bibinitperiod},
-           given={Laurel},
-           giveni={L\bibinitperiod}}}%
-      }
-      \strng{namehash}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \strng{fullhash}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \strng{fullhashraw}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \strng{bibnamehash}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \strng{authorbibnamehash}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \strng{authornamehash}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \strng{authorfullhash}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \strng{authorfullhashraw}{b70f6efd7f21853d52b9cc1e71937a7c}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Plant and Cell Physiology}
-      \field{number}{2}
-      \field{title}{The Plant Ontology as a Tool for Comparative Plant Anatomy and Genomic Analyses}
-      \field{volume}{54}
-      \field{year}{2013}
-      \field{pages}{e1}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1093/pcp/pcs163
-      \endverb
-    \endentry
     \entry{davis_user_1993}{article}{}{}
       \name{author}{1}{}{%
         {{hash=dcb59a9c9bf67cc1c74d13fb3a9f33a7}{%
@@ -555,44 +432,6 @@
       \endverb
       \verb{url}
       \verb https://www.journalijar.com/article/48743/traditional-medicinal-practices-of-african-bone-setters:-aspects-of-an-ontology-of-the-field/
-      \endverb
-    \endentry
-    \entry{dooley2018foodon}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=47dc4efb95897d79ac9c94cd9eb46a29}{%
-           family={Dooley},
-           familyi={D\bibinitperiod},
-           given={Damion\bibnamedelima M.},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \strng{fullhash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \strng{fullhashraw}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \strng{bibnamehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \strng{authorbibnamehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \strng{authornamehash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \strng{authorfullhash}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \strng{authorfullhashraw}{0d39f8e7ca8c1ab2e186c06570ee5caa}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{npj Science of Food}
-      \field{title}{FoodOn: A Harmonized Food Ontology to Increase Global Food Traceability, Quality Control and Data Integration}
-      \field{volume}{2}
-      \field{year}{2018}
-      \field{pages}{23}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1038/s41538-018-0032-6
-      \endverb
-      \verb{urlraw}
-      \verb https://www.nature.com/articles/s41538-018-0032-6
-      \endverb
-      \verb{url}
-      \verb https://www.nature.com/articles/s41538-018-0032-6
       \endverb
     \endentry
     \entry{euzenat2013ontology}{book}{}{}
@@ -1964,34 +1803,6 @@
       \endverb
       \keyw{Automation,Biological Ontologies,Medicine,Traditional,Peer Review,Research,Publications}
     \endentry
-    \entry{snomedct2020}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=7fce872dcf6648d5f7700cc19ca08974}{%
-           family={{SNOMED International}},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{7fce872dcf6648d5f7700cc19ca08974}
-      \strng{fullhash}{7fce872dcf6648d5f7700cc19ca08974}
-      \strng{fullhashraw}{7fce872dcf6648d5f7700cc19ca08974}
-      \strng{bibnamehash}{7fce872dcf6648d5f7700cc19ca08974}
-      \strng{authorbibnamehash}{7fce872dcf6648d5f7700cc19ca08974}
-      \strng{authornamehash}{7fce872dcf6648d5f7700cc19ca08974}
-      \strng{authorfullhash}{7fce872dcf6648d5f7700cc19ca08974}
-      \strng{authorfullhashraw}{7fce872dcf6648d5f7700cc19ca08974}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{International Health Terminology Standards Development Organisation (IHTSDO)}
-      \field{title}{SNOMED CT: Systematized Nomenclature of Medicine -- Clinical Terms}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb https://www.snomed.org/
-      \endverb
-      \verb{url}
-      \verb https://www.snomed.org/
-      \endverb
-    \endentry
     \entry{watrimed_design_2019}{incollection}{}{}
       \name{author}{5}{}{%
         {{hash=e7bb86e489c3f96d3182855b54cf87a0}{%
@@ -2200,50 +2011,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1016/S0169-023X(97)00056-6
-      \endverb
-    \endentry
-    \entry{tekemetieu2016}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=10542eb769bdf12c6b0b866fb5ea0af0}{%
-           family={Tekemetieu},
-           familyi={T\bibinitperiod},
-           given={A.\bibnamedelimi A.},
-           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=28febe063e48fcf5946462ff56338f2d}{%
-           family={Koussoube},
-           familyi={K\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=7ee4d4c610f86045da31e6f973176ac8}{%
-           family={Fotso},
-           familyi={F\bibinitperiod},
-           given={L.\bibnamedelimi P.},
-           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \strng{namehash}{9cd531184a5a89025579b927872f402e}
-      \strng{fullhash}{9cd531184a5a89025579b927872f402e}
-      \strng{fullhashraw}{9cd531184a5a89025579b927872f402e}
-      \strng{bibnamehash}{9cd531184a5a89025579b927872f402e}
-      \strng{authorbibnamehash}{9cd531184a5a89025579b927872f402e}
-      \strng{authornamehash}{9cd531184a5a89025579b927872f402e}
-      \strng{authorfullhash}{9cd531184a5a89025579b927872f402e}
-      \strng{authorfullhashraw}{9cd531184a5a89025579b927872f402e}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Kybernetes}
-      \field{number}{1}
-      \field{title}{An Ontology-Based Computer-Aided Diagnosis System in African Traditional Medicine: At the Sorcerer's Stone}
-      \field{volume}{45}
-      \field{year}{2016}
-      \field{pages}{30\bibrangedash 50}
-      \range{pages}{21}
-      \verb{urlraw}
-      \verb https://www.ajol.info/index.php/jcmphc/article/download/252453/238490
-      \endverb
-      \verb{url}
-      \verb https://www.ajol.info/index.php/jcmphc/article/download/252453/238490
       \endverb
     \endentry
     \entry{tibiri2020}{article}{}{}

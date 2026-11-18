@@ -9,29 +9,29 @@
 \contentsline {table}{\numberline {II.2}{\ignorespaces Modèles de langage et modes d'accès}}{26}{table.2.2}%
 \contentsline {table}{\numberline {II.3}{\ignorespaces Caractéristiques de Neo4j Desktop}}{26}{table.2.3}%
 \contentsline {table}{\numberline {II.4}{\ignorespaces Composants LangChain utilisés}}{27}{table.2.4}%
-\contentsline {table}{\numberline {II.5}{\ignorespaces Bibliothèques Python utilisées}}{28}{table.2.5}%
-\contentsline {table}{\numberline {II.6}{\ignorespaces Environnement matériel et logiciel des expérimentations}}{29}{table.2.6}%
-\contentsline {table}{\numberline {II.7}{\ignorespaces Récapitulatif du matériel}}{30}{table.2.7}%
-\contentsline {table}{\numberline {II.8}{\ignorespaces Correspondance entre le matériel et les phases}}{30}{table.2.8}%
+\contentsline {table}{\numberline {II.5}{\ignorespaces Bibliothèques Python utilisées}}{27}{table.2.5}%
+\contentsline {table}{\numberline {II.6}{\ignorespaces Environnement matériel et logiciel des expérimentations}}{28}{table.2.6}%
+\contentsline {table}{\numberline {II.7}{\ignorespaces Récapitulatif du matériel}}{29}{table.2.7}%
+\contentsline {table}{\numberline {II.8}{\ignorespaces Correspondance entre le matériel et les phases}}{29}{table.2.8}%
 \contentsline {table}{\numberline {II.9}{\ignorespaces Grille de critères de comparaison}}{32}{table.2.9}%
-\contentsline {table}{\numberline {II.10}{\ignorespaces Notation des ontologies candidates}}{33}{table.2.10}%
-\contentsline {table}{\numberline {II.11}{\ignorespaces Critères d'évaluation de l'ontologie}}{39}{table.2.11}%
-\contentsline {table}{\numberline {II.12}{\ignorespaces Critères d'évaluation du système RAG}}{39}{table.2.12}%
+\contentsline {table}{\numberline {II.10}{\ignorespaces Notation des ontologies candidates}}{32}{table.2.10}%
+\contentsline {table}{\numberline {II.11}{\ignorespaces Critères d'évaluation de l'ontologie}}{38}{table.2.11}%
+\contentsline {table}{\numberline {II.12}{\ignorespaces Critères d'évaluation du système RAG}}{38}{table.2.12}%
 \contentsline {table}{\numberline {II.13}{\ignorespaces Critères d'évaluation de l'application web}}{39}{table.2.13}%
-\contentsline {table}{\numberline {II.14}{\ignorespaces Correspondance entre les phases, les objectifs et les livrables}}{40}{table.2.14}%
+\contentsline {table}{\numberline {II.14}{\ignorespaces Correspondance entre les phases, les objectifs et les livrables}}{39}{table.2.14}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {III.1}{\ignorespaces Concepts retenus et écartés lors de l'adaptation}}{44}{table.3.1}%
-\contentsline {table}{\numberline {III.2}{\ignorespaces Statistiques de l'ontologie d'origine et du modèle conceptuel adapté}}{45}{table.3.2}%
-\contentsline {table}{\numberline {III.3}{\ignorespaces Classes ajoutées à l'ontologie}}{47}{table.3.3}%
-\contentsline {table}{\numberline {III.4}{\ignorespaces Propriétés ajoutées à l'ontologie}}{48}{table.3.4}%
-\contentsline {table}{\numberline {III.5}{\ignorespaces Relations ajoutées à l'ontologie}}{50}{table.3.5}%
-\contentsline {table}{\numberline {III.6}{\ignorespaces Correspondance entre les classes de l'ontologie et les nœuds du graphe}}{52}{table.3.6}%
-\contentsline {table}{\numberline {III.7}{\ignorespaces Relations du graphe de connaissances}}{53}{table.3.7}%
-\contentsline {table}{\numberline {III.8}{\ignorespaces Fonctionnalités de l'application web}}{60}{table.3.8}%
+\contentsline {table}{\numberline {III.1}{\ignorespaces Concepts retenus et écartés lors de l'adaptation}}{43}{table.3.1}%
+\contentsline {table}{\numberline {III.2}{\ignorespaces Statistiques de l'ontologie d'origine et du modèle conceptuel adapté}}{44}{table.3.2}%
+\contentsline {table}{\numberline {III.3}{\ignorespaces Classes ajoutées à l'ontologie}}{46}{table.3.3}%
+\contentsline {table}{\numberline {III.4}{\ignorespaces Propriétés ajoutées à l'ontologie}}{47}{table.3.4}%
+\contentsline {table}{\numberline {III.5}{\ignorespaces Relations ajoutées à l'ontologie}}{49}{table.3.5}%
+\contentsline {table}{\numberline {III.6}{\ignorespaces Correspondance entre les classes de l'ontologie et les nœuds du graphe}}{51}{table.3.6}%
+\contentsline {table}{\numberline {III.7}{\ignorespaces Relations du graphe de connaissances}}{52}{table.3.7}%
+\contentsline {table}{\numberline {III.8}{\ignorespaces Fonctionnalités de l'application web}}{59}{table.3.8}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {IV.1}{\ignorespaces Résultats de l'évaluation de l'ontologie}}{65}{table.4.1}%
-\contentsline {table}{\numberline {IV.2}{\ignorespaces Résultats de l'évaluation du système RAG}}{66}{table.4.2}%
-\contentsline {table}{\numberline {IV.3}{\ignorespaces Résultats par famille de questions}}{66}{table.4.3}%
-\contentsline {table}{\numberline {IV.4}{\ignorespaces Comparaison de Llama 3 8B et de Gemini sur les 50 questions}}{67}{table.4.4}%
-\contentsline {table}{\numberline {IV.5}{\ignorespaces Volumes de résultats des quatre familles de requêtes}}{67}{table.4.5}%
-\contentsline {table}{\numberline {IV.6}{\ignorespaces Résultats de l'évaluation de l'application web}}{68}{table.4.6}%
+\contentsline {table}{\numberline {IV.1}{\ignorespaces Résultats de l'évaluation de l'ontologie}}{64}{table.4.1}%
+\contentsline {table}{\numberline {IV.2}{\ignorespaces Résultats de l'évaluation du système RAG}}{65}{table.4.2}%
+\contentsline {table}{\numberline {IV.3}{\ignorespaces Résultats par famille de questions}}{65}{table.4.3}%
+\contentsline {table}{\numberline {IV.4}{\ignorespaces Comparaison de Llama 3 8B et de Gemini sur les 50 questions}}{66}{table.4.4}%
+\contentsline {table}{\numberline {IV.5}{\ignorespaces Volumes de résultats des quatre familles de requêtes}}{66}{table.4.5}%
+\contentsline {table}{\numberline {IV.6}{\ignorespaces Résultats de l'évaluation de l'application web}}{67}{table.4.6}%

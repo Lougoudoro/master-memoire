@@ -19,14 +19,12 @@ Dans les chapitres précédents, nous avons présenté le cadre théorique et la
 \section{Ontologie adaptée et enrichie}
 \label{sec:ontologie_adaptee}
 
-En phase 2a, nous avons sélectionné l'ontologie \textit{ontoMEDTRAD} \cite{kouame_systeme_2018} (section \ref{subsec:phase2a} du chapitre \ref{chap:materiel_methodologie}) comme point de départ. Ce modèle constituait une base solide, mais incomplète pour le contexte burkinabè. Il ne représentait ni les noms vernaculaires locaux, ni les niveaux de preuve, ni la traçabilité détaillée des sources. En phase 3a, nous en avons adapté le modèle conceptuel. En phase 4, nous avons enrichi l'ontologie avec les données et individus extraits de dix documents scientifiques en phase 3b. Enfin, au cours de la même phase, nous avons importé dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF}.
+En phase 2a, nous avons sélectionné l'ontologie \textit{ontoMEDTRAD} \cite{kouame_systeme_2018} (section \ref{subsec:phase2a} du chapitre \ref{chap:materiel_methodologie}) comme point de départ. Ce modèle constituait une base solide, mais incomplète pour le contexte burkinabè. Il ne représentait ni les noms vernaculaires locaux, ni les niveaux de preuve, ni la traçabilité détaillée des sources. En phase 3a, nous en avons adapté le modèle conceptuel. En phase 4, nous avons enrichi l'ontologie avec les données et individus extraits en phase 3b. Enfin, au cours de la même phase, nous avons importé dans Neo4j l'ontologie réajustée \textit{OntoPlantMedBF}.
 
 \subsection{Vue d'ensemble du modèle}
 \label{subsec:vue_ensemble_ontologie}
 
-L'ontologie d'origine comptait 144 concepts, 76 propriétés associatives, 16 propriétés de données, 789 individus et 2 734 axiomes. Elle était formalisée en logique de description \textit{ALCHOIQ}, éditée sous Protégé~5 et vérifiée avec les raisonneurs HermiT et Pellet, qui n'y avaient signalé aucune incohérence. En phase 3a, nous en avons retenu une partie du schéma et l'avons étendue pour produire un modèle conceptuel adapté aux besoins de l'étude. Ce modèle a ensuite été enrichi par des données et des individus extraits de dix documents scientifiques, au cours des phases 3b et 4. Cette représentation a enfin été importée et ajustée dans Neo4j en phase 4.
-
-La figure \ref{fig:ontomedtrad_initiale} présente la structure de l'ontologie initiale, reconstituée à partir de la thèse.
+L'ontologie d'origine comptait 144 concepts, 76 propriétés associatives, 16 propriétés de données, 789 individus et 2 734 axiomes. Elle était formalisée en logique de description \textit{ALCHOIQ}, éditée sous Protégé~5 et vérifiée avec les raisonneurs HermiT et Pellet, qui n'y avaient signalé aucune incohérence. En phase 3a, nous en avons retenu une partie du schéma et l'avons étendue pour produire un modèle conceptuel adapté aux besoins de l'étude. Ce modèle a ensuite été enrichi par des données et des individus extraits des documents scientifiques, au cours des phases 3b et 4. Cette représentation a enfin été importée et ajustée dans Neo4j en phase 4. La figure \ref{fig:ontomedtrad_initiale} présente la structure de l'ontologie initiale, reconstituée à partir de la thèse.
 
 \begin{figure}[H]
 \centering
@@ -46,7 +44,7 @@ La figure \ref{fig:ontomedtrad_initiale} présente la structure de l'ontologie i
 
 Nous avons retenu d'ontoMEDTRAD les concepts relatifs aux plantes médicinales, à leurs parties, aux modes de préparation, aux maladies, à la localisation et aux références scientifiques. Nous les avons complétés par les classes et relations nécessaires au périmètre de notre étude. Elles portent notamment sur les usages thérapeutiques, les noms vernaculaires, les niveaux de preuve, la traçabilité documentaire, la phytochimie et la toxicologie. Nous avons écarté les modules hors périmètre, dont la couche d'iconisation ontoICONE et les concepts relatifs aux praticiens, aux patients, à l'examen clinique et à l'anamnèse. L'iconisation étant un choix de représentation visuelle, son retrait ne remet pas en cause la réutilisation du modèle conceptuel. Le tableau \ref{tab:concepts_retenus_ecartes} détaille ces choix.
 
-Nous avons réutilisé la structure conceptuelle, mais pas les 789 individus d'ontoMEDTRAD, associés au contexte et aux sources des travaux d'origine. En phase 3a, nous avons défini le modèle conceptuel adapté et ses nouveaux éléments de schéma. En phase 4, nous avons enrichi l'ontologie avec les individus extraits de dix documents scientifiques en phase 3b et leurs liens aux sources. Nous avons ensuite importé dans Neo4j l'ontologie réajustée OntoPlantMedBF.
+Nous avons réutilisé la structure conceptuelle, mais pas les 789 individus d'ontoMEDTRAD, associés au contexte et aux sources des travaux d'origine. En phase 3a, nous avons défini le modèle conceptuel adapté et ses nouveaux éléments de schéma. En phase 4, nous avons enrichi l'ontologie avec les individus extraits en phase 3b et leurs liens aux sources. Nous avons ensuite importé dans Neo4j l'ontologie réajustée OntoPlantMedBF.
 
 \begin{table}[H]
 \centering
@@ -71,9 +69,7 @@ Noms vernaculaires en langues locales & Langues (LangueLocales, LangueOfficielle
 \end{tabular}
 \end{table}
 
-Nous n'avons pas repris tels quels les concepts de recette, d'ingrédient et de remède d'ontoMEDTRAD. Nous avons retenu les classes \textit{UsageTherapeutique} et \textit{Preparation} pour représenter les besoins correspondants sous une forme adaptée. Nous n'avons pas conservé la classe générale \textit{Langues} comme axe autonome. Nous avons représenté la langue associée à un nom vernaculaire au moyen des propriétés de nom local et de code de langue. Ces concepts et relations structurent OntoPlantMedBF, dont la version peuplée contient les individus documentés dans les sources.
-
-La figure \ref{fig:ontologie_conservee} présente le modèle réduit aux concepts retenus, importé dans Protégé~5. Cette étape intermédiaire a servi de base à la construction d'OntoPlantMedBF.
+Nous n'avons pas repris tels quels les concepts de recette, d'ingrédient et de remède d'ontoMEDTRAD. Nous avons retenu les classes \textit{UsageTherapeutique} et \textit{Preparation} pour représenter les besoins correspondants sous une forme adaptée. Nous n'avons pas conservé la classe générale \textit{Langues} comme axe autonome. Nous avons représenté la langue associée à un nom vernaculaire au moyen des propriétés de nom local et de code de langue. Ces concepts et relations structurent OntoPlantMedBF, dont la version peuplée contient les individus documentés dans les sources. La figure \ref{fig:ontologie_conservee} présente le modèle réduit aux concepts retenus, importé dans Protégé~5. Cette étape intermédiaire a servi de base à la construction d'OntoPlantMedBF.
 
 \begin{figure}[H]
 \centering
@@ -82,7 +78,7 @@ La figure \ref{fig:ontologie_conservee} présente le modèle réduit aux concept
 \label{fig:ontologie_conservee}
 \end{figure}
 
-Le tableau \ref{tab:stats_ontologie} compare les métriques structurelles de l'ontologie d'origine à celles du modèle conceptuel adapté en phase 3a et de la version peuplée. Le schéma de cette dernière a été complété en phase 4 par des modes d'administration et de préparation, des propriétés de posologie et des parties de plante.
+Le tableau \ref{tab:stats_ontologie} compare les métriques structurelles de l'ontologie d'origine à celles du modèle conceptuel adapté en phase 3a et de la version peuplée. Le schéma de cette dernière a été complété en phase 4 par des modes d'administration et de préparation, des propriétés de posologie et des parties de plante. Le modèle adapté compte ainsi 69 classes, dont 40 ajoutées, et la version peuplée 92 classes et 6~877 individus.
 
 \begin{table}[H]
 \centering
@@ -105,7 +101,7 @@ Axiomes & 2 734 & Non relevé & 62~955 \\
 \end{tabular}
 \end{table}
 
-Nous n'avons pas repris les 789 individus de l'ontologie d'origine dans le modèle conceptuel adapté. La version peuplée d'OntoPlantMedBF, au format Turtle, correspond à l'étape suivante. Elle enrichit ce modèle avec des individus extraits de dix documents scientifiques. Ces données ont ensuite été importées et ajustées dans Neo4j. La figure \ref{fig:protoge_ontologie} présente la hiérarchie des 92 classes de cette version peuplée.
+Nous n'avons pas repris les 789 individus de l'ontologie d'origine dans le modèle conceptuel adapté. La version peuplée d'OntoPlantMedBF, au format Turtle, correspond à l'étape suivante. Elle enrichit ce modèle avec les individus extraits des documents scientifiques. Ces données ont ensuite été importées et ajustées dans Neo4j. La figure \ref{fig:protoge_ontologie} présente la hiérarchie des 92 classes de cette version peuplée.
 
 \begin{figure}[H]
 \centering
@@ -310,8 +306,6 @@ Nous avons aligné les noms des relations du graphe sur les propriétés objet d
 \end{tabular}
 \end{table}
 
-Ce mapping reprend les domaines et portées définis dans OntoPlantMedBF. Nous avons repris les noms OWL tels quels dans Neo4j afin de préserver cette équivalence lors du chargement et des requêtes.
-
 \subsection{Import et peuplement}
 \label{subsec:import_peuplement}
 
@@ -389,9 +383,7 @@ RETURN DISTINCT p.nomScientifique AS plante
 \end{verbatim}
 \end{quote}
 
-Ces requêtes, exécutées sur la base peuplée, renvoient respectivement 136, 118, 7 et 194 lignes (tableau \ref{tab:volumes_requetes} du chapitre \ref{chap:resultats_discussion}).
-
-Pour répondre à la question « quelles plantes sont rapportées contre le paludisme au Kourittenga ? », une requête relie les nœuds \textit{Plante}, \textit{UsageTherapeutique}, \textit{Maladie} et \textit{Localite}, puis renvoie les noms scientifiques correspondants, ici 99 plantes. Nous avons vérifié le fonctionnement de la base et les résultats des requêtes avant d'intégrer le système d'accès en langage naturel.
+Ces requêtes, exécutées sur la base peuplée, renvoient respectivement 136, 118, 7 et 194 lignes (tableau \ref{tab:volumes_requetes} du chapitre \ref{chap:resultats_discussion}). Pour répondre à la question « quelles plantes sont rapportées contre le paludisme au Kourittenga ? », une requête relie les nœuds \textit{Plante}, \textit{UsageTherapeutique}, \textit{Maladie} et \textit{Localite}, puis renvoie les noms scientifiques correspondants, ici 99 plantes. Nous avons vérifié le fonctionnement de la base et les résultats des requêtes avant d'intégrer le système d'accès en langage naturel.
 
 % ============================================================
 % III.3. INTÉGRATION DE L'INTELLIGENCE ARTIFICIELLE
@@ -407,7 +399,7 @@ Nous avons utilisé des modèles de langue à deux étapes. Nous les avons d'abo
 
 \subsubsection{Environnement d'extraction}
 
-Nous avons réalisé une première extraction avec le modèle \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, en soumettant les documents un par un. Elle a porté sur dix des 35 documents du corpus, en octobre 2026. Le document de Ky et al., numérisé sans couche de texte, a dû passer par une reconnaissance optique de caractères, et son extraction restait partielle. Nous avons ensuite réalisé une seconde extraction des mêmes documents avec \textbf{Claude Opus 5.5} d'Anthropic, dans Claude Code, en novembre 2026. Elle reprend le schéma de sortie et les règles de la première. Le modèle y relit les tableaux en image et couvre l'ensemble de leurs lignes, y compris pour Ky et al. C'est cette seconde extraction qui a peuplé l'ontologie. Elle n'a pas encore fait l'objet d'une vérification manuelle.
+Nous avons réalisé une première extraction avec le modèle \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, en soumettant les documents un par un. Elle a porté sur dix des 35 documents scientifiques, en octobre 2026. Le document de Ky et al., numérisé sans couche de texte, a dû passer par une reconnaissance optique de caractères, et son extraction restait partielle. Nous avons ensuite réalisé une seconde extraction des mêmes documents avec \textbf{Claude Opus 5.5} d'Anthropic, dans Claude Code, en novembre 2026. Elle reprend le schéma de sortie et les règles de la première. Le modèle y relit les tableaux en image et couvre l'ensemble de leurs lignes, y compris pour Ky et al. C'est cette seconde extraction qui a peuplé l'ontologie. Elle n'a pas encore fait l'objet d'une vérification manuelle.
 
 \subsubsection{Le prompt d'extraction}
 
@@ -550,7 +542,7 @@ Nous avons organisé l'application autour d'un point d'entrée, de huit écrans 
 \subsection{Fonctionnalités}
 \label{subsec:fonctionnalites}
 
-Le tableau \ref{tab:fonctionnalites} récapitule les fonctions définies en phase 5 (section \ref{subsec:phase5}).
+Le tableau \ref{tab:fonctionnalites} récapitule les fonctions définies en phase 5 (section \ref{subsec:phase5}). Deux d'entre elles restent partielles. Les références s'affichent sous la réponse et non sous chaque information, et la visualisation du graphe part d'une plante, pas d'une maladie.
 
 \begin{table}[H]
 \centering
@@ -574,8 +566,6 @@ Visualisation du graphe & Représentation des relations entourant une plante ou 
 \hline
 \end{tabular}
 \end{table}
-
-Deux fonctions restent partielles. Les références s'affichent sous la réponse et non sous chaque information, et la visualisation du graphe part d'une plante, pas d'une maladie.
 
 Nous avons ajouté une alerte de toxicité à l'assistant. Lorsqu'une réponse cite une plante pour laquelle la base contient des données toxicologiques, un encadré les signale sous la réponse, chacune avec sa source. Neuf plantes sont concernées, pour les treize effets toxicologiques du graphe. L'alerte reprend les données rapportées sans les évaluer. Certaines indiquent seulement qu'une étude de toxicité a été menée, ou que les répondants ne mentionnent pas de toxicité. Elle complète l'affichage des risques en tête de la fiche de chaque plante.
 
@@ -617,6 +607,7 @@ La figure \ref{fig:ecran_fiche} montre la fiche de \textit{Cochlospermum plancho
 % CONCLUSION DU CHAPITRE
 % ============================================================
 
+\phantomsection
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 

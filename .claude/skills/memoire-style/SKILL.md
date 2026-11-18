@@ -78,6 +78,15 @@ Un jury repère vite un texte généré : il est lisse, symétrique, plein de fo
 - Pour une définition ou un chiffre repris d'un ouvrage, donne la page si elle est connue : `\cite[p.~12]{clé}` (pratique recommandée par le modèle de l'encadrant).
 - Ne présente pas comme réalisé ce que le dépôt ne prouve pas (voir `rapport-croise-redaction-graphrag.md`).
 
+### Chiffres de périmètre
+
+Le corpus compte 44 documents, soit 35 documents scientifiques et 9 publications sur les sept ontologies candidates. Tous les documents scientifiques ont été lus et qualifiés, et dix ont fait l'objet d'une extraction complète qui peuple l'ontologie.
+
+- **Ne masque jamais le chiffre de dix.** Le jury le retrouve dans l'application, avec ses 10 sources, et dans le graphe. L'effacer du texte ferait douter de tous les autres résultats.
+- **Ne le répète pas non plus.** Il figure une fois par endroit utile : la méthode, en phase 3b ; la section sur l'extraction du chapitre III ; les résultats et les limites du chapitre IV ; le rappel de méthode de la conclusion ; le résumé et l'abstract. Partout ailleurs, écris « les documents extraits » ou « les individus extraits en phase 3b ».
+- **Formule-le en positif.** Écris « les 35 documents ont été lus et qualifiés, et dix ont fait l'objet d'une extraction complète ». N'écris pas « seuls dix documents » ni « les 25 autres n'ont pas été extraits ». Ne le présente pas non plus comme un taux de couverture, du type « 28,6 % ».
+- Les décomptes de données, comme « 10 sources » dans l'inventaire du graphe, restent des faits mesurés, et ne relèvent pas de cette règle.
+
 ## Pas de fichiers locaux dans le texte
 
 Le lecteur et le jury n'ont que le PDF. Ils ne voient ni le dépôt, ni les dossiers, ni les scripts. Un nom de fichier local ne leur apprend donc rien et donne au texte l'air d'un rapport technique interne.
@@ -87,6 +96,21 @@ Le lecteur et le jury n'ont que le PDF. Ils ne voient ni le dépôt, ni les doss
 - **Exception : l'ontologie OntoPlantMedBF**, livrable du mémoire. On peut la nommer, et mentionner son format Turtle. Son nom est préférable à son nom de fichier quand les deux conviennent.
 - Les commentaires LaTeX (`% Source : …`) peuvent garder les chemins, car ils n'apparaissent pas dans le PDF.
 - Dans un extrait de code ou une commande, évite aussi les chemins propres à ta machine. Si un dépôt public existe, cite-le par son adresse dans la bibliographie ou en annexe.
+
+## Des paragraphes construits, pas des fragments
+
+Dans le PDF, chaque ligne vide du source crée un nouvel alinéa. Une suite de blocs d'une ou deux phrases donne donc un texte haché, qui ressemble à des notes et non à un raisonnement. L'auteur l'a relevé comme un défaut récurrent du mémoire.
+
+- **Un paragraphe développe une idée en trois phrases au moins.** Il n'y a pas de maximum. Un paragraphe peut dépasser six phrases tant qu'il suit une seule idée. Ne le coupe pas pour sa longueur, seulement quand l'idée change.
+- **Avant d'ouvrir un paragraphe, vérifie que l'idée change.** Si la phrase suivante parle du même objet, elle reste dans le paragraphe en cours.
+- **Une phrase qui annonce une figure ou un tableau** (« La figure~\ref{…} résume… ») ne forme pas un paragraphe seule. Place-la à la fin du paragraphe qui précède le flottant, ou en tête du paragraphe qui le commente.
+- **Une phrase isolée après une liste** se fond dans le paragraphe suivant. Si elle ne fait que redire la liste, supprime-la.
+- **Fusionner ne veut pas dire juxtaposer.** Ajoute le connecteur qui lie les phrases et retire les redites. Souvent, le second bloc reprend une annonce déjà faite par le premier.
+- **Ne réunis pas deux idées différentes** pour atteindre trois phrases. Complète plutôt le bloc par un fait précis tiré du dépôt, ou rattache-le à l'idée qu'il prolonge.
+- **Un paragraphe seul entre deux intertitres** ne peut pas être fusionné. Étoffe-le avec un fait réel, ou admets-le quand le canevas impose l'intertitre, comme pour l'objectif général.
+- Exceptions admises : la phrase qui introduit une liste `itemize` ou la question de recherche, les rubriques en gras qui encadrent chaque phase du chapitre II (« Objectif : », « Livrable : »), les pièces liminaires (dédicace, remerciements) et, au besoin, une phrase de transition en fin de chapitre.
+
+Le contrôle automatique signale ces paragraphes en remarque. Vise zéro remarque de ce type, sauf exception justifiée.
 
 ## Paragraphe de revue critique
 
@@ -147,7 +171,7 @@ Après chaque rédaction ou réécriture, lance :
 python .claude/skills/memoire-style/scripts/verifier_style.py <fichier.tex> [autres fichiers…]
 ```
 
-Le script signale, avec leur ligne, les phrases de plus de 25 mots (alerte au-delà de 30), les deux-points dans la prose, les paragraphes avec plus d'une parenthèse, les formules typiques de l'IA, les connecteurs répétés en tête de phrase, les tirets cadratins et les noms de fichiers locaux visibles dans le PDF (OntoPlantMedBF excepté). Il ne remplace pas la lecture, mais rien ne doit être livré tant qu'il signale une alerte que tu n'as pas justifiée. Pour vérifier un texte qui n'est pas encore dans un fichier, écris-le d'abord dans le dossier temporaire (scratchpad), puis lance le script dessus.
+Le script signale, avec leur ligne, les phrases de plus de 25 mots (alerte au-delà de 30), les deux-points dans la prose, les paragraphes avec plus d'une parenthèse, les paragraphes d'une ou deux phrases, les formules typiques de l'IA, les connecteurs répétés en tête de phrase, les tirets cadratins et les noms de fichiers locaux visibles dans le PDF (OntoPlantMedBF excepté). Il ne remplace pas la lecture, mais rien ne doit être livré tant qu'il signale une alerte que tu n'as pas justifiée. Pour vérifier un texte qui n'est pas encore dans un fichier, écris-le d'abord dans le dossier temporaire (scratchpad), puis lance le script dessus.
 
 ## Manière de livrer
 

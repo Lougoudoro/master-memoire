@@ -5,6 +5,7 @@ Signale, ligne par ligne :
   - les phrases de plus de 25 mots (ALERTE au-delà de 30) ;
   - les deux-points dans la prose (hors liste introduite et étiquettes de puces) ;
   - les paragraphes contenant plus d'une parenthèse ;
+  - les paragraphes d'une ou deux phrases, qui hachent le texte ;
   - les formules typiques des textes générés par IA ;
   - les connecteurs répétés en tête de phrases consécutives ;
   - les tirets cadratins.
@@ -61,6 +62,9 @@ CONNECTEURS = [
 # (exception voulue par l'auteur, voir memoire-style).
 ENV_IGNORES = ("table", "tabular", "figure", "equation", "align", "verbatim",
                "lstlisting", "longtable", "tikzpicture", "minted", "quote")
+
+# Pièces où les paragraphes courts sont l'usage (dédicace, remerciements, page de garde).
+LIMINAIRES = {"dedicace", "remerciements", "gard", "sigle-abreviation"}
 
 ABREV = ["et al.", "p.~", "p. ", "pp. ", "Dr.", "Pr.", "M.", "Mme.", "etc.", "cf.",
          "vol.", "n°.", "fig.", "Fig.", "éd.", "op. cit.", "i.e.", "e.g.", "c.-à-d."]
@@ -157,6 +161,26 @@ def analyser(chemin: Path):
         if not texte.strip():
             continue
 
+        # Paragraphes trop courts : une ou deux phrases isolées hachent le texte.
+        # Exceptions : puces de liste, phrase qui annonce une liste, pièces liminaires.
+        utiles = lambda ls: (l.strip() for l in ls
+                             if l.strip() and not re.match(r"%|\\label\{", l.strip()))
+        suivante = next(utiles(lignes[para[-1][0]:]), "")
+        precedente = next(utiles(reversed(lignes[:debut - 1])), "")
+        annonce = re.match(r"\\begin\{(itemize|enumerate|description|quote|center)", suivante)
+        # Rubrique en gras (« \textbf{Objectif} : … », « \textbf{Livrable} : … ») : repère voulu
+        rubrique = re.match(r"\\textbf\{[^}]*(\}\s*:|:\s*\})", brut.strip())
+        if ("\\item" not in brut and not annonce and not rubrique and chemin.stem not in LIMINAIRES
+                and len(texte.split()) >= 6):
+            n_phr = len(couper_phrases(texte))
+            titre = r"\\(sub)*section|\\chapter"
+            if n_phr <= 2 and re.match(titre, precedente) and re.match(titre, suivante):
+                remarques.append((debut, f"seul paragraphe de sa section, en {n_phr} phrase(s) : "
+                                         "l'étoffer, ou l'admettre si le canevas impose l'intertitre"))
+            elif n_phr <= 2:
+                remarques.append((debut, f"paragraphe de {n_phr} phrase(s) : le fusionner avec "
+                                         "le paragraphe voisin qui traite de la même idée"))
+
         # Parenthèses par paragraphe
         n_par = len(re.findall(r"\(", texte))
         if n_par > 1:
@@ -217,6 +241,8 @@ def analyser(chemin: Path):
 
 
 def main():
+    # La console Windows redirigée encode en cp1252, qui ne connaît pas « ≤ » ni « … ».
+    sys.stdout.reconfigure(encoding="utf-8")
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(2)

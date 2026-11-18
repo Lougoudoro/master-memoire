@@ -19,30 +19,24 @@ Les chapitres précédents ont présenté la démarche suivie et le système dé
 \section{Évaluation de l'ontologie}
 \label{sec:res_ontologie}
 
-Nous avons évalué la couverture, la cohérence, la traçabilité et l'extensibilité de l'ontologie, quatre critères retenus en phase 6 (tableau \ref{tab:eval_ontologie} du chapitre \ref{chap:materiel_methodologie}). Nous décrivons la méthode employée et les résultats disponibles pour chacun.
+Nous avons évalué la couverture, la cohérence, la traçabilité et l'extensibilité de l'ontologie, quatre critères retenus en phase 6 (tableau \ref{tab:eval_ontologie} du chapitre \ref{chap:materiel_methodologie}). Nous décrivons la méthode employée et les résultats disponibles pour chacun. Un tableau de synthèse les réunit en fin de section.
 
 \subsection{Couverture}
 \label{subsec:res_couverture}
 
-Nous avons vérifié la couverture en confrontant l'ontologie peuplée aux extractions des dix documents traités. Nous avons examiné si les noms scientifiques et vernaculaires, les pathologies, les modes de préparation et les sources citées étaient représentés dans le modèle.
-
-Le fichier peuplé contient 6~877 individus issus de dix des 35 documents du corpus, soit 28,6~\%. Il compte notamment 289 plantes, 1~676 usages thérapeutiques, 180 maladies et 10 sources. Les extractions JSON comptent 623 fiches de plantes, à raison d'une fiche par plante et par document, regroupées en 289 plantes distinctes. Les effectifs d'individus correspondent à ceux des extractions pour les 278 activités pharmacologiques et les 13 observations toxicologiques. Pour les usages, les 1~734 entrées des extractions donnent 1~676 individus après exclusion des 25 usages répulsifs et des 33 usages vétérinaires. Le modèle d'origine couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}.
+Nous avons vérifié la couverture en confrontant l'ontologie peuplée aux extractions des documents traités. Nous avons examiné si les noms scientifiques et vernaculaires, les pathologies, les modes de préparation et les sources citées étaient représentés dans le modèle. Le fichier peuplé contient 6~877 individus, issus des dix documents scientifiques extraits. Il compte notamment 289 plantes, 1~676 usages thérapeutiques, 180 maladies et 10 sources. Les extractions JSON comptent 623 fiches de plantes, à raison d'une fiche par plante et par document, regroupées en 289 plantes distinctes. Les effectifs d'individus correspondent à ceux des extractions pour les 278 activités pharmacologiques et les 13 observations toxicologiques. Pour les usages, les 1~734 entrées des extractions donnent 1~676 individus après exclusion des 25 usages répulsifs et des 33 usages vétérinaires. Le modèle d'origine couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}.
 
 La couverture varie selon les connaissances disponibles dans le corpus. Celui-ci porte surtout sur certaines pathologies, notamment le paludisme, et sur un nombre restreint de régions. Le dosage et la toxicité sont peu représentés lorsque les documents ne les précisent pas. Nous avons limité l'extraction aux informations documentées (section \ref{subsec:extraction_llm} du chapitre \ref{chap:conception_developpement}).
 
 \subsection{Cohérence}
 \label{subsec:res_coherence}
 
-Nous avons contrôlé la cohérence avec HermiT dans Protégé~5 après les principales modifications de classes, propriétés et relations. Le raisonneur n'a signalé aucune incohérence. Nous avions également prévu des requêtes de test pour vérifier l'emploi des propriétés sur les domaines attendus. Après le peuplement et l'import de phase 4, elles devaient aussi vérifier le rattachement des instances à leurs classes. Sur la version peuplée, HermiT a traité l'ontologie en 3~143~ms sans signaler d'incohérence ni de classe insatisfiable. Après l'import, nous avons exécuté dans Neo4j six requêtes de contrôle sur l'ensemble du graphe. Elles recherchaient les usages sans source, sans plante ou sans maladie cible, ainsi que les plantes, les composés et les effets toxicologiques sans source. Aucune n'a renvoyé de résultat. L'import a aussi vérifié les domaines et les portées des propriétés sur les 25~320 relations, sans anomalie.
-
-Ce résultat indique l'absence de contradiction dans le modèle, mais pas la justesse des connaissances qu'il contient. Une proposition erronée mais cohérente pourrait satisfaire ce contrôle.
+Nous avons contrôlé la cohérence avec HermiT dans Protégé~5 après les principales modifications de classes, propriétés et relations. Le raisonneur n'a signalé aucune incohérence. Nous avions également prévu des requêtes de test pour vérifier l'emploi des propriétés sur les domaines attendus. Après le peuplement et l'import de phase 4, elles devaient aussi vérifier le rattachement des instances à leurs classes. Sur la version peuplée, HermiT a traité l'ontologie en 3~143~ms sans signaler d'incohérence ni de classe insatisfiable. Après l'import, nous avons exécuté dans Neo4j six requêtes de contrôle sur l'ensemble du graphe. Elles recherchaient les usages sans source, sans plante ou sans maladie cible, ainsi que les plantes, les composés et les effets toxicologiques sans source. Aucune n'a renvoyé de résultat. L'import a aussi vérifié les domaines et les portées des propriétés sur les 25~320 relations, sans anomalie. Ce résultat indique l'absence de contradiction dans le modèle, mais pas la justesse des connaissances qu'il contient. Une proposition erronée mais cohérente pourrait satisfaire ce contrôle.
 
 \subsection{Traçabilité}
 \label{subsec:res_tracabilite}
 
-Nous avons vérifié que les connaissances enregistrées restent rattachées aux sources correspondantes. L'extraction ne renseignait que les champs présents dans les documents et l'import associait les faits à une source (section \ref{subsec:tracabilite_reponses} du chapitre \ref{chap:conception_developpement}).
-
-Nous avons contrôlé sur l'ensemble du graphe le rattachement des faits à un nœud \textit{SourceScientifique}. Toutes les plantes et tous les usages sont reliés à une source, soit 289 plantes sur 289 et 1~676 usages sur 1~676. Chaque usage conserve la référence de son passage. Tous les usages portent un niveau de preuve. Les 10 sources ont un titre et un DOI. Nous avons également contrôlé les usages dans les PDF d'origine. Pour 1~497 usages sur 1~501 contrôlables, le nom de la plante figure dans le document, sous sa forme retenue ou sous une graphie de la source. Dans les quatre écarts, le nom est bien présent, mais la recherche automatique ne le retrouve pas. C'est notamment le cas lorsqu'une cellule de tableau le coupe. Les 175 autres usages proviennent d'un document numérisé sans couche de texte, celui de Ky et ses collègues. Ils n'ont pas été contrôlés de cette manière. Après reconnaissance optique de caractères, le nom exact y figure pour 93 d'entre eux. Nous avons aussi tiré au sort un échantillon de 30 usages parmi les 1~501. Une lecture assistée par un outil d'intelligence artificielle a retrouvé, pour les 30, le fait principal, c'est-à-dire la plante et l'indication. Elle s'est appuyée sur les pages en image lorsque le texte des tableaux était désordonné, et n'a relevé aucune contradiction. Cet outil étant celui qui a produit l'extraction, ce contrôle n'est pas indépendant et ne remplace pas une relecture par un spécialiste. L'import signale comme anomalie tout usage dépourvu de source ; aucun cas n'a été relevé.
+Nous avons vérifié que les connaissances enregistrées restent rattachées aux sources correspondantes. L'extraction ne renseignait que les champs présents dans les documents et l'import associait les faits à une source (section \ref{subsec:tracabilite_reponses} du chapitre \ref{chap:conception_developpement}). Nous avons contrôlé sur l'ensemble du graphe le rattachement des faits à un nœud \textit{SourceScientifique}. Toutes les plantes et tous les usages sont reliés à une source, soit 289 plantes sur 289 et 1~676 usages sur 1~676. Chaque usage conserve la référence de son passage. Tous les usages portent un niveau de preuve. Les 10 sources ont un titre et un DOI. Nous avons également contrôlé les usages dans les PDF d'origine. Pour 1~497 usages sur 1~501 contrôlables, le nom de la plante figure dans le document, sous sa forme retenue ou sous une graphie de la source. Dans les quatre écarts, le nom est bien présent, mais la recherche automatique ne le retrouve pas. C'est notamment le cas lorsqu'une cellule de tableau le coupe. Les 175 autres usages proviennent d'un document numérisé sans couche de texte, celui de Ky et ses collègues. Ils n'ont pas été contrôlés de cette manière. Après reconnaissance optique de caractères, le nom exact y figure pour 93 d'entre eux. Nous avons aussi tiré au sort un échantillon de 30 usages parmi les 1~501. Une lecture assistée par un outil d'intelligence artificielle a retrouvé, pour les 30, le fait principal, c'est-à-dire la plante et l'indication. Elle s'est appuyée sur les pages en image lorsque le texte des tableaux était désordonné, et n'a relevé aucune contradiction. Cet outil étant celui qui a produit l'extraction, ce contrôle n'est pas indépendant et ne remplace pas une relecture par un spécialiste. L'import signale comme anomalie tout usage dépourvu de source ; aucun cas n'a été relevé.
 
 \subsection{Extensibilité}
 \label{subsec:res_extensibilite}
@@ -51,7 +45,7 @@ Lors de la phase 3a, nous avons adapté le modèle conceptuel en lui ajoutant de
 
 \subsection{Synthèse de l'évaluation de l'ontologie}
 
-Le tableau \ref{tab:res_ontologie} réunit les quatre critères et leurs résultats.
+Le tableau \ref{tab:res_ontologie} réunit les quatre critères et leurs résultats. La cohérence et la traçabilité sont vérifiées sur l'ensemble du graphe. La couverture porte en revanche sur les seuls documents extraits, et l'extensibilité n'a pas été testée de façon isolée.
 
 \begin{table}[H]
 \centering
@@ -61,7 +55,7 @@ Le tableau \ref{tab:res_ontologie} réunit les quatre critères et leurs résult
 \hline
 \textbf{Critère} & \textbf{Méthode} & \textbf{Résultat} \\
 \hline
-Couverture & Comparaison aux extractions, sur les 35 documents du corpus & 10/35 documents (28,6~\%) peuplés ; 1~676 usages représentés sur 1~734 extraits (58 exclus) \\
+Couverture & Comparaison aux extractions des documents traités & 10 documents scientifiques extraits ; 1~676 usages représentés sur 1~734 extraits (58 exclus) \\
 \hline
 Cohérence & Raisonneurs et requêtes de contrôle & Aucune incohérence signalée. Sur la version peuplée, 0 cas dans les six requêtes de contrôle et 0 anomalie de domaine ou de portée. \\
 \hline
@@ -79,7 +73,7 @@ Extensibilité & Ajouts en cours de phases 3a et 4 & Pas de test isolé ; schém
 \section{Évaluation du système RAG}
 \label{sec:res_rag}
 
-Nous avons évalué la pertinence, la fidélité, l'exactitude et la traçabilité du système RAG. Le protocole de phase 6 prévoyait leur mesure au moyen d'un jeu de 50 questions de référence (tableau \ref{tab:eval_rag} du chapitre \ref{chap:materiel_methodologie}).
+Nous avons évalué la pertinence, la fidélité, l'exactitude et la traçabilité du système RAG. Le protocole de phase 6 prévoyait leur mesure au moyen d'un jeu de 50 questions de référence (tableau \ref{tab:eval_rag} du chapitre \ref{chap:materiel_methodologie}). Les mesures portent sur Llama 3 8B, le modèle du système, et sur Gemini, retenu comme point de comparaison.
 
 \subsection{Construction du jeu d'évaluation}
 \label{subsec:res_jeu_50}
@@ -115,7 +109,7 @@ Traçabilité & Taux de couverture des réponses sourcées & 45/45 réponses att
 
 La valeur non attendue est \textit{Terminalia engleri}, citée pour la diarrhée à la question Q04. Les deux faits manquants portent sur les questions Q02 et Q18. Ces trois écarts tiennent à nos réponses attendues, calculées avant le regroupement des libellés de maladies et de familles. Nous ne les avons pas recalculées depuis, afin de garder les exécutions comparables. La base rattache désormais \textit{Terminalia engleri} à une diarrhée sanglante, et \textit{Euphorbia balsamifera}, attendue à la question Q02, à la coqueluche plutôt qu'à la toux. À la question Q18, la réponse attendue compte la famille de \textit{Balanites aegyptiaca} sous deux graphies, « Zigophyllaceae » et « Zygophyllaceae ». La base ne garde que la seconde, que la réponse cite.
 
-Les scores globaux ne rendent pas compte des différences entre familles de questions. Le tableau \ref{tab:res_rag_familles} présente les résultats par famille.
+Les scores globaux pourraient masquer des différences entre familles de questions. Le tableau \ref{tab:res_rag_familles} présente donc les résultats par famille. Aucune famille ne compte d'échec, y compris les cinq questions hors corpus.
 
 \begin{table}[H]
 \centering
@@ -179,7 +173,7 @@ Une première version du système travaillait sur un graphe antérieur de 141 pl
 \subsection{Volumes d'interrogation de la base}
 \label{subsec:res_volumes}
 
-Nous avons relevé les volumes obtenus avec les quatre familles de requêtes définies en phase 4 (section \ref{subsec:phase4} du chapitre \ref{chap:materiel_methodologie}). Le tableau \ref{tab:volumes_requetes} les présente.
+Nous avons relevé les volumes obtenus avec les quatre familles de requêtes définies en phase 4 (section \ref{subsec:phase4} du chapitre \ref{chap:materiel_methodologie}). Le tableau \ref{tab:volumes_requetes} les présente. Ces volumes décrivent ce que la base renvoie, sans juger de l'exactitude des faits.
 
 \begin{table}[H]
 \centering
@@ -203,10 +197,7 @@ Requêtes spatiales & Plantes d'une région donnée & 194 \\
 \subsection{Observations qualitatives}
 \label{subsec:res_observations}
 
-Les métriques ne décrivent pas à elles seules le déroulement des tests. Nous les complétons par les observations qualitatives recueillies.
-
-
-Les tests ont porté sur des questions simples, de traçabilité, spatiales, sur des recettes multi-plantes et sur des sujets absents du corpus. Avec Llama 3, aucune des 45 questions à réponse attendue n'a reçu de refus à tort. La correction a été demandée pour 6 questions. Pour la question Q33, la première requête cherchait « annonasenegalensis », valeur absente de la base, et la correction a donné la bonne réponse. Pour les 5 questions hors corpus, elle a de nouveau abouti à un refus. Neuf réponses portent sur plus de 25 faits et ont été rédigées en plusieurs pages, jusqu'à huit pour la question Q45. La lecture des réponses révèle un défaut que le score ne voit pas, car il ne compte que les valeurs du type attendu. Llama 3 recopie parfois la phrase d'exemple de sa consigne de rédaction. Trois réponses en contiennent un fragment, aux questions Q01, Q19 et Q45. Les réponses à Q19 et Q45 affirment ainsi que la décoction est la préparation la plus rapportée. Leurs requêtes ne portaient pourtant pas sur les préparations. Aucune réponse de Gemini ne présente ce défaut.
+Les métriques ne décrivent pas à elles seules le déroulement des tests. Nous les complétons par les observations qualitatives recueillies. Les tests ont porté sur des questions simples, de traçabilité, spatiales, sur des recettes multi-plantes et sur des sujets absents du corpus. Avec Llama 3, aucune des 45 questions à réponse attendue n'a reçu de refus à tort. La correction a été demandée pour 6 questions. Pour la question Q33, la première requête cherchait « annonasenegalensis », valeur absente de la base, et la correction a donné la bonne réponse. Pour les 5 questions hors corpus, elle a de nouveau abouti à un refus. Neuf réponses portent sur plus de 25 faits et ont été rédigées en plusieurs pages, jusqu'à huit pour la question Q45. La lecture des réponses révèle un défaut que le score ne voit pas, car il ne compte que les valeurs du type attendu. Llama 3 recopie parfois la phrase d'exemple de sa consigne de rédaction. Trois réponses en contiennent un fragment, aux questions Q01, Q19 et Q45. Les réponses à Q19 et Q45 affirment ainsi que la décoction est la préparation la plus rapportée. Leurs requêtes ne portaient pourtant pas sur les préparations. Aucune réponse de Gemini ne présente ce défaut.
 
 Nous avons également posé 12 questions libres, hors des types du jeu d'évaluation. Elles comprennent par exemple « citer 2 plantes » ou « Quelles plantes sont utilisées à la fois contre le paludisme et contre la toux ? ». Jugées à la lecture, elles constituent un contrôle séparé, qui ne s'ajoute pas au score. Avec la version finale, le système donne une réponse utilisable aux 12 questions. La salutation « Bonjour, qui es-tu ? » reçoit la présentation du système. Dans une réponse de Llama 3, la phrase d'exemple recopiée cite \textit{Ficus glumosa} parmi les plantes du Kourittenga, où la base ne la rapporte pas. Ces questions ont été écrites après avoir vu les échecs de la première version, et elles ont aussi guidé la banque d'exemples. Leur valeur de contrôle en est réduite.
 
@@ -253,25 +244,23 @@ Nous avons séparé le temps d'interrogation de Neo4j du temps restant, qui regr
 \section{Discussion}
 \label{sec:discussion}
 
-Nous avons examiné les résultats au regard des questions de recherche et des systèmes existants, puis précisé les limites de l'étude et les pistes de travail qu'elles suggèrent.
+Nous examinons d'abord les résultats au regard des trois questions de recherche. Nous les comparons ensuite aux systèmes existants. Nous précisons enfin les limites de l'étude et les pistes de travail qu'elles suggèrent.
 
 \subsection{Confrontation aux objectifs de la recherche}
 \label{subsec:discussion_objectifs}
 
-La première question de recherche portait sur le choix d'une ontologie adaptée au contexte burkinabè et sur les réajustements qu'elle demandait. Nous avons comparé cinq ontologies à l'aide d'une grille commune au chapitre \ref{chap:materiel_methodologie}. \textit{ontoMEDTRAD} a obtenu le score le plus élevé, 4,7 contre 3,7 pour \textit{WATRIMed}. Nous l'avons retenue comme base conceptuelle, en tenant compte des limites du modèle d'origine. Nous avons étendu le schéma par des classes et des relations sur les noms vernaculaires, les usages, les parties utilisées et les préparations. D'autres ajouts concernent les niveaux de preuve, les sources, la localisation, la phytochimie et la toxicologie.
+La première question de recherche portait sur le choix d'une ontologie adaptée au contexte burkinabè et sur les réajustements qu'elle demandait. Nous avons comparé sept ontologies à l'aide d'une grille commune au chapitre \ref{chap:materiel_methodologie}. \textit{ontoMEDTRAD} a obtenu le score le plus élevé, 4,5 contre 3,7 pour \textit{WATRIMed}. Nous l'avons retenue comme base conceptuelle, en tenant compte des limites du modèle d'origine. Nous avons étendu le schéma par des classes et des relations sur les noms vernaculaires, les usages, les parties utilisées et les préparations. D'autres ajouts concernent les niveaux de preuve, les sources, la localisation, la phytochimie et la toxicologie.
 
-La deuxième question portait sur l'extraction des connaissances et leur traçabilité. Les connaissances de dix documents ont été extraites avec l'aide de l'intelligence artificielle. Elles n'ont pas encore fait l'objet d'une vérification manuelle. Leur qualité repose sur des contrôles automatiques et sur la lecture assistée d'un échantillon de 30 usages. Le rattachement aux sources est complet pour les usages et les plantes (section \ref{subsec:res_tracabilite}). Le nom de la plante figure dans le document d'origine pour 1~497 usages sur 1~501 contrôlables, mais l'exactitude de chaque information n'a été contrôlée que partiellement. Nous n'avons pas comparé cette méthode à une extraction manuelle.
+La deuxième question portait sur l'extraction des connaissances et leur traçabilité. Nous avons extrait les connaissances avec l'aide de l'intelligence artificielle. Elles n'ont pas encore fait l'objet d'une vérification manuelle. Leur qualité repose sur des contrôles automatiques et sur la lecture assistée d'un échantillon de 30 usages. Le rattachement aux sources est complet pour les usages et les plantes (section \ref{subsec:res_tracabilite}). Le nom de la plante figure dans le document d'origine pour 1~497 usages sur 1~501 contrôlables, mais l'exactitude de chaque information n'a été contrôlée que partiellement. Nous n'avons pas comparé cette méthode à une extraction manuelle.
 
 La troisième question concernait l'accès en langage naturel au moyen d'une solution numérique, qui associe un système RAG à une application web. Le modèle traduit la question en requête Cypher, validée en lecture seule, puis produit une réponse accompagnée de sources. Avec Llama 3 comme avec Gemini, les réponses citent 913 des 915 faits attendus, comme le montre le tableau \ref{tab:comparaison_modeles}. Ces mesures ne renseignent pas sur l'exactitude scientifique des faits. Elles ont en outre été obtenues après des corrections guidées par ce même jeu de questions. L'accès en langage naturel fonctionne donc sur ce jeu, sans que l'on puisse en déduire sa fiabilité sur les questions d'autres utilisateurs. Nous avons développé l'application et défini les fonctions présentées au tableau \ref{tab:fonctionnalites}. La campagne de tests auprès des utilisateurs n'a pas été menée. Nous ne pouvons donc pas dire dans quelle mesure l'application facilite leur accès aux connaissances. La réponse à la troisième question reste partielle.
 
 \subsection{Confrontation aux systèmes existants}
 \label{subsec:discussion_existant}
 
-Le modèle d'origine \textit{ontoMEDTRAD} couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}. Notre base compte 289 plantes et 1~676 usages issus de dix documents. Ces chiffres ne sont pas directement comparables, car les deux travaux n'ont pas le même périmètre et notre décompte ne distingue pas les remèdes de la même façon.
+Le modèle d'origine \textit{ontoMEDTRAD} couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}. Notre base compte 289 plantes et 1~676 usages issus des documents extraits. Ces chiffres ne sont pas directement comparables, car les deux travaux n'ont pas le même périmètre et notre décompte ne distingue pas les remèdes de la même façon.
 
-Les publications de \textit{WATRIMed} ne décrivent que ses classes supérieures. Notre travail relie au contraire le schéma à une base interrogeable et à une application qui présente les réponses avec leurs sources.
-
-L'apport du travail tient à la chaîne qui relie les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les contrôles chiffrés établissent la présence de ces liens ; leur exactitude n'est vérifiée que sur une partie des documents.
+Les publications de \textit{WATRIMed} ne décrivent que ses classes supérieures. Notre travail relie au contraire le schéma à une base interrogeable et à une application qui présente les réponses avec leurs sources. L'apport du travail tient à la chaîne qui relie les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les contrôles chiffrés établissent la présence de ces liens ; leur exactitude n'est vérifiée que sur une partie des documents.
 
 \subsection{Limites}
 \label{subsec:discussion_limites}
@@ -287,14 +276,14 @@ Six limites encadrent les résultats qui précèdent et déterminent leur porté
 
     \item \textbf{Les extractions n'ont pas été relues par un expert.} L'absence d'ajout d'informations non rapportées par les sources limite certains risques, mais une fiche peut malgré tout déformer le propos. Aucune relecture systématique par un ethnobotaniste ou un pharmacologue n'a eu lieu ; seul le contrôle sur échantillon de la section \ref{subsec:res_tracabilite} a été réalisé.
 
-    \item \textbf{L'échelle reste celle d'un prototype.} Le corpus comprend 35 documents et dix ont été extraits, soit 623 fiches de plantes et 1~734 usages, dont 1~676 retenus dans le graphe. L'application a fonctionné sur un poste local, et le modèle sur une session Google Colab jointe par un tunnel ngrok. Nous n'avons étudié ni son usage soutenu par un large public, ni son déploiement pérenne.
+    \item \textbf{L'échelle reste celle d'un prototype.} Sur les 35 documents scientifiques du corpus, dix ont fait l'objet d'une extraction complète, soit 623 fiches de plantes et 1~734 usages, dont 1~676 retenus dans le graphe. L'application a fonctionné sur un poste local, et le modèle sur une session Google Colab jointe par un tunnel ngrok. Nous n'avons étudié ni son usage soutenu par un large public, ni son déploiement pérenne.
 
     \item \textbf{Le périmètre reste celui d'un outil de consultation.} Le système aide à rechercher et à vérifier des informations documentées. Il ne pose pas de diagnostic et n'établit pas de prescription. Les résultats ne constituent pas une validation clinique.
 \end{enumerate}
 
 Cinq réserves s'y ajoutent. Les réponses attendues provenant du graphe, nos métriques ne mesurent pas la justesse des faits. Le jeu de 50 questions a servi à corriger le système avant de le mesurer. Les exemples de la consigne couvrent en outre ses types de questions. Le score ne compte que les valeurs du type attendu. Il ne voit donc pas les phrases que le modèle ajoute de lui-même, comme celles recopiées de sa consigne. Enfin, 175 usages sur 1~676 proviennent d'un document numérisé, contrôlé seulement à partir d'une reconnaissance optique de caractères.
 
-Nous n'avons pas testé par comparaison contrôlée l'hypothèse selon laquelle l'extraction assistée par modèle de langue serait meilleure qu'une extraction manuelle. Une telle comparaison nécessiterait un protocole distinct appliqué dans les mêmes conditions aux deux méthodes.
+Nous n'avons pas testé par comparaison contrôlée l'hypothèse selon laquelle l'extraction assistée par modèle de langue serait meilleure qu'une extraction manuelle. Une telle comparaison nécessiterait un protocole distinct appliqué dans les mêmes conditions aux deux méthodes. Faute de ce protocole, nous ne pouvons pas conclure que l'extraction assistée soit supérieure à une extraction manuelle.
 
 \subsection{Pistes de travail}
 \label{subsec:discussion_perspectives}
@@ -305,10 +294,11 @@ Les limites observées ouvrent plusieurs pistes de travail. Deux évaluations ma
 % CONCLUSION DU CHAPITRE
 % ============================================================
 
+\phantomsection
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre présente l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, qui n'a pas été évaluée auprès de ses utilisateurs. Sur les 50 questions, les réponses citent 913 des 915 faits attendus, avec Llama 3 8B comme avec Gemini. Le système refuse toutes les questions hors corpus. Ce résultat a été obtenu après des corrections guidées par ce même jeu de questions. L'ontologie couvre dix des 35 documents du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
+Ce chapitre présente l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, qui n'a pas été évaluée auprès de ses utilisateurs. Sur les 50 questions, les réponses citent 913 des 915 faits attendus, avec Llama 3 8B comme avec Gemini. Le système refuse toutes les questions hors corpus. Ce résultat a été obtenu après des corrections guidées par ce même jeu de questions. L'ontologie repose sur la partie extraite du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
 
 Nous avons replacé ces résultats au regard des questions de recherche et des systèmes existants. Le travail met en place une chaîne reliant les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les résultats restent toutefois encadrés par les limites méthodologiques présentées dans ce chapitre.
 

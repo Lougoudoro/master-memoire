@@ -21,7 +21,7 @@ Quand tu proposes quelque chose qui vient seulement de Yaro, dis-le (« recomman
 
 - `main.tex` déclare les titres de chapitres, leurs `\label` et les `\input`. **Les fichiers `chapters/*.tex` ne contiennent jamais de `\chapter{...}`** (sinon titre en double et label dupliqué).
 - Pièces liminaires dans `parts/` : `gard.tex`, `dedicace.tex`, `remerciements.tex`, `resume.tex`, `abstract.tex`, `sigle-abreviation.tex`.
-- Chapitres : `introduction.tex`, `chapter1.tex` (cadre théorique et revue de littérature), `chapter2.tex` (matériel et méthodologie), `chapter3.tex` (conception et développement), `chapter4.tex` (résultats et discussion), `conclusion.tex`.
+- Chapitres : `introduction.tex`, `chapter1.tex` (cadre théorique et revue de littérature), `chapter2.tex` (matériel et méthodologie), `chapter3.tex` (conception du système), `chapter4.tex` (implémentation, résultats et discussion), `conclusion.tex`. Depuis le 2026-11-19, les labels `chap:conception_developpement` et `chap:resultats_discussion` sont conservés malgré le changement de titre.
 - Bibliographie : biblatex + biber, fichier `sanou-master.bib`.
 - Travail restant signalé par `\TODOchapo{...}` (rouge) : ne jamais le remplacer par un chiffre inventé.
 - Introduction et conclusion de chapitre : `\phantomsection`, `\section*{Introduction du chapitre}` / `\section*{Conclusion du chapitre}` et `\addcontentsline{toc}{section}{...}`.
@@ -34,7 +34,7 @@ Ordre du canevas officiel : Page de garde → Dédicace → Remerciements → R�
 
 Le canevas numérote l'introduction générale comme « Chapitre 1 » (revue = 2, méthodologie = 3, implémentation/évaluation = 4). Les mémoires soutenus et le brouillon de Yaro, postérieur au canevas, la laissent non numérotée. **Décision de l'auteur (2026-11-15) : l'introduction générale reste non numérotée** et les chapitres vont de I à IV, comme dans les mémoires soutenus. Ne signale plus cet écart et ne propose pas de renumérotation.
 
-Le canevas autorise à **diviser la méthodologie en plusieurs chapitres** (c'est le cas ici : chapitre II « Matériel et méthodologie » et chapitre III « Conception et développement »), à condition de **garder un équilibre de pages entre chapitres** et d'adapter la numérotation.
+Le canevas autorise à **diviser la méthodologie en plusieurs chapitres** (c'est le cas ici : chapitre II « Matériel et méthodologie » et chapitre III « Conception du système », le chapitre IV reprenant l'« Implémentation » du canevas avec les résultats), à condition de **garder un équilibre de pages entre chapitres** et d'adapter la numérotation.
 
 ## Taille et équilibre des chapitres
 
@@ -54,8 +54,8 @@ Le canevas demande un **équilibre de pages entre chapitres**. Un jury remarque 
 | Introduction générale | 6 à 7 p. | contexte, problématique, QR, objectifs, hypothèses, plan |
 | Ch. I Cadre théorique et revue | 15 à 17 p. | ne pas dépasser, sinon le mémoire paraît descriptif |
 | Ch. II Matériel et méthodologie | 16 à 19 p. | données, outils, dispositif expérimental |
-| Ch. III Conception et développement | 17 à 20 p. | ontologie, pipeline, système |
-| Ch. IV Résultats et discussion | 14 à 17 p. | porte la contribution, ne doit pas rester le plus court |
+| Ch. III Conception du système | 17 à 20 p. | ontologie, modèle du graphe, chaîne RAG, architecture, diagrammes UML |
+| Ch. IV Implémentation, résultats et discussion | 14 à 17 p. | mise en œuvre, puis contribution ; ne doit pas rester le plus court |
 | Conclusion générale | 2 à 3 p. | bilan par objectif, limites, perspectives |
 
 Le corps visé fait donc 70 à 83 pages. Ces bornes priment sur les repères généraux ci-dessus pour ce mémoire. Le script les affiche dans une colonne « Cible » et signale chaque partie hors fourchette.
@@ -135,13 +135,13 @@ Le canevas en fait **la partie la plus importante du mémoire** : la démarche d
 
 Corpus ou données (origine, période, critères de sélection, volume), outils et **justification des choix** (tableau comparatif quand il y a des alternatives), démarche en phases, protocole d'évaluation (métriques, jeu de test) **défini avant** les résultats.
 
-### Conception et développement (chapitre III)
+### Conception du système (chapitre III)
 
-Architecture (figure), modèles (ontologie, données), implémentation, outils, captures d'écran légendées. Les figures produites par l'auteur portent « Source : nous-mêmes » ou équivalent ; les autres citent leur source.
+Architecture (figure), modèles (ontologie, passage au graphe), chaîne de traitement du système RAG, architecture de l'application, diagrammes UML (classes, cas d'utilisation, séquences). La mise en œuvre (extraction, import, câblage, fonctionnalités, déploiement, captures d'écran de l'application) relève du chapitre IV. Les figures produites par l'auteur portent « Source : nous-mêmes » ou équivalent ; les autres citent leur source.
 
-### Résultats et discussion (chapitre IV)
+### Implémentation, résultats et discussion (chapitre IV)
 
-Le canevas (« Implémentation / Expérimentation / Évaluation ») exige ici : le processus d'implémentation et la **justification des choix**, **l'environnement matériel et logiciel** (le dispositif expérimental : machine, GPU ou Colab, versions des logiciels et des modèles), **les données utilisées** pour l'expérimentation, puis la présentation, l'analyse et **l'interprétation** des résultats. Comme l'implémentation est décrite au chapitre III, le dispositif expérimental peut y figurer, mais il doit exister quelque part sous ce nom.
+Le canevas (« Implémentation / Expérimentation / Évaluation ») exige ici : le processus d'implémentation et la **justification des choix**, **l'environnement matériel et logiciel** (le dispositif expérimental : machine, GPU ou Colab, versions des logiciels et des modèles), **les données utilisées** pour l'expérimentation, puis la présentation, l'analyse et **l'interprétation** des résultats. L'implémentation est décrite à la section IV.1, qui ouvre ce chapitre ; le dispositif expérimental y trouve naturellement sa place, et il doit exister sous ce nom.
 
 #### Dispositif expérimental : environnement matériel et logiciel
 

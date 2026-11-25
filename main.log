@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  18 NOV 2026 21:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.2)  20 NOV 2026 07:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1257,7 +1257,7 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 98.
 
 
 ] [2]
-<images/methodologie_generale.png, id=595, 1821.80624pt x 1687.30376pt>
+<images/methodologie_generale.png, id=609, 1821.80624pt x 1687.30376pt>
 File: images/methodologie_generale.png Graphic file (type png)
 <use images/methodologie_generale.png>
 Package pdftex.def Info: images/methodologie_generale.png  used on input line 62.
@@ -1274,13 +1274,13 @@ Chapitre I.
 ] [8]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
 (Font)              scaled to size 12.0pt on input line 70.
-<images/niveaux_preuve.png, id=667, 1510.64375pt x 1249.66875pt>
+<images/niveaux_preuve.png, id=681, 1510.64375pt x 1249.66875pt>
 File: images/niveaux_preuve.png Graphic file (type png)
 <use images/niveaux_preuve.png>
 Package pdftex.def Info: images/niveaux_preuve.png  used on input line 78.
 (pdftex.def)             Requested size: 338.58632pt x 280.0955pt.
  [9]
-<images/pile_semantique.png, id=688, 1196.47pt x 1256.695pt>
+<images/pile_semantique.png, id=702, 1196.47pt x 1256.695pt>
 File: images/pile_semantique.png Graphic file (type png)
 <use images/pile_semantique.png>
 Package pdftex.def Info: images/pile_semantique.png  used on input line 98.
@@ -1299,7 +1299,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]) [22]
 Chapitre II.
 (chapters/chapter2.tex
-<images/flux_corpus.png, id=931, 2112.89375pt x 547.04375pt>
+<images/flux_corpus.png, id=945, 2112.89375pt x 547.04375pt>
 File: images/flux_corpus.png Graphic file (type png)
 <use images/flux_corpus.png>
 Package pdftex.def Info: images/flux_corpus.png  used on input line 29.
@@ -1319,13 +1319,13 @@ Overfull \hbox (27.37743pt too wide) in paragraph at lines 79--79
  []
 
 [24]
-<images/dispositif_technique.png, id=953, 2132.96875pt x 948.54375pt>
+<images/dispositif_technique.png, id=967, 2132.96875pt x 948.54375pt>
 File: images/dispositif_technique.png Graphic file (type png)
 <use images/dispositif_technique.png>
 Package pdftex.def Info: images/dispositif_technique.png  used on input line 97.
 (pdftex.def)             Requested size: 386.95897pt x 172.07655pt.
  [25{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc} <./images/dispositif_technique.png (PNG copy)>] [26] [27] [28] [29]
-<images/methodologie.png, id=996, 1821.80624pt x 1687.30376pt>
+<images/methodologie.png, id=1010, 1821.80624pt x 1687.30376pt>
 File: images/methodologie.png Graphic file (type png)
 <use images/methodologie.png>
 Package pdftex.def Info: images/methodologie.png  used on input line 360.
@@ -1338,119 +1338,158 @@ Overfull \hbox (13.15105pt too wide) in paragraph at lines 468--468
 [32] [33] [34] [35] [36] [37] [38] [39]) [40]
 Chapitre III.
 (chapters/chapter3.tex
-<images/ontoMetrad-1.png, id=1096, 434.8245pt x 492.03825pt>
+<images/ontoMetrad-1.png, id=1112, 434.8245pt x 492.03825pt>
 File: images/ontoMetrad-1.png Graphic file (type png)
 <use images/ontoMetrad-1.png>
-Package pdftex.def Info: images/ontoMetrad-1.png  used on input line 33.
+Package pdftex.def Info: images/ontoMetrad-1.png  used on input line 34.
 (pdftex.def)             Requested size: 227.3381pt x 257.25032pt.
-<images/ontoMetrad-2.png, id=1098, 440.24475pt x 525.162pt>
+<images/ontoMetrad-2.png, id=1114, 440.24475pt x 525.162pt>
 File: images/ontoMetrad-2.png Graphic file (type png)
 <use images/ontoMetrad-2.png>
-Package pdftex.def Info: images/ontoMetrad-2.png  used on input line 38.
+Package pdftex.def Info: images/ontoMetrad-2.png  used on input line 39.
 (pdftex.def)             Requested size: 227.3381pt x 271.18666pt.
  [41
 
 ] [42 <./images/ontoMetrad-1.png> <./images/ontoMetrad-2.png>]
-<images/ontology-conserve.png, id=1112, 464.937pt x 471.56175pt>
+<images/ontology-conserve.png, id=1128, 464.937pt x 471.56175pt>
 File: images/ontology-conserve.png Graphic file (type png)
 <use images/ontology-conserve.png>
-Package pdftex.def Info: images/ontology-conserve.png  used on input line 76.
+Package pdftex.def Info: images/ontology-conserve.png  used on input line 77.
 (pdftex.def)             Requested size: 338.58632pt x 343.43132pt.
  [43]
-<images/ontology-adaptee-01.png, id=1120, 430.60875pt x 507.0945pt>
+<images/ontology-adaptee-01.png, id=1136, 430.60875pt x 507.0945pt>
 File: images/ontology-adaptee-01.png Graphic file (type png)
 <use images/ontology-adaptee-01.png>
-Package pdftex.def Info: images/ontology-adaptee-01.png  used on input line 110.
+Package pdftex.def Info: images/ontology-adaptee-01.png  used on input line 111.
 (pdftex.def)             Requested size: 232.17242pt x 273.41684pt.
-<images/ontology-adaptee-02.png, id=1121, 431.211pt x 516.12825pt>
+<images/ontology-adaptee-02.png, id=1137, 431.211pt x 516.12825pt>
 File: images/ontology-adaptee-02.png Graphic file (type png)
 <use images/ontology-adaptee-02.png>
-Package pdftex.def Info: images/ontology-adaptee-02.png  used on input line 115.
+Package pdftex.def Info: images/ontology-adaptee-02.png  used on input line 116.
 (pdftex.def)             Requested size: 232.17242pt x 277.89392pt.
-<images/ontology-adaptee-03.png, id=1122, 427.5975pt x 511.9125pt>
+<images/ontology-adaptee-03.png, id=1138, 427.5975pt x 511.9125pt>
 File: images/ontology-adaptee-03.png Graphic file (type png)
 <use images/ontology-adaptee-03.png>
-Package pdftex.def Info: images/ontology-adaptee-03.png  used on input line 120.
+Package pdftex.def Info: images/ontology-adaptee-03.png  used on input line 121.
 (pdftex.def)             Requested size: 232.17242pt x 277.95181pt.
- [44 <./images/ontology-conserve.png>] [45 <./images/ontology-adaptee-01.png> <./images/ontology-adaptee-02.png> <./images/ontology-adaptee-03.png>] [46]
-<images/proprietes_ajoutees.png, id=1142, 419.166pt x 483.60675pt>
+ [44 <./images/ontology-conserve.png>]
+<images/hierarchies_classes_ontologie.png, id=1145, 2996.19376pt x 2490.30376pt>
+File: images/hierarchies_classes_ontologie.png Graphic file (type png)
+<use images/hierarchies_classes_ontologie.png>
+Package pdftex.def Info: images/hierarchies_classes_ontologie.png  used on input line 132.
+(pdftex.def)             Requested size: 483.69687pt x 402.02864pt.
+ [45 <./images/ontology-adaptee-01.png> <./images/ontology-adaptee-02.png> <./images/ontology-adaptee-03.png>]
+<images/ontograf_usage.png, id=1155, 699.8145pt x 389.65575pt>
+File: images/ontograf_usage.png Graphic file (type png)
+<use images/ontograf_usage.png>
+Package pdftex.def Info: images/ontograf_usage.png  used on input line 141.
+(pdftex.def)             Requested size: 459.51054pt x 255.85364pt.
+ [46 <./images/hierarchies_classes_ontologie.png>] [47 <./images/ontograf_usage.png>] [48]
+<images/proprietes_ajoutees.png, id=1173, 419.166pt x 483.60675pt>
 File: images/proprietes_ajoutees.png Graphic file (type png)
 <use images/proprietes_ajoutees.png>
-Package pdftex.def Info: images/proprietes_ajoutees.png  used on input line 193.
+Package pdftex.def Info: images/proprietes_ajoutees.png  used on input line 212.
 (pdftex.def)             Requested size: 464.35223pt x 535.74722pt.
- [47]
-Overfull \hbox (13.04669pt too wide) in paragraph at lines 227--227
+ [49]
+Overfull \hbox (13.04669pt too wide) in paragraph at lines 246--246
 []|\T1/ntxtlf/m/it/12 (-20) presenteEffetToxicologique|  
  []
 
-[48 <./images/proprietes_ajoutees.png>]
-<images/relations_ajoutees.png, id=1156, 415.5525pt x 464.33475pt>
+[50 <./images/proprietes_ajoutees.png>]
+<images/relations_ajoutees.png, id=1188, 415.5525pt x 464.33475pt>
 File: images/relations_ajoutees.png Graphic file (type png)
 <use images/relations_ajoutees.png>
-Package pdftex.def Info: images/relations_ajoutees.png  used on input line 236.
+Package pdftex.def Info: images/relations_ajoutees.png  used on input line 255.
 (pdftex.def)             Requested size: 464.35223pt x 518.88231pt.
- [49] [50 <./images/relations_ajoutees.png>] [51] [52]
-<images/capture_neo4j.png, id=1177, 720.291pt x 479.99326pt>
-File: images/capture_neo4j.png Graphic file (type png)
-<use images/capture_neo4j.png>
-Package pdftex.def Info: images/capture_neo4j.png  used on input line 349.
-(pdftex.def)             Requested size: 411.14528pt x 273.97984pt.
- [53 <./images/capture_neo4j.png>] [54] [55]
-<images/figure_architecture_rag.png, id=1202, 2594.69376pt x 1450.41875pt>
+ [51]
+<images/diagramme_classes_ontologie.png, id=1194, 2552.53625pt x 2485.285pt>
+File: images/diagramme_classes_ontologie.png Graphic file (type png)
+<use images/diagramme_classes_ontologie.png>
+Package pdftex.def Info: images/diagramme_classes_ontologie.png  used on input line 267.
+(pdftex.def)             Requested size: 483.69687pt x 470.95763pt.
+ [52 <./images/relations_ajoutees.png>] [53 <./images/diagramme_classes_ontologie.png>] [54]
+<images/figure_architecture_rag.png, id=1216, 2594.69376pt x 1450.41875pt>
 File: images/figure_architecture_rag.png Graphic file (type png)
 <use images/figure_architecture_rag.png>
-Package pdftex.def Info: images/figure_architecture_rag.png  used on input line 476.
+Package pdftex.def Info: images/figure_architecture_rag.png  used on input line 354.
 (pdftex.def)             Requested size: 483.69687pt x 270.3815pt.
- [56] [57 <./images/figure_architecture_rag.png (PNG copy)>] [58] [59]
-<images/ecran_assistant.png, id=1241, 711.8595pt x 525.162pt>
+ [55] [56 <./images/figure_architecture_rag.png (PNG copy)>]
+<images/sequence_assistant.png, id=1234, 2432.08624pt x 3107.61pt>
+File: images/sequence_assistant.png Graphic file (type png)
+<use images/sequence_assistant.png>
+Package pdftex.def Info: images/sequence_assistant.png  used on input line 377.
+(pdftex.def)             Requested size: 457.79637pt x 584.95152pt.
+<images/cas_utilisation_application.png, id=1238, 2738.23pt x 3117.6475pt>
+File: images/cas_utilisation_application.png Graphic file (type png)
+<use images/cas_utilisation_application.png>
+Package pdftex.def Info: images/cas_utilisation_application.png  used on input line 399.
+(pdftex.def)             Requested size: 483.6681pt x 550.68663pt.
+<images/sequence_fiche_plante.png, id=1241, 2433.09pt x 2696.0725pt>
+File: images/sequence_fiche_plante.png Graphic file (type png)
+<use images/sequence_fiche_plante.png>
+Package pdftex.def Info: images/sequence_fiche_plante.png  used on input line 408.
+(pdftex.def)             Requested size: 483.67644pt x 535.955pt.
+<images/sequence_pathologie.png, id=1243, 2295.57625pt x 2001.4775pt>
+File: images/sequence_pathologie.png Graphic file (type png)
+<use images/sequence_pathologie.png>
+Package pdftex.def Info: images/sequence_pathologie.png  used on input line 417.
+(pdftex.def)             Requested size: 483.69687pt x 421.72752pt.
+) [57] [58 <./images/sequence_assistant.png>] [59 <./images/cas_utilisation_application.png>] [60 <./images/sequence_fiche_plante.png>] [61 <./images/sequence_pathologie.png>] [62]
+Chapitre IV.
+(chapters/chapter4.tex [63
+
+] [64] [65]
+<images/capture_neo4j.png, id=1297, 720.291pt x 479.99326pt>
+File: images/capture_neo4j.png Graphic file (type png)
+<use images/capture_neo4j.png>
+Package pdftex.def Info: images/capture_neo4j.png  used on input line 137.
+(pdftex.def)             Requested size: 411.14528pt x 273.97984pt.
+ [66 <./images/capture_neo4j.png>] [67] [68]
+<images/ecran_assistant.png, id=1322, 711.8595pt x 525.162pt>
 File: images/ecran_assistant.png Graphic file (type png)
 <use images/ecran_assistant.png>
-Package pdftex.def Info: images/ecran_assistant.png  used on input line 585.
+Package pdftex.def Info: images/ecran_assistant.png  used on input line 251.
 (pdftex.def)             Requested size: 237.01411pt x 174.85056pt.
-<images/ecran_requete.png, id=1242, 779.91376pt x 522.753pt>
+<images/ecran_requete.png, id=1323, 779.91376pt x 522.753pt>
 File: images/ecran_requete.png Graphic file (type png)
 <use images/ecran_requete.png>
-Package pdftex.def Info: images/ecran_requete.png  used on input line 590.
+Package pdftex.def Info: images/ecran_requete.png  used on input line 256.
 (pdftex.def)             Requested size: 237.01411pt x 158.86113pt.
-<images/ecran_fiche.png, id=1245, 931.0785pt x 493.845pt>
+<images/ecran_fiche.png, id=1326, 931.0785pt x 493.845pt>
 File: images/ecran_fiche.png Graphic file (type png)
 <use images/ecran_fiche.png>
-Package pdftex.def Info: images/ecran_fiche.png  used on input line 601.
+Package pdftex.def Info: images/ecran_fiche.png  used on input line 267.
 (pdftex.def)             Requested size: 483.69687pt x 256.5522pt.
- [60 <./images/ecran_assistant.png> <./images/ecran_requete.png>]) [61 <./images/ecran_fiche.png>]
-Chapitre IV.
-(chapters/chapter4.tex [62
+ [69 <./images/ecran_assistant.png> <./images/ecran_requete.png> <./images/ecran_fiche.png>] [70] [71] [72{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [73] [74] [75] [76]) [77] (chapters/conclusion.tex [78
 
-] [63] [64{C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [65] [66] [67] [68] [69]) [70] (chapters/conclusion.tex [71
-
-]) [72]
+]) [79]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 137.
- [73
+ [80
 
-] [74] [75] [76] [77] (main.aux)
+] [81] [82] [83] [84] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F9F6BAE79225A24408C6D733CC5E5193;18766.
+(rerunfilecheck)             Checksum: C6C19120AE310E00B21D5C473DDAB0C3;18658.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28637 strings out of 467871
- 498792 string characters out of 5418377
- 1403353 words of memory out of 5000000
- 56374 multiletter control sequences out of 15000+600000
- 748093 words of font info for 333 fonts, out of 8000000 for 9000
+ 28724 strings out of 467871
+ 501534 string characters out of 5418377
+ 1405139 words of memory out of 5000000
+ 56447 multiletter control sequences out of 15000+600000
+ 748229 words of font info for 334 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,12n,79p,4600b,2421s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/NewTXMI.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/sloug/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on main.pdf (89 pages, 4429942 bytes).
+Output written on main.pdf (96 pages, 6439226 bytes).
 PDF statistics:
- 1619 PDF objects out of 1728 (max. 8388607)
- 389 named destinations out of 1000 (max. 500000)
- 46362 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1689 PDF objects out of 1728 (max. 8388607)
+ 401 named destinations out of 1000 (max. 500000)
+ 46397 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -83,7 +83,7 @@ Un jury repère vite un texte généré : il est lisse, symétrique, plein de fo
 Le corpus compte 44 documents, soit 35 documents scientifiques et 9 publications sur les sept ontologies candidates. Tous les documents scientifiques ont été lus et qualifiés, et dix ont fait l'objet d'une extraction complète qui peuple l'ontologie.
 
 - **Ne masque jamais le chiffre de dix.** Le jury le retrouve dans l'application, avec ses 10 sources, et dans le graphe. L'effacer du texte ferait douter de tous les autres résultats.
-- **Ne le répète pas non plus.** Il figure une fois par endroit utile : la méthode, en phase 3b ; la section sur l'extraction du chapitre III ; les résultats et les limites du chapitre IV ; le rappel de méthode de la conclusion ; le résumé et l'abstract. Partout ailleurs, écris « les documents extraits » ou « les individus extraits en phase 3b ».
+- **Ne le répète pas non plus.** Il figure une fois par endroit utile : la méthode, en phase 3b ; la section sur l'extraction, au début du chapitre IV (IV.1.1) ; les résultats et les limites du chapitre IV ; le rappel de méthode de la conclusion ; le résumé et l'abstract. Partout ailleurs, écris « les documents extraits » ou « les individus extraits en phase 3b ».
 - **Formule-le en positif.** Écris « les 35 documents ont été lus et qualifiés, et dix ont fait l'objet d'une extraction complète ». N'écris pas « seuls dix documents » ni « les 25 autres n'ont pas été extraits ». Ne le présente pas non plus comme un taux de couverture, du type « 28,6 % ».
 - Les décomptes de données, comme « 10 sources » dans l'inventaire du graphe, restent des faits mesurés, et ne relèvent pas de cette règle.
 

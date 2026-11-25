@@ -565,7 +565,7 @@ Cette phase clôt le volet modèle de données. À partir des documents retenus 
 
 \subsubsection{Conception des prompts d'extraction}
 
-Nos consignes d'extraction ciblaient les noms scientifiques et vernaculaires, la famille botanique, les parties utilisées, les usages, les préparations, les activités pharmacologiques, le niveau de preuve et la source. Le chapitre \ref{chap:conception_developpement} présente un exemple de consigne, avec le format JSON et les champs demandés. Nous avons employé une même consigne pour les documents traités. Les champs absents reçoivent la valeur \texttt{null} ou une liste vide, et aucune valeur n'est complétée par déduction.
+Nos consignes d'extraction ciblaient les noms scientifiques et vernaculaires, la famille botanique, les parties utilisées, les usages, les préparations, les activités pharmacologiques, le niveau de preuve et la source. Le chapitre \ref{chap:resultats_discussion} présente un exemple de consigne, avec le format JSON et les champs demandés. Nous avons employé une même consigne pour les documents traités. Les champs absents reçoivent la valeur \texttt{null} ou une liste vide, et aucune valeur n'est complétée par déduction.
 
 \subsubsection{Exécution de l'extraction}
 
@@ -623,7 +623,7 @@ L'architecture relie l'utilisateur à Streamlit, LangChain, Neo4j et Llama 3 jus
 
 \subsubsection{Développement de l'application web}
 
-Nous avons conçu l'application autour d'une page d'accueil avec chatbot, d'une recherche par plante, d'une recherche par pathologie et de fiches descriptives. Nous y avons intégré le système RAG et la gestion de l'historique. L'interface permet d'interroger la base en langage naturel et de recevoir des réponses reliées à leurs sources. Le chapitre \ref{chap:conception_developpement} en décrit la conception et les composants.
+Nous avons conçu l'application autour d'une page d'accueil avec chatbot, d'une recherche par plante, d'une recherche par pathologie et de fiches descriptives. Nous y avons intégré le système RAG et la gestion de l'historique. L'interface permet d'interroger la base en langage naturel et de recevoir des réponses reliées à leurs sources. Le chapitre \ref{chap:conception_developpement} en décrit la conception, et le chapitre \ref{chap:resultats_discussion} sa mise en œuvre.
 
 \subsubsection{Tests et validation}
 
@@ -767,4 +767,4 @@ Nous avons suivi six phases. Après la constitution du corpus, deux volets ont �
 
 Nous signalons deux limites. Les niveaux de preuve associés aux connaissances proviennent des sources et n'ont pas fait l'objet d'une évaluation indépendante. De plus, un expert externe n'a pas validé les extractions. Ces limites sont à prendre en compte dans les travaux ultérieurs. Nous avons néanmoins conservé le lien entre chaque information et sa source.
 
-Le chapitre suivant présente la conception et le développement du système, notamment l'ontologie adaptée, la base de connaissances, le système RAG et l'application web. Le chapitre \ref{chap:resultats_discussion} présentera ensuite les résultats de l'évaluation menée en phase 6.
+Le chapitre suivant présente la conception du système, notamment l'ontologie adaptée, la base de connaissances, le système RAG et l'application web. Le chapitre \ref{chap:resultats_discussion} présentera ensuite sa mise en œuvre et les résultats de l'évaluation menée en phase 6.

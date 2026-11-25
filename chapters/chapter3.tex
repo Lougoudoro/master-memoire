@@ -1,5 +1,6 @@
 % ==========================================
-% CHAPITRE III : CONCEPTION ET DEVELOPPEMENT DU SYSTEME
+% CHAPITRE III : CONCEPTION DU SYSTEME
+% (la mise en oeuvre est au chapitre IV, section \ref{sec:implementation})
 % Titre et label declares dans main.tex (\label{chap:conception_developpement})
 % Ton : recit de realisation au passe + present technique
 % ==========================================
@@ -10,7 +11,7 @@
 \phantomsection
 \section*{Introduction du chapitre}
 
-Dans les chapitres précédents, nous avons présenté le cadre théorique et la démarche méthodologique. Ce chapitre décrit le système conçu pour donner accès aux connaissances scientifiques sur les plantes médicinales du Burkina Faso. Il présente OntoPlantMedBF, l'ontologie adaptée et peuplée, la base de connaissances orientée graphe, l'extraction des données, leur interrogation par le système RAG et l'application web.
+Dans les chapitres précédents, nous avons présenté le cadre théorique et la démarche méthodologique. Ce chapitre décrit le système conçu pour donner accès aux connaissances scientifiques sur les plantes médicinales du Burkina Faso. Il présente OntoPlantMedBF, l'ontologie adaptée et peuplée, le modèle de la base de connaissances orientée graphe, la chaîne de traitement du système RAG et l'architecture de l'application web. Leur mise en œuvre est décrite au chapitre \ref{chap:resultats_discussion}.
 
 % ============================================================
 % III.1. ONTOLOGIE ADAPTÉE ET ENRICHIE
@@ -122,6 +123,24 @@ Nous n'avons pas repris les 789 individus de l'ontologie d'origine dans le modè
 \end{minipage}
 \caption{Hiérarchie des classes d'OntoPlantMedBF sous Protégé~5 (version peuplée)}
 \label{fig:protoge_ontologie}
+\end{figure}
+
+Les captures de Protégé suivent l'ordre alphabétique de l'arbre et répartissent la hiérarchie sur trois images. La figure \ref{fig:hierarchies_classes} la regroupe en un seul schéma. Les 92 classes y forment dix hiérarchies, auxquelles s'ajoutent huit classes sans sous-classe. Chaque flèche à pointe creuse se lit « est une sous-classe de ». La hiérarchie la plus détaillée est celle des parties de plante, avec 23 classes. Elle distingue notamment les organes aériens, les organes souterrains et les écorces. Les écorces de racine et de tronc sont aussi déclarées sous-classes directes de \textit{PartieDePlante}. Les modes de préparation et les modes d'administration comptent respectivement 13 et 12 classes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{hierarchies_classes_ontologie.png}
+\caption{Hiérarchies des classes d'OntoPlantMedBF (version peuplée)}
+\label{fig:hierarchies_classes}
+\end{figure}
+
+Nous avons aussi visualisé le schéma avec le module OntoGraf de Protégé, à partir de la classe racine \textit{owl\string:Thing} (figure \ref{fig:ontograf}). Cette vue affiche les classes sous leur libellé français et ne déploie qu'une partie de la hiérarchie. Elle montre les sous-classes de \textit{Preparation} et de ses formes galéniques, de \textit{Plante}, de \textit{ReferenceScientifique} et de \textit{ModeDePreparation}. La classe \textit{UsageTherapeutique} y apparaît seule, car OntoGraf ne trace ici que les liens de sous-classe. Ses relations avec les autres classes figurent dans le diagramme de classes de la section \ref{subsec:diagramme_classes}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{ontograf_usage.png}
+\caption{Vue OntoGraf d'une partie de la hiérarchie des classes sous Protégé~5}
+\label{fig:ontograf}
 \end{figure}
 
 \subsection{Classes ajoutées}
@@ -238,6 +257,20 @@ Nous avons associé le niveau de preuve à l'usage documenté, sans l'interprét
 \label{fig:relations_ajoutees}
 \end{figure}
 
+\subsection{Diagramme de classes}
+\label{subsec:diagramme_classes}
+
+Le diagramme de classes de la figure \ref{fig:diagramme_classes} rassemble les éléments présentés dans les sections précédentes. Il représente les 21 classes reliées par des propriétés objet, sans leurs sous-classes. Les 31 propriétés de données y figurent comme attributs de type \texttt{string}. Les 29 propriétés objet y figurent comme associations, orientées du domaine vers la portée. Les couleurs regroupent les classes par thème, de la botanique à la traçabilité des sources.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{diagramme_classes_ontologie.png}
+\caption{Diagramme de classes d'OntoPlantMedBF (version peuplée)}
+\label{fig:diagramme_classes}
+\end{figure}
+
+La classe \textit{UsageTherapeutique} occupe le centre du diagramme. Chaque usage est rattaché à une plante par \textit{estRapportePour}. Il est relié à sa maladie cible, à la partie utilisée, à sa préparation, à son niveau de preuve et à sa source. Toutes les classes de faits aboutissent à \textit{SourceScientifique}, par \textit{estDocumenteePar} ou l'une de ses sous-propriétés. L'ontologie ne déclare aucune cardinalité. Les multiplicités indiquées ont donc été relevées dans la base peuplée, et non imposées par le modèle. Une plante peut ainsi être rattachée à plusieurs familles, jusqu'à trois dans la base. Trois associations sont déclarées sans être employées par les individus, à savoir \textit{aPourHabitatLocalite}, \textit{aPourCategoriMaladie} et \textit{sAdministrePar}.
+
 % ============================================================
 % III.2. BASE DE CONNAISSANCES ORIENTÉE GRAPHE
 % ============================================================
@@ -245,9 +278,7 @@ Nous avons associé le niveau de preuve à l'usage documenté, sans l'interprét
 \section{Base de connaissances orientée graphe}
 \label{sec:base_connaissances}
 
-Nous avons utilisé Neo4j Desktop pour stocker et interroger les connaissances extraites selon le schéma de l'ontologie. Cette base représente les liens entre plantes, usages, propriétés et sources, que nous avons parcourus au moyen de requêtes. Nous décrivons le passage du modèle ontologique au graphe, son import et son interrogation.
-
-\subsection{Du modèle ontologique au graphe}
+Nous avons utilisé Neo4j Desktop pour stocker et interroger les connaissances extraites selon le schéma de l'ontologie. Cette base représente les liens entre plantes, usages, propriétés et sources, que nous avons parcourus au moyen de requêtes. Nous décrivons ici le passage du modèle ontologique au graphe. Son import et son interrogation sont présentés au chapitre \ref{chap:resultats_discussion}.
 \label{subsec:mapping_graphe}
 
 Nous avons importé dans Neo4j l'ontologie réajustée OntoPlantMedBF. Chaque individu devient un nœud portant sa classe et ses superclasses, et chaque propriété objet devient une relation du même nom, conformément à l'ontologie peuplée. Les propriétés de données deviennent des propriétés du nœud. Nous recopions aussi quelques valeurs, comme le nom scientifique ou l'identifiant de source, sous des noms plus simples pour l'affichage. Les individus et faits extraits sont intégrés avec leurs liens vers les sources. Le tableau \ref{tab:Mapping_noeuds} présente les principaux types de nœuds.
@@ -306,168 +337,15 @@ Nous avons aligné les noms des relations du graphe sur les propriétés objet d
 \end{tabular}
 \end{table}
 
-\subsection{Import et peuplement}
-\label{subsec:import_peuplement}
-
-Nous avons intégré les extractions JSON à l'ontologie sous forme d'individus, en conservant les formulations et les références des sources. Nous avons écarté du peuplement les 25 usages répulsifs et les 33 usages vétérinaires, qui ne sont pas des usages thérapeutiques humains. Faute de lien établi avec le Burkina Faso, nous avons aussi écarté 38 usages de Karou et al. et 10 usages de Rouamba et ses collègues. Nous avons regroupé 22 variantes d'orthographe de noms de plantes, sans fusionner les synonymes taxonomiques. Les formes équivalentes d'une même indication ont été regroupées sous un libellé français, et les formes d'origine restent conservées. Nous avons ensuite écrit un programme d'import qui lit le fichier Turtle avec \texttt{rdflib}, contrôle les domaines et les portées, puis charge le graphe dans une transaction unique. Le chargement utilise \texttt{MERGE} sur l'URI de chaque individu, si bien que le relancer ne crée pas de doublon. Chaque fait reste relié à sa source et au passage d'origine. Les contradictions relevées dans les documents restent consignées dans les fichiers JSON, sans être tranchées. Nous n'avons ajouté au graphe aucune information absente des documents, à l'exception du rang attribué aux niveaux de preuve et de ces libellés de regroupement.
-
-% Source : GraphRAG/application/ingestion/ttl_import.py (extrait)
-\begin{quote}
-\begin{verbatim}
-# Création des nœuds, regroupés par ensemble d'étiquettes
-tx.run(
-    f"UNWIND $lignes AS ligne "
-    f"MERGE (n:{LABEL_COMMUN} {{uri: ligne.uri}}) "
-    f"SET n += ligne.props, n:{etiquettes}",
-    lignes=lot,
-).consume()
-
-# Création des relations, regroupées par propriété objet
-tx.run(
-    f"UNWIND $lignes AS ligne "
-    f"MATCH (a:{LABEL_COMMUN} {{uri: ligne.de}}) "
-    f"MATCH (b:{LABEL_COMMUN} {{uri: ligne.vers}}) "
-    f"MERGE (a)-[:{_sur(nom)}]->(b)",
-    lignes=lot,
-).consume()
-\end{verbatim}
-\end{quote}
-
-Après l'import, le programme relit le graphe et compare ses comptes à ceux du fichier. Tout écart est signalé comme une erreur. Les résultats sont présentés ci-dessous.
-
-Le fichier compte 62~961 triplets. Le graphe contient 6~877 nœuds et 25~320 relations, comme attendu, sans anomalie de domaine ou de portée.
-
-\begin{itemize}
-    \item \textbf{Nœuds :} 2~822 préparations, dont 6 solvants ou excipients, 1~676 usages thérapeutiques, 722 noms vernaculaires, 554 composés chimiques et 289 plantes. Le graphe compte aussi 278 activités pharmacologiques, 180 maladies, 195 genres, 82 familles et 17 parties de plante. S'y ajoutent 14 localités, 13 effets toxicologiques, 11 modes d'administration, 10 modes de préparation, 10 sources, 2 ethnies et 2 niveaux de preuve.
-    \item \textbf{Principales relations :} \textit{aPourPartieUtilisee} (2~874), \textit{aPourPreparation} et \textit{estDocumenteePar} (2~816 chacune), \textit{aPourModeDePreparation} (2~646), \textit{estRapportePour}, \textit{provientDe}, \textit{aPourMaladieCible} et \textit{aPourNiveauDePreuve} (1~676 chacune), \textit{aPourModeAdministration} (1~471), \textit{estLocaliseeA} (1~246), \textit{estDocumenteeDans} (623).
-\end{itemize}
-
-La figure \ref{fig:graphe_neo4j} montre un extrait du graphe peuplé, le sous-graphe de \textit{Cochlospermum planchonii}. La plante est reliée à trois usages, documentés par Nadembega et al. en 2026 et par Zongo et al. en 2025. Chaque usage porte sa maladie cible, à savoir le paludisme, l'ictère ou les affections hépatiques. Il porte aussi la partie utilisée, ici le tubercule, sa préparation et son niveau de preuve. La plante est aussi reliée à ses deux noms vernaculaires, à ses trois localités, à son genre et à ses deux familles botaniques. Elle porte enfin les trois composés et les deux activités pharmacologiques rapportés par les sources.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.85\textwidth]{capture_neo4j.png}
-\caption{Extrait du graphe peuplé dans Neo4j Browser : le sous-graphe de \textit{Cochlospermum planchonii}}
-\label{fig:graphe_neo4j}
-\end{figure}
-
-\subsection{Interrogation de la base}
-\label{subsec:interrogation_base}
-
-Nous avons défini en phase 4 quatre familles de requêtes, simples, complexes, de traçabilité et spatiales (section \ref{subsec:phase4} du chapitre \ref{chap:materiel_methodologie}). Nous en donnons des exemples ci-dessous.
-
-\begin{quote}
-\begin{verbatim}
-// 1. Requête simple : plantes documentées contre le paludisme
-MATCH (p:Plante)-[:estRapportePour]->(u:UsageTherapeutique)
-      -[:aPourMaladieCible]->(m:Maladie)
-WHERE toLower(m.nom) CONTAINS 'paludisme'
-   OR toLower(m.nom) CONTAINS 'malaria'
-RETURN DISTINCT p.nomScientifique AS plante, u.usageId AS usage
-
-// 2. Requête complexe : recettes associant plusieurs plantes
-MATCH (p:Plante)-[:estRapportePour]->(u:UsageTherapeutique)
-      -[:aPourPreparation]->(:Preparation)
-      -[:associePlante]->(a:Plante)
-RETURN DISTINCT p.nomScientifique AS plante,
-       a.nomScientifique AS associee, u.usageId AS usage
-
-// 3. Requête de traçabilité : sources d'une plante
-MATCH (:Plante {nomScientifique: 'Annona senegalensis'})
-      -[:estDocumenteeDans]->(s:SourceScientifique)
-RETURN s.sourceId AS source
-
-// 4. Requête spatiale : plantes d'une localité
-MATCH (p:Plante)-[:estLocaliseeA]->(:Localite {nom: 'Kourittenga'})
-RETURN DISTINCT p.nomScientifique AS plante
-\end{verbatim}
-\end{quote}
-
-Ces requêtes, exécutées sur la base peuplée, renvoient respectivement 136, 118, 7 et 194 lignes (tableau \ref{tab:volumes_requetes} du chapitre \ref{chap:resultats_discussion}). Pour répondre à la question « quelles plantes sont rapportées contre le paludisme au Kourittenga ? », une requête relie les nœuds \textit{Plante}, \textit{UsageTherapeutique}, \textit{Maladie} et \textit{Localite}, puis renvoie les noms scientifiques correspondants, ici 99 plantes. Nous avons vérifié le fonctionnement de la base et les résultats des requêtes avant d'intégrer le système d'accès en langage naturel.
-
 % ============================================================
-% III.3. INTÉGRATION DE L'INTELLIGENCE ARTIFICIELLE
+% III.3. SYSTÈME RAG D'ACCÈS AUX CONNAISSANCES
 % ============================================================
 
-\section{Intégration de l'intelligence artificielle}
+\section{Système RAG d'accès aux connaissances}
 \label{sec:integration_ia}
-
-Nous avons utilisé des modèles de langue à deux étapes. Nous les avons d'abord sollicités pour extraire et structurer les connaissances du corpus, puis mis en place un système RAG pour interroger le graphe en langage naturel. Cette section décrit l'extraction, le système d'accès et la traçabilité entre les sources et les réponses.
-
-\subsection{Extraction assistée des connaissances}
-\label{subsec:extraction_llm}
-
-\subsubsection{Environnement d'extraction}
-
-Nous avons réalisé une première extraction avec le modèle \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, en soumettant les documents un par un. Elle a porté sur dix des 35 documents scientifiques, en octobre 2026. Le document de Ky et al., numérisé sans couche de texte, a dû passer par une reconnaissance optique de caractères, et son extraction restait partielle. Nous avons ensuite réalisé une seconde extraction des mêmes documents avec \textbf{Claude Opus 5.5} d'Anthropic, dans Claude Code, en novembre 2026. Elle reprend le schéma de sortie et les règles de la première. Le modèle y relit les tableaux en image et couvre l'ensemble de leurs lignes, y compris pour Ky et al. C'est cette seconde extraction qui a peuplé l'ontologie. Elle n'a pas encore fait l'objet d'une vérification manuelle.
-
-\subsubsection{Le prompt d'extraction}
-
-Pour la première extraction, nous avons adressé au modèle une même consigne pour chaque document. Longue d'environ 10~700 caractères, elle précise les règles à respecter, les éléments à extraire et le format de sortie. En voici le début :
-
-\begin{quote}
-\begin{verbatim}
-Tu es un assistant d'extraction de connaissances scientifiques
-spécialisé dans l'ethnobotanique, l'ethnopharmacologie et la
-phytochimie des plantes médicinales du Burkina Faso.
-
-OBJECTIF
-À partir du document fourni, extrais les informations explicitement
-présentes et organise-les selon le schéma de connaissances décrit
-ci-dessous, compatible avec notre ontologie adaptée ontoMEDTRAD.
-
-RÈGLES IMPÉRATIVES
-1. Utilise uniquement les informations présentes dans le document.
-2. N'invente, ne déduis et ne complète aucune valeur manquante.
-3. Distingue strictement :
-   - un usage traditionnel rapporté ;
-   - une activité pharmacologique observée en laboratoire ;
-   - un résultat sur un modèle animal ;
-   - un résultat clinique chez l'humain.
-[...]
-\end{verbatim}
-\end{quote}
-
-Un champ absent du document reçoit la valeur \texttt{null}, ou une liste vide. La consigne interdit de compléter une valeur par déduction. Elle demande de rattacher chaque fait à sa page, sa section ou son tableau, et de signaler les contradictions sans les trancher. Ces règles limitent l'ajout d'éléments non étayés dans les fiches.
-
-\subsubsection{Format de sortie}
-
-La sortie est un document JSON comprenant la description du document, les plantes, les contradictions relevées, les informations absentes et un contrôle de l'extraction. Voici un extrait réel, tiré de la fiche d'\textit{Acacia albida} dans l'extraction de Ky et al. :
-
-\begin{quote}
-\begin{verbatim}
-{
-  "nom_scientifique_source": "Acacia albida Del.",
-  "famille_botanique": "Mimosaceae",
-  "synonymes": [],
-  "noms_vernaculaires": [],
-  "localisations": [{
-    "localite": "Bissiga, Lalgaye et Tenkodogo",
-    "province": null,
-    "region": "Centre-Est",
-    "coordonnees": null,
-    "reference_passage": {
-      "page": "1289",
-      "section": "Results / Methodology",
-      "citation_courte": "They were conducted in 8 villages
-          from 3 municipalities (Bissiga, Lalgaye and Tenkodogo)"
-    }
-  }],
-  "usages_therapeutiques": [{
-    "indication_source": "Articular pains",
-    "parties_utilisees": ["écorce"],
-    ...
-  }]
-}
-\end{verbatim}
-\end{quote}
-
-\subsubsection{Déroulement et contrôle}
-
-Nous avons traité les documents un par un. Une première version de la consigne, jugée trop longue, a été raccourcie avant l'extraction. Un contrôle automatique en lecture seule a ensuite vérifié les fichiers. Les 10 fichiers JSON sont valides et contiennent 230 fiches de plantes, 277 usages, 46 activités, 51 entrées de composés et 6 observations toxicologiques. Aucun fait n'y est dépourvu de référence au passage source. La seconde extraction crée un usage par indication, ce qui rend ses effectifs non comparables un à un. Elle compte 623 fiches de plantes et 1~734 usages, après retrait des 48 usages sans lien établi avec le Burkina Faso. S'y ajoutent 278 activités, 554 entrées de composés et 13 observations toxicologiques. Pour les neuf documents dotés d'une couche de texte, chaque citation courte a été retrouvée dans le texte de la page annoncée. Le document de Ky et al. a été comparé à une reconnaissance optique de caractères. Sur 1~158 champs, 19 écarts ont été relus en image, et un seul a conduit à une correction. Nous n'avons pas chronométré l'extraction.
-
-\subsection{Système RAG d'accès aux connaissances}
 \label{subsec:systeme_rag}
+
+Nous avons utilisé des modèles de langue à deux étapes. Nous les avons d'abord sollicités pour extraire et structurer les connaissances du corpus, puis mis en place un système RAG pour interroger le graphe en langage naturel. Cette section présente la conception de ce système. L'extraction des connaissances et le câblage des composants sont décrits au chapitre \ref{chap:resultats_discussion}, section \ref{sec:implementation}.
 
 Nous avons mis en place un système de génération augmentée par récupération, ou RAG pour \textit{Retrieval-Augmented Generation}. Il associe la recherche dans le graphe à la génération de réponses par un modèle de langue \cite{lewis2020rag}. Son architecture relie l'utilisateur, Streamlit, Neo4j et Llama 3 (figure \ref{fig:architecture_rag}). Nous avons confié la sélection des données au modèle, selon une approche Text2Cypher. Llama 3 traduit la question en requête Cypher, puis rédige la réponse à partir des lignes obtenues. Des requêtes fixes auraient demandé d'écrire à la main une requête par type de question. Une requête générée peut en revanche se tromper sans que l'utilisateur le voie. Le système la valide donc en lecture seule, exige ses sources et affiche la requête exécutée. Le chapitre \ref{chap:resultats_discussion} mesure le coût de ce choix.
 
@@ -477,8 +355,6 @@ Nous avons mis en place un système de génération augmentée par récupératio
 \caption{Chaîne de traitement du système RAG}
 \label{fig:architecture_rag}
 \end{figure}
-
-\subsubsection{Les neuf étapes de la chaîne de traitement}
 
 Nous avons organisé le traitement des requêtes en neuf étapes, numérotées comme les flèches de la figure \ref{fig:architecture_rag} :
 
@@ -494,113 +370,53 @@ Nous avons organisé le traitement des requêtes en neuf étapes, numérotées c
     \item \textbf{Affichage des sources.} L'interface présente la réponse, puis les références scientifiques correspondantes (auteur, année, DOI) et la requête Cypher exécutée.
 \end{enumerate}
 
-\subsubsection{Câblage des composants}
+La figure \ref{fig:sequence_assistant} détaille ce traitement sous forme de diagramme de séquence. Elle suit une question depuis l'écran de l'assistant jusqu'à l'affichage de la réponse. Les objets \textit{Assistant} et \textit{Text2Cypher} correspondent aux classes de la couche RAG. Un premier cadre \texttt{alt} met à part les questions qui portent seulement sur le contenu de la base, traitées par une requête fixe. Les autres questions suivent la chaîne Text2Cypher, avec au plus une correction de la requête dans le cadre \texttt{opt}. Le second cadre \texttt{alt} distingue l'absence de fait sourcé, qui ne sollicite pas le modèle, de la rédaction de la réponse. L'écran demande enfin au détecteur de toxicité les alertes liées aux plantes citées. Pour la lisibilité, le diagramme omet la réponse aux simples messages de conversation et la vérification des sources des pages suivantes.
 
-Nous avons utilisé les composants LangChain présentés au tableau \ref{tab:langchain} du chapitre \ref{chap:materiel_methodologie}. \texttt{PromptTemplate} porte les consignes et \texttt{ChatOpenAI} appelle Llama 3 par l'API d'Ollama, exposée par ngrok, comme indiqué au tableau \ref{tab:llama_acces}. Le pilote \texttt{neo4j} assure l'accès à la base. L'adresse du modèle est lue dans la configuration, et le fichier qui la contient n'est pas versionné. L'extrait suivant montre l'instanciation du modèle.
-
-% Source : GraphRAG/application/ia/modeles_langage.py (extrait)
-\begin{quote}
-\begin{verbatim}
-if config.utilise_ollama:
-    from langchain_openai import ChatOpenAI
-
-    # Ollama expose une API compatible OpenAI sur /v1 ;
-    # sa clé est ignorée.
-    return ChatOpenAI(
-        model=modele,  # llama3:8b
-        base_url=f"{config.url_ollama}/v1",
-        api_key="ollama",
-        temperature=config.temperature,  # 0
-        extra_body={"max_tokens": config.jetons_max},
-        timeout=180,
-        max_retries=1,
-    )
-\end{verbatim}
-\end{quote}
-
-La longueur de chaque réponse du modèle est bornée à 1~024 jetons, car un modèle local peut répéter la même liste sans fin. Le notebook Colab installe Ollama, télécharge le modèle, démarre le serveur avec un contexte de 8~192 jetons, puis ouvre le tunnel ngrok. Nous avons vérifié pendant l'évaluation que le modèle était entièrement chargé sur le GPU.
-
-\subsection{Traçabilité des réponses}
-\label{subsec:tracabilite_reponses}
-
-Nous avons maintenu la traçabilité à chaque étape. L'extraction ne conservait que les informations rapportées par les sources et laissait vides les champs absents. Lors de l'import, chaque connaissance est restée reliée à un nœud \textit{SourceScientifique}. Les requêtes générées doivent renvoyer ces références, vérifiées dans le graphe puis affichées avec les réponses. Nous avons repris les niveaux de preuve tels quels, sans évaluation indépendante, et aucun expert externe n'a relu les extractions. Ces limites sont discutées au chapitre \ref{chap:resultats_discussion}.
+\begin{figure}[!tbp]
+\centering
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{sequence_assistant.png}
+\caption{Diagramme de séquence d'une question posée à l'assistant}
+\label{fig:sequence_assistant}
+\end{figure}
 
 % ============================================================
-% III.4. DÉVELOPPEMENT DE L'APPLICATION WEB
+% III.4. ARCHITECTURE DE L'APPLICATION WEB
 % ============================================================
 
-\section{Développement de l'application web}
+\section{Architecture de l'application web}
 \label{sec:application_web}
 
 Nous avons développé une application web avec Streamlit pour donner accès au système. Elle recueille les questions, appelle la chaîne RAG et présente les réponses avec leurs sources. Les raisons du choix de Streamlit sont exposées au chapitre \ref{chap:materiel_methodologie}, section \ref{subsec:environnement}.
 
-\subsection{Architecture de l'application}
 \label{subsec:architecture_app}
 
 Nous avons organisé l'application autour d'un point d'entrée, de huit écrans et d'un état de session partagé. Les écrans sont l'accueil, l'assistant, la recherche, les plantes, les pathologies, le graphe, les sources et la page « à propos ». Chaque question posée à l'assistant appelle la couche RAG, qui renvoie une réponse et les sources à afficher.
 
-\subsection{Fonctionnalités}
-\label{subsec:fonctionnalites}
+Le diagramme de cas d'utilisation de la figure \ref{fig:cas_utilisation} décrit ce que l'utilisateur peut faire sur chaque écran. L'utilisateur accède aux huit écrans par huit cas principaux, auxquels s'ajoute le démarrage d'une nouvelle conversation. Le modèle de langue intervient comme acteur secondaire, pour la seule interrogation de l'assistant. Les relations \textit{include} marquent une étape toujours réalisée, comme le choix d'une pathologie avant l'affichage de ses usages. Les relations \textit{extend} marquent une possibilité offerte à l'utilisateur, comme la consultation de la requête exécutée. La fiche d'une plante n'a pas d'écran propre. Elle s'ouvre depuis la recherche, le catalogue ou les pathologies, ce que traduisent trois relations \textit{extend}. L'alerte de toxicité étend à la fois l'assistant et la fiche, lorsque la plante concernée a des données toxicologiques.
 
-Le tableau \ref{tab:fonctionnalites} récapitule les fonctions définies en phase 5 (section \ref{subsec:phase5}). Deux d'entre elles restent partielles. Les références s'affichent sous la réponse et non sous chaque information, et la visualisation du graphe part d'une plante, pas d'une maladie.
-
-\begin{table}[H]
+\begin{figure}[!tbp]
 \centering
-\caption{Fonctionnalités de l'application web}
-\label{tab:fonctionnalites}
-\begin{tabular}{|L{3.6cm}|L{7.4cm}|L{2cm}|}
-\hline
-\textbf{Fonctionnalité} & \textbf{Description} & \textbf{État} \\
-\hline
-Chatbot & Question en langage naturel, réponse générée par le système RAG, sources affichées & Terminé \\
-\hline
-Recherche par plante & Consultation d'une fiche à partir du nom scientifique ou vernaculaire & Terminé \\
-\hline
-Recherche par pathologie & Liste des plantes documentées contre une maladie donnée & Terminé \\
-\hline
-Fiches descriptives & Usages, parties utilisées, modes de préparation, niveaux de preuve et références & Terminé \\
-\hline
-Affichage des sources & Références complètes (auteur, année, DOI) sous chaque information & Partiel \\
-\hline
-Visualisation du graphe & Représentation des relations entourant une plante ou une maladie & Partiel \\
-\hline
-\end{tabular}
-\end{table}
-
-Nous avons ajouté une alerte de toxicité à l'assistant. Lorsqu'une réponse cite une plante pour laquelle la base contient des données toxicologiques, un encadré les signale sous la réponse, chacune avec sa source. Neuf plantes sont concernées, pour les treize effets toxicologiques du graphe. L'alerte reprend les données rapportées sans les évaluer. Certaines indiquent seulement qu'une étude de toxicité a été menée, ou que les répondants ne mentionnent pas de toxicité. Elle complète l'affichage des risques en tête de la fiche de chaque plante.
-
-\subsection{Gestion de session et déploiement}
-\label{subsec:session_depl}
-
-Nous avons conservé l'historique des échanges dans l'état de session de Streamlit et l'avons transmis au modèle dans la consigne de génération. L'historique sert à la rédaction, mais pas à la génération de la requête. Une question de suivi qui ne nomme pas son sujet ne retrouve donc pas les bons faits. L'application fonctionne sur un poste local sous Windows~11 et accède au modèle par l'API exposée avec ngrok ; seule l'API du modèle est exposée, pas l'application.
-
-Elle se lance avec Streamlit et s'ouvre sur le port 8501. La session Colab n'est active que pendant son utilisation et son adresse change à chaque lancement. Il n'existe pas de mise en ligne pérenne.
-
-La figure \ref{fig:ecrans_application} montre l'assistant avec Llama~3 8B, sur la question « Comment Acacia nilotica est-elle préparée selon les sources ? ». La réponse associe chaque mode de préparation aux sources qui le rapportent. Chaque source y est appelée par un numéro, qui renvoie à sa référence complète. La dernière ligne, ajoutée par le système, reprend la trituration, que le contrôle de complétude n'a pas reconnue sous la formulation du modèle. Sous la réponse, l'utilisateur peut déplier les références complètes, avec leur DOI, le tableau des faits retrouvés dans la base, puis la requête Cypher exécutée. Cette requête contient la colonne de sources ajoutée par le système.
-
-\begin{figure}[H]
-\centering
-\begin{minipage}[t]{0.49\textwidth}
-\centering
-\includegraphics[width=\textwidth]{ecran_assistant.png}\\[1mm]
-{\small (a) Réponse et sources citées}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.49\textwidth}
-\centering
-\includegraphics[width=\textwidth]{ecran_requete.png}\\[1mm]
-{\small (b) Références complètes et requête exécutée}
-\end{minipage}
-\caption{L'assistant de l'application web : une réponse sourcée produite avec Llama~3 8B}
-\label{fig:ecrans_application}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{cas_utilisation_application.png}
+\caption{Diagramme de cas d'utilisation de l'application web}
+\label{fig:cas_utilisation}
 \end{figure}
 
-La figure \ref{fig:ecran_fiche} montre la fiche de \textit{Cochlospermum planchonii}, la plante de la figure \ref{fig:graphe_neo4j}. La fiche réunit la famille, les noms vernaculaires et un tableau des usages documentés. Chaque ligne y indique la pathologie, l'indication telle qu'elle est écrite dans la source, la partie utilisée et la préparation. Elle donne aussi la plante éventuellement associée dans une recette, le niveau de preuve et la source de l'usage. Les références complètes figurent sous la fiche.
+Les figures \ref{fig:sequence_fiche} et \ref{fig:sequence_pathologie} détaillent deux de ces cas. L'ouverture d'une fiche passe par l'état de session de Streamlit. L'écran des plantes y enregistre le nom choisi, puis la page s'exécute à nouveau et la vue de la fiche relit ce nom. Le dépôt des plantes interroge alors Neo4j pour l'identité de la plante, puis pour ses rubriques, ses usages et ses sources. Il regroupe par usage les lignes obtenues avant de les transmettre à la vue. Si la plante est absente de la base, la vue l'indique sans autre requête. Un encadré signale les risques lorsque la plante a des données de toxicité.
 
-\begin{figure}[H]
+\begin{figure}[!tbp]
 \centering
-\includegraphics[width=\textwidth]{ecran_fiche.png}
-\caption{Fiche de \textit{Cochlospermum planchonii} dans l'application web}
-\label{fig:ecran_fiche}
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{sequence_fiche_plante.png}
+\caption{Diagramme de séquence de l'ouverture de la fiche d'une plante}
+\label{fig:sequence_fiche}
+\end{figure}
+
+Pour les pathologies, l'écran charge d'abord la liste des maladies de la base, lue une seule fois puis gardée en mémoire. Pour chaque pathologie choisie, le dépôt des pathologies renvoie les usages dont une maladie contient le terme, triés par niveau de preuve. Un clic sur une ligne du tableau ouvre la fiche de la plante, selon la séquence de la figure \ref{fig:sequence_fiche}.
+
+\begin{figure}[!tbp]
+\centering
+\includegraphics[width=\textwidth]{sequence_pathologie.png}
+\caption{Diagramme de séquence de la recherche par pathologie}
+\label{fig:sequence_pathologie}
 \end{figure}
 
 % ============================================================
@@ -611,4 +427,4 @@ La figure \ref{fig:ecran_fiche} montre la fiche de \textit{Cochlospermum plancho
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre a présenté le système issu de la démarche du chapitre \ref{chap:materiel_methodologie}. Nous avons construit OntoPlantMedBF à partir d'ontoMEDTRAD, l'avons adaptée au contexte burkinabè et peuplée avec des connaissances sourcées ; son schéma organise également la base Neo4j. Nous avons décrit l'extraction assistée par modèle de langue, le système RAG qui interroge le graphe à partir des questions et l'application web qui présente les réponses. Nous avons rattaché les connaissances à leurs sources, laissé vides les champs absents et repris les niveaux de preuve rapportés par les documents. Le chapitre \ref{chap:resultats_discussion} évalue l'ontologie et les réponses du système, mesure les temps de réponse de l'application, puis discute les résultats et leurs limites.
+Ce chapitre a présenté la conception du système issu de la démarche du chapitre \ref{chap:materiel_methodologie}. Nous avons construit OntoPlantMedBF à partir d'ontoMEDTRAD, l'avons adaptée au contexte burkinabè et peuplée avec des connaissances sourcées ; son schéma organise également la base Neo4j. Nous avons décrit la chaîne de traitement du système RAG qui interroge le graphe à partir des questions et l'architecture de l'application web qui présente les réponses. Nous avons rattaché les connaissances à leurs sources et repris les niveaux de preuve rapportés par les documents. Le chapitre \ref{chap:resultats_discussion} décrit d'abord la mise en œuvre de ce système. Il évalue ensuite l'ontologie et les réponses du système, mesure les temps de réponse de l'application, puis discute les résultats et leurs limites.

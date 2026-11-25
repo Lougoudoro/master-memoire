@@ -1,5 +1,6 @@
 % ==========================================
-% CHAPITRE IV : RESULTATS ET DISCUSSION
+% CHAPITRE IV : IMPLEMENTATION, RESULTATS ET DISCUSSION
+% (la conception est au chapitre III)
 % Titre et label declares dans main.tex (\label{chap:resultats_discussion})
 % Ton : recit des mesures au passe, discussion honnete au present
 % ==========================================
@@ -10,10 +11,266 @@
 \phantomsection
 \section*{Introduction du chapitre}
 
-Les chapitres précédents ont présenté la démarche suivie et le système développé. Dans ce chapitre, nous exposons les résultats de l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web. Son évaluation auprès des utilisateurs n'a pas été menée. Nous en discutons la portée et les limites au regard des objectifs de la recherche et des systèmes existants.
+Les chapitres précédents ont présenté la démarche suivie et la conception du système. Dans ce chapitre, nous décrivons d'abord sa mise en œuvre, de l'extraction des connaissances à l'application web. Nous exposons ensuite les résultats de l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web. Son évaluation auprès des utilisateurs n'a pas été menée. Nous en discutons la portée et les limites au regard des objectifs de la recherche et des systèmes existants.
 
 % ============================================================
-% IV.1. ÉVALUATION DE L'ONTOLOGIE
+% IV.1. IMPLÉMENTATION DU SYSTÈME
+% ============================================================
+
+\section{Implémentation du système}
+\label{sec:implementation}
+
+Cette section décrit la mise en œuvre du système conçu au chapitre \ref{chap:conception_developpement}. Elle suit l'ordre de la chaîne, de l'extraction des connaissances à leur import dans Neo4j, puis du câblage du système RAG à l'application web.
+
+\subsection{Extraction assistée des connaissances}
+\label{subsec:extraction_llm}
+
+\subsubsection{Environnement d'extraction}
+
+Nous avons réalisé une première extraction avec le modèle \textbf{gpt-6-luna} d'OpenAI, accessible par l'environnement OpenWork, en soumettant les documents un par un. Elle a porté sur dix des 35 documents scientifiques, en octobre 2026. Le document de Ky et al., numérisé sans couche de texte, a dû passer par une reconnaissance optique de caractères, et son extraction restait partielle. Nous avons ensuite réalisé une seconde extraction des mêmes documents avec \textbf{Claude Opus 5.5} d'Anthropic, dans Claude Code, en novembre 2026. Elle reprend le schéma de sortie et les règles de la première. Le modèle y relit les tableaux en image et couvre l'ensemble de leurs lignes, y compris pour Ky et al. C'est cette seconde extraction qui a peuplé l'ontologie. Elle n'a pas encore fait l'objet d'une vérification manuelle.
+
+\subsubsection{Le prompt d'extraction}
+
+Pour la première extraction, nous avons adressé au modèle une même consigne pour chaque document. Longue d'environ 10~700 caractères, elle précise les règles à respecter, les éléments à extraire et le format de sortie. En voici le début :
+
+\begin{quote}
+\begin{verbatim}
+Tu es un assistant d'extraction de connaissances scientifiques
+spécialisé dans l'ethnobotanique, l'ethnopharmacologie et la
+phytochimie des plantes médicinales du Burkina Faso.
+
+OBJECTIF
+À partir du document fourni, extrais les informations explicitement
+présentes et organise-les selon le schéma de connaissances décrit
+ci-dessous, compatible avec notre ontologie adaptée ontoMEDTRAD.
+
+RÈGLES IMPÉRATIVES
+1. Utilise uniquement les informations présentes dans le document.
+2. N'invente, ne déduis et ne complète aucune valeur manquante.
+3. Distingue strictement :
+   - un usage traditionnel rapporté ;
+   - une activité pharmacologique observée en laboratoire ;
+   - un résultat sur un modèle animal ;
+   - un résultat clinique chez l'humain.
+[...]
+\end{verbatim}
+\end{quote}
+
+Un champ absent du document reçoit la valeur \texttt{null}, ou une liste vide. La consigne interdit de compléter une valeur par déduction. Elle demande de rattacher chaque fait à sa page, sa section ou son tableau, et de signaler les contradictions sans les trancher. Ces règles limitent l'ajout d'éléments non étayés dans les fiches.
+
+\subsubsection{Format de sortie}
+
+La sortie est un document JSON comprenant la description du document, les plantes, les contradictions relevées, les informations absentes et un contrôle de l'extraction. Voici un extrait réel, tiré de la fiche d'\textit{Acacia albida} dans l'extraction de Ky et al. :
+
+\begin{quote}
+\begin{verbatim}
+{
+  "nom_scientifique_source": "Acacia albida Del.",
+  "famille_botanique": "Mimosaceae",
+  "synonymes": [],
+  "noms_vernaculaires": [],
+  "localisations": [{
+    "localite": "Bissiga, Lalgaye et Tenkodogo",
+    "province": null,
+    "region": "Centre-Est",
+    "coordonnees": null,
+    "reference_passage": {
+      "page": "1289",
+      "section": "Results / Methodology",
+      "citation_courte": "They were conducted in 8 villages
+          from 3 municipalities (Bissiga, Lalgaye and Tenkodogo)"
+    }
+  }],
+  "usages_therapeutiques": [{
+    "indication_source": "Articular pains",
+    "parties_utilisees": ["écorce"],
+    ...
+  }]
+}
+\end{verbatim}
+\end{quote}
+
+\subsubsection{Déroulement et contrôle}
+
+Nous avons traité les documents un par un. Une première version de la consigne, jugée trop longue, a été raccourcie avant l'extraction. Un contrôle automatique en lecture seule a ensuite vérifié les fichiers. Les 10 fichiers JSON sont valides et contiennent 230 fiches de plantes, 277 usages, 46 activités, 51 entrées de composés et 6 observations toxicologiques. Aucun fait n'y est dépourvu de référence au passage source. La seconde extraction crée un usage par indication, ce qui rend ses effectifs non comparables un à un. Elle compte 623 fiches de plantes et 1~734 usages, après retrait des 48 usages sans lien établi avec le Burkina Faso. S'y ajoutent 278 activités, 554 entrées de composés et 13 observations toxicologiques. Pour les neuf documents dotés d'une couche de texte, chaque citation courte a été retrouvée dans le texte de la page annoncée. Le document de Ky et al. a été comparé à une reconnaissance optique de caractères. Sur 1~158 champs, 19 écarts ont été relus en image, et un seul a conduit à une correction. Nous n'avons pas chronométré l'extraction.
+
+\subsection{Import et peuplement}
+\label{subsec:import_peuplement}
+
+Nous avons intégré les extractions JSON à l'ontologie sous forme d'individus, en conservant les formulations et les références des sources. Nous avons écarté du peuplement les 25 usages répulsifs et les 33 usages vétérinaires, qui ne sont pas des usages thérapeutiques humains. Faute de lien établi avec le Burkina Faso, nous avons aussi écarté 38 usages de Karou et al. et 10 usages de Rouamba et ses collègues. Nous avons regroupé 22 variantes d'orthographe de noms de plantes, sans fusionner les synonymes taxonomiques. Les formes équivalentes d'une même indication ont été regroupées sous un libellé français, et les formes d'origine restent conservées. Nous avons ensuite écrit un programme d'import qui lit le fichier Turtle avec \texttt{rdflib}, contrôle les domaines et les portées, puis charge le graphe dans une transaction unique. Le chargement utilise \texttt{MERGE} sur l'URI de chaque individu, si bien que le relancer ne crée pas de doublon. Chaque fait reste relié à sa source et au passage d'origine. Les contradictions relevées dans les documents restent consignées dans les fichiers JSON, sans être tranchées. Nous n'avons ajouté au graphe aucune information absente des documents, à l'exception du rang attribué aux niveaux de preuve et de ces libellés de regroupement.
+
+% Source : GraphRAG/application/ingestion/ttl_import.py (extrait)
+\begin{quote}
+\begin{verbatim}
+# Création des nœuds, regroupés par ensemble d'étiquettes
+tx.run(
+    f"UNWIND $lignes AS ligne "
+    f"MERGE (n:{LABEL_COMMUN} {{uri: ligne.uri}}) "
+    f"SET n += ligne.props, n:{etiquettes}",
+    lignes=lot,
+).consume()
+
+# Création des relations, regroupées par propriété objet
+tx.run(
+    f"UNWIND $lignes AS ligne "
+    f"MATCH (a:{LABEL_COMMUN} {{uri: ligne.de}}) "
+    f"MATCH (b:{LABEL_COMMUN} {{uri: ligne.vers}}) "
+    f"MERGE (a)-[:{_sur(nom)}]->(b)",
+    lignes=lot,
+).consume()
+\end{verbatim}
+\end{quote}
+
+Après l'import, le programme relit le graphe et compare ses comptes à ceux du fichier. Tout écart est signalé comme une erreur. Les résultats sont présentés ci-dessous.
+
+Le fichier compte 62~961 triplets. Le graphe contient 6~877 nœuds et 25~320 relations, comme attendu, sans anomalie de domaine ou de portée.
+
+\begin{itemize}
+    \item \textbf{Nœuds :} 2~822 préparations, dont 6 solvants ou excipients, 1~676 usages thérapeutiques, 722 noms vernaculaires, 554 composés chimiques et 289 plantes. Le graphe compte aussi 278 activités pharmacologiques, 180 maladies, 195 genres, 82 familles et 17 parties de plante. S'y ajoutent 14 localités, 13 effets toxicologiques, 11 modes d'administration, 10 modes de préparation, 10 sources, 2 ethnies et 2 niveaux de preuve.
+    \item \textbf{Principales relations :} \textit{aPourPartieUtilisee} (2~874), \textit{aPourPreparation} et \textit{estDocumenteePar} (2~816 chacune), \textit{aPourModeDePreparation} (2~646), \textit{estRapportePour}, \textit{provientDe}, \textit{aPourMaladieCible} et \textit{aPourNiveauDePreuve} (1~676 chacune), \textit{aPourModeAdministration} (1~471), \textit{estLocaliseeA} (1~246), \textit{estDocumenteeDans} (623).
+\end{itemize}
+
+La figure \ref{fig:graphe_neo4j} montre un extrait du graphe peuplé, le sous-graphe de \textit{Cochlospermum planchonii}. La plante est reliée à trois usages, documentés par Nadembega et al. en 2026 et par Zongo et al. en 2025. Chaque usage porte sa maladie cible, à savoir le paludisme, l'ictère ou les affections hépatiques. Il porte aussi la partie utilisée, ici le tubercule, sa préparation et son niveau de preuve. La plante est aussi reliée à ses deux noms vernaculaires, à ses trois localités, à son genre et à ses deux familles botaniques. Elle porte enfin les trois composés et les deux activités pharmacologiques rapportés par les sources.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{capture_neo4j.png}
+\caption{Extrait du graphe peuplé dans Neo4j Browser : le sous-graphe de \textit{Cochlospermum planchonii}}
+\label{fig:graphe_neo4j}
+\end{figure}
+
+\subsection{Interrogation de la base}
+\label{subsec:interrogation_base}
+
+Nous avons défini en phase 4 quatre familles de requêtes, simples, complexes, de traçabilité et spatiales (section \ref{subsec:phase4} du chapitre \ref{chap:materiel_methodologie}). Nous en donnons des exemples ci-dessous.
+
+\begin{quote}
+\begin{verbatim}
+// 1. Requête simple : plantes documentées contre le paludisme
+MATCH (p:Plante)-[:estRapportePour]->(u:UsageTherapeutique)
+      -[:aPourMaladieCible]->(m:Maladie)
+WHERE toLower(m.nom) CONTAINS 'paludisme'
+   OR toLower(m.nom) CONTAINS 'malaria'
+RETURN DISTINCT p.nomScientifique AS plante, u.usageId AS usage
+
+// 2. Requête complexe : recettes associant plusieurs plantes
+MATCH (p:Plante)-[:estRapportePour]->(u:UsageTherapeutique)
+      -[:aPourPreparation]->(:Preparation)
+      -[:associePlante]->(a:Plante)
+RETURN DISTINCT p.nomScientifique AS plante,
+       a.nomScientifique AS associee, u.usageId AS usage
+
+// 3. Requête de traçabilité : sources d'une plante
+MATCH (:Plante {nomScientifique: 'Annona senegalensis'})
+      -[:estDocumenteeDans]->(s:SourceScientifique)
+RETURN s.sourceId AS source
+
+// 4. Requête spatiale : plantes d'une localité
+MATCH (p:Plante)-[:estLocaliseeA]->(:Localite {nom: 'Kourittenga'})
+RETURN DISTINCT p.nomScientifique AS plante
+\end{verbatim}
+\end{quote}
+
+Ces requêtes, exécutées sur la base peuplée, renvoient respectivement 136, 118, 7 et 194 lignes (tableau \ref{tab:volumes_requetes}). Pour répondre à la question « quelles plantes sont rapportées contre le paludisme au Kourittenga ? », une requête relie les nœuds \textit{Plante}, \textit{UsageTherapeutique}, \textit{Maladie} et \textit{Localite}, puis renvoie les noms scientifiques correspondants, ici 99 plantes. Nous avons vérifié le fonctionnement de la base et les résultats des requêtes avant d'intégrer le système d'accès en langage naturel.
+
+\subsection{Câblage du système RAG}
+\label{subsec:cablage_rag}
+
+Nous avons utilisé les composants LangChain présentés au tableau \ref{tab:langchain} du chapitre \ref{chap:materiel_methodologie}. \texttt{PromptTemplate} porte les consignes et \texttt{ChatOpenAI} appelle Llama 3 par l'API d'Ollama, exposée par ngrok, comme indiqué au tableau \ref{tab:llama_acces}. Le pilote \texttt{neo4j} assure l'accès à la base. L'adresse du modèle est lue dans la configuration, et le fichier qui la contient n'est pas versionné. L'extrait suivant montre l'instanciation du modèle.
+
+% Source : GraphRAG/application/ia/modeles_langage.py (extrait)
+\begin{quote}
+\begin{verbatim}
+if config.utilise_ollama:
+    from langchain_openai import ChatOpenAI
+
+    # Ollama expose une API compatible OpenAI sur /v1 ;
+    # sa clé est ignorée.
+    return ChatOpenAI(
+        model=modele,  # llama3:8b
+        base_url=f"{config.url_ollama}/v1",
+        api_key="ollama",
+        temperature=config.temperature,  # 0
+        extra_body={"max_tokens": config.jetons_max},
+        timeout=180,
+        max_retries=1,
+    )
+\end{verbatim}
+\end{quote}
+
+La longueur de chaque réponse du modèle est bornée à 1~024 jetons, car un modèle local peut répéter la même liste sans fin. Le notebook Colab installe Ollama, télécharge le modèle, démarre le serveur avec un contexte de 8~192 jetons, puis ouvre le tunnel ngrok. Nous avons vérifié pendant l'évaluation que le modèle était entièrement chargé sur le GPU.
+
+\subsection{Traçabilité des réponses}
+\label{subsec:tracabilite_reponses}
+
+Nous avons maintenu la traçabilité à chaque étape. L'extraction ne conservait que les informations rapportées par les sources et laissait vides les champs absents. Lors de l'import, chaque connaissance est restée reliée à un nœud \textit{SourceScientifique}. Les requêtes générées doivent renvoyer ces références, vérifiées dans le graphe puis affichées avec les réponses. Nous avons repris les niveaux de preuve tels quels, sans évaluation indépendante, et aucun expert externe n'a relu les extractions. Ces limites sont discutées à la section \ref{subsec:discussion_limites}.
+
+\subsection{Fonctionnalités de l'application}
+\label{subsec:fonctionnalites}
+
+Le tableau \ref{tab:fonctionnalites} récapitule les fonctions définies en phase 5 (section \ref{subsec:phase5}). Deux d'entre elles restent partielles. Les références s'affichent sous la réponse et non sous chaque information, et la visualisation du graphe part d'une plante, pas d'une maladie.
+
+\begin{table}[H]
+\centering
+\caption{Fonctionnalités de l'application web}
+\label{tab:fonctionnalites}
+\begin{tabular}{|L{3.6cm}|L{7.4cm}|L{2cm}|}
+\hline
+\textbf{Fonctionnalité} & \textbf{Description} & \textbf{État} \\
+\hline
+Chatbot & Question en langage naturel, réponse générée par le système RAG, sources affichées & Terminé \\
+\hline
+Recherche par plante & Consultation d'une fiche à partir du nom scientifique ou vernaculaire & Terminé \\
+\hline
+Recherche par pathologie & Liste des plantes documentées contre une maladie donnée & Terminé \\
+\hline
+Fiches descriptives & Usages, parties utilisées, modes de préparation, niveaux de preuve et références & Terminé \\
+\hline
+Affichage des sources & Références complètes (auteur, année, DOI) sous chaque information & Partiel \\
+\hline
+Visualisation du graphe & Représentation des relations entourant une plante ou une maladie & Partiel \\
+\hline
+\end{tabular}
+\end{table}
+
+Nous avons ajouté une alerte de toxicité à l'assistant. Lorsqu'une réponse cite une plante pour laquelle la base contient des données toxicologiques, un encadré les signale sous la réponse, chacune avec sa source. Neuf plantes sont concernées, pour les treize effets toxicologiques du graphe. L'alerte reprend les données rapportées sans les évaluer. Certaines indiquent seulement qu'une étude de toxicité a été menée, ou que les répondants ne mentionnent pas de toxicité. Elle complète l'affichage des risques en tête de la fiche de chaque plante.
+
+\subsection{Gestion de session et déploiement}
+\label{subsec:session_depl}
+
+Nous avons conservé l'historique des échanges dans l'état de session de Streamlit et l'avons transmis au modèle dans la consigne de génération. L'historique sert à la rédaction, mais pas à la génération de la requête. Une question de suivi qui ne nomme pas son sujet ne retrouve donc pas les bons faits. L'application fonctionne sur un poste local sous Windows~11 et accède au modèle par l'API exposée avec ngrok ; seule l'API du modèle est exposée, pas l'application.
+
+Elle se lance avec Streamlit et s'ouvre sur le port 8501. La session Colab n'est active que pendant son utilisation et son adresse change à chaque lancement. Il n'existe pas de mise en ligne pérenne.
+
+La figure \ref{fig:ecrans_application} montre l'assistant avec Llama~3 8B, sur la question « Comment Acacia nilotica est-elle préparée selon les sources ? ». La réponse associe chaque mode de préparation aux sources qui le rapportent. Chaque source y est appelée par un numéro, qui renvoie à sa référence complète. La dernière ligne, ajoutée par le système, reprend la trituration, que le contrôle de complétude n'a pas reconnue sous la formulation du modèle. Sous la réponse, l'utilisateur peut déplier les références complètes, avec leur DOI, le tableau des faits retrouvés dans la base, puis la requête Cypher exécutée. Cette requête contient la colonne de sources ajoutée par le système.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\includegraphics[width=\textwidth]{ecran_assistant.png}\\[1mm]
+{\small (a) Réponse et sources citées}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\includegraphics[width=\textwidth]{ecran_requete.png}\\[1mm]
+{\small (b) Références complètes et requête exécutée}
+\end{minipage}
+\caption{L'assistant de l'application web : une réponse sourcée produite avec Llama~3 8B}
+\label{fig:ecrans_application}
+\end{figure}
+
+La figure \ref{fig:ecran_fiche} montre la fiche de \textit{Cochlospermum planchonii}, la plante de la figure \ref{fig:graphe_neo4j}. La fiche réunit la famille, les noms vernaculaires et un tableau des usages documentés. Chaque ligne y indique la pathologie, l'indication telle qu'elle est écrite dans la source, la partie utilisée et la préparation. Elle donne aussi la plante éventuellement associée dans une recette, le niveau de preuve et la source de l'usage. Les références complètes figurent sous la fiche.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ecran_fiche.png}
+\caption{Fiche de \textit{Cochlospermum planchonii} dans l'application web}
+\label{fig:ecran_fiche}
+\end{figure}
+
+% ============================================================
+% IV.2. ÉVALUATION DE L'ONTOLOGIE
 % ============================================================
 
 \section{Évaluation de l'ontologie}
@@ -26,7 +283,7 @@ Nous avons évalué la couverture, la cohérence, la traçabilité et l'extensib
 
 Nous avons vérifié la couverture en confrontant l'ontologie peuplée aux extractions des documents traités. Nous avons examiné si les noms scientifiques et vernaculaires, les pathologies, les modes de préparation et les sources citées étaient représentés dans le modèle. Le fichier peuplé contient 6~877 individus, issus des dix documents scientifiques extraits. Il compte notamment 289 plantes, 1~676 usages thérapeutiques, 180 maladies et 10 sources. Les extractions JSON comptent 623 fiches de plantes, à raison d'une fiche par plante et par document, regroupées en 289 plantes distinctes. Les effectifs d'individus correspondent à ceux des extractions pour les 278 activités pharmacologiques et les 13 observations toxicologiques. Pour les usages, les 1~734 entrées des extractions donnent 1~676 individus après exclusion des 25 usages répulsifs et des 33 usages vétérinaires. Le modèle d'origine couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}.
 
-La couverture varie selon les connaissances disponibles dans le corpus. Celui-ci porte surtout sur certaines pathologies, notamment le paludisme, et sur un nombre restreint de régions. Le dosage et la toxicité sont peu représentés lorsque les documents ne les précisent pas. Nous avons limité l'extraction aux informations documentées (section \ref{subsec:extraction_llm} du chapitre \ref{chap:conception_developpement}).
+La couverture varie selon les connaissances disponibles dans le corpus. Celui-ci porte surtout sur certaines pathologies, notamment le paludisme, et sur un nombre restreint de régions. Le dosage et la toxicité sont peu représentés lorsque les documents ne les précisent pas. Nous avons limité l'extraction aux informations documentées (section \ref{subsec:extraction_llm}).
 
 \subsection{Cohérence}
 \label{subsec:res_coherence}
@@ -36,7 +293,7 @@ Nous avons contrôlé la cohérence avec HermiT dans Protégé~5 après les prin
 \subsection{Traçabilité}
 \label{subsec:res_tracabilite}
 
-Nous avons vérifié que les connaissances enregistrées restent rattachées aux sources correspondantes. L'extraction ne renseignait que les champs présents dans les documents et l'import associait les faits à une source (section \ref{subsec:tracabilite_reponses} du chapitre \ref{chap:conception_developpement}). Nous avons contrôlé sur l'ensemble du graphe le rattachement des faits à un nœud \textit{SourceScientifique}. Toutes les plantes et tous les usages sont reliés à une source, soit 289 plantes sur 289 et 1~676 usages sur 1~676. Chaque usage conserve la référence de son passage. Tous les usages portent un niveau de preuve. Les 10 sources ont un titre et un DOI. Nous avons également contrôlé les usages dans les PDF d'origine. Pour 1~497 usages sur 1~501 contrôlables, le nom de la plante figure dans le document, sous sa forme retenue ou sous une graphie de la source. Dans les quatre écarts, le nom est bien présent, mais la recherche automatique ne le retrouve pas. C'est notamment le cas lorsqu'une cellule de tableau le coupe. Les 175 autres usages proviennent d'un document numérisé sans couche de texte, celui de Ky et ses collègues. Ils n'ont pas été contrôlés de cette manière. Après reconnaissance optique de caractères, le nom exact y figure pour 93 d'entre eux. Nous avons aussi tiré au sort un échantillon de 30 usages parmi les 1~501. Une lecture assistée par un outil d'intelligence artificielle a retrouvé, pour les 30, le fait principal, c'est-à-dire la plante et l'indication. Elle s'est appuyée sur les pages en image lorsque le texte des tableaux était désordonné, et n'a relevé aucune contradiction. Cet outil étant celui qui a produit l'extraction, ce contrôle n'est pas indépendant et ne remplace pas une relecture par un spécialiste. L'import signale comme anomalie tout usage dépourvu de source ; aucun cas n'a été relevé.
+Nous avons vérifié que les connaissances enregistrées restent rattachées aux sources correspondantes. L'extraction ne renseignait que les champs présents dans les documents et l'import associait les faits à une source (section \ref{subsec:tracabilite_reponses}). Nous avons contrôlé sur l'ensemble du graphe le rattachement des faits à un nœud \textit{SourceScientifique}. Toutes les plantes et tous les usages sont reliés à une source, soit 289 plantes sur 289 et 1~676 usages sur 1~676. Chaque usage conserve la référence de son passage. Tous les usages portent un niveau de preuve. Les 10 sources ont un titre et un DOI. Nous avons également contrôlé les usages dans les PDF d'origine. Pour 1~497 usages sur 1~501 contrôlables, le nom de la plante figure dans le document, sous sa forme retenue ou sous une graphie de la source. Dans les quatre écarts, le nom est bien présent, mais la recherche automatique ne le retrouve pas. C'est notamment le cas lorsqu'une cellule de tableau le coupe. Les 175 autres usages proviennent d'un document numérisé sans couche de texte, celui de Ky et ses collègues. Ils n'ont pas été contrôlés de cette manière. Après reconnaissance optique de caractères, le nom exact y figure pour 93 d'entre eux. Nous avons aussi tiré au sort un échantillon de 30 usages parmi les 1~501. Une lecture assistée par un outil d'intelligence artificielle a retrouvé, pour les 30, le fait principal, c'est-à-dire la plante et l'indication. Elle s'est appuyée sur les pages en image lorsque le texte des tableaux était désordonné, et n'a relevé aucune contradiction. Cet outil étant celui qui a produit l'extraction, ce contrôle n'est pas indépendant et ne remplace pas une relecture par un spécialiste. L'import signale comme anomalie tout usage dépourvu de source ; aucun cas n'a été relevé.
 
 \subsection{Extensibilité}
 \label{subsec:res_extensibilite}
@@ -67,7 +324,7 @@ Extensibilité & Ajouts en cours de phases 3a et 4 & Pas de test isolé ; schém
 \end{table}
 
 % ============================================================
-% IV.2. ÉVALUATION DU SYSTÈME RAG
+% IV.3. ÉVALUATION DU SYSTÈME RAG
 % ============================================================
 
 \section{Évaluation du système RAG}
@@ -204,7 +461,7 @@ Nous avons également posé 12 questions libres, hors des types du jeu d'évalua
 Le temps total, mesuré par le script d'évaluation pour chaque question, s'élève en moyenne à 18,7~s (médiane 13,6~s, maximum 112,8~s). Neuf questions ont dépassé 20~s et deux ont dépassé 60~s. Ces neuf questions sont celles dont la réponse est rédigée en plusieurs pages. Nous n'avions pas fixé de seuil au préalable.
 
 % ============================================================
-% IV.3. ÉVALUATION DE L'APPLICATION WEB
+% IV.4. ÉVALUATION DE L'APPLICATION WEB
 % ============================================================
 
 \section{Évaluation de l'application web}
@@ -238,7 +495,7 @@ Performance & Mesure du temps de réponse & 18,7~s en moyenne (médiane 13,6~s ;
 Nous avons séparé le temps d'interrogation de Neo4j du temps restant, qui regroupe la génération par Llama 3 et le délai du tunnel ngrok. En réexécutant après l'évaluation les requêtes finales, l'interrogation de Neo4j prend en moyenne 0,004~s, une fois la base chargée. Seule la première requête d'une session prend environ 4~s. Chaque question demande en outre plusieurs appels au modèle, pour repérer les termes, écrire la requête et rédiger chaque page de la réponse. L'essentiel du temps tient donc à la génération et au tunnel, soit environ 18,7~s en moyenne ; notre mesure ne permet pas de séparer ces deux composantes.
 
 % ============================================================
-% IV.4. DISCUSSION
+% IV.5. DISCUSSION
 % ============================================================
 
 \section{Discussion}
@@ -298,7 +555,7 @@ Les limites observées ouvrent plusieurs pistes de travail. Deux évaluations ma
 \section*{Conclusion du chapitre}
 \addcontentsline{toc}{section}{Conclusion du chapitre}
 
-Ce chapitre présente l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, qui n'a pas été évaluée auprès de ses utilisateurs. Sur les 50 questions, les réponses citent 913 des 915 faits attendus, avec Llama 3 8B comme avec Gemini. Le système refuse toutes les questions hors corpus. Ce résultat a été obtenu après des corrections guidées par ce même jeu de questions. L'ontologie repose sur la partie extraite du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
+Ce chapitre décrit d'abord la mise en œuvre du système, de l'extraction des connaissances à l'application web. Il présente ensuite l'évaluation de l'ontologie et du système RAG, ainsi que les temps de réponse de l'application web, qui n'a pas été évaluée auprès de ses utilisateurs. Sur les 50 questions, les réponses citent 913 des 915 faits attendus, avec Llama 3 8B comme avec Gemini. Le système refuse toutes les questions hors corpus. Ce résultat a été obtenu après des corrections guidées par ce même jeu de questions. L'ontologie repose sur la partie extraite du corpus, et l'exactitude des faits n'a été contrôlée que partiellement.
 
 Nous avons replacé ces résultats au regard des questions de recherche et des systèmes existants. Le travail met en place une chaîne reliant les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les résultats restent toutefois encadrés par les limites méthodologiques présentées dans ce chapitre.
 

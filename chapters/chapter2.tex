@@ -36,7 +36,7 @@ Notre corpus scientifique comprend 35 rapports de recherche, articles, thèses e
 Nous avons retenu ces travaux pour leur qualité et leur pertinence au contexte burkinabè, des publications fondatrices aux plus récentes. Cette diversité d'espèces, de pathologies et de pratiques thérapeutiques soutient l'extraction. Quatre travaux illustrent les types de données mobilisés dans le corpus :
 \begin{itemize}
 \item Zerbo et al.~\cite{zerbo_plantes_2011} ont étudié les plantes médicinales chez les Sanan du Burkina Faso. Leur travail documente 94 espèces utilisées pour combattre différentes pathologies.
-\item Ouédraogo et al.~\cite{ouedraogo_revue_2024} ont dressé une revue des plantes médicinales à potentiel aromatique du pays, recensant 42 espèces et en caractérisant les propriétés et les usages.
+\item Ouédraogo et al.~\cite{ouedraogo_revue_2024} ont dressé une revue des plantes médicinales à potentiel aromatique du pays, recensant 84 espèces et en caractérisant les propriétés et les usages.
 \item Tibiri et al.~\cite{tibiri2020} ont mené une enquête à l'échelle nationale sur les plantes utilisées contre les maladies hépatiques, documentant plus de 2 000 entrées de plantes correspondant à 212 espèces.
 \item Ouédraogo et al.~\cite{ouedraogo2020markets} ont enquêté auprès de 30 commerçants de plantes médicinales dans six grandes villes, identifiant 104 espèces utilisées pour diverses pathologies.
 \end{itemize}
@@ -76,7 +76,7 @@ Nous avons retenu comme candidates les sept ontologies du tableau \ref{tab:synth
 \hline
 6 & DrOn & Pharmacologie & États-Unis & OWL & OBO Foundry \\
 \hline
-7 & ontoFRACTURECARE & Médecine traditionnelle, fractures & Côte d'Ivoire & OWL (Protégé) & Int. Journal of Advanced Research \\
+7 & onto\-FRACTURE\-CARE & Médecine traditionnelle, fractures & Côte d'Ivoire & OWL (Protégé) & Int. Journal of Advanced Research \\
 \hline
 \end{tabular}
 \end{table}
@@ -94,7 +94,7 @@ Les outils techniques interviennent de la phase 3b à la phase 6. Pour chacun, n
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{dispositif_technique.png}
+\includegraphics[width=0.74\textwidth]{dispositif_technique.png}
 \caption{Dispositif technique d'expérimentation}
 \label{fig:dispositif_technique}
 \end{figure}
@@ -107,7 +107,7 @@ Nous avons utilisé des modèles distincts selon l'étape. Pour l'extraction des
 \centering
 \caption{Modèles de langage et modes d'accès}
 \label{tab:llama_acces}
-\begin{tabular}{|L{4cm}|L{4cm}|L{6cm}|}
+\begin{tabular}{|L{5.4cm}|L{3.8cm}|L{4.7cm}|}
 \hline
 \textbf{Usage} & \textbf{Modèle} & \textbf{Mode d'accès} \\
 \hline
@@ -136,7 +136,7 @@ Nous avons utilisé \textbf{Neo4j Desktop}, la version locale de Neo4j, pour cr�
 \centering
 \caption{Caractéristiques de Neo4j Desktop}
 \label{tab:neo4j}
-\begin{tabular}{|L{5cm}|L{8cm}|}
+\begin{tabular}{|L{3.5cm}|L{10.1cm}|}
 \hline
 \textbf{Caractéristique} & \textbf{Valeur} \\
 \hline
@@ -188,7 +188,7 @@ Nous avons mobilisé plusieurs bibliothèques Python au cours des phases 4 et 5.
 \centering
 \caption{Bibliothèques Python utilisées}
 \label{tab:bibliotheques}
-\begin{tabular}{|L{5cm}|L{3cm}|L{5cm}|}
+\begin{tabular}{|L{6.6cm}|L{2.8cm}|L{5.6cm}|}
 \hline
 \textbf{Bibliothèque} & \textbf{Version} & \textbf{Rôle} \\
 \hline
@@ -222,7 +222,7 @@ Deux machines ont servi aux expérimentations. Le poste local héberge la base N
 \centering
 \caption{Environnement matériel et logiciel des expérimentations}
 \label{tab:dispositif_experimental}
-\begin{tabular}{|L{3,4cm}|L{6,2cm}|L{4,4cm}|}
+\begin{tabular}{|L{2.5cm}|L{8.5cm}|L{4.4cm}|}
 \hline
 \textbf{Composant} & \textbf{Version ou caractéristique} & \textbf{Rôle} \\
 \hline
@@ -278,7 +278,7 @@ Le tableau \ref{tab:recap_materiel} rassemble l'ensemble du matériel mobilisé.
 \centering
 \caption{Récapitulatif du matériel}
 \label{tab:recap_materiel}
-\begin{tabular}{|L{3cm}|L{4cm}|L{6cm}|}
+\begin{tabular}{|L{4cm}|L{4.3cm}|L{7cm}|}
 \hline
 \textbf{Catégorie} & \textbf{Élément} & \textbf{Spécification} \\
 \hline
@@ -319,7 +319,7 @@ Le tableau \ref{tab:correspondance_materiel} met ensuite en regard le matériel 
 \centering
 \caption{Correspondance entre le matériel et les phases}
 \label{tab:correspondance_materiel}
-\begin{tabular}{|L{4cm}|L{3cm}|L{6cm}|}
+\begin{tabular}{|L{3.9cm}|L{2.2cm}|L{6.3cm}|}
 \hline
 \textbf{Matériel} & \textbf{Phase} & \textbf{Utilisation} \\
 \hline
@@ -357,7 +357,7 @@ Nous avons organisé la démarche en six phases, représentées par la figure \r
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{methodologie.png}
+\includegraphics[width=0.62\textwidth]{methodologie.png}
 \caption{Démarche méthodologique détaillée}
 \label{fig:methodologie_detaillee}
 \end{figure}
@@ -416,7 +416,7 @@ Nous avons retenu huit critères adaptés à nos besoins. Ils portent sur la cou
 \centering
 \caption{Grille de critères de comparaison}
 \label{tab:grille_criteres}
-\begin{tabular}{|C{0.5cm}|L{3cm}|L{6.6cm}|C{2.5cm}|}
+\begin{tabular}{|C{0.6cm}|L{3.3cm}|L{8.8cm}|C{2.4cm}|}
 \hline
 \textbf{N°} & \textbf{Critère} & \textbf{Description} & \textbf{Pondération} \\
 \hline
@@ -449,7 +449,7 @@ Nous avons noté chaque ontologie de 1, très faible, à 5, très élevé, pour 
 \centering
 \caption{Notation des ontologies candidates}
 \label{tab:notation_ontologies}
-\begin{tabular}{|L{3.5cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{0.8cm}|C{1.5cm}|}
+\begin{tabular}{|L{4.3cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{1.2cm}|}
 \hline
 \textbf{Ontologie} & \textbf{C1} & \textbf{C2} & \textbf{C3} & \textbf{C4} & \textbf{C5} & \textbf{C6} & \textbf{C7} & \textbf{C8} & \textbf{Score} \\
 \hline
@@ -465,7 +465,7 @@ FLOPO & 2 & 3 & 5 & 4 & 5 & 2 & 1 & 1 & 2,7 \\
 \hline
 DrOn & 1 & 4 & 5 & 4 & 5 & 1 & 2 & 1 & 2,7 \\
 \hline
-ontoFRACTURECARE & 1 & 3 & 2 & 3 & 4 & 2 & 1 & 2 & 2,1 \\
+onto\-FRACTURE\-CARE & 1 & 3 & 2 & 3 & 4 & 2 & 1 & 2 & 2,1 \\
 \hline
 \end{tabular}
 \end{table}
@@ -487,7 +487,7 @@ WATRIMed \cite{watrimed2019, watrimed_design_2019} pourrait se distinguer par la
 
 \textbf{Objectif} : Adapter le modèle conceptuel de l'ontologie sélectionnée au contexte burkinabè.
 
-Cette phase clôt le volet modèle conceptuel. Nous avons examiné les concepts existants, ajouté des classes et des propriétés, modifié certaines relations et documenté les changements. Les sous-sections suivantes reprennent ces étapes, puis précisent le lien avec le volet modèle de données.
+Cette phase clôt le volet modèle conceptuel. Nous avons examiné les concepts existants, ajouté des classes et des propriétés, et modifié certaines relations. Les sous-sections suivantes reprennent ces étapes, puis précisent le lien avec le volet modèle de données.
 
 \subsubsection{Analyse des concepts existants}
 
@@ -512,10 +512,6 @@ Nous avons ajouté des propriétés de données pour les noms locaux, le niveau 
 \subsubsection{Modification de relations}
 
 Nous avons structuré les liens entre plante, usage, maladie, partie utilisée et préparation, puis généralisé la traçabilité documentaire. La propriété objet \textit{estDocumenteePar} relie les ressources du graphe à une source scientifique. Des sous-propriétés spécialisées précisent l'objet documenté par la source. Il peut s'agir d'une plante, d'un usage, d'un nom vernaculaire, d'une activité, d'un composé ou d'un effet toxicologique. \textit{aPourNiveauDePreuve} rattache un usage au niveau déclaré par la source. Ces liens ne signifient pas que les usages ou activités constituent des recommandations thérapeutiques ni une validation clinique. Ces modifications assurent la traçabilité des connaissances et permettent d'exprimer des relations que le modèle d'origine, fondé sur la relation « est un » et sur la relation partie-tout, ne couvrait pas.
-
-\subsubsection{Documentation des adaptations}
-
-Nous avons consigné toutes les modifications dans un journal. Chaque ajout y est justifié et chaque choix explicité. Les classes, propriétés et relations ajoutées, modifiées ou supprimées y sont décrites une à une. Cette documentation n'est pas une formalité. Elle rend la démarche reproductible par un tiers et facilite les évolutions ultérieures de l'ontologie.
 
 \subsubsection{Lien avec le volet modèle de données}
 
@@ -569,11 +565,11 @@ Nos consignes d'extraction ciblaient les noms scientifiques et vernaculaires, la
 
 \subsubsection{Exécution de l'extraction}
 
-Les 35 documents scientifiques avaient tous été lus et qualifiés en phase 2b, et chacun avait reçu des consignes d'extraction propres. L'extraction complète a porté sur dix d'entre eux, principalement des enquêtes ethnobotaniques. Nous les avons soumis à gpt-6-luna dans l'environnement OpenWork, un par un, et avons enregistré les résultats en JSON. Cette première extraction restait incomplète sur les grands tableaux. Nous avons donc réalisé une seconde extraction des mêmes documents avec Claude Opus 5.5 dans Claude Code, selon le même schéma JSON, en novembre 2026. Le modèle y a relu les tableaux en image. Le document numérisé de Ky et al. a en outre été comparé à une reconnaissance optique de caractères produite par Tesseract. Nous avons retenu cette seconde extraction pour peupler l'ontologie, sans vérification manuelle à ce stade.
+Les 35 documents scientifiques avaient tous été lus et qualifiés en phase 2b, et le registre de validation du corpus indiquait pour chacun les précautions à prendre avant l'extraction. L'extraction complète a porté sur dix d'entre eux, principalement des enquêtes ethnobotaniques (tableau \ref{tab:dix_sources}). Nous les avons soumis à gpt-6-luna dans l'environnement OpenWork, un par un, et avons enregistré les résultats en JSON. Cette première extraction restait incomplète sur les grands tableaux. Nous avons donc réalisé une seconde extraction des mêmes documents avec Claude Opus 5.5 dans Claude Code, selon le même schéma JSON, en novembre 2026. Le modèle y a relu les tableaux en image. Le document numérisé de Ky et al. a en outre été comparé à une reconnaissance optique de caractères produite par Tesseract. Nous avons retenu cette seconde extraction pour peupler l'ontologie, sans vérification manuelle à ce stade.
 
 \subsubsection{Contrôle de la qualité des extractions}
 
-Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était explicite. Il pouvait s'agir d'un savoir traditionnel, d'une étude \textit{in vitro}, d'une étude \textit{in vivo} ou d'un essai clinique. Nous n'avons pas évalué indépendamment la solidité des faits et avons laissé le champ vide lorsque la source ne précisait pas ce niveau. Dans les documents extraits, tous les usages sont des usages traditionnels rapportés, et aucun champ n'est resté vide. Le graphe ne compte donc que deux niveaux, l'usage rapporté par enquête et l'usage traditionnel rapporté, comme le détaille le chapitre \ref{chap:conception_developpement}. Un expert externe n'a pas relu les extractions. Nous avons contrôlé leur structure, puis comparé une partie des faits aux documents d'origine à la phase 6.
+Nous avons repris le niveau de preuve indiqué par la source lorsqu'il était explicite. Il pouvait s'agir d'un savoir traditionnel, d'une étude \textit{in vitro}, d'une étude \textit{in vivo} ou d'un essai clinique. Nous n'avons pas évalué indépendamment la solidité des faits et avons laissé le champ vide lorsque la source ne précisait pas ce niveau. Dans les documents extraits, tous les usages sont des usages traditionnels rapportés, et aucun champ n'est resté vide. Le graphe ne compte donc que deux niveaux, l'usage rapporté par enquête et l'usage traditionnel rapporté, comme le détaille le chapitre \ref{chap:conception_developpement}. Nous avons contrôlé la structure des extractions, puis comparé une partie des faits aux documents d'origine à la phase 6. Un biologiste végétal a en outre relu l'ensemble des faits et en a validé le contenu.
 
 \textbf{Livrable} : des fiches JSON sourcées, une par document extrait.
 
@@ -594,7 +590,7 @@ Nous avons organisé les données selon le modèle de l'ontologie, par type de c
 
 \subsubsection{Import et ajustement du modèle dans le graphe}
 
-Nous avons importé dans Neo4j la structure réajustée d'OntoPlantMedBF et ses données. Les entités y deviennent des nœuds, leurs liens des relations et leurs caractéristiques des propriétés, conformément au modèle ontologique. Les principaux nœuds représentent les plantes, maladies, usages, parties, préparations, sources, composés chimiques et régions. Les relations du graphe reprennent les liens du modèle, avec des noms adaptés aux conventions Neo4j, et les propriétés conservent notamment les noms, niveaux de preuve, DOI et coordonnées géographiques.
+Nous avons importé dans Neo4j la structure réajustée d'OntoPlantMedBF et ses données. Les entités y deviennent des nœuds, leurs liens des relations et leurs caractéristiques des propriétés, conformément au modèle ontologique. Les principaux nœuds représentent les plantes, maladies, usages, parties, préparations, sources, composés chimiques et régions. Les relations du graphe reprennent les liens du modèle, sous les identifiants de l'ontologie, et les propriétés conservent notamment les noms, niveaux de preuve, DOI et coordonnées géographiques.
 
 \subsubsection{Import des données}
 
@@ -650,7 +646,7 @@ Nous avons évalué l'ontologie selon les quatre critères présentés dans le t
 \centering
 \caption{Critères d'évaluation de l'ontologie}
 \label{tab:eval_ontologie}
-\begin{tabular}{|L{3cm}|L{6cm}|L{4cm}|}
+\begin{tabular}{|L{2.3cm}|L{7.6cm}|L{4.5cm}|}
 \hline
 \textbf{Critère} & \textbf{Description} & \textbf{Méthode} \\
 \hline
@@ -673,7 +669,7 @@ Nous avons constitué un jeu de 50 questions de référence portant sur les plan
 \centering
 \caption{Critères d'évaluation du système RAG}
 \label{tab:eval_rag}
-\begin{tabular}{|L{3cm}|L{6cm}|L{4cm}|}
+\begin{tabular}{|L{2cm}|L{9.6cm}|L{3.5cm}|}
 \hline
 \textbf{Critère} & \textbf{Description} & \textbf{Métrique} \\
 \hline
@@ -696,7 +692,7 @@ Nous avons évalué l'application web selon les quatre critères présentés dan
 \centering
 \caption{Critères d'évaluation de l'application web}
 \label{tab:eval_web}
-\begin{tabular}{|L{3cm}|L{6cm}|L{4cm}|}
+\begin{tabular}{|L{3.5cm}|L{5.8cm}|L{2.5cm}|}
 \hline
 \textbf{Critère} & \textbf{Description} & \textbf{Méthode} \\
 \hline
@@ -730,7 +726,8 @@ Le tableau \ref{tab:correspondance_phases} récapitule les objectifs et les livr
 \centering
 \caption{Correspondance entre les phases, les objectifs et les livrables}
 \label{tab:correspondance_phases}
-\begin{tabular}{|L{2.2cm}|L{4.5cm}|L{6.8cm}|}
+\small
+\begin{tabular}{|L{1.4cm}|L{8cm}|L{6.2cm}|}
 \hline
 \textbf{Phase} & \textbf{Objectif} & \textbf{Livrable} \\
 \hline
@@ -759,12 +756,11 @@ Phase 6 & Évaluer la qualité du système & Rapport d'évaluation \\
 
 \phantomsection
 \section*{Conclusion du chapitre}
-\addcontentsline{toc}{section}{Conclusion du chapitre}
 
 Ce chapitre a exposé le matériel et la méthodologie de notre recherche. Le matériel réunit un corpus de 44 documents, dont 35 documents scientifiques et neuf publications sur les sept ontologies candidates, ainsi qu'un environnement technique. L'extraction a utilisé gpt-6-luna puis Claude Opus 5.5, et le RAG Llama 3 8B sur Google Colab, avec Neo4j Desktop, LangChain et Streamlit.
 
 Nous avons suivi six phases. Après la constitution du corpus, deux volets ont été menés en parallèle. Le volet conceptuel a comparé puis adapté l'ontologie, et le volet des données a sélectionné les documents puis extrait leurs connaissances. Sont venus ensuite le peuplement de l'ontologie et la construction de la base graphe, le développement du dispositif numérique, puis l'évaluation. Nous avons décrit les actions menées et les livrables associés. Le modèle adapté a fourni le schéma des fiches d'extraction, ce qui a assuré la cohérence entre le modèle et les données extraites. Il a ensuite été complété lors du peuplement, à partir des informations rencontrées dans les sources.
 
-Nous signalons deux limites. Les niveaux de preuve associés aux connaissances proviennent des sources et n'ont pas fait l'objet d'une évaluation indépendante. De plus, un expert externe n'a pas validé les extractions. Ces limites sont à prendre en compte dans les travaux ultérieurs. Nous avons néanmoins conservé le lien entre chaque information et sa source.
+Nous signalons deux limites. Les niveaux de preuve associés aux connaissances proviennent des sources et n'ont pas fait l'objet d'une évaluation indépendante. De plus, la relecture des extractions repose sur un seul spécialiste et n'a pas été chiffrée. Ces limites sont à prendre en compte dans les travaux ultérieurs. Nous avons néanmoins conservé le lien entre chaque information et sa source.
 
 Le chapitre suivant présente la conception du système, notamment l'ontologie adaptée, la base de connaissances, le système RAG et l'application web. Le chapitre \ref{chap:resultats_discussion} présentera ensuite sa mise en œuvre et les résultats de l'évaluation menée en phase 6.

@@ -13,6 +13,8 @@
 
 Dans les chapitres précédents, nous avons présenté le cadre théorique et la démarche méthodologique. Ce chapitre décrit le système conçu pour donner accès aux connaissances scientifiques sur les plantes médicinales du Burkina Faso. Il présente OntoPlantMedBF, l'ontologie adaptée et peuplée, le modèle de la base de connaissances orientée graphe, la chaîne de traitement du système RAG et l'architecture de l'application web. Leur mise en œuvre est décrite au chapitre \ref{chap:resultats_discussion}.
 
+Nous avons modélisé ce système en UML, pour \textit{Unified Modeling Language}, un langage graphique dont l'Object Management Group maintient la spécification \cite{omg_uml_2017}. Cette notation distingue ce qu'un système contient de ce qu'il fait. Deux diagrammes de classes décrivent la structure de l'ontologie. Un diagramme de cas d'utilisation recense les actions offertes à l'utilisateur, et trois diagrammes de séquence en suivent le déroulement. Nous les avons établis d'après l'ontologie peuplée et le code de l'application. Ils représentent donc le système dans son état final, limites comprises.
+
 % ============================================================
 % III.1. ONTOLOGIE ADAPTÉE ET ENRICHIE
 % ============================================================
@@ -31,12 +33,12 @@ L'ontologie d'origine comptait 144 concepts, 76 propriétés associatives, 16 pr
 \centering
 \begin{minipage}[t]{0.47\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ontoMetrad-1.png}\\[1mm]
+\includegraphics[trim=0 -22.8bp 0 0,clip,height=8.8cm]{ontoMetrad-1.png}\\[1mm]
 {\small (a) Partie supérieure de la hiérarchie}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.47\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ontoMetrad-2.png}\\[1mm]
+\includegraphics[trim=0 0 0 10.2bp,clip,height=8.8cm]{ontoMetrad-2.png}\\[1mm]
 {\small (b) Partie inférieure de la hiérarchie}
 \end{minipage}
 \caption{L'ontologie initiale ontoMEDTRAD reconstituée sous Protégé~5 (arbre des classes)}
@@ -51,7 +53,7 @@ Nous avons réutilisé la structure conceptuelle, mais pas les 789 individus d'o
 \centering
 \caption{Concepts retenus et écartés lors de l'adaptation}
 \label{tab:concepts_retenus_ecartes}
-\begin{tabular}{|L{4.6cm}|L{4.6cm}|L{3.8cm}|}
+\begin{tabular}{|L{3.5cm}|L{5cm}|L{6.3cm}|}
 \hline
 \textbf{Concepts retenus} & \textbf{Concepts écartés} & \textbf{Justification} \\
 \hline
@@ -74,7 +76,7 @@ Nous n'avons pas repris tels quels les concepts de recette, d'ingrédient et de 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{ontology-conserve.png}
+\includegraphics[width=0.58\textwidth]{ontology-conserve.png}
 \caption{Concepts d'ontoMEDTRAD conservés comme base d'OntoPlantMedBF}
 \label{fig:ontologie_conservee}
 \end{figure}
@@ -104,28 +106,29 @@ Axiomes & 2 734 & Non relevé & 62~955 \\
 
 Nous n'avons pas repris les 789 individus de l'ontologie d'origine dans le modèle conceptuel adapté. La version peuplée d'OntoPlantMedBF, au format Turtle, correspond à l'étape suivante. Elle enrichit ce modèle avec les individus extraits des documents scientifiques. Ces données ont ensuite été importées et ajustées dans Neo4j. La figure \ref{fig:protoge_ontologie} présente la hiérarchie des 92 classes de cette version peuplée.
 
+% Captures rognees a l'affichage (onglets et marge droite), calees sur le bandeau
 \begin{figure}[H]
 \centering
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.32\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ontology-adaptee-01.png}\\[1mm]
+\includegraphics[trim=0 -7.2bp 159bp 42.6bp,clip,width=\textwidth]{ontology-adaptee-01.png}\\[1mm]
 {\small (a) Des activités aux modes d'administration}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.32\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ontology-adaptee-02.png}\\[1mm]
+\includegraphics[trim=0 0 159.6bp 44.4bp,clip,width=\textwidth]{ontology-adaptee-02.png}\\[1mm]
 {\small (b) Des modes de préparation aux parties de plante}
-\end{minipage}\\[3mm]
-\begin{minipage}[t]{0.48\textwidth}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ontology-adaptee-03.png}\\[1mm]
+\includegraphics[trim=0 -1.8bp 156bp 42bp,clip,width=\textwidth]{ontology-adaptee-03.png}\\[1mm]
 {\small (c) Des parties de plante aux usages thérapeutiques}
 \end{minipage}
 \caption{Hiérarchie des classes d'OntoPlantMedBF sous Protégé~5 (version peuplée)}
 \label{fig:protoge_ontologie}
 \end{figure}
 
-Les captures de Protégé suivent l'ordre alphabétique de l'arbre et répartissent la hiérarchie sur trois images. La figure \ref{fig:hierarchies_classes} la regroupe en un seul schéma. Les 92 classes y forment dix hiérarchies, auxquelles s'ajoutent huit classes sans sous-classe. Chaque flèche à pointe creuse se lit « est une sous-classe de ». La hiérarchie la plus détaillée est celle des parties de plante, avec 23 classes. Elle distingue notamment les organes aériens, les organes souterrains et les écorces. Les écorces de racine et de tronc sont aussi déclarées sous-classes directes de \textit{PartieDePlante}. Les modes de préparation et les modes d'administration comptent respectivement 13 et 12 classes.
+Les captures de Protégé suivent l'ordre alphabétique de l'arbre et répartissent la hiérarchie sur trois images. Aucune ne montre donc le modèle en entier. La figure \ref{fig:hierarchies_classes} le regroupe en un seul schéma, afin de faire apparaître les thèmes les plus détaillés. Chaque flèche à pointe creuse se lit « est une sous-classe de ». Un individu d'une classe appartient aussi à toutes les classes placées au-dessus d'elle. Un décocté, par exemple, est une forme galénique, donc une préparation. Les couleurs distinguent six thèmes, que le diagramme de classes de la section \ref{subsec:diagramme_classes} reprend.
 
 \begin{figure}[H]
 \centering
@@ -134,7 +137,13 @@ Les captures de Protégé suivent l'ordre alphabétique de l'arbre et répartiss
 \label{fig:hierarchies_classes}
 \end{figure}
 
-Nous avons aussi visualisé le schéma avec le module OntoGraf de Protégé, à partir de la classe racine \textit{owl\string:Thing} (figure \ref{fig:ontograf}). Cette vue affiche les classes sous leur libellé français et ne déploie qu'une partie de la hiérarchie. Elle montre les sous-classes de \textit{Preparation} et de ses formes galéniques, de \textit{Plante}, de \textit{ReferenceScientifique} et de \textit{ModeDePreparation}. La classe \textit{UsageTherapeutique} y apparaît seule, car OntoGraf ne trace ici que les liens de sous-classe. Ses relations avec les autres classes figurent dans le diagramme de classes de la section \ref{subsec:diagramme_classes}.
+Les 92 classes se répartissent en dix hiérarchies, auxquelles s'ajoutent huit classes sans sous-classe. La profondeur ne dépasse pas deux niveaux sous la classe de tête. Trois hiérarchies réunissent 48 classes, soit plus de la moitié du modèle. Il s'agit des parties de plante, avec 23 classes, des modes de préparation, avec 13, et des modes d'administration, avec 12. Ces trois thèmes décrivent la recette telle que les enquêtes ethnobotaniques la rapportent. Elles nomment l'organe prélevé, l'opération subie et la voie par laquelle le remède est donné. Les représenter par des classes, et non par du texte libre, rend ces notions comparables d'une source à l'autre.
+
+Le schéma montre aussi deux distinctions propres au domaine. La première sépare l'opération du produit qui en résulte. La décoction relève de \textit{ModeDePreparation}, tandis que le décocté relève de \textit{Preparation}, parmi les formes galéniques. La seconde sépare les organes aériens, les organes souterrains et les écorces. Elle conserve la précision des sources qui écrivent « écorce de tronc », sans perdre le rattachement à la classe \textit{Ecorce}. Les écorces de racine et de tronc sont aussi déclarées sous-classes directes de \textit{PartieDePlante}. Ce second lien découle déjà du premier, et la figure ne le trace pas.
+
+Les huit classes sans sous-classe comprennent \textit{UsageTherapeutique}, \textit{NomVernaculaire} et \textit{NiveauDePreuve}. Leurs individus se distinguent par leurs propriétés et leurs relations, et non par un type plus précis. La figure décrit enfin le schéma, et non son remplissage. Parmi les 92 classes, 16 n'ont aucun individu dans la version peuplée, dont \textit{Cataplasme}, \textit{OrdrePlante} et \textit{CategorieMaladieCIM10}. Les treize effets toxicologiques sont de même rattachés à leur classe générale, sans distinguer la toxicité hépatique de la toxicité nerveuse.
+
+Le schéma précédent a été dessiné à partir de l'ontologie. Nous l'avons confronté à une vue que Protégé calcule lui-même avec son module OntoGraf (figure \ref{fig:ontograf}). Le graphe part de la classe racine \textit{owl\string:Thing}, commune à toutes les classes d'une ontologie OWL. Ses flèches vont de la classe générale vers la sous-classe, dans le sens inverse de celles d'UML. Les classes y portent leur libellé français au lieu de leur identifiant. Le signe « + » de la racine indique que d'autres classes ne sont pas déployées.
 
 \begin{figure}[H]
 \centering
@@ -142,6 +151,8 @@ Nous avons aussi visualisé le schéma avec le module OntoGraf de Protégé, à 
 \caption{Vue OntoGraf d'une partie de la hiérarchie des classes sous Protégé~5}
 \label{fig:ontograf}
 \end{figure}
+
+La vue déploie 32 classes, choisies autour des notions de plante, de préparation et de source. On y retrouve les cinq types de plante, les six formes galéniques et les douze modes de préparation. \textit{SourceScientifique} y apparaît comme une spécialisation de \textit{ReferenceScientifique}. Tous ces liens concordent avec ceux de la figure \ref{fig:hierarchies_classes}. La classe \textit{UsageTherapeutique}, encadrée en bleu car elle était sélectionnée, y reste isolée. OntoGraf ne trace ici que les liens de sous-classe, alors qu'un usage se définit par ses relations avec les autres classes. Cette limite justifie le diagramme de classes de la section \ref{subsec:diagramme_classes}.
 
 \subsection{Classes ajoutées}
 \label{subsec:classes_ajoutees}
@@ -152,7 +163,7 @@ Nous avons construit OntoPlantMedBF en ajoutant au schéma initial des classes u
 \centering
 \caption{Classes ajoutées à l'ontologie}
 \label{tab:classes_ajoutees}
-\begin{tabular}{|L{4.2cm}|L{5.4cm}|L{3.4cm}|}
+\begin{tabular}{|L{3.6cm}|L{6.2cm}|L{5.1cm}|}
 \hline
 \textbf{Ensemble de classes ajouté} & \textbf{Ce qu'il représente} & \textbf{Exemples de concepts} \\
 \hline
@@ -184,7 +195,7 @@ Nous avons ajouté des propriétés de données pour décrire les noms vernacula
 \centering
 \caption{Propriétés ajoutées à l'ontologie}
 \label{tab:proprietes_ajoutees}
-\begin{tabular}{|L{5.2cm}|L{7.8cm}|}
+\begin{tabular}{|L{6.4cm}|L{9.7cm}|}
 \hline
 \textbf{Propriété} & \textbf{Rôle} \\
 \hline
@@ -205,11 +216,11 @@ Dosage, toxicité & Précautions d'emploi documentées par les sources \\
 \end{tabular}
 \end{table}
 
-Les propriétés de données ajoutées sont des chaînes de caractères de type \texttt{xsd:string}. Nous avons créé \textit{nomMoore}, \textit{nomDioula} et \textit{nomFulfulde} pour décrire les noms locaux. Les propriétés \textit{nomVernaculaireTexte} et \textit{codeLangue} associent un nom vernaculaire à sa langue. Dans la version peuplée, la langue est indiquée par \textit{nomMoore}, \textit{nomDioula} ou \textit{nomFulfulde} lorsque la source la précise. La propriété \textit{codeLangue} n'y est pas renseignée. Les propriétés \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} décrivent l'usage. Les propriétés \textit{doi}, \textit{page} et \textit{section} identifient la référence. La propriété \textit{toxicite} consigne les précautions rapportées pour une plante. Les propriétés \textit{descriptionActivite} et \textit{effetToxicologique} décrivent les résultats rapportés. La localisation est décrite par \textit{estLocaliseeA}, du domaine \textit{Plante} à la classe \textit{Localite}, en complément de \textit{aCoordoneesGPS}, conservée de l'ontologie d'origine. Ces identifiants figurent dans le fichier Turtle.
+Les propriétés de données ajoutées sont des chaînes de caractères de type \texttt{xsd:string}. Nous avons créé \textit{nomMoore}, \textit{nomDioula} et \textit{nomFulfulde} pour décrire les noms locaux. Les propriétés \textit{nomVernaculaireTexte} et \textit{codeLangue} associent un nom vernaculaire à sa langue. Dans la version peuplée, la langue est indiquée par \textit{nomMoore}, \textit{nomDioula} ou \textit{nomFulfulde} lorsque la source la précise. La propriété \textit{codeLangue} n'y est pas renseignée. Les propriétés \textit{niveauPreuve}, \textit{typeEtude}, \textit{source} et \textit{dosage} décrivent l'usage. Les propriétés \textit{doi}, \textit{page} et \textit{section} identifient la référence. Dans la version peuplée, seule \textit{doi} est renseignée, car la page et la section sont données par la propriété \textit{source} de chaque usage. La propriété \textit{toxicite} est prévue pour les précautions rapportées pour une plante. Elle n'y a pas de valeur, et les effets rapportés sont portés par la classe \textit{EffetToxicologique}. Les propriétés \textit{descriptionActivite} et \textit{effetToxicologique} décrivent les résultats rapportés. La localisation est décrite par \textit{estLocaliseeA}, du domaine \textit{Plante} à la classe \textit{Localite}, en complément de \textit{aCoordoneesGPS}, conservée de l'ontologie d'origine. Ces identifiants figurent dans le fichier Turtle.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.96\textwidth]{proprietes_ajoutees.png}
+\includegraphics[width=0.6\textwidth]{proprietes_ajoutees.png}
 \caption{Arborescence des propriétés de données dans Protégé}
 \label{fig:proprietes_ajoutees}
 \end{figure}
@@ -223,7 +234,7 @@ Nous avons ajouté des propriétés objet pour relier les plantes à leurs usage
 \centering
 \caption{Relations ajoutées à l'ontologie}
 \label{tab:relations_ajoutees}
-\begin{tabular}{|L{4cm}|L{9cm}|}
+\begin{tabular}{|L{6.3cm}|L{9.2cm}|}
 \hline
 \textbf{Relation} & \textbf{Signification} \\
 \hline
@@ -252,7 +263,7 @@ Nous avons associé le niveau de preuve à l'usage documenté, sans l'interprét
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.96\textwidth]{relations_ajoutees.png}
+\includegraphics[width=0.6\textwidth]{relations_ajoutees.png}
 \caption{Arborescence des propriétés objet dans Protégé}
 \label{fig:relations_ajoutees}
 \end{figure}
@@ -260,7 +271,7 @@ Nous avons associé le niveau de preuve à l'usage documenté, sans l'interprét
 \subsection{Diagramme de classes}
 \label{subsec:diagramme_classes}
 
-Le diagramme de classes de la figure \ref{fig:diagramme_classes} rassemble les éléments présentés dans les sections précédentes. Il représente les 21 classes reliées par des propriétés objet, sans leurs sous-classes. Les 31 propriétés de données y figurent comme attributs de type \texttt{string}. Les 29 propriétés objet y figurent comme associations, orientées du domaine vers la portée. Les couleurs regroupent les classes par thème, de la botanique à la traçabilité des sources.
+Les sections précédentes ont présenté séparément les classes, les propriétés et les relations. Le diagramme de classes de la figure \ref{fig:diagramme_classes} les réunit et montre comment un fait s'y inscrit, de la plante à sa source. Il sert aussi de référence au passage vers le graphe, décrit à la section \ref{sec:base_connaissances}, car Neo4j en reprend les noms. Il représente les 21 classes reliées par des propriétés objet, sans leurs sous-classes. Les 31 propriétés de données y figurent comme attributs de type \texttt{string}. Les 29 propriétés objet y figurent comme associations, orientées du domaine vers la portée. Les couleurs regroupent les classes par thème, de la botanique à la traçabilité des sources.
 
 \begin{figure}[H]
 \centering
@@ -269,7 +280,13 @@ Le diagramme de classes de la figure \ref{fig:diagramme_classes} rassemble les �
 \label{fig:diagramme_classes}
 \end{figure}
 
-La classe \textit{UsageTherapeutique} occupe le centre du diagramme. Chaque usage est rattaché à une plante par \textit{estRapportePour}. Il est relié à sa maladie cible, à la partie utilisée, à sa préparation, à son niveau de preuve et à sa source. Toutes les classes de faits aboutissent à \textit{SourceScientifique}, par \textit{estDocumenteePar} ou l'une de ses sous-propriétés. L'ontologie ne déclare aucune cardinalité. Les multiplicités indiquées ont donc été relevées dans la base peuplée, et non imposées par le modèle. Une plante peut ainsi être rattachée à plusieurs familles, jusqu'à trois dans la base. Trois associations sont déclarées sans être employées par les individus, à savoir \textit{aPourHabitatLocalite}, \textit{aPourCategoriMaladie} et \textit{sAdministrePar}.
+La classe \textit{UsageTherapeutique} occupe le centre du diagramme. Chaque usage est rattaché à une plante par \textit{estRapportePour}. Il est relié à sa maladie cible, à la partie utilisée, à sa préparation, à son niveau de preuve et à sa source. Une relation directe entre la plante et la maladie aurait été plus simple, mais elle n'aurait pu porter aucune de ces précisions. Elle aurait aussi confondu les usages rapportés plusieurs fois. La base compte en effet 1~676 usages pour 1~561 couples distincts de plante et de maladie. Parmi ces couples, 92 ont plusieurs usages. \textit{Lannea microcarpa} contre la diarrhée en est un exemple. Ky et al. rapportent une décoction de racine, prise par voie orale ou en lavement. Zerbo et al. rapportent, en 2007, une macération de feuilles prise par voie orale. Le modèle garde ces deux usages distincts, chacun avec sa recette et sa source.
+
+Autour de ce noyau, quatre groupes de classes complètent la description. La plante porte son identité botanique, par sa famille et son genre, ainsi que ses noms vernaculaires et ses localités. Les composés, les activités pharmacologiques et les effets toxicologiques se rattachent directement à elle, car ils décrivent l'espèce et non un usage particulier. La préparation porte le procédé, les ingrédients et l'excipient. L'association \textit{associePlante} relie 93 préparations aux autres plantes de la recette, ce qui représente les remèdes composés.
+
+Le bas du diagramme porte l'exigence de traçabilité posée par la problématique. Toutes les classes de faits aboutissent à \textit{SourceScientifique}, par \textit{estDocumenteePar} ou l'une de ses six sous-propriétés. La propriété générale est déclarée pour toute ressource, mais seules les préparations l'emploient directement, d'où son tracé. Chaque usage a exactement une source, alors qu'une plante peut en avoir jusqu'à huit. La source identifie la publication par son DOI. La page varie d'un fait à l'autre, et c'est l'attribut \textit{source} de l'usage qui la donne. L'attribut \textit{passageSource} y ajoute les mots relevés dans le document.
+
+L'ontologie ne déclare aucune cardinalité. Les multiplicités indiquées ont donc été relevées dans la base peuplée, et non imposées par le modèle. Une plante peut ainsi être rattachée à plusieurs familles, jusqu'à trois dans la base. De même, une préparation n'appartient qu'à un seul usage, car chaque recette extraite est enregistrée séparément. Trois associations sont déclarées sans être employées par les individus, à savoir \textit{aPourHabitatLocalite}, \textit{aPourCategoriMaladie} et \textit{sAdministrePar}. Neuf attributs sur 31 restent aussi sans valeur, dont \textit{codeLangue}, \textit{toxicite}, \textit{page} et \textit{section}. Le diagramme montre donc ce que le modèle peut représenter, au-delà de ce que les documents extraits renseignent.
 
 % ============================================================
 % III.2. BASE DE CONNAISSANCES ORIENTÉE GRAPHE
@@ -287,7 +304,7 @@ Nous avons importé dans Neo4j l'ontologie réajustée OntoPlantMedBF. Chaque in
 \centering
 \caption{Correspondance entre les classes de l'ontologie et les nœuds du graphe}
 \label{tab:Mapping_noeuds}
-\begin{tabular}{|L{3.5cm}|L{4.3cm}|L{5.2cm}|}
+\begin{tabular}{|L{3.8cm}|L{6.7cm}|L{4.7cm}|}
 \hline
 \textbf{Nœud} & \textbf{Classe de l'ontologie} & \textbf{Propriétés principales} \\
 \hline
@@ -310,13 +327,13 @@ Nous avons importé dans Neo4j l'ontologie réajustée OntoPlantMedBF. Chaque in
 \end{tabular}
 \end{table}
 
-Nous avons aligné les noms des relations du graphe sur les propriétés objet d'OntoPlantMedBF, notamment \textit{estRapportePour}, \textit{aPourMaladieCible}, \textit{aPourPartieUtilisee}, \textit{aPourPreparation}, les sous-propriétés de \textit{estDocumenteePar}, \textit{aPourNiveauDePreuve}, \textit{contientCompose}, \textit{presenteActivite}, \textit{presenteEffetToxicologique} et \textit{estLocaliseeA}. Nous avons repris les propriétés de données du TTL pour décrire les entités. Les noms Neo4j étant les identifiants OWL, la correspondance préserve le domaine et la portée définis dans l'ontologie, que l'import contrôle pour chaque relation.
+Nous avons aligné les noms des relations du graphe sur les propriétés objet d'OntoPlantMedBF, notamment \textit{estRapportePour}, \textit{aPourMaladieCible}, \textit{aPourPartieUtilisee}, \textit{aPourPreparation}, les sous-propriétés de \textit{estDocumenteePar}, \textit{aPourNiveauDePreuve}, \textit{contientCompose}, \textit{presenteActivite}, \textit{presenteEffetToxicologique} et \textit{estLocaliseeA}. Nous avons repris les propriétés de données du TTL pour décrire les entités. Les noms Neo4j étant les identifiants OWL, la correspondance préserve le domaine et la portée définis dans l'ontologie, que l'import contrôle pour chaque relation. Le tableau \ref{tab:relations_graphe} précise le sens des principales.
 
 \begin{table}[H]
 \centering
 \caption{Relations du graphe de connaissances}
 \label{tab:relations_graphe}
-\begin{tabular}{|L{4cm}|L{9cm}|}
+\begin{tabular}{|L{6.3cm}|L{7.7cm}|}
 \hline
 \textbf{Relation} & \textbf{Sens retenu} \\
 \hline
@@ -370,14 +387,20 @@ Nous avons organisé le traitement des requêtes en neuf étapes, numérotées c
     \item \textbf{Affichage des sources.} L'interface présente la réponse, puis les références scientifiques correspondantes (auteur, année, DOI) et la requête Cypher exécutée.
 \end{enumerate}
 
-La figure \ref{fig:sequence_assistant} détaille ce traitement sous forme de diagramme de séquence. Elle suit une question depuis l'écran de l'assistant jusqu'à l'affichage de la réponse. Les objets \textit{Assistant} et \textit{Text2Cypher} correspondent aux classes de la couche RAG. Un premier cadre \texttt{alt} met à part les questions qui portent seulement sur le contenu de la base, traitées par une requête fixe. Les autres questions suivent la chaîne Text2Cypher, avec au plus une correction de la requête dans le cadre \texttt{opt}. Le second cadre \texttt{alt} distingue l'absence de fait sourcé, qui ne sollicite pas le modèle, de la rédaction de la réponse. L'écran demande enfin au détecteur de toxicité les alertes liées aux plantes citées. Pour la lisibilité, le diagramme omet la réponse aux simples messages de conversation et la vérification des sources des pages suivantes.
+La figure \ref{fig:architecture_rag} montre les composants de la chaîne et les données qu'ils échangent. Elle ne dit pas lequel décide à chaque moment, ni ce qui se passe lorsqu'une étape échoue. La figure \ref{fig:sequence_assistant} complète cette description par un diagramme de séquence. Elle suit une question depuis l'écran de l'assistant jusqu'à l'affichage de la réponse. Le temps s'écoule de haut en bas. Une flèche pleine représente un appel, une flèche en pointillés son retour, et un rectangle vertical la durée pendant laquelle l'objet travaille. Les objets \textit{Assistant} et \textit{Text2Cypher} correspondent aux classes de la couche RAG. Le premier compose la réponse, le second s'occupe seulement de retrouver les faits.
 
-\begin{figure}[!tbp]
+La recherche des faits alterne appels au modèle et contrôles du système. Le modèle relève les termes, puis l'index de la base fournit les libellés exacts. Le modèle écrit ensuite la requête, que le système contrôle. Le premier cadre \texttt{opt} montre l'exécution d'une requête acceptée. Le système y joint la provenance dès que la forme de la requête s'y prête. Le second cadre \texttt{opt} correspond à une requête rejetée ou sans résultat. Une seule correction est alors demandée, et la requête corrigée est exécutée à son tour. Cette limite évite des échanges sans fin avec le modèle. Le système vérifie enfin que les sources renvoyées existent dans le graphe.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{sequence_assistant.png}
 \caption{Diagramme de séquence d'une question posée à l'assistant}
 \label{fig:sequence_assistant}
 \end{figure}
+
+Le cadre \texttt{alt} porte la règle de prudence du système. Sans fait sourcé, l'assistant répond lui-même que l'information n'est pas disponible. Le modèle n'est pas sollicité, et ne peut donc pas combler le vide par une réponse plausible. Lorsque des faits existent, le modèle rédige, puis l'assistant ajoute les faits omis. Avant l'affichage, l'écran demande au détecteur de toxicité les alertes liées aux plantes citées. Ce détecteur lit les effets toxiques dans la base et laisse la réponse inchangée. L'échange est enfin retenu dans la mémoire de session.
+
+Trois constats ressortent de cette lecture. Aucune flèche ne relie le modèle de langue à Neo4j, car toute requête qu'il écrit passe par \textit{Text2Cypher}, qui la contrôle. Une question ordinaire appelle le modèle trois fois, pour les termes, la requête et la rédaction, et quatre fois s'il faut une correction. Ces appels successifs contribuent aux temps de réponse mesurés au chapitre \ref{chap:resultats_discussion}. Enfin, la vérification des sources ne dépend jamais du modèle. Pour la lisibilité, le diagramme omet la réponse aux simples messages de conversation et la vérification des sources des pages suivantes.
 
 % ============================================================
 % III.4. ARCHITECTURE DE L'APPLICATION WEB
@@ -392,32 +415,48 @@ Nous avons développé une application web avec Streamlit pour donner accès au 
 
 Nous avons organisé l'application autour d'un point d'entrée, de huit écrans et d'un état de session partagé. Les écrans sont l'accueil, l'assistant, la recherche, les plantes, les pathologies, le graphe, les sources et la page « à propos ». Chaque question posée à l'assistant appelle la couche RAG, qui renvoie une réponse et les sources à afficher.
 
-Le diagramme de cas d'utilisation de la figure \ref{fig:cas_utilisation} décrit ce que l'utilisateur peut faire sur chaque écran. L'utilisateur accède aux huit écrans par huit cas principaux, auxquels s'ajoute le démarrage d'une nouvelle conversation. Le modèle de langue intervient comme acteur secondaire, pour la seule interrogation de l'assistant. Les relations \textit{include} marquent une étape toujours réalisée, comme le choix d'une pathologie avant l'affichage de ses usages. Les relations \textit{extend} marquent une possibilité offerte à l'utilisateur, comme la consultation de la requête exécutée. La fiche d'une plante n'a pas d'écran propre. Elle s'ouvre depuis la recherche, le catalogue ou les pathologies, ce que traduisent trois relations \textit{extend}. L'alerte de toxicité étend à la fois l'assistant et la fiche, lorsque la plante concernée a des données toxicologiques.
+L'assistant n'est qu'un des moyens d'accès aux connaissances. Le diagramme de cas d'utilisation de la figure \ref{fig:cas_utilisation} décrit l'ensemble de ce que l'utilisateur peut faire sur chaque écran. Il fixe le périmètre fonctionnel de l'application, sans entrer dans son fonctionnement interne. Un acteur unique, l'utilisateur, représente les chercheurs, les étudiants et les tradipraticiens visés par la problématique. L'application ne demande ni compte ni profil, et tous disposent des mêmes fonctions. Le modèle de langue intervient comme acteur secondaire, pour la seule interrogation de l'assistant. Neo4j n'apparaît pas comme acteur, car la base fait partie du système représenté.
 
-\begin{figure}[!tbp]
+L'utilisateur accède aux huit écrans par huit cas principaux, auxquels s'ajoute le démarrage d'une nouvelle conversation. Les relations \textit{include} marquent une étape toujours réalisée, comme le choix d'une pathologie avant l'affichage de ses usages. Les relations \textit{extend} marquent une possibilité offerte à l'utilisateur, comme la consultation de la requête exécutée. Leur flèche part du cas facultatif et pointe vers le cas qu'il complète.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{cas_utilisation_application.png}
 \caption{Diagramme de cas d'utilisation de l'application web}
 \label{fig:cas_utilisation}
 \end{figure}
 
-Les figures \ref{fig:sequence_fiche} et \ref{fig:sequence_pathologie} détaillent deux de ces cas. L'ouverture d'une fiche passe par l'état de session de Streamlit. L'écran des plantes y enregistre le nom choisi, puis la page s'exécute à nouveau et la vue de la fiche relit ce nom. Le dépôt des plantes interroge alors Neo4j pour l'identité de la plante, puis pour ses rubriques, ses usages et ses sources. Il regroupe par usage les lignes obtenues avant de les transmettre à la vue. Si la plante est absente de la base, la vue l'indique sans autre requête. Un encadré signale les risques lorsque la plante a des données de toxicité.
-
-\begin{figure}[!tbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{sequence_fiche_plante.png}
 \caption{Diagramme de séquence de l'ouverture de la fiche d'une plante}
 \label{fig:sequence_fiche}
 \end{figure}
 
-Pour les pathologies, l'écran charge d'abord la liste des maladies de la base, lue une seule fois puis gardée en mémoire. Pour chaque pathologie choisie, le dépôt des pathologies renvoie les usages dont une maladie contient le terme, triés par niveau de preuve. Un clic sur une ligne du tableau ouvre la fiche de la plante, selon la séquence de la figure \ref{fig:sequence_fiche}.
+Ces cas forment trois ensembles. Le premier est l'interrogation en langage naturel, autour de l'assistant. Les références citées y sont incluses, donc présentées avec toute réponse fondée sur des faits sourcés. Les faits retrouvés et la requête exécutée restent à la demande, pour qui veut vérifier la réponse. Le deuxième ensemble est la consultation directe, par la recherche, le catalogue, les pathologies et le graphe. Elle ne dépend pas du modèle de langue et reste possible lorsqu'il est arrêté. Le troisième concerne la nature des connaissances, avec les sources scientifiques et l'échelle des niveaux de preuve.
 
-\begin{figure}[!tbp]
+Deux cas relient ces ensembles. La fiche d'une plante n'a pas d'écran propre. Elle s'ouvre depuis la recherche, le catalogue ou les pathologies, ce que traduisent trois relations \textit{extend}. Elle inclut les usages documentés, leurs sources, les préparations, les composés, les activités et les localités. L'alerte de toxicité étend à la fois l'assistant et la fiche, lorsque la plante concernée a des données toxicologiques. L'utilisateur est ainsi averti, qu'il pose une question ou qu'il parcoure le catalogue. Le tableau \ref{tab:fonctionnalites} du chapitre \ref{chap:resultats_discussion} donne l'état de réalisation de ces fonctions.
+
+Les figures \ref{fig:sequence_fiche} et \ref{fig:sequence_pathologie} détaillent deux de ces cas. Ils correspondent aux deux sens de lecture de la base, de la plante vers ses usages et de la maladie vers les plantes. La fiche est en outre le point d'arrivée commun à trois écrans. Ces deux parcours n'appellent pas le modèle de langue et n'emploient que des requêtes écrites à l'avance. Les couleurs des figures distinguent les écrans et les vues en bleu, les dépôts en orange et la base en rouge. Dans ces parcours, seuls les dépôts interrogent Neo4j. Un écran peut donc changer de présentation sans que les requêtes soient modifiées.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{sequence_pathologie.png}
+\includegraphics[width=0.82\textwidth]{sequence_pathologie.png}
 \caption{Diagramme de séquence de la recherche par pathologie}
 \label{fig:sequence_pathologie}
 \end{figure}
+
+L'ouverture d'une fiche passe par l'état de session de Streamlit. Streamlit exécute à nouveau toute la page à chaque action de l'utilisateur, et une variable ordinaire y serait perdue. L'écran des plantes enregistre donc le nom choisi dans l'état de session. La page s'exécute à nouveau, et la vue de la fiche relit ce nom. Comme cette vue est partagée, les trois écrans ouvrent la même fiche sans la programmer trois fois.
+
+Le dépôt des plantes interroge alors Neo4j. Une première requête cherche l'identité de la plante, avec sa famille et ses noms locaux, et le cadre \texttt{alt} en dépend. Si la plante est absente de la base, la vue l'indique sans autre requête. Si elle est présente, trois autres requêtes lisent ses rubriques, ses usages et ses sources. Celle des usages renvoie des lignes à plat, une par combinaison de valeurs. Un usage qui emploie deux parties et deux procédés occupe ainsi quatre lignes. Le dépôt les regroupe par usage avant de les transmettre à la vue.
+
+L'ordre d'affichage suit un choix de prudence. Après l'en-tête et les chiffres clés, un premier cadre \texttt{opt} place l'encadré des risques avant les usages, lorsque la plante a des données de toxicité. Viennent ensuite le tableau des usages, les rubriques en onglets, les références et l'explication des niveaux de preuve. Le dernier cadre \texttt{opt} montre la fermeture, qui efface le nom de l'état de session. La capture de la figure \ref{fig:ecran_fiche}, au chapitre \ref{chap:resultats_discussion}, présente le résultat à l'écran.
+
+La figure \ref{fig:sequence_pathologie} décrit le parcours inverse, celui d'un utilisateur qui part d'une maladie. L'écran charge d'abord la liste des maladies de la base, lue une seule fois puis gardée en mémoire. Le premier cadre \texttt{opt} représente cette lecture unique. L'utilisateur choisit ainsi parmi les 180 libellés existants, au lieu de saisir un terme que la base ne connaîtrait pas.
+
+Le cadre \texttt{loop} se répète pour chaque pathologie choisie. Le dépôt des pathologies renvoie les usages dont une maladie contient le terme, triés par niveau de preuve. Le choix de « Paludisme » ramène donc aussi « Paludisme infantile » et « Paludisme nerveux », enregistrés comme des libellés distincts. Le tri est prévu pour les sept niveaux de l'échelle. Les deux niveaux présents dans la base étant placés au même rang, les usages suivent aujourd'hui l'ordre alphabétique des plantes. L'écran affiche pour chaque pathologie le nombre de plantes et d'usages, puis un tableau. Chaque ligne porte la plante, les parties, la préparation, l'administration et les sources.
+
+Le dernier cadre \texttt{opt} relie ce parcours au précédent. Un clic sur une ligne du tableau enregistre la plante dans l'état de session. Le cadre \texttt{ref} renvoie alors à la séquence de la figure \ref{fig:sequence_fiche}, sans la redessiner. L'utilisateur passe ainsi d'une maladie à une plante, puis à l'ensemble des usages et des sources de cette plante.
 
 % ============================================================
 % CONCLUSION DU CHAPITRE
@@ -425,6 +464,5 @@ Pour les pathologies, l'écran charge d'abord la liste des maladies de la base, 
 
 \phantomsection
 \section*{Conclusion du chapitre}
-\addcontentsline{toc}{section}{Conclusion du chapitre}
 
 Ce chapitre a présenté la conception du système issu de la démarche du chapitre \ref{chap:materiel_methodologie}. Nous avons construit OntoPlantMedBF à partir d'ontoMEDTRAD, l'avons adaptée au contexte burkinabè et peuplée avec des connaissances sourcées ; son schéma organise également la base Neo4j. Nous avons décrit la chaîne de traitement du système RAG qui interroge le graphe à partir des questions et l'architecture de l'application web qui présente les réponses. Nous avons rattaché les connaissances à leurs sources et repris les niveaux de preuve rapportés par les documents. Le chapitre \ref{chap:resultats_discussion} décrit d'abord la mise en œuvre de ce système. Il évalue ensuite l'ontologie et les réponses du système, mesure les temps de réponse de l'application, puis discute les résultats et leurs limites.

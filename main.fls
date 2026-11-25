@@ -391,6 +391,10 @@ INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-It
 INPUT .\parts\abstract.tex
 INPUT .\parts\abstract.tex
 INPUT parts\abstract.tex
+INPUT .\main.toc
+INPUT .\main.toc
+INPUT main.toc
+OUTPUT main.toc
 INPUT .\main.lof
 INPUT .\main.lof
 INPUT main.lof
@@ -429,10 +433,6 @@ INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxexa
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
-INPUT .\main.toc
-INPUT .\main.toc
-INPUT main.toc
-OUTPUT main.toc
 INPUT .\chapters\introduction.tex
 INPUT .\chapters\introduction.tex
 INPUT chapters\introduction.tex
@@ -619,6 +619,7 @@ INPUT .\images\sequence_pathologie.png
 INPUT .\chapters\chapter4.tex
 INPUT .\chapters\chapter4.tex
 INPUT chapters\chapter4.tex
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
 INPUT .\images\capture_neo4j.png
 INPUT .\images\capture_neo4j.png
 INPUT .\images\capture_neo4j.png
@@ -656,6 +657,11 @@ INPUT .\chapters\conclusion.tex
 INPUT .\chapters\conclusion.tex
 INPUT chapters\conclusion.tex
 INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT .\parts\annexe-questions.tex
+INPUT .\parts\annexe-questions.tex
+INPUT parts\annexe-questions.tex
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ts1-qtmb.tfm
+INPUT C:\Users\sloug\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

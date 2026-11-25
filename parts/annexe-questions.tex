@@ -1,0 +1,73 @@
+% Annexe A1 : questions de l'evaluation du systeme RAG
+% Source : GraphRAG/evaluation/questions.json
+
+\phantomsection
+\section*{Annexe A1 : Questions de l'évaluation du système RAG}
+\addcontentsline{toc}{section}{Annexe A1 : Questions de l'évaluation du système RAG}
+
+Cette annexe donne les 50 questions posées au système, dans la formulation soumise aux deux modèles. La dernière colonne indique le nombre de faits attendus, calculé par une requête distincte de la chaîne RAG. Leur somme est de 915.
+
+\begingroup
+\footnotesize
+\setlength{\LTpre}{4pt}
+\begin{longtable}{|C{0.9cm}|L{13cm}|C{1.6cm}|}
+\hline
+\textbf{N°} & \textbf{Question} & \textbf{Faits attendus} \\ \hline
+\endhead
+\multicolumn{3}{|l|}{\textbf{Questions simples}} \\* \hline\nopagebreak
+Q01 & Quelles plantes sont utilisées contre le paludisme~? & 110 \\ \hline
+Q02 & Quelles plantes sont employées contre la toux~? & 61 \\ \hline
+Q03 & Quelles plantes sont rapportées contre la fièvre~? & 29 \\ \hline
+Q04 & Quelles plantes soignent la diarrhée selon les sources~? & 62 \\ \hline
+Q05 & Quelles plantes sont utilisées contre les morsures de serpent~? & 59 \\ \hline
+Q06 & Quelles plantes sont citées contre l'épilepsie~? & 33 \\ \hline
+Q07 & Quelles plantes sont utilisées contre les hémorroïdes~? & 13 \\ \hline
+Q08 & Quelles plantes sont rapportées pour le diabète~? & 9 \\ \hline
+Q09 & Quelles plantes sont utilisées contre la constipation~? & 9 \\ \hline
+Q10 & Quelles plantes sont employées contre les rhumatismes~? & 22 \\ \hline
+Q11 & Quelles parties de \textit{Annona senegalensis} sont utilisées~? & 6 \\ \hline
+Q12 & Quelles parties de \textit{Adansonia digitata} sont utilisées~? & 5 \\ \hline
+Q13 & Quelles parties de \textit{Calotropis procera} sont utilisées~? & 10 \\ \hline
+Q14 & Quelles parties de \textit{Anogeissus leiocarpa} sont utilisées~? & 6 \\ \hline
+Q15 & Quelles parties de \textit{Parkia biglobosa} sont utilisées~? & 7 \\ \hline
+Q16 & Quelles parties de \textit{Azadirachta indica} sont utilisées~? & 4 \\ \hline
+Q17 & À quelle famille botanique appartient \textit{Sida acuta}~? & 1 \\ \hline
+Q18 & À quelle famille botanique appartient \textit{Balanites aegyptiaca}~? & 3 \\ \hline
+Q19 & À quelle famille botanique appartient \textit{Guiera senegalensis}~? & 1 \\ \hline
+Q20 & Quelle plante porte le nom local «~Sugdaaga~»~? & 1 \\ \hline
+Q21 & Quelle plante porte le nom local «~Gian~»~? & 1 \\ \hline
+Q22 & Quelle plante porte le nom local «~Tang-razunga~»~? & 1 \\ \hline
+Q23 & Comment \textit{Vitellaria paradoxa} est-elle préparée selon les sources~? & 4 \\ \hline
+Q24 & Comment \textit{Acacia nilotica} est-elle préparée selon les sources~? & 5 \\ \hline
+Q25 & Comment \textit{Sclerocarya birrea} est-elle préparée selon les sources~? & 4 \\ \hline
+\multicolumn{3}{|l|}{\textbf{Recettes multi-plantes}} \\* \hline\nopagebreak
+Q26 & Avec quelles autres plantes \textit{Parkia biglobosa} est-elle associée dans les recettes rapportées~? & 4 \\ \hline
+Q27 & Avec quelles autres plantes \textit{Balanites aegyptiaca} est-elle associée dans les recettes rapportées~? & 2 \\ \hline
+Q28 & Avec quelles autres plantes \textit{Trichilia emetica} est-elle associée dans les recettes rapportées~? & 3 \\ \hline
+Q29 & Avec quelles autres plantes \textit{Acanthospermum hispidum} est-elle associée dans les recettes rapportées~? & 2 \\ \hline
+Q30 & Avec quelles autres plantes \textit{Annona senegalensis} est-elle associée dans les recettes rapportées~? & 4 \\ \hline
+Q31 & Avec quelles autres plantes \textit{Ziziphus mauritiana} est-elle associée dans les recettes rapportées~? & 3 \\ \hline
+Q32 & Avec quelles autres plantes \textit{Tamarindus indica} est-elle associée dans les recettes rapportées~? & 3 \\ \hline
+\multicolumn{3}{|l|}{\textbf{Traçabilité}} \\* \hline\nopagebreak
+Q33 & Quelles sources documentent \textit{Annona senegalensis}~? & 7 \\ \hline
+Q34 & Quelles sources documentent \textit{Balanites aegyptiaca}~? & 8 \\ \hline
+Q35 & Quelles sources documentent \textit{Azadirachta indica}~? & 7 \\ \hline
+Q36 & Quelles sources documentent \textit{Parkia biglobosa}~? & 8 \\ \hline
+Q37 & Quelles sources documentent \textit{Adansonia digitata}~? & 5 \\ \hline
+Q38 & Quelles sources documentent \textit{Sida acuta}~? & 2 \\ \hline
+Q39 & Quelles sources documentent \textit{Crotalaria retusa}~? & 2 \\ \hline
+Q40 & Quelles sources documentent \textit{Vitellaria paradoxa}~? & 7 \\ \hline
+\multicolumn{3}{|l|}{\textbf{Questions spatiales}} \\* \hline\nopagebreak
+Q41 & Quelles plantes sont rapportées pour la localité Ouagadougou~? & 23 \\ \hline
+Q42 & Quelles plantes sont rapportées pour la localité Hauts-Bassins~? & 103 \\ \hline
+Q43 & Quelles plantes sont rapportées pour la localité Sud-Ouest~? & 61 \\ \hline
+Q44 & Quelles plantes sont rapportées pour la localité Plateau central (Mossi)~? & 1 \\ \hline
+Q45 & Quelles plantes sont rapportées pour la localité Kourittenga~? & 194 \\ \hline
+\multicolumn{3}{|l|}{\textbf{Hors corpus, refus attendu}} \\* \hline\nopagebreak
+Q46 & Quelles plantes sont utilisées contre la maladie de Lyme~? & refus \\ \hline
+Q47 & Quelles plantes soignent la grippe aviaire~? & refus \\ \hline
+Q48 & Quels sont les usages de \textit{Ginkgo biloba}~? & refus \\ \hline
+Q49 & Quel est le meilleur traitement contre le cancer du pancréas~? & refus \\ \hline
+Q50 & Quelles plantes sont utilisées contre la sclérose en plaques~? & refus \\ \hline
+\end{longtable}
+\endgroup

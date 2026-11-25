@@ -187,6 +187,70 @@
       \verb https://books.google.com/books/about/Modern_Information_Retrieval.html?id=HbyAAAAACAAJ
       \endverb
     \endentry
+    \entry{bamogo_cross-sectional_2023}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=dd1208c974fd6ca65f604b11c1a7fbd7}{%
+           family={Bamogo},
+           familyi={B\bibinitperiod},
+           given={Rabila},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9bbe94382cb4e4a9a43b5d00c062dcc7}{%
+           family={Nikièma},
+           familyi={N\bibinitperiod},
+           given={Achille\bibnamedelima Sindimbasba},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f87f910f431ce57e7b56b9b06d87cf5c}{%
+           family={Belem},
+           familyi={B\bibinitperiod},
+           given={Mamounata},
+           giveni={M\bibinitperiod}}}%
+        {{hash=55d7444b20551b3e1a4272972cdaab36}{%
+           family={Thiam},
+           familyi={T\bibinitperiod},
+           given={Massamba},
+           giveni={M\bibinitperiod}}}%
+        {{hash=62775a113e8e02e1285531fae15681db}{%
+           family={Diatta},
+           familyi={D\bibinitperiod},
+           given={Youssouph},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6db25479eb26aa3a782e643ef2151fad}{%
+           family={Dabiré},
+           familyi={D\bibinitperiod},
+           given={Roch\bibnamedelima Kounbobr},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5626be8f777992e9a6cff26a8068f85}
+      \strng{fullhash}{bdc223ed6653ff48e02881bff983f273}
+      \strng{fullhashraw}{bdc223ed6653ff48e02881bff983f273}
+      \strng{bibnamehash}{d5626be8f777992e9a6cff26a8068f85}
+      \strng{authorbibnamehash}{d5626be8f777992e9a6cff26a8068f85}
+      \strng{authornamehash}{d5626be8f777992e9a6cff26a8068f85}
+      \strng{authorfullhash}{bdc223ed6653ff48e02881bff983f273}
+      \strng{authorfullhashraw}{bdc223ed6653ff48e02881bff983f273}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2667-0313}
+      \field{journaltitle}{Phytomedicine Plus}
+      \field{month}{8}
+      \field{number}{3}
+      \field{title}{Cross-sectional ethnobotanical survey of plants used by traditional health practitioners for snakebite case management in two regions of {Burkina} {Faso}}
+      \field{volume}{3}
+      \field{year}{2023}
+      \field{pages}{100471}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.phyplu.2023.100471
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2667031323000672
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2667031323000672
+      \endverb
+    \endentry
     \entry{buchanan1984rulebased}{book}{}{}
       \name{editor}{2}{}{%
         {{hash=9c8f929dd0a8b95eaa41769ea38e6516}{%
@@ -221,6 +285,131 @@
       \field{isbn}{0-201-10172-6}
       \field{title}{Rule-Based Expert Systems: The MYCIN Experiments of the Stanford Heuristic Programming Project}
       \field{year}{1984}
+    \endentry
+    \entry{burns2011levels}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=605c50fac28aa58394bfa4cb6993bf45}{%
+           family={Burns},
+           familyi={B\bibinitperiod},
+           given={Patricia\bibnamedelima B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ffc09d149af540c0b9c191487ac9ba43}{%
+           family={Rohrich},
+           familyi={R\bibinitperiod},
+           given={Rod\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=60f59ad22dfbac40a5a78adea069f77c}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Kevin\bibnamedelima C.},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \strng{fullhash}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \strng{fullhashraw}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \strng{bibnamehash}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \strng{authorbibnamehash}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \strng{authornamehash}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \strng{authorfullhash}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \strng{authorfullhashraw}{b9415c58e087b6c5b5fdbd011dfd2240}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plastic and Reconstructive Surgery}
+      \field{number}{1}
+      \field{title}{The Levels of Evidence and Their Role in Evidence-Based Medicine}
+      \field{volume}{128}
+      \field{year}{2011}
+      \field{pages}{305\bibrangedash 310}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1097/PRS.0b013e318219c171
+      \endverb
+    \endentry
+    \entry{caufield2024spires}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=2af45ea44cf4ba43a742af86fc8abe60}{%
+           family={Caufield},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi Harry},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7467318c339047b87c065d8e9dab32d8}{%
+           family={Hegde},
+           familyi={H\bibinitperiod},
+           given={Harshad},
+           giveni={H\bibinitperiod}}}%
+        {{hash=af2b205f2a775851ebbcf17ba53c29ac}{%
+           family={Emonet},
+           familyi={E\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=337aacbea97cf9c4aa731b0b47653895}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Nomi\bibnamedelima L.},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=f9d2cf84acce92f0e4a3370acfd1cec7}{%
+           family={Joachimiak},
+           familyi={J\bibinitperiod},
+           given={Marcin\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=66da7942b4fd55664ea78d1abccffe63}{%
+           family={Matentzoglu},
+           familyi={M\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d3e0ddf528f2ddbfecf946f6f119b66c}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={HyeongSik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b8caeda6de87e1611c391cc10c43f34c}{%
+           family={Moxon},
+           familyi={M\bibinitperiod},
+           given={Sierra\bibnamedelimb A.\bibnamedelimi T.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=4214a10c39db40e50f33ad71c1f24de6}{%
+           family={Reese},
+           familyi={R\bibinitperiod},
+           given={Justin\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=06cfc64010dd7294ba065f756ff9c990}{%
+           family={Haendel},
+           familyi={H\bibinitperiod},
+           given={Melissa\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ec991b84e66b61a86d79f2640aa1d848}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Peter\bibnamedelima N.},
+           giveni={P\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=4009e5d8c9a9802718ddcd3cd3454e20}{%
+           family={Mungall},
+           familyi={M\bibinitperiod},
+           given={Christopher\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cf9f6e338efd1b70f6e0aa1b191881d}
+      \strng{fullhash}{a0cf1b73af1ab1107e15470ed7d266a3}
+      \strng{fullhashraw}{a0cf1b73af1ab1107e15470ed7d266a3}
+      \strng{bibnamehash}{7cf9f6e338efd1b70f6e0aa1b191881d}
+      \strng{authorbibnamehash}{7cf9f6e338efd1b70f6e0aa1b191881d}
+      \strng{authornamehash}{7cf9f6e338efd1b70f6e0aa1b191881d}
+      \strng{authorfullhash}{a0cf1b73af1ab1107e15470ed7d266a3}
+      \strng{authorfullhashraw}{a0cf1b73af1ab1107e15470ed7d266a3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{3}
+      \field{title}{Structured Prompt Interrogation and Recursive Extraction of Semantics ({SPIRES}): A Method for Populating Knowledge Bases Using Zero-Shot Learning}
+      \field{volume}{40}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btae104
+      \endverb
     \endentry
     \entry{burkinaherbiermed}{online}{}{}
       \name{author}{1}{}{%
@@ -293,49 +482,45 @@
       \verb https://africanplantdatabase.ch
       \endverb
     \endentry
-    \entry{davis_user_1993}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=dcb59a9c9bf67cc1c74d13fb3a9f33a7}{%
+    \entry{davis1993krep}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=0d636b0b98f5855b92a699ea2f89f475}{%
            family={Davis},
            familyi={D\bibinitperiod},
-           given={Fred\bibnamedelima D.},
-           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+           given={Randall},
+           giveni={R\bibinitperiod}}}%
+        {{hash=357160ffeb5c7176aaac7c56bf0296e3}{%
+           family={Shrobe},
+           familyi={S\bibinitperiod},
+           given={Howard},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e4ec701f3e9b3400f41c7dcb84d2e88a}{%
+           family={Szolovits},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
-      \strng{fullhash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
-      \strng{fullhashraw}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
-      \strng{bibnamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
-      \strng{authorbibnamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
-      \strng{authornamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
-      \strng{authorfullhash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
-      \strng{authorfullhashraw}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{namehash}{02c4c99bc89ec3d74bb83e61340fef52}
+      \strng{fullhash}{02c4c99bc89ec3d74bb83e61340fef52}
+      \strng{fullhashraw}{02c4c99bc89ec3d74bb83e61340fef52}
+      \strng{bibnamehash}{02c4c99bc89ec3d74bb83e61340fef52}
+      \strng{authorbibnamehash}{02c4c99bc89ec3d74bb83e61340fef52}
+      \strng{authornamehash}{02c4c99bc89ec3d74bb83e61340fef52}
+      \strng{authorfullhash}{02c4c99bc89ec3d74bb83e61340fef52}
+      \strng{authorfullhashraw}{02c4c99bc89ec3d74bb83e61340fef52}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Lack of user acceptance has long been an impediment to the success of new information systems. The present research addresses why users accept or reject information systems and how user acceptance is affected by system design features. The technology acceptance model (TAM) specifies the causal relationships between system design features, perceived usefulness, perceived ease of use, attitude toward using, and actual usage behavior. Attitude theory from psychology provides the rationale for hypothesized model relationships, and validated measures were used to operationalize model variables. A field study of 112 users regarding two end-user systems was conducted to test the hypothesized model. TAM fully mediated the effects of system characteristics on usage behavior, accounting for 36\% of the variance in usage. Perhaps the most striking finding was that perceived usefulness was 50\% more influential than ease of use in determining usage, underscoring the importance of incorporating the appropriate functional capabilities in new systems. Overall, TAM provides an informative representation of the mechanisms by which design choices influence user acceptance, and should therefore be helpful in applied contexts for forecasting and evaluating user acceptance of information technology. Implications for future research and practice are discussed.}
-      \field{issn}{0020-7373}
-      \field{journaltitle}{International Journal of Man-Machine Studies}
-      \field{month}{3}
-      \field{number}{3}
-      \field{shorttitle}{User acceptance of information technology}
-      \field{title}{User acceptance of information technology: system characteristics, user perceptions and behavioral impacts}
-      \field{urlday}{29}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{volume}{38}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{AI Magazine}
+      \field{number}{1}
+      \field{title}{What Is a Knowledge Representation?}
+      \field{volume}{14}
       \field{year}{1993}
-      \field{urldateera}{ce}
-      \field{pages}{475\bibrangedash 487}
-      \range{pages}{13}
+      \field{pages}{17\bibrangedash 33}
+      \range{pages}{17}
       \verb{doi}
-      \verb 10.1006/imms.1993.1022
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0020737383710229
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0020737383710229
+      \verb 10.1609/aimag.v14i1.1029
       \endverb
     \endentry
     \entry{devine_knowledge_2022}{article}{}{}
@@ -427,6 +612,9 @@
       \field{year}{2024}
       \field{pages}{773\bibrangedash 786}
       \range{pages}{14}
+      \verb{doi}
+      \verb 10.21474/IJAR01/18784
+      \endverb
       \verb{urlraw}
       \verb https://www.journalijar.com/article/48743/traditional-medicinal-practices-of-african-bone-setters:-aspects-of-an-ontology-of-the-field/
       \endverb
@@ -466,13 +654,89 @@
       \field{title}{Ontology Matching}
       \field{year}{2013}
       \verb{doi}
-      \verb 10.1007/978-3-662-43550-9
+      \verb 10.1007/978-3-642-38721-0
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/978-3-662-43550-9
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/978-3-662-43550-9
+      \endverb
+    \endentry
+    \entry{feng2024cypherbench}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=599c633ea8fd0c53011819aeed86e559}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Yanlin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3a7d8cf4bbe65a8a8ed52805fff42b1f}{%
+           family={Papicchio},
+           familyi={P\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=97f92cafbfc1fc8981d9eea0ed082485}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Sajjadur},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \strng{fullhash}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \strng{fullhashraw}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \strng{bibnamehash}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \strng{authorbibnamehash}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \strng{authornamehash}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \strng{authorfullhash}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \strng{authorfullhashraw}{7f11c9e0f7fc886759f7feec5e312f7e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Prépublication arXiv 2412.18702}
+      \field{title}{{CypherBench}: Towards Precise Retrieval over Full-scale Modern Knowledge Graphs in the {LLM} Era}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2412.18702
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2412.18702
+      \endverb
+    \endentry
+    \entry{mariano_fernandez-lopez_pdf_nodate}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=eb65968e6a534a70e6158634be45b20d}{%
+           family={Fernández-López},
+           familyi={F\bibinithyphendelim L\bibinitperiod},
+           given={Mariano},
+           giveni={M\bibinitperiod}}}%
+        {{hash=28ce9eba3995ba8c729d40aa43e9d303}{%
+           family={Gómez-Pérez},
+           familyi={G\bibinithyphendelim P\bibinitperiod},
+           given={Asunción},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \strng{fullhash}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \strng{fullhashraw}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \strng{bibnamehash}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \strng{authorbibnamehash}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \strng{authornamehash}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \strng{authorfullhash}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \strng{authorfullhashraw}{1b5df74d4b23839b0e6bc29fc8ae693b}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Knowledge Engineering Review}
+      \field{number}{2}
+      \field{title}{Overview and analysis of methodologies for building ontologies}
+      \field{volume}{17}
+      \field{year}{2002}
+      \field{pages}{129\bibrangedash 156}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1017/S0269888902000462
       \endverb
     \endentry
     \entry{flahaut1999}{thesis}{}{}
@@ -598,6 +862,83 @@
       \range{pages}{19}
       \verb{doi}
       \verb 10.1007/s11023-018-9482-5
+      \endverb
+    \endentry
+    \entry{francis2018cypher}{inproceedings}{}{}
+      \name{author}{10}{}{%
+        {{hash=fc9931b30bb3393a9e60514e90139510}{%
+           family={Francis},
+           familyi={F\bibinitperiod},
+           given={Nadime},
+           giveni={N\bibinitperiod}}}%
+        {{hash=86bf31b4f157017436ed9fb6023ec8ca}{%
+           family={Green},
+           familyi={G\bibinitperiod},
+           given={Alastair},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fc5fe1a24439ad6b97eae55ca70033ad}{%
+           family={Guagliardo},
+           familyi={G\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=931db7d26f75777de801bc1858e3ebae}{%
+           family={Libkin},
+           familyi={L\bibinitperiod},
+           given={Leonid},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2448e765907e336b42503ef5181866f1}{%
+           family={Lindaaker},
+           familyi={L\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8f2de4fad67143c7e42ca23b5081e234}{%
+           family={Marsault},
+           familyi={M\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=08f838be08287bafe82e8baa6c98e89d}{%
+           family={Plantikow},
+           familyi={P\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3dfaf4ef8c4f1fd20666ec4c619ba5af}{%
+           family={Rydberg},
+           familyi={R\bibinitperiod},
+           given={Mats},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3eae824625f74f671ce3b090ba521c6c}{%
+           family={Selmer},
+           familyi={S\bibinitperiod},
+           given={Petra},
+           giveni={P\bibinitperiod}}}%
+        {{hash=85e616cabb1eb74ff4903753889e5e92}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{53e7edfd3561bb5b26caefe7f3a584df}
+      \strng{fullhash}{00a2ad39f3b5c57ac3676442081683dc}
+      \strng{fullhashraw}{00a2ad39f3b5c57ac3676442081683dc}
+      \strng{bibnamehash}{53e7edfd3561bb5b26caefe7f3a584df}
+      \strng{authorbibnamehash}{53e7edfd3561bb5b26caefe7f3a584df}
+      \strng{authornamehash}{53e7edfd3561bb5b26caefe7f3a584df}
+      \strng{authorfullhash}{00a2ad39f3b5c57ac3676442081683dc}
+      \strng{authorfullhashraw}{00a2ad39f3b5c57ac3676442081683dc}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2018 International Conference on Management of Data}
+      \field{title}{Cypher: An Evolving Query Language for Property Graphs}
+      \field{year}{2018}
+      \field{pages}{1433\bibrangedash 1445}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1145/3183713.3190657
       \endverb
     \endentry
     \entry{grishman2019informationextraction}{article}{}{}
@@ -726,37 +1067,44 @@
       \field{title}{La végétation de la Haute-Volta}
       \field{type}{Thèse de doctorat ès sciences}
       \field{year}{1984}
-      \verb{urlraw}
-      \verb https://www.scirp.org/reference/referencespapers?referenceid=3387847
-      \endverb
-      \verb{url}
-      \verb https://www.scirp.org/reference/referencespapers?referenceid=3387847
-      \endverb
     \endentry
     \entry{hanna2013dron}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=16a019695ab90cc102e8c3b5e82d9afc}{%
+      \name{author}{4}{}{%
+        {{hash=1f358ac7ee711c62021e39e11c4fc0c3}{%
            family={Hanna},
            familyi={H\bibinitperiod},
-           given={John},
+           given={Josh},
            giveni={J\bibinitperiod}}}%
+        {{hash=92060f5c9448fb040aa472634c3b5e36}{%
+           family={Joseph},
+           familyi={J\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=454a703ccefdf0c8e5a547038b4fbd81}{%
+           family={Brochhausen},
+           familyi={B\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0bf13a3bd05c1d2bc3ecece213b61896}{%
+           family={Hogan},
+           familyi={H\bibinitperiod},
+           given={William\bibnamedelima R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
-      \strng{namehash}{e69d55f59b2e817ce9911f4f8fd308a0}
-      \strng{fullhash}{e69d55f59b2e817ce9911f4f8fd308a0}
-      \strng{fullhashraw}{e69d55f59b2e817ce9911f4f8fd308a0}
-      \strng{bibnamehash}{e69d55f59b2e817ce9911f4f8fd308a0}
-      \strng{authorbibnamehash}{e69d55f59b2e817ce9911f4f8fd308a0}
-      \strng{authornamehash}{e69d55f59b2e817ce9911f4f8fd308a0}
-      \strng{authorfullhash}{e69d55f59b2e817ce9911f4f8fd308a0}
-      \strng{authorfullhashraw}{e69d55f59b2e817ce9911f4f8fd308a0}
+      \strng{namehash}{2e772ae007e86782477defad96ef7d79}
+      \strng{fullhash}{d0d3c1ccc4943b08416c8ebc24d9bc42}
+      \strng{fullhashraw}{d0d3c1ccc4943b08416c8ebc24d9bc42}
+      \strng{bibnamehash}{2e772ae007e86782477defad96ef7d79}
+      \strng{authorbibnamehash}{2e772ae007e86782477defad96ef7d79}
+      \strng{authornamehash}{2e772ae007e86782477defad96ef7d79}
+      \strng{authorfullhash}{d0d3c1ccc4943b08416c8ebc24d9bc42}
+      \strng{authorfullhashraw}{d0d3c1ccc4943b08416c8ebc24d9bc42}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Biomedical Semantics}
-      \field{title}{Building a Drug Ontology Based on RxNorm and Other Public Domain Drug Databases}
+      \field{title}{Building a Drug Ontology Based on {RxNorm} and Other Sources}
       \field{volume}{4}
       \field{year}{2013}
       \field{pages}{44}
@@ -854,27 +1202,27 @@
       \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5109718/
       \endverb
     \endentry
-    \entry{hussain2018chatbot}{article}{}{}
+    \entry{hussain2018chatbot}{inproceedings}{}{}
       \name{author}{2}{}{%
-        {{hash=5d57aac25f2c3975a9a2b157c90348a5}{%
+        {{hash=6668cc47e061a3a056ad1070b77757a6}{%
            family={Hussain},
            familyi={H\bibinitperiod},
-           given={Syed},
+           given={Shafquat},
            giveni={S\bibinitperiod}}}%
-        {{hash=617d0b9ee49ceed11e77404f7d1a46f3}{%
-           family={Athula},
-           familyi={A\bibinitperiod},
-           given={Gihan},
-           giveni={G\bibinitperiod}}}%
+        {{hash=e8a9d5b1a255523fe31c0947b204384e}{%
+           family={Ginige},
+           familyi={G\bibinitperiod},
+           given={Athula},
+           giveni={A\bibinitperiod}}}%
       }
-      \strng{namehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
-      \strng{fullhash}{d8e3a57c96b6dd87fc99391853e8cb2f}
-      \strng{fullhashraw}{d8e3a57c96b6dd87fc99391853e8cb2f}
-      \strng{bibnamehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
-      \strng{authorbibnamehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
-      \strng{authornamehash}{d8e3a57c96b6dd87fc99391853e8cb2f}
-      \strng{authorfullhash}{d8e3a57c96b6dd87fc99391853e8cb2f}
-      \strng{authorfullhashraw}{d8e3a57c96b6dd87fc99391853e8cb2f}
+      \strng{namehash}{7b3c64c489042362cb5f3838e1bcc1b9}
+      \strng{fullhash}{7b3c64c489042362cb5f3838e1bcc1b9}
+      \strng{fullhashraw}{7b3c64c489042362cb5f3838e1bcc1b9}
+      \strng{bibnamehash}{7b3c64c489042362cb5f3838e1bcc1b9}
+      \strng{authorbibnamehash}{7b3c64c489042362cb5f3838e1bcc1b9}
+      \strng{authornamehash}{7b3c64c489042362cb5f3838e1bcc1b9}
+      \strng{authorfullhash}{7b3c64c489042362cb5f3838e1bcc1b9}
+      \strng{authorfullhashraw}{7b3c64c489042362cb5f3838e1bcc1b9}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -884,11 +1232,8 @@
       \field{year}{2018}
       \field{pages}{698\bibrangedash 703}
       \range{pages}{6}
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/abstract/document/8418155
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/abstract/document/8418155
+      \verb{doi}
+      \verb 10.1109/WAINA.2018.00170
       \endverb
     \endentry
     \entry{iucn1993guidelines}{book}{}{}
@@ -975,6 +1320,212 @@
       \verb https://web.stanford.edu/~jurafsky/slp3/
       \endverb
     \endentry
+    \entry{kabir2025legalrag}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=c790c1c153df4af16b29126d6634b84d}{%
+           family={Kabir},
+           familyi={K\bibinitperiod},
+           given={Muhammad\bibnamedelima Rafsan},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=4245b7da4125c286292ebef64b6375c0}{%
+           family={Sultan},
+           familyi={S\bibinitperiod},
+           given={Rafeed\bibnamedelima Mohammad},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3a75a06562fae00a4f1c3a7e09f9bb03}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Fuad},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b4ce707d3bace41462a12fc062140629}{%
+           family={Amin},
+           familyi={A\bibinitperiod},
+           given={Mohammad\bibnamedelima Ruhul},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=ce6f2afdbf9e1bfa8675dae407d2309b}{%
+           family={Momen},
+           familyi={M\bibinitperiod},
+           given={Sifat},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5a536b04dd2e04a7c41c31340a9a5853}{%
+           family={Mohammed},
+           familyi={M\bibinitperiod},
+           given={Nabeel},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3f006455d5c838db70f0b61aeb5ec942}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Shafin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5898753659d5be29325ed76b2e477c9}
+      \strng{fullhash}{67475a00053f8d7c2fdecd27b2d0d6e3}
+      \strng{fullhashraw}{67475a00053f8d7c2fdecd27b2d0d6e3}
+      \strng{bibnamehash}{a5898753659d5be29325ed76b2e477c9}
+      \strng{authorbibnamehash}{a5898753659d5be29325ed76b2e477c9}
+      \strng{authornamehash}{a5898753659d5be29325ed76b2e477c9}
+      \strng{authorfullhash}{67475a00053f8d7c2fdecd27b2d0d6e3}
+      \strng{authorfullhashraw}{67475a00053f8d7c2fdecd27b2d0d6e3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Prépublication arXiv 2504.16121}
+      \field{title}{{LegalRAG}: A Hybrid {RAG} System for Multilingual Legal Information Retrieval}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2504.16121
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2504.16121
+      \endverb
+    \endentry
+    \entry{simplice_sida_2007}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=86ff7d0d35dbe994dcfe9f98e3c99bdb}{%
+           family={Karou},
+           familyi={K\bibinitperiod},
+           given={Simplice\bibnamedelima Damintoti},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=91251c958b12b23851492f96ceef86f6}{%
+           family={Nadembega},
+           familyi={N\bibinitperiod},
+           given={Wendyam\bibnamedelimb M.\bibnamedelimi C.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a8c65df75261c223009d643b3cde4416}{%
+           family={Ilboudo},
+           familyi={I\bibinitperiod},
+           given={Denise\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=c27ca20df3de3351ae2743c974bf4ff1}{%
+           family={Ouermi},
+           familyi={O\bibinitperiod},
+           given={Djeneba},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4a5631d26658fc12d8d0b8067399ba9c}{%
+           family={Gbeassor},
+           familyi={G\bibinitperiod},
+           given={Messanvi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1ca70785542ea445b620256b38e1f26e}{%
+           family={De\bibnamedelima Souza},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Comlan},
+           giveni={C\bibinitperiod}}}%
+        {{hash=50fb03d8bedb62b4bc126d045269308b}{%
+           family={Simpore},
+           familyi={S\bibinitperiod},
+           given={Jacques},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f9da2419057cf7b8a9f2f8824414eef0}
+      \strng{fullhash}{79f231ac5e78335591871e1d3ee2d343}
+      \strng{fullhashraw}{79f231ac5e78335591871e1d3ee2d343}
+      \strng{bibnamehash}{f9da2419057cf7b8a9f2f8824414eef0}
+      \strng{authorbibnamehash}{f9da2419057cf7b8a9f2f8824414eef0}
+      \strng{authornamehash}{f9da2419057cf7b8a9f2f8824414eef0}
+      \strng{authorfullhash}{79f231ac5e78335591871e1d3ee2d343}
+      \strng{authorfullhashraw}{79f231ac5e78335591871e1d3ee2d343}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1684-5315}
+      \field{journaltitle}{African Journal of Biotechnology}
+      \field{month}{12}
+      \field{number}{25}
+      \field{shorttitle}{Sida acuta {Burm}. f.}
+      \field{title}{Sida acuta {Burm}. f.: a medicinal plant with numerous potencies}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{6}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \field{pages}{2953\bibrangedash 2959}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.5897/AJB2007.000-2463
+      \endverb
+      \verb{urlraw}
+      \verb http://academicjournals.org/journal/AJB/article-abstract/9EBC1B89289
+      \endverb
+      \verb{url}
+      \verb http://academicjournals.org/journal/AJB/article-abstract/9EBC1B89289
+      \endverb
+    \endentry
+    \entry{kinda_medicinal_2017}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=0ab3317f7a9566921619c989f5aa87d7}{%
+           family={Kinda},
+           familyi={K\bibinitperiod},
+           given={Prosper},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cba2068af785fb647cb11f20504c8753}{%
+           family={Zerbo},
+           familyi={Z\bibinitperiod},
+           given={Patrice},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e2e9e75eb412ec279118070e125d0b06}{%
+           family={Guenné},
+           familyi={G\bibinitperiod},
+           given={Samson},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d944ed4d0fdc753655f4dc623346a18f}{%
+           family={Compaoré},
+           familyi={C\bibinitperiod},
+           given={Moussa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=012f493e2c21312a798f834b59588895}{%
+           family={Ciobica},
+           familyi={C\bibinitperiod},
+           given={Alin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=27d54455b8001b31324bcde643134f42}{%
+           family={Kiendrebeogo},
+           familyi={K\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{bf6d899710c1093ded8b2dd5d2c0236e}
+      \strng{fullhash}{76a074092e55945e1cb6ba3c861bb89a}
+      \strng{fullhashraw}{76a074092e55945e1cb6ba3c861bb89a}
+      \strng{bibnamehash}{bf6d899710c1093ded8b2dd5d2c0236e}
+      \strng{authorbibnamehash}{bf6d899710c1093ded8b2dd5d2c0236e}
+      \strng{authornamehash}{bf6d899710c1093ded8b2dd5d2c0236e}
+      \strng{authorfullhash}{76a074092e55945e1cb6ba3c861bb89a}
+      \strng{authorfullhashraw}{76a074092e55945e1cb6ba3c861bb89a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background: In Burkina Faso, phytotherapy is the main medical alternative used by populations to manage various diseases that affect the nervous system. The aim of the present study was to report medicinal plants with psychoactive properties used to treat neuropsychiatric disorders in the Hauts Bassins region, in the western zone of Burkina Faso. Methods: Through an ethnobotanical survey using structured questionnaire, 53 traditional healers (TH) were interviewed about neuropsychiatric disorders, medicinal plants and medical practices used to treat them. The survey was carried out over a period of three months. Results: The results report 66 plant species used to treat neuropsychiatric pathologies. Roots (36.2\%) and leaves (29\%) were the main plant parts used. Alone or associated, these parts were used to prepare drugs using mainly the decoction and the trituration methods. Remedies were administered via drink, fumigation and external applications. Conclusions: It appears from this study a real knowledge of neuropsychiatric disorders in the traditional medicine of Hauts Bassins area. The therapeutic remedies suggested in this work are a real interest in the fight against psychiatric and neurological diseases. In the future, identified plants could be used for searching antipsychotic or neuroprotective compounds.}
+      \field{issn}{2305-6320}
+      \field{journaltitle}{Medicines}
+      \field{month}{5}
+      \field{number}{2}
+      \field{title}{Medicinal {Plants} {Used} for {Neuropsychiatric} {Disorders} {Treatment} in the {Hauts} {Bassins} {Region} of {Burkina} {Faso}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{32}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/medicines4020032
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2305-6320/4/2/32
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2305-6320/4/2/32
+      \endverb
+    \endentry
     \entry{klein2001ontologyversioning}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=70945cfcbc625ee95a491b2f28267d55}{%
@@ -1038,6 +1589,92 @@
       \field{isbn}{1-55860-237-2}
       \field{title}{Case-Based Reasoning}
       \field{year}{1993}
+    \endentry
+    \entry{konate_toxicity_2012}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=6586220dfc98d1af0ceb41a15d2aeb9f}{%
+           family={Konaté},
+           familyi={K\bibinitperiod},
+           given={Kiessoun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=693d98c4a092f9c781d840e4376cc795}{%
+           family={Bassolé},
+           familyi={B\bibinitperiod},
+           given={Imaël\bibnamedelimb Henri\bibnamedelima Nestor},
+           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=26970aa42141e312ea351228aad3ea84}{%
+           family={Hilou},
+           familyi={H\bibinitperiod},
+           given={Adama},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9539bf16c7d17dabfbb3ab9d1197984f}{%
+           family={Aworet-Samseny},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Raïssa\bibnamedelima Rr},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=44adb1044865d6a74e6a8384ce6f6850}{%
+           family={Souza},
+           familyi={S\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+        {{hash=345cf91ac46c8e01ecd32ee9216efcbf}{%
+           family={Barro},
+           familyi={B\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=5f913a11fe3c059c14181463635cb825}{%
+           family={Dicko},
+           familyi={D\bibinitperiod},
+           given={Mamoudou\bibnamedelima H},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c3768d2cf4e5344d570d4af212816a93}{%
+           family={Datté},
+           familyi={D\bibinitperiod},
+           given={Jacques\bibnamedelima Y},
+           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=33e3a3a100f6370d96784cafa095d661}{%
+           family={M’Batchi},
+           familyi={M\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{fa5c6c5de56f89aa1a8f0f94bcb1298c}
+      \strng{fullhash}{e17698baf4b09ffc92ed55e95b51dbaf}
+      \strng{fullhashraw}{e17698baf4b09ffc92ed55e95b51dbaf}
+      \strng{bibnamehash}{fa5c6c5de56f89aa1a8f0f94bcb1298c}
+      \strng{authorbibnamehash}{fa5c6c5de56f89aa1a8f0f94bcb1298c}
+      \strng{authornamehash}{fa5c6c5de56f89aa1a8f0f94bcb1298c}
+      \strng{authorfullhash}{e17698baf4b09ffc92ed55e95b51dbaf}
+      \strng{authorfullhashraw}{e17698baf4b09ffc92ed55e95b51dbaf}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1472-6882}
+      \field{journaltitle}{BMC Complementary and Alternative Medicine}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{Toxicity assessment and analgesic activity investigation of aqueous acetone extracts of {Sida} acuta {Burn} f . and {Sida} cordifolia {L}. ({Malvaceae}), medicinal plants of {Burkina} {Faso}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{12}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{120}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/1472-6882-12-120
+      \endverb
+      \verb{urlraw}
+      \verb https://bmccomplementalternmed.biomedcentral.com/articles/10.1186/1472-6882-12-120
+      \endverb
+      \verb{url}
+      \verb https://bmccomplementalternmed.biomedcentral.com/articles/10.1186/1472-6882-12-120
+      \endverb
     \endentry
     \entry{kouame_systeme_2018}{thesis}{}{}
       \name{author}{1}{}{%
@@ -1137,6 +1774,74 @@
       \verb https://ebooks.iospress.nl/doi/10.3233/SHTI200269
       \endverb
     \endentry
+    \entry{ky_medicinal_2009}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=c008b8d5ad2255caa2ed83ac46abd4ec}{%
+           family={Ky},
+           familyi={K\bibinitperiod},
+           given={J.M.K.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8ae92989b6c24fceff784c7426debb7d}{%
+           family={Zerbo},
+           familyi={Z\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=110b9975cdc7feb2a52d4d96216b1c41}{%
+           family={Gnoula},
+           familyi={G\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=25e1ac5dc5b4d234306263440c4b8a0c}{%
+           family={Simpore},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9b2ebcc72e96179359a82b1de09e1c65}{%
+           family={Nikiema},
+           familyi={N\bibinitperiod},
+           given={J.B.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=49a8cad250c7a0f41fa817d79c27daf0}{%
+           family={Millogo-Ra},
+           familyi={M\bibinithyphendelim R\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a319829f864c777ef257fddbdfdf4975}
+      \strng{fullhash}{e843e19a38e9a6a57627d8ea733aaf59}
+      \strng{fullhashraw}{e843e19a38e9a6a57627d8ea733aaf59}
+      \strng{bibnamehash}{a319829f864c777ef257fddbdfdf4975}
+      \strng{authorbibnamehash}{a319829f864c777ef257fddbdfdf4975}
+      \strng{authornamehash}{a319829f864c777ef257fddbdfdf4975}
+      \strng{authorfullhash}{e843e19a38e9a6a57627d8ea733aaf59}
+      \strng{authorfullhashraw}{e843e19a38e9a6a57627d8ea733aaf59}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{10288880}
+      \field{journaltitle}{Pakistan Journal of Biological Sciences}
+      \field{month}{9}
+      \field{number}{19}
+      \field{title}{Medicinal {Plants} used in {Traditional} {Medicine} in the {Centre} {East} {Region} of {Burkina} {Faso}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{12}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \field{pages}{1287\bibrangedash 1298}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.3923/pjbs.2009.1287.1298
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scialert.net/abstract/?doi=pjbs.2009.1287.1298
+      \endverb
+      \verb{url}
+      \verb https://www.scialert.net/abstract/?doi=pjbs.2009.1287.1298
+      \endverb
+    \endentry
     \entry{lewis2020rag}{inproceedings}{}{}
       \name{author}{12}{}{%
         {{hash=ecbe786a5668bf643d74bb24fe1c3cfe}{%
@@ -1225,47 +1930,6 @@
       \verb https://arxiv.org/abs/2005.11401
       \endverb
     \endentry
-    \entry{mariano_fernandez-lopez_pdf_nodate}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=1048bf452e28c51da80bf306c9ca2084}{%
-           family={{Mariano Fernández-López}},
-           familyi={M\bibinitperiod}}}%
-        {{hash=0cf8c5e1526238cabb123af5904c7dfb}{%
-           family={{No affiliation}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{f54de3022d808c361d6c484448cec3b7}
-      \strng{fullhash}{f54de3022d808c361d6c484448cec3b7}
-      \strng{fullhashraw}{f54de3022d808c361d6c484448cec3b7}
-      \strng{bibnamehash}{f54de3022d808c361d6c484448cec3b7}
-      \strng{authorbibnamehash}{f54de3022d808c361d6c484448cec3b7}
-      \strng{authornamehash}{f54de3022d808c361d6c484448cec3b7}
-      \strng{authorfullhash}{f54de3022d808c361d6c484448cec3b7}
-      \strng{authorfullhashraw}{f54de3022d808c361d6c484448cec3b7}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{PDF {|} The use of methodologies in software and knowledge engineering is very extensive due to their important advantages. In the case of the development... {|} Find, read and cite all the research you need on ResearchGate}
-      \field{journaltitle}{ResearchGate}
-      \field{title}{({PDF}) {Overview} and analysis of methodologies for building ontologies}
-      \field{urlday}{29}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1017/S0269888902000462
-      \endverb
-      \verb{urlraw}
-      \verb https://www.researchgate.net/publication/231908719_Overview_and_analysis_of_methodologies_for_building_ontologies
-      \endverb
-      \verb{url}
-      \verb https://www.researchgate.net/publication/231908719_Overview_and_analysis_of_methodologies_for_building_ontologies
-      \endverb
-    \endentry
     \entry{meta2024llama3}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=ca43b8b2bdf82aa380c9fed8712d8db8}{%
@@ -1295,6 +1959,51 @@
       \verb https://ai.meta.com/blog/meta-llama-3/
       \endverb
     \endentry
+    \entry{mihindu2023text2kgbench}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=f90a6b92dd25c18b3e8c87cc918532f9}{%
+           family={Mihindukulasooriya},
+           familyi={M\bibinitperiod},
+           given={Nandana},
+           giveni={N\bibinitperiod}}}%
+        {{hash=32d72fae94f941004cfb464700b912c2}{%
+           family={Tiwari},
+           familyi={T\bibinitperiod},
+           given={Sanju},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f68657f627acb7225b062ea1a703d10d}{%
+           family={Enguix},
+           familyi={E\bibinitperiod},
+           given={Carlos\bibnamedelima F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=1ba904d5ba6fda568ec99c148d2125dc}{%
+           family={Lata},
+           familyi={L\bibinitperiod},
+           given={Kusum},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd4bfefe0ab8021792361af9d301ba91}
+      \strng{fullhash}{517a6770966d18da22f6de94ac971958}
+      \strng{fullhashraw}{517a6770966d18da22f6de94ac971958}
+      \strng{bibnamehash}{bd4bfefe0ab8021792361af9d301ba91}
+      \strng{authorbibnamehash}{bd4bfefe0ab8021792361af9d301ba91}
+      \strng{authornamehash}{bd4bfefe0ab8021792361af9d301ba91}
+      \strng{authorfullhash}{517a6770966d18da22f6de94ac971958}
+      \strng{authorfullhashraw}{517a6770966d18da22f6de94ac971958}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accepté à ISWC 2023, prépublication arXiv 2308.02357}
+      \field{title}{{Text2KGBench}: A Benchmark for Ontology-Driven Knowledge Graph Generation from Text}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2308.02357
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2308.02357
+      \endverb
+    \endentry
     \entry{millogo2001}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=6e7154183e4c093a2ae203cd666471d7}{%
@@ -1321,12 +2030,6 @@
       \field{title}{L'homme, le climat et les ressources alimentaires végétales en période de crises de subsistance au Burkina Faso}
       \field{type}{Thèse de doctorat ès sciences naturelles}
       \field{year}{2001}
-      \verb{urlraw}
-      \verb https://journals.openedition.org/vertigo/16758
-      \endverb
-      \verb{url}
-      \verb https://journals.openedition.org/vertigo/16758
-      \endverb
     \endentry
     \entry{nacoulma1996}{thesis}{}{}
       \name{author}{1}{}{%
@@ -1354,11 +2057,70 @@
       \field{title}{Plantes médicinales et pratiques médicales traditionnelles au Burkina Faso : cas du plateau central}
       \field{type}{Thèse de doctorat d'État}
       \field{year}{1996}
+    \endentry
+    \entry{pascal_nadembega_ethnobotanical_2026}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=578a5edaa972fb8138487e1d47574617}{%
+           family={Nadembega},
+           familyi={N\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a97cd874bb6d50903650f5c82eeb83b3}{%
+           family={Antognoni},
+           familyi={A\bibinitperiod},
+           given={Fabiana},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2d726c02beead549f87eef56b73cde13}{%
+           family={Zongo},
+           familyi={Z\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=0b4f76f2627b259c63daa015dfc6b3fd}{%
+           family={Afifi},
+           familyi={A\bibinitperiod},
+           given={Sherif\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e8f36758c3b2c2e7673001f6caaea145}{%
+           family={Lianza},
+           familyi={L\bibinitperiod},
+           given={Mariacaterina},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fb9881b58ad380f86ec91ca9bf0e6540}{%
+           family={Cuerrier},
+           familyi={C\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{bd07c934fd303c0fc9f7c0de021f2667}
+      \strng{fullhash}{56fe4950c40d0de3179d8b7aa6e8daf3}
+      \strng{fullhashraw}{56fe4950c40d0de3179d8b7aa6e8daf3}
+      \strng{bibnamehash}{bd07c934fd303c0fc9f7c0de021f2667}
+      \strng{authorbibnamehash}{bd07c934fd303c0fc9f7c0de021f2667}
+      \strng{authornamehash}{bd07c934fd303c0fc9f7c0de021f2667}
+      \strng{authorfullhash}{56fe4950c40d0de3179d8b7aa6e8daf3}
+      \strng{authorfullhashraw}{56fe4950c40d0de3179d8b7aa6e8daf3}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ethnobotany Research and Applications}
+      \field{month}{1}
+      \field{title}{An ethnobotanical survey of medicinal plants used for children’s healthcare in {Centre}-{Est} {Burkina} {Faso}}
+      \field{volume}{33}
+      \field{year}{2026}
+      \field{pages}{1\bibrangedash 28}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.32859/era.33.22.1-28
+      \endverb
       \verb{urlraw}
-      \verb https://publication.lecames.org/index.php/pharm/article/download/13/32
+      \verb https://ethnobotanyjournal.org/index.php/era/article/view/7419
       \endverb
       \verb{url}
-      \verb https://publication.lecames.org/index.php/pharm/article/download/13/32
+      \verb https://ethnobotanyjournal.org/index.php/era/article/view/7419
       \endverb
     \endentry
     \entry{navigli2003ontologylearning}{article}{}{}
@@ -1464,6 +2226,38 @@
       \endverb
       \keyw{artificial intelligence (AI),biomedical natural language processing (NLP),domain-specific language models,healthcare AI,large language models (LLMs),medical question answering,Retrieval-Augmented Generation (RAG)}
     \endentry
+    \entry{omg_uml_2017}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=4d6b6fbad838f7618c462458711482fa}{%
+           family={{Object Management Group}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{fullhash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{fullhashraw}{4d6b6fbad838f7618c462458711482fa}
+      \strng{bibnamehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authorbibnamehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authornamehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authorfullhash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authorfullhashraw}{4d6b6fbad838f7618c462458711482fa}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{formal/17-12-05}
+      \field{title}{{OMG} Unified Modeling Language ({OMG UML}), version 2.5.1}
+      \field{urlday}{25}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.omg.org/spec/UML/2.5.1
+      \endverb
+      \verb{url}
+      \verb https://www.omg.org/spec/UML/2.5.1
+      \endverb
+    \endentry
     \entry{ouedraogo2020markets}{article}{}{}
       \name{author}{5}{}{%
         {{hash=77d60cd069b32a8c625beb52e9abfbef}{%
@@ -1564,58 +2358,63 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Introduction. In Burkina Faso, the production and use of essential oils are not yet well developed. In 2002, there were approximately 90 aromatic species, with only 30 studied. A thorough study and exploitation of essential oils from medicinal plants could enhance traditional medicine. The objective of this review was therefore to identify and list medicinal plants with aromatic potential in Burkina Faso. Methodology. A literature review and search engines based on scientific databases were used as methodology. Results. In this study, 84 medicinal plants with aromatic potential were listed. These plants came from 44 families, with the Césalpiniaceae family being the most represented. Leaves were the most commonly used parts for essential oil extraction. Active compounds such as caryophyllenes, pinenes, phytols, linalols, hexadecanoic acid, cineole, and phellandrene were the most dominant. The associated biological properties were antiinflammatory, antibacterial, antioxidant, and antimicrobial. Conclusion. This review indicates the potential of certain medicinal plants in Burkina Faso for the exploitation of their essential oils. Thus, the 85 aromatic plants listed in this study could be used to initiate an investigation into natural, organic, or petrochemical cosmetic products.}
+      \field{journaltitle}{Health Research in Africa}
+      \field{number}{8}
       \field{title}{Revue des {Plantes} {Médicinales} à {Potentiel} {Aromatique} du {Burkina} {Faso}}
       \field{volume}{2}
       \field{year}{2024}
-    \endentry
-    \entry{pascal_nadembega_ethnobotanical_2026}{article}{}{}
-      \name{author}{6}{}{%
-        {{hash=58fac9455f54185118d4d388bb540301}{%
-           family={{Pascal Nadembega}},
-           familyi={P\bibinitperiod}}}%
-        {{hash=fe07107302c953ed0e0f4996683b36f9}{%
-           family={{Fabiana Antognoni}},
-           familyi={F\bibinitperiod}}}%
-        {{hash=62d8cb63eeb1d5a27889345f35cc9c6d}{%
-           family={{Luc Zongo}},
-           familyi={L\bibinitperiod}}}%
-        {{hash=5c4a61a9bd578b2bb5ea49d30c978f93}{%
-           family={{Sherif M. Afifi}},
-           familyi={S\bibinitperiod}}}%
-        {{hash=f6cb12dbaf23a09ce46f4da48d1fa437}{%
-           family={{Mariacaterina Lianza}},
-           familyi={M\bibinitperiod}}}%
-        {{hash=de4a1a39eea005e78c700627fe66c60d}{%
-           family={{Alain Cuerrier}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{df12086d6b892310e768b526ec92fd4d}
-      \strng{fullhash}{d6ba4a6e9715e945c1bd338700f62ad6}
-      \strng{fullhashraw}{d6ba4a6e9715e945c1bd338700f62ad6}
-      \strng{bibnamehash}{df12086d6b892310e768b526ec92fd4d}
-      \strng{authorbibnamehash}{df12086d6b892310e768b526ec92fd4d}
-      \strng{authornamehash}{df12086d6b892310e768b526ec92fd4d}
-      \strng{authorfullhash}{d6ba4a6e9715e945c1bd338700f62ad6}
-      \strng{authorfullhashraw}{d6ba4a6e9715e945c1bd338700f62ad6}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{ResearchGate}
-      \field{month}{9}
-      \field{title}{An ethnobotanical survey of medicinal plants used for children’s healthcare in {Centre}-{Est} {Burkina} {Faso}}
-      \field{year}{2026}
-      \verb{doi}
-      \verb 10.32859/era.33.22.1-28
-      \endverb
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
       \verb{urlraw}
-      \verb https://www.researchgate.net/publication/400337444_An_ethnobotanical_survey_of_medicinal_plants_used_for_children's_healthcare_in_Centre-Est_Burkina_Faso
+      \verb https://ams-hra.org/index.php/hra/article/view/5940
       \endverb
       \verb{url}
-      \verb https://www.researchgate.net/publication/400337444_An_ethnobotanical_survey_of_medicinal_plants_used_for_children's_healthcare_in_Centre-Est_Burkina_Faso
+      \verb https://ams-hra.org/index.php/hra/article/view/5940
+      \endverb
+    \endentry
+    \entry{ozsoy2024text2cypher}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=2a63bf5a1bcefc6fdedf94b63b1683bf}{%
+           family={Ozsoy},
+           familyi={O\bibinitperiod},
+           given={Makbule\bibnamedelima Gulcin},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=bf83d716700b5449f24324f931e5ac94}{%
+           family={Messallem},
+           familyi={M\bibinitperiod},
+           given={Leila},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8256ae2dbd7fbf629d668836149c7dcf}{%
+           family={Besga},
+           familyi={B\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=61099f408bace7fe659ad1deca76ec61}{%
+           family={Minneci},
+           familyi={M\bibinitperiod},
+           given={Gianandrea},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{456276d6c5f5822a4c794d78a70ec405}
+      \strng{fullhash}{c015fc6c5e08b7752921e2b211f4cf5a}
+      \strng{fullhashraw}{c015fc6c5e08b7752921e2b211f4cf5a}
+      \strng{bibnamehash}{456276d6c5f5822a4c794d78a70ec405}
+      \strng{authorbibnamehash}{456276d6c5f5822a4c794d78a70ec405}
+      \strng{authornamehash}{456276d6c5f5822a4c794d78a70ec405}
+      \strng{authorfullhash}{c015fc6c5e08b7752921e2b211f4cf5a}
+      \strng{authorfullhashraw}{c015fc6c5e08b7752921e2b211f4cf5a}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Prépublication arXiv 2412.10064}
+      \field{title}{{Text2Cypher}: Bridging Natural Language and Graph Databases}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2412.10064
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2412.10064
       \endverb
     \endentry
     \entry{prota4u}{online}{}{}
@@ -1652,6 +2451,107 @@
       \endverb
       \verb{url}
       \verb https://prota.prota4u.org
+      \endverb
+    \endentry
+    \entry{robinson2015graph}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=eaed36ba79bb2c6095773ccc079ca1d0}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=de1f6562412a8121370e1b6d96e5e72d}{%
+           family={Webber},
+           familyi={W\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2be209985a2c19f4ea597e15b8093025}{%
+           family={Eifrem},
+           familyi={E\bibinitperiod},
+           given={Emil},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{77edf458bcda3ac3061f8e216386c363}
+      \strng{fullhash}{77edf458bcda3ac3061f8e216386c363}
+      \strng{fullhashraw}{77edf458bcda3ac3061f8e216386c363}
+      \strng{bibnamehash}{77edf458bcda3ac3061f8e216386c363}
+      \strng{authorbibnamehash}{77edf458bcda3ac3061f8e216386c363}
+      \strng{authornamehash}{77edf458bcda3ac3061f8e216386c363}
+      \strng{authorfullhash}{77edf458bcda3ac3061f8e216386c363}
+      \strng{authorfullhashraw}{77edf458bcda3ac3061f8e216386c363}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Graph Databases}
+      \field{year}{2015}
+    \endentry
+    \entry{rouamba_ethno-medicinal_2018}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e16df0505f7dabac92be0f0b51b5aa2f}{%
+           family={Rouamba},
+           familyi={R\bibinitperiod},
+           given={Ablassé},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7bd64ae348283b561c61c685bf4259e0}{%
+           family={Ouédraogo},
+           familyi={O\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1d6d74dcf616acf5d4009a22f7dde7c1}{%
+           family={Karama},
+           familyi={K\bibinitperiod},
+           given={Issa},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d944ed4d0fdc753655f4dc623346a18f}{%
+           family={Compaoré},
+           familyi={C\bibinitperiod},
+           given={Moussa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=27d54455b8001b31324bcde643134f42}{%
+           family={Kiendrebeogo},
+           familyi={K\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd38ac1ad6852f34498018e51dbc9e28}
+      \strng{fullhash}{91c26b4385991db629eaadc641a78bc8}
+      \strng{fullhashraw}{91c26b4385991db629eaadc641a78bc8}
+      \strng{bibnamehash}{dd38ac1ad6852f34498018e51dbc9e28}
+      \strng{authorbibnamehash}{dd38ac1ad6852f34498018e51dbc9e28}
+      \strng{authornamehash}{dd38ac1ad6852f34498018e51dbc9e28}
+      \strng{authorfullhash}{91c26b4385991db629eaadc641a78bc8}
+      \strng{authorfullhashraw}{91c26b4385991db629eaadc641a78bc8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background: In Burkina Faso, plant-based products are widely used by city dwellers to treat and/or prevent various diseases and ailments. Due to rapid population growth, the demand for plant products is increasing with high harvesting pressure on medicinal plants. This pressure combined with the erosion of indigenous knowledge related to medicinal use of plants, compromise the conservation and sustainable use of these plants. To this end, this study aimed to develop a checklist of medicinal plants used for human health in cities, as well as their applications. Methods: Ethnobotanical surveys were conducted from March 3, 2020, to December 15, 2020 in the city of Ouagadougou to account for plant availability based on their phenological occurrences. A total of 155 participants involved in traditional medicine (herbalists and healers) were interviewed using semi-structured approach. Results: A total of 42 plant species, comprising herbaceous and wood species were identified as medicinal plants and used for the treatment of seven disease categories. Results also indicated that liver diseases were the main category for which medicinal plants are highly demanded. Leaves and trunk bark were the most commonly used parts. The most frequently cited method of preparation (58\%) was decoction. Conclusions: This study revealed that medicinal plant species supports the treatment of diseases for which conventional medicine failed to provide curative solutions such as liver diseases. Our findings are useful for guiding future investigations on quality control of plant-based products in the treatment of diseases by demonstrating their ethnopharmacological relevance.}
+      \field{issn}{2231086X}
+      \field{journaltitle}{International Journal of Biochemistry Research \& Review}
+      \field{month}{8}
+      \field{number}{2}
+      \field{title}{Ethno-medicinal {Use} of {Crotalaria} retusa {L}. ({Fabaceae}), a {Pyrrolizidine} {Alkaloid} {Toxic} {Plant}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{23}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.9734/IJBCRR/2018/43635
+      \endverb
+      \verb{urlraw}
+      \verb https://journalijbcrr.com/index.php/IJBCRR/article/view/14
+      \endverb
+      \verb{url}
+      \verb https://journalijbcrr.com/index.php/IJBCRR/article/view/14
       \endverb
     \endentry
     \entry{prelude_rmca}{online}{}{}
@@ -1753,6 +2653,93 @@
       \verb 10.1136/bmj.312.7023.71
       \endverb
       \keyw{Clinical Competence,Clinical Medicine,Decision Making,Decision Support Techniques,Humans,United Kingdom}
+    \endentry
+    \entry{sempore_potential_2021}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=8ab0f03e2ff65a12fd7b5f1495f5c9fa}{%
+           family={Semporé},
+           familyi={S\bibinitperiod},
+           given={Judith\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=fdbf18c69535dc9f1224735fc8a733a9}{%
+           family={Diao},
+           familyi={D\bibinitperiod},
+           given={Mamounata},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b0a45dda76b8a612f329e14c2bbb4306}{%
+           family={Ouattara},
+           familyi={O\bibinitperiod},
+           given={Lassina},
+           giveni={L\bibinitperiod}}}%
+        {{hash=74350404caafcf76b28711f0dff9a2c8}{%
+           family={Ouoba},
+           familyi={O\bibinitperiod},
+           given={Paulin},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f28813fb4523f3f72cad2bce64be627f}{%
+           family={Kagambega},
+           familyi={K\bibinitperiod},
+           given={Windmi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e214c0fc311fd0c29c9453eaa20bcd29}{%
+           family={Sama},
+           familyi={S\bibinitperiod},
+           given={Hemayoro},
+           giveni={H\bibinitperiod}}}%
+        {{hash=69b862744313ca08d470e6f0efb085ca}{%
+           family={Dibala},
+           familyi={D\bibinitperiod},
+           given={Crépin\bibnamedelima I.},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=6586220dfc98d1af0ceb41a15d2aeb9f}{%
+           family={Konaté},
+           familyi={K\bibinitperiod},
+           given={Kiessoun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5f913a11fe3c059c14181463635cb825}{%
+           family={Dicko},
+           familyi={D\bibinitperiod},
+           given={Mamoudou\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{18b478770a6833eb5b2b9fa57c4b58bb}
+      \strng{fullhash}{578fd9459fb299d365c580c5ba6475e1}
+      \strng{fullhashraw}{578fd9459fb299d365c580c5ba6475e1}
+      \strng{bibnamehash}{18b478770a6833eb5b2b9fa57c4b58bb}
+      \strng{authorbibnamehash}{18b478770a6833eb5b2b9fa57c4b58bb}
+      \strng{authornamehash}{18b478770a6833eb5b2b9fa57c4b58bb}
+      \strng{authorfullhash}{578fd9459fb299d365c580c5ba6475e1}
+      \strng{authorfullhashraw}{578fd9459fb299d365c580c5ba6475e1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background: The purpose of this study was to evaluate α-amylase inhibitory effects of hydroethanolic extracts of bark from Daniella oliveri, Sclerocarya birrea, Maranthes polyandra, and Pteleopsis suberosa to fight type-II diabetes. Methods: Compound extractions were performed by hydroethanol maceration followed by liquid-liquid fractionation with solvents. TLC profiling was carried out with different fractions. The inhibitory effects of plant extracts on α-amylase activity were determined using rice starch as a substrate. Results: TLC profiling of different fractions showed different phytochemical compounds. The hydroethanolic plant extracts exhibited dose-dependent inhibition of α-amylase. D. oliveri displayed competitive inhibition, M. polyandra and S. birrea showed uncompetitive inhibition and Pteleopsis suberosa exerted mixed-inhibition. M. polyandra extract exerted the highest inhibitory effect (IC50 = 0.5 mg/mL). Conclusions: The barks of M. polyandra exhibit a remarkable α-amylase inhibitory effect which can be a novel source of antidiabetic molecules.}
+      \field{issn}{2673-4540}
+      \field{journaltitle}{Diabetology}
+      \field{month}{12}
+      \field{number}{4}
+      \field{title}{Potential {Antidiabetic} {Effects} of {Extracts} from {Four} {Medicinal} {Plants} {Used} in {Burkina} {Faso} by {Inhibition} of {Alpha}-{Amylase}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{2}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{250\bibrangedash 258}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.3390/diabetology2040023
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2673-4540/2/4/23
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2673-4540/2/4/23
+      \endverb
     \endentry
     \entry{shojaee-mend_development_2019}{article}{}{}
       \name{author}{3}{}{%
@@ -2117,9 +3104,11 @@
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{African Philosophy of Medicine}
+      \field{booktitle}{Contemporary African Metaphysical Thought}
       \field{title}{Metaphysical Issues in African Philosophy of Medicine}
       \field{year}{2024}
+      \field{pages}{227\bibrangedash 252}
+      \range{pages}{26}
       \verb{doi}
       \verb 10.1007/978-3-031-73963-7_12
       \endverb
@@ -2171,11 +3160,13 @@
       \field{title}{Ethnobotanical Survey on Plants Used in the Treatment of Wounds by Traditional Health Practitioners in Burkina Faso}
       \field{volume}{15}
       \field{year}{2025}
+      \field{pages}{132\bibrangedash 143}
+      \range{pages}{12}
       \verb{urlraw}
-      \verb https://www.progres.ujkz.gov.bf/publications/11832/details
+      \verb https://www.fortunejournals.com/abstract/ethnobotanical-survey-on-plants-used-in-the-treatment-of-wounds-by-traditional-health-practitioners-in-burkina-faso-6205.html
       \endverb
       \verb{url}
-      \verb https://www.progres.ujkz.gov.bf/publications/11832/details
+      \verb https://www.fortunejournals.com/abstract/ethnobotanical-survey-on-plants-used-in-the-treatment-of-wounds-by-traditional-health-practitioners-in-burkina-faso-6205.html
       \endverb
     \endentry
     \entry{vaswani2017attention}{inproceedings}{}{}
@@ -2340,6 +3331,71 @@
       \verb https://www.w3.org/2007/03/layerCake.png
       \endverb
     \endentry
+    \entry{wang2024biorag}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=ee15c97e7fbeb098b3009aa0c7866fde}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chengrui},
+           giveni={C\bibinitperiod}}}%
+        {{hash=17a95653aaf1f2487a0e37601d2babe1}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Qingqing},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=b5f873441053c9c7b2cb7bb0cccfdc06}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Meng},
+           giveni={M\bibinitperiod}}}%
+        {{hash=adf6d110558718aee811a1c304d113b5}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Xunxin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=91ed6ba8d8a09fa10ca8ca738be28c60}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Chengjun},
+           giveni={C\bibinitperiod}}}%
+        {{hash=79117105ef06d6e66e5feb93456447f8}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=27d22d8f05f44b47f7dcfe9b7fb85584}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xuezhi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=840edade569a44955bbe6b6cdc7e9a6c}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yuanchun},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{50c30c72cad278647eef7ac0c8c76164}
+      \strng{fullhash}{c00b099008f0df8002da59eb906a2382}
+      \strng{fullhashraw}{c00b099008f0df8002da59eb906a2382}
+      \strng{bibnamehash}{50c30c72cad278647eef7ac0c8c76164}
+      \strng{authorbibnamehash}{50c30c72cad278647eef7ac0c8c76164}
+      \strng{authornamehash}{50c30c72cad278647eef7ac0c8c76164}
+      \strng{authorfullhash}{c00b099008f0df8002da59eb906a2382}
+      \strng{authorfullhashraw}{c00b099008f0df8002da59eb906a2382}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Prépublication arXiv 2408.01107}
+      \field{title}{{BioRAG}: A {RAG-LLM} Framework for Biological Question Reasoning}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2408.01107
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2408.01107
+      \endverb
+    \endentry
     \entry{waho_pharmacopoeia}{book}{}{}
       \name{author}{1}{}{%
         {{hash=5d66f9e02fd45ff09b20aa84415488ad}{%
@@ -2481,6 +3537,79 @@
       \endverb
       \verb{url}
       \verb https://iris.who.int/bitstream/handle/10665/92455/9789241506090_eng.pdf
+      \endverb
+    \endentry
+    \entry{estelle_ethnopharmacological_2018}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=53c104f75385d2b9d2c610ca9bde7e1d}{%
+           family={Youl},
+           familyi={Y\bibinitperiod},
+           given={Estelle\bibnamedelimb Noëla\bibnamedelima Hoho},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=0178cdfc15ea7bcdfc079363b5e7071c}{%
+           family={Tiendrebeogo},
+           familyi={T\bibinitperiod},
+           given={Joëlle\bibnamedelimb W.\bibnamedelimi Stephanie},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1d6a52751e07e36a071abf59a389dc15}{%
+           family={Hounlidji},
+           familyi={H\bibinitperiod},
+           given={Fasteylah\bibnamedelima Y.},
+           giveni={F\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=62e9e47e735f104345dacf93c644a74b}{%
+           family={Zongo},
+           familyi={Z\bibinitperiod},
+           given={Frank\bibnamedelimb Edgard\bibnamedelima R.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=cd20088473791ed2ec5d78b34225599a}{%
+           family={Nacoulma},
+           familyi={N\bibinitperiod},
+           given={Aminata},
+           giveni={A\bibinitperiod}}}%
+        {{hash=413b6b77b45c2afd94e1be98fbae84c5}{%
+           family={Guissou},
+           familyi={G\bibinitperiod},
+           given={Innocent\bibnamedelima Pierre},
+           giveni={I\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=0f11a3faf7aed1fea20fa2d8c330c956}{%
+           family={Ouedraogo},
+           familyi={O\bibinitperiod},
+           given={Dieu-Donné},
+           giveni={D\bibinithyphendelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2dacec8ff030b8b7feb0ac076c15158c}
+      \strng{fullhash}{081898d9433a742b43c392fadf8986eb}
+      \strng{fullhashraw}{081898d9433a742b43c392fadf8986eb}
+      \strng{bibnamehash}{2dacec8ff030b8b7feb0ac076c15158c}
+      \strng{authorbibnamehash}{2dacec8ff030b8b7feb0ac076c15158c}
+      \strng{authornamehash}{2dacec8ff030b8b7feb0ac076c15158c}
+      \strng{authorfullhash}{081898d9433a742b43c392fadf8986eb}
+      \strng{authorfullhashraw}{081898d9433a742b43c392fadf8986eb}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2141-2502}
+      \field{journaltitle}{Journal of Pharmacognosy and Phytotherapy}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Ethnopharmacological studies of plants used for the treatment of rheumatic affections in {Ouagadougou}, {Burkina} {Faso}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{10}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{91\bibrangedash 101}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.5897/JPP2018.0494
+      \endverb
+      \verb{urlraw}
+      \verb http://academicjournals.org/journal/JPP/article-abstract/9F105F456939
+      \endverb
+      \verb{url}
+      \verb http://academicjournals.org/journal/JPP/article-abstract/9F105F456939
       \endverb
     \endentry
     \entry{zerbo_contribution_2008}{article}{}{}
@@ -2695,40 +3824,59 @@
       \endverb
     \endentry
     \entry{zongo2025}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=45c0edd4942e3b9451ab988f5db5e887}{%
+      \name{author}{6}{}{%
+        {{hash=2d726c02beead549f87eef56b73cde13}{%
            family={Zongo},
            familyi={Z\bibinitperiod},
-           given={Koudbi\bibnamedelima Jacob},
-           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8304990a82973b3809ef62ab8f5e5cb9}{%
+           family={Ouedraogo},
+           familyi={O\bibinitperiod},
+           given={Modeste\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=34ddc5a43195791b61977aa4e31f882c}{%
+           family={Zongo},
+           familyi={Z\bibinitperiod},
+           given={Mimtiri\bibnamedelima Sidonie},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=54ba0630739659e4689910a220fda740}{%
+           family={Sanon},
+           familyi={S\bibinitperiod},
+           given={Florentin},
+           giveni={F\bibinitperiod}}}%
+        {{hash=db434eb8a547133d0a2aac5ee0798060}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Heiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=578a5edaa972fb8138487e1d47574617}{%
+           family={Nadembega},
+           familyi={N\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{ba42da7a4ab2396f72c57eefb027b95e}
-      \strng{fullhash}{ba42da7a4ab2396f72c57eefb027b95e}
-      \strng{fullhashraw}{ba42da7a4ab2396f72c57eefb027b95e}
-      \strng{bibnamehash}{ba42da7a4ab2396f72c57eefb027b95e}
-      \strng{authorbibnamehash}{ba42da7a4ab2396f72c57eefb027b95e}
-      \strng{authornamehash}{ba42da7a4ab2396f72c57eefb027b95e}
-      \strng{authorfullhash}{ba42da7a4ab2396f72c57eefb027b95e}
-      \strng{authorfullhashraw}{ba42da7a4ab2396f72c57eefb027b95e}
+      \strng{namehash}{e72c1fbd18902a164653accf93b0a57d}
+      \strng{fullhash}{6eef5ac1f1eb8b3ab1856b9bc0248bac}
+      \strng{fullhashraw}{6eef5ac1f1eb8b3ab1856b9bc0248bac}
+      \strng{bibnamehash}{e72c1fbd18902a164653accf93b0a57d}
+      \strng{authorbibnamehash}{e72c1fbd18902a164653accf93b0a57d}
+      \strng{authornamehash}{e72c1fbd18902a164653accf93b0a57d}
+      \strng{authorfullhash}{6eef5ac1f1eb8b3ab1856b9bc0248bac}
+      \strng{authorfullhashraw}{6eef5ac1f1eb8b3ab1856b9bc0248bac}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Advanced Translational and Preclinical Biomedicine}
+      \field{journaltitle}{Journal Africain de Technologie Pharmaceutique et Biopharmacie}
       \field{number}{1}
-      \field{title}{Ethnopharmacological Study on Medicinal Plants Used for Jaundice and Liver-Related Disorders Management in the Province of Kouritenga in the Central-Eastern of Burkina Faso}
+      \field{title}{Ethnopharmacological Study on Medicinal Plants Used for Jaundice and Liver-Related Disorders Management in the Province of Kourittenga in the Central-Eastern of Burkina Faso}
       \field{volume}{4}
       \field{year}{2025}
+      \field{pages}{32\bibrangedash 49}
+      \range{pages}{18}
       \verb{doi}
       \verb 10.57220/jatpb.v4i1.213
-      \endverb
-      \verb{urlraw}
-      \verb https://boa.unimib.it/retrieve/444bc5b3-4483-4e23-a45d-f0fe28fbb91a/Zongo%20et%20al-2025-JATPB-VoR.pdf
-      \endverb
-      \verb{url}
-      \verb https://boa.unimib.it/retrieve/444bc5b3-4483-4e23-a45d-f0fe28fbb91a/Zongo%20et%20al-2025-JATPB-VoR.pdf
       \endverb
     \endentry
   \enddatalist

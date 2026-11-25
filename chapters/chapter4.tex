@@ -239,7 +239,7 @@ La longueur de chaque réponse du modèle est bornée à 1~024 jetons, car un mo
 \subsection{Traçabilité des réponses}
 \label{subsec:tracabilite_reponses}
 
-Nous avons maintenu la traçabilité à chaque étape. L'extraction ne conservait que les informations rapportées par les sources et laissait vides les champs absents. Lors de l'import, chaque connaissance est restée reliée à un nœud \textit{SourceScientifique}. Les requêtes générées doivent renvoyer ces références, vérifiées dans le graphe puis affichées avec les réponses. Nous avons repris les niveaux de preuve tels quels, sans évaluation indépendante, et la relecture des faits repose sur un seul spécialiste. Ces limites sont discutées à la section \ref{subsec:discussion_limites}.
+Nous avons maintenu la traçabilité à chaque étape. L'extraction ne conservait que les informations rapportées par les sources et laissait vides les champs absents. Lors de l'import, chaque connaissance est restée reliée à un nœud \textit{SourceScientifique}. Les requêtes générées doivent renvoyer ces références, vérifiées dans le graphe puis affichées avec les réponses. Nous avons repris les niveaux de preuve tels quels, sans évaluation indépendante. Cette limite est discutée à la section \ref{subsec:discussion_limites}.
 
 \subsection{Fonctionnalités de l'application}
 \label{subsec:fonctionnalites}
@@ -555,7 +555,7 @@ La troisième question concernait l'accès en langage naturel au moyen d'une sol
 
 Le modèle d'origine \textit{ontoMEDTRAD} couvrait vingt-deux plantes et trente et un remèdes antipaludéens \cite{kouame_visual_2020}. Notre base compte 289 plantes et 1~676 usages issus des documents extraits. Ces chiffres ne sont pas directement comparables, car les deux travaux n'ont pas le même périmètre et notre décompte ne distingue pas les remèdes de la même façon.
 
-Les publications de \textit{WATRIMed} ne décrivent que ses classes supérieures. Notre travail relie au contraire le schéma à une base interrogeable et à une application qui présente les réponses avec leurs sources. L'apport du travail tient à la chaîne qui relie les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les contrôles chiffrés établissent la présence de ces liens. Leur exactitude a été vérifiée dans les documents pour une partie des faits.
+Les publications de \textit{WATRIMed} ne décrivent que ses classes supérieures. Notre travail relie au contraire le schéma à une base interrogeable et à une application qui présente les réponses avec leurs sources. L'apport du travail tient à la chaîne qui relie les sources scientifiques à l'ontologie, au graphe et aux réponses de l'application. Les contrôles chiffrés établissent la présence de ces liens. Leur exactitude a été vérifiée dans les documents pour une partie des faits, et un biologiste végétal a relu l'ensemble et en a validé le contenu.
 
 \subsection{Limites}
 \label{subsec:discussion_limites}
@@ -576,7 +576,7 @@ Six limites encadrent les résultats qui précèdent et déterminent leur porté
     \item \textbf{Le périmètre reste celui d'un outil de consultation.} Le système aide à rechercher et à vérifier des informations documentées. Il ne pose pas de diagnostic et n'établit pas de prescription. Les résultats ne constituent pas une validation clinique.
 \end{enumerate}
 
-Cinq réserves s'y ajoutent. Les réponses attendues provenant du graphe, nos métriques ne mesurent pas la justesse des faits. Le jeu de 50 questions a servi à corriger le système avant de le mesurer. Les exemples de la consigne couvrent en outre ses types de questions. Le score ne compte que les valeurs du type attendu. Il ne voit donc pas les phrases que le modèle ajoute de lui-même, comme celles recopiées de sa consigne. Enfin, 175 usages sur 1~676 proviennent d'un document numérisé, contrôlé seulement à partir d'une reconnaissance optique de caractères.
+Cinq réserves s'y ajoutent. Les réponses attendues provenant du graphe, nos métriques ne mesurent pas la justesse des faits. Le jeu de 50 questions a servi à corriger le système avant de le mesurer. Les exemples de la consigne couvrent en outre ses types de questions. Le score ne compte que les valeurs du type attendu. Il ne voit donc pas les phrases que le modèle ajoute de lui-même, comme celles recopiées de sa consigne. Enfin, 175 usages sur 1~676 proviennent d'un document numérisé, dont le contrôle automatique repose sur une reconnaissance optique de caractères.
 
 Nous n'avons pas testé par comparaison contrôlée l'hypothèse selon laquelle l'extraction assistée par modèle de langue serait meilleure qu'une extraction manuelle. Une telle comparaison nécessiterait un protocole distinct appliqué dans les mêmes conditions aux deux méthodes. Faute de ce protocole, nous ne pouvons pas conclure que l'extraction assistée soit supérieure à une extraction manuelle.
 
